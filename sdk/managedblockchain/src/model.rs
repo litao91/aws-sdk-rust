@@ -59,6 +59,7 @@ impl AsRef<str> for VoteValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeLogPublishingConfiguration {
     /// <p>Configuration properties for logging events associated with a node that is owned by a member of a Managed Blockchain network using the Hyperledger Fabric framework.</p>
+    #[doc(hidden)]
     pub fabric: std::option::Option<crate::model::NodeFabricLogPublishingConfiguration>,
 }
 impl NodeLogPublishingConfiguration {
@@ -76,11 +77,10 @@ impl std::fmt::Debug for NodeLogPublishingConfiguration {
         formatter.finish()
     }
 }
-/// See [`NodeLogPublishingConfiguration`](crate::model::NodeLogPublishingConfiguration)
+/// See [`NodeLogPublishingConfiguration`](crate::model::NodeLogPublishingConfiguration).
 pub mod node_log_publishing_configuration {
 
-    /// A builder for [`NodeLogPublishingConfiguration`](crate::model::NodeLogPublishingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NodeLogPublishingConfiguration`](crate::model::NodeLogPublishingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fabric: std::option::Option<crate::model::NodeFabricLogPublishingConfiguration>,
@@ -99,7 +99,7 @@ pub mod node_log_publishing_configuration {
             self.fabric = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeLogPublishingConfiguration`](crate::model::NodeLogPublishingConfiguration)
+        /// Consumes the builder and constructs a [`NodeLogPublishingConfiguration`](crate::model::NodeLogPublishingConfiguration).
         pub fn build(self) -> crate::model::NodeLogPublishingConfiguration {
             crate::model::NodeLogPublishingConfiguration {
                 fabric: self.fabric,
@@ -108,7 +108,7 @@ pub mod node_log_publishing_configuration {
     }
 }
 impl NodeLogPublishingConfiguration {
-    /// Creates a new builder-style object to manufacture [`NodeLogPublishingConfiguration`](crate::model::NodeLogPublishingConfiguration)
+    /// Creates a new builder-style object to manufacture [`NodeLogPublishingConfiguration`](crate::model::NodeLogPublishingConfiguration).
     pub fn builder() -> crate::model::node_log_publishing_configuration::Builder {
         crate::model::node_log_publishing_configuration::Builder::default()
     }
@@ -119,8 +119,10 @@ impl NodeLogPublishingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeFabricLogPublishingConfiguration {
     /// <p>Configuration properties for logging events associated with chaincode execution on a peer node. Chaincode logs contain the results of instantiating, invoking, and querying the chaincode. A peer can run multiple instances of chaincode. When enabled, a log stream is created for all chaincodes, with an individual log stream for each chaincode.</p>
+    #[doc(hidden)]
     pub chaincode_logs: std::option::Option<crate::model::LogConfigurations>,
     /// <p>Configuration properties for a peer node log. Peer node logs contain messages generated when your client submits transaction proposals to peer nodes, requests to join channels, enrolls an admin peer, and lists the chaincode instances on a peer node. </p>
+    #[doc(hidden)]
     pub peer_logs: std::option::Option<crate::model::LogConfigurations>,
 }
 impl NodeFabricLogPublishingConfiguration {
@@ -141,11 +143,10 @@ impl std::fmt::Debug for NodeFabricLogPublishingConfiguration {
         formatter.finish()
     }
 }
-/// See [`NodeFabricLogPublishingConfiguration`](crate::model::NodeFabricLogPublishingConfiguration)
+/// See [`NodeFabricLogPublishingConfiguration`](crate::model::NodeFabricLogPublishingConfiguration).
 pub mod node_fabric_log_publishing_configuration {
 
-    /// A builder for [`NodeFabricLogPublishingConfiguration`](crate::model::NodeFabricLogPublishingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NodeFabricLogPublishingConfiguration`](crate::model::NodeFabricLogPublishingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) chaincode_logs: std::option::Option<crate::model::LogConfigurations>,
@@ -178,7 +179,7 @@ pub mod node_fabric_log_publishing_configuration {
             self.peer_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeFabricLogPublishingConfiguration`](crate::model::NodeFabricLogPublishingConfiguration)
+        /// Consumes the builder and constructs a [`NodeFabricLogPublishingConfiguration`](crate::model::NodeFabricLogPublishingConfiguration).
         pub fn build(self) -> crate::model::NodeFabricLogPublishingConfiguration {
             crate::model::NodeFabricLogPublishingConfiguration {
                 chaincode_logs: self.chaincode_logs,
@@ -188,7 +189,7 @@ pub mod node_fabric_log_publishing_configuration {
     }
 }
 impl NodeFabricLogPublishingConfiguration {
-    /// Creates a new builder-style object to manufacture [`NodeFabricLogPublishingConfiguration`](crate::model::NodeFabricLogPublishingConfiguration)
+    /// Creates a new builder-style object to manufacture [`NodeFabricLogPublishingConfiguration`](crate::model::NodeFabricLogPublishingConfiguration).
     pub fn builder() -> crate::model::node_fabric_log_publishing_configuration::Builder {
         crate::model::node_fabric_log_publishing_configuration::Builder::default()
     }
@@ -199,6 +200,7 @@ impl NodeFabricLogPublishingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogConfigurations {
     /// <p>Parameters for publishing logs to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub cloudwatch: std::option::Option<crate::model::LogConfiguration>,
 }
 impl LogConfigurations {
@@ -214,11 +216,10 @@ impl std::fmt::Debug for LogConfigurations {
         formatter.finish()
     }
 }
-/// See [`LogConfigurations`](crate::model::LogConfigurations)
+/// See [`LogConfigurations`](crate::model::LogConfigurations).
 pub mod log_configurations {
 
-    /// A builder for [`LogConfigurations`](crate::model::LogConfigurations)
-    #[non_exhaustive]
+    /// A builder for [`LogConfigurations`](crate::model::LogConfigurations).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloudwatch: std::option::Option<crate::model::LogConfiguration>,
@@ -237,7 +238,7 @@ pub mod log_configurations {
             self.cloudwatch = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogConfigurations`](crate::model::LogConfigurations)
+        /// Consumes the builder and constructs a [`LogConfigurations`](crate::model::LogConfigurations).
         pub fn build(self) -> crate::model::LogConfigurations {
             crate::model::LogConfigurations {
                 cloudwatch: self.cloudwatch,
@@ -246,7 +247,7 @@ pub mod log_configurations {
     }
 }
 impl LogConfigurations {
-    /// Creates a new builder-style object to manufacture [`LogConfigurations`](crate::model::LogConfigurations)
+    /// Creates a new builder-style object to manufacture [`LogConfigurations`](crate::model::LogConfigurations).
     pub fn builder() -> crate::model::log_configurations::Builder {
         crate::model::log_configurations::Builder::default()
     }
@@ -257,6 +258,7 @@ impl LogConfigurations {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogConfiguration {
     /// <p>Indicates whether logging is enabled.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl LogConfiguration {
@@ -272,11 +274,10 @@ impl std::fmt::Debug for LogConfiguration {
         formatter.finish()
     }
 }
-/// See [`LogConfiguration`](crate::model::LogConfiguration)
+/// See [`LogConfiguration`](crate::model::LogConfiguration).
 pub mod log_configuration {
 
-    /// A builder for [`LogConfiguration`](crate::model::LogConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LogConfiguration`](crate::model::LogConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -292,7 +293,7 @@ pub mod log_configuration {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogConfiguration`](crate::model::LogConfiguration)
+        /// Consumes the builder and constructs a [`LogConfiguration`](crate::model::LogConfiguration).
         pub fn build(self) -> crate::model::LogConfiguration {
             crate::model::LogConfiguration {
                 enabled: self.enabled,
@@ -301,7 +302,7 @@ pub mod log_configuration {
     }
 }
 impl LogConfiguration {
-    /// Creates a new builder-style object to manufacture [`LogConfiguration`](crate::model::LogConfiguration)
+    /// Creates a new builder-style object to manufacture [`LogConfiguration`](crate::model::LogConfiguration).
     pub fn builder() -> crate::model::log_configuration::Builder {
         crate::model::log_configuration::Builder::default()
     }
@@ -312,6 +313,7 @@ impl LogConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberLogPublishingConfiguration {
     /// <p>Configuration properties for logging events associated with a member of a Managed Blockchain network using the Hyperledger Fabric framework.</p>
+    #[doc(hidden)]
     pub fabric: std::option::Option<crate::model::MemberFabricLogPublishingConfiguration>,
 }
 impl MemberLogPublishingConfiguration {
@@ -329,11 +331,10 @@ impl std::fmt::Debug for MemberLogPublishingConfiguration {
         formatter.finish()
     }
 }
-/// See [`MemberLogPublishingConfiguration`](crate::model::MemberLogPublishingConfiguration)
+/// See [`MemberLogPublishingConfiguration`](crate::model::MemberLogPublishingConfiguration).
 pub mod member_log_publishing_configuration {
 
-    /// A builder for [`MemberLogPublishingConfiguration`](crate::model::MemberLogPublishingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MemberLogPublishingConfiguration`](crate::model::MemberLogPublishingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fabric:
@@ -356,7 +357,7 @@ pub mod member_log_publishing_configuration {
             self.fabric = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberLogPublishingConfiguration`](crate::model::MemberLogPublishingConfiguration)
+        /// Consumes the builder and constructs a [`MemberLogPublishingConfiguration`](crate::model::MemberLogPublishingConfiguration).
         pub fn build(self) -> crate::model::MemberLogPublishingConfiguration {
             crate::model::MemberLogPublishingConfiguration {
                 fabric: self.fabric,
@@ -365,7 +366,7 @@ pub mod member_log_publishing_configuration {
     }
 }
 impl MemberLogPublishingConfiguration {
-    /// Creates a new builder-style object to manufacture [`MemberLogPublishingConfiguration`](crate::model::MemberLogPublishingConfiguration)
+    /// Creates a new builder-style object to manufacture [`MemberLogPublishingConfiguration`](crate::model::MemberLogPublishingConfiguration).
     pub fn builder() -> crate::model::member_log_publishing_configuration::Builder {
         crate::model::member_log_publishing_configuration::Builder::default()
     }
@@ -376,6 +377,7 @@ impl MemberLogPublishingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberFabricLogPublishingConfiguration {
     /// <p>Configuration properties for logging events associated with a member's Certificate Authority (CA). CA logs help you determine when a member in your account joins the network, or when new peers register with a member CA.</p>
+    #[doc(hidden)]
     pub ca_logs: std::option::Option<crate::model::LogConfigurations>,
 }
 impl MemberFabricLogPublishingConfiguration {
@@ -391,11 +393,10 @@ impl std::fmt::Debug for MemberFabricLogPublishingConfiguration {
         formatter.finish()
     }
 }
-/// See [`MemberFabricLogPublishingConfiguration`](crate::model::MemberFabricLogPublishingConfiguration)
+/// See [`MemberFabricLogPublishingConfiguration`](crate::model::MemberFabricLogPublishingConfiguration).
 pub mod member_fabric_log_publishing_configuration {
 
-    /// A builder for [`MemberFabricLogPublishingConfiguration`](crate::model::MemberFabricLogPublishingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MemberFabricLogPublishingConfiguration`](crate::model::MemberFabricLogPublishingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ca_logs: std::option::Option<crate::model::LogConfigurations>,
@@ -414,7 +415,7 @@ pub mod member_fabric_log_publishing_configuration {
             self.ca_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberFabricLogPublishingConfiguration`](crate::model::MemberFabricLogPublishingConfiguration)
+        /// Consumes the builder and constructs a [`MemberFabricLogPublishingConfiguration`](crate::model::MemberFabricLogPublishingConfiguration).
         pub fn build(self) -> crate::model::MemberFabricLogPublishingConfiguration {
             crate::model::MemberFabricLogPublishingConfiguration {
                 ca_logs: self.ca_logs,
@@ -423,7 +424,7 @@ pub mod member_fabric_log_publishing_configuration {
     }
 }
 impl MemberFabricLogPublishingConfiguration {
-    /// Creates a new builder-style object to manufacture [`MemberFabricLogPublishingConfiguration`](crate::model::MemberFabricLogPublishingConfiguration)
+    /// Creates a new builder-style object to manufacture [`MemberFabricLogPublishingConfiguration`](crate::model::MemberFabricLogPublishingConfiguration).
     pub fn builder() -> crate::model::member_fabric_log_publishing_configuration::Builder {
         crate::model::member_fabric_log_publishing_configuration::Builder::default()
     }
@@ -435,10 +436,13 @@ impl MemberFabricLogPublishingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VoteSummary {
     /// <p> The vote value, either <code>YES</code> or <code>NO</code>. </p>
+    #[doc(hidden)]
     pub vote: std::option::Option<crate::model::VoteValue>,
     /// <p> The name of the member that cast the vote. </p>
+    #[doc(hidden)]
     pub member_name: std::option::Option<std::string::String>,
     /// <p> The unique identifier of the member that cast the vote. </p>
+    #[doc(hidden)]
     pub member_id: std::option::Option<std::string::String>,
 }
 impl VoteSummary {
@@ -464,11 +468,10 @@ impl std::fmt::Debug for VoteSummary {
         formatter.finish()
     }
 }
-/// See [`VoteSummary`](crate::model::VoteSummary)
+/// See [`VoteSummary`](crate::model::VoteSummary).
 pub mod vote_summary {
 
-    /// A builder for [`VoteSummary`](crate::model::VoteSummary)
-    #[non_exhaustive]
+    /// A builder for [`VoteSummary`](crate::model::VoteSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vote: std::option::Option<crate::model::VoteValue>,
@@ -506,7 +509,7 @@ pub mod vote_summary {
             self.member_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VoteSummary`](crate::model::VoteSummary)
+        /// Consumes the builder and constructs a [`VoteSummary`](crate::model::VoteSummary).
         pub fn build(self) -> crate::model::VoteSummary {
             crate::model::VoteSummary {
                 vote: self.vote,
@@ -517,7 +520,7 @@ pub mod vote_summary {
     }
 }
 impl VoteSummary {
-    /// Creates a new builder-style object to manufacture [`VoteSummary`](crate::model::VoteSummary)
+    /// Creates a new builder-style object to manufacture [`VoteSummary`](crate::model::VoteSummary).
     pub fn builder() -> crate::model::vote_summary::Builder {
         crate::model::vote_summary::Builder::default()
     }
@@ -529,12 +532,16 @@ impl VoteSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProposalSummary {
     /// <p> The unique identifier of the proposal. </p>
+    #[doc(hidden)]
     pub proposal_id: std::option::Option<std::string::String>,
     /// <p> The description of the proposal. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The unique identifier of the member that created the proposal. </p>
+    #[doc(hidden)]
     pub proposed_by_member_id: std::option::Option<std::string::String>,
     /// <p> The name of the member that created the proposal. </p>
+    #[doc(hidden)]
     pub proposed_by_member_name: std::option::Option<std::string::String>,
     /// <p>The status of the proposal. Values are as follows:</p>
     /// <ul>
@@ -544,12 +551,16 @@ pub struct ProposalSummary {
     /// <li> <p> <code>EXPIRED</code> - Members did not cast the number of votes required to determine the proposal outcome before the proposal expired. The specified <code>ProposalActions</code> are not carried out.</p> </li>
     /// <li> <p> <code>ACTION_FAILED</code> - One or more of the specified <code>ProposalActions</code> in a proposal that was approved could not be completed because of an error.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProposalStatus>,
     /// <p> The date and time that the proposal was created. </p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The date and time that the proposal expires. This is the <code>CreationDate</code> plus the <code>ProposalDurationInHours</code> that is specified in the <code>ProposalThresholdPolicy</code>. After this date and time, if members have not cast enough votes to determine the outcome according to the voting policy, the proposal is <code>EXPIRED</code> and <code>Actions</code> are not carried out. </p>
+    #[doc(hidden)]
     pub expiration_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the proposal. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl ProposalSummary {
@@ -607,11 +618,10 @@ impl std::fmt::Debug for ProposalSummary {
         formatter.finish()
     }
 }
-/// See [`ProposalSummary`](crate::model::ProposalSummary)
+/// See [`ProposalSummary`](crate::model::ProposalSummary).
 pub mod proposal_summary {
 
-    /// A builder for [`ProposalSummary`](crate::model::ProposalSummary)
-    #[non_exhaustive]
+    /// A builder for [`ProposalSummary`](crate::model::ProposalSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) proposal_id: std::option::Option<std::string::String>,
@@ -733,7 +743,7 @@ pub mod proposal_summary {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProposalSummary`](crate::model::ProposalSummary)
+        /// Consumes the builder and constructs a [`ProposalSummary`](crate::model::ProposalSummary).
         pub fn build(self) -> crate::model::ProposalSummary {
             crate::model::ProposalSummary {
                 proposal_id: self.proposal_id,
@@ -749,7 +759,7 @@ pub mod proposal_summary {
     }
 }
 impl ProposalSummary {
-    /// Creates a new builder-style object to manufacture [`ProposalSummary`](crate::model::ProposalSummary)
+    /// Creates a new builder-style object to manufacture [`ProposalSummary`](crate::model::ProposalSummary).
     pub fn builder() -> crate::model::proposal_summary::Builder {
         crate::model::proposal_summary::Builder::default()
     }
@@ -833,16 +843,22 @@ impl AsRef<str> for ProposalStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeSummary {
     /// <p>The unique identifier of the node.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The status of the node.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NodeStatus>,
     /// <p>The date and time that the node was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Availability Zone in which the node exists.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The EC2 instance type for the node.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the node. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl NodeSummary {
@@ -883,11 +899,10 @@ impl std::fmt::Debug for NodeSummary {
         formatter.finish()
     }
 }
-/// See [`NodeSummary`](crate::model::NodeSummary)
+/// See [`NodeSummary`](crate::model::NodeSummary).
 pub mod node_summary {
 
-    /// A builder for [`NodeSummary`](crate::model::NodeSummary)
-    #[non_exhaustive]
+    /// A builder for [`NodeSummary`](crate::model::NodeSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -967,7 +982,7 @@ pub mod node_summary {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeSummary`](crate::model::NodeSummary)
+        /// Consumes the builder and constructs a [`NodeSummary`](crate::model::NodeSummary).
         pub fn build(self) -> crate::model::NodeSummary {
             crate::model::NodeSummary {
                 id: self.id,
@@ -981,7 +996,7 @@ pub mod node_summary {
     }
 }
 impl NodeSummary {
-    /// Creates a new builder-style object to manufacture [`NodeSummary`](crate::model::NodeSummary)
+    /// Creates a new builder-style object to manufacture [`NodeSummary`](crate::model::NodeSummary).
     pub fn builder() -> crate::model::node_summary::Builder {
         crate::model::node_summary::Builder::default()
     }
@@ -1085,20 +1100,28 @@ impl AsRef<str> for NodeStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkSummary {
     /// <p>The unique identifier of the network.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the network.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>An optional description of the network.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The blockchain framework that the network uses.</p>
+    #[doc(hidden)]
     pub framework: std::option::Option<crate::model::Framework>,
     /// <p>The version of the blockchain framework that the network uses.</p>
+    #[doc(hidden)]
     pub framework_version: std::option::Option<std::string::String>,
     /// <p>The current status of the network.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NetworkStatus>,
     /// <p>The date and time that the network was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the network. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl NetworkSummary {
@@ -1149,11 +1172,10 @@ impl std::fmt::Debug for NetworkSummary {
         formatter.finish()
     }
 }
-/// See [`NetworkSummary`](crate::model::NetworkSummary)
+/// See [`NetworkSummary`](crate::model::NetworkSummary).
 pub mod network_summary {
 
-    /// A builder for [`NetworkSummary`](crate::model::NetworkSummary)
-    #[non_exhaustive]
+    /// A builder for [`NetworkSummary`](crate::model::NetworkSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1258,7 +1280,7 @@ pub mod network_summary {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkSummary`](crate::model::NetworkSummary)
+        /// Consumes the builder and constructs a [`NetworkSummary`](crate::model::NetworkSummary).
         pub fn build(self) -> crate::model::NetworkSummary {
             crate::model::NetworkSummary {
                 id: self.id,
@@ -1274,7 +1296,7 @@ pub mod network_summary {
     }
 }
 impl NetworkSummary {
-    /// Creates a new builder-style object to manufacture [`NetworkSummary`](crate::model::NetworkSummary)
+    /// Creates a new builder-style object to manufacture [`NetworkSummary`](crate::model::NetworkSummary).
     pub fn builder() -> crate::model::network_summary::Builder {
         crate::model::network_summary::Builder::default()
     }
@@ -1414,10 +1436,13 @@ impl AsRef<str> for Framework {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberSummary {
     /// <p>The unique identifier of the member.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the member.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>An optional description of the member.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The status of the member.</p>
     /// <ul>
@@ -1429,12 +1454,16 @@ pub struct MemberSummary {
     /// <li> <p> <code>DELETED</code> - The member can no longer participate on the network and all associated resources are deleted. Either the AWS account that owns the member deleted it, or the member is being deleted as the result of an <code>APPROVED</code> <code>PROPOSAL</code> to remove the member.</p> </li>
     /// <li> <p> <code>INACCESSIBLE_ENCRYPTION_KEY</code> - The member is impaired and might not function as expected because it cannot access the specified customer managed key in AWS Key Management Service (AWS KMS) for encryption at rest. Either the KMS key was disabled or deleted, or the grants on the key were revoked.</p> <p>The effect of disabling or deleting a key, or revoking a grant is not immediate. The member resource might take some time to find that the key is inaccessible. When a resource is in this state, we recommend deleting and recreating the resource.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::MemberStatus>,
     /// <p>The date and time that the member was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An indicator of whether the member is owned by your AWS account or a different AWS account.</p>
+    #[doc(hidden)]
     pub is_owned: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) of the member. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl MemberSummary {
@@ -1489,11 +1518,10 @@ impl std::fmt::Debug for MemberSummary {
         formatter.finish()
     }
 }
-/// See [`MemberSummary`](crate::model::MemberSummary)
+/// See [`MemberSummary`](crate::model::MemberSummary).
 pub mod member_summary {
 
-    /// A builder for [`MemberSummary`](crate::model::MemberSummary)
-    #[non_exhaustive]
+    /// A builder for [`MemberSummary`](crate::model::MemberSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1599,7 +1627,7 @@ pub mod member_summary {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberSummary`](crate::model::MemberSummary)
+        /// Consumes the builder and constructs a [`MemberSummary`](crate::model::MemberSummary).
         pub fn build(self) -> crate::model::MemberSummary {
             crate::model::MemberSummary {
                 id: self.id,
@@ -1614,7 +1642,7 @@ pub mod member_summary {
     }
 }
 impl MemberSummary {
-    /// Creates a new builder-style object to manufacture [`MemberSummary`](crate::model::MemberSummary)
+    /// Creates a new builder-style object to manufacture [`MemberSummary`](crate::model::MemberSummary).
     pub fn builder() -> crate::model::member_summary::Builder {
         crate::model::member_summary::Builder::default()
     }
@@ -1709,10 +1737,13 @@ impl AsRef<str> for MemberStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Invitation {
     /// <p>The unique identifier for the invitation.</p>
+    #[doc(hidden)]
     pub invitation_id: std::option::Option<std::string::String>,
     /// <p>The date and time that the invitation was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the invitation expires. This is the <code>CreationDate</code> plus the <code>ProposalDurationInHours</code> that is specified in the <code>ProposalThresholdPolicy</code>. After this date and time, the invitee can no longer create a member and join the network using this <code>InvitationId</code>.</p>
+    #[doc(hidden)]
     pub expiration_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the invitation:</p>
     /// <ul>
@@ -1722,10 +1753,13 @@ pub struct Invitation {
     /// <li> <p> <code>REJECTED</code> - The invitee rejected the invitation.</p> </li>
     /// <li> <p> <code>EXPIRED</code> - The invitee neither created a member nor rejected the invitation before the <code>ExpirationDate</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InvitationStatus>,
     /// <p>A summary of network configuration properties.</p>
+    #[doc(hidden)]
     pub network_summary: std::option::Option<crate::model::NetworkSummary>,
     /// <p>The Amazon Resource Name (ARN) of the invitation. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl Invitation {
@@ -1773,11 +1807,10 @@ impl std::fmt::Debug for Invitation {
         formatter.finish()
     }
 }
-/// See [`Invitation`](crate::model::Invitation)
+/// See [`Invitation`](crate::model::Invitation).
 pub mod invitation {
 
-    /// A builder for [`Invitation`](crate::model::Invitation)
-    #[non_exhaustive]
+    /// A builder for [`Invitation`](crate::model::Invitation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) invitation_id: std::option::Option<std::string::String>,
@@ -1877,7 +1910,7 @@ pub mod invitation {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Invitation`](crate::model::Invitation)
+        /// Consumes the builder and constructs a [`Invitation`](crate::model::Invitation).
         pub fn build(self) -> crate::model::Invitation {
             crate::model::Invitation {
                 invitation_id: self.invitation_id,
@@ -1891,7 +1924,7 @@ pub mod invitation {
     }
 }
 impl Invitation {
-    /// Creates a new builder-style object to manufacture [`Invitation`](crate::model::Invitation)
+    /// Creates a new builder-style object to manufacture [`Invitation`](crate::model::Invitation).
     pub fn builder() -> crate::model::invitation::Builder {
         crate::model::invitation::Builder::default()
     }
@@ -1970,16 +2003,22 @@ impl AsRef<str> for InvitationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Proposal {
     /// <p>The unique identifier of the proposal.</p>
+    #[doc(hidden)]
     pub proposal_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the network for which the proposal is made.</p>
+    #[doc(hidden)]
     pub network_id: std::option::Option<std::string::String>,
     /// <p>The description of the proposal.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The actions to perform on the network if the proposal is <code>APPROVED</code>.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<crate::model::ProposalActions>,
     /// <p>The unique identifier of the member that created the proposal.</p>
+    #[doc(hidden)]
     pub proposed_by_member_id: std::option::Option<std::string::String>,
     /// <p>The name of the member that created the proposal.</p>
+    #[doc(hidden)]
     pub proposed_by_member_name: std::option::Option<std::string::String>,
     /// <p>The status of the proposal. Values are as follows:</p>
     /// <ul>
@@ -1989,22 +2028,30 @@ pub struct Proposal {
     /// <li> <p> <code>EXPIRED</code> - Members did not cast the number of votes required to determine the proposal outcome before the proposal expired. The specified <code>ProposalActions</code> are not carried out.</p> </li>
     /// <li> <p> <code>ACTION_FAILED</code> - One or more of the specified <code>ProposalActions</code> in a proposal that was approved could not be completed because of an error. The <code>ACTION_FAILED</code> status occurs even if only one ProposalAction fails and other actions are successful.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProposalStatus>,
     /// <p> The date and time that the proposal was created. </p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The date and time that the proposal expires. This is the <code>CreationDate</code> plus the <code>ProposalDurationInHours</code> that is specified in the <code>ProposalThresholdPolicy</code>. After this date and time, if members have not cast enough votes to determine the outcome according to the voting policy, the proposal is <code>EXPIRED</code> and <code>Actions</code> are not carried out. </p>
+    #[doc(hidden)]
     pub expiration_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The current total of <code>YES</code> votes cast on the proposal by members. </p>
+    #[doc(hidden)]
     pub yes_vote_count: std::option::Option<i32>,
     /// <p> The current total of <code>NO</code> votes cast on the proposal by members. </p>
+    #[doc(hidden)]
     pub no_vote_count: std::option::Option<i32>,
     /// <p> The number of votes remaining to be cast on the proposal by members. In other words, the number of members minus the sum of <code>YES</code> votes and <code>NO</code> votes. </p>
+    #[doc(hidden)]
     pub outstanding_vote_count: std::option::Option<i32>,
     /// <p>Tags assigned to the proposal. Each tag consists of a key and optional value.</p>
     /// <p>For more information about tags, see <a href="https://docs.aws.amazon.com/managed-blockchain/latest/ethereum-dev/tagging-resources.html">Tagging Resources</a> in the <i>Amazon Managed Blockchain Ethereum Developer Guide</i>, or <a href="https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/tagging-resources.html">Tagging Resources</a> in the <i>Amazon Managed Blockchain Hyperledger Fabric Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the proposal. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl Proposal {
@@ -2096,11 +2143,10 @@ impl std::fmt::Debug for Proposal {
         formatter.finish()
     }
 }
-/// See [`Proposal`](crate::model::Proposal)
+/// See [`Proposal`](crate::model::Proposal).
 pub mod proposal {
 
-    /// A builder for [`Proposal`](crate::model::Proposal)
-    #[non_exhaustive]
+    /// A builder for [`Proposal`](crate::model::Proposal).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) proposal_id: std::option::Option<std::string::String>,
@@ -2310,7 +2356,7 @@ pub mod proposal {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Proposal`](crate::model::Proposal)
+        /// Consumes the builder and constructs a [`Proposal`](crate::model::Proposal).
         pub fn build(self) -> crate::model::Proposal {
             crate::model::Proposal {
                 proposal_id: self.proposal_id,
@@ -2332,7 +2378,7 @@ pub mod proposal {
     }
 }
 impl Proposal {
-    /// Creates a new builder-style object to manufacture [`Proposal`](crate::model::Proposal)
+    /// Creates a new builder-style object to manufacture [`Proposal`](crate::model::Proposal).
     pub fn builder() -> crate::model::proposal::Builder {
         crate::model::proposal::Builder::default()
     }
@@ -2344,8 +2390,10 @@ impl Proposal {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProposalActions {
     /// <p> The actions to perform for an <code>APPROVED</code> proposal to invite an AWS account to create a member and join the network. </p>
+    #[doc(hidden)]
     pub invitations: std::option::Option<std::vec::Vec<crate::model::InviteAction>>,
     /// <p> The actions to perform for an <code>APPROVED</code> proposal to remove a member from the network, which deletes the member and all associated member resources from the network. </p>
+    #[doc(hidden)]
     pub removals: std::option::Option<std::vec::Vec<crate::model::RemoveAction>>,
 }
 impl ProposalActions {
@@ -2366,11 +2414,10 @@ impl std::fmt::Debug for ProposalActions {
         formatter.finish()
     }
 }
-/// See [`ProposalActions`](crate::model::ProposalActions)
+/// See [`ProposalActions`](crate::model::ProposalActions).
 pub mod proposal_actions {
 
-    /// A builder for [`ProposalActions`](crate::model::ProposalActions)
-    #[non_exhaustive]
+    /// A builder for [`ProposalActions`](crate::model::ProposalActions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) invitations: std::option::Option<std::vec::Vec<crate::model::InviteAction>>,
@@ -2415,7 +2462,7 @@ pub mod proposal_actions {
             self.removals = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProposalActions`](crate::model::ProposalActions)
+        /// Consumes the builder and constructs a [`ProposalActions`](crate::model::ProposalActions).
         pub fn build(self) -> crate::model::ProposalActions {
             crate::model::ProposalActions {
                 invitations: self.invitations,
@@ -2425,7 +2472,7 @@ pub mod proposal_actions {
     }
 }
 impl ProposalActions {
-    /// Creates a new builder-style object to manufacture [`ProposalActions`](crate::model::ProposalActions)
+    /// Creates a new builder-style object to manufacture [`ProposalActions`](crate::model::ProposalActions).
     pub fn builder() -> crate::model::proposal_actions::Builder {
         crate::model::proposal_actions::Builder::default()
     }
@@ -2437,6 +2484,7 @@ impl ProposalActions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveAction {
     /// <p>The unique identifier of the member to remove.</p>
+    #[doc(hidden)]
     pub member_id: std::option::Option<std::string::String>,
 }
 impl RemoveAction {
@@ -2452,11 +2500,10 @@ impl std::fmt::Debug for RemoveAction {
         formatter.finish()
     }
 }
-/// See [`RemoveAction`](crate::model::RemoveAction)
+/// See [`RemoveAction`](crate::model::RemoveAction).
 pub mod remove_action {
 
-    /// A builder for [`RemoveAction`](crate::model::RemoveAction)
-    #[non_exhaustive]
+    /// A builder for [`RemoveAction`](crate::model::RemoveAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) member_id: std::option::Option<std::string::String>,
@@ -2472,7 +2519,7 @@ pub mod remove_action {
             self.member_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveAction`](crate::model::RemoveAction)
+        /// Consumes the builder and constructs a [`RemoveAction`](crate::model::RemoveAction).
         pub fn build(self) -> crate::model::RemoveAction {
             crate::model::RemoveAction {
                 member_id: self.member_id,
@@ -2481,7 +2528,7 @@ pub mod remove_action {
     }
 }
 impl RemoveAction {
-    /// Creates a new builder-style object to manufacture [`RemoveAction`](crate::model::RemoveAction)
+    /// Creates a new builder-style object to manufacture [`RemoveAction`](crate::model::RemoveAction).
     pub fn builder() -> crate::model::remove_action::Builder {
         crate::model::remove_action::Builder::default()
     }
@@ -2493,6 +2540,7 @@ impl RemoveAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InviteAction {
     /// <p>The AWS account ID to invite.</p>
+    #[doc(hidden)]
     pub principal: std::option::Option<std::string::String>,
 }
 impl InviteAction {
@@ -2508,11 +2556,10 @@ impl std::fmt::Debug for InviteAction {
         formatter.finish()
     }
 }
-/// See [`InviteAction`](crate::model::InviteAction)
+/// See [`InviteAction`](crate::model::InviteAction).
 pub mod invite_action {
 
-    /// A builder for [`InviteAction`](crate::model::InviteAction)
-    #[non_exhaustive]
+    /// A builder for [`InviteAction`](crate::model::InviteAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) principal: std::option::Option<std::string::String>,
@@ -2528,7 +2575,7 @@ pub mod invite_action {
             self.principal = input;
             self
         }
-        /// Consumes the builder and constructs a [`InviteAction`](crate::model::InviteAction)
+        /// Consumes the builder and constructs a [`InviteAction`](crate::model::InviteAction).
         pub fn build(self) -> crate::model::InviteAction {
             crate::model::InviteAction {
                 principal: self.principal,
@@ -2537,7 +2584,7 @@ pub mod invite_action {
     }
 }
 impl InviteAction {
-    /// Creates a new builder-style object to manufacture [`InviteAction`](crate::model::InviteAction)
+    /// Creates a new builder-style object to manufacture [`InviteAction`](crate::model::InviteAction).
     pub fn builder() -> crate::model::invite_action::Builder {
         crate::model::invite_action::Builder::default()
     }
@@ -2548,23 +2595,31 @@ impl InviteAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Node {
     /// <p>The unique identifier of the network that the node is on.</p>
+    #[doc(hidden)]
     pub network_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the member to which the node belongs.</p>
     /// <p>Applies only to Hyperledger Fabric.</p>
+    #[doc(hidden)]
     pub member_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the node.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The instance type of the node.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The Availability Zone in which the node exists. Required for Ethereum nodes. </p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>Attributes of the blockchain framework being used.</p>
+    #[doc(hidden)]
     pub framework_attributes: std::option::Option<crate::model::NodeFrameworkAttributes>,
     /// <p>Configuration properties for logging events associated with a peer node on a Hyperledger Fabric network on Managed Blockchain.</p>
+    #[doc(hidden)]
     pub log_publishing_configuration:
         std::option::Option<crate::model::NodeLogPublishingConfiguration>,
     /// <p>The state database that the node uses. Values are <code>LevelDB</code> or <code>CouchDB</code>.</p>
     /// <p>Applies only to Hyperledger Fabric.</p>
+    #[doc(hidden)]
     pub state_db: std::option::Option<crate::model::StateDbType>,
     /// <p>The status of the node.</p>
     /// <ul>
@@ -2578,17 +2633,22 @@ pub struct Node {
     /// <li> <p> <code>FAILED</code> - The node is no longer functional, cannot be recovered, and must be deleted.</p> </li>
     /// <li> <p> <code>INACCESSIBLE_ENCRYPTION_KEY</code> - The node is impaired and might not function as expected because it cannot access the specified customer managed key in AWS KMS for encryption at rest. Either the KMS key was disabled or deleted, or the grants on the key were revoked.</p> <p>The effect of disabling or deleting a key, or revoking a grant is not immediate. The node resource might take some time to find that the key is inaccessible. When a resource is in this state, we recommend deleting and recreating the resource.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NodeStatus>,
     /// <p>The date and time that the node was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Tags assigned to the node. Each tag consists of a key and optional value.</p>
     /// <p>For more information about tags, see <a href="https://docs.aws.amazon.com/managed-blockchain/latest/ethereum-dev/tagging-resources.html">Tagging Resources</a> in the <i>Amazon Managed Blockchain Ethereum Developer Guide</i>, or <a href="https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/tagging-resources.html">Tagging Resources</a> in the <i>Amazon Managed Blockchain Hyperledger Fabric Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the node. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the customer managed key in AWS Key Management Service (AWS KMS) that the node uses for encryption at rest. If the value of this parameter is <code>"AWS Owned KMS Key"</code>, the node uses an AWS owned KMS key for encryption. The node inherits this parameter from the member that it belongs to.</p>
     /// <p>Applies only to Hyperledger Fabric.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
 }
 impl Node {
@@ -2689,11 +2749,10 @@ impl std::fmt::Debug for Node {
         formatter.finish()
     }
 }
-/// See [`Node`](crate::model::Node)
+/// See [`Node`](crate::model::Node).
 pub mod node {
 
-    /// A builder for [`Node`](crate::model::Node)
-    #[non_exhaustive]
+    /// A builder for [`Node`](crate::model::Node).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_id: std::option::Option<std::string::String>,
@@ -2913,7 +2972,7 @@ pub mod node {
             self.kms_key_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Node`](crate::model::Node)
+        /// Consumes the builder and constructs a [`Node`](crate::model::Node).
         pub fn build(self) -> crate::model::Node {
             crate::model::Node {
                 network_id: self.network_id,
@@ -2934,7 +2993,7 @@ pub mod node {
     }
 }
 impl Node {
-    /// Creates a new builder-style object to manufacture [`Node`](crate::model::Node)
+    /// Creates a new builder-style object to manufacture [`Node`](crate::model::Node).
     pub fn builder() -> crate::model::node::Builder {
         crate::model::node::Builder::default()
     }
@@ -3000,8 +3059,10 @@ impl AsRef<str> for StateDbType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeFrameworkAttributes {
     /// <p>Attributes of Hyperledger Fabric for a peer node on a Managed Blockchain network that uses Hyperledger Fabric.</p>
+    #[doc(hidden)]
     pub fabric: std::option::Option<crate::model::NodeFabricAttributes>,
     /// <p>Attributes of Ethereum for a node on a Managed Blockchain network that uses Ethereum. </p>
+    #[doc(hidden)]
     pub ethereum: std::option::Option<crate::model::NodeEthereumAttributes>,
 }
 impl NodeFrameworkAttributes {
@@ -3022,11 +3083,10 @@ impl std::fmt::Debug for NodeFrameworkAttributes {
         formatter.finish()
     }
 }
-/// See [`NodeFrameworkAttributes`](crate::model::NodeFrameworkAttributes)
+/// See [`NodeFrameworkAttributes`](crate::model::NodeFrameworkAttributes).
 pub mod node_framework_attributes {
 
-    /// A builder for [`NodeFrameworkAttributes`](crate::model::NodeFrameworkAttributes)
-    #[non_exhaustive]
+    /// A builder for [`NodeFrameworkAttributes`](crate::model::NodeFrameworkAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fabric: std::option::Option<crate::model::NodeFabricAttributes>,
@@ -3059,7 +3119,7 @@ pub mod node_framework_attributes {
             self.ethereum = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeFrameworkAttributes`](crate::model::NodeFrameworkAttributes)
+        /// Consumes the builder and constructs a [`NodeFrameworkAttributes`](crate::model::NodeFrameworkAttributes).
         pub fn build(self) -> crate::model::NodeFrameworkAttributes {
             crate::model::NodeFrameworkAttributes {
                 fabric: self.fabric,
@@ -3069,7 +3129,7 @@ pub mod node_framework_attributes {
     }
 }
 impl NodeFrameworkAttributes {
-    /// Creates a new builder-style object to manufacture [`NodeFrameworkAttributes`](crate::model::NodeFrameworkAttributes)
+    /// Creates a new builder-style object to manufacture [`NodeFrameworkAttributes`](crate::model::NodeFrameworkAttributes).
     pub fn builder() -> crate::model::node_framework_attributes::Builder {
         crate::model::node_framework_attributes::Builder::default()
     }
@@ -3080,8 +3140,10 @@ impl NodeFrameworkAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeEthereumAttributes {
     /// <p>The endpoint on which the Ethereum node listens to run Ethereum JSON-RPC methods over HTTP connections from a client. Use this endpoint in client code for smart contracts when using an HTTP connection. Connections to this endpoint are authenticated using <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>.</p>
+    #[doc(hidden)]
     pub http_endpoint: std::option::Option<std::string::String>,
     /// <p>The endpoint on which the Ethereum node listens to run Ethereum JSON-RPC methods over WebSockets connections from a client. Use this endpoint in client code for smart contracts when using a WebSockets connection. Connections to this endpoint are authenticated using <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>.</p>
+    #[doc(hidden)]
     pub web_socket_endpoint: std::option::Option<std::string::String>,
 }
 impl NodeEthereumAttributes {
@@ -3102,11 +3164,10 @@ impl std::fmt::Debug for NodeEthereumAttributes {
         formatter.finish()
     }
 }
-/// See [`NodeEthereumAttributes`](crate::model::NodeEthereumAttributes)
+/// See [`NodeEthereumAttributes`](crate::model::NodeEthereumAttributes).
 pub mod node_ethereum_attributes {
 
-    /// A builder for [`NodeEthereumAttributes`](crate::model::NodeEthereumAttributes)
-    #[non_exhaustive]
+    /// A builder for [`NodeEthereumAttributes`](crate::model::NodeEthereumAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_endpoint: std::option::Option<std::string::String>,
@@ -3139,7 +3200,7 @@ pub mod node_ethereum_attributes {
             self.web_socket_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeEthereumAttributes`](crate::model::NodeEthereumAttributes)
+        /// Consumes the builder and constructs a [`NodeEthereumAttributes`](crate::model::NodeEthereumAttributes).
         pub fn build(self) -> crate::model::NodeEthereumAttributes {
             crate::model::NodeEthereumAttributes {
                 http_endpoint: self.http_endpoint,
@@ -3149,7 +3210,7 @@ pub mod node_ethereum_attributes {
     }
 }
 impl NodeEthereumAttributes {
-    /// Creates a new builder-style object to manufacture [`NodeEthereumAttributes`](crate::model::NodeEthereumAttributes)
+    /// Creates a new builder-style object to manufacture [`NodeEthereumAttributes`](crate::model::NodeEthereumAttributes).
     pub fn builder() -> crate::model::node_ethereum_attributes::Builder {
         crate::model::node_ethereum_attributes::Builder::default()
     }
@@ -3160,8 +3221,10 @@ impl NodeEthereumAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeFabricAttributes {
     /// <p>The endpoint that identifies the peer node for all services except peer channel-based event services.</p>
+    #[doc(hidden)]
     pub peer_endpoint: std::option::Option<std::string::String>,
     /// <p>The endpoint that identifies the peer node for peer channel-based event services.</p>
+    #[doc(hidden)]
     pub peer_event_endpoint: std::option::Option<std::string::String>,
 }
 impl NodeFabricAttributes {
@@ -3182,11 +3245,10 @@ impl std::fmt::Debug for NodeFabricAttributes {
         formatter.finish()
     }
 }
-/// See [`NodeFabricAttributes`](crate::model::NodeFabricAttributes)
+/// See [`NodeFabricAttributes`](crate::model::NodeFabricAttributes).
 pub mod node_fabric_attributes {
 
-    /// A builder for [`NodeFabricAttributes`](crate::model::NodeFabricAttributes)
-    #[non_exhaustive]
+    /// A builder for [`NodeFabricAttributes`](crate::model::NodeFabricAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) peer_endpoint: std::option::Option<std::string::String>,
@@ -3219,7 +3281,7 @@ pub mod node_fabric_attributes {
             self.peer_event_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeFabricAttributes`](crate::model::NodeFabricAttributes)
+        /// Consumes the builder and constructs a [`NodeFabricAttributes`](crate::model::NodeFabricAttributes).
         pub fn build(self) -> crate::model::NodeFabricAttributes {
             crate::model::NodeFabricAttributes {
                 peer_endpoint: self.peer_endpoint,
@@ -3229,7 +3291,7 @@ pub mod node_fabric_attributes {
     }
 }
 impl NodeFabricAttributes {
-    /// Creates a new builder-style object to manufacture [`NodeFabricAttributes`](crate::model::NodeFabricAttributes)
+    /// Creates a new builder-style object to manufacture [`NodeFabricAttributes`](crate::model::NodeFabricAttributes).
     pub fn builder() -> crate::model::node_fabric_attributes::Builder {
         crate::model::node_fabric_attributes::Builder::default()
     }
@@ -3240,30 +3302,42 @@ impl NodeFabricAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Network {
     /// <p>The unique identifier of the network.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the network.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Attributes of the blockchain framework for the network.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The blockchain framework that the network uses.</p>
+    #[doc(hidden)]
     pub framework: std::option::Option<crate::model::Framework>,
     /// <p>The version of the blockchain framework that the network uses.</p>
+    #[doc(hidden)]
     pub framework_version: std::option::Option<std::string::String>,
     /// <p>Attributes of the blockchain framework that the network uses.</p>
+    #[doc(hidden)]
     pub framework_attributes: std::option::Option<crate::model::NetworkFrameworkAttributes>,
     /// <p>The VPC endpoint service name of the VPC endpoint service of the network. Members use the VPC endpoint service name to create a VPC endpoint to access network resources.</p>
+    #[doc(hidden)]
     pub vpc_endpoint_service_name: std::option::Option<std::string::String>,
     /// <p>The voting rules for the network to decide if a proposal is accepted.</p>
+    #[doc(hidden)]
     pub voting_policy: std::option::Option<crate::model::VotingPolicy>,
     /// <p>The current status of the network.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NetworkStatus>,
     /// <p>The date and time that the network was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Tags assigned to the network. Each tag consists of a key and optional value.</p>
     /// <p>For more information about tags, see <a href="https://docs.aws.amazon.com/managed-blockchain/latest/ethereum-dev/tagging-resources.html">Tagging Resources</a> in the <i>Amazon Managed Blockchain Ethereum Developer Guide</i>, or <a href="https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/tagging-resources.html">Tagging Resources</a> in the <i>Amazon Managed Blockchain Hyperledger Fabric Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the network. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl Network {
@@ -3340,11 +3414,10 @@ impl std::fmt::Debug for Network {
         formatter.finish()
     }
 }
-/// See [`Network`](crate::model::Network)
+/// See [`Network`](crate::model::Network).
 pub mod network {
 
-    /// A builder for [`Network`](crate::model::Network)
-    #[non_exhaustive]
+    /// A builder for [`Network`](crate::model::Network).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3525,7 +3598,7 @@ pub mod network {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Network`](crate::model::Network)
+        /// Consumes the builder and constructs a [`Network`](crate::model::Network).
         pub fn build(self) -> crate::model::Network {
             crate::model::Network {
                 id: self.id,
@@ -3545,7 +3618,7 @@ pub mod network {
     }
 }
 impl Network {
-    /// Creates a new builder-style object to manufacture [`Network`](crate::model::Network)
+    /// Creates a new builder-style object to manufacture [`Network`](crate::model::Network).
     pub fn builder() -> crate::model::network::Builder {
         crate::model::network::Builder::default()
     }
@@ -3557,6 +3630,7 @@ impl Network {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VotingPolicy {
     /// <p>Defines the rules for the network for voting on proposals, such as the percentage of <code>YES</code> votes required for the proposal to be approved and the duration of the proposal. The policy applies to all proposals and is specified when the network is created.</p>
+    #[doc(hidden)]
     pub approval_threshold_policy: std::option::Option<crate::model::ApprovalThresholdPolicy>,
 }
 impl VotingPolicy {
@@ -3574,11 +3648,10 @@ impl std::fmt::Debug for VotingPolicy {
         formatter.finish()
     }
 }
-/// See [`VotingPolicy`](crate::model::VotingPolicy)
+/// See [`VotingPolicy`](crate::model::VotingPolicy).
 pub mod voting_policy {
 
-    /// A builder for [`VotingPolicy`](crate::model::VotingPolicy)
-    #[non_exhaustive]
+    /// A builder for [`VotingPolicy`](crate::model::VotingPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) approval_threshold_policy:
@@ -3601,7 +3674,7 @@ pub mod voting_policy {
             self.approval_threshold_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`VotingPolicy`](crate::model::VotingPolicy)
+        /// Consumes the builder and constructs a [`VotingPolicy`](crate::model::VotingPolicy).
         pub fn build(self) -> crate::model::VotingPolicy {
             crate::model::VotingPolicy {
                 approval_threshold_policy: self.approval_threshold_policy,
@@ -3610,7 +3683,7 @@ pub mod voting_policy {
     }
 }
 impl VotingPolicy {
-    /// Creates a new builder-style object to manufacture [`VotingPolicy`](crate::model::VotingPolicy)
+    /// Creates a new builder-style object to manufacture [`VotingPolicy`](crate::model::VotingPolicy).
     pub fn builder() -> crate::model::voting_policy::Builder {
         crate::model::voting_policy::Builder::default()
     }
@@ -3622,10 +3695,13 @@ impl VotingPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApprovalThresholdPolicy {
     /// <p>The percentage of votes among all members that must be <code>YES</code> for a proposal to be approved. For example, a <code>ThresholdPercentage</code> value of <code>50</code> indicates 50%. The <code>ThresholdComparator</code> determines the precise comparison. If a <code>ThresholdPercentage</code> value of <code>50</code> is specified on a network with 10 members, along with a <code>ThresholdComparator</code> value of <code>GREATER_THAN</code>, this indicates that 6 <code>YES</code> votes are required for the proposal to be approved.</p>
+    #[doc(hidden)]
     pub threshold_percentage: std::option::Option<i32>,
     /// <p>The duration from the time that a proposal is created until it expires. If members cast neither the required number of <code>YES</code> votes to approve the proposal nor the number of <code>NO</code> votes required to reject it before the duration expires, the proposal is <code>EXPIRED</code> and <code>ProposalActions</code> are not carried out.</p>
+    #[doc(hidden)]
     pub proposal_duration_in_hours: std::option::Option<i32>,
     /// <p>Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must be greater than or equal to the <code>ThreholdPercentage</code> to be approved.</p>
+    #[doc(hidden)]
     pub threshold_comparator: std::option::Option<crate::model::ThresholdComparator>,
 }
 impl ApprovalThresholdPolicy {
@@ -3654,11 +3730,10 @@ impl std::fmt::Debug for ApprovalThresholdPolicy {
         formatter.finish()
     }
 }
-/// See [`ApprovalThresholdPolicy`](crate::model::ApprovalThresholdPolicy)
+/// See [`ApprovalThresholdPolicy`](crate::model::ApprovalThresholdPolicy).
 pub mod approval_threshold_policy {
 
-    /// A builder for [`ApprovalThresholdPolicy`](crate::model::ApprovalThresholdPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ApprovalThresholdPolicy`](crate::model::ApprovalThresholdPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) threshold_percentage: std::option::Option<i32>,
@@ -3699,7 +3774,7 @@ pub mod approval_threshold_policy {
             self.threshold_comparator = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApprovalThresholdPolicy`](crate::model::ApprovalThresholdPolicy)
+        /// Consumes the builder and constructs a [`ApprovalThresholdPolicy`](crate::model::ApprovalThresholdPolicy).
         pub fn build(self) -> crate::model::ApprovalThresholdPolicy {
             crate::model::ApprovalThresholdPolicy {
                 threshold_percentage: self.threshold_percentage,
@@ -3710,7 +3785,7 @@ pub mod approval_threshold_policy {
     }
 }
 impl ApprovalThresholdPolicy {
-    /// Creates a new builder-style object to manufacture [`ApprovalThresholdPolicy`](crate::model::ApprovalThresholdPolicy)
+    /// Creates a new builder-style object to manufacture [`ApprovalThresholdPolicy`](crate::model::ApprovalThresholdPolicy).
     pub fn builder() -> crate::model::approval_threshold_policy::Builder {
         crate::model::approval_threshold_policy::Builder::default()
     }
@@ -3776,8 +3851,10 @@ impl AsRef<str> for ThresholdComparator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkFrameworkAttributes {
     /// <p>Attributes of Hyperledger Fabric for a Managed Blockchain network that uses Hyperledger Fabric.</p>
+    #[doc(hidden)]
     pub fabric: std::option::Option<crate::model::NetworkFabricAttributes>,
     /// <p>Attributes of an Ethereum network for Managed Blockchain resources participating in an Ethereum network. </p>
+    #[doc(hidden)]
     pub ethereum: std::option::Option<crate::model::NetworkEthereumAttributes>,
 }
 impl NetworkFrameworkAttributes {
@@ -3798,11 +3875,10 @@ impl std::fmt::Debug for NetworkFrameworkAttributes {
         formatter.finish()
     }
 }
-/// See [`NetworkFrameworkAttributes`](crate::model::NetworkFrameworkAttributes)
+/// See [`NetworkFrameworkAttributes`](crate::model::NetworkFrameworkAttributes).
 pub mod network_framework_attributes {
 
-    /// A builder for [`NetworkFrameworkAttributes`](crate::model::NetworkFrameworkAttributes)
-    #[non_exhaustive]
+    /// A builder for [`NetworkFrameworkAttributes`](crate::model::NetworkFrameworkAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fabric: std::option::Option<crate::model::NetworkFabricAttributes>,
@@ -3835,7 +3911,7 @@ pub mod network_framework_attributes {
             self.ethereum = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkFrameworkAttributes`](crate::model::NetworkFrameworkAttributes)
+        /// Consumes the builder and constructs a [`NetworkFrameworkAttributes`](crate::model::NetworkFrameworkAttributes).
         pub fn build(self) -> crate::model::NetworkFrameworkAttributes {
             crate::model::NetworkFrameworkAttributes {
                 fabric: self.fabric,
@@ -3845,7 +3921,7 @@ pub mod network_framework_attributes {
     }
 }
 impl NetworkFrameworkAttributes {
-    /// Creates a new builder-style object to manufacture [`NetworkFrameworkAttributes`](crate::model::NetworkFrameworkAttributes)
+    /// Creates a new builder-style object to manufacture [`NetworkFrameworkAttributes`](crate::model::NetworkFrameworkAttributes).
     pub fn builder() -> crate::model::network_framework_attributes::Builder {
         crate::model::network_framework_attributes::Builder::default()
     }
@@ -3861,6 +3937,7 @@ pub struct NetworkEthereumAttributes {
     /// <li> <p>rinkeby = <code>4</code> </p> </li>
     /// <li> <p>ropsten = <code>3</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub chain_id: std::option::Option<std::string::String>,
 }
 impl NetworkEthereumAttributes {
@@ -3881,11 +3958,10 @@ impl std::fmt::Debug for NetworkEthereumAttributes {
         formatter.finish()
     }
 }
-/// See [`NetworkEthereumAttributes`](crate::model::NetworkEthereumAttributes)
+/// See [`NetworkEthereumAttributes`](crate::model::NetworkEthereumAttributes).
 pub mod network_ethereum_attributes {
 
-    /// A builder for [`NetworkEthereumAttributes`](crate::model::NetworkEthereumAttributes)
-    #[non_exhaustive]
+    /// A builder for [`NetworkEthereumAttributes`](crate::model::NetworkEthereumAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) chain_id: std::option::Option<std::string::String>,
@@ -3911,7 +3987,7 @@ pub mod network_ethereum_attributes {
             self.chain_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkEthereumAttributes`](crate::model::NetworkEthereumAttributes)
+        /// Consumes the builder and constructs a [`NetworkEthereumAttributes`](crate::model::NetworkEthereumAttributes).
         pub fn build(self) -> crate::model::NetworkEthereumAttributes {
             crate::model::NetworkEthereumAttributes {
                 chain_id: self.chain_id,
@@ -3920,7 +3996,7 @@ pub mod network_ethereum_attributes {
     }
 }
 impl NetworkEthereumAttributes {
-    /// Creates a new builder-style object to manufacture [`NetworkEthereumAttributes`](crate::model::NetworkEthereumAttributes)
+    /// Creates a new builder-style object to manufacture [`NetworkEthereumAttributes`](crate::model::NetworkEthereumAttributes).
     pub fn builder() -> crate::model::network_ethereum_attributes::Builder {
         crate::model::network_ethereum_attributes::Builder::default()
     }
@@ -3931,8 +4007,10 @@ impl NetworkEthereumAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkFabricAttributes {
     /// <p>The endpoint of the ordering service for the network.</p>
+    #[doc(hidden)]
     pub ordering_service_endpoint: std::option::Option<std::string::String>,
     /// <p>The edition of Amazon Managed Blockchain that Hyperledger Fabric uses. For more information, see <a href="http://aws.amazon.com/managed-blockchain/pricing/">Amazon Managed Blockchain Pricing</a>.</p>
+    #[doc(hidden)]
     pub edition: std::option::Option<crate::model::Edition>,
 }
 impl NetworkFabricAttributes {
@@ -3953,11 +4031,10 @@ impl std::fmt::Debug for NetworkFabricAttributes {
         formatter.finish()
     }
 }
-/// See [`NetworkFabricAttributes`](crate::model::NetworkFabricAttributes)
+/// See [`NetworkFabricAttributes`](crate::model::NetworkFabricAttributes).
 pub mod network_fabric_attributes {
 
-    /// A builder for [`NetworkFabricAttributes`](crate::model::NetworkFabricAttributes)
-    #[non_exhaustive]
+    /// A builder for [`NetworkFabricAttributes`](crate::model::NetworkFabricAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ordering_service_endpoint: std::option::Option<std::string::String>,
@@ -3987,7 +4064,7 @@ pub mod network_fabric_attributes {
             self.edition = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkFabricAttributes`](crate::model::NetworkFabricAttributes)
+        /// Consumes the builder and constructs a [`NetworkFabricAttributes`](crate::model::NetworkFabricAttributes).
         pub fn build(self) -> crate::model::NetworkFabricAttributes {
             crate::model::NetworkFabricAttributes {
                 ordering_service_endpoint: self.ordering_service_endpoint,
@@ -3997,7 +4074,7 @@ pub mod network_fabric_attributes {
     }
 }
 impl NetworkFabricAttributes {
-    /// Creates a new builder-style object to manufacture [`NetworkFabricAttributes`](crate::model::NetworkFabricAttributes)
+    /// Creates a new builder-style object to manufacture [`NetworkFabricAttributes`](crate::model::NetworkFabricAttributes).
     pub fn builder() -> crate::model::network_fabric_attributes::Builder {
         crate::model::network_fabric_attributes::Builder::default()
     }
@@ -4064,16 +4141,22 @@ impl AsRef<str> for Edition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Member {
     /// <p>The unique identifier of the network to which the member belongs.</p>
+    #[doc(hidden)]
     pub network_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the member.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the member.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>An optional description for the member.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Attributes relevant to a member for the blockchain framework that the Managed Blockchain network uses.</p>
+    #[doc(hidden)]
     pub framework_attributes: std::option::Option<crate::model::MemberFrameworkAttributes>,
     /// <p>Configuration properties for logging events associated with a member.</p>
+    #[doc(hidden)]
     pub log_publishing_configuration:
         std::option::Option<crate::model::MemberLogPublishingConfiguration>,
     /// <p>The status of a member.</p>
@@ -4086,15 +4169,20 @@ pub struct Member {
     /// <li> <p> <code>DELETED</code> - The member can no longer participate on the network and all associated resources are deleted. Either the AWS account that owns the member deleted it, or the member is being deleted as the result of an <code>APPROVED</code> <code>PROPOSAL</code> to remove the member.</p> </li>
     /// <li> <p> <code>INACCESSIBLE_ENCRYPTION_KEY</code> - The member is impaired and might not function as expected because it cannot access the specified customer managed key in AWS KMS for encryption at rest. Either the KMS key was disabled or deleted, or the grants on the key were revoked.</p> <p>The effect of disabling or deleting a key, or revoking a grant is not immediate. The member resource might take some time to find that the key is inaccessible. When a resource is in this state, we recommend deleting and recreating the resource.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::MemberStatus>,
     /// <p>The date and time that the member was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Tags assigned to the member. Tags consist of a key and optional value. For more information about tags, see <a href="https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/tagging-resources.html">Tagging Resources</a> in the <i>Amazon Managed Blockchain Hyperledger Fabric Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the member. For more information about ARNs and their format, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the customer managed key in AWS Key Management Service (AWS KMS) that the member uses for encryption at rest. If the value of this parameter is <code>"AWS Owned KMS Key"</code>, the member uses an AWS owned KMS key for encryption. This parameter is inherited by the nodes that this member owns.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
 }
 impl Member {
@@ -4179,11 +4267,10 @@ impl std::fmt::Debug for Member {
         formatter.finish()
     }
 }
-/// See [`Member`](crate::model::Member)
+/// See [`Member`](crate::model::Member).
 pub mod member {
 
-    /// A builder for [`Member`](crate::model::Member)
-    #[non_exhaustive]
+    /// A builder for [`Member`](crate::model::Member).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_id: std::option::Option<std::string::String>,
@@ -4364,7 +4451,7 @@ pub mod member {
             self.kms_key_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Member`](crate::model::Member)
+        /// Consumes the builder and constructs a [`Member`](crate::model::Member).
         pub fn build(self) -> crate::model::Member {
             crate::model::Member {
                 network_id: self.network_id,
@@ -4383,7 +4470,7 @@ pub mod member {
     }
 }
 impl Member {
-    /// Creates a new builder-style object to manufacture [`Member`](crate::model::Member)
+    /// Creates a new builder-style object to manufacture [`Member`](crate::model::Member).
     pub fn builder() -> crate::model::member::Builder {
         crate::model::member::Builder::default()
     }
@@ -4394,6 +4481,7 @@ impl Member {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberFrameworkAttributes {
     /// <p>Attributes of Hyperledger Fabric relevant to a member on a Managed Blockchain network that uses Hyperledger Fabric.</p>
+    #[doc(hidden)]
     pub fabric: std::option::Option<crate::model::MemberFabricAttributes>,
 }
 impl MemberFrameworkAttributes {
@@ -4409,11 +4497,10 @@ impl std::fmt::Debug for MemberFrameworkAttributes {
         formatter.finish()
     }
 }
-/// See [`MemberFrameworkAttributes`](crate::model::MemberFrameworkAttributes)
+/// See [`MemberFrameworkAttributes`](crate::model::MemberFrameworkAttributes).
 pub mod member_framework_attributes {
 
-    /// A builder for [`MemberFrameworkAttributes`](crate::model::MemberFrameworkAttributes)
-    #[non_exhaustive]
+    /// A builder for [`MemberFrameworkAttributes`](crate::model::MemberFrameworkAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fabric: std::option::Option<crate::model::MemberFabricAttributes>,
@@ -4432,7 +4519,7 @@ pub mod member_framework_attributes {
             self.fabric = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberFrameworkAttributes`](crate::model::MemberFrameworkAttributes)
+        /// Consumes the builder and constructs a [`MemberFrameworkAttributes`](crate::model::MemberFrameworkAttributes).
         pub fn build(self) -> crate::model::MemberFrameworkAttributes {
             crate::model::MemberFrameworkAttributes {
                 fabric: self.fabric,
@@ -4441,7 +4528,7 @@ pub mod member_framework_attributes {
     }
 }
 impl MemberFrameworkAttributes {
-    /// Creates a new builder-style object to manufacture [`MemberFrameworkAttributes`](crate::model::MemberFrameworkAttributes)
+    /// Creates a new builder-style object to manufacture [`MemberFrameworkAttributes`](crate::model::MemberFrameworkAttributes).
     pub fn builder() -> crate::model::member_framework_attributes::Builder {
         crate::model::member_framework_attributes::Builder::default()
     }
@@ -4452,8 +4539,10 @@ impl MemberFrameworkAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberFabricAttributes {
     /// <p>The user name for the initial administrator user for the member.</p>
+    #[doc(hidden)]
     pub admin_username: std::option::Option<std::string::String>,
     /// <p>The endpoint used to access the member's certificate authority.</p>
+    #[doc(hidden)]
     pub ca_endpoint: std::option::Option<std::string::String>,
 }
 impl MemberFabricAttributes {
@@ -4474,11 +4563,10 @@ impl std::fmt::Debug for MemberFabricAttributes {
         formatter.finish()
     }
 }
-/// See [`MemberFabricAttributes`](crate::model::MemberFabricAttributes)
+/// See [`MemberFabricAttributes`](crate::model::MemberFabricAttributes).
 pub mod member_fabric_attributes {
 
-    /// A builder for [`MemberFabricAttributes`](crate::model::MemberFabricAttributes)
-    #[non_exhaustive]
+    /// A builder for [`MemberFabricAttributes`](crate::model::MemberFabricAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) admin_username: std::option::Option<std::string::String>,
@@ -4508,7 +4596,7 @@ pub mod member_fabric_attributes {
             self.ca_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberFabricAttributes`](crate::model::MemberFabricAttributes)
+        /// Consumes the builder and constructs a [`MemberFabricAttributes`](crate::model::MemberFabricAttributes).
         pub fn build(self) -> crate::model::MemberFabricAttributes {
             crate::model::MemberFabricAttributes {
                 admin_username: self.admin_username,
@@ -4518,7 +4606,7 @@ pub mod member_fabric_attributes {
     }
 }
 impl MemberFabricAttributes {
-    /// Creates a new builder-style object to manufacture [`MemberFabricAttributes`](crate::model::MemberFabricAttributes)
+    /// Creates a new builder-style object to manufacture [`MemberFabricAttributes`](crate::model::MemberFabricAttributes).
     pub fn builder() -> crate::model::member_fabric_attributes::Builder {
         crate::model::member_fabric_attributes::Builder::default()
     }
@@ -4529,14 +4617,18 @@ impl MemberFabricAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeConfiguration {
     /// <p>The Amazon Managed Blockchain instance type for the node.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The Availability Zone in which the node exists. Required for Ethereum nodes. </p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>Configuration properties for logging events associated with a peer node on a Hyperledger Fabric network on Managed Blockchain. </p>
+    #[doc(hidden)]
     pub log_publishing_configuration:
         std::option::Option<crate::model::NodeLogPublishingConfiguration>,
     /// <p>The state database that the node uses. Values are <code>LevelDB</code> or <code>CouchDB</code>. When using an Amazon Managed Blockchain network with Hyperledger Fabric version 1.4 or later, the default is <code>CouchDB</code>.</p>
     /// <p>Applies only to Hyperledger Fabric.</p>
+    #[doc(hidden)]
     pub state_db: std::option::Option<crate::model::StateDbType>,
 }
 impl NodeConfiguration {
@@ -4573,11 +4665,10 @@ impl std::fmt::Debug for NodeConfiguration {
         formatter.finish()
     }
 }
-/// See [`NodeConfiguration`](crate::model::NodeConfiguration)
+/// See [`NodeConfiguration`](crate::model::NodeConfiguration).
 pub mod node_configuration {
 
-    /// A builder for [`NodeConfiguration`](crate::model::NodeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NodeConfiguration`](crate::model::NodeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_type: std::option::Option<std::string::String>,
@@ -4644,7 +4735,7 @@ pub mod node_configuration {
             self.state_db = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeConfiguration`](crate::model::NodeConfiguration)
+        /// Consumes the builder and constructs a [`NodeConfiguration`](crate::model::NodeConfiguration).
         pub fn build(self) -> crate::model::NodeConfiguration {
             crate::model::NodeConfiguration {
                 instance_type: self.instance_type,
@@ -4656,7 +4747,7 @@ pub mod node_configuration {
     }
 }
 impl NodeConfiguration {
-    /// Creates a new builder-style object to manufacture [`NodeConfiguration`](crate::model::NodeConfiguration)
+    /// Creates a new builder-style object to manufacture [`NodeConfiguration`](crate::model::NodeConfiguration).
     pub fn builder() -> crate::model::node_configuration::Builder {
         crate::model::node_configuration::Builder::default()
     }
@@ -4668,16 +4759,21 @@ impl NodeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberConfiguration {
     /// <p>The name of the member.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>An optional description of the member.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Configuration properties of the blockchain framework relevant to the member.</p>
+    #[doc(hidden)]
     pub framework_configuration: std::option::Option<crate::model::MemberFrameworkConfiguration>,
     /// <p>Configuration properties for logging events associated with a member of a Managed Blockchain network.</p>
+    #[doc(hidden)]
     pub log_publishing_configuration:
         std::option::Option<crate::model::MemberLogPublishingConfiguration>,
     /// <p>Tags assigned to the member. Tags consist of a key and optional value. For more information about tags, see <a href="https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/tagging-resources.html">Tagging Resources</a> in the <i>Amazon Managed Blockchain Hyperledger Fabric Developer Guide</i>.</p>
     /// <p>When specifying tags during creation, you can specify multiple key-value pairs in a single request, with an overall maximum of 50 tags added to each resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the customer managed key in AWS Key Management Service (AWS KMS) to use for encryption at rest in the member. This parameter is inherited by any nodes that this member creates.</p>
@@ -4686,6 +4782,7 @@ pub struct MemberConfiguration {
     /// <li> <p> <b>Undefined or empty string</b> - The member uses an AWS owned KMS key for encryption by default.</p> </li>
     /// <li> <p> <b>A valid symmetric customer managed KMS key</b> - The member uses the specified key for encryption.</p> <p>Amazon Managed Blockchain doesn't support asymmetric keys. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using symmetric and asymmetric keys</a> in the <i>AWS Key Management Service Developer Guide</i>.</p> <p>The following is an example of a KMS key ARN: <code>arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
 }
 impl MemberConfiguration {
@@ -4742,11 +4839,10 @@ impl std::fmt::Debug for MemberConfiguration {
         formatter.finish()
     }
 }
-/// See [`MemberConfiguration`](crate::model::MemberConfiguration)
+/// See [`MemberConfiguration`](crate::model::MemberConfiguration).
 pub mod member_configuration {
 
-    /// A builder for [`MemberConfiguration`](crate::model::MemberConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MemberConfiguration`](crate::model::MemberConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4860,7 +4956,7 @@ pub mod member_configuration {
             self.kms_key_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberConfiguration`](crate::model::MemberConfiguration)
+        /// Consumes the builder and constructs a [`MemberConfiguration`](crate::model::MemberConfiguration).
         pub fn build(self) -> crate::model::MemberConfiguration {
             crate::model::MemberConfiguration {
                 name: self.name,
@@ -4874,7 +4970,7 @@ pub mod member_configuration {
     }
 }
 impl MemberConfiguration {
-    /// Creates a new builder-style object to manufacture [`MemberConfiguration`](crate::model::MemberConfiguration)
+    /// Creates a new builder-style object to manufacture [`MemberConfiguration`](crate::model::MemberConfiguration).
     pub fn builder() -> crate::model::member_configuration::Builder {
         crate::model::member_configuration::Builder::default()
     }
@@ -4885,6 +4981,7 @@ impl MemberConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberFrameworkConfiguration {
     /// <p>Attributes of Hyperledger Fabric for a member on a Managed Blockchain network that uses Hyperledger Fabric.</p>
+    #[doc(hidden)]
     pub fabric: std::option::Option<crate::model::MemberFabricConfiguration>,
 }
 impl MemberFrameworkConfiguration {
@@ -4900,11 +4997,10 @@ impl std::fmt::Debug for MemberFrameworkConfiguration {
         formatter.finish()
     }
 }
-/// See [`MemberFrameworkConfiguration`](crate::model::MemberFrameworkConfiguration)
+/// See [`MemberFrameworkConfiguration`](crate::model::MemberFrameworkConfiguration).
 pub mod member_framework_configuration {
 
-    /// A builder for [`MemberFrameworkConfiguration`](crate::model::MemberFrameworkConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MemberFrameworkConfiguration`](crate::model::MemberFrameworkConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fabric: std::option::Option<crate::model::MemberFabricConfiguration>,
@@ -4923,7 +5019,7 @@ pub mod member_framework_configuration {
             self.fabric = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberFrameworkConfiguration`](crate::model::MemberFrameworkConfiguration)
+        /// Consumes the builder and constructs a [`MemberFrameworkConfiguration`](crate::model::MemberFrameworkConfiguration).
         pub fn build(self) -> crate::model::MemberFrameworkConfiguration {
             crate::model::MemberFrameworkConfiguration {
                 fabric: self.fabric,
@@ -4932,7 +5028,7 @@ pub mod member_framework_configuration {
     }
 }
 impl MemberFrameworkConfiguration {
-    /// Creates a new builder-style object to manufacture [`MemberFrameworkConfiguration`](crate::model::MemberFrameworkConfiguration)
+    /// Creates a new builder-style object to manufacture [`MemberFrameworkConfiguration`](crate::model::MemberFrameworkConfiguration).
     pub fn builder() -> crate::model::member_framework_configuration::Builder {
         crate::model::member_framework_configuration::Builder::default()
     }
@@ -4943,8 +5039,10 @@ impl MemberFrameworkConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberFabricConfiguration {
     /// <p>The user name for the member's initial administrative user.</p>
+    #[doc(hidden)]
     pub admin_username: std::option::Option<std::string::String>,
     /// <p>The password for the member's initial administrative user. The <code>AdminPassword</code> must be at least eight characters long and no more than 32 characters. It must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot have a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward slash(\), @, or a space.</p>
+    #[doc(hidden)]
     pub admin_password: std::option::Option<std::string::String>,
 }
 impl MemberFabricConfiguration {
@@ -4965,11 +5063,10 @@ impl std::fmt::Debug for MemberFabricConfiguration {
         formatter.finish()
     }
 }
-/// See [`MemberFabricConfiguration`](crate::model::MemberFabricConfiguration)
+/// See [`MemberFabricConfiguration`](crate::model::MemberFabricConfiguration).
 pub mod member_fabric_configuration {
 
-    /// A builder for [`MemberFabricConfiguration`](crate::model::MemberFabricConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MemberFabricConfiguration`](crate::model::MemberFabricConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) admin_username: std::option::Option<std::string::String>,
@@ -5002,7 +5099,7 @@ pub mod member_fabric_configuration {
             self.admin_password = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberFabricConfiguration`](crate::model::MemberFabricConfiguration)
+        /// Consumes the builder and constructs a [`MemberFabricConfiguration`](crate::model::MemberFabricConfiguration).
         pub fn build(self) -> crate::model::MemberFabricConfiguration {
             crate::model::MemberFabricConfiguration {
                 admin_username: self.admin_username,
@@ -5012,7 +5109,7 @@ pub mod member_fabric_configuration {
     }
 }
 impl MemberFabricConfiguration {
-    /// Creates a new builder-style object to manufacture [`MemberFabricConfiguration`](crate::model::MemberFabricConfiguration)
+    /// Creates a new builder-style object to manufacture [`MemberFabricConfiguration`](crate::model::MemberFabricConfiguration).
     pub fn builder() -> crate::model::member_fabric_configuration::Builder {
         crate::model::member_fabric_configuration::Builder::default()
     }
@@ -5023,6 +5120,7 @@ impl MemberFabricConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkFrameworkConfiguration {
     /// <p> Hyperledger Fabric configuration properties for a Managed Blockchain network that uses Hyperledger Fabric. </p>
+    #[doc(hidden)]
     pub fabric: std::option::Option<crate::model::NetworkFabricConfiguration>,
 }
 impl NetworkFrameworkConfiguration {
@@ -5038,11 +5136,10 @@ impl std::fmt::Debug for NetworkFrameworkConfiguration {
         formatter.finish()
     }
 }
-/// See [`NetworkFrameworkConfiguration`](crate::model::NetworkFrameworkConfiguration)
+/// See [`NetworkFrameworkConfiguration`](crate::model::NetworkFrameworkConfiguration).
 pub mod network_framework_configuration {
 
-    /// A builder for [`NetworkFrameworkConfiguration`](crate::model::NetworkFrameworkConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NetworkFrameworkConfiguration`](crate::model::NetworkFrameworkConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fabric: std::option::Option<crate::model::NetworkFabricConfiguration>,
@@ -5061,7 +5158,7 @@ pub mod network_framework_configuration {
             self.fabric = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkFrameworkConfiguration`](crate::model::NetworkFrameworkConfiguration)
+        /// Consumes the builder and constructs a [`NetworkFrameworkConfiguration`](crate::model::NetworkFrameworkConfiguration).
         pub fn build(self) -> crate::model::NetworkFrameworkConfiguration {
             crate::model::NetworkFrameworkConfiguration {
                 fabric: self.fabric,
@@ -5070,7 +5167,7 @@ pub mod network_framework_configuration {
     }
 }
 impl NetworkFrameworkConfiguration {
-    /// Creates a new builder-style object to manufacture [`NetworkFrameworkConfiguration`](crate::model::NetworkFrameworkConfiguration)
+    /// Creates a new builder-style object to manufacture [`NetworkFrameworkConfiguration`](crate::model::NetworkFrameworkConfiguration).
     pub fn builder() -> crate::model::network_framework_configuration::Builder {
         crate::model::network_framework_configuration::Builder::default()
     }
@@ -5081,6 +5178,7 @@ impl NetworkFrameworkConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkFabricConfiguration {
     /// <p>The edition of Amazon Managed Blockchain that the network uses. For more information, see <a href="http://aws.amazon.com/managed-blockchain/pricing/">Amazon Managed Blockchain Pricing</a>.</p>
+    #[doc(hidden)]
     pub edition: std::option::Option<crate::model::Edition>,
 }
 impl NetworkFabricConfiguration {
@@ -5096,11 +5194,10 @@ impl std::fmt::Debug for NetworkFabricConfiguration {
         formatter.finish()
     }
 }
-/// See [`NetworkFabricConfiguration`](crate::model::NetworkFabricConfiguration)
+/// See [`NetworkFabricConfiguration`](crate::model::NetworkFabricConfiguration).
 pub mod network_fabric_configuration {
 
-    /// A builder for [`NetworkFabricConfiguration`](crate::model::NetworkFabricConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NetworkFabricConfiguration`](crate::model::NetworkFabricConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) edition: std::option::Option<crate::model::Edition>,
@@ -5116,7 +5213,7 @@ pub mod network_fabric_configuration {
             self.edition = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkFabricConfiguration`](crate::model::NetworkFabricConfiguration)
+        /// Consumes the builder and constructs a [`NetworkFabricConfiguration`](crate::model::NetworkFabricConfiguration).
         pub fn build(self) -> crate::model::NetworkFabricConfiguration {
             crate::model::NetworkFabricConfiguration {
                 edition: self.edition,
@@ -5125,7 +5222,7 @@ pub mod network_fabric_configuration {
     }
 }
 impl NetworkFabricConfiguration {
-    /// Creates a new builder-style object to manufacture [`NetworkFabricConfiguration`](crate::model::NetworkFabricConfiguration)
+    /// Creates a new builder-style object to manufacture [`NetworkFabricConfiguration`](crate::model::NetworkFabricConfiguration).
     pub fn builder() -> crate::model::network_fabric_configuration::Builder {
         crate::model::network_fabric_configuration::Builder::default()
     }

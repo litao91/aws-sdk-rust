@@ -6,6 +6,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeToLive {
     /// <p>Shows how to enable custom Time to Live (TTL) settings for the specified table.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TimeToLiveStatus>,
 }
 impl TimeToLive {
@@ -21,11 +22,10 @@ impl std::fmt::Debug for TimeToLive {
         formatter.finish()
     }
 }
-/// See [`TimeToLive`](crate::model::TimeToLive)
+/// See [`TimeToLive`](crate::model::TimeToLive).
 pub mod time_to_live {
 
-    /// A builder for [`TimeToLive`](crate::model::TimeToLive)
-    #[non_exhaustive]
+    /// A builder for [`TimeToLive`](crate::model::TimeToLive).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::TimeToLiveStatus>,
@@ -44,7 +44,7 @@ pub mod time_to_live {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeToLive`](crate::model::TimeToLive)
+        /// Consumes the builder and constructs a [`TimeToLive`](crate::model::TimeToLive).
         pub fn build(self) -> crate::model::TimeToLive {
             crate::model::TimeToLive {
                 status: self.status,
@@ -53,7 +53,7 @@ pub mod time_to_live {
     }
 }
 impl TimeToLive {
-    /// Creates a new builder-style object to manufacture [`TimeToLive`](crate::model::TimeToLive)
+    /// Creates a new builder-style object to manufacture [`TimeToLive`](crate::model::TimeToLive).
     pub fn builder() -> crate::model::time_to_live::Builder {
         crate::model::time_to_live::Builder::default()
     }
@@ -118,6 +118,7 @@ pub struct PointInTimeRecovery {
     /// <p>The options are:</p>
     /// <p>• <code>ENABLED</code> </p>
     /// <p>• <code>DISABLED</code> </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PointInTimeRecoveryStatus>,
 }
 impl PointInTimeRecovery {
@@ -135,11 +136,10 @@ impl std::fmt::Debug for PointInTimeRecovery {
         formatter.finish()
     }
 }
-/// See [`PointInTimeRecovery`](crate::model::PointInTimeRecovery)
+/// See [`PointInTimeRecovery`](crate::model::PointInTimeRecovery).
 pub mod point_in_time_recovery {
 
-    /// A builder for [`PointInTimeRecovery`](crate::model::PointInTimeRecovery)
-    #[non_exhaustive]
+    /// A builder for [`PointInTimeRecovery`](crate::model::PointInTimeRecovery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::PointInTimeRecoveryStatus>,
@@ -162,7 +162,7 @@ pub mod point_in_time_recovery {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`PointInTimeRecovery`](crate::model::PointInTimeRecovery)
+        /// Consumes the builder and constructs a [`PointInTimeRecovery`](crate::model::PointInTimeRecovery).
         pub fn build(self) -> crate::model::PointInTimeRecovery {
             crate::model::PointInTimeRecovery {
                 status: self.status,
@@ -171,7 +171,7 @@ pub mod point_in_time_recovery {
     }
 }
 impl PointInTimeRecovery {
-    /// Creates a new builder-style object to manufacture [`PointInTimeRecovery`](crate::model::PointInTimeRecovery)
+    /// Creates a new builder-style object to manufacture [`PointInTimeRecovery`](crate::model::PointInTimeRecovery).
     pub fn builder() -> crate::model::point_in_time_recovery::Builder {
         crate::model::point_in_time_recovery::Builder::default()
     }
@@ -245,8 +245,10 @@ pub struct EncryptionSpecification {
     /// <p>• <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon Resource Name (ARN) format as input. </p>
     /// <p>The default is <code>type:AWS_OWNED_KMS_KEY</code>. </p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/keyspaces/latest/devguide/EncryptionAtRest.html">Encryption at rest</a> in the <i>Amazon Keyspaces Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EncryptionType>,
     /// <p>The Amazon Resource Name (ARN) of the customer managed KMS key, for example <code>kms_key_identifier:ARN</code>.</p>
+    #[doc(hidden)]
     pub kms_key_identifier: std::option::Option<std::string::String>,
 }
 impl EncryptionSpecification {
@@ -271,11 +273,10 @@ impl std::fmt::Debug for EncryptionSpecification {
         formatter.finish()
     }
 }
-/// See [`EncryptionSpecification`](crate::model::EncryptionSpecification)
+/// See [`EncryptionSpecification`](crate::model::EncryptionSpecification).
 pub mod encryption_specification {
 
-    /// A builder for [`EncryptionSpecification`](crate::model::EncryptionSpecification)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionSpecification`](crate::model::EncryptionSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::EncryptionType>,
@@ -316,7 +317,7 @@ pub mod encryption_specification {
             self.kms_key_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionSpecification`](crate::model::EncryptionSpecification)
+        /// Consumes the builder and constructs a [`EncryptionSpecification`](crate::model::EncryptionSpecification).
         pub fn build(self) -> crate::model::EncryptionSpecification {
             crate::model::EncryptionSpecification {
                 r#type: self.r#type,
@@ -326,7 +327,7 @@ pub mod encryption_specification {
     }
 }
 impl EncryptionSpecification {
-    /// Creates a new builder-style object to manufacture [`EncryptionSpecification`](crate::model::EncryptionSpecification)
+    /// Creates a new builder-style object to manufacture [`EncryptionSpecification`](crate::model::EncryptionSpecification).
     pub fn builder() -> crate::model::encryption_specification::Builder {
         crate::model::encryption_specification::Builder::default()
     }
@@ -400,10 +401,13 @@ pub struct CapacitySpecification {
     /// <p>• <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input.</p>
     /// <p>The default is <code>throughput_mode:PAY_PER_REQUEST</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html">Read/write capacity modes</a> in the <i>Amazon Keyspaces Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub throughput_mode: std::option::Option<crate::model::ThroughputMode>,
     /// <p>The throughput capacity specified for <code>read</code> operations defined in <code>read capacity units</code> <code>(RCUs)</code>.</p>
+    #[doc(hidden)]
     pub read_capacity_units: std::option::Option<i64>,
     /// <p>The throughput capacity specified for <code>write</code> operations defined in <code>write capacity units</code> <code>(WCUs)</code>.</p>
+    #[doc(hidden)]
     pub write_capacity_units: std::option::Option<i64>,
 }
 impl CapacitySpecification {
@@ -433,11 +437,10 @@ impl std::fmt::Debug for CapacitySpecification {
         formatter.finish()
     }
 }
-/// See [`CapacitySpecification`](crate::model::CapacitySpecification)
+/// See [`CapacitySpecification`](crate::model::CapacitySpecification).
 pub mod capacity_specification {
 
-    /// A builder for [`CapacitySpecification`](crate::model::CapacitySpecification)
-    #[non_exhaustive]
+    /// A builder for [`CapacitySpecification`](crate::model::CapacitySpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) throughput_mode: std::option::Option<crate::model::ThroughputMode>,
@@ -486,7 +489,7 @@ pub mod capacity_specification {
             self.write_capacity_units = input;
             self
         }
-        /// Consumes the builder and constructs a [`CapacitySpecification`](crate::model::CapacitySpecification)
+        /// Consumes the builder and constructs a [`CapacitySpecification`](crate::model::CapacitySpecification).
         pub fn build(self) -> crate::model::CapacitySpecification {
             crate::model::CapacitySpecification {
                 throughput_mode: self.throughput_mode,
@@ -497,7 +500,7 @@ pub mod capacity_specification {
     }
 }
 impl CapacitySpecification {
-    /// Creates a new builder-style object to manufacture [`CapacitySpecification`](crate::model::CapacitySpecification)
+    /// Creates a new builder-style object to manufacture [`CapacitySpecification`](crate::model::CapacitySpecification).
     pub fn builder() -> crate::model::capacity_specification::Builder {
         crate::model::capacity_specification::Builder::default()
     }
@@ -563,8 +566,10 @@ impl AsRef<str> for ThroughputMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ColumnDefinition {
     /// <p>The name of the column.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The data type of the column. For a list of available data types, see <a href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data types</a> in the <i>Amazon Keyspaces Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl ColumnDefinition {
@@ -585,11 +590,10 @@ impl std::fmt::Debug for ColumnDefinition {
         formatter.finish()
     }
 }
-/// See [`ColumnDefinition`](crate::model::ColumnDefinition)
+/// See [`ColumnDefinition`](crate::model::ColumnDefinition).
 pub mod column_definition {
 
-    /// A builder for [`ColumnDefinition`](crate::model::ColumnDefinition)
-    #[non_exhaustive]
+    /// A builder for [`ColumnDefinition`](crate::model::ColumnDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -616,7 +620,7 @@ pub mod column_definition {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColumnDefinition`](crate::model::ColumnDefinition)
+        /// Consumes the builder and constructs a [`ColumnDefinition`](crate::model::ColumnDefinition).
         pub fn build(self) -> crate::model::ColumnDefinition {
             crate::model::ColumnDefinition {
                 name: self.name,
@@ -626,7 +630,7 @@ pub mod column_definition {
     }
 }
 impl ColumnDefinition {
-    /// Creates a new builder-style object to manufacture [`ColumnDefinition`](crate::model::ColumnDefinition)
+    /// Creates a new builder-style object to manufacture [`ColumnDefinition`](crate::model::ColumnDefinition).
     pub fn builder() -> crate::model::column_definition::Builder {
         crate::model::column_definition::Builder::default()
     }
@@ -639,8 +643,10 @@ impl ColumnDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag. Tag keys are case sensitive. Each Amazon Keyspaces resource can only have up to one tag with the same key. If you try to add an existing tag (same key), the existing tag value will be updated to the new value.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag. Tag values are case-sensitive and can be null.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -661,11 +667,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -692,7 +697,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -702,7 +707,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -713,10 +718,13 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableSummary {
     /// <p>The name of the keyspace that the table is stored in.</p>
+    #[doc(hidden)]
     pub keyspace_name: std::option::Option<std::string::String>,
     /// <p>The name of the table.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the table in the format of an Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl TableSummary {
@@ -742,11 +750,10 @@ impl std::fmt::Debug for TableSummary {
         formatter.finish()
     }
 }
-/// See [`TableSummary`](crate::model::TableSummary)
+/// See [`TableSummary`](crate::model::TableSummary).
 pub mod table_summary {
 
-    /// A builder for [`TableSummary`](crate::model::TableSummary)
-    #[non_exhaustive]
+    /// A builder for [`TableSummary`](crate::model::TableSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) keyspace_name: std::option::Option<std::string::String>,
@@ -787,7 +794,7 @@ pub mod table_summary {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableSummary`](crate::model::TableSummary)
+        /// Consumes the builder and constructs a [`TableSummary`](crate::model::TableSummary).
         pub fn build(self) -> crate::model::TableSummary {
             crate::model::TableSummary {
                 keyspace_name: self.keyspace_name,
@@ -798,7 +805,7 @@ pub mod table_summary {
     }
 }
 impl TableSummary {
-    /// Creates a new builder-style object to manufacture [`TableSummary`](crate::model::TableSummary)
+    /// Creates a new builder-style object to manufacture [`TableSummary`](crate::model::TableSummary).
     pub fn builder() -> crate::model::table_summary::Builder {
         crate::model::table_summary::Builder::default()
     }
@@ -809,8 +816,10 @@ impl TableSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyspaceSummary {
     /// <p>The name of the keyspace.</p>
+    #[doc(hidden)]
     pub keyspace_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the keyspace in the format of an Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl KeyspaceSummary {
@@ -831,11 +840,10 @@ impl std::fmt::Debug for KeyspaceSummary {
         formatter.finish()
     }
 }
-/// See [`KeyspaceSummary`](crate::model::KeyspaceSummary)
+/// See [`KeyspaceSummary`](crate::model::KeyspaceSummary).
 pub mod keyspace_summary {
 
-    /// A builder for [`KeyspaceSummary`](crate::model::KeyspaceSummary)
-    #[non_exhaustive]
+    /// A builder for [`KeyspaceSummary`](crate::model::KeyspaceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) keyspace_name: std::option::Option<std::string::String>,
@@ -865,7 +873,7 @@ pub mod keyspace_summary {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyspaceSummary`](crate::model::KeyspaceSummary)
+        /// Consumes the builder and constructs a [`KeyspaceSummary`](crate::model::KeyspaceSummary).
         pub fn build(self) -> crate::model::KeyspaceSummary {
             crate::model::KeyspaceSummary {
                 keyspace_name: self.keyspace_name,
@@ -875,7 +883,7 @@ pub mod keyspace_summary {
     }
 }
 impl KeyspaceSummary {
-    /// Creates a new builder-style object to manufacture [`KeyspaceSummary`](crate::model::KeyspaceSummary)
+    /// Creates a new builder-style object to manufacture [`KeyspaceSummary`](crate::model::KeyspaceSummary).
     pub fn builder() -> crate::model::keyspace_summary::Builder {
         crate::model::keyspace_summary::Builder::default()
     }
@@ -886,6 +894,7 @@ impl KeyspaceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Comment {
     /// <p>An optional description of the table.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl Comment {
@@ -901,11 +910,10 @@ impl std::fmt::Debug for Comment {
         formatter.finish()
     }
 }
-/// See [`Comment`](crate::model::Comment)
+/// See [`Comment`](crate::model::Comment).
 pub mod comment {
 
-    /// A builder for [`Comment`](crate::model::Comment)
-    #[non_exhaustive]
+    /// A builder for [`Comment`](crate::model::Comment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -921,7 +929,7 @@ pub mod comment {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`Comment`](crate::model::Comment)
+        /// Consumes the builder and constructs a [`Comment`](crate::model::Comment).
         pub fn build(self) -> crate::model::Comment {
             crate::model::Comment {
                 message: self.message,
@@ -930,7 +938,7 @@ pub mod comment {
     }
 }
 impl Comment {
-    /// Creates a new builder-style object to manufacture [`Comment`](crate::model::Comment)
+    /// Creates a new builder-style object to manufacture [`Comment`](crate::model::Comment).
     pub fn builder() -> crate::model::comment::Builder {
         crate::model::comment::Builder::default()
     }
@@ -941,8 +949,10 @@ impl Comment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PointInTimeRecoverySummary {
     /// <p>Shows if point-in-time recovery is enabled or disabled for the specified table.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PointInTimeRecoveryStatus>,
     /// <p>Specifies the earliest possible restore point of the table in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub earliest_restorable_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PointInTimeRecoverySummary {
@@ -968,11 +978,10 @@ impl std::fmt::Debug for PointInTimeRecoverySummary {
         formatter.finish()
     }
 }
-/// See [`PointInTimeRecoverySummary`](crate::model::PointInTimeRecoverySummary)
+/// See [`PointInTimeRecoverySummary`](crate::model::PointInTimeRecoverySummary).
 pub mod point_in_time_recovery_summary {
 
-    /// A builder for [`PointInTimeRecoverySummary`](crate::model::PointInTimeRecoverySummary)
-    #[non_exhaustive]
+    /// A builder for [`PointInTimeRecoverySummary`](crate::model::PointInTimeRecoverySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::PointInTimeRecoveryStatus>,
@@ -1005,7 +1014,7 @@ pub mod point_in_time_recovery_summary {
             self.earliest_restorable_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`PointInTimeRecoverySummary`](crate::model::PointInTimeRecoverySummary)
+        /// Consumes the builder and constructs a [`PointInTimeRecoverySummary`](crate::model::PointInTimeRecoverySummary).
         pub fn build(self) -> crate::model::PointInTimeRecoverySummary {
             crate::model::PointInTimeRecoverySummary {
                 status: self.status,
@@ -1015,7 +1024,7 @@ pub mod point_in_time_recovery_summary {
     }
 }
 impl PointInTimeRecoverySummary {
-    /// Creates a new builder-style object to manufacture [`PointInTimeRecoverySummary`](crate::model::PointInTimeRecoverySummary)
+    /// Creates a new builder-style object to manufacture [`PointInTimeRecoverySummary`](crate::model::PointInTimeRecoverySummary).
     pub fn builder() -> crate::model::point_in_time_recovery_summary::Builder {
         crate::model::point_in_time_recovery_summary::Builder::default()
     }
@@ -1033,12 +1042,16 @@ pub struct CapacitySpecificationSummary {
     /// <p>• <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input. </p>
     /// <p>The default is <code>throughput_mode:PAY_PER_REQUEST</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html">Read/write capacity modes</a> in the <i>Amazon Keyspaces Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub throughput_mode: std::option::Option<crate::model::ThroughputMode>,
     /// <p>The throughput capacity specified for <code>read</code> operations defined in <code>read capacity units</code> <code>(RCUs)</code>.</p>
+    #[doc(hidden)]
     pub read_capacity_units: std::option::Option<i64>,
     /// <p>The throughput capacity specified for <code>write</code> operations defined in <code>write capacity units</code> <code>(WCUs)</code>.</p>
+    #[doc(hidden)]
     pub write_capacity_units: std::option::Option<i64>,
     /// <p>The timestamp of the last operation that changed the provisioned throughput capacity of a table.</p>
+    #[doc(hidden)]
     pub last_update_to_pay_per_request_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CapacitySpecificationSummary {
@@ -1078,11 +1091,10 @@ impl std::fmt::Debug for CapacitySpecificationSummary {
         formatter.finish()
     }
 }
-/// See [`CapacitySpecificationSummary`](crate::model::CapacitySpecificationSummary)
+/// See [`CapacitySpecificationSummary`](crate::model::CapacitySpecificationSummary).
 pub mod capacity_specification_summary {
 
-    /// A builder for [`CapacitySpecificationSummary`](crate::model::CapacitySpecificationSummary)
-    #[non_exhaustive]
+    /// A builder for [`CapacitySpecificationSummary`](crate::model::CapacitySpecificationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) throughput_mode: std::option::Option<crate::model::ThroughputMode>,
@@ -1149,7 +1161,7 @@ pub mod capacity_specification_summary {
             self.last_update_to_pay_per_request_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`CapacitySpecificationSummary`](crate::model::CapacitySpecificationSummary)
+        /// Consumes the builder and constructs a [`CapacitySpecificationSummary`](crate::model::CapacitySpecificationSummary).
         pub fn build(self) -> crate::model::CapacitySpecificationSummary {
             crate::model::CapacitySpecificationSummary {
                 throughput_mode: self.throughput_mode,
@@ -1162,7 +1174,7 @@ pub mod capacity_specification_summary {
     }
 }
 impl CapacitySpecificationSummary {
-    /// Creates a new builder-style object to manufacture [`CapacitySpecificationSummary`](crate::model::CapacitySpecificationSummary)
+    /// Creates a new builder-style object to manufacture [`CapacitySpecificationSummary`](crate::model::CapacitySpecificationSummary).
     pub fn builder() -> crate::model::capacity_specification_summary::Builder {
         crate::model::capacity_specification_summary::Builder::default()
     }
@@ -1173,12 +1185,16 @@ impl CapacitySpecificationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchemaDefinition {
     /// <p>The regular columns of the table.</p>
+    #[doc(hidden)]
     pub all_columns: std::option::Option<std::vec::Vec<crate::model::ColumnDefinition>>,
     /// <p>The columns that are part of the partition key of the table .</p>
+    #[doc(hidden)]
     pub partition_keys: std::option::Option<std::vec::Vec<crate::model::PartitionKey>>,
     /// <p>The columns that are part of the clustering key of the table.</p>
+    #[doc(hidden)]
     pub clustering_keys: std::option::Option<std::vec::Vec<crate::model::ClusteringKey>>,
     /// <p>The columns that have been defined as <code>STATIC</code>. Static columns store values that are shared by all rows in the same partition.</p>
+    #[doc(hidden)]
     pub static_columns: std::option::Option<std::vec::Vec<crate::model::StaticColumn>>,
 }
 impl SchemaDefinition {
@@ -1209,11 +1225,10 @@ impl std::fmt::Debug for SchemaDefinition {
         formatter.finish()
     }
 }
-/// See [`SchemaDefinition`](crate::model::SchemaDefinition)
+/// See [`SchemaDefinition`](crate::model::SchemaDefinition).
 pub mod schema_definition {
 
-    /// A builder for [`SchemaDefinition`](crate::model::SchemaDefinition)
-    #[non_exhaustive]
+    /// A builder for [`SchemaDefinition`](crate::model::SchemaDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) all_columns: std::option::Option<std::vec::Vec<crate::model::ColumnDefinition>>,
@@ -1298,7 +1313,7 @@ pub mod schema_definition {
             self.static_columns = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchemaDefinition`](crate::model::SchemaDefinition)
+        /// Consumes the builder and constructs a [`SchemaDefinition`](crate::model::SchemaDefinition).
         pub fn build(self) -> crate::model::SchemaDefinition {
             crate::model::SchemaDefinition {
                 all_columns: self.all_columns,
@@ -1310,7 +1325,7 @@ pub mod schema_definition {
     }
 }
 impl SchemaDefinition {
-    /// Creates a new builder-style object to manufacture [`SchemaDefinition`](crate::model::SchemaDefinition)
+    /// Creates a new builder-style object to manufacture [`SchemaDefinition`](crate::model::SchemaDefinition).
     pub fn builder() -> crate::model::schema_definition::Builder {
         crate::model::schema_definition::Builder::default()
     }
@@ -1321,6 +1336,7 @@ impl SchemaDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StaticColumn {
     /// <p>The name of the static column.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl StaticColumn {
@@ -1336,11 +1352,10 @@ impl std::fmt::Debug for StaticColumn {
         formatter.finish()
     }
 }
-/// See [`StaticColumn`](crate::model::StaticColumn)
+/// See [`StaticColumn`](crate::model::StaticColumn).
 pub mod static_column {
 
-    /// A builder for [`StaticColumn`](crate::model::StaticColumn)
-    #[non_exhaustive]
+    /// A builder for [`StaticColumn`](crate::model::StaticColumn).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1356,14 +1371,14 @@ pub mod static_column {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`StaticColumn`](crate::model::StaticColumn)
+        /// Consumes the builder and constructs a [`StaticColumn`](crate::model::StaticColumn).
         pub fn build(self) -> crate::model::StaticColumn {
             crate::model::StaticColumn { name: self.name }
         }
     }
 }
 impl StaticColumn {
-    /// Creates a new builder-style object to manufacture [`StaticColumn`](crate::model::StaticColumn)
+    /// Creates a new builder-style object to manufacture [`StaticColumn`](crate::model::StaticColumn).
     pub fn builder() -> crate::model::static_column::Builder {
         crate::model::static_column::Builder::default()
     }
@@ -1374,8 +1389,10 @@ impl StaticColumn {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusteringKey {
     /// <p>The name(s) of the clustering column(s).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Sets the ascendant (<code>ASC</code>) or descendant (<code>DESC</code>) order modifier.</p>
+    #[doc(hidden)]
     pub order_by: std::option::Option<crate::model::SortOrder>,
 }
 impl ClusteringKey {
@@ -1396,11 +1413,10 @@ impl std::fmt::Debug for ClusteringKey {
         formatter.finish()
     }
 }
-/// See [`ClusteringKey`](crate::model::ClusteringKey)
+/// See [`ClusteringKey`](crate::model::ClusteringKey).
 pub mod clustering_key {
 
-    /// A builder for [`ClusteringKey`](crate::model::ClusteringKey)
-    #[non_exhaustive]
+    /// A builder for [`ClusteringKey`](crate::model::ClusteringKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1427,7 +1443,7 @@ pub mod clustering_key {
             self.order_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusteringKey`](crate::model::ClusteringKey)
+        /// Consumes the builder and constructs a [`ClusteringKey`](crate::model::ClusteringKey).
         pub fn build(self) -> crate::model::ClusteringKey {
             crate::model::ClusteringKey {
                 name: self.name,
@@ -1437,7 +1453,7 @@ pub mod clustering_key {
     }
 }
 impl ClusteringKey {
-    /// Creates a new builder-style object to manufacture [`ClusteringKey`](crate::model::ClusteringKey)
+    /// Creates a new builder-style object to manufacture [`ClusteringKey`](crate::model::ClusteringKey).
     pub fn builder() -> crate::model::clustering_key::Builder {
         crate::model::clustering_key::Builder::default()
     }
@@ -1503,6 +1519,7 @@ impl AsRef<str> for SortOrder {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PartitionKey {
     /// <p>The name(s) of the partition key column(s).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl PartitionKey {
@@ -1518,11 +1535,10 @@ impl std::fmt::Debug for PartitionKey {
         formatter.finish()
     }
 }
-/// See [`PartitionKey`](crate::model::PartitionKey)
+/// See [`PartitionKey`](crate::model::PartitionKey).
 pub mod partition_key {
 
-    /// A builder for [`PartitionKey`](crate::model::PartitionKey)
-    #[non_exhaustive]
+    /// A builder for [`PartitionKey`](crate::model::PartitionKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1538,14 +1554,14 @@ pub mod partition_key {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`PartitionKey`](crate::model::PartitionKey)
+        /// Consumes the builder and constructs a [`PartitionKey`](crate::model::PartitionKey).
         pub fn build(self) -> crate::model::PartitionKey {
             crate::model::PartitionKey { name: self.name }
         }
     }
 }
 impl PartitionKey {
-    /// Creates a new builder-style object to manufacture [`PartitionKey`](crate::model::PartitionKey)
+    /// Creates a new builder-style object to manufacture [`PartitionKey`](crate::model::PartitionKey).
     pub fn builder() -> crate::model::partition_key::Builder {
         crate::model::partition_key::Builder::default()
     }

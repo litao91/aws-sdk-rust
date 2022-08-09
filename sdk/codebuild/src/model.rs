@@ -5,24 +5,31 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Webhook {
     /// <p>The URL to the webhook.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>The CodeBuild endpoint where webhook events are sent.</p>
+    #[doc(hidden)]
     pub payload_url: std::option::Option<std::string::String>,
     /// <p>The secret token of the associated repository. </p> <note>
     /// <p>A Bitbucket webhook does not support <code>secret</code>. </p>
     /// </note>
+    #[doc(hidden)]
     pub secret: std::option::Option<std::string::String>,
     /// <p>A regular expression used to determine which repository branches are built when a webhook is triggered. If the name of a branch matches the regular expression, then it is built. If <code>branchFilter</code> is empty, then all branches are built.</p> <note>
     /// <p>It is recommended that you use <code>filterGroups</code> instead of <code>branchFilter</code>. </p>
     /// </note>
+    #[doc(hidden)]
     pub branch_filter: std::option::Option<std::string::String>,
     /// <p>An array of arrays of <code>WebhookFilter</code> objects used to determine which webhooks are triggered. At least one <code>WebhookFilter</code> in the array must specify <code>EVENT</code> as its <code>type</code>. </p>
     /// <p>For a build to be triggered, at least one filter group in the <code>filterGroups</code> array must pass. For a filter group to pass, each of its filters must pass. </p>
+    #[doc(hidden)]
     pub filter_groups:
         std::option::Option<std::vec::Vec<std::vec::Vec<crate::model::WebhookFilter>>>,
     /// <p>Specifies the type of build this webhook will trigger.</p>
+    #[doc(hidden)]
     pub build_type: std::option::Option<crate::model::WebhookBuildType>,
     /// <p>A timestamp that indicates the last time a repository's secret token was modified. </p>
+    #[doc(hidden)]
     pub last_modified_secret: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Webhook {
@@ -75,11 +82,10 @@ impl std::fmt::Debug for Webhook {
         formatter.finish()
     }
 }
-/// See [`Webhook`](crate::model::Webhook)
+/// See [`Webhook`](crate::model::Webhook).
 pub mod webhook {
 
-    /// A builder for [`Webhook`](crate::model::Webhook)
-    #[non_exhaustive]
+    /// A builder for [`Webhook`](crate::model::Webhook).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) url: std::option::Option<std::string::String>,
@@ -190,7 +196,7 @@ pub mod webhook {
             self.last_modified_secret = input;
             self
         }
-        /// Consumes the builder and constructs a [`Webhook`](crate::model::Webhook)
+        /// Consumes the builder and constructs a [`Webhook`](crate::model::Webhook).
         pub fn build(self) -> crate::model::Webhook {
             crate::model::Webhook {
                 url: self.url,
@@ -205,7 +211,7 @@ pub mod webhook {
     }
 }
 impl Webhook {
-    /// Creates a new builder-style object to manufacture [`Webhook`](crate::model::Webhook)
+    /// Creates a new builder-style object to manufacture [`Webhook`](crate::model::Webhook).
     pub fn builder() -> crate::model::webhook::Builder {
         crate::model::webhook::Builder::default()
     }
@@ -318,11 +324,14 @@ pub struct WebhookFilter {
     /// </note>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::WebhookFilterType>,
     /// <p> For a <code>WebHookFilter</code> that uses <code>EVENT</code> type, a comma-separated string that specifies one or more events. For example, the webhook filter <code>PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED</code> allows all push, pull request created, and pull request updated events to trigger a build. </p>
     /// <p> For a <code>WebHookFilter</code> that uses any of the other filter types, a regular expression pattern. For example, a <code>WebHookFilter</code> that uses <code>HEAD_REF</code> for its <code>type</code> and the pattern <code>^refs/heads/</code> triggers a build when the head reference is a branch with a reference name <code>refs/heads/branch-name</code>. </p>
+    #[doc(hidden)]
     pub pattern: std::option::Option<std::string::String>,
     /// <p> Used to indicate that the <code>pattern</code> determines which webhook events do not trigger a build. If true, then a webhook event that does not match the <code>pattern</code> triggers a build. If false, then a webhook event that matches the <code>pattern</code> triggers a build. </p>
+    #[doc(hidden)]
     pub exclude_matched_pattern: std::option::Option<bool>,
 }
 impl WebhookFilter {
@@ -396,11 +405,10 @@ impl std::fmt::Debug for WebhookFilter {
         formatter.finish()
     }
 }
-/// See [`WebhookFilter`](crate::model::WebhookFilter)
+/// See [`WebhookFilter`](crate::model::WebhookFilter).
 pub mod webhook_filter {
 
-    /// A builder for [`WebhookFilter`](crate::model::WebhookFilter)
-    #[non_exhaustive]
+    /// A builder for [`WebhookFilter`](crate::model::WebhookFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::WebhookFilterType>,
@@ -537,7 +545,7 @@ pub mod webhook_filter {
             self.exclude_matched_pattern = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebhookFilter`](crate::model::WebhookFilter)
+        /// Consumes the builder and constructs a [`WebhookFilter`](crate::model::WebhookFilter).
         pub fn build(self) -> crate::model::WebhookFilter {
             crate::model::WebhookFilter {
                 r#type: self.r#type,
@@ -548,7 +556,7 @@ pub mod webhook_filter {
     }
 }
 impl WebhookFilter {
-    /// Creates a new builder-style object to manufacture [`WebhookFilter`](crate::model::WebhookFilter)
+    /// Creates a new builder-style object to manufacture [`WebhookFilter`](crate::model::WebhookFilter).
     pub fn builder() -> crate::model::webhook_filter::Builder {
         crate::model::webhook_filter::Builder::default()
     }
@@ -637,8 +645,10 @@ impl AsRef<str> for WebhookFilterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportGroup {
     /// <p>The ARN of the <code>ReportGroup</code>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the <code>ReportGroup</code>. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the <code>ReportGroup</code>. This can be one of the following values:</p>
     /// <dl>
@@ -655,15 +665,20 @@ pub struct ReportGroup {
     /// <p>The report group contains test reports.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ReportType>,
     /// <p>Information about the destination where the raw data of this <code>ReportGroup</code> is exported. </p>
+    #[doc(hidden)]
     pub export_config: std::option::Option<crate::model::ReportExportConfig>,
     /// <p>The date and time this <code>ReportGroup</code> was created. </p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time this <code>ReportGroup</code> was last modified. </p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tag key and value pairs associated with this report group. </p>
     /// <p>These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The status of the report group. This property is read-only.</p>
     /// <p>This can be one of the following values:</p>
@@ -681,6 +696,7 @@ pub struct ReportGroup {
     /// <p>The report group is in the process of being deleted.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReportGroupStatusType>,
 }
 impl ReportGroup {
@@ -761,11 +777,10 @@ impl std::fmt::Debug for ReportGroup {
         formatter.finish()
     }
 }
-/// See [`ReportGroup`](crate::model::ReportGroup)
+/// See [`ReportGroup`](crate::model::ReportGroup).
 pub mod report_group {
 
-    /// A builder for [`ReportGroup`](crate::model::ReportGroup)
-    #[non_exhaustive]
+    /// A builder for [`ReportGroup`](crate::model::ReportGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -939,7 +954,7 @@ pub mod report_group {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportGroup`](crate::model::ReportGroup)
+        /// Consumes the builder and constructs a [`ReportGroup`](crate::model::ReportGroup).
         pub fn build(self) -> crate::model::ReportGroup {
             crate::model::ReportGroup {
                 arn: self.arn,
@@ -955,7 +970,7 @@ pub mod report_group {
     }
 }
 impl ReportGroup {
-    /// Creates a new builder-style object to manufacture [`ReportGroup`](crate::model::ReportGroup)
+    /// Creates a new builder-style object to manufacture [`ReportGroup`](crate::model::ReportGroup).
     pub fn builder() -> crate::model::report_group::Builder {
         crate::model::report_group::Builder::default()
     }
@@ -1022,8 +1037,10 @@ impl AsRef<str> for ReportGroupStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The tag's key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The tag's value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -1044,11 +1061,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1075,7 +1091,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -1085,7 +1101,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1100,8 +1116,10 @@ pub struct ReportExportConfig {
     /// <li> <p> <code>S3</code>: The report results are exported to an S3 bucket. </p> </li>
     /// <li> <p> <code>NO_EXPORT</code>: The report results are not exported. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub export_config_type: std::option::Option<crate::model::ReportExportConfigType>,
     /// <p> A <code>S3ReportExportConfig</code> object that contains information about the S3 bucket where the run of a report is exported. </p>
+    #[doc(hidden)]
     pub s3_destination: std::option::Option<crate::model::S3ReportExportConfig>,
 }
 impl ReportExportConfig {
@@ -1126,11 +1144,10 @@ impl std::fmt::Debug for ReportExportConfig {
         formatter.finish()
     }
 }
-/// See [`ReportExportConfig`](crate::model::ReportExportConfig)
+/// See [`ReportExportConfig`](crate::model::ReportExportConfig).
 pub mod report_export_config {
 
-    /// A builder for [`ReportExportConfig`](crate::model::ReportExportConfig)
-    #[non_exhaustive]
+    /// A builder for [`ReportExportConfig`](crate::model::ReportExportConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_config_type: std::option::Option<crate::model::ReportExportConfigType>,
@@ -1171,7 +1188,7 @@ pub mod report_export_config {
             self.s3_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportExportConfig`](crate::model::ReportExportConfig)
+        /// Consumes the builder and constructs a [`ReportExportConfig`](crate::model::ReportExportConfig).
         pub fn build(self) -> crate::model::ReportExportConfig {
             crate::model::ReportExportConfig {
                 export_config_type: self.export_config_type,
@@ -1181,7 +1198,7 @@ pub mod report_export_config {
     }
 }
 impl ReportExportConfig {
-    /// Creates a new builder-style object to manufacture [`ReportExportConfig`](crate::model::ReportExportConfig)
+    /// Creates a new builder-style object to manufacture [`ReportExportConfig`](crate::model::ReportExportConfig).
     pub fn builder() -> crate::model::report_export_config::Builder {
         crate::model::report_export_config::Builder::default()
     }
@@ -1192,20 +1209,26 @@ impl ReportExportConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ReportExportConfig {
     /// <p> The name of the S3 bucket where the raw data of a report are exported. </p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account identifier of the owner of the Amazon S3 bucket. This allows report data to be exported to an Amazon S3 bucket that is owned by an account other than the account running the build.</p>
+    #[doc(hidden)]
     pub bucket_owner: std::option::Option<std::string::String>,
     /// <p> The path to the exported report's raw data results. </p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p> The type of build output artifact to create. Valid values include: </p>
     /// <ul>
     /// <li> <p> <code>NONE</code>: CodeBuild creates the raw data in the output bucket. This is the default if packaging is not specified. </p> </li>
     /// <li> <p> <code>ZIP</code>: CodeBuild creates a ZIP file with the raw data in the output bucket. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub packaging: std::option::Option<crate::model::ReportPackagingType>,
     /// <p> The encryption key for the report's encrypted raw data. </p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
     /// <p> A boolean value that specifies if the results of a report are encrypted. </p>
+    #[doc(hidden)]
     pub encryption_disabled: std::option::Option<bool>,
 }
 impl S3ReportExportConfig {
@@ -1250,11 +1273,10 @@ impl std::fmt::Debug for S3ReportExportConfig {
         formatter.finish()
     }
 }
-/// See [`S3ReportExportConfig`](crate::model::S3ReportExportConfig)
+/// See [`S3ReportExportConfig`](crate::model::S3ReportExportConfig).
 pub mod s3_report_export_config {
 
-    /// A builder for [`S3ReportExportConfig`](crate::model::S3ReportExportConfig)
-    #[non_exhaustive]
+    /// A builder for [`S3ReportExportConfig`](crate::model::S3ReportExportConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -1339,7 +1361,7 @@ pub mod s3_report_export_config {
             self.encryption_disabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ReportExportConfig`](crate::model::S3ReportExportConfig)
+        /// Consumes the builder and constructs a [`S3ReportExportConfig`](crate::model::S3ReportExportConfig).
         pub fn build(self) -> crate::model::S3ReportExportConfig {
             crate::model::S3ReportExportConfig {
                 bucket: self.bucket,
@@ -1353,7 +1375,7 @@ pub mod s3_report_export_config {
     }
 }
 impl S3ReportExportConfig {
-    /// Creates a new builder-style object to manufacture [`S3ReportExportConfig`](crate::model::S3ReportExportConfig)
+    /// Creates a new builder-style object to manufacture [`S3ReportExportConfig`](crate::model::S3ReportExportConfig).
     pub fn builder() -> crate::model::s3_report_export_config::Builder {
         crate::model::s3_report_export_config::Builder::default()
     }
@@ -1595,14 +1617,19 @@ impl AsRef<str> for ProjectVisibilityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Project {
     /// <p>The name of the build project.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the build project.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A description that makes the build project easy to identify.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Information about the build input source code for this build project.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::ProjectSource>,
     /// <p>An array of <code>ProjectSource</code> objects. </p>
+    #[doc(hidden)]
     pub secondary_sources: std::option::Option<std::vec::Vec<crate::model::ProjectSource>>,
     /// <p>A version of the build input to be built for this project. If not specified, the latest version is used. If specified, it must be one of:</p>
     /// <ul>
@@ -1613,52 +1640,72 @@ pub struct Project {
     /// </ul>
     /// <p>If <code>sourceVersion</code> is specified at the build level, then that version takes precedence over this <code>sourceVersion</code> (at the project level). </p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version Sample with CodeBuild</a> in the <i>CodeBuild User Guide</i>. </p>
+    #[doc(hidden)]
     pub source_version: std::option::Option<std::string::String>,
     /// <p>An array of <code>ProjectSourceVersion</code> objects. If <code>secondarySourceVersions</code> is specified at the build level, then they take over these <code>secondarySourceVersions</code> (at the project level). </p>
+    #[doc(hidden)]
     pub secondary_source_versions:
         std::option::Option<std::vec::Vec<crate::model::ProjectSourceVersion>>,
     /// <p>Information about the build output artifacts for the build project.</p>
+    #[doc(hidden)]
     pub artifacts: std::option::Option<crate::model::ProjectArtifacts>,
     /// <p>An array of <code>ProjectArtifacts</code> objects. </p>
+    #[doc(hidden)]
     pub secondary_artifacts: std::option::Option<std::vec::Vec<crate::model::ProjectArtifacts>>,
     /// <p>Information about the cache for the build project.</p>
+    #[doc(hidden)]
     pub cache: std::option::Option<crate::model::ProjectCache>,
     /// <p>Information about the build environment for this build project.</p>
+    #[doc(hidden)]
     pub environment: std::option::Option<crate::model::ProjectEnvironment>,
     /// <p>The ARN of the IAM role that enables CodeBuild to interact with dependent Amazon Web Services services on behalf of the Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p>How long, in minutes, from 5 to 480 (8 hours), for CodeBuild to wait before timing out any related build that did not get marked as completed. The default is 60 minutes.</p>
+    #[doc(hidden)]
     pub timeout_in_minutes: std::option::Option<i32>,
     /// <p>The number of minutes a build is allowed to be queued before it times out. </p>
+    #[doc(hidden)]
     pub queued_timeout_in_minutes: std::option::Option<i32>,
     /// <p>The Key Management Service customer master key (CMK) to be used for encrypting the build output artifacts.</p> <note>
     /// <p>You can use a cross-account KMS key to encrypt the build output artifacts if your service role has permission to that key. </p>
     /// </note>
     /// <p>You can specify either the Amazon Resource Name (ARN) of the CMK or, if available, the CMK's alias (using the format <code>alias/
     /// <alias-name></alias-name></code>). If you don't specify a value, CodeBuild uses the managed CMK for Amazon Simple Storage Service (Amazon S3). </p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
     /// <p>A list of tag key and value pairs associated with this build project.</p>
     /// <p>These tags are available for use by Amazon Web Services services that support CodeBuild build project tags.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>When the build project was created, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>When the build project's settings were last modified, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Information about a webhook that connects repository events to a build project in CodeBuild.</p>
+    #[doc(hidden)]
     pub webhook: std::option::Option<crate::model::Webhook>,
     /// <p>Information about the VPC configuration that CodeBuild accesses.</p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
     /// <p>Information about the build badge for the build project.</p>
+    #[doc(hidden)]
     pub badge: std::option::Option<crate::model::ProjectBadge>,
     /// <p>Information about logs for the build project. A project can create logs in CloudWatch Logs, an S3 bucket, or both. </p>
+    #[doc(hidden)]
     pub logs_config: std::option::Option<crate::model::LogsConfig>,
     /// <p> An array of <code>ProjectFileSystemLocation</code> objects for a CodeBuild build project. A <code>ProjectFileSystemLocation</code> object specifies the <code>identifier</code>, <code>location</code>, <code>mountOptions</code>, <code>mountPoint</code>, and <code>type</code> of a file system created using Amazon Elastic File System. </p>
+    #[doc(hidden)]
     pub file_system_locations:
         std::option::Option<std::vec::Vec<crate::model::ProjectFileSystemLocation>>,
     /// <p>A <code>ProjectBuildBatchConfig</code> object that defines the batch build options for the project.</p>
+    #[doc(hidden)]
     pub build_batch_config: std::option::Option<crate::model::ProjectBuildBatchConfig>,
     /// <p>The maximum number of concurrent builds that are allowed for this project.</p>
     /// <p>New builds are only started if the current number of builds is less than or equal to this limit. If the current build count meets this limit, new builds are throttled and are not run.</p>
+    #[doc(hidden)]
     pub concurrent_build_limit: std::option::Option<i32>,
     /// <p>Specifies the visibility of the project's builds. Possible values are:</p>
     /// <dl>
@@ -1675,10 +1722,13 @@ pub struct Project {
     /// <p>The project builds are not visible to the public.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub project_visibility: std::option::Option<crate::model::ProjectVisibilityType>,
     /// <p>Contains the project identifier used with the public build APIs. </p>
+    #[doc(hidden)]
     pub public_project_alias: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project's builds.</p>
+    #[doc(hidden)]
     pub resource_access_role: std::option::Option<std::string::String>,
 }
 impl Project {
@@ -1863,11 +1913,10 @@ impl std::fmt::Debug for Project {
         formatter.finish()
     }
 }
-/// See [`Project`](crate::model::Project)
+/// See [`Project`](crate::model::Project).
 pub mod project {
 
-    /// A builder for [`Project`](crate::model::Project)
-    #[non_exhaustive]
+    /// A builder for [`Project`](crate::model::Project).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2330,7 +2379,7 @@ pub mod project {
             self.resource_access_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`Project`](crate::model::Project)
+        /// Consumes the builder and constructs a [`Project`](crate::model::Project).
         pub fn build(self) -> crate::model::Project {
             crate::model::Project {
                 name: self.name,
@@ -2366,7 +2415,7 @@ pub mod project {
     }
 }
 impl Project {
-    /// Creates a new builder-style object to manufacture [`Project`](crate::model::Project)
+    /// Creates a new builder-style object to manufacture [`Project`](crate::model::Project).
     pub fn builder() -> crate::model::project::Builder {
         crate::model::project::Builder::default()
     }
@@ -2377,12 +2426,16 @@ impl Project {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectBuildBatchConfig {
     /// <p>Specifies the service role ARN for the batch build project.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p>Specifies if the build artifacts for the batch build should be combined into a single artifact location.</p>
+    #[doc(hidden)]
     pub combine_artifacts: std::option::Option<bool>,
     /// <p>A <code>BatchRestrictions</code> object that specifies the restrictions for the batch build.</p>
+    #[doc(hidden)]
     pub restrictions: std::option::Option<crate::model::BatchRestrictions>,
     /// <p>Specifies the maximum amount of time, in minutes, that the batch build must be completed in.</p>
+    #[doc(hidden)]
     pub timeout_in_mins: std::option::Option<i32>,
     /// <p>Specifies how build status reports are sent to the source provider for the batch build. This property is only used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your project is configured to report build statuses to the source provider.</p>
     /// <dl>
@@ -2399,6 +2452,7 @@ pub struct ProjectBuildBatchConfig {
     /// <p>Send a separate status report for each individual build.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub batch_report_mode: std::option::Option<crate::model::BatchReportModeType>,
 }
 impl ProjectBuildBatchConfig {
@@ -2448,11 +2502,10 @@ impl std::fmt::Debug for ProjectBuildBatchConfig {
         formatter.finish()
     }
 }
-/// See [`ProjectBuildBatchConfig`](crate::model::ProjectBuildBatchConfig)
+/// See [`ProjectBuildBatchConfig`](crate::model::ProjectBuildBatchConfig).
 pub mod project_build_batch_config {
 
-    /// A builder for [`ProjectBuildBatchConfig`](crate::model::ProjectBuildBatchConfig)
-    #[non_exhaustive]
+    /// A builder for [`ProjectBuildBatchConfig`](crate::model::ProjectBuildBatchConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_role: std::option::Option<std::string::String>,
@@ -2546,7 +2599,7 @@ pub mod project_build_batch_config {
             self.batch_report_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectBuildBatchConfig`](crate::model::ProjectBuildBatchConfig)
+        /// Consumes the builder and constructs a [`ProjectBuildBatchConfig`](crate::model::ProjectBuildBatchConfig).
         pub fn build(self) -> crate::model::ProjectBuildBatchConfig {
             crate::model::ProjectBuildBatchConfig {
                 service_role: self.service_role,
@@ -2559,7 +2612,7 @@ pub mod project_build_batch_config {
     }
 }
 impl ProjectBuildBatchConfig {
-    /// Creates a new builder-style object to manufacture [`ProjectBuildBatchConfig`](crate::model::ProjectBuildBatchConfig)
+    /// Creates a new builder-style object to manufacture [`ProjectBuildBatchConfig`](crate::model::ProjectBuildBatchConfig).
     pub fn builder() -> crate::model::project_build_batch_config::Builder {
         crate::model::project_build_batch_config::Builder::default()
     }
@@ -2625,8 +2678,10 @@ impl AsRef<str> for BatchReportModeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchRestrictions {
     /// <p>Specifies the maximum number of builds allowed.</p>
+    #[doc(hidden)]
     pub maximum_builds_allowed: std::option::Option<i32>,
     /// <p>An array of strings that specify the compute types that are allowed for the batch build. See <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment compute types</a> in the <i>CodeBuild User Guide</i> for these values. </p>
+    #[doc(hidden)]
     pub compute_types_allowed: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl BatchRestrictions {
@@ -2647,11 +2702,10 @@ impl std::fmt::Debug for BatchRestrictions {
         formatter.finish()
     }
 }
-/// See [`BatchRestrictions`](crate::model::BatchRestrictions)
+/// See [`BatchRestrictions`](crate::model::BatchRestrictions).
 pub mod batch_restrictions {
 
-    /// A builder for [`BatchRestrictions`](crate::model::BatchRestrictions)
-    #[non_exhaustive]
+    /// A builder for [`BatchRestrictions`](crate::model::BatchRestrictions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) maximum_builds_allowed: std::option::Option<i32>,
@@ -2687,7 +2741,7 @@ pub mod batch_restrictions {
             self.compute_types_allowed = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchRestrictions`](crate::model::BatchRestrictions)
+        /// Consumes the builder and constructs a [`BatchRestrictions`](crate::model::BatchRestrictions).
         pub fn build(self) -> crate::model::BatchRestrictions {
             crate::model::BatchRestrictions {
                 maximum_builds_allowed: self.maximum_builds_allowed,
@@ -2697,7 +2751,7 @@ pub mod batch_restrictions {
     }
 }
 impl BatchRestrictions {
-    /// Creates a new builder-style object to manufacture [`BatchRestrictions`](crate::model::BatchRestrictions)
+    /// Creates a new builder-style object to manufacture [`BatchRestrictions`](crate::model::BatchRestrictions).
     pub fn builder() -> crate::model::batch_restrictions::Builder {
         crate::model::batch_restrictions::Builder::default()
     }
@@ -2708,16 +2762,21 @@ impl BatchRestrictions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectFileSystemLocation {
     /// <p> The type of the file system. The one supported type is <code>EFS</code>. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::FileSystemType>,
     /// <p>A string that specifies the location of the file system created by Amazon EFS. Its format is <code>efs-dns-name:/directory-path</code>. You can find the DNS name of file system when you view it in the Amazon EFS console. The directory path is a path to a directory in the file system that CodeBuild mounts. For example, if the DNS name of a file system is <code>fs-abcd1234.efs.us-west-2.amazonaws.com</code>, and its mount directory is <code>my-efs-mount-directory</code>, then the <code>location</code> is <code>fs-abcd1234.efs.us-west-2.amazonaws.com:/my-efs-mount-directory</code>. </p>
     /// <p>The directory path in the format <code>efs-dns-name:/directory-path</code> is optional. If you do not specify a directory path, the location is only the DNS name and CodeBuild mounts the entire file system. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The location in the container where you mount the file system. </p>
+    #[doc(hidden)]
     pub mount_point: std::option::Option<std::string::String>,
     /// <p>The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the <code>identifier</code> in all capital letters to <code>CODEBUILD_</code>. For example, if you specify <code>my_efs</code> for <code>identifier</code>, a new environment variable is create named <code>CODEBUILD_MY_EFS</code>. </p>
     /// <p> The <code>identifier</code> is used to mount your file system. </p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
     /// <p> The mount options for a file system created by Amazon EFS. The default mount options used by CodeBuild are <code>nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2</code>. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html">Recommended NFS Mount Options</a>. </p>
+    #[doc(hidden)]
     pub mount_options: std::option::Option<std::string::String>,
 }
 impl ProjectFileSystemLocation {
@@ -2755,11 +2814,10 @@ impl std::fmt::Debug for ProjectFileSystemLocation {
         formatter.finish()
     }
 }
-/// See [`ProjectFileSystemLocation`](crate::model::ProjectFileSystemLocation)
+/// See [`ProjectFileSystemLocation`](crate::model::ProjectFileSystemLocation).
 pub mod project_file_system_location {
 
-    /// A builder for [`ProjectFileSystemLocation`](crate::model::ProjectFileSystemLocation)
-    #[non_exhaustive]
+    /// A builder for [`ProjectFileSystemLocation`](crate::model::ProjectFileSystemLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::FileSystemType>,
@@ -2829,7 +2887,7 @@ pub mod project_file_system_location {
             self.mount_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectFileSystemLocation`](crate::model::ProjectFileSystemLocation)
+        /// Consumes the builder and constructs a [`ProjectFileSystemLocation`](crate::model::ProjectFileSystemLocation).
         pub fn build(self) -> crate::model::ProjectFileSystemLocation {
             crate::model::ProjectFileSystemLocation {
                 r#type: self.r#type,
@@ -2842,7 +2900,7 @@ pub mod project_file_system_location {
     }
 }
 impl ProjectFileSystemLocation {
-    /// Creates a new builder-style object to manufacture [`ProjectFileSystemLocation`](crate::model::ProjectFileSystemLocation)
+    /// Creates a new builder-style object to manufacture [`ProjectFileSystemLocation`](crate::model::ProjectFileSystemLocation).
     pub fn builder() -> crate::model::project_file_system_location::Builder {
         crate::model::project_file_system_location::Builder::default()
     }
@@ -2904,8 +2962,10 @@ impl AsRef<str> for FileSystemType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogsConfig {
     /// <p> Information about CloudWatch Logs for a build project. CloudWatch Logs are enabled by default. </p>
+    #[doc(hidden)]
     pub cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogsConfig>,
     /// <p> Information about logs built to an S3 bucket for a build project. S3 logs are not enabled by default. </p>
+    #[doc(hidden)]
     pub s3_logs: std::option::Option<crate::model::S3LogsConfig>,
 }
 impl LogsConfig {
@@ -2926,11 +2986,10 @@ impl std::fmt::Debug for LogsConfig {
         formatter.finish()
     }
 }
-/// See [`LogsConfig`](crate::model::LogsConfig)
+/// See [`LogsConfig`](crate::model::LogsConfig).
 pub mod logs_config {
 
-    /// A builder for [`LogsConfig`](crate::model::LogsConfig)
-    #[non_exhaustive]
+    /// A builder for [`LogsConfig`](crate::model::LogsConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogsConfig>,
@@ -2963,7 +3022,7 @@ pub mod logs_config {
             self.s3_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogsConfig`](crate::model::LogsConfig)
+        /// Consumes the builder and constructs a [`LogsConfig`](crate::model::LogsConfig).
         pub fn build(self) -> crate::model::LogsConfig {
             crate::model::LogsConfig {
                 cloud_watch_logs: self.cloud_watch_logs,
@@ -2973,7 +3032,7 @@ pub mod logs_config {
     }
 }
 impl LogsConfig {
-    /// Creates a new builder-style object to manufacture [`LogsConfig`](crate::model::LogsConfig)
+    /// Creates a new builder-style object to manufacture [`LogsConfig`](crate::model::LogsConfig).
     pub fn builder() -> crate::model::logs_config::Builder {
         crate::model::logs_config::Builder::default()
     }
@@ -2988,10 +3047,13 @@ pub struct S3LogsConfig {
     /// <li> <p> <code>ENABLED</code>: S3 build logs are enabled for this build project.</p> </li>
     /// <li> <p> <code>DISABLED</code>: S3 build logs are not enabled for this build project.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::LogsConfigStatusType>,
     /// <p> The ARN of an S3 bucket and the path prefix for S3 logs. If your Amazon S3 bucket name is <code>my-bucket</code>, and your path prefix is <code>build-log</code>, then acceptable formats are <code>my-bucket/build-log</code> or <code>arn:aws:s3:::my-bucket/build-log</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p> Set to true if you do not want your S3 build log output encrypted. By default S3 build logs are encrypted. </p>
+    #[doc(hidden)]
     pub encryption_disabled: std::option::Option<bool>,
     /// <p>Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default, only the account that uploads the objects to the bucket has access to these objects. This property allows you to give the bucket owner access to these objects.</p> <note>
     /// <p>To use this property, your CodeBuild service role must have the <code>s3:PutBucketAcl</code> permission. This permission allows CodeBuild to modify the access control list for the bucket.</p>
@@ -3022,6 +3084,7 @@ pub struct S3LogsConfig {
     /// <p>For more information about Amazon S3 object ownership, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html">Controlling ownership of uploaded objects using S3 Object Ownership</a> in the <i>Amazon Simple Storage Service User Guide</i>.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub bucket_owner_access: std::option::Option<crate::model::BucketOwnerAccess>,
 }
 impl S3LogsConfig {
@@ -3084,11 +3147,10 @@ impl std::fmt::Debug for S3LogsConfig {
         formatter.finish()
     }
 }
-/// See [`S3LogsConfig`](crate::model::S3LogsConfig)
+/// See [`S3LogsConfig`](crate::model::S3LogsConfig).
 pub mod s3_logs_config {
 
-    /// A builder for [`S3LogsConfig`](crate::model::S3LogsConfig)
-    #[non_exhaustive]
+    /// A builder for [`S3LogsConfig`](crate::model::S3LogsConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::LogsConfigStatusType>,
@@ -3207,7 +3269,7 @@ pub mod s3_logs_config {
             self.bucket_owner_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3LogsConfig`](crate::model::S3LogsConfig)
+        /// Consumes the builder and constructs a [`S3LogsConfig`](crate::model::S3LogsConfig).
         pub fn build(self) -> crate::model::S3LogsConfig {
             crate::model::S3LogsConfig {
                 status: self.status,
@@ -3219,7 +3281,7 @@ pub mod s3_logs_config {
     }
 }
 impl S3LogsConfig {
-    /// Creates a new builder-style object to manufacture [`S3LogsConfig`](crate::model::S3LogsConfig)
+    /// Creates a new builder-style object to manufacture [`S3LogsConfig`](crate::model::S3LogsConfig).
     pub fn builder() -> crate::model::s3_logs_config::Builder {
         crate::model::s3_logs_config::Builder::default()
     }
@@ -3389,10 +3451,13 @@ pub struct CloudWatchLogsConfig {
     /// <li> <p> <code>ENABLED</code>: CloudWatch Logs are enabled for this build project.</p> </li>
     /// <li> <p> <code>DISABLED</code>: CloudWatch Logs are not enabled for this build project.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::LogsConfigStatusType>,
     /// <p> The group name of the logs in CloudWatch Logs. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with Log Groups and Log Streams</a>. </p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p> The prefix of the stream name of the CloudWatch Logs. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with Log Groups and Log Streams</a>. </p>
+    #[doc(hidden)]
     pub stream_name: std::option::Option<std::string::String>,
 }
 impl CloudWatchLogsConfig {
@@ -3422,11 +3487,10 @@ impl std::fmt::Debug for CloudWatchLogsConfig {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsConfig`](crate::model::CloudWatchLogsConfig)
+/// See [`CloudWatchLogsConfig`](crate::model::CloudWatchLogsConfig).
 pub mod cloud_watch_logs_config {
 
-    /// A builder for [`CloudWatchLogsConfig`](crate::model::CloudWatchLogsConfig)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsConfig`](crate::model::CloudWatchLogsConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::LogsConfigStatusType>,
@@ -3475,7 +3539,7 @@ pub mod cloud_watch_logs_config {
             self.stream_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsConfig`](crate::model::CloudWatchLogsConfig)
+        /// Consumes the builder and constructs a [`CloudWatchLogsConfig`](crate::model::CloudWatchLogsConfig).
         pub fn build(self) -> crate::model::CloudWatchLogsConfig {
             crate::model::CloudWatchLogsConfig {
                 status: self.status,
@@ -3486,7 +3550,7 @@ pub mod cloud_watch_logs_config {
     }
 }
 impl CloudWatchLogsConfig {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsConfig`](crate::model::CloudWatchLogsConfig)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsConfig`](crate::model::CloudWatchLogsConfig).
     pub fn builder() -> crate::model::cloud_watch_logs_config::Builder {
         crate::model::cloud_watch_logs_config::Builder::default()
     }
@@ -3497,8 +3561,10 @@ impl CloudWatchLogsConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectBadge {
     /// <p>Set this to true to generate a publicly accessible URL for your project's build badge.</p>
+    #[doc(hidden)]
     pub badge_enabled: bool,
     /// <p>The publicly-accessible URL through which you can access the build badge for your project. </p>
+    #[doc(hidden)]
     pub badge_request_url: std::option::Option<std::string::String>,
 }
 impl ProjectBadge {
@@ -3519,11 +3585,10 @@ impl std::fmt::Debug for ProjectBadge {
         formatter.finish()
     }
 }
-/// See [`ProjectBadge`](crate::model::ProjectBadge)
+/// See [`ProjectBadge`](crate::model::ProjectBadge).
 pub mod project_badge {
 
-    /// A builder for [`ProjectBadge`](crate::model::ProjectBadge)
-    #[non_exhaustive]
+    /// A builder for [`ProjectBadge`](crate::model::ProjectBadge).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) badge_enabled: std::option::Option<bool>,
@@ -3553,7 +3618,7 @@ pub mod project_badge {
             self.badge_request_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectBadge`](crate::model::ProjectBadge)
+        /// Consumes the builder and constructs a [`ProjectBadge`](crate::model::ProjectBadge).
         pub fn build(self) -> crate::model::ProjectBadge {
             crate::model::ProjectBadge {
                 badge_enabled: self.badge_enabled.unwrap_or_default(),
@@ -3563,7 +3628,7 @@ pub mod project_badge {
     }
 }
 impl ProjectBadge {
-    /// Creates a new builder-style object to manufacture [`ProjectBadge`](crate::model::ProjectBadge)
+    /// Creates a new builder-style object to manufacture [`ProjectBadge`](crate::model::ProjectBadge).
     pub fn builder() -> crate::model::project_badge::Builder {
         crate::model::project_badge::Builder::default()
     }
@@ -3574,10 +3639,13 @@ impl ProjectBadge {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfig {
     /// <p>The ID of the Amazon VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>A list of one or more subnet IDs in your Amazon VPC.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of one or more security groups IDs in your Amazon VPC.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfig {
@@ -3603,11 +3671,10 @@ impl std::fmt::Debug for VpcConfig {
         formatter.finish()
     }
 }
-/// See [`VpcConfig`](crate::model::VpcConfig)
+/// See [`VpcConfig`](crate::model::VpcConfig).
 pub mod vpc_config {
 
-    /// A builder for [`VpcConfig`](crate::model::VpcConfig)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfig`](crate::model::VpcConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_id: std::option::Option<std::string::String>,
@@ -3663,7 +3730,7 @@ pub mod vpc_config {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfig`](crate::model::VpcConfig)
+        /// Consumes the builder and constructs a [`VpcConfig`](crate::model::VpcConfig).
         pub fn build(self) -> crate::model::VpcConfig {
             crate::model::VpcConfig {
                 vpc_id: self.vpc_id,
@@ -3674,7 +3741,7 @@ pub mod vpc_config {
     }
 }
 impl VpcConfig {
-    /// Creates a new builder-style object to manufacture [`VpcConfig`](crate::model::VpcConfig)
+    /// Creates a new builder-style object to manufacture [`VpcConfig`](crate::model::VpcConfig).
     pub fn builder() -> crate::model::vpc_config::Builder {
         crate::model::vpc_config::Builder::default()
     }
@@ -3694,6 +3761,7 @@ pub struct ProjectEnvironment {
     /// <li> <p>The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment compute types</a> in the <i>CodeBuild user guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EnvironmentType>,
     /// <p>The image tag or image digest that identifies the Docker image to use for this build project. Use the following formats:</p>
     /// <ul>
@@ -3721,6 +3789,7 @@ pub struct ProjectEnvironment {
     /// </registry></code>.</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images provided by CodeBuild</a> in the <i>CodeBuild user guide</i>.</p>
+    #[doc(hidden)]
     pub image: std::option::Option<std::string::String>,
     /// <p>Information about the compute resources the build project uses. Available values include:</p>
     /// <ul>
@@ -3736,8 +3805,10 @@ pub struct ProjectEnvironment {
     /// <li> <p> For environment type <code>ARM_CONTAINER</code>, you can use up to 16 GB memory and 8 vCPUs on ARM-based processors for builds.</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment Compute Types</a> in the <i>CodeBuild User Guide.</i> </p>
+    #[doc(hidden)]
     pub compute_type: std::option::Option<crate::model::ComputeType>,
     /// <p>A set of environment variables to make available to builds for this build project.</p>
+    #[doc(hidden)]
     pub environment_variables:
         std::option::Option<std::vec::Vec<crate::model::EnvironmentVariable>>,
     /// <p>Enables running the Docker daemon inside a Docker container. Set to true only if the build project is used to build Docker images. Otherwise, a build that attempts to interact with the Docker daemon fails. The default setting is <code>false</code>.</p>
@@ -3748,10 +3819,13 @@ pub struct ProjectEnvironment {
     /// <p>If the operating system's base image is Alpine Linux and the previous command does not work, add the <code>-t</code> argument to <code>timeout</code>:</p>
     /// <p> <code>- nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --storage-driver=overlay&amp;</code> </p>
     /// <p> <code>- timeout -t 15 sh -c "until docker info; do echo .; sleep 1; done"</code> </p>
+    #[doc(hidden)]
     pub privileged_mode: std::option::Option<bool>,
     /// <p>The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded certificate for the build project. For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate">certificate</a> in the <i>CodeBuild User Guide</i>.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<std::string::String>,
     /// <p> The credentials for access to a private registry.</p>
+    #[doc(hidden)]
     pub registry_credential: std::option::Option<crate::model::RegistryCredential>,
     /// <p> The type of credentials CodeBuild uses to pull images in your build. There are two valid values: </p>
     /// <ul>
@@ -3759,6 +3833,7 @@ pub struct ProjectEnvironment {
     /// <li> <p> <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role. </p> </li>
     /// </ul>
     /// <p> When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an CodeBuild curated image, you must use CODEBUILD credentials. </p>
+    #[doc(hidden)]
     pub image_pull_credentials_type: std::option::Option<crate::model::ImagePullCredentialsType>,
 }
 impl ProjectEnvironment {
@@ -3875,11 +3950,10 @@ impl std::fmt::Debug for ProjectEnvironment {
         formatter.finish()
     }
 }
-/// See [`ProjectEnvironment`](crate::model::ProjectEnvironment)
+/// See [`ProjectEnvironment`](crate::model::ProjectEnvironment).
 pub mod project_environment {
 
-    /// A builder for [`ProjectEnvironment`](crate::model::ProjectEnvironment)
-    #[non_exhaustive]
+    /// A builder for [`ProjectEnvironment`](crate::model::ProjectEnvironment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::EnvironmentType>,
@@ -4116,7 +4190,7 @@ pub mod project_environment {
             self.image_pull_credentials_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectEnvironment`](crate::model::ProjectEnvironment)
+        /// Consumes the builder and constructs a [`ProjectEnvironment`](crate::model::ProjectEnvironment).
         pub fn build(self) -> crate::model::ProjectEnvironment {
             crate::model::ProjectEnvironment {
                 r#type: self.r#type,
@@ -4132,7 +4206,7 @@ pub mod project_environment {
     }
 }
 impl ProjectEnvironment {
-    /// Creates a new builder-style object to manufacture [`ProjectEnvironment`](crate::model::ProjectEnvironment)
+    /// Creates a new builder-style object to manufacture [`ProjectEnvironment`](crate::model::ProjectEnvironment).
     pub fn builder() -> crate::model::project_environment::Builder {
         crate::model::project_environment::Builder::default()
     }
@@ -4205,8 +4279,10 @@ pub struct RegistryCredential {
     /// <p> The Amazon Resource Name (ARN) or name of credentials created using Secrets Manager. </p> <note>
     /// <p> The <code>credential</code> can use the name of the credentials only if they exist in your current Amazon Web Services Region. </p>
     /// </note>
+    #[doc(hidden)]
     pub credential: std::option::Option<std::string::String>,
     /// <p> The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for Secrets Manager. </p>
+    #[doc(hidden)]
     pub credential_provider: std::option::Option<crate::model::CredentialProviderType>,
 }
 impl RegistryCredential {
@@ -4231,11 +4307,10 @@ impl std::fmt::Debug for RegistryCredential {
         formatter.finish()
     }
 }
-/// See [`RegistryCredential`](crate::model::RegistryCredential)
+/// See [`RegistryCredential`](crate::model::RegistryCredential).
 pub mod registry_credential {
 
-    /// A builder for [`RegistryCredential`](crate::model::RegistryCredential)
-    #[non_exhaustive]
+    /// A builder for [`RegistryCredential`](crate::model::RegistryCredential).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) credential: std::option::Option<std::string::String>,
@@ -4269,7 +4344,7 @@ pub mod registry_credential {
             self.credential_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegistryCredential`](crate::model::RegistryCredential)
+        /// Consumes the builder and constructs a [`RegistryCredential`](crate::model::RegistryCredential).
         pub fn build(self) -> crate::model::RegistryCredential {
             crate::model::RegistryCredential {
                 credential: self.credential,
@@ -4279,7 +4354,7 @@ pub mod registry_credential {
     }
 }
 impl RegistryCredential {
-    /// Creates a new builder-style object to manufacture [`RegistryCredential`](crate::model::RegistryCredential)
+    /// Creates a new builder-style object to manufacture [`RegistryCredential`](crate::model::RegistryCredential).
     pub fn builder() -> crate::model::registry_credential::Builder {
         crate::model::registry_credential::Builder::default()
     }
@@ -4341,10 +4416,12 @@ impl AsRef<str> for CredentialProviderType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentVariable {
     /// <p>The name or key of the environment variable.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the environment variable.</p> <important>
     /// <p>We strongly discourage the use of <code>PLAINTEXT</code> environment variables to store sensitive values, especially Amazon Web Services secret key IDs and secret access keys. <code>PLAINTEXT</code> environment variables can be displayed in plain text using the CodeBuild console and the CLI. For sensitive values, we recommend you use an environment variable of type <code>PARAMETER_STORE</code> or <code>SECRETS_MANAGER</code>. </p>
     /// </important>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The type of environment variable. Valid values include:</p>
     /// <ul>
@@ -4352,6 +4429,7 @@ pub struct EnvironmentVariable {
     /// <li> <p> <code>PLAINTEXT</code>: An environment variable in plain text format. This is the default value.</p> </li>
     /// <li> <p> <code>SECRETS_MANAGER</code>: An environment variable stored in Secrets Manager. To learn how to specify a secrets manager environment variable, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager">env/secrets-manager</a> in the <i>CodeBuild User Guide</i>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EnvironmentVariableType>,
 }
 impl EnvironmentVariable {
@@ -4384,11 +4462,10 @@ impl std::fmt::Debug for EnvironmentVariable {
         formatter.finish()
     }
 }
-/// See [`EnvironmentVariable`](crate::model::EnvironmentVariable)
+/// See [`EnvironmentVariable`](crate::model::EnvironmentVariable).
 pub mod environment_variable {
 
-    /// A builder for [`EnvironmentVariable`](crate::model::EnvironmentVariable)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentVariable`](crate::model::EnvironmentVariable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4443,7 +4520,7 @@ pub mod environment_variable {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentVariable`](crate::model::EnvironmentVariable)
+        /// Consumes the builder and constructs a [`EnvironmentVariable`](crate::model::EnvironmentVariable).
         pub fn build(self) -> crate::model::EnvironmentVariable {
             crate::model::EnvironmentVariable {
                 name: self.name,
@@ -4454,7 +4531,7 @@ pub mod environment_variable {
     }
 }
 impl EnvironmentVariable {
-    /// Creates a new builder-style object to manufacture [`EnvironmentVariable`](crate::model::EnvironmentVariable)
+    /// Creates a new builder-style object to manufacture [`EnvironmentVariable`](crate::model::EnvironmentVariable).
     pub fn builder() -> crate::model::environment_variable::Builder {
         crate::model::environment_variable::Builder::default()
     }
@@ -4670,12 +4747,14 @@ pub struct ProjectCache {
     /// <li> <p> <code>S3</code>: The build project reads and writes from and to S3.</p> </li>
     /// <li> <p> <code>LOCAL</code>: The build project stores a cache locally on a build host that is only available to that build host.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CacheType>,
     /// <p>Information about the cache location: </p>
     /// <ul>
     /// <li> <p> <code>NO_CACHE</code> or <code>LOCAL</code>: This value is ignored.</p> </li>
     /// <li> <p> <code>S3</code>: This is the S3 bucket name/prefix.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>An array of strings that specify the local cache modes. You can use one or more local cache modes at the same time. This is only used for <code>LOCAL</code> cache types.</p>
     /// <p>Possible values are:</p>
@@ -4710,6 +4789,7 @@ pub struct ProjectCache {
     /// </ul>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub modes: std::option::Option<std::vec::Vec<crate::model::CacheMode>>,
 }
 impl ProjectCache {
@@ -4776,11 +4856,10 @@ impl std::fmt::Debug for ProjectCache {
         formatter.finish()
     }
 }
-/// See [`ProjectCache`](crate::model::ProjectCache)
+/// See [`ProjectCache`](crate::model::ProjectCache).
 pub mod project_cache {
 
-    /// A builder for [`ProjectCache`](crate::model::ProjectCache)
-    #[non_exhaustive]
+    /// A builder for [`ProjectCache`](crate::model::ProjectCache).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::CacheType>,
@@ -4909,7 +4988,7 @@ pub mod project_cache {
             self.modes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectCache`](crate::model::ProjectCache)
+        /// Consumes the builder and constructs a [`ProjectCache`](crate::model::ProjectCache).
         pub fn build(self) -> crate::model::ProjectCache {
             crate::model::ProjectCache {
                 r#type: self.r#type,
@@ -4920,7 +4999,7 @@ pub mod project_cache {
     }
 }
 impl ProjectCache {
-    /// Creates a new builder-style object to manufacture [`ProjectCache`](crate::model::ProjectCache)
+    /// Creates a new builder-style object to manufacture [`ProjectCache`](crate::model::ProjectCache).
     pub fn builder() -> crate::model::project_cache::Builder {
         crate::model::project_cache::Builder::default()
     }
@@ -5060,6 +5139,7 @@ pub struct ProjectArtifacts {
     /// <li> <p> <code>NO_ARTIFACTS</code>: The build project does not produce any build output.</p> </li>
     /// <li> <p> <code>S3</code>: The build project stores build output in Amazon S3.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ArtifactsType>,
     /// <p>Information about the build output artifact location:</p>
     /// <ul>
@@ -5067,6 +5147,7 @@ pub struct ProjectArtifacts {
     /// <li> <p>If <code>type</code> is set to <code>NO_ARTIFACTS</code>, this value is ignored if specified, because no build output is produced.</p> </li>
     /// <li> <p>If <code>type</code> is set to <code>S3</code>, this is the name of the output bucket.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>Along with <code>namespaceType</code> and <code>name</code>, the pattern that CodeBuild uses to name and store the output artifact:</p>
     /// <ul>
@@ -5075,6 +5156,7 @@ pub struct ProjectArtifacts {
     /// <li> <p>If <code>type</code> is set to <code>S3</code>, this is the path to the output artifact. If <code>path</code> is not specified, <code>path</code> is not used.</p> </li>
     /// </ul>
     /// <p>For example, if <code>path</code> is set to <code>MyArtifacts</code>, <code>namespaceType</code> is set to <code>NONE</code>, and <code>name</code> is set to <code>MyArtifact.zip</code>, the output artifact is stored in the output bucket at <code>MyArtifacts/MyArtifact.zip</code>.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name and location to store the output artifact:</p>
     /// <ul>
@@ -5090,6 +5172,7 @@ pub struct ProjectArtifacts {
     /// <build-id>
     /// /MyArtifact.zip
     /// </build-id></code>.</p>
+    #[doc(hidden)]
     pub namespace_type: std::option::Option<crate::model::ArtifactNamespace>,
     /// <p>Along with <code>path</code> and <code>namespaceType</code>, the pattern that CodeBuild uses to name and store the output artifact:</p>
     /// <ul>
@@ -5107,6 +5190,7 @@ pub struct ProjectArtifacts {
     /// <li> <p> If <code>path</code> is set to <code>MyArtifacts</code>, <code>namespaceType</code> is set to <code>BUILD_ID</code>, and <code>name</code> is set to "<code>/</code>", the output artifact is stored in <code>MyArtifacts/
     /// <build-id></build-id></code>. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of build output artifact to create:</p>
     /// <ul>
@@ -5118,12 +5202,16 @@ pub struct ProjectArtifacts {
     /// <li> <p> <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.</p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub packaging: std::option::Option<crate::model::ArtifactPackaging>,
     /// <p> If this flag is set, a name specified in the buildspec file overrides the artifact name. The name specified in a buildspec file is calculated at build time and uses the Shell Command Language. For example, you can append a date and time to your artifact name so that it is always unique. </p>
+    #[doc(hidden)]
     pub override_artifact_name: std::option::Option<bool>,
     /// <p> Set to true if you do not want your output artifacts encrypted. This option is valid only if your artifacts type is Amazon S3. If this is set with another artifacts type, an invalidInputException is thrown. </p>
+    #[doc(hidden)]
     pub encryption_disabled: std::option::Option<bool>,
     /// <p> An identifier for this artifact definition. </p>
+    #[doc(hidden)]
     pub artifact_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default, only the account that uploads the objects to the bucket has access to these objects. This property allows you to give the bucket owner access to these objects.</p> <note>
     /// <p>To use this property, your CodeBuild service role must have the <code>s3:PutBucketAcl</code> permission. This permission allows CodeBuild to modify the access control list for the bucket.</p>
@@ -5154,6 +5242,7 @@ pub struct ProjectArtifacts {
     /// <p>For more information about Amazon S3 object ownership, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html">Controlling ownership of uploaded objects using S3 Object Ownership</a> in the <i>Amazon Simple Storage Service User Guide</i>.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub bucket_owner_access: std::option::Option<crate::model::BucketOwnerAccess>,
 }
 impl ProjectArtifacts {
@@ -5297,11 +5386,10 @@ impl std::fmt::Debug for ProjectArtifacts {
         formatter.finish()
     }
 }
-/// See [`ProjectArtifacts`](crate::model::ProjectArtifacts)
+/// See [`ProjectArtifacts`](crate::model::ProjectArtifacts).
 pub mod project_artifacts {
 
-    /// A builder for [`ProjectArtifacts`](crate::model::ProjectArtifacts)
-    #[non_exhaustive]
+    /// A builder for [`ProjectArtifacts`](crate::model::ProjectArtifacts).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ArtifactsType>,
@@ -5594,7 +5682,7 @@ pub mod project_artifacts {
             self.bucket_owner_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectArtifacts`](crate::model::ProjectArtifacts)
+        /// Consumes the builder and constructs a [`ProjectArtifacts`](crate::model::ProjectArtifacts).
         pub fn build(self) -> crate::model::ProjectArtifacts {
             crate::model::ProjectArtifacts {
                 r#type: self.r#type,
@@ -5612,7 +5700,7 @@ pub mod project_artifacts {
     }
 }
 impl ProjectArtifacts {
-    /// Creates a new builder-style object to manufacture [`ProjectArtifacts`](crate::model::ProjectArtifacts)
+    /// Creates a new builder-style object to manufacture [`ProjectArtifacts`](crate::model::ProjectArtifacts).
     pub fn builder() -> crate::model::project_artifacts::Builder {
         crate::model::project_artifacts::Builder::default()
     }
@@ -5792,6 +5880,7 @@ impl AsRef<str> for ArtifactsType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectSourceVersion {
     /// <p>An identifier for a source in the build project. The identifier can only contain alphanumeric characters and underscores, and must be less than 128 characters in length. </p>
+    #[doc(hidden)]
     pub source_identifier: std::option::Option<std::string::String>,
     /// <p>The source version for the corresponding source identifier. If specified, must be one of:</p>
     /// <ul>
@@ -5801,6 +5890,7 @@ pub struct ProjectSourceVersion {
     /// <li> <p>For Amazon S3: the version ID of the object that represents the build input ZIP file to use.</p> </li>
     /// </ul>
     /// <p> For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version Sample with CodeBuild</a> in the <i>CodeBuild User Guide</i>. </p>
+    #[doc(hidden)]
     pub source_version: std::option::Option<std::string::String>,
 }
 impl ProjectSourceVersion {
@@ -5828,11 +5918,10 @@ impl std::fmt::Debug for ProjectSourceVersion {
         formatter.finish()
     }
 }
-/// See [`ProjectSourceVersion`](crate::model::ProjectSourceVersion)
+/// See [`ProjectSourceVersion`](crate::model::ProjectSourceVersion).
 pub mod project_source_version {
 
-    /// A builder for [`ProjectSourceVersion`](crate::model::ProjectSourceVersion)
-    #[non_exhaustive]
+    /// A builder for [`ProjectSourceVersion`](crate::model::ProjectSourceVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_identifier: std::option::Option<std::string::String>,
@@ -5879,7 +5968,7 @@ pub mod project_source_version {
             self.source_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectSourceVersion`](crate::model::ProjectSourceVersion)
+        /// Consumes the builder and constructs a [`ProjectSourceVersion`](crate::model::ProjectSourceVersion).
         pub fn build(self) -> crate::model::ProjectSourceVersion {
             crate::model::ProjectSourceVersion {
                 source_identifier: self.source_identifier,
@@ -5889,7 +5978,7 @@ pub mod project_source_version {
     }
 }
 impl ProjectSourceVersion {
-    /// Creates a new builder-style object to manufacture [`ProjectSourceVersion`](crate::model::ProjectSourceVersion)
+    /// Creates a new builder-style object to manufacture [`ProjectSourceVersion`](crate::model::ProjectSourceVersion).
     pub fn builder() -> crate::model::project_source_version::Builder {
         crate::model::project_source_version::Builder::default()
     }
@@ -5909,6 +5998,7 @@ pub struct ProjectSource {
     /// <li> <p> <code>NO_SOURCE</code>: The project does not have input source code.</p> </li>
     /// <li> <p> <code>S3</code>: The source code is in an Amazon S3 bucket.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::SourceType>,
     /// <p>Information about the location of the source code to be built. Valid values include:</p>
     /// <ul>
@@ -5945,27 +6035,36 @@ pub struct ProjectSource {
     /// <li> <p>For source code in a Bitbucket repository, the HTTPS clone URL to the repository that contains the source and the buildspec file. You must connect your Amazon Web Services account to your Bitbucket account. Use the CodeBuild console to start creating a build project. When you use the console to connect (or reconnect) with Bitbucket, on the Bitbucket <b>Confirm access to your account</b> page, choose <b>Grant access</b>. (After you have connected to your Bitbucket account, you do not need to finish creating the build project. You can leave the CodeBuild console.) To instruct CodeBuild to use this connection, in the <code>source</code> object, set the <code>auth</code> object's <code>type</code> value to <code>OAUTH</code>.</p> </li>
     /// </ul>
     /// <p> If you specify <code>CODEPIPELINE</code> for the <code>Type</code> property, don't specify this property. For all of the other types, you must specify <code>Location</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>Information about the Git clone depth for the build project.</p>
+    #[doc(hidden)]
     pub git_clone_depth: std::option::Option<i32>,
     /// <p> Information about the Git submodules configuration for the build project. </p>
+    #[doc(hidden)]
     pub git_submodules_config: std::option::Option<crate::model::GitSubmodulesConfig>,
     /// <p>The buildspec file declaration to use for the builds in this build project.</p>
     /// <p> If this value is set, it can be either an inline buildspec definition, the path to an alternate buildspec file relative to the value of the built-in <code>CODEBUILD_SRC_DIR</code> environment variable, or the path to an S3 bucket. The bucket must be in the same Amazon Web Services Region as the build project. Specify the buildspec file using its ARN (for example, <code>arn:aws:s3:::my-codebuild-sample2/buildspec.yml</code>). If this value is not provided or is set to an empty string, the source code must contain a buildspec file in its root directory. For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage">Buildspec File Name and Storage Location</a>. </p>
+    #[doc(hidden)]
     pub buildspec: std::option::Option<std::string::String>,
     /// <p>Information about the authorization settings for CodeBuild to access the source code to be built.</p>
     /// <p>This information is for the CodeBuild console's use only. Your code should not get or set this information directly.</p>
+    #[doc(hidden)]
     pub auth: std::option::Option<crate::model::SourceAuth>,
     /// <p> Set to true to report the status of a build's start and finish to your source provider. This option is valid only when your source provider is GitHub, GitHub Enterprise, or Bitbucket. If this is set and you use a different source provider, an <code>invalidInputException</code> is thrown. </p>
     /// <p>To be able to report the build status to the source provider, the user associated with the source provider must have write access to the repo. If the user does not have write access, the build status cannot be updated. For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source provider access</a> in the <i>CodeBuild User Guide</i>.</p>
     /// <p>The status of a build triggered by a webhook is always reported to your source provider. </p>
     /// <p>If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change to this property to take effect.</p>
+    #[doc(hidden)]
     pub report_build_status: std::option::Option<bool>,
     /// <p>Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is <code>GITHUB</code>, <code>GITHUB_ENTERPRISE</code>, or <code>BITBUCKET</code>.</p>
+    #[doc(hidden)]
     pub build_status_config: std::option::Option<crate::model::BuildStatusConfig>,
     /// <p>Enable this flag to ignore SSL warnings while connecting to the project source code.</p>
+    #[doc(hidden)]
     pub insecure_ssl: std::option::Option<bool>,
     /// <p>An identifier for this project source. The identifier can only contain alphanumeric characters and underscores, and must be less than 128 characters in length. </p>
+    #[doc(hidden)]
     pub source_identifier: std::option::Option<std::string::String>,
 }
 impl ProjectSource {
@@ -6074,11 +6173,10 @@ impl std::fmt::Debug for ProjectSource {
         formatter.finish()
     }
 }
-/// See [`ProjectSource`](crate::model::ProjectSource)
+/// See [`ProjectSource`](crate::model::ProjectSource).
 pub mod project_source {
 
-    /// A builder for [`ProjectSource`](crate::model::ProjectSource)
-    #[non_exhaustive]
+    /// A builder for [`ProjectSource`](crate::model::ProjectSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::SourceType>,
@@ -6298,7 +6396,7 @@ pub mod project_source {
             self.source_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectSource`](crate::model::ProjectSource)
+        /// Consumes the builder and constructs a [`ProjectSource`](crate::model::ProjectSource).
         pub fn build(self) -> crate::model::ProjectSource {
             crate::model::ProjectSource {
                 r#type: self.r#type,
@@ -6316,7 +6414,7 @@ pub mod project_source {
     }
 }
 impl ProjectSource {
-    /// Creates a new builder-style object to manufacture [`ProjectSource`](crate::model::ProjectSource)
+    /// Creates a new builder-style object to manufacture [`ProjectSource`](crate::model::ProjectSource).
     pub fn builder() -> crate::model::project_source::Builder {
         crate::model::project_source::Builder::default()
     }
@@ -6341,6 +6439,7 @@ pub struct BuildStatusConfig {
     /// <p>This parameter is used for the <code>context</code> parameter in the GitHub commit status. For more information, see <a href="https://developer.github.com/v3/repos/statuses/#create-a-commit-status">Create a commit status</a> in the GitHub developer guide.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub context: std::option::Option<std::string::String>,
     /// <p>Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.</p>
     /// <dl>
@@ -6357,6 +6456,7 @@ pub struct BuildStatusConfig {
     /// <p>This parameter is used for the <code>target_url</code> parameter in the GitHub commit status. For more information, see <a href="https://developer.github.com/v3/repos/statuses/#create-a-commit-status">Create a commit status</a> in the GitHub developer guide.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub target_url: std::option::Option<std::string::String>,
 }
 impl BuildStatusConfig {
@@ -6405,11 +6505,10 @@ impl std::fmt::Debug for BuildStatusConfig {
         formatter.finish()
     }
 }
-/// See [`BuildStatusConfig`](crate::model::BuildStatusConfig)
+/// See [`BuildStatusConfig`](crate::model::BuildStatusConfig).
 pub mod build_status_config {
 
-    /// A builder for [`BuildStatusConfig`](crate::model::BuildStatusConfig)
-    #[non_exhaustive]
+    /// A builder for [`BuildStatusConfig`](crate::model::BuildStatusConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) context: std::option::Option<std::string::String>,
@@ -6492,7 +6591,7 @@ pub mod build_status_config {
             self.target_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildStatusConfig`](crate::model::BuildStatusConfig)
+        /// Consumes the builder and constructs a [`BuildStatusConfig`](crate::model::BuildStatusConfig).
         pub fn build(self) -> crate::model::BuildStatusConfig {
             crate::model::BuildStatusConfig {
                 context: self.context,
@@ -6502,7 +6601,7 @@ pub mod build_status_config {
     }
 }
 impl BuildStatusConfig {
-    /// Creates a new builder-style object to manufacture [`BuildStatusConfig`](crate::model::BuildStatusConfig)
+    /// Creates a new builder-style object to manufacture [`BuildStatusConfig`](crate::model::BuildStatusConfig).
     pub fn builder() -> crate::model::build_status_config::Builder {
         crate::model::build_status_config::Builder::default()
     }
@@ -6517,8 +6616,10 @@ pub struct SourceAuth {
     /// <p> This data type is deprecated and is no longer accurate or used. </p>
     /// </note>
     /// <p>The authorization type to use. The only valid value is <code>OAUTH</code>, which represents the OAuth authorization type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::SourceAuthType>,
     /// <p>The resource value that applies to the specified authorization type.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
 }
 impl SourceAuth {
@@ -6542,11 +6643,10 @@ impl std::fmt::Debug for SourceAuth {
         formatter.finish()
     }
 }
-/// See [`SourceAuth`](crate::model::SourceAuth)
+/// See [`SourceAuth`](crate::model::SourceAuth).
 pub mod source_auth {
 
-    /// A builder for [`SourceAuth`](crate::model::SourceAuth)
-    #[non_exhaustive]
+    /// A builder for [`SourceAuth`](crate::model::SourceAuth).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::SourceAuthType>,
@@ -6582,7 +6682,7 @@ pub mod source_auth {
             self.resource = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceAuth`](crate::model::SourceAuth)
+        /// Consumes the builder and constructs a [`SourceAuth`](crate::model::SourceAuth).
         pub fn build(self) -> crate::model::SourceAuth {
             crate::model::SourceAuth {
                 r#type: self.r#type,
@@ -6592,7 +6692,7 @@ pub mod source_auth {
     }
 }
 impl SourceAuth {
-    /// Creates a new builder-style object to manufacture [`SourceAuth`](crate::model::SourceAuth)
+    /// Creates a new builder-style object to manufacture [`SourceAuth`](crate::model::SourceAuth).
     pub fn builder() -> crate::model::source_auth::Builder {
         crate::model::source_auth::Builder::default()
     }
@@ -6654,6 +6754,7 @@ impl AsRef<str> for SourceAuthType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GitSubmodulesConfig {
     /// <p> Set to true to fetch Git submodules for your CodeBuild build project. </p>
+    #[doc(hidden)]
     pub fetch_submodules: std::option::Option<bool>,
 }
 impl GitSubmodulesConfig {
@@ -6669,11 +6770,10 @@ impl std::fmt::Debug for GitSubmodulesConfig {
         formatter.finish()
     }
 }
-/// See [`GitSubmodulesConfig`](crate::model::GitSubmodulesConfig)
+/// See [`GitSubmodulesConfig`](crate::model::GitSubmodulesConfig).
 pub mod git_submodules_config {
 
-    /// A builder for [`GitSubmodulesConfig`](crate::model::GitSubmodulesConfig)
-    #[non_exhaustive]
+    /// A builder for [`GitSubmodulesConfig`](crate::model::GitSubmodulesConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fetch_submodules: std::option::Option<bool>,
@@ -6689,7 +6789,7 @@ pub mod git_submodules_config {
             self.fetch_submodules = input;
             self
         }
-        /// Consumes the builder and constructs a [`GitSubmodulesConfig`](crate::model::GitSubmodulesConfig)
+        /// Consumes the builder and constructs a [`GitSubmodulesConfig`](crate::model::GitSubmodulesConfig).
         pub fn build(self) -> crate::model::GitSubmodulesConfig {
             crate::model::GitSubmodulesConfig {
                 fetch_submodules: self.fetch_submodules,
@@ -6698,7 +6798,7 @@ pub mod git_submodules_config {
     }
 }
 impl GitSubmodulesConfig {
-    /// Creates a new builder-style object to manufacture [`GitSubmodulesConfig`](crate::model::GitSubmodulesConfig)
+    /// Creates a new builder-style object to manufacture [`GitSubmodulesConfig`](crate::model::GitSubmodulesConfig).
     pub fn builder() -> crate::model::git_submodules_config::Builder {
         crate::model::git_submodules_config::Builder::default()
     }
@@ -6792,18 +6892,25 @@ impl AsRef<str> for SourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuildBatch {
     /// <p>The identifier of the batch build.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ARN of the batch build.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time that the batch build started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the batch build ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current phase of the batch build.</p>
+    #[doc(hidden)]
     pub current_phase: std::option::Option<std::string::String>,
     /// <p>The status of the batch build.</p>
+    #[doc(hidden)]
     pub build_batch_status: std::option::Option<crate::model::StatusType>,
     /// <p>The identifier of the version of the source code to be built.</p>
+    #[doc(hidden)]
     pub source_version: std::option::Option<std::string::String>,
     /// <p>The identifier of the resolved version of this batch build's source code.</p>
     /// <ul>
@@ -6811,14 +6918,19 @@ pub struct BuildBatch {
     /// <li> <p>For CodePipeline, the source revision provided by CodePipeline.</p> </li>
     /// <li> <p>For Amazon S3, this does not apply.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resolved_source_version: std::option::Option<std::string::String>,
     /// <p>The name of the batch build project.</p>
+    #[doc(hidden)]
     pub project_name: std::option::Option<std::string::String>,
     /// <p>An array of <code>BuildBatchPhase</code> objects the specify the phases of the batch build.</p>
+    #[doc(hidden)]
     pub phases: std::option::Option<std::vec::Vec<crate::model::BuildBatchPhase>>,
     /// <p>Information about the build input source code for the build project.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::ProjectSource>,
     /// <p>An array of <code>ProjectSource</code> objects that define the sources for the batch build.</p>
+    #[doc(hidden)]
     pub secondary_sources: std::option::Option<std::vec::Vec<crate::model::ProjectSource>>,
     /// <p>An array of <code>ProjectSourceVersion</code> objects. Each <code>ProjectSourceVersion</code> must be one of: </p>
     /// <ul>
@@ -6827,25 +6939,35 @@ pub struct BuildBatch {
     /// <li> <p>For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.</p> </li>
     /// <li> <p>For Amazon S3: the version ID of the object that represents the build input ZIP file to use.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub secondary_source_versions:
         std::option::Option<std::vec::Vec<crate::model::ProjectSourceVersion>>,
     /// <p>A <code>BuildArtifacts</code> object the defines the build artifacts for this batch build.</p>
+    #[doc(hidden)]
     pub artifacts: std::option::Option<crate::model::BuildArtifacts>,
     /// <p>An array of <code>BuildArtifacts</code> objects the define the build artifacts for this batch build.</p>
+    #[doc(hidden)]
     pub secondary_artifacts: std::option::Option<std::vec::Vec<crate::model::BuildArtifacts>>,
     /// <p>Information about the cache for the build project.</p>
+    #[doc(hidden)]
     pub cache: std::option::Option<crate::model::ProjectCache>,
     /// <p>Information about the build environment of the build project.</p>
+    #[doc(hidden)]
     pub environment: std::option::Option<crate::model::ProjectEnvironment>,
     /// <p>The name of a service role used for builds in the batch.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p> Information about logs for a build project. These can be logs in CloudWatch Logs, built in a specified S3 bucket, or both. </p>
+    #[doc(hidden)]
     pub log_config: std::option::Option<crate::model::LogsConfig>,
     /// <p>Specifies the maximum amount of time, in minutes, that the build in a batch must be completed in.</p>
+    #[doc(hidden)]
     pub build_timeout_in_minutes: std::option::Option<i32>,
     /// <p>Specifies the amount of time, in minutes, that the batch build is allowed to be queued before it times out.</p>
+    #[doc(hidden)]
     pub queued_timeout_in_minutes: std::option::Option<i32>,
     /// <p>Indicates if the batch build is complete.</p>
+    #[doc(hidden)]
     pub complete: bool,
     /// <p>The entity that started the batch build. Valid values include:</p>
     /// <ul>
@@ -6853,25 +6975,33 @@ pub struct BuildBatch {
     /// <li> <p>If an IAM user started the build, the user's name.</p> </li>
     /// <li> <p>If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub initiator: std::option::Option<std::string::String>,
     /// <p>Information about the VPC configuration that CodeBuild accesses.</p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
     /// <p>The Key Management Service customer master key (CMK) to be used for encrypting the batch build output artifacts.</p> <note>
     /// <p>You can use a cross-account KMS key to encrypt the build output artifacts if your service role has permission to that key. </p>
     /// </note>
     /// <p>You can specify either the Amazon Resource Name (ARN) of the CMK or, if available, the CMK's alias (using the format <code>alias/
     /// <alias-name></alias-name></code>).</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
     /// <p>The number of the batch build. For each project, the <code>buildBatchNumber</code> of its first batch build is <code>1</code>. The <code>buildBatchNumber</code> of each subsequent batch build is incremented by <code>1</code>. If a batch build is deleted, the <code>buildBatchNumber</code> of other batch builds does not change.</p>
+    #[doc(hidden)]
     pub build_batch_number: std::option::Option<i64>,
     /// <p>An array of <code>ProjectFileSystemLocation</code> objects for the batch build project. A <code>ProjectFileSystemLocation</code> object specifies the <code>identifier</code>, <code>location</code>, <code>mountOptions</code>, <code>mountPoint</code>, and <code>type</code> of a file system created using Amazon Elastic File System. </p>
+    #[doc(hidden)]
     pub file_system_locations:
         std::option::Option<std::vec::Vec<crate::model::ProjectFileSystemLocation>>,
     /// <p>Contains configuration information about a batch build project.</p>
+    #[doc(hidden)]
     pub build_batch_config: std::option::Option<crate::model::ProjectBuildBatchConfig>,
     /// <p>An array of <code>BuildGroup</code> objects that define the build groups for the batch build.</p>
+    #[doc(hidden)]
     pub build_groups: std::option::Option<std::vec::Vec<crate::model::BuildGroup>>,
     /// <p>Specifies if session debugging is enabled for this batch build. For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/session-manager.html">Viewing a running build in Session Manager</a>. Batch session debugging is not supported for matrix batch builds.</p>
+    #[doc(hidden)]
     pub debug_session_enabled: std::option::Option<bool>,
 }
 impl BuildBatch {
@@ -7058,11 +7188,10 @@ impl std::fmt::Debug for BuildBatch {
         formatter.finish()
     }
 }
-/// See [`BuildBatch`](crate::model::BuildBatch)
+/// See [`BuildBatch`](crate::model::BuildBatch).
 pub mod build_batch {
 
-    /// A builder for [`BuildBatch`](crate::model::BuildBatch)
-    #[non_exhaustive]
+    /// A builder for [`BuildBatch`](crate::model::BuildBatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -7540,7 +7669,7 @@ pub mod build_batch {
             self.debug_session_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildBatch`](crate::model::BuildBatch)
+        /// Consumes the builder and constructs a [`BuildBatch`](crate::model::BuildBatch).
         pub fn build(self) -> crate::model::BuildBatch {
             crate::model::BuildBatch {
                 id: self.id,
@@ -7578,7 +7707,7 @@ pub mod build_batch {
     }
 }
 impl BuildBatch {
-    /// Creates a new builder-style object to manufacture [`BuildBatch`](crate::model::BuildBatch)
+    /// Creates a new builder-style object to manufacture [`BuildBatch`](crate::model::BuildBatch).
     pub fn builder() -> crate::model::build_batch::Builder {
         crate::model::build_batch::Builder::default()
     }
@@ -7589,14 +7718,19 @@ impl BuildBatch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuildGroup {
     /// <p>Contains the identifier of the build group.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
     /// <p>An array of strings that contain the identifiers of the build groups that this build group depends on.</p>
+    #[doc(hidden)]
     pub depends_on: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies if failures in this build group can be ignored.</p>
+    #[doc(hidden)]
     pub ignore_failure: bool,
     /// <p>A <code>BuildSummary</code> object that contains a summary of the current build group.</p>
+    #[doc(hidden)]
     pub current_build_summary: std::option::Option<crate::model::BuildSummary>,
     /// <p>An array of <code>BuildSummary</code> objects that contain summaries of previous build groups.</p>
+    #[doc(hidden)]
     pub prior_build_summary_list: std::option::Option<std::vec::Vec<crate::model::BuildSummary>>,
 }
 impl BuildGroup {
@@ -7632,11 +7766,10 @@ impl std::fmt::Debug for BuildGroup {
         formatter.finish()
     }
 }
-/// See [`BuildGroup`](crate::model::BuildGroup)
+/// See [`BuildGroup`](crate::model::BuildGroup).
 pub mod build_group {
 
-    /// A builder for [`BuildGroup`](crate::model::BuildGroup)
-    #[non_exhaustive]
+    /// A builder for [`BuildGroup`](crate::model::BuildGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identifier: std::option::Option<std::string::String>,
@@ -7718,7 +7851,7 @@ pub mod build_group {
             self.prior_build_summary_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildGroup`](crate::model::BuildGroup)
+        /// Consumes the builder and constructs a [`BuildGroup`](crate::model::BuildGroup).
         pub fn build(self) -> crate::model::BuildGroup {
             crate::model::BuildGroup {
                 identifier: self.identifier,
@@ -7731,7 +7864,7 @@ pub mod build_group {
     }
 }
 impl BuildGroup {
-    /// Creates a new builder-style object to manufacture [`BuildGroup`](crate::model::BuildGroup)
+    /// Creates a new builder-style object to manufacture [`BuildGroup`](crate::model::BuildGroup).
     pub fn builder() -> crate::model::build_group::Builder {
         crate::model::build_group::Builder::default()
     }
@@ -7742,8 +7875,10 @@ impl BuildGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuildSummary {
     /// <p>The batch build ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>When the build was started, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub requested_on: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the build group.</p>
     /// <dl>
@@ -7784,10 +7919,13 @@ pub struct BuildSummary {
     /// <p>The build group timed out.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub build_status: std::option::Option<crate::model::StatusType>,
     /// <p>A <code>ResolvedArtifact</code> object that represents the primary build artifacts for the build group.</p>
+    #[doc(hidden)]
     pub primary_artifact: std::option::Option<crate::model::ResolvedArtifact>,
     /// <p>An array of <code>ResolvedArtifact</code> objects that represents the secondary build artifacts for the build group.</p>
+    #[doc(hidden)]
     pub secondary_artifacts: std::option::Option<std::vec::Vec<crate::model::ResolvedArtifact>>,
 }
 impl BuildSummary {
@@ -7861,11 +7999,10 @@ impl std::fmt::Debug for BuildSummary {
         formatter.finish()
     }
 }
-/// See [`BuildSummary`](crate::model::BuildSummary)
+/// See [`BuildSummary`](crate::model::BuildSummary).
 pub mod build_summary {
 
-    /// A builder for [`BuildSummary`](crate::model::BuildSummary)
-    #[non_exhaustive]
+    /// A builder for [`BuildSummary`](crate::model::BuildSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -8020,7 +8157,7 @@ pub mod build_summary {
             self.secondary_artifacts = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildSummary`](crate::model::BuildSummary)
+        /// Consumes the builder and constructs a [`BuildSummary`](crate::model::BuildSummary).
         pub fn build(self) -> crate::model::BuildSummary {
             crate::model::BuildSummary {
                 arn: self.arn,
@@ -8033,7 +8170,7 @@ pub mod build_summary {
     }
 }
 impl BuildSummary {
-    /// Creates a new builder-style object to manufacture [`BuildSummary`](crate::model::BuildSummary)
+    /// Creates a new builder-style object to manufacture [`BuildSummary`](crate::model::BuildSummary).
     pub fn builder() -> crate::model::build_summary::Builder {
         crate::model::build_summary::Builder::default()
     }
@@ -8044,10 +8181,13 @@ impl BuildSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResolvedArtifact {
     /// <p>Specifies the type of artifact.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ArtifactsType>,
     /// <p>The location of the artifact.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The identifier of the artifact.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
 }
 impl ResolvedArtifact {
@@ -8073,11 +8213,10 @@ impl std::fmt::Debug for ResolvedArtifact {
         formatter.finish()
     }
 }
-/// See [`ResolvedArtifact`](crate::model::ResolvedArtifact)
+/// See [`ResolvedArtifact`](crate::model::ResolvedArtifact).
 pub mod resolved_artifact {
 
-    /// A builder for [`ResolvedArtifact`](crate::model::ResolvedArtifact)
-    #[non_exhaustive]
+    /// A builder for [`ResolvedArtifact`](crate::model::ResolvedArtifact).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ArtifactsType>,
@@ -8115,7 +8254,7 @@ pub mod resolved_artifact {
             self.identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResolvedArtifact`](crate::model::ResolvedArtifact)
+        /// Consumes the builder and constructs a [`ResolvedArtifact`](crate::model::ResolvedArtifact).
         pub fn build(self) -> crate::model::ResolvedArtifact {
             crate::model::ResolvedArtifact {
                 r#type: self.r#type,
@@ -8126,7 +8265,7 @@ pub mod resolved_artifact {
     }
 }
 impl ResolvedArtifact {
-    /// Creates a new builder-style object to manufacture [`ResolvedArtifact`](crate::model::ResolvedArtifact)
+    /// Creates a new builder-style object to manufacture [`ResolvedArtifact`](crate::model::ResolvedArtifact).
     pub fn builder() -> crate::model::resolved_artifact::Builder {
         crate::model::resolved_artifact::Builder::default()
     }
@@ -8215,22 +8354,28 @@ impl AsRef<str> for StatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuildArtifacts {
     /// <p>Information about the location of the build artifacts.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The SHA-256 hash of the build artifact.</p>
     /// <p>You can use this hash along with a checksum tool to confirm file integrity and authenticity.</p> <note>
     /// <p>This value is available only if the build project's <code>packaging</code> value is set to <code>ZIP</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub sha256sum: std::option::Option<std::string::String>,
     /// <p>The MD5 hash of the build artifact.</p>
     /// <p>You can use this hash along with a checksum tool to confirm file integrity and authenticity.</p> <note>
     /// <p>This value is available only if the build project's <code>packaging</code> value is set to <code>ZIP</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub md5sum: std::option::Option<std::string::String>,
     /// <p> If this flag is set, a name specified in the buildspec file overrides the artifact name. The name specified in a buildspec file is calculated at build time and uses the Shell Command Language. For example, you can append a date and time to your artifact name so that it is always unique. </p>
+    #[doc(hidden)]
     pub override_artifact_name: std::option::Option<bool>,
     /// <p> Information that tells you if encryption for build artifacts is disabled. </p>
+    #[doc(hidden)]
     pub encryption_disabled: std::option::Option<bool>,
     /// <p> An identifier for this artifact definition. </p>
+    #[doc(hidden)]
     pub artifact_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default, only the account that uploads the objects to the bucket has access to these objects. This property allows you to give the bucket owner access to these objects.</p> <note>
     /// <p>To use this property, your CodeBuild service role must have the <code>s3:PutBucketAcl</code> permission. This permission allows CodeBuild to modify the access control list for the bucket.</p>
@@ -8261,6 +8406,7 @@ pub struct BuildArtifacts {
     /// <p>For more information about Amazon S3 object ownership, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html">Controlling ownership of uploaded objects using S3 Object Ownership</a> in the <i>Amazon Simple Storage Service User Guide</i>.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub bucket_owner_access: std::option::Option<crate::model::BucketOwnerAccess>,
 }
 impl BuildArtifacts {
@@ -8340,11 +8486,10 @@ impl std::fmt::Debug for BuildArtifacts {
         formatter.finish()
     }
 }
-/// See [`BuildArtifacts`](crate::model::BuildArtifacts)
+/// See [`BuildArtifacts`](crate::model::BuildArtifacts).
 pub mod build_artifacts {
 
-    /// A builder for [`BuildArtifacts`](crate::model::BuildArtifacts)
-    #[non_exhaustive]
+    /// A builder for [`BuildArtifacts`](crate::model::BuildArtifacts).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location: std::option::Option<std::string::String>,
@@ -8500,7 +8645,7 @@ pub mod build_artifacts {
             self.bucket_owner_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildArtifacts`](crate::model::BuildArtifacts)
+        /// Consumes the builder and constructs a [`BuildArtifacts`](crate::model::BuildArtifacts).
         pub fn build(self) -> crate::model::BuildArtifacts {
             crate::model::BuildArtifacts {
                 location: self.location,
@@ -8515,7 +8660,7 @@ pub mod build_artifacts {
     }
 }
 impl BuildArtifacts {
-    /// Creates a new builder-style object to manufacture [`BuildArtifacts`](crate::model::BuildArtifacts)
+    /// Creates a new builder-style object to manufacture [`BuildArtifacts`](crate::model::BuildArtifacts).
     pub fn builder() -> crate::model::build_artifacts::Builder {
         crate::model::build_artifacts::Builder::default()
     }
@@ -8570,6 +8715,7 @@ pub struct BuildBatchPhase {
     /// <p>The batch build succeeded.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub phase_type: std::option::Option<crate::model::BuildBatchPhaseType>,
     /// <p>The current status of the batch build phase. Valid values include:</p>
     /// <dl>
@@ -8610,14 +8756,19 @@ pub struct BuildBatchPhase {
     /// <p>The build phase timed out.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub phase_status: std::option::Option<crate::model::StatusType>,
     /// <p>When the batch build phase started, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>When the batch build phase ended, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>How long, in seconds, between the starting and ending times of the batch build's phase.</p>
+    #[doc(hidden)]
     pub duration_in_seconds: std::option::Option<i64>,
     /// <p>Additional information about the batch build phase. Especially to help troubleshoot a failed batch build.</p>
+    #[doc(hidden)]
     pub contexts: std::option::Option<std::vec::Vec<crate::model::PhaseContext>>,
 }
 impl BuildBatchPhase {
@@ -8740,11 +8891,10 @@ impl std::fmt::Debug for BuildBatchPhase {
         formatter.finish()
     }
 }
-/// See [`BuildBatchPhase`](crate::model::BuildBatchPhase)
+/// See [`BuildBatchPhase`](crate::model::BuildBatchPhase).
 pub mod build_batch_phase {
 
-    /// A builder for [`BuildBatchPhase`](crate::model::BuildBatchPhase)
-    #[non_exhaustive]
+    /// A builder for [`BuildBatchPhase`](crate::model::BuildBatchPhase).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) phase_type: std::option::Option<crate::model::BuildBatchPhaseType>,
@@ -9000,7 +9150,7 @@ pub mod build_batch_phase {
             self.contexts = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildBatchPhase`](crate::model::BuildBatchPhase)
+        /// Consumes the builder and constructs a [`BuildBatchPhase`](crate::model::BuildBatchPhase).
         pub fn build(self) -> crate::model::BuildBatchPhase {
             crate::model::BuildBatchPhase {
                 phase_type: self.phase_type,
@@ -9014,7 +9164,7 @@ pub mod build_batch_phase {
     }
 }
 impl BuildBatchPhase {
-    /// Creates a new builder-style object to manufacture [`BuildBatchPhase`](crate::model::BuildBatchPhase)
+    /// Creates a new builder-style object to manufacture [`BuildBatchPhase`](crate::model::BuildBatchPhase).
     pub fn builder() -> crate::model::build_batch_phase::Builder {
         crate::model::build_batch_phase::Builder::default()
     }
@@ -9025,8 +9175,10 @@ impl BuildBatchPhase {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PhaseContext {
     /// <p>The status code for the context of the build phase.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<std::string::String>,
     /// <p>An explanation of the build phase's context. This might include a command ID and an exit code.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl PhaseContext {
@@ -9047,11 +9199,10 @@ impl std::fmt::Debug for PhaseContext {
         formatter.finish()
     }
 }
-/// See [`PhaseContext`](crate::model::PhaseContext)
+/// See [`PhaseContext`](crate::model::PhaseContext).
 pub mod phase_context {
 
-    /// A builder for [`PhaseContext`](crate::model::PhaseContext)
-    #[non_exhaustive]
+    /// A builder for [`PhaseContext`](crate::model::PhaseContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code: std::option::Option<std::string::String>,
@@ -9078,7 +9229,7 @@ pub mod phase_context {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`PhaseContext`](crate::model::PhaseContext)
+        /// Consumes the builder and constructs a [`PhaseContext`](crate::model::PhaseContext).
         pub fn build(self) -> crate::model::PhaseContext {
             crate::model::PhaseContext {
                 status_code: self.status_code,
@@ -9088,7 +9239,7 @@ pub mod phase_context {
     }
 }
 impl PhaseContext {
-    /// Creates a new builder-style object to manufacture [`PhaseContext`](crate::model::PhaseContext)
+    /// Creates a new builder-style object to manufacture [`PhaseContext`](crate::model::PhaseContext).
     pub fn builder() -> crate::model::phase_context::Builder {
         crate::model::phase_context::Builder::default()
     }
@@ -9182,16 +9333,22 @@ impl AsRef<str> for BuildBatchPhaseType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Build {
     /// <p>The unique ID for the build.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the build.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The number of the build. For each project, the <code>buildNumber</code> of its first build is <code>1</code>. The <code>buildNumber</code> of each subsequent build is incremented by <code>1</code>. If a build is deleted, the <code>buildNumber</code> of other builds does not change.</p>
+    #[doc(hidden)]
     pub build_number: std::option::Option<i64>,
     /// <p>When the build process started, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>When the build process ended, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current build phase.</p>
+    #[doc(hidden)]
     pub current_phase: std::option::Option<std::string::String>,
     /// <p>The current status of the build. Valid values include:</p>
     /// <ul>
@@ -9202,9 +9359,11 @@ pub struct Build {
     /// <li> <p> <code>SUCCEEDED</code>: The build succeeded.</p> </li>
     /// <li> <p> <code>TIMED_OUT</code>: The build timed out.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub build_status: std::option::Option<crate::model::StatusType>,
     /// <p>Any version identifier for the version of the source code to be built. If <code>sourceVersion</code> is specified at the project level, then this <code>sourceVersion</code> (at the build level) takes precedence. </p>
     /// <p> For more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version Sample with CodeBuild</a> in the <i>CodeBuild User Guide</i>. </p>
+    #[doc(hidden)]
     pub source_version: std::option::Option<std::string::String>,
     /// <p> An identifier for the version of this build's source code. </p>
     /// <ul>
@@ -9212,14 +9371,19 @@ pub struct Build {
     /// <li> <p> For CodePipeline, the source revision provided by CodePipeline. </p> </li>
     /// <li> <p> For Amazon S3, this does not apply. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resolved_source_version: std::option::Option<std::string::String>,
     /// <p>The name of the CodeBuild project.</p>
+    #[doc(hidden)]
     pub project_name: std::option::Option<std::string::String>,
     /// <p>Information about all previous build phases that are complete and information about any current build phase that is not yet complete.</p>
+    #[doc(hidden)]
     pub phases: std::option::Option<std::vec::Vec<crate::model::BuildPhase>>,
     /// <p>Information about the source code to be built.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::ProjectSource>,
     /// <p> An array of <code>ProjectSource</code> objects. </p>
+    #[doc(hidden)]
     pub secondary_sources: std::option::Option<std::vec::Vec<crate::model::ProjectSource>>,
     /// <p> An array of <code>ProjectSourceVersion</code> objects. Each <code>ProjectSourceVersion</code> must be one of: </p>
     /// <ul>
@@ -9228,25 +9392,35 @@ pub struct Build {
     /// <li> <p>For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.</p> </li>
     /// <li> <p>For Amazon S3: the version ID of the object that represents the build input ZIP file to use.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub secondary_source_versions:
         std::option::Option<std::vec::Vec<crate::model::ProjectSourceVersion>>,
     /// <p>Information about the output artifacts for the build.</p>
+    #[doc(hidden)]
     pub artifacts: std::option::Option<crate::model::BuildArtifacts>,
     /// <p> An array of <code>ProjectArtifacts</code> objects. </p>
+    #[doc(hidden)]
     pub secondary_artifacts: std::option::Option<std::vec::Vec<crate::model::BuildArtifacts>>,
     /// <p>Information about the cache for the build.</p>
+    #[doc(hidden)]
     pub cache: std::option::Option<crate::model::ProjectCache>,
     /// <p>Information about the build environment for this build.</p>
+    #[doc(hidden)]
     pub environment: std::option::Option<crate::model::ProjectEnvironment>,
     /// <p>The name of a service role used for this build.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p>Information about the build's logs in CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub logs: std::option::Option<crate::model::LogsLocation>,
     /// <p>How long, in minutes, for CodeBuild to wait before timing out this build if it does not get marked as completed.</p>
+    #[doc(hidden)]
     pub timeout_in_minutes: std::option::Option<i32>,
     /// <p> The number of minutes a build is allowed to be queued before it times out. </p>
+    #[doc(hidden)]
     pub queued_timeout_in_minutes: std::option::Option<i32>,
     /// <p>Whether the build is complete. True if complete; otherwise, false.</p>
+    #[doc(hidden)]
     pub build_complete: bool,
     /// <p>The entity that started the build. Valid values include:</p>
     /// <ul>
@@ -9254,29 +9428,38 @@ pub struct Build {
     /// <li> <p>If an IAM user started the build, the user's name (for example, <code>MyUserName</code>).</p> </li>
     /// <li> <p>If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub initiator: std::option::Option<std::string::String>,
     /// <p>If your CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same VPC. You must provide at least one security group and one subnet ID.</p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
     /// <p>Describes a network interface.</p>
+    #[doc(hidden)]
     pub network_interface: std::option::Option<crate::model::NetworkInterface>,
     /// <p>The Key Management Service customer master key (CMK) to be used for encrypting the build output artifacts.</p> <note>
     /// <p> You can use a cross-account KMS key to encrypt the build output artifacts if your service role has permission to that key. </p>
     /// </note>
     /// <p>You can specify either the Amazon Resource Name (ARN) of the CMK or, if available, the CMK's alias (using the format <code>alias/
     /// <alias-name></alias-name></code>).</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
     /// <p>A list of exported environment variables for this build.</p>
     /// <p>Exported environment variables are used in conjunction with CodePipeline to export environment variables from the current build stage to subsequent stages in the pipeline. For more information, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with variables</a> in the <i>CodePipeline User Guide</i>.</p>
+    #[doc(hidden)]
     pub exported_environment_variables:
         std::option::Option<std::vec::Vec<crate::model::ExportedEnvironmentVariable>>,
     /// <p> An array of the ARNs associated with this build's reports. </p>
+    #[doc(hidden)]
     pub report_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> An array of <code>ProjectFileSystemLocation</code> objects for a CodeBuild build project. A <code>ProjectFileSystemLocation</code> object specifies the <code>identifier</code>, <code>location</code>, <code>mountOptions</code>, <code>mountPoint</code>, and <code>type</code> of a file system created using Amazon Elastic File System. </p>
+    #[doc(hidden)]
     pub file_system_locations:
         std::option::Option<std::vec::Vec<crate::model::ProjectFileSystemLocation>>,
     /// <p>Contains information about the debug session for this build.</p>
+    #[doc(hidden)]
     pub debug_session: std::option::Option<crate::model::DebugSession>,
     /// <p>The ARN of the batch build that this build is a member of, if applicable.</p>
+    #[doc(hidden)]
     pub build_batch_arn: std::option::Option<std::string::String>,
 }
 impl Build {
@@ -9486,11 +9669,10 @@ impl std::fmt::Debug for Build {
         formatter.finish()
     }
 }
-/// See [`Build`](crate::model::Build)
+/// See [`Build`](crate::model::Build).
 pub mod build {
 
-    /// A builder for [`Build`](crate::model::Build)
-    #[non_exhaustive]
+    /// A builder for [`Build`](crate::model::Build).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -10026,7 +10208,7 @@ pub mod build {
             self.build_batch_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Build`](crate::model::Build)
+        /// Consumes the builder and constructs a [`Build`](crate::model::Build).
         pub fn build(self) -> crate::model::Build {
             crate::model::Build {
                 id: self.id,
@@ -10066,7 +10248,7 @@ pub mod build {
     }
 }
 impl Build {
-    /// Creates a new builder-style object to manufacture [`Build`](crate::model::Build)
+    /// Creates a new builder-style object to manufacture [`Build`](crate::model::Build).
     pub fn builder() -> crate::model::build::Builder {
         crate::model::build::Builder::default()
     }
@@ -10077,8 +10259,10 @@ impl Build {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DebugSession {
     /// <p>Specifies if session debugging is enabled for this build.</p>
+    #[doc(hidden)]
     pub session_enabled: std::option::Option<bool>,
     /// <p>Contains the identifier of the Session Manager session used for the build. To work with the paused build, you open this session to examine, control, and resume the build.</p>
+    #[doc(hidden)]
     pub session_target: std::option::Option<std::string::String>,
 }
 impl DebugSession {
@@ -10099,11 +10283,10 @@ impl std::fmt::Debug for DebugSession {
         formatter.finish()
     }
 }
-/// See [`DebugSession`](crate::model::DebugSession)
+/// See [`DebugSession`](crate::model::DebugSession).
 pub mod debug_session {
 
-    /// A builder for [`DebugSession`](crate::model::DebugSession)
-    #[non_exhaustive]
+    /// A builder for [`DebugSession`](crate::model::DebugSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) session_enabled: std::option::Option<bool>,
@@ -10133,7 +10316,7 @@ pub mod debug_session {
             self.session_target = input;
             self
         }
-        /// Consumes the builder and constructs a [`DebugSession`](crate::model::DebugSession)
+        /// Consumes the builder and constructs a [`DebugSession`](crate::model::DebugSession).
         pub fn build(self) -> crate::model::DebugSession {
             crate::model::DebugSession {
                 session_enabled: self.session_enabled,
@@ -10143,7 +10326,7 @@ pub mod debug_session {
     }
 }
 impl DebugSession {
-    /// Creates a new builder-style object to manufacture [`DebugSession`](crate::model::DebugSession)
+    /// Creates a new builder-style object to manufacture [`DebugSession`](crate::model::DebugSession).
     pub fn builder() -> crate::model::debug_session::Builder {
         crate::model::debug_session::Builder::default()
     }
@@ -10157,8 +10340,10 @@ impl DebugSession {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportedEnvironmentVariable {
     /// <p>The name of the exported environment variable.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value assigned to the exported environment variable.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ExportedEnvironmentVariable {
@@ -10179,11 +10364,10 @@ impl std::fmt::Debug for ExportedEnvironmentVariable {
         formatter.finish()
     }
 }
-/// See [`ExportedEnvironmentVariable`](crate::model::ExportedEnvironmentVariable)
+/// See [`ExportedEnvironmentVariable`](crate::model::ExportedEnvironmentVariable).
 pub mod exported_environment_variable {
 
-    /// A builder for [`ExportedEnvironmentVariable`](crate::model::ExportedEnvironmentVariable)
-    #[non_exhaustive]
+    /// A builder for [`ExportedEnvironmentVariable`](crate::model::ExportedEnvironmentVariable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10210,7 +10394,7 @@ pub mod exported_environment_variable {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportedEnvironmentVariable`](crate::model::ExportedEnvironmentVariable)
+        /// Consumes the builder and constructs a [`ExportedEnvironmentVariable`](crate::model::ExportedEnvironmentVariable).
         pub fn build(self) -> crate::model::ExportedEnvironmentVariable {
             crate::model::ExportedEnvironmentVariable {
                 name: self.name,
@@ -10220,7 +10404,7 @@ pub mod exported_environment_variable {
     }
 }
 impl ExportedEnvironmentVariable {
-    /// Creates a new builder-style object to manufacture [`ExportedEnvironmentVariable`](crate::model::ExportedEnvironmentVariable)
+    /// Creates a new builder-style object to manufacture [`ExportedEnvironmentVariable`](crate::model::ExportedEnvironmentVariable).
     pub fn builder() -> crate::model::exported_environment_variable::Builder {
         crate::model::exported_environment_variable::Builder::default()
     }
@@ -10231,8 +10415,10 @@ impl ExportedEnvironmentVariable {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkInterface {
     /// <p>The ID of the subnet.</p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
     /// <p>The ID of the network interface.</p>
+    #[doc(hidden)]
     pub network_interface_id: std::option::Option<std::string::String>,
 }
 impl NetworkInterface {
@@ -10253,11 +10439,10 @@ impl std::fmt::Debug for NetworkInterface {
         formatter.finish()
     }
 }
-/// See [`NetworkInterface`](crate::model::NetworkInterface)
+/// See [`NetworkInterface`](crate::model::NetworkInterface).
 pub mod network_interface {
 
-    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface)
-    #[non_exhaustive]
+    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_id: std::option::Option<std::string::String>,
@@ -10287,7 +10472,7 @@ pub mod network_interface {
             self.network_interface_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface)
+        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface).
         pub fn build(self) -> crate::model::NetworkInterface {
             crate::model::NetworkInterface {
                 subnet_id: self.subnet_id,
@@ -10297,7 +10482,7 @@ pub mod network_interface {
     }
 }
 impl NetworkInterface {
-    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface)
+    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface).
     pub fn builder() -> crate::model::network_interface::Builder {
         crate::model::network_interface::Builder::default()
     }
@@ -10308,20 +10493,28 @@ impl NetworkInterface {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogsLocation {
     /// <p>The name of the CloudWatch Logs group for the build logs.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The name of the CloudWatch Logs stream for the build logs.</p>
+    #[doc(hidden)]
     pub stream_name: std::option::Option<std::string::String>,
     /// <p>The URL to an individual build log in CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub deep_link: std::option::Option<std::string::String>,
     /// <p> The URL to a build log in an S3 bucket. </p>
+    #[doc(hidden)]
     pub s3_deep_link: std::option::Option<std::string::String>,
     /// <p> The ARN of CloudWatch Logs for a build project. Its format is <code>arn:${Partition}:logs:${Region}:${Account}:log-group:${LogGroupName}:log-stream:${LogStreamName}</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncloudwatchlogs.html#amazoncloudwatchlogs-resources-for-iam-policies">Resources Defined by CloudWatch Logs</a>. </p>
+    #[doc(hidden)]
     pub cloud_watch_logs_arn: std::option::Option<std::string::String>,
     /// <p> The ARN of S3 logs for a build project. Its format is <code>arn:${Partition}:s3:::${BucketName}/${ObjectName}</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html#amazons3-resources-for-iam-policies">Resources Defined by Amazon S3</a>. </p>
+    #[doc(hidden)]
     pub s3_logs_arn: std::option::Option<std::string::String>,
     /// <p> Information about CloudWatch Logs for a build project. </p>
+    #[doc(hidden)]
     pub cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogsConfig>,
     /// <p> Information about S3 logs for a build project. </p>
+    #[doc(hidden)]
     pub s3_logs: std::option::Option<crate::model::S3LogsConfig>,
 }
 impl LogsLocation {
@@ -10372,11 +10565,10 @@ impl std::fmt::Debug for LogsLocation {
         formatter.finish()
     }
 }
-/// See [`LogsLocation`](crate::model::LogsLocation)
+/// See [`LogsLocation`](crate::model::LogsLocation).
 pub mod logs_location {
 
-    /// A builder for [`LogsLocation`](crate::model::LogsLocation)
-    #[non_exhaustive]
+    /// A builder for [`LogsLocation`](crate::model::LogsLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_name: std::option::Option<std::string::String>,
@@ -10478,7 +10670,7 @@ pub mod logs_location {
             self.s3_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogsLocation`](crate::model::LogsLocation)
+        /// Consumes the builder and constructs a [`LogsLocation`](crate::model::LogsLocation).
         pub fn build(self) -> crate::model::LogsLocation {
             crate::model::LogsLocation {
                 group_name: self.group_name,
@@ -10494,7 +10686,7 @@ pub mod logs_location {
     }
 }
 impl LogsLocation {
-    /// Creates a new builder-style object to manufacture [`LogsLocation`](crate::model::LogsLocation)
+    /// Creates a new builder-style object to manufacture [`LogsLocation`](crate::model::LogsLocation).
     pub fn builder() -> crate::model::logs_location::Builder {
         crate::model::logs_location::Builder::default()
     }
@@ -10573,6 +10765,7 @@ pub struct BuildPhase {
     /// <p>Build output artifacts are being uploaded to the output location.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub phase_type: std::option::Option<crate::model::BuildPhaseType>,
     /// <p>The current status of the build phase. Valid values include:</p>
     /// <dl>
@@ -10613,14 +10806,19 @@ pub struct BuildPhase {
     /// <p>The build phase timed out.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub phase_status: std::option::Option<crate::model::StatusType>,
     /// <p>When the build phase started, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>When the build phase ended, expressed in Unix time format.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>How long, in seconds, between the starting and ending times of the build's phase.</p>
+    #[doc(hidden)]
     pub duration_in_seconds: std::option::Option<i64>,
     /// <p>Additional information about a build phase, especially to help troubleshoot a failed build.</p>
+    #[doc(hidden)]
     pub contexts: std::option::Option<std::vec::Vec<crate::model::PhaseContext>>,
 }
 impl BuildPhase {
@@ -10767,11 +10965,10 @@ impl std::fmt::Debug for BuildPhase {
         formatter.finish()
     }
 }
-/// See [`BuildPhase`](crate::model::BuildPhase)
+/// See [`BuildPhase`](crate::model::BuildPhase).
 pub mod build_phase {
 
-    /// A builder for [`BuildPhase`](crate::model::BuildPhase)
-    #[non_exhaustive]
+    /// A builder for [`BuildPhase`](crate::model::BuildPhase).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) phase_type: std::option::Option<crate::model::BuildPhaseType>,
@@ -11075,7 +11272,7 @@ pub mod build_phase {
             self.contexts = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildPhase`](crate::model::BuildPhase)
+        /// Consumes the builder and constructs a [`BuildPhase`](crate::model::BuildPhase).
         pub fn build(self) -> crate::model::BuildPhase {
             crate::model::BuildPhase {
                 phase_type: self.phase_type,
@@ -11089,7 +11286,7 @@ pub mod build_phase {
     }
 }
 impl BuildPhase {
-    /// Creates a new builder-style object to manufacture [`BuildPhase`](crate::model::BuildPhase)
+    /// Creates a new builder-style object to manufacture [`BuildPhase`](crate::model::BuildPhase).
     pub fn builder() -> crate::model::build_phase::Builder {
         crate::model::build_phase::Builder::default()
     }
@@ -11258,10 +11455,13 @@ impl AsRef<str> for RetryBuildBatchType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceCredentialsInfo {
     /// <p> The Amazon Resource Name (ARN) of the token. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The type of source provider. The valid options are GITHUB, GITHUB_ENTERPRISE, or BITBUCKET. </p>
+    #[doc(hidden)]
     pub server_type: std::option::Option<crate::model::ServerType>,
     /// <p> The type of authentication used by the credentials. Valid options are OAUTH, BASIC_AUTH, or PERSONAL_ACCESS_TOKEN. </p>
+    #[doc(hidden)]
     pub auth_type: std::option::Option<crate::model::AuthType>,
 }
 impl SourceCredentialsInfo {
@@ -11287,11 +11487,10 @@ impl std::fmt::Debug for SourceCredentialsInfo {
         formatter.finish()
     }
 }
-/// See [`SourceCredentialsInfo`](crate::model::SourceCredentialsInfo)
+/// See [`SourceCredentialsInfo`](crate::model::SourceCredentialsInfo).
 pub mod source_credentials_info {
 
-    /// A builder for [`SourceCredentialsInfo`](crate::model::SourceCredentialsInfo)
-    #[non_exhaustive]
+    /// A builder for [`SourceCredentialsInfo`](crate::model::SourceCredentialsInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -11332,7 +11531,7 @@ pub mod source_credentials_info {
             self.auth_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceCredentialsInfo`](crate::model::SourceCredentialsInfo)
+        /// Consumes the builder and constructs a [`SourceCredentialsInfo`](crate::model::SourceCredentialsInfo).
         pub fn build(self) -> crate::model::SourceCredentialsInfo {
             crate::model::SourceCredentialsInfo {
                 arn: self.arn,
@@ -11343,7 +11542,7 @@ pub mod source_credentials_info {
     }
 }
 impl SourceCredentialsInfo {
-    /// Creates a new builder-style object to manufacture [`SourceCredentialsInfo`](crate::model::SourceCredentialsInfo)
+    /// Creates a new builder-style object to manufacture [`SourceCredentialsInfo`](crate::model::SourceCredentialsInfo).
     pub fn builder() -> crate::model::source_credentials_info::Builder {
         crate::model::source_credentials_info::Builder::default()
     }
@@ -11582,6 +11781,7 @@ impl AsRef<str> for SortOrderType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportFilter {
     /// <p> The status used to filter reports. You can filter using one status only. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReportStatusType>,
 }
 impl ReportFilter {
@@ -11597,11 +11797,10 @@ impl std::fmt::Debug for ReportFilter {
         formatter.finish()
     }
 }
-/// See [`ReportFilter`](crate::model::ReportFilter)
+/// See [`ReportFilter`](crate::model::ReportFilter).
 pub mod report_filter {
 
-    /// A builder for [`ReportFilter`](crate::model::ReportFilter)
-    #[non_exhaustive]
+    /// A builder for [`ReportFilter`](crate::model::ReportFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ReportStatusType>,
@@ -11620,7 +11819,7 @@ pub mod report_filter {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportFilter`](crate::model::ReportFilter)
+        /// Consumes the builder and constructs a [`ReportFilter`](crate::model::ReportFilter).
         pub fn build(self) -> crate::model::ReportFilter {
             crate::model::ReportFilter {
                 status: self.status,
@@ -11629,7 +11828,7 @@ pub mod report_filter {
     }
 }
 impl ReportFilter {
-    /// Creates a new builder-style object to manufacture [`ReportFilter`](crate::model::ReportFilter)
+    /// Creates a new builder-style object to manufacture [`ReportFilter`](crate::model::ReportFilter).
     pub fn builder() -> crate::model::report_filter::Builder {
         crate::model::report_filter::Builder::default()
     }
@@ -11831,8 +12030,10 @@ impl AsRef<str> for ProjectSortByType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentPlatform {
     /// <p>The platform's name.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::PlatformType>,
     /// <p>The list of programming languages that are available for the specified platform.</p>
+    #[doc(hidden)]
     pub languages: std::option::Option<std::vec::Vec<crate::model::EnvironmentLanguage>>,
 }
 impl EnvironmentPlatform {
@@ -11853,11 +12054,10 @@ impl std::fmt::Debug for EnvironmentPlatform {
         formatter.finish()
     }
 }
-/// See [`EnvironmentPlatform`](crate::model::EnvironmentPlatform)
+/// See [`EnvironmentPlatform`](crate::model::EnvironmentPlatform).
 pub mod environment_platform {
 
-    /// A builder for [`EnvironmentPlatform`](crate::model::EnvironmentPlatform)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentPlatform`](crate::model::EnvironmentPlatform).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) platform: std::option::Option<crate::model::PlatformType>,
@@ -11896,7 +12096,7 @@ pub mod environment_platform {
             self.languages = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentPlatform`](crate::model::EnvironmentPlatform)
+        /// Consumes the builder and constructs a [`EnvironmentPlatform`](crate::model::EnvironmentPlatform).
         pub fn build(self) -> crate::model::EnvironmentPlatform {
             crate::model::EnvironmentPlatform {
                 platform: self.platform,
@@ -11906,7 +12106,7 @@ pub mod environment_platform {
     }
 }
 impl EnvironmentPlatform {
-    /// Creates a new builder-style object to manufacture [`EnvironmentPlatform`](crate::model::EnvironmentPlatform)
+    /// Creates a new builder-style object to manufacture [`EnvironmentPlatform`](crate::model::EnvironmentPlatform).
     pub fn builder() -> crate::model::environment_platform::Builder {
         crate::model::environment_platform::Builder::default()
     }
@@ -11917,8 +12117,10 @@ impl EnvironmentPlatform {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentLanguage {
     /// <p>The programming language for the Docker images.</p>
+    #[doc(hidden)]
     pub language: std::option::Option<crate::model::LanguageType>,
     /// <p>The list of Docker images that are related by the specified programming language.</p>
+    #[doc(hidden)]
     pub images: std::option::Option<std::vec::Vec<crate::model::EnvironmentImage>>,
 }
 impl EnvironmentLanguage {
@@ -11939,11 +12141,10 @@ impl std::fmt::Debug for EnvironmentLanguage {
         formatter.finish()
     }
 }
-/// See [`EnvironmentLanguage`](crate::model::EnvironmentLanguage)
+/// See [`EnvironmentLanguage`](crate::model::EnvironmentLanguage).
 pub mod environment_language {
 
-    /// A builder for [`EnvironmentLanguage`](crate::model::EnvironmentLanguage)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentLanguage`](crate::model::EnvironmentLanguage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language: std::option::Option<crate::model::LanguageType>,
@@ -11982,7 +12183,7 @@ pub mod environment_language {
             self.images = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentLanguage`](crate::model::EnvironmentLanguage)
+        /// Consumes the builder and constructs a [`EnvironmentLanguage`](crate::model::EnvironmentLanguage).
         pub fn build(self) -> crate::model::EnvironmentLanguage {
             crate::model::EnvironmentLanguage {
                 language: self.language,
@@ -11992,7 +12193,7 @@ pub mod environment_language {
     }
 }
 impl EnvironmentLanguage {
-    /// Creates a new builder-style object to manufacture [`EnvironmentLanguage`](crate::model::EnvironmentLanguage)
+    /// Creates a new builder-style object to manufacture [`EnvironmentLanguage`](crate::model::EnvironmentLanguage).
     pub fn builder() -> crate::model::environment_language::Builder {
         crate::model::environment_language::Builder::default()
     }
@@ -12003,10 +12204,13 @@ impl EnvironmentLanguage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentImage {
     /// <p>The name of the Docker image.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the Docker image.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A list of environment image versions.</p>
+    #[doc(hidden)]
     pub versions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl EnvironmentImage {
@@ -12032,11 +12236,10 @@ impl std::fmt::Debug for EnvironmentImage {
         formatter.finish()
     }
 }
-/// See [`EnvironmentImage`](crate::model::EnvironmentImage)
+/// See [`EnvironmentImage`](crate::model::EnvironmentImage).
 pub mod environment_image {
 
-    /// A builder for [`EnvironmentImage`](crate::model::EnvironmentImage)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentImage`](crate::model::EnvironmentImage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12083,7 +12286,7 @@ pub mod environment_image {
             self.versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentImage`](crate::model::EnvironmentImage)
+        /// Consumes the builder and constructs a [`EnvironmentImage`](crate::model::EnvironmentImage).
         pub fn build(self) -> crate::model::EnvironmentImage {
             crate::model::EnvironmentImage {
                 name: self.name,
@@ -12094,7 +12297,7 @@ pub mod environment_image {
     }
 }
 impl EnvironmentImage {
-    /// Creates a new builder-style object to manufacture [`EnvironmentImage`](crate::model::EnvironmentImage)
+    /// Creates a new builder-style object to manufacture [`EnvironmentImage`](crate::model::EnvironmentImage).
     pub fn builder() -> crate::model::environment_image::Builder {
         crate::model::environment_image::Builder::default()
     }
@@ -12258,6 +12461,7 @@ impl AsRef<str> for PlatformType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuildBatchFilter {
     /// <p>The status of the batch builds to retrieve. Only batch builds that have this status will be retrieved.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
 }
 impl BuildBatchFilter {
@@ -12273,11 +12477,10 @@ impl std::fmt::Debug for BuildBatchFilter {
         formatter.finish()
     }
 }
-/// See [`BuildBatchFilter`](crate::model::BuildBatchFilter)
+/// See [`BuildBatchFilter`](crate::model::BuildBatchFilter).
 pub mod build_batch_filter {
 
-    /// A builder for [`BuildBatchFilter`](crate::model::BuildBatchFilter)
-    #[non_exhaustive]
+    /// A builder for [`BuildBatchFilter`](crate::model::BuildBatchFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatusType>,
@@ -12293,7 +12496,7 @@ pub mod build_batch_filter {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildBatchFilter`](crate::model::BuildBatchFilter)
+        /// Consumes the builder and constructs a [`BuildBatchFilter`](crate::model::BuildBatchFilter).
         pub fn build(self) -> crate::model::BuildBatchFilter {
             crate::model::BuildBatchFilter {
                 status: self.status,
@@ -12302,7 +12505,7 @@ pub mod build_batch_filter {
     }
 }
 impl BuildBatchFilter {
-    /// Creates a new builder-style object to manufacture [`BuildBatchFilter`](crate::model::BuildBatchFilter)
+    /// Creates a new builder-style object to manufacture [`BuildBatchFilter`](crate::model::BuildBatchFilter).
     pub fn builder() -> crate::model::build_batch_filter::Builder {
         crate::model::build_batch_filter::Builder::default()
     }
@@ -12313,8 +12516,10 @@ impl BuildBatchFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportWithRawData {
     /// <p>The ARN of the report.</p>
+    #[doc(hidden)]
     pub report_arn: std::option::Option<std::string::String>,
     /// <p>The value of the requested data field from the report.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
 }
 impl ReportWithRawData {
@@ -12335,11 +12540,10 @@ impl std::fmt::Debug for ReportWithRawData {
         formatter.finish()
     }
 }
-/// See [`ReportWithRawData`](crate::model::ReportWithRawData)
+/// See [`ReportWithRawData`](crate::model::ReportWithRawData).
 pub mod report_with_raw_data {
 
-    /// A builder for [`ReportWithRawData`](crate::model::ReportWithRawData)
-    #[non_exhaustive]
+    /// A builder for [`ReportWithRawData`](crate::model::ReportWithRawData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_arn: std::option::Option<std::string::String>,
@@ -12366,7 +12570,7 @@ pub mod report_with_raw_data {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportWithRawData`](crate::model::ReportWithRawData)
+        /// Consumes the builder and constructs a [`ReportWithRawData`](crate::model::ReportWithRawData).
         pub fn build(self) -> crate::model::ReportWithRawData {
             crate::model::ReportWithRawData {
                 report_arn: self.report_arn,
@@ -12376,7 +12580,7 @@ pub mod report_with_raw_data {
     }
 }
 impl ReportWithRawData {
-    /// Creates a new builder-style object to manufacture [`ReportWithRawData`](crate::model::ReportWithRawData)
+    /// Creates a new builder-style object to manufacture [`ReportWithRawData`](crate::model::ReportWithRawData).
     pub fn builder() -> crate::model::report_with_raw_data::Builder {
         crate::model::report_with_raw_data::Builder::default()
     }
@@ -12387,10 +12591,13 @@ impl ReportWithRawData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportGroupTrendStats {
     /// <p>Contains the average of all values analyzed.</p>
+    #[doc(hidden)]
     pub average: std::option::Option<std::string::String>,
     /// <p>Contains the maximum value analyzed.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<std::string::String>,
     /// <p>Contains the minimum value analyzed.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<std::string::String>,
 }
 impl ReportGroupTrendStats {
@@ -12416,11 +12623,10 @@ impl std::fmt::Debug for ReportGroupTrendStats {
         formatter.finish()
     }
 }
-/// See [`ReportGroupTrendStats`](crate::model::ReportGroupTrendStats)
+/// See [`ReportGroupTrendStats`](crate::model::ReportGroupTrendStats).
 pub mod report_group_trend_stats {
 
-    /// A builder for [`ReportGroupTrendStats`](crate::model::ReportGroupTrendStats)
-    #[non_exhaustive]
+    /// A builder for [`ReportGroupTrendStats`](crate::model::ReportGroupTrendStats).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) average: std::option::Option<std::string::String>,
@@ -12458,7 +12664,7 @@ pub mod report_group_trend_stats {
             self.min = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportGroupTrendStats`](crate::model::ReportGroupTrendStats)
+        /// Consumes the builder and constructs a [`ReportGroupTrendStats`](crate::model::ReportGroupTrendStats).
         pub fn build(self) -> crate::model::ReportGroupTrendStats {
             crate::model::ReportGroupTrendStats {
                 average: self.average,
@@ -12469,7 +12675,7 @@ pub mod report_group_trend_stats {
     }
 }
 impl ReportGroupTrendStats {
-    /// Creates a new builder-style object to manufacture [`ReportGroupTrendStats`](crate::model::ReportGroupTrendStats)
+    /// Creates a new builder-style object to manufacture [`ReportGroupTrendStats`](crate::model::ReportGroupTrendStats).
     pub fn builder() -> crate::model::report_group_trend_stats::Builder {
         crate::model::report_group_trend_stats::Builder::default()
     }
@@ -12573,20 +12779,28 @@ impl AsRef<str> for ReportGroupTrendFieldType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestCase {
     /// <p> The ARN of the report to which the test case belongs. </p>
+    #[doc(hidden)]
     pub report_arn: std::option::Option<std::string::String>,
     /// <p> The path to the raw data file that contains the test result. </p>
+    #[doc(hidden)]
     pub test_raw_data_path: std::option::Option<std::string::String>,
     /// <p> A string that is applied to a series of related test cases. CodeBuild generates the prefix. The prefix depends on the framework used to generate the tests. </p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p> The name of the test case. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The status returned by the test case after it was run. Valid statuses are <code>SUCCEEDED</code>, <code>FAILED</code>, <code>ERROR</code>, <code>SKIPPED</code>, and <code>UNKNOWN</code>. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p> The number of nanoseconds it took to run this test case. </p>
+    #[doc(hidden)]
     pub duration_in_nano_seconds: std::option::Option<i64>,
     /// <p> A message associated with a test case. For example, an error message or stack trace. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p> The date and time a test case expires. A test case expires 30 days after it is created. An expired test case is not available to view in CodeBuild. </p>
+    #[doc(hidden)]
     pub expired: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TestCase {
@@ -12637,11 +12851,10 @@ impl std::fmt::Debug for TestCase {
         formatter.finish()
     }
 }
-/// See [`TestCase`](crate::model::TestCase)
+/// See [`TestCase`](crate::model::TestCase).
 pub mod test_case {
 
-    /// A builder for [`TestCase`](crate::model::TestCase)
-    #[non_exhaustive]
+    /// A builder for [`TestCase`](crate::model::TestCase).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_arn: std::option::Option<std::string::String>,
@@ -12740,7 +12953,7 @@ pub mod test_case {
             self.expired = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestCase`](crate::model::TestCase)
+        /// Consumes the builder and constructs a [`TestCase`](crate::model::TestCase).
         pub fn build(self) -> crate::model::TestCase {
             crate::model::TestCase {
                 report_arn: self.report_arn,
@@ -12756,7 +12969,7 @@ pub mod test_case {
     }
 }
 impl TestCase {
-    /// Creates a new builder-style object to manufacture [`TestCase`](crate::model::TestCase)
+    /// Creates a new builder-style object to manufacture [`TestCase`](crate::model::TestCase).
     pub fn builder() -> crate::model::test_case::Builder {
         crate::model::test_case::Builder::default()
     }
@@ -12774,8 +12987,10 @@ pub struct TestCaseFilter {
     /// <li> <p> <code>SKIPPED</code> </p> </li>
     /// <li> <p> <code>UNKNOWN</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>A keyword that is used to filter on the <code>name</code> or the <code>prefix</code> of the test cases. Only test cases where the keyword is a substring of the <code>name</code> or the <code>prefix</code> will be returned.</p>
+    #[doc(hidden)]
     pub keyword: std::option::Option<std::string::String>,
 }
 impl TestCaseFilter {
@@ -12803,11 +13018,10 @@ impl std::fmt::Debug for TestCaseFilter {
         formatter.finish()
     }
 }
-/// See [`TestCaseFilter`](crate::model::TestCaseFilter)
+/// See [`TestCaseFilter`](crate::model::TestCaseFilter).
 pub mod test_case_filter {
 
-    /// A builder for [`TestCaseFilter`](crate::model::TestCaseFilter)
-    #[non_exhaustive]
+    /// A builder for [`TestCaseFilter`](crate::model::TestCaseFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -12848,7 +13062,7 @@ pub mod test_case_filter {
             self.keyword = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestCaseFilter`](crate::model::TestCaseFilter)
+        /// Consumes the builder and constructs a [`TestCaseFilter`](crate::model::TestCaseFilter).
         pub fn build(self) -> crate::model::TestCaseFilter {
             crate::model::TestCaseFilter {
                 status: self.status,
@@ -12858,7 +13072,7 @@ pub mod test_case_filter {
     }
 }
 impl TestCaseFilter {
-    /// Creates a new builder-style object to manufacture [`TestCaseFilter`](crate::model::TestCaseFilter)
+    /// Creates a new builder-style object to manufacture [`TestCaseFilter`](crate::model::TestCaseFilter).
     pub fn builder() -> crate::model::test_case_filter::Builder {
         crate::model::test_case_filter::Builder::default()
     }
@@ -12871,24 +13085,34 @@ impl TestCaseFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeCoverage {
     /// <p>The identifier of the code coverage report.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ARN of the report.</p>
+    #[doc(hidden)]
     pub report_arn: std::option::Option<std::string::String>,
     /// <p>The path of the test report file.</p>
+    #[doc(hidden)]
     pub file_path: std::option::Option<std::string::String>,
     /// <p>The percentage of lines that are covered by your tests.</p>
+    #[doc(hidden)]
     pub line_coverage_percentage: std::option::Option<f64>,
     /// <p>The number of lines that are covered by your tests.</p>
+    #[doc(hidden)]
     pub lines_covered: std::option::Option<i32>,
     /// <p>The number of lines that are not covered by your tests.</p>
+    #[doc(hidden)]
     pub lines_missed: std::option::Option<i32>,
     /// <p>The percentage of branches that are covered by your tests.</p>
+    #[doc(hidden)]
     pub branch_coverage_percentage: std::option::Option<f64>,
     /// <p>The number of conditional branches that are covered by your tests.</p>
+    #[doc(hidden)]
     pub branches_covered: std::option::Option<i32>,
     /// <p>The number of conditional branches that are not covered by your tests.</p>
+    #[doc(hidden)]
     pub branches_missed: std::option::Option<i32>,
     /// <p>The date and time that the tests were run.</p>
+    #[doc(hidden)]
     pub expired: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CodeCoverage {
@@ -12952,11 +13176,10 @@ impl std::fmt::Debug for CodeCoverage {
         formatter.finish()
     }
 }
-/// See [`CodeCoverage`](crate::model::CodeCoverage)
+/// See [`CodeCoverage`](crate::model::CodeCoverage).
 pub mod code_coverage {
 
-    /// A builder for [`CodeCoverage`](crate::model::CodeCoverage)
-    #[non_exhaustive]
+    /// A builder for [`CodeCoverage`](crate::model::CodeCoverage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -13074,7 +13297,7 @@ pub mod code_coverage {
             self.expired = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeCoverage`](crate::model::CodeCoverage)
+        /// Consumes the builder and constructs a [`CodeCoverage`](crate::model::CodeCoverage).
         pub fn build(self) -> crate::model::CodeCoverage {
             crate::model::CodeCoverage {
                 id: self.id,
@@ -13092,7 +13315,7 @@ pub mod code_coverage {
     }
 }
 impl CodeCoverage {
-    /// Creates a new builder-style object to manufacture [`CodeCoverage`](crate::model::CodeCoverage)
+    /// Creates a new builder-style object to manufacture [`CodeCoverage`](crate::model::CodeCoverage).
     pub fn builder() -> crate::model::code_coverage::Builder {
         crate::model::code_coverage::Builder::default()
     }
@@ -13158,8 +13381,10 @@ impl AsRef<str> for ReportCodeCoverageSortByType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuildNotDeleted {
     /// <p>The ID of the build that could not be successfully deleted.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Additional information about the build that could not be successfully deleted.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<std::string::String>,
 }
 impl BuildNotDeleted {
@@ -13180,11 +13405,10 @@ impl std::fmt::Debug for BuildNotDeleted {
         formatter.finish()
     }
 }
-/// See [`BuildNotDeleted`](crate::model::BuildNotDeleted)
+/// See [`BuildNotDeleted`](crate::model::BuildNotDeleted).
 pub mod build_not_deleted {
 
-    /// A builder for [`BuildNotDeleted`](crate::model::BuildNotDeleted)
-    #[non_exhaustive]
+    /// A builder for [`BuildNotDeleted`](crate::model::BuildNotDeleted).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -13211,7 +13435,7 @@ pub mod build_not_deleted {
             self.status_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildNotDeleted`](crate::model::BuildNotDeleted)
+        /// Consumes the builder and constructs a [`BuildNotDeleted`](crate::model::BuildNotDeleted).
         pub fn build(self) -> crate::model::BuildNotDeleted {
             crate::model::BuildNotDeleted {
                 id: self.id,
@@ -13221,7 +13445,7 @@ pub mod build_not_deleted {
     }
 }
 impl BuildNotDeleted {
-    /// Creates a new builder-style object to manufacture [`BuildNotDeleted`](crate::model::BuildNotDeleted)
+    /// Creates a new builder-style object to manufacture [`BuildNotDeleted`](crate::model::BuildNotDeleted).
     pub fn builder() -> crate::model::build_not_deleted::Builder {
         crate::model::build_not_deleted::Builder::default()
     }
@@ -13232,6 +13456,7 @@ impl BuildNotDeleted {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Report {
     /// <p> The ARN of the report run. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The type of the report that was run.</p>
     /// <dl>
@@ -13248,26 +13473,37 @@ pub struct Report {
     /// <p>A test report.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ReportType>,
     /// <p> The name of the report that was run. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The ARN of the report group associated with this report. </p>
+    #[doc(hidden)]
     pub report_group_arn: std::option::Option<std::string::String>,
     /// <p> The ARN of the build run that generated this report. </p>
+    #[doc(hidden)]
     pub execution_id: std::option::Option<std::string::String>,
     /// <p> The status of this report. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReportStatusType>,
     /// <p> The date and time this report run occurred. </p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The date and time a report expires. A report expires 30 days after it is created. An expired report is not available to view in CodeBuild. </p>
+    #[doc(hidden)]
     pub expired: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Information about where the raw data used to generate this report was exported. </p>
+    #[doc(hidden)]
     pub export_config: std::option::Option<crate::model::ReportExportConfig>,
     /// <p> A boolean that specifies if this report run is truncated. The list of test cases is truncated after the maximum number of test cases is reached. </p>
+    #[doc(hidden)]
     pub truncated: std::option::Option<bool>,
     /// <p> A <code>TestReportSummary</code> object that contains information about this test report. </p>
+    #[doc(hidden)]
     pub test_summary: std::option::Option<crate::model::TestReportSummary>,
     /// <p>A <code>CodeCoverageReportSummary</code> object that contains a code coverage summary for this report.</p>
+    #[doc(hidden)]
     pub code_coverage_summary: std::option::Option<crate::model::CodeCoverageReportSummary>,
 }
 impl Report {
@@ -13354,11 +13590,10 @@ impl std::fmt::Debug for Report {
         formatter.finish()
     }
 }
-/// See [`Report`](crate::model::Report)
+/// See [`Report`](crate::model::Report).
 pub mod report {
 
-    /// A builder for [`Report`](crate::model::Report)
-    #[non_exhaustive]
+    /// A builder for [`Report`](crate::model::Report).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -13548,7 +13783,7 @@ pub mod report {
             self.code_coverage_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`Report`](crate::model::Report)
+        /// Consumes the builder and constructs a [`Report`](crate::model::Report).
         pub fn build(self) -> crate::model::Report {
             crate::model::Report {
                 arn: self.arn,
@@ -13568,7 +13803,7 @@ pub mod report {
     }
 }
 impl Report {
-    /// Creates a new builder-style object to manufacture [`Report`](crate::model::Report)
+    /// Creates a new builder-style object to manufacture [`Report`](crate::model::Report).
     pub fn builder() -> crate::model::report::Builder {
         crate::model::report::Builder::default()
     }
@@ -13581,16 +13816,22 @@ impl Report {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeCoverageReportSummary {
     /// <p>The percentage of lines that are covered by your tests.</p>
+    #[doc(hidden)]
     pub line_coverage_percentage: std::option::Option<f64>,
     /// <p>The number of lines that are covered by your tests.</p>
+    #[doc(hidden)]
     pub lines_covered: std::option::Option<i32>,
     /// <p>The number of lines that are not covered by your tests.</p>
+    #[doc(hidden)]
     pub lines_missed: std::option::Option<i32>,
     /// <p>The percentage of branches that are covered by your tests.</p>
+    #[doc(hidden)]
     pub branch_coverage_percentage: std::option::Option<f64>,
     /// <p>The number of conditional branches that are covered by your tests.</p>
+    #[doc(hidden)]
     pub branches_covered: std::option::Option<i32>,
     /// <p>The number of conditional branches that are not covered by your tests.</p>
+    #[doc(hidden)]
     pub branches_missed: std::option::Option<i32>,
 }
 impl CodeCoverageReportSummary {
@@ -13634,11 +13875,10 @@ impl std::fmt::Debug for CodeCoverageReportSummary {
         formatter.finish()
     }
 }
-/// See [`CodeCoverageReportSummary`](crate::model::CodeCoverageReportSummary)
+/// See [`CodeCoverageReportSummary`](crate::model::CodeCoverageReportSummary).
 pub mod code_coverage_report_summary {
 
-    /// A builder for [`CodeCoverageReportSummary`](crate::model::CodeCoverageReportSummary)
-    #[non_exhaustive]
+    /// A builder for [`CodeCoverageReportSummary`](crate::model::CodeCoverageReportSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) line_coverage_percentage: std::option::Option<f64>,
@@ -13709,7 +13949,7 @@ pub mod code_coverage_report_summary {
             self.branches_missed = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeCoverageReportSummary`](crate::model::CodeCoverageReportSummary)
+        /// Consumes the builder and constructs a [`CodeCoverageReportSummary`](crate::model::CodeCoverageReportSummary).
         pub fn build(self) -> crate::model::CodeCoverageReportSummary {
             crate::model::CodeCoverageReportSummary {
                 line_coverage_percentage: self.line_coverage_percentage,
@@ -13723,7 +13963,7 @@ pub mod code_coverage_report_summary {
     }
 }
 impl CodeCoverageReportSummary {
-    /// Creates a new builder-style object to manufacture [`CodeCoverageReportSummary`](crate::model::CodeCoverageReportSummary)
+    /// Creates a new builder-style object to manufacture [`CodeCoverageReportSummary`](crate::model::CodeCoverageReportSummary).
     pub fn builder() -> crate::model::code_coverage_report_summary::Builder {
         crate::model::code_coverage_report_summary::Builder::default()
     }
@@ -13734,10 +13974,13 @@ impl CodeCoverageReportSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestReportSummary {
     /// <p> The number of test cases in this <code>TestReportSummary</code>. The total includes truncated test cases. </p>
+    #[doc(hidden)]
     pub total: std::option::Option<i32>,
     /// <p> A map that contains the number of each type of status returned by the test results in this <code>TestReportSummary</code>. </p>
+    #[doc(hidden)]
     pub status_counts: std::option::Option<std::collections::HashMap<std::string::String, i32>>,
     /// <p> The number of nanoseconds it took to run all of the test cases in this report. </p>
+    #[doc(hidden)]
     pub duration_in_nano_seconds: std::option::Option<i64>,
 }
 impl TestReportSummary {
@@ -13765,11 +14008,10 @@ impl std::fmt::Debug for TestReportSummary {
         formatter.finish()
     }
 }
-/// See [`TestReportSummary`](crate::model::TestReportSummary)
+/// See [`TestReportSummary`](crate::model::TestReportSummary).
 pub mod test_report_summary {
 
-    /// A builder for [`TestReportSummary`](crate::model::TestReportSummary)
-    #[non_exhaustive]
+    /// A builder for [`TestReportSummary`](crate::model::TestReportSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total: std::option::Option<i32>,
@@ -13817,7 +14059,7 @@ pub mod test_report_summary {
             self.duration_in_nano_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestReportSummary`](crate::model::TestReportSummary)
+        /// Consumes the builder and constructs a [`TestReportSummary`](crate::model::TestReportSummary).
         pub fn build(self) -> crate::model::TestReportSummary {
             crate::model::TestReportSummary {
                 total: self.total,
@@ -13828,7 +14070,7 @@ pub mod test_report_summary {
     }
 }
 impl TestReportSummary {
-    /// Creates a new builder-style object to manufacture [`TestReportSummary`](crate::model::TestReportSummary)
+    /// Creates a new builder-style object to manufacture [`TestReportSummary`](crate::model::TestReportSummary).
     pub fn builder() -> crate::model::test_report_summary::Builder {
         crate::model::test_report_summary::Builder::default()
     }

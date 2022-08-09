@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRecommendationsOutput {
     /// <p>A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500 items in the list.</p>
+    #[doc(hidden)]
     pub item_list: std::option::Option<std::vec::Vec<crate::model::PredictedItem>>,
     /// <p>The ID of the recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
 }
 impl GetRecommendationsOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for GetRecommendationsOutput {
         formatter.finish()
     }
 }
-/// See [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput)
+/// See [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput).
 pub mod get_recommendations_output {
 
-    /// A builder for [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item_list: std::option::Option<std::vec::Vec<crate::model::PredictedItem>>,
@@ -69,7 +70,7 @@ pub mod get_recommendations_output {
             self.recommendation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput)
+        /// Consumes the builder and constructs a [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput).
         pub fn build(self) -> crate::output::GetRecommendationsOutput {
             crate::output::GetRecommendationsOutput {
                 item_list: self.item_list,
@@ -79,7 +80,7 @@ pub mod get_recommendations_output {
     }
 }
 impl GetRecommendationsOutput {
-    /// Creates a new builder-style object to manufacture [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput)
+    /// Creates a new builder-style object to manufacture [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput).
     pub fn builder() -> crate::output::get_recommendations_output::Builder {
         crate::output::get_recommendations_output::Builder::default()
     }
@@ -90,8 +91,10 @@ impl GetRecommendationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPersonalizedRankingOutput {
     /// <p>A list of items in order of most likely interest to the user. The maximum is 500.</p>
+    #[doc(hidden)]
     pub personalized_ranking: std::option::Option<std::vec::Vec<crate::model::PredictedItem>>,
     /// <p>The ID of the recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
 }
 impl GetPersonalizedRankingOutput {
@@ -112,11 +115,10 @@ impl std::fmt::Debug for GetPersonalizedRankingOutput {
         formatter.finish()
     }
 }
-/// See [`GetPersonalizedRankingOutput`](crate::output::GetPersonalizedRankingOutput)
+/// See [`GetPersonalizedRankingOutput`](crate::output::GetPersonalizedRankingOutput).
 pub mod get_personalized_ranking_output {
 
-    /// A builder for [`GetPersonalizedRankingOutput`](crate::output::GetPersonalizedRankingOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPersonalizedRankingOutput`](crate::output::GetPersonalizedRankingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) personalized_ranking:
@@ -156,7 +158,7 @@ pub mod get_personalized_ranking_output {
             self.recommendation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPersonalizedRankingOutput`](crate::output::GetPersonalizedRankingOutput)
+        /// Consumes the builder and constructs a [`GetPersonalizedRankingOutput`](crate::output::GetPersonalizedRankingOutput).
         pub fn build(self) -> crate::output::GetPersonalizedRankingOutput {
             crate::output::GetPersonalizedRankingOutput {
                 personalized_ranking: self.personalized_ranking,
@@ -166,7 +168,7 @@ pub mod get_personalized_ranking_output {
     }
 }
 impl GetPersonalizedRankingOutput {
-    /// Creates a new builder-style object to manufacture [`GetPersonalizedRankingOutput`](crate::output::GetPersonalizedRankingOutput)
+    /// Creates a new builder-style object to manufacture [`GetPersonalizedRankingOutput`](crate::output::GetPersonalizedRankingOutput).
     pub fn builder() -> crate::output::get_personalized_ranking_output::Builder {
         crate::output::get_personalized_ranking_output::Builder::default()
     }

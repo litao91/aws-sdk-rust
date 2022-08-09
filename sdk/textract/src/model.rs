@@ -8,8 +8,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputConfig {
     /// <p>The name of the bucket your output will go to.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The prefix of the object key that the output will be saved to. When not enabled, the prefix will be “textract_output".</p>
+    #[doc(hidden)]
     pub s3_prefix: std::option::Option<std::string::String>,
 }
 impl OutputConfig {
@@ -30,11 +32,10 @@ impl std::fmt::Debug for OutputConfig {
         formatter.finish()
     }
 }
-/// See [`OutputConfig`](crate::model::OutputConfig)
+/// See [`OutputConfig`](crate::model::OutputConfig).
 pub mod output_config {
 
-    /// A builder for [`OutputConfig`](crate::model::OutputConfig)
-    #[non_exhaustive]
+    /// A builder for [`OutputConfig`](crate::model::OutputConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket: std::option::Option<std::string::String>,
@@ -61,7 +62,7 @@ pub mod output_config {
             self.s3_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputConfig`](crate::model::OutputConfig)
+        /// Consumes the builder and constructs a [`OutputConfig`](crate::model::OutputConfig).
         pub fn build(self) -> crate::model::OutputConfig {
             crate::model::OutputConfig {
                 s3_bucket: self.s3_bucket,
@@ -71,7 +72,7 @@ pub mod output_config {
     }
 }
 impl OutputConfig {
-    /// Creates a new builder-style object to manufacture [`OutputConfig`](crate::model::OutputConfig)
+    /// Creates a new builder-style object to manufacture [`OutputConfig`](crate::model::OutputConfig).
     pub fn builder() -> crate::model::output_config::Builder {
         crate::model::output_config::Builder::default()
     }
@@ -82,8 +83,10 @@ impl OutputConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationChannel {
     /// <p>The Amazon SNS topic that Amazon Textract posts the completion status to.</p>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of an IAM role that gives Amazon Textract publishing permissions to the Amazon SNS topic. </p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl NotificationChannel {
@@ -104,11 +107,10 @@ impl std::fmt::Debug for NotificationChannel {
         formatter.finish()
     }
 }
-/// See [`NotificationChannel`](crate::model::NotificationChannel)
+/// See [`NotificationChannel`](crate::model::NotificationChannel).
 pub mod notification_channel {
 
-    /// A builder for [`NotificationChannel`](crate::model::NotificationChannel)
-    #[non_exhaustive]
+    /// A builder for [`NotificationChannel`](crate::model::NotificationChannel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sns_topic_arn: std::option::Option<std::string::String>,
@@ -138,7 +140,7 @@ pub mod notification_channel {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationChannel`](crate::model::NotificationChannel)
+        /// Consumes the builder and constructs a [`NotificationChannel`](crate::model::NotificationChannel).
         pub fn build(self) -> crate::model::NotificationChannel {
             crate::model::NotificationChannel {
                 sns_topic_arn: self.sns_topic_arn,
@@ -148,7 +150,7 @@ pub mod notification_channel {
     }
 }
 impl NotificationChannel {
-    /// Creates a new builder-style object to manufacture [`NotificationChannel`](crate::model::NotificationChannel)
+    /// Creates a new builder-style object to manufacture [`NotificationChannel`](crate::model::NotificationChannel).
     pub fn builder() -> crate::model::notification_channel::Builder {
         crate::model::notification_channel::Builder::default()
     }
@@ -160,6 +162,7 @@ impl NotificationChannel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentLocation {
     /// <p>The Amazon S3 bucket that contains the input document.</p>
+    #[doc(hidden)]
     pub s3_object: std::option::Option<crate::model::S3Object>,
 }
 impl DocumentLocation {
@@ -175,11 +178,10 @@ impl std::fmt::Debug for DocumentLocation {
         formatter.finish()
     }
 }
-/// See [`DocumentLocation`](crate::model::DocumentLocation)
+/// See [`DocumentLocation`](crate::model::DocumentLocation).
 pub mod document_location {
 
-    /// A builder for [`DocumentLocation`](crate::model::DocumentLocation)
-    #[non_exhaustive]
+    /// A builder for [`DocumentLocation`](crate::model::DocumentLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_object: std::option::Option<crate::model::S3Object>,
@@ -195,7 +197,7 @@ pub mod document_location {
             self.s3_object = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentLocation`](crate::model::DocumentLocation)
+        /// Consumes the builder and constructs a [`DocumentLocation`](crate::model::DocumentLocation).
         pub fn build(self) -> crate::model::DocumentLocation {
             crate::model::DocumentLocation {
                 s3_object: self.s3_object,
@@ -204,7 +206,7 @@ pub mod document_location {
     }
 }
 impl DocumentLocation {
-    /// Creates a new builder-style object to manufacture [`DocumentLocation`](crate::model::DocumentLocation)
+    /// Creates a new builder-style object to manufacture [`DocumentLocation`](crate::model::DocumentLocation).
     pub fn builder() -> crate::model::document_location::Builder {
         crate::model::document_location::Builder::default()
     }
@@ -217,10 +219,13 @@ impl DocumentLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Object {
     /// <p>The name of the S3 bucket. Note that the # character is not valid in the file name.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The file name of the input document. Synchronous operations can use image files that are in JPEG or PNG format. Asynchronous operations also support PDF and TIFF format files.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>If the bucket has versioning enabled, you can specify the object version. </p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl S3Object {
@@ -246,11 +251,10 @@ impl std::fmt::Debug for S3Object {
         formatter.finish()
     }
 }
-/// See [`S3Object`](crate::model::S3Object)
+/// See [`S3Object`](crate::model::S3Object).
 pub mod s3_object {
 
-    /// A builder for [`S3Object`](crate::model::S3Object)
-    #[non_exhaustive]
+    /// A builder for [`S3Object`](crate::model::S3Object).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -288,7 +292,7 @@ pub mod s3_object {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Object`](crate::model::S3Object)
+        /// Consumes the builder and constructs a [`S3Object`](crate::model::S3Object).
         pub fn build(self) -> crate::model::S3Object {
             crate::model::S3Object {
                 bucket: self.bucket,
@@ -299,7 +303,7 @@ pub mod s3_object {
     }
 }
 impl S3Object {
-    /// Creates a new builder-style object to manufacture [`S3Object`](crate::model::S3Object)
+    /// Creates a new builder-style object to manufacture [`S3Object`](crate::model::S3Object).
     pub fn builder() -> crate::model::s3_object::Builder {
         crate::model::s3_object::Builder::default()
     }
@@ -310,6 +314,7 @@ impl S3Object {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueriesConfig {
     /// <p></p>
+    #[doc(hidden)]
     pub queries: std::option::Option<std::vec::Vec<crate::model::Query>>,
 }
 impl QueriesConfig {
@@ -325,11 +330,10 @@ impl std::fmt::Debug for QueriesConfig {
         formatter.finish()
     }
 }
-/// See [`QueriesConfig`](crate::model::QueriesConfig)
+/// See [`QueriesConfig`](crate::model::QueriesConfig).
 pub mod queries_config {
 
-    /// A builder for [`QueriesConfig`](crate::model::QueriesConfig)
-    #[non_exhaustive]
+    /// A builder for [`QueriesConfig`](crate::model::QueriesConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) queries: std::option::Option<std::vec::Vec<crate::model::Query>>,
@@ -354,7 +358,7 @@ pub mod queries_config {
             self.queries = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueriesConfig`](crate::model::QueriesConfig)
+        /// Consumes the builder and constructs a [`QueriesConfig`](crate::model::QueriesConfig).
         pub fn build(self) -> crate::model::QueriesConfig {
             crate::model::QueriesConfig {
                 queries: self.queries,
@@ -363,7 +367,7 @@ pub mod queries_config {
     }
 }
 impl QueriesConfig {
-    /// Creates a new builder-style object to manufacture [`QueriesConfig`](crate::model::QueriesConfig)
+    /// Creates a new builder-style object to manufacture [`QueriesConfig`](crate::model::QueriesConfig).
     pub fn builder() -> crate::model::queries_config::Builder {
         crate::model::queries_config::Builder::default()
     }
@@ -374,8 +378,10 @@ impl QueriesConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Query {
     /// <p>Question that Amazon Textract will apply to the document. An example would be "What is the customer's SSN?"</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>Alias attached to the query, for ease of location.</p>
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
     /// <p>List of pages associated with the query. The following is a list of rules for using this parameter.</p>
     /// <ul>
@@ -385,6 +391,7 @@ pub struct Query {
     /// <li> <p>You can use page intervals, such as <code>[“1-3”, “1-1”, “4-*”]</code>. Where <code>*</code> indicates last page of document.</p> </li>
     /// <li> <p>Specified pages must be greater than 0 and less than or equal to the number of pages in the document.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub pages: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Query {
@@ -417,11 +424,10 @@ impl std::fmt::Debug for Query {
         formatter.finish()
     }
 }
-/// See [`Query`](crate::model::Query)
+/// See [`Query`](crate::model::Query).
 pub mod query {
 
-    /// A builder for [`Query`](crate::model::Query)
-    #[non_exhaustive]
+    /// A builder for [`Query`](crate::model::Query).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -482,7 +488,7 @@ pub mod query {
             self.pages = input;
             self
         }
-        /// Consumes the builder and constructs a [`Query`](crate::model::Query)
+        /// Consumes the builder and constructs a [`Query`](crate::model::Query).
         pub fn build(self) -> crate::model::Query {
             crate::model::Query {
                 text: self.text,
@@ -493,7 +499,7 @@ pub mod query {
     }
 }
 impl Query {
-    /// Creates a new builder-style object to manufacture [`Query`](crate::model::Query)
+    /// Creates a new builder-style object to manufacture [`Query`](crate::model::Query).
     pub fn builder() -> crate::model::query::Builder {
         crate::model::query::Builder::default()
     }
@@ -563,8 +569,10 @@ impl AsRef<str> for FeatureType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Warning {
     /// <p>The error code for the warning.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>A list of the pages that the warning applies to.</p>
+    #[doc(hidden)]
     pub pages: std::option::Option<std::vec::Vec<i32>>,
 }
 impl Warning {
@@ -585,11 +593,10 @@ impl std::fmt::Debug for Warning {
         formatter.finish()
     }
 }
-/// See [`Warning`](crate::model::Warning)
+/// See [`Warning`](crate::model::Warning).
 pub mod warning {
 
-    /// A builder for [`Warning`](crate::model::Warning)
-    #[non_exhaustive]
+    /// A builder for [`Warning`](crate::model::Warning).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -622,7 +629,7 @@ pub mod warning {
             self.pages = input;
             self
         }
-        /// Consumes the builder and constructs a [`Warning`](crate::model::Warning)
+        /// Consumes the builder and constructs a [`Warning`](crate::model::Warning).
         pub fn build(self) -> crate::model::Warning {
             crate::model::Warning {
                 error_code: self.error_code,
@@ -632,7 +639,7 @@ pub mod warning {
     }
 }
 impl Warning {
-    /// Creates a new builder-style object to manufacture [`Warning`](crate::model::Warning)
+    /// Creates a new builder-style object to manufacture [`Warning`](crate::model::Warning).
     pub fn builder() -> crate::model::warning::Builder {
         crate::model::warning::Builder::default()
     }
@@ -643,10 +650,13 @@ impl Warning {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExpenseDocument {
     /// <p>Denotes which invoice or receipt in the document the information is coming from. First document will be 1, the second 2, and so on.</p>
+    #[doc(hidden)]
     pub expense_index: std::option::Option<i32>,
     /// <p>Any information found outside of a table by Amazon Textract.</p>
+    #[doc(hidden)]
     pub summary_fields: std::option::Option<std::vec::Vec<crate::model::ExpenseField>>,
     /// <p>Information detected on each table of a document, seperated into <code>LineItems</code>.</p>
+    #[doc(hidden)]
     pub line_item_groups: std::option::Option<std::vec::Vec<crate::model::LineItemGroup>>,
 }
 impl ExpenseDocument {
@@ -672,11 +682,10 @@ impl std::fmt::Debug for ExpenseDocument {
         formatter.finish()
     }
 }
-/// See [`ExpenseDocument`](crate::model::ExpenseDocument)
+/// See [`ExpenseDocument`](crate::model::ExpenseDocument).
 pub mod expense_document {
 
-    /// A builder for [`ExpenseDocument`](crate::model::ExpenseDocument)
-    #[non_exhaustive]
+    /// A builder for [`ExpenseDocument`](crate::model::ExpenseDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expense_index: std::option::Option<i32>,
@@ -733,7 +742,7 @@ pub mod expense_document {
             self.line_item_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExpenseDocument`](crate::model::ExpenseDocument)
+        /// Consumes the builder and constructs a [`ExpenseDocument`](crate::model::ExpenseDocument).
         pub fn build(self) -> crate::model::ExpenseDocument {
             crate::model::ExpenseDocument {
                 expense_index: self.expense_index,
@@ -744,7 +753,7 @@ pub mod expense_document {
     }
 }
 impl ExpenseDocument {
-    /// Creates a new builder-style object to manufacture [`ExpenseDocument`](crate::model::ExpenseDocument)
+    /// Creates a new builder-style object to manufacture [`ExpenseDocument`](crate::model::ExpenseDocument).
     pub fn builder() -> crate::model::expense_document::Builder {
         crate::model::expense_document::Builder::default()
     }
@@ -755,8 +764,10 @@ impl ExpenseDocument {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LineItemGroup {
     /// <p>The number used to identify a specific table in a document. The first table encountered will have a LineItemGroupIndex of 1, the second 2, etc.</p>
+    #[doc(hidden)]
     pub line_item_group_index: std::option::Option<i32>,
     /// <p>The breakdown of information on a particular line of a table. </p>
+    #[doc(hidden)]
     pub line_items: std::option::Option<std::vec::Vec<crate::model::LineItemFields>>,
 }
 impl LineItemGroup {
@@ -777,11 +788,10 @@ impl std::fmt::Debug for LineItemGroup {
         formatter.finish()
     }
 }
-/// See [`LineItemGroup`](crate::model::LineItemGroup)
+/// See [`LineItemGroup`](crate::model::LineItemGroup).
 pub mod line_item_group {
 
-    /// A builder for [`LineItemGroup`](crate::model::LineItemGroup)
-    #[non_exhaustive]
+    /// A builder for [`LineItemGroup`](crate::model::LineItemGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) line_item_group_index: std::option::Option<i32>,
@@ -817,7 +827,7 @@ pub mod line_item_group {
             self.line_items = input;
             self
         }
-        /// Consumes the builder and constructs a [`LineItemGroup`](crate::model::LineItemGroup)
+        /// Consumes the builder and constructs a [`LineItemGroup`](crate::model::LineItemGroup).
         pub fn build(self) -> crate::model::LineItemGroup {
             crate::model::LineItemGroup {
                 line_item_group_index: self.line_item_group_index,
@@ -827,7 +837,7 @@ pub mod line_item_group {
     }
 }
 impl LineItemGroup {
-    /// Creates a new builder-style object to manufacture [`LineItemGroup`](crate::model::LineItemGroup)
+    /// Creates a new builder-style object to manufacture [`LineItemGroup`](crate::model::LineItemGroup).
     pub fn builder() -> crate::model::line_item_group::Builder {
         crate::model::line_item_group::Builder::default()
     }
@@ -838,6 +848,7 @@ impl LineItemGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LineItemFields {
     /// <p>ExpenseFields used to show information from detected lines on a table.</p>
+    #[doc(hidden)]
     pub line_item_expense_fields: std::option::Option<std::vec::Vec<crate::model::ExpenseField>>,
 }
 impl LineItemFields {
@@ -853,11 +864,10 @@ impl std::fmt::Debug for LineItemFields {
         formatter.finish()
     }
 }
-/// See [`LineItemFields`](crate::model::LineItemFields)
+/// See [`LineItemFields`](crate::model::LineItemFields).
 pub mod line_item_fields {
 
-    /// A builder for [`LineItemFields`](crate::model::LineItemFields)
-    #[non_exhaustive]
+    /// A builder for [`LineItemFields`](crate::model::LineItemFields).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) line_item_expense_fields:
@@ -883,7 +893,7 @@ pub mod line_item_fields {
             self.line_item_expense_fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`LineItemFields`](crate::model::LineItemFields)
+        /// Consumes the builder and constructs a [`LineItemFields`](crate::model::LineItemFields).
         pub fn build(self) -> crate::model::LineItemFields {
             crate::model::LineItemFields {
                 line_item_expense_fields: self.line_item_expense_fields,
@@ -892,7 +902,7 @@ pub mod line_item_fields {
     }
 }
 impl LineItemFields {
-    /// Creates a new builder-style object to manufacture [`LineItemFields`](crate::model::LineItemFields)
+    /// Creates a new builder-style object to manufacture [`LineItemFields`](crate::model::LineItemFields).
     pub fn builder() -> crate::model::line_item_fields::Builder {
         crate::model::line_item_fields::Builder::default()
     }
@@ -903,12 +913,16 @@ impl LineItemFields {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExpenseField {
     /// <p>The implied label of a detected element. Present alongside LabelDetection for explicit elements.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ExpenseType>,
     /// <p>The explicitly stated label of a detected element.</p>
+    #[doc(hidden)]
     pub label_detection: std::option::Option<crate::model::ExpenseDetection>,
     /// <p>The value of a detected element. Present in explicit and implicit elements.</p>
+    #[doc(hidden)]
     pub value_detection: std::option::Option<crate::model::ExpenseDetection>,
     /// <p>The page number the value was detected on.</p>
+    #[doc(hidden)]
     pub page_number: std::option::Option<i32>,
 }
 impl ExpenseField {
@@ -939,11 +953,10 @@ impl std::fmt::Debug for ExpenseField {
         formatter.finish()
     }
 }
-/// See [`ExpenseField`](crate::model::ExpenseField)
+/// See [`ExpenseField`](crate::model::ExpenseField).
 pub mod expense_field {
 
-    /// A builder for [`ExpenseField`](crate::model::ExpenseField)
-    #[non_exhaustive]
+    /// A builder for [`ExpenseField`](crate::model::ExpenseField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ExpenseType>,
@@ -998,7 +1011,7 @@ pub mod expense_field {
             self.page_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExpenseField`](crate::model::ExpenseField)
+        /// Consumes the builder and constructs a [`ExpenseField`](crate::model::ExpenseField).
         pub fn build(self) -> crate::model::ExpenseField {
             crate::model::ExpenseField {
                 r#type: self.r#type,
@@ -1010,7 +1023,7 @@ pub mod expense_field {
     }
 }
 impl ExpenseField {
-    /// Creates a new builder-style object to manufacture [`ExpenseField`](crate::model::ExpenseField)
+    /// Creates a new builder-style object to manufacture [`ExpenseField`](crate::model::ExpenseField).
     pub fn builder() -> crate::model::expense_field::Builder {
         crate::model::expense_field::Builder::default()
     }
@@ -1021,10 +1034,13 @@ impl ExpenseField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExpenseDetection {
     /// <p>The word or line of text recognized by Amazon Textract</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>Information about where the following items are located on a document page: detected page, text, key-value pairs, tables, table cells, and selection elements.</p>
+    #[doc(hidden)]
     pub geometry: std::option::Option<crate::model::Geometry>,
     /// <p>The confidence in detection, as a percentage</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f32>,
 }
 impl ExpenseDetection {
@@ -1050,11 +1066,10 @@ impl std::fmt::Debug for ExpenseDetection {
         formatter.finish()
     }
 }
-/// See [`ExpenseDetection`](crate::model::ExpenseDetection)
+/// See [`ExpenseDetection`](crate::model::ExpenseDetection).
 pub mod expense_detection {
 
-    /// A builder for [`ExpenseDetection`](crate::model::ExpenseDetection)
-    #[non_exhaustive]
+    /// A builder for [`ExpenseDetection`](crate::model::ExpenseDetection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -1092,7 +1107,7 @@ pub mod expense_detection {
             self.confidence = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExpenseDetection`](crate::model::ExpenseDetection)
+        /// Consumes the builder and constructs a [`ExpenseDetection`](crate::model::ExpenseDetection).
         pub fn build(self) -> crate::model::ExpenseDetection {
             crate::model::ExpenseDetection {
                 text: self.text,
@@ -1103,7 +1118,7 @@ pub mod expense_detection {
     }
 }
 impl ExpenseDetection {
-    /// Creates a new builder-style object to manufacture [`ExpenseDetection`](crate::model::ExpenseDetection)
+    /// Creates a new builder-style object to manufacture [`ExpenseDetection`](crate::model::ExpenseDetection).
     pub fn builder() -> crate::model::expense_detection::Builder {
         crate::model::expense_detection::Builder::default()
     }
@@ -1114,8 +1129,10 @@ impl ExpenseDetection {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Geometry {
     /// <p>An axis-aligned coarse representation of the location of the recognized item on the document page.</p>
+    #[doc(hidden)]
     pub bounding_box: std::option::Option<crate::model::BoundingBox>,
     /// <p>Within the bounding box, a fine-grained polygon around the recognized item.</p>
+    #[doc(hidden)]
     pub polygon: std::option::Option<std::vec::Vec<crate::model::Point>>,
 }
 impl Geometry {
@@ -1136,11 +1153,10 @@ impl std::fmt::Debug for Geometry {
         formatter.finish()
     }
 }
-/// See [`Geometry`](crate::model::Geometry)
+/// See [`Geometry`](crate::model::Geometry).
 pub mod geometry {
 
-    /// A builder for [`Geometry`](crate::model::Geometry)
-    #[non_exhaustive]
+    /// A builder for [`Geometry`](crate::model::Geometry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bounding_box: std::option::Option<crate::model::BoundingBox>,
@@ -1179,7 +1195,7 @@ pub mod geometry {
             self.polygon = input;
             self
         }
-        /// Consumes the builder and constructs a [`Geometry`](crate::model::Geometry)
+        /// Consumes the builder and constructs a [`Geometry`](crate::model::Geometry).
         pub fn build(self) -> crate::model::Geometry {
             crate::model::Geometry {
                 bounding_box: self.bounding_box,
@@ -1189,7 +1205,7 @@ pub mod geometry {
     }
 }
 impl Geometry {
-    /// Creates a new builder-style object to manufacture [`Geometry`](crate::model::Geometry)
+    /// Creates a new builder-style object to manufacture [`Geometry`](crate::model::Geometry).
     pub fn builder() -> crate::model::geometry::Builder {
         crate::model::geometry::Builder::default()
     }
@@ -1201,8 +1217,10 @@ impl Geometry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Point {
     /// <p>The value of the X coordinate for a point on a <code>Polygon</code>.</p>
+    #[doc(hidden)]
     pub x: f32,
     /// <p>The value of the Y coordinate for a point on a <code>Polygon</code>.</p>
+    #[doc(hidden)]
     pub y: f32,
 }
 impl Point {
@@ -1223,11 +1241,10 @@ impl std::fmt::Debug for Point {
         formatter.finish()
     }
 }
-/// See [`Point`](crate::model::Point)
+/// See [`Point`](crate::model::Point).
 pub mod point {
 
-    /// A builder for [`Point`](crate::model::Point)
-    #[non_exhaustive]
+    /// A builder for [`Point`](crate::model::Point).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) x: std::option::Option<f32>,
@@ -1254,7 +1271,7 @@ pub mod point {
             self.y = input;
             self
         }
-        /// Consumes the builder and constructs a [`Point`](crate::model::Point)
+        /// Consumes the builder and constructs a [`Point`](crate::model::Point).
         pub fn build(self) -> crate::model::Point {
             crate::model::Point {
                 x: self.x.unwrap_or_default(),
@@ -1264,7 +1281,7 @@ pub mod point {
     }
 }
 impl Point {
-    /// Creates a new builder-style object to manufacture [`Point`](crate::model::Point)
+    /// Creates a new builder-style object to manufacture [`Point`](crate::model::Point).
     pub fn builder() -> crate::model::point::Builder {
         crate::model::point::Builder::default()
     }
@@ -1277,12 +1294,16 @@ impl Point {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BoundingBox {
     /// <p>The width of the bounding box as a ratio of the overall document page width.</p>
+    #[doc(hidden)]
     pub width: f32,
     /// <p>The height of the bounding box as a ratio of the overall document page height.</p>
+    #[doc(hidden)]
     pub height: f32,
     /// <p>The left coordinate of the bounding box as a ratio of overall document page width.</p>
+    #[doc(hidden)]
     pub left: f32,
     /// <p>The top coordinate of the bounding box as a ratio of overall document page height.</p>
+    #[doc(hidden)]
     pub top: f32,
 }
 impl BoundingBox {
@@ -1313,11 +1334,10 @@ impl std::fmt::Debug for BoundingBox {
         formatter.finish()
     }
 }
-/// See [`BoundingBox`](crate::model::BoundingBox)
+/// See [`BoundingBox`](crate::model::BoundingBox).
 pub mod bounding_box {
 
-    /// A builder for [`BoundingBox`](crate::model::BoundingBox)
-    #[non_exhaustive]
+    /// A builder for [`BoundingBox`](crate::model::BoundingBox).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) width: std::option::Option<f32>,
@@ -1366,7 +1386,7 @@ pub mod bounding_box {
             self.top = input;
             self
         }
-        /// Consumes the builder and constructs a [`BoundingBox`](crate::model::BoundingBox)
+        /// Consumes the builder and constructs a [`BoundingBox`](crate::model::BoundingBox).
         pub fn build(self) -> crate::model::BoundingBox {
             crate::model::BoundingBox {
                 width: self.width.unwrap_or_default(),
@@ -1378,7 +1398,7 @@ pub mod bounding_box {
     }
 }
 impl BoundingBox {
-    /// Creates a new builder-style object to manufacture [`BoundingBox`](crate::model::BoundingBox)
+    /// Creates a new builder-style object to manufacture [`BoundingBox`](crate::model::BoundingBox).
     pub fn builder() -> crate::model::bounding_box::Builder {
         crate::model::bounding_box::Builder::default()
     }
@@ -1389,8 +1409,10 @@ impl BoundingBox {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExpenseType {
     /// <p>The word or line of text detected by Amazon Textract.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The confidence of accuracy, as a percentage.</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f32>,
 }
 impl ExpenseType {
@@ -1411,11 +1433,10 @@ impl std::fmt::Debug for ExpenseType {
         formatter.finish()
     }
 }
-/// See [`ExpenseType`](crate::model::ExpenseType)
+/// See [`ExpenseType`](crate::model::ExpenseType).
 pub mod expense_type {
 
-    /// A builder for [`ExpenseType`](crate::model::ExpenseType)
-    #[non_exhaustive]
+    /// A builder for [`ExpenseType`](crate::model::ExpenseType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -1442,7 +1463,7 @@ pub mod expense_type {
             self.confidence = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExpenseType`](crate::model::ExpenseType)
+        /// Consumes the builder and constructs a [`ExpenseType`](crate::model::ExpenseType).
         pub fn build(self) -> crate::model::ExpenseType {
             crate::model::ExpenseType {
                 text: self.text,
@@ -1452,7 +1473,7 @@ pub mod expense_type {
     }
 }
 impl ExpenseType {
-    /// Creates a new builder-style object to manufacture [`ExpenseType`](crate::model::ExpenseType)
+    /// Creates a new builder-style object to manufacture [`ExpenseType`](crate::model::ExpenseType).
     pub fn builder() -> crate::model::expense_type::Builder {
         crate::model::expense_type::Builder::default()
     }
@@ -1526,6 +1547,7 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentMetadata {
     /// <p>The number of pages that are detected in the document.</p>
+    #[doc(hidden)]
     pub pages: std::option::Option<i32>,
 }
 impl DocumentMetadata {
@@ -1541,11 +1563,10 @@ impl std::fmt::Debug for DocumentMetadata {
         formatter.finish()
     }
 }
-/// See [`DocumentMetadata`](crate::model::DocumentMetadata)
+/// See [`DocumentMetadata`](crate::model::DocumentMetadata).
 pub mod document_metadata {
 
-    /// A builder for [`DocumentMetadata`](crate::model::DocumentMetadata)
-    #[non_exhaustive]
+    /// A builder for [`DocumentMetadata`](crate::model::DocumentMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pages: std::option::Option<i32>,
@@ -1561,14 +1582,14 @@ pub mod document_metadata {
             self.pages = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentMetadata`](crate::model::DocumentMetadata)
+        /// Consumes the builder and constructs a [`DocumentMetadata`](crate::model::DocumentMetadata).
         pub fn build(self) -> crate::model::DocumentMetadata {
             crate::model::DocumentMetadata { pages: self.pages }
         }
     }
 }
 impl DocumentMetadata {
-    /// Creates a new builder-style object to manufacture [`DocumentMetadata`](crate::model::DocumentMetadata)
+    /// Creates a new builder-style object to manufacture [`DocumentMetadata`](crate::model::DocumentMetadata).
     pub fn builder() -> crate::model::document_metadata::Builder {
         crate::model::document_metadata::Builder::default()
     }
@@ -1598,30 +1619,41 @@ pub struct Block {
     /// <li> <p> <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attachs it to its answer.</p> </li>
     /// <li> <p> <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an alias and ID for ease of locating in a response. Also contains location and confidence score.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub block_type: std::option::Option<crate::model::BlockType>,
     /// <p>The confidence score that Amazon Textract has in the accuracy of the recognized text and the accuracy of the geometry points around the recognized text.</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f32>,
     /// <p>The word or line of text that's recognized by Amazon Textract. </p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The kind of text that Amazon Textract has detected. Can check for handwritten text and printed text.</p>
+    #[doc(hidden)]
     pub text_type: std::option::Option<crate::model::TextType>,
     /// <p>The row in which a table cell is located. The first row position is 1. <code>RowIndex</code> isn't returned by <code>DetectDocumentText</code> and <code>GetDocumentTextDetection</code>.</p>
+    #[doc(hidden)]
     pub row_index: std::option::Option<i32>,
     /// <p>The column in which a table cell appears. The first column position is 1. <code>ColumnIndex</code> isn't returned by <code>DetectDocumentText</code> and <code>GetDocumentTextDetection</code>.</p>
+    #[doc(hidden)]
     pub column_index: std::option::Option<i32>,
     /// <p>The number of rows that a table cell spans. Currently this value is always 1, even if the number of rows spanned is greater than 1. <code>RowSpan</code> isn't returned by <code>DetectDocumentText</code> and <code>GetDocumentTextDetection</code>.</p>
+    #[doc(hidden)]
     pub row_span: std::option::Option<i32>,
     /// <p>The number of columns that a table cell spans. Currently this value is always 1, even if the number of columns spanned is greater than 1. <code>ColumnSpan</code> isn't returned by <code>DetectDocumentText</code> and <code>GetDocumentTextDetection</code>. </p>
+    #[doc(hidden)]
     pub column_span: std::option::Option<i32>,
     /// <p>The location of the recognized text on the image. It includes an axis-aligned, coarse bounding box that surrounds the text, and a finer-grain polygon for more accurate spatial information. </p>
+    #[doc(hidden)]
     pub geometry: std::option::Option<crate::model::Geometry>,
     /// <p>The identifier for the recognized text. The identifier is only unique for a single operation. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A list of child blocks of the current block. For example, a LINE object has child blocks for each WORD block that's part of the line of text. There aren't Relationship objects in the list for relationships that don't exist, such as when the current block has no child blocks. The list size can be the following:</p>
     /// <ul>
     /// <li> <p>0 - The block has no child blocks.</p> </li>
     /// <li> <p>1 - The block has child blocks.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub relationships: std::option::Option<std::vec::Vec<crate::model::Relationship>>,
     /// <p>The type of entity. The following can be returned:</p>
     /// <ul>
@@ -1629,12 +1661,16 @@ pub struct Block {
     /// <li> <p> <i>VALUE</i> - The field text.</p> </li>
     /// </ul>
     /// <p> <code>EntityTypes</code> isn't returned by <code>DetectDocumentText</code> and <code>GetDocumentTextDetection</code>.</p>
+    #[doc(hidden)]
     pub entity_types: std::option::Option<std::vec::Vec<crate::model::EntityType>>,
     /// <p>The selection status of a selection element, such as an option button or check box. </p>
+    #[doc(hidden)]
     pub selection_status: std::option::Option<crate::model::SelectionStatus>,
     /// <p>The page on which a block was detected. <code>Page</code> is returned by asynchronous operations. Page values greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned image (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document. The value of <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because every input document is considered to be a single-page document.</p>
+    #[doc(hidden)]
     pub page: std::option::Option<i32>,
     /// <p></p>
+    #[doc(hidden)]
     pub query: std::option::Option<crate::model::Query>,
 }
 impl Block {
@@ -1746,11 +1782,10 @@ impl std::fmt::Debug for Block {
         formatter.finish()
     }
 }
-/// See [`Block`](crate::model::Block)
+/// See [`Block`](crate::model::Block).
 pub mod block {
 
-    /// A builder for [`Block`](crate::model::Block)
-    #[non_exhaustive]
+    /// A builder for [`Block`](crate::model::Block).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block_type: std::option::Option<crate::model::BlockType>,
@@ -1996,7 +2031,7 @@ pub mod block {
             self.query = input;
             self
         }
-        /// Consumes the builder and constructs a [`Block`](crate::model::Block)
+        /// Consumes the builder and constructs a [`Block`](crate::model::Block).
         pub fn build(self) -> crate::model::Block {
             crate::model::Block {
                 block_type: self.block_type,
@@ -2019,7 +2054,7 @@ pub mod block {
     }
 }
 impl Block {
-    /// Creates a new builder-style object to manufacture [`Block`](crate::model::Block)
+    /// Creates a new builder-style object to manufacture [`Block`](crate::model::Block).
     pub fn builder() -> crate::model::block::Builder {
         crate::model::block::Builder::default()
     }
@@ -2145,8 +2180,10 @@ impl AsRef<str> for EntityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Relationship {
     /// <p>The type of relationship that the blocks in the IDs array have with the current block. The relationship can be <code>VALUE</code> or <code>CHILD</code>. A relationship of type VALUE is a list that contains the ID of the VALUE block that's associated with the KEY of a key-value pair. A relationship of type CHILD is a list of IDs that identify WORD blocks in the case of lines Cell blocks in the case of Tables, and WORD blocks in the case of Selection Elements.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RelationshipType>,
     /// <p>An array of IDs for related blocks. You can get the type of the relationship from the <code>Type</code> element.</p>
+    #[doc(hidden)]
     pub ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Relationship {
@@ -2167,11 +2204,10 @@ impl std::fmt::Debug for Relationship {
         formatter.finish()
     }
 }
-/// See [`Relationship`](crate::model::Relationship)
+/// See [`Relationship`](crate::model::Relationship).
 pub mod relationship {
 
-    /// A builder for [`Relationship`](crate::model::Relationship)
-    #[non_exhaustive]
+    /// A builder for [`Relationship`](crate::model::Relationship).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::RelationshipType>,
@@ -2210,7 +2246,7 @@ pub mod relationship {
             self.ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`Relationship`](crate::model::Relationship)
+        /// Consumes the builder and constructs a [`Relationship`](crate::model::Relationship).
         pub fn build(self) -> crate::model::Relationship {
             crate::model::Relationship {
                 r#type: self.r#type,
@@ -2220,7 +2256,7 @@ pub mod relationship {
     }
 }
 impl Relationship {
-    /// Creates a new builder-style object to manufacture [`Relationship`](crate::model::Relationship)
+    /// Creates a new builder-style object to manufacture [`Relationship`](crate::model::Relationship).
     pub fn builder() -> crate::model::relationship::Builder {
         crate::model::relationship::Builder::default()
     }
@@ -2473,8 +2509,10 @@ impl AsRef<str> for BlockType {
 pub struct Document {
     /// <p>A blob of base64-encoded document bytes. The maximum size of a document that's provided in a blob of bytes is 5 MB. The document bytes must be in PNG or JPEG format.</p>
     /// <p>If you're using an AWS SDK to call Amazon Textract, you might not need to base64-encode image bytes passed using the <code>Bytes</code> field. </p>
+    #[doc(hidden)]
     pub bytes: std::option::Option<aws_smithy_types::Blob>,
     /// <p>Identifies an S3 object as the document source. The maximum size of a document that's stored in an S3 bucket is 5 MB.</p>
+    #[doc(hidden)]
     pub s3_object: std::option::Option<crate::model::S3Object>,
 }
 impl Document {
@@ -2496,11 +2534,10 @@ impl std::fmt::Debug for Document {
         formatter.finish()
     }
 }
-/// See [`Document`](crate::model::Document)
+/// See [`Document`](crate::model::Document).
 pub mod document {
 
-    /// A builder for [`Document`](crate::model::Document)
-    #[non_exhaustive]
+    /// A builder for [`Document`](crate::model::Document).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bytes: std::option::Option<aws_smithy_types::Blob>,
@@ -2529,7 +2566,7 @@ pub mod document {
             self.s3_object = input;
             self
         }
-        /// Consumes the builder and constructs a [`Document`](crate::model::Document)
+        /// Consumes the builder and constructs a [`Document`](crate::model::Document).
         pub fn build(self) -> crate::model::Document {
             crate::model::Document {
                 bytes: self.bytes,
@@ -2539,7 +2576,7 @@ pub mod document {
     }
 }
 impl Document {
-    /// Creates a new builder-style object to manufacture [`Document`](crate::model::Document)
+    /// Creates a new builder-style object to manufacture [`Document`](crate::model::Document).
     pub fn builder() -> crate::model::document::Builder {
         crate::model::document::Builder::default()
     }
@@ -2550,8 +2587,10 @@ impl Document {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityDocument {
     /// <p>Denotes the placement of a document in the IdentityDocument list. The first document is marked 1, the second 2 and so on.</p>
+    #[doc(hidden)]
     pub document_index: std::option::Option<i32>,
     /// <p>The structure used to record information extracted from identity documents. Contains both normalized field and value of the extracted text.</p>
+    #[doc(hidden)]
     pub identity_document_fields:
         std::option::Option<std::vec::Vec<crate::model::IdentityDocumentField>>,
 }
@@ -2575,11 +2614,10 @@ impl std::fmt::Debug for IdentityDocument {
         formatter.finish()
     }
 }
-/// See [`IdentityDocument`](crate::model::IdentityDocument)
+/// See [`IdentityDocument`](crate::model::IdentityDocument).
 pub mod identity_document {
 
-    /// A builder for [`IdentityDocument`](crate::model::IdentityDocument)
-    #[non_exhaustive]
+    /// A builder for [`IdentityDocument`](crate::model::IdentityDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) document_index: std::option::Option<i32>,
@@ -2619,7 +2657,7 @@ pub mod identity_document {
             self.identity_document_fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityDocument`](crate::model::IdentityDocument)
+        /// Consumes the builder and constructs a [`IdentityDocument`](crate::model::IdentityDocument).
         pub fn build(self) -> crate::model::IdentityDocument {
             crate::model::IdentityDocument {
                 document_index: self.document_index,
@@ -2629,7 +2667,7 @@ pub mod identity_document {
     }
 }
 impl IdentityDocument {
-    /// Creates a new builder-style object to manufacture [`IdentityDocument`](crate::model::IdentityDocument)
+    /// Creates a new builder-style object to manufacture [`IdentityDocument`](crate::model::IdentityDocument).
     pub fn builder() -> crate::model::identity_document::Builder {
         crate::model::identity_document::Builder::default()
     }
@@ -2640,8 +2678,10 @@ impl IdentityDocument {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityDocumentField {
     /// <p>Used to contain the information detected by an AnalyzeID operation.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AnalyzeIdDetections>,
     /// <p>Used to contain the information detected by an AnalyzeID operation.</p>
+    #[doc(hidden)]
     pub value_detection: std::option::Option<crate::model::AnalyzeIdDetections>,
 }
 impl IdentityDocumentField {
@@ -2662,11 +2702,10 @@ impl std::fmt::Debug for IdentityDocumentField {
         formatter.finish()
     }
 }
-/// See [`IdentityDocumentField`](crate::model::IdentityDocumentField)
+/// See [`IdentityDocumentField`](crate::model::IdentityDocumentField).
 pub mod identity_document_field {
 
-    /// A builder for [`IdentityDocumentField`](crate::model::IdentityDocumentField)
-    #[non_exhaustive]
+    /// A builder for [`IdentityDocumentField`](crate::model::IdentityDocumentField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::AnalyzeIdDetections>,
@@ -2699,7 +2738,7 @@ pub mod identity_document_field {
             self.value_detection = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityDocumentField`](crate::model::IdentityDocumentField)
+        /// Consumes the builder and constructs a [`IdentityDocumentField`](crate::model::IdentityDocumentField).
         pub fn build(self) -> crate::model::IdentityDocumentField {
             crate::model::IdentityDocumentField {
                 r#type: self.r#type,
@@ -2709,7 +2748,7 @@ pub mod identity_document_field {
     }
 }
 impl IdentityDocumentField {
-    /// Creates a new builder-style object to manufacture [`IdentityDocumentField`](crate::model::IdentityDocumentField)
+    /// Creates a new builder-style object to manufacture [`IdentityDocumentField`](crate::model::IdentityDocumentField).
     pub fn builder() -> crate::model::identity_document_field::Builder {
         crate::model::identity_document_field::Builder::default()
     }
@@ -2720,10 +2759,13 @@ impl IdentityDocumentField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyzeIdDetections {
     /// <p>Text of either the normalized field or value associated with it.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>Only returned for dates, returns the type of value detected and the date written in a more machine readable way.</p>
+    #[doc(hidden)]
     pub normalized_value: std::option::Option<crate::model::NormalizedValue>,
     /// <p>The confidence score of the detected text.</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f32>,
 }
 impl AnalyzeIdDetections {
@@ -2749,11 +2791,10 @@ impl std::fmt::Debug for AnalyzeIdDetections {
         formatter.finish()
     }
 }
-/// See [`AnalyzeIdDetections`](crate::model::AnalyzeIdDetections)
+/// See [`AnalyzeIdDetections`](crate::model::AnalyzeIdDetections).
 pub mod analyze_id_detections {
 
-    /// A builder for [`AnalyzeIdDetections`](crate::model::AnalyzeIdDetections)
-    #[non_exhaustive]
+    /// A builder for [`AnalyzeIdDetections`](crate::model::AnalyzeIdDetections).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -2794,7 +2835,7 @@ pub mod analyze_id_detections {
             self.confidence = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyzeIdDetections`](crate::model::AnalyzeIdDetections)
+        /// Consumes the builder and constructs a [`AnalyzeIdDetections`](crate::model::AnalyzeIdDetections).
         pub fn build(self) -> crate::model::AnalyzeIdDetections {
             crate::model::AnalyzeIdDetections {
                 text: self.text,
@@ -2805,7 +2846,7 @@ pub mod analyze_id_detections {
     }
 }
 impl AnalyzeIdDetections {
-    /// Creates a new builder-style object to manufacture [`AnalyzeIdDetections`](crate::model::AnalyzeIdDetections)
+    /// Creates a new builder-style object to manufacture [`AnalyzeIdDetections`](crate::model::AnalyzeIdDetections).
     pub fn builder() -> crate::model::analyze_id_detections::Builder {
         crate::model::analyze_id_detections::Builder::default()
     }
@@ -2816,8 +2857,10 @@ impl AnalyzeIdDetections {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NormalizedValue {
     /// <p>The value of the date, written as Year-Month-DayTHour:Minute:Second.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The normalized type of the value detected. In this case, DATE.</p>
+    #[doc(hidden)]
     pub value_type: std::option::Option<crate::model::ValueType>,
 }
 impl NormalizedValue {
@@ -2838,11 +2881,10 @@ impl std::fmt::Debug for NormalizedValue {
         formatter.finish()
     }
 }
-/// See [`NormalizedValue`](crate::model::NormalizedValue)
+/// See [`NormalizedValue`](crate::model::NormalizedValue).
 pub mod normalized_value {
 
-    /// A builder for [`NormalizedValue`](crate::model::NormalizedValue)
-    #[non_exhaustive]
+    /// A builder for [`NormalizedValue`](crate::model::NormalizedValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -2872,7 +2914,7 @@ pub mod normalized_value {
             self.value_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`NormalizedValue`](crate::model::NormalizedValue)
+        /// Consumes the builder and constructs a [`NormalizedValue`](crate::model::NormalizedValue).
         pub fn build(self) -> crate::model::NormalizedValue {
             crate::model::NormalizedValue {
                 value: self.value,
@@ -2882,7 +2924,7 @@ pub mod normalized_value {
     }
 }
 impl NormalizedValue {
-    /// Creates a new builder-style object to manufacture [`NormalizedValue`](crate::model::NormalizedValue)
+    /// Creates a new builder-style object to manufacture [`NormalizedValue`](crate::model::NormalizedValue).
     pub fn builder() -> crate::model::normalized_value::Builder {
         crate::model::normalized_value::Builder::default()
     }
@@ -2944,10 +2986,13 @@ impl AsRef<str> for ValueType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HumanLoopActivationOutput {
     /// <p>The Amazon Resource Name (ARN) of the HumanLoop created.</p>
+    #[doc(hidden)]
     pub human_loop_arn: std::option::Option<std::string::String>,
     /// <p>Shows if and why human review was needed.</p>
+    #[doc(hidden)]
     pub human_loop_activation_reasons: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Shows the result of condition evaluations, including those conditions which activated a human review.</p>
+    #[doc(hidden)]
     pub human_loop_activation_conditions_evaluation_results:
         std::option::Option<std::string::String>,
 }
@@ -2981,11 +3026,10 @@ impl std::fmt::Debug for HumanLoopActivationOutput {
         formatter.finish()
     }
 }
-/// See [`HumanLoopActivationOutput`](crate::model::HumanLoopActivationOutput)
+/// See [`HumanLoopActivationOutput`](crate::model::HumanLoopActivationOutput).
 pub mod human_loop_activation_output {
 
-    /// A builder for [`HumanLoopActivationOutput`](crate::model::HumanLoopActivationOutput)
-    #[non_exhaustive]
+    /// A builder for [`HumanLoopActivationOutput`](crate::model::HumanLoopActivationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) human_loop_arn: std::option::Option<std::string::String>,
@@ -3046,7 +3090,7 @@ pub mod human_loop_activation_output {
             self.human_loop_activation_conditions_evaluation_results = input;
             self
         }
-        /// Consumes the builder and constructs a [`HumanLoopActivationOutput`](crate::model::HumanLoopActivationOutput)
+        /// Consumes the builder and constructs a [`HumanLoopActivationOutput`](crate::model::HumanLoopActivationOutput).
         pub fn build(self) -> crate::model::HumanLoopActivationOutput {
             crate::model::HumanLoopActivationOutput {
                 human_loop_arn: self.human_loop_arn,
@@ -3058,7 +3102,7 @@ pub mod human_loop_activation_output {
     }
 }
 impl HumanLoopActivationOutput {
-    /// Creates a new builder-style object to manufacture [`HumanLoopActivationOutput`](crate::model::HumanLoopActivationOutput)
+    /// Creates a new builder-style object to manufacture [`HumanLoopActivationOutput`](crate::model::HumanLoopActivationOutput).
     pub fn builder() -> crate::model::human_loop_activation_output::Builder {
         crate::model::human_loop_activation_output::Builder::default()
     }
@@ -3069,10 +3113,13 @@ impl HumanLoopActivationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HumanLoopConfig {
     /// <p>The name of the human workflow used for this image. This should be kept unique within a region.</p>
+    #[doc(hidden)]
     pub human_loop_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the flow definition.</p>
+    #[doc(hidden)]
     pub flow_definition_arn: std::option::Option<std::string::String>,
     /// <p>Sets attributes of the input data.</p>
+    #[doc(hidden)]
     pub data_attributes: std::option::Option<crate::model::HumanLoopDataAttributes>,
 }
 impl HumanLoopConfig {
@@ -3098,11 +3145,10 @@ impl std::fmt::Debug for HumanLoopConfig {
         formatter.finish()
     }
 }
-/// See [`HumanLoopConfig`](crate::model::HumanLoopConfig)
+/// See [`HumanLoopConfig`](crate::model::HumanLoopConfig).
 pub mod human_loop_config {
 
-    /// A builder for [`HumanLoopConfig`](crate::model::HumanLoopConfig)
-    #[non_exhaustive]
+    /// A builder for [`HumanLoopConfig`](crate::model::HumanLoopConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) human_loop_name: std::option::Option<std::string::String>,
@@ -3149,7 +3195,7 @@ pub mod human_loop_config {
             self.data_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`HumanLoopConfig`](crate::model::HumanLoopConfig)
+        /// Consumes the builder and constructs a [`HumanLoopConfig`](crate::model::HumanLoopConfig).
         pub fn build(self) -> crate::model::HumanLoopConfig {
             crate::model::HumanLoopConfig {
                 human_loop_name: self.human_loop_name,
@@ -3160,7 +3206,7 @@ pub mod human_loop_config {
     }
 }
 impl HumanLoopConfig {
-    /// Creates a new builder-style object to manufacture [`HumanLoopConfig`](crate::model::HumanLoopConfig)
+    /// Creates a new builder-style object to manufacture [`HumanLoopConfig`](crate::model::HumanLoopConfig).
     pub fn builder() -> crate::model::human_loop_config::Builder {
         crate::model::human_loop_config::Builder::default()
     }
@@ -3171,6 +3217,7 @@ impl HumanLoopConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HumanLoopDataAttributes {
     /// <p>Sets whether the input image is free of personally identifiable information or adult content.</p>
+    #[doc(hidden)]
     pub content_classifiers: std::option::Option<std::vec::Vec<crate::model::ContentClassifier>>,
 }
 impl HumanLoopDataAttributes {
@@ -3186,11 +3233,10 @@ impl std::fmt::Debug for HumanLoopDataAttributes {
         formatter.finish()
     }
 }
-/// See [`HumanLoopDataAttributes`](crate::model::HumanLoopDataAttributes)
+/// See [`HumanLoopDataAttributes`](crate::model::HumanLoopDataAttributes).
 pub mod human_loop_data_attributes {
 
-    /// A builder for [`HumanLoopDataAttributes`](crate::model::HumanLoopDataAttributes)
-    #[non_exhaustive]
+    /// A builder for [`HumanLoopDataAttributes`](crate::model::HumanLoopDataAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_classifiers:
@@ -3216,7 +3262,7 @@ pub mod human_loop_data_attributes {
             self.content_classifiers = input;
             self
         }
-        /// Consumes the builder and constructs a [`HumanLoopDataAttributes`](crate::model::HumanLoopDataAttributes)
+        /// Consumes the builder and constructs a [`HumanLoopDataAttributes`](crate::model::HumanLoopDataAttributes).
         pub fn build(self) -> crate::model::HumanLoopDataAttributes {
             crate::model::HumanLoopDataAttributes {
                 content_classifiers: self.content_classifiers,
@@ -3225,7 +3271,7 @@ pub mod human_loop_data_attributes {
     }
 }
 impl HumanLoopDataAttributes {
-    /// Creates a new builder-style object to manufacture [`HumanLoopDataAttributes`](crate::model::HumanLoopDataAttributes)
+    /// Creates a new builder-style object to manufacture [`HumanLoopDataAttributes`](crate::model::HumanLoopDataAttributes).
     pub fn builder() -> crate::model::human_loop_data_attributes::Builder {
         crate::model::human_loop_data_attributes::Builder::default()
     }

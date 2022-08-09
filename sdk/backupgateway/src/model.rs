@@ -6,14 +6,19 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Hypervisor {
     /// <p>The server host of the hypervisor. This can be either an IP address or a fully-qualified domain name (FQDN).</p>
+    #[doc(hidden)]
     pub host: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the hypervisor.</p>
+    #[doc(hidden)]
     pub hypervisor_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Key Management Service used to encrypt the hypervisor.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
     /// <p>The name of the hypervisor.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The state of the hypervisor.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::HypervisorState>,
 }
 impl Hypervisor {
@@ -49,11 +54,10 @@ impl std::fmt::Debug for Hypervisor {
         formatter.finish()
     }
 }
-/// See [`Hypervisor`](crate::model::Hypervisor)
+/// See [`Hypervisor`](crate::model::Hypervisor).
 pub mod hypervisor {
 
-    /// A builder for [`Hypervisor`](crate::model::Hypervisor)
-    #[non_exhaustive]
+    /// A builder for [`Hypervisor`](crate::model::Hypervisor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) host: std::option::Option<std::string::String>,
@@ -119,7 +123,7 @@ pub mod hypervisor {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`Hypervisor`](crate::model::Hypervisor)
+        /// Consumes the builder and constructs a [`Hypervisor`](crate::model::Hypervisor).
         pub fn build(self) -> crate::model::Hypervisor {
             crate::model::Hypervisor {
                 host: self.host,
@@ -132,7 +136,7 @@ pub mod hypervisor {
     }
 }
 impl Hypervisor {
-    /// Creates a new builder-style object to manufacture [`Hypervisor`](crate::model::Hypervisor)
+    /// Creates a new builder-style object to manufacture [`Hypervisor`](crate::model::Hypervisor).
     pub fn builder() -> crate::model::hypervisor::Builder {
         crate::model::hypervisor::Builder::default()
     }
@@ -206,8 +210,10 @@ impl AsRef<str> for HypervisorState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key part of a tag's key-value pair. The key can't start with <code>aws:</code>.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value part of a tag's key-value pair.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -228,11 +234,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -259,7 +264,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -269,7 +274,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -280,14 +285,19 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Gateway {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>The display name of the gateway.</p>
+    #[doc(hidden)]
     pub gateway_display_name: std::option::Option<std::string::String>,
     /// <p>The type of the gateway.</p>
+    #[doc(hidden)]
     pub gateway_type: std::option::Option<crate::model::GatewayType>,
     /// <p>The hypervisor ID of the gateway.</p>
+    #[doc(hidden)]
     pub hypervisor_id: std::option::Option<std::string::String>,
     /// <p>The last time Backup gateway communicated with the gateway, in Unix format and UTC time.</p>
+    #[doc(hidden)]
     pub last_seen_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Gateway {
@@ -323,11 +333,10 @@ impl std::fmt::Debug for Gateway {
         formatter.finish()
     }
 }
-/// See [`Gateway`](crate::model::Gateway)
+/// See [`Gateway`](crate::model::Gateway).
 pub mod gateway {
 
-    /// A builder for [`Gateway`](crate::model::Gateway)
-    #[non_exhaustive]
+    /// A builder for [`Gateway`](crate::model::Gateway).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -399,7 +408,7 @@ pub mod gateway {
             self.last_seen_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Gateway`](crate::model::Gateway)
+        /// Consumes the builder and constructs a [`Gateway`](crate::model::Gateway).
         pub fn build(self) -> crate::model::Gateway {
             crate::model::Gateway {
                 gateway_arn: self.gateway_arn,
@@ -412,7 +421,7 @@ pub mod gateway {
     }
 }
 impl Gateway {
-    /// Creates a new builder-style object to manufacture [`Gateway`](crate::model::Gateway)
+    /// Creates a new builder-style object to manufacture [`Gateway`](crate::model::Gateway).
     pub fn builder() -> crate::model::gateway::Builder {
         crate::model::gateway::Builder::default()
     }
@@ -474,18 +483,25 @@ impl AsRef<str> for GatewayType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GatewayDetails {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>The display name of the gateway.</p>
+    #[doc(hidden)]
     pub gateway_display_name: std::option::Option<std::string::String>,
     /// <p>The type of the gateway type.</p>
+    #[doc(hidden)]
     pub gateway_type: std::option::Option<crate::model::GatewayType>,
     /// <p>The hypervisor ID of the gateway.</p>
+    #[doc(hidden)]
     pub hypervisor_id: std::option::Option<std::string::String>,
     /// <p>Details showing the last time Backup gateway communicated with the cloud, in Unix format and UTC time.</p>
+    #[doc(hidden)]
     pub last_seen_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Details showing the next update availability time of the gateway.</p>
+    #[doc(hidden)]
     pub next_update_availability_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The DNS name for the virtual private cloud (VPC) endpoint the gateway uses to connect to the cloud for backup gateway.</p>
+    #[doc(hidden)]
     pub vpc_endpoint: std::option::Option<std::string::String>,
 }
 impl GatewayDetails {
@@ -536,11 +552,10 @@ impl std::fmt::Debug for GatewayDetails {
         formatter.finish()
     }
 }
-/// See [`GatewayDetails`](crate::model::GatewayDetails)
+/// See [`GatewayDetails`](crate::model::GatewayDetails).
 pub mod gateway_details {
 
-    /// A builder for [`GatewayDetails`](crate::model::GatewayDetails)
-    #[non_exhaustive]
+    /// A builder for [`GatewayDetails`](crate::model::GatewayDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -637,7 +652,7 @@ pub mod gateway_details {
             self.vpc_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`GatewayDetails`](crate::model::GatewayDetails)
+        /// Consumes the builder and constructs a [`GatewayDetails`](crate::model::GatewayDetails).
         pub fn build(self) -> crate::model::GatewayDetails {
             crate::model::GatewayDetails {
                 gateway_arn: self.gateway_arn,
@@ -652,7 +667,7 @@ pub mod gateway_details {
     }
 }
 impl GatewayDetails {
-    /// Creates a new builder-style object to manufacture [`GatewayDetails`](crate::model::GatewayDetails)
+    /// Creates a new builder-style object to manufacture [`GatewayDetails`](crate::model::GatewayDetails).
     pub fn builder() -> crate::model::gateway_details::Builder {
         crate::model::gateway_details::Builder::default()
     }
@@ -663,16 +678,22 @@ impl GatewayDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VirtualMachine {
     /// <p>The host name of the virtual machine.</p>
+    #[doc(hidden)]
     pub host_name: std::option::Option<std::string::String>,
     /// <p>The ID of the virtual machine's hypervisor.</p>
+    #[doc(hidden)]
     pub hypervisor_id: std::option::Option<std::string::String>,
     /// <p>The name of the virtual machine.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The path of the virtual machine.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the virtual machine. For example, <code>arn:aws:backup-gateway:us-west-1:0000000000000:vm/vm-0000ABCDEFGIJKL</code>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The most recent date a virtual machine was backed up, in Unix format and UTC time.</p>
+    #[doc(hidden)]
     pub last_backup_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl VirtualMachine {
@@ -713,11 +734,10 @@ impl std::fmt::Debug for VirtualMachine {
         formatter.finish()
     }
 }
-/// See [`VirtualMachine`](crate::model::VirtualMachine)
+/// See [`VirtualMachine`](crate::model::VirtualMachine).
 pub mod virtual_machine {
 
-    /// A builder for [`VirtualMachine`](crate::model::VirtualMachine)
-    #[non_exhaustive]
+    /// A builder for [`VirtualMachine`](crate::model::VirtualMachine).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) host_name: std::option::Option<std::string::String>,
@@ -794,7 +814,7 @@ pub mod virtual_machine {
             self.last_backup_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`VirtualMachine`](crate::model::VirtualMachine)
+        /// Consumes the builder and constructs a [`VirtualMachine`](crate::model::VirtualMachine).
         pub fn build(self) -> crate::model::VirtualMachine {
             crate::model::VirtualMachine {
                 host_name: self.host_name,
@@ -808,7 +828,7 @@ pub mod virtual_machine {
     }
 }
 impl VirtualMachine {
-    /// Creates a new builder-style object to manufacture [`VirtualMachine`](crate::model::VirtualMachine)
+    /// Creates a new builder-style object to manufacture [`VirtualMachine`](crate::model::VirtualMachine).
     pub fn builder() -> crate::model::virtual_machine::Builder {
         crate::model::virtual_machine::Builder::default()
     }

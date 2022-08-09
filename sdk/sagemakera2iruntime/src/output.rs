@@ -9,22 +9,21 @@ impl std::fmt::Debug for StopHumanLoopOutput {
         formatter.finish()
     }
 }
-/// See [`StopHumanLoopOutput`](crate::output::StopHumanLoopOutput)
+/// See [`StopHumanLoopOutput`](crate::output::StopHumanLoopOutput).
 pub mod stop_human_loop_output {
 
-    /// A builder for [`StopHumanLoopOutput`](crate::output::StopHumanLoopOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopHumanLoopOutput`](crate::output::StopHumanLoopOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StopHumanLoopOutput`](crate::output::StopHumanLoopOutput)
+        /// Consumes the builder and constructs a [`StopHumanLoopOutput`](crate::output::StopHumanLoopOutput).
         pub fn build(self) -> crate::output::StopHumanLoopOutput {
             crate::output::StopHumanLoopOutput {}
         }
     }
 }
 impl StopHumanLoopOutput {
-    /// Creates a new builder-style object to manufacture [`StopHumanLoopOutput`](crate::output::StopHumanLoopOutput)
+    /// Creates a new builder-style object to manufacture [`StopHumanLoopOutput`](crate::output::StopHumanLoopOutput).
     pub fn builder() -> crate::output::stop_human_loop_output::Builder {
         crate::output::stop_human_loop_output::Builder::default()
     }
@@ -35,6 +34,7 @@ impl StopHumanLoopOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartHumanLoopOutput {
     /// <p>The Amazon Resource Name (ARN) of the human loop.</p>
+    #[doc(hidden)]
     pub human_loop_arn: std::option::Option<std::string::String>,
 }
 impl StartHumanLoopOutput {
@@ -50,11 +50,10 @@ impl std::fmt::Debug for StartHumanLoopOutput {
         formatter.finish()
     }
 }
-/// See [`StartHumanLoopOutput`](crate::output::StartHumanLoopOutput)
+/// See [`StartHumanLoopOutput`](crate::output::StartHumanLoopOutput).
 pub mod start_human_loop_output {
 
-    /// A builder for [`StartHumanLoopOutput`](crate::output::StartHumanLoopOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartHumanLoopOutput`](crate::output::StartHumanLoopOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) human_loop_arn: std::option::Option<std::string::String>,
@@ -73,7 +72,7 @@ pub mod start_human_loop_output {
             self.human_loop_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartHumanLoopOutput`](crate::output::StartHumanLoopOutput)
+        /// Consumes the builder and constructs a [`StartHumanLoopOutput`](crate::output::StartHumanLoopOutput).
         pub fn build(self) -> crate::output::StartHumanLoopOutput {
             crate::output::StartHumanLoopOutput {
                 human_loop_arn: self.human_loop_arn,
@@ -82,7 +81,7 @@ pub mod start_human_loop_output {
     }
 }
 impl StartHumanLoopOutput {
-    /// Creates a new builder-style object to manufacture [`StartHumanLoopOutput`](crate::output::StartHumanLoopOutput)
+    /// Creates a new builder-style object to manufacture [`StartHumanLoopOutput`](crate::output::StartHumanLoopOutput).
     pub fn builder() -> crate::output::start_human_loop_output::Builder {
         crate::output::start_human_loop_output::Builder::default()
     }
@@ -93,8 +92,10 @@ impl StartHumanLoopOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListHumanLoopsOutput {
     /// <p>An array of objects that contain information about the human loops.</p>
+    #[doc(hidden)]
     pub human_loop_summaries: std::option::Option<std::vec::Vec<crate::model::HumanLoopSummary>>,
     /// <p>A token to display the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListHumanLoopsOutput {
@@ -115,11 +116,10 @@ impl std::fmt::Debug for ListHumanLoopsOutput {
         formatter.finish()
     }
 }
-/// See [`ListHumanLoopsOutput`](crate::output::ListHumanLoopsOutput)
+/// See [`ListHumanLoopsOutput`](crate::output::ListHumanLoopsOutput).
 pub mod list_human_loops_output {
 
-    /// A builder for [`ListHumanLoopsOutput`](crate::output::ListHumanLoopsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListHumanLoopsOutput`](crate::output::ListHumanLoopsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) human_loop_summaries:
@@ -156,7 +156,7 @@ pub mod list_human_loops_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListHumanLoopsOutput`](crate::output::ListHumanLoopsOutput)
+        /// Consumes the builder and constructs a [`ListHumanLoopsOutput`](crate::output::ListHumanLoopsOutput).
         pub fn build(self) -> crate::output::ListHumanLoopsOutput {
             crate::output::ListHumanLoopsOutput {
                 human_loop_summaries: self.human_loop_summaries,
@@ -166,7 +166,7 @@ pub mod list_human_loops_output {
     }
 }
 impl ListHumanLoopsOutput {
-    /// Creates a new builder-style object to manufacture [`ListHumanLoopsOutput`](crate::output::ListHumanLoopsOutput)
+    /// Creates a new builder-style object to manufacture [`ListHumanLoopsOutput`](crate::output::ListHumanLoopsOutput).
     pub fn builder() -> crate::output::list_human_loops_output::Builder {
         crate::output::list_human_loops_output::Builder::default()
     }
@@ -177,21 +177,29 @@ impl ListHumanLoopsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeHumanLoopOutput {
     /// <p>The creation time when Amazon Augmented AI created the human loop.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The reason why a human loop failed. The failure reason is returned when the status of the human loop is <code>Failed</code>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>A failure code that identifies the type of failure.</p>
     /// <p>Possible values: <code>ValidationError</code>, <code>Expired</code>, <code>InternalError</code> </p>
+    #[doc(hidden)]
     pub failure_code: std::option::Option<std::string::String>,
     /// <p>The status of the human loop. </p>
+    #[doc(hidden)]
     pub human_loop_status: std::option::Option<crate::model::HumanLoopStatus>,
     /// <p>The name of the human loop. The name must be lowercase, unique within the Region in your account, and can have up to 63 characters. Valid characters: a-z, 0-9, and - (hyphen).</p>
+    #[doc(hidden)]
     pub human_loop_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the human loop.</p>
+    #[doc(hidden)]
     pub human_loop_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the flow definition.</p>
+    #[doc(hidden)]
     pub flow_definition_arn: std::option::Option<std::string::String>,
     /// <p>An object that contains information about the output of the human loop.</p>
+    #[doc(hidden)]
     pub human_loop_output: std::option::Option<crate::model::HumanLoopOutput>,
 }
 impl DescribeHumanLoopOutput {
@@ -243,11 +251,10 @@ impl std::fmt::Debug for DescribeHumanLoopOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeHumanLoopOutput`](crate::output::DescribeHumanLoopOutput)
+/// See [`DescribeHumanLoopOutput`](crate::output::DescribeHumanLoopOutput).
 pub mod describe_human_loop_output {
 
-    /// A builder for [`DescribeHumanLoopOutput`](crate::output::DescribeHumanLoopOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeHumanLoopOutput`](crate::output::DescribeHumanLoopOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -363,7 +370,7 @@ pub mod describe_human_loop_output {
             self.human_loop_output = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeHumanLoopOutput`](crate::output::DescribeHumanLoopOutput)
+        /// Consumes the builder and constructs a [`DescribeHumanLoopOutput`](crate::output::DescribeHumanLoopOutput).
         pub fn build(self) -> crate::output::DescribeHumanLoopOutput {
             crate::output::DescribeHumanLoopOutput {
                 creation_time: self.creation_time,
@@ -379,7 +386,7 @@ pub mod describe_human_loop_output {
     }
 }
 impl DescribeHumanLoopOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeHumanLoopOutput`](crate::output::DescribeHumanLoopOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeHumanLoopOutput`](crate::output::DescribeHumanLoopOutput).
     pub fn builder() -> crate::output::describe_human_loop_output::Builder {
         crate::output::describe_human_loop_output::Builder::default()
     }
@@ -395,22 +402,21 @@ impl std::fmt::Debug for DeleteHumanLoopOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteHumanLoopOutput`](crate::output::DeleteHumanLoopOutput)
+/// See [`DeleteHumanLoopOutput`](crate::output::DeleteHumanLoopOutput).
 pub mod delete_human_loop_output {
 
-    /// A builder for [`DeleteHumanLoopOutput`](crate::output::DeleteHumanLoopOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteHumanLoopOutput`](crate::output::DeleteHumanLoopOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteHumanLoopOutput`](crate::output::DeleteHumanLoopOutput)
+        /// Consumes the builder and constructs a [`DeleteHumanLoopOutput`](crate::output::DeleteHumanLoopOutput).
         pub fn build(self) -> crate::output::DeleteHumanLoopOutput {
             crate::output::DeleteHumanLoopOutput {}
         }
     }
 }
 impl DeleteHumanLoopOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteHumanLoopOutput`](crate::output::DeleteHumanLoopOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteHumanLoopOutput`](crate::output::DeleteHumanLoopOutput).
     pub fn builder() -> crate::output::delete_human_loop_output::Builder {
         crate::output::delete_human_loop_output::Builder::default()
     }

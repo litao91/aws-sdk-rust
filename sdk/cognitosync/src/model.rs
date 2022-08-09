@@ -5,16 +5,22 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Record {
     /// The key for the record.
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// The value for the record.
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// The server sync count for this record.
+    #[doc(hidden)]
     pub sync_count: std::option::Option<i64>,
     /// The date on which the record was last modified.
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// The user/device that made the last change to this record.
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// The last modified date of the client device.
+    #[doc(hidden)]
     pub device_last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Record {
@@ -55,11 +61,10 @@ impl std::fmt::Debug for Record {
         formatter.finish()
     }
 }
-/// See [`Record`](crate::model::Record)
+/// See [`Record`](crate::model::Record).
 pub mod record {
 
-    /// A builder for [`Record`](crate::model::Record)
-    #[non_exhaustive]
+    /// A builder for [`Record`](crate::model::Record).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -139,7 +144,7 @@ pub mod record {
             self.device_last_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Record`](crate::model::Record)
+        /// Consumes the builder and constructs a [`Record`](crate::model::Record).
         pub fn build(self) -> crate::model::Record {
             crate::model::Record {
                 key: self.key,
@@ -153,7 +158,7 @@ pub mod record {
     }
 }
 impl Record {
-    /// Creates a new builder-style object to manufacture [`Record`](crate::model::Record)
+    /// Creates a new builder-style object to manufacture [`Record`](crate::model::Record).
     pub fn builder() -> crate::model::record::Builder {
         crate::model::record::Builder::default()
     }
@@ -164,14 +169,19 @@ impl Record {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecordPatch {
     /// An operation, either replace or remove.
+    #[doc(hidden)]
     pub op: std::option::Option<crate::model::Operation>,
     /// The key associated with the record patch.
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// The value associated with the record patch.
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// Last known server sync count for this record. Set to 0 if unknown.
+    #[doc(hidden)]
     pub sync_count: std::option::Option<i64>,
     /// The last modified date of the client device.
+    #[doc(hidden)]
     pub device_last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RecordPatch {
@@ -207,11 +217,10 @@ impl std::fmt::Debug for RecordPatch {
         formatter.finish()
     }
 }
-/// See [`RecordPatch`](crate::model::RecordPatch)
+/// See [`RecordPatch`](crate::model::RecordPatch).
 pub mod record_patch {
 
-    /// A builder for [`RecordPatch`](crate::model::RecordPatch)
-    #[non_exhaustive]
+    /// A builder for [`RecordPatch`](crate::model::RecordPatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) op: std::option::Option<crate::model::Operation>,
@@ -274,7 +283,7 @@ pub mod record_patch {
             self.device_last_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordPatch`](crate::model::RecordPatch)
+        /// Consumes the builder and constructs a [`RecordPatch`](crate::model::RecordPatch).
         pub fn build(self) -> crate::model::RecordPatch {
             crate::model::RecordPatch {
                 op: self.op,
@@ -287,7 +296,7 @@ pub mod record_patch {
     }
 }
 impl RecordPatch {
-    /// Creates a new builder-style object to manufacture [`RecordPatch`](crate::model::RecordPatch)
+    /// Creates a new builder-style object to manufacture [`RecordPatch`](crate::model::RecordPatch).
     pub fn builder() -> crate::model::record_patch::Builder {
         crate::model::record_patch::Builder::default()
     }
@@ -353,12 +362,15 @@ impl AsRef<str> for Operation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CognitoStreams {
     /// The name of the Cognito stream to receive updates. This stream must be in the developers account and in the same region as the identity pool.
+    #[doc(hidden)]
     pub stream_name: std::option::Option<std::string::String>,
     /// The ARN of the role Amazon Cognito can assume in order to publish to the stream. This role must grant access to Amazon Cognito (cognito-sync) to invoke PutRecord on your Cognito stream.
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// Status of the Cognito streams. Valid values are:
     /// <p>ENABLED - Streaming of updates to identity pool is enabled.</p>
     /// <p>DISABLED - Streaming of updates to identity pool is disabled. Bulk publish will also fail if StreamingStatus is DISABLED.</p>
+    #[doc(hidden)]
     pub streaming_status: std::option::Option<crate::model::StreamingStatus>,
 }
 impl CognitoStreams {
@@ -386,11 +398,10 @@ impl std::fmt::Debug for CognitoStreams {
         formatter.finish()
     }
 }
-/// See [`CognitoStreams`](crate::model::CognitoStreams)
+/// See [`CognitoStreams`](crate::model::CognitoStreams).
 pub mod cognito_streams {
 
-    /// A builder for [`CognitoStreams`](crate::model::CognitoStreams)
-    #[non_exhaustive]
+    /// A builder for [`CognitoStreams`](crate::model::CognitoStreams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_name: std::option::Option<std::string::String>,
@@ -435,7 +446,7 @@ pub mod cognito_streams {
             self.streaming_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CognitoStreams`](crate::model::CognitoStreams)
+        /// Consumes the builder and constructs a [`CognitoStreams`](crate::model::CognitoStreams).
         pub fn build(self) -> crate::model::CognitoStreams {
             crate::model::CognitoStreams {
                 stream_name: self.stream_name,
@@ -446,7 +457,7 @@ pub mod cognito_streams {
     }
 }
 impl CognitoStreams {
-    /// Creates a new builder-style object to manufacture [`CognitoStreams`](crate::model::CognitoStreams)
+    /// Creates a new builder-style object to manufacture [`CognitoStreams`](crate::model::CognitoStreams).
     pub fn builder() -> crate::model::cognito_streams::Builder {
         crate::model::cognito_streams::Builder::default()
     }
@@ -512,8 +523,10 @@ impl AsRef<str> for StreamingStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PushSync {
     /// <p>List of SNS platform application ARNs that could be used by clients.</p>
+    #[doc(hidden)]
     pub application_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A role configured to allow Cognito to call SNS on behalf of the developer.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl PushSync {
@@ -534,11 +547,10 @@ impl std::fmt::Debug for PushSync {
         formatter.finish()
     }
 }
-/// See [`PushSync`](crate::model::PushSync)
+/// See [`PushSync`](crate::model::PushSync).
 pub mod push_sync {
 
-    /// A builder for [`PushSync`](crate::model::PushSync)
-    #[non_exhaustive]
+    /// A builder for [`PushSync`](crate::model::PushSync).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -574,7 +586,7 @@ pub mod push_sync {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PushSync`](crate::model::PushSync)
+        /// Consumes the builder and constructs a [`PushSync`](crate::model::PushSync).
         pub fn build(self) -> crate::model::PushSync {
             crate::model::PushSync {
                 application_arns: self.application_arns,
@@ -584,7 +596,7 @@ pub mod push_sync {
     }
 }
 impl PushSync {
-    /// Creates a new builder-style object to manufacture [`PushSync`](crate::model::PushSync)
+    /// Creates a new builder-style object to manufacture [`PushSync`](crate::model::PushSync).
     pub fn builder() -> crate::model::push_sync::Builder {
         crate::model::push_sync::Builder::default()
     }
@@ -658,12 +670,16 @@ impl AsRef<str> for Platform {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityPoolUsage {
     /// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// Number of sync sessions for the identity pool.
+    #[doc(hidden)]
     pub sync_sessions_count: std::option::Option<i64>,
     /// Data storage information for the identity pool.
+    #[doc(hidden)]
     pub data_storage: std::option::Option<i64>,
     /// Date on which the identity pool was last modified.
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl IdentityPoolUsage {
@@ -694,11 +710,10 @@ impl std::fmt::Debug for IdentityPoolUsage {
         formatter.finish()
     }
 }
-/// See [`IdentityPoolUsage`](crate::model::IdentityPoolUsage)
+/// See [`IdentityPoolUsage`](crate::model::IdentityPoolUsage).
 pub mod identity_pool_usage {
 
-    /// A builder for [`IdentityPoolUsage`](crate::model::IdentityPoolUsage)
-    #[non_exhaustive]
+    /// A builder for [`IdentityPoolUsage`](crate::model::IdentityPoolUsage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -753,7 +768,7 @@ pub mod identity_pool_usage {
             self.last_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityPoolUsage`](crate::model::IdentityPoolUsage)
+        /// Consumes the builder and constructs a [`IdentityPoolUsage`](crate::model::IdentityPoolUsage).
         pub fn build(self) -> crate::model::IdentityPoolUsage {
             crate::model::IdentityPoolUsage {
                 identity_pool_id: self.identity_pool_id,
@@ -765,7 +780,7 @@ pub mod identity_pool_usage {
     }
 }
 impl IdentityPoolUsage {
-    /// Creates a new builder-style object to manufacture [`IdentityPoolUsage`](crate::model::IdentityPoolUsage)
+    /// Creates a new builder-style object to manufacture [`IdentityPoolUsage`](crate::model::IdentityPoolUsage).
     pub fn builder() -> crate::model::identity_pool_usage::Builder {
         crate::model::identity_pool_usage::Builder::default()
     }
@@ -776,18 +791,25 @@ impl IdentityPoolUsage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Dataset {
     /// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// A string of up to 128 characters. Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-' (dash), and '.' (dot).
+    #[doc(hidden)]
     pub dataset_name: std::option::Option<std::string::String>,
     /// Date on which the dataset was created.
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// Date when the dataset was last modified.
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// The device that made the last change to this dataset.
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// Total size in bytes of the records in this dataset.
+    #[doc(hidden)]
     pub data_storage: std::option::Option<i64>,
     /// Number of records in this dataset.
+    #[doc(hidden)]
     pub num_records: std::option::Option<i64>,
 }
 impl Dataset {
@@ -833,11 +855,10 @@ impl std::fmt::Debug for Dataset {
         formatter.finish()
     }
 }
-/// See [`Dataset`](crate::model::Dataset)
+/// See [`Dataset`](crate::model::Dataset).
 pub mod dataset {
 
-    /// A builder for [`Dataset`](crate::model::Dataset)
-    #[non_exhaustive]
+    /// A builder for [`Dataset`](crate::model::Dataset).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -928,7 +949,7 @@ pub mod dataset {
             self.num_records = input;
             self
         }
-        /// Consumes the builder and constructs a [`Dataset`](crate::model::Dataset)
+        /// Consumes the builder and constructs a [`Dataset`](crate::model::Dataset).
         pub fn build(self) -> crate::model::Dataset {
             crate::model::Dataset {
                 identity_id: self.identity_id,
@@ -943,7 +964,7 @@ pub mod dataset {
     }
 }
 impl Dataset {
-    /// Creates a new builder-style object to manufacture [`Dataset`](crate::model::Dataset)
+    /// Creates a new builder-style object to manufacture [`Dataset`](crate::model::Dataset).
     pub fn builder() -> crate::model::dataset::Builder {
         crate::model::dataset::Builder::default()
     }
@@ -1017,14 +1038,19 @@ impl AsRef<str> for BulkPublishStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityUsage {
     /// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// Date on which the identity was last modified.
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// Number of datasets for the identity.
+    #[doc(hidden)]
     pub dataset_count: i32,
     /// Total data storage for this identity.
+    #[doc(hidden)]
     pub data_storage: std::option::Option<i64>,
 }
 impl IdentityUsage {
@@ -1060,11 +1086,10 @@ impl std::fmt::Debug for IdentityUsage {
         formatter.finish()
     }
 }
-/// See [`IdentityUsage`](crate::model::IdentityUsage)
+/// See [`IdentityUsage`](crate::model::IdentityUsage).
 pub mod identity_usage {
 
-    /// A builder for [`IdentityUsage`](crate::model::IdentityUsage)
-    #[non_exhaustive]
+    /// A builder for [`IdentityUsage`](crate::model::IdentityUsage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -1130,7 +1155,7 @@ pub mod identity_usage {
             self.data_storage = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityUsage`](crate::model::IdentityUsage)
+        /// Consumes the builder and constructs a [`IdentityUsage`](crate::model::IdentityUsage).
         pub fn build(self) -> crate::model::IdentityUsage {
             crate::model::IdentityUsage {
                 identity_id: self.identity_id,
@@ -1143,7 +1168,7 @@ pub mod identity_usage {
     }
 }
 impl IdentityUsage {
-    /// Creates a new builder-style object to manufacture [`IdentityUsage`](crate::model::IdentityUsage)
+    /// Creates a new builder-style object to manufacture [`IdentityUsage`](crate::model::IdentityUsage).
     pub fn builder() -> crate::model::identity_usage::Builder {
         crate::model::identity_usage::Builder::default()
     }

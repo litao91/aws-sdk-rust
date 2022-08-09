@@ -3,28 +3,36 @@
 #[non_exhaustive]
 pub struct RecognizeUtteranceOutput {
     /// <p>Indicates whether the input mode to the operation was text or speech. </p>
+    #[doc(hidden)]
     pub input_mode: std::option::Option<std::string::String>,
     /// <p>Content type as specified in the <code>responseContentType</code> in the request.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>A list of messages that were last sent to the user. The messages are ordered based on the order that you returned the messages from your Lambda function or the order that the messages are defined in the bot.</p>
     /// <p>The <code>messages</code> field is compressed with gzip and then base64 encoded. Before you can use the contents of the field, you must decode and decompress the contents. See the example for a simple function to decode and decompress the contents.</p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::string::String>,
     /// <p>A list of intents that Amazon Lex V2 determined might satisfy the user's utterance.</p>
     /// <p>Each interpretation includes the intent, a score that indicates how confident Amazon Lex V2 is that the interpretation is the correct one, and an optional sentiment response that indicates the sentiment expressed in the utterance.</p>
     /// <p>The <code>interpretations</code> field is compressed with gzip and then base64 encoded. Before you can use the contents of the field, you must decode and decompress the contents. See the example for a simple function to decode and decompress the contents.</p>
+    #[doc(hidden)]
     pub interpretations: std::option::Option<std::string::String>,
     /// <p>Represents the current state of the dialog between the user and the bot.</p>
     /// <p>Use this to determine the progress of the conversation and what the next action might be.</p>
     /// <p>The <code>sessionState</code> field is compressed with gzip and then base64 encoded. Before you can use the contents of the field, you must decode and decompress the contents. See the example for a simple function to decode and decompress the contents.</p>
+    #[doc(hidden)]
     pub session_state: std::option::Option<std::string::String>,
     /// <p>The attributes sent in the request.</p>
     /// <p>The <code>requestAttributes</code> field is compressed with gzip and then base64 encoded. Before you can use the contents of the field, you must decode and decompress the contents.</p>
+    #[doc(hidden)]
     pub request_attributes: std::option::Option<std::string::String>,
     /// <p>The identifier of the session in use.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
     /// <p>The text used to process the request.</p>
     /// <p>If the input was an audio stream, the <code>inputTranscript</code> field contains the text extracted from the audio stream. This is the text that is actually processed to recognize intents and slot values. You can use this information to determine if Amazon Lex V2 is correctly processing the audio that you send.</p>
     /// <p>The <code>inputTranscript</code> field is compressed with gzip and then base64 encoded. Before you can use the contents of the field, you must decode and decompress the contents. See the example for a simple function to decode and decompress the contents.</p>
+    #[doc(hidden)]
     pub input_transcript: std::option::Option<std::string::String>,
     /// <p>The prompt or statement to send to the user. This is based on the bot configuration and context. For example, if Amazon Lex V2 did not understand the user intent, it sends the <code>clarificationPrompt</code> configured for the bot. If the intent requires confirmation before taking the fulfillment action, it sends the <code>confirmationPrompt</code>. Another example: Suppose that the Lambda function successfully fulfilled the intent, and sent a message to convey to the user. Then Amazon Lex V2 sends that message in the response.</p>
     pub audio_stream: aws_smithy_http::byte_stream::ByteStream,
@@ -90,11 +98,10 @@ impl std::fmt::Debug for RecognizeUtteranceOutput {
         formatter.finish()
     }
 }
-/// See [`RecognizeUtteranceOutput`](crate::output::RecognizeUtteranceOutput)
+/// See [`RecognizeUtteranceOutput`](crate::output::RecognizeUtteranceOutput).
 pub mod recognize_utterance_output {
 
-    /// A builder for [`RecognizeUtteranceOutput`](crate::output::RecognizeUtteranceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RecognizeUtteranceOutput`](crate::output::RecognizeUtteranceOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_mode: std::option::Option<std::string::String>,
@@ -229,7 +236,7 @@ pub mod recognize_utterance_output {
             self.audio_stream = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecognizeUtteranceOutput`](crate::output::RecognizeUtteranceOutput)
+        /// Consumes the builder and constructs a [`RecognizeUtteranceOutput`](crate::output::RecognizeUtteranceOutput).
         pub fn build(self) -> crate::output::RecognizeUtteranceOutput {
             crate::output::RecognizeUtteranceOutput {
                 input_mode: self.input_mode,
@@ -246,7 +253,7 @@ pub mod recognize_utterance_output {
     }
 }
 impl RecognizeUtteranceOutput {
-    /// Creates a new builder-style object to manufacture [`RecognizeUtteranceOutput`](crate::output::RecognizeUtteranceOutput)
+    /// Creates a new builder-style object to manufacture [`RecognizeUtteranceOutput`](crate::output::RecognizeUtteranceOutput).
     pub fn builder() -> crate::output::recognize_utterance_output::Builder {
         crate::output::recognize_utterance_output::Builder::default()
     }
@@ -257,17 +264,22 @@ impl RecognizeUtteranceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecognizeTextOutput {
     /// <p>A list of messages last sent to the user. The messages are ordered based on the order that you returned the messages from your Lambda function or the order that the messages are defined in the bot.</p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
     /// <p>Represents the current state of the dialog between the user and the bot. </p>
     /// <p>Use this to determine the progress of the conversation and what the next action may be.</p>
+    #[doc(hidden)]
     pub session_state: std::option::Option<crate::model::SessionState>,
     /// <p>A list of intents that Amazon Lex V2 determined might satisfy the user's utterance. </p>
     /// <p>Each interpretation includes the intent, a score that indicates now confident Amazon Lex V2 is that the interpretation is the correct one, and an optional sentiment response that indicates the sentiment expressed in the utterance.</p>
+    #[doc(hidden)]
     pub interpretations: std::option::Option<std::vec::Vec<crate::model::Interpretation>>,
     /// <p>The attributes sent in the request.</p>
+    #[doc(hidden)]
     pub request_attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The identifier of the session in use.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
 }
 impl RecognizeTextOutput {
@@ -308,11 +320,10 @@ impl std::fmt::Debug for RecognizeTextOutput {
         formatter.finish()
     }
 }
-/// See [`RecognizeTextOutput`](crate::output::RecognizeTextOutput)
+/// See [`RecognizeTextOutput`](crate::output::RecognizeTextOutput).
 pub mod recognize_text_output {
 
-    /// A builder for [`RecognizeTextOutput`](crate::output::RecognizeTextOutput)
-    #[non_exhaustive]
+    /// A builder for [`RecognizeTextOutput`](crate::output::RecognizeTextOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
@@ -415,7 +426,7 @@ pub mod recognize_text_output {
             self.session_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecognizeTextOutput`](crate::output::RecognizeTextOutput)
+        /// Consumes the builder and constructs a [`RecognizeTextOutput`](crate::output::RecognizeTextOutput).
         pub fn build(self) -> crate::output::RecognizeTextOutput {
             crate::output::RecognizeTextOutput {
                 messages: self.messages,
@@ -428,7 +439,7 @@ pub mod recognize_text_output {
     }
 }
 impl RecognizeTextOutput {
-    /// Creates a new builder-style object to manufacture [`RecognizeTextOutput`](crate::output::RecognizeTextOutput)
+    /// Creates a new builder-style object to manufacture [`RecognizeTextOutput`](crate::output::RecognizeTextOutput).
     pub fn builder() -> crate::output::recognize_text_output::Builder {
         crate::output::recognize_text_output::Builder::default()
     }
@@ -438,15 +449,20 @@ impl RecognizeTextOutput {
 #[non_exhaustive]
 pub struct PutSessionOutput {
     /// <p>The type of response. Same as the type specified in the <code>responseContentType</code> field in the request.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>A list of messages that were last sent to the user. The messages are ordered based on how you return the messages from you Lambda function or the order that the messages are defined in the bot.</p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::string::String>,
     /// <p>Represents the current state of the dialog between the user and the bot.</p>
     /// <p>Use this to determine the progress of the conversation and what the next action may be.</p>
+    #[doc(hidden)]
     pub session_state: std::option::Option<std::string::String>,
     /// <p>Request-specific information passed between the client application and Amazon Lex V2. These are the same as the <code>requestAttribute</code> parameter in the call to the <code>PutSession</code> operation.</p>
+    #[doc(hidden)]
     pub request_attributes: std::option::Option<std::string::String>,
     /// <p>The identifier of the session that received the data.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
     /// <p>If the requested content type was audio, the audio version of the message to convey to the user.</p>
     pub audio_stream: aws_smithy_http::byte_stream::ByteStream,
@@ -490,11 +506,10 @@ impl std::fmt::Debug for PutSessionOutput {
         formatter.finish()
     }
 }
-/// See [`PutSessionOutput`](crate::output::PutSessionOutput)
+/// See [`PutSessionOutput`](crate::output::PutSessionOutput).
 pub mod put_session_output {
 
-    /// A builder for [`PutSessionOutput`](crate::output::PutSessionOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutSessionOutput`](crate::output::PutSessionOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<std::string::String>,
@@ -576,7 +591,7 @@ pub mod put_session_output {
             self.audio_stream = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutSessionOutput`](crate::output::PutSessionOutput)
+        /// Consumes the builder and constructs a [`PutSessionOutput`](crate::output::PutSessionOutput).
         pub fn build(self) -> crate::output::PutSessionOutput {
             crate::output::PutSessionOutput {
                 content_type: self.content_type,
@@ -590,7 +605,7 @@ pub mod put_session_output {
     }
 }
 impl PutSessionOutput {
-    /// Creates a new builder-style object to manufacture [`PutSessionOutput`](crate::output::PutSessionOutput)
+    /// Creates a new builder-style object to manufacture [`PutSessionOutput`](crate::output::PutSessionOutput).
     pub fn builder() -> crate::output::put_session_output::Builder {
         crate::output::put_session_output::Builder::default()
     }
@@ -601,14 +616,18 @@ impl PutSessionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSessionOutput {
     /// <p>The identifier of the returned session.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
     /// <p>A list of messages that were last sent to the user. The messages are ordered based on the order that your returned the messages from your Lambda function or the order that messages are defined in the bot. </p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
     /// <p>A list of intents that Amazon Lex V2 determined might satisfy the user's utterance. </p>
     /// <p>Each interpretation includes the intent, a score that indicates how confident Amazon Lex V2 is that the interpretation is the correct one, and an optional sentiment response that indicates the sentiment expressed in the utterance.</p>
+    #[doc(hidden)]
     pub interpretations: std::option::Option<std::vec::Vec<crate::model::Interpretation>>,
     /// <p>Represents the current state of the dialog between the user and the bot.</p>
     /// <p>You can use this to determine the progress of the conversation and what the next action might be.</p>
+    #[doc(hidden)]
     pub session_state: std::option::Option<crate::model::SessionState>,
 }
 impl GetSessionOutput {
@@ -641,11 +660,10 @@ impl std::fmt::Debug for GetSessionOutput {
         formatter.finish()
     }
 }
-/// See [`GetSessionOutput`](crate::output::GetSessionOutput)
+/// See [`GetSessionOutput`](crate::output::GetSessionOutput).
 pub mod get_session_output {
 
-    /// A builder for [`GetSessionOutput`](crate::output::GetSessionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSessionOutput`](crate::output::GetSessionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) session_id: std::option::Option<std::string::String>,
@@ -720,7 +738,7 @@ pub mod get_session_output {
             self.session_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSessionOutput`](crate::output::GetSessionOutput)
+        /// Consumes the builder and constructs a [`GetSessionOutput`](crate::output::GetSessionOutput).
         pub fn build(self) -> crate::output::GetSessionOutput {
             crate::output::GetSessionOutput {
                 session_id: self.session_id,
@@ -732,7 +750,7 @@ pub mod get_session_output {
     }
 }
 impl GetSessionOutput {
-    /// Creates a new builder-style object to manufacture [`GetSessionOutput`](crate::output::GetSessionOutput)
+    /// Creates a new builder-style object to manufacture [`GetSessionOutput`](crate::output::GetSessionOutput).
     pub fn builder() -> crate::output::get_session_output::Builder {
         crate::output::get_session_output::Builder::default()
     }
@@ -743,12 +761,16 @@ impl GetSessionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteSessionOutput {
     /// <p>The identifier of the bot that contained the session data.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The alias identifier in use for the bot that contained the session data.</p>
+    #[doc(hidden)]
     pub bot_alias_id: std::option::Option<std::string::String>,
     /// <p>The locale where the session was used.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the deleted session.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
 }
 impl DeleteSessionOutput {
@@ -779,11 +801,10 @@ impl std::fmt::Debug for DeleteSessionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSessionOutput`](crate::output::DeleteSessionOutput)
+/// See [`DeleteSessionOutput`](crate::output::DeleteSessionOutput).
 pub mod delete_session_output {
 
-    /// A builder for [`DeleteSessionOutput`](crate::output::DeleteSessionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSessionOutput`](crate::output::DeleteSessionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -832,7 +853,7 @@ pub mod delete_session_output {
             self.session_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteSessionOutput`](crate::output::DeleteSessionOutput)
+        /// Consumes the builder and constructs a [`DeleteSessionOutput`](crate::output::DeleteSessionOutput).
         pub fn build(self) -> crate::output::DeleteSessionOutput {
             crate::output::DeleteSessionOutput {
                 bot_id: self.bot_id,
@@ -844,7 +865,7 @@ pub mod delete_session_output {
     }
 }
 impl DeleteSessionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSessionOutput`](crate::output::DeleteSessionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSessionOutput`](crate::output::DeleteSessionOutput).
     pub fn builder() -> crate::output::delete_session_output::Builder {
         crate::output::delete_session_output::Builder::default()
     }

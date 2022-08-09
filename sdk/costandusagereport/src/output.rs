@@ -10,22 +10,21 @@ impl std::fmt::Debug for PutReportDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`PutReportDefinitionOutput`](crate::output::PutReportDefinitionOutput)
+/// See [`PutReportDefinitionOutput`](crate::output::PutReportDefinitionOutput).
 pub mod put_report_definition_output {
 
-    /// A builder for [`PutReportDefinitionOutput`](crate::output::PutReportDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutReportDefinitionOutput`](crate::output::PutReportDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutReportDefinitionOutput`](crate::output::PutReportDefinitionOutput)
+        /// Consumes the builder and constructs a [`PutReportDefinitionOutput`](crate::output::PutReportDefinitionOutput).
         pub fn build(self) -> crate::output::PutReportDefinitionOutput {
             crate::output::PutReportDefinitionOutput {}
         }
     }
 }
 impl PutReportDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`PutReportDefinitionOutput`](crate::output::PutReportDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`PutReportDefinitionOutput`](crate::output::PutReportDefinitionOutput).
     pub fn builder() -> crate::output::put_report_definition_output::Builder {
         crate::output::put_report_definition_output::Builder::default()
     }
@@ -41,22 +40,21 @@ impl std::fmt::Debug for ModifyReportDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyReportDefinitionOutput`](crate::output::ModifyReportDefinitionOutput)
+/// See [`ModifyReportDefinitionOutput`](crate::output::ModifyReportDefinitionOutput).
 pub mod modify_report_definition_output {
 
-    /// A builder for [`ModifyReportDefinitionOutput`](crate::output::ModifyReportDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyReportDefinitionOutput`](crate::output::ModifyReportDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ModifyReportDefinitionOutput`](crate::output::ModifyReportDefinitionOutput)
+        /// Consumes the builder and constructs a [`ModifyReportDefinitionOutput`](crate::output::ModifyReportDefinitionOutput).
         pub fn build(self) -> crate::output::ModifyReportDefinitionOutput {
             crate::output::ModifyReportDefinitionOutput {}
         }
     }
 }
 impl ModifyReportDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyReportDefinitionOutput`](crate::output::ModifyReportDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyReportDefinitionOutput`](crate::output::ModifyReportDefinitionOutput).
     pub fn builder() -> crate::output::modify_report_definition_output::Builder {
         crate::output::modify_report_definition_output::Builder::default()
     }
@@ -67,8 +65,10 @@ impl ModifyReportDefinitionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReportDefinitionsOutput {
     /// <p>A list of AWS Cost and Usage reports owned by the account.</p>
+    #[doc(hidden)]
     pub report_definitions: std::option::Option<std::vec::Vec<crate::model::ReportDefinition>>,
     /// <p>A generic string.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeReportDefinitionsOutput {
@@ -89,11 +89,10 @@ impl std::fmt::Debug for DescribeReportDefinitionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReportDefinitionsOutput`](crate::output::DescribeReportDefinitionsOutput)
+/// See [`DescribeReportDefinitionsOutput`](crate::output::DescribeReportDefinitionsOutput).
 pub mod describe_report_definitions_output {
 
-    /// A builder for [`DescribeReportDefinitionsOutput`](crate::output::DescribeReportDefinitionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReportDefinitionsOutput`](crate::output::DescribeReportDefinitionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_definitions:
@@ -130,7 +129,7 @@ pub mod describe_report_definitions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReportDefinitionsOutput`](crate::output::DescribeReportDefinitionsOutput)
+        /// Consumes the builder and constructs a [`DescribeReportDefinitionsOutput`](crate::output::DescribeReportDefinitionsOutput).
         pub fn build(self) -> crate::output::DescribeReportDefinitionsOutput {
             crate::output::DescribeReportDefinitionsOutput {
                 report_definitions: self.report_definitions,
@@ -140,7 +139,7 @@ pub mod describe_report_definitions_output {
     }
 }
 impl DescribeReportDefinitionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReportDefinitionsOutput`](crate::output::DescribeReportDefinitionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReportDefinitionsOutput`](crate::output::DescribeReportDefinitionsOutput).
     pub fn builder() -> crate::output::describe_report_definitions_output::Builder {
         crate::output::describe_report_definitions_output::Builder::default()
     }
@@ -151,6 +150,7 @@ impl DescribeReportDefinitionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteReportDefinitionOutput {
     /// <p>Whether the deletion was successful or not.</p>
+    #[doc(hidden)]
     pub response_message: std::option::Option<std::string::String>,
 }
 impl DeleteReportDefinitionOutput {
@@ -166,11 +166,10 @@ impl std::fmt::Debug for DeleteReportDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteReportDefinitionOutput`](crate::output::DeleteReportDefinitionOutput)
+/// See [`DeleteReportDefinitionOutput`](crate::output::DeleteReportDefinitionOutput).
 pub mod delete_report_definition_output {
 
-    /// A builder for [`DeleteReportDefinitionOutput`](crate::output::DeleteReportDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteReportDefinitionOutput`](crate::output::DeleteReportDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) response_message: std::option::Option<std::string::String>,
@@ -189,7 +188,7 @@ pub mod delete_report_definition_output {
             self.response_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteReportDefinitionOutput`](crate::output::DeleteReportDefinitionOutput)
+        /// Consumes the builder and constructs a [`DeleteReportDefinitionOutput`](crate::output::DeleteReportDefinitionOutput).
         pub fn build(self) -> crate::output::DeleteReportDefinitionOutput {
             crate::output::DeleteReportDefinitionOutput {
                 response_message: self.response_message,
@@ -198,7 +197,7 @@ pub mod delete_report_definition_output {
     }
 }
 impl DeleteReportDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteReportDefinitionOutput`](crate::output::DeleteReportDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteReportDefinitionOutput`](crate::output::DeleteReportDefinitionOutput).
     pub fn builder() -> crate::output::delete_report_definition_output::Builder {
         crate::output::delete_report_definition_output::Builder::default()
     }

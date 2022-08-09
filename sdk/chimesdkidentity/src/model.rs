@@ -186,8 +186,10 @@ impl AsRef<str> for AllowMessages {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key in a tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value in a tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -208,11 +210,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -239,7 +240,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -249,7 +250,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -260,8 +261,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointAttributes {
     /// <p>The device token for the GCM, APNS, and APNS_SANDBOX endpoint types.</p>
+    #[doc(hidden)]
     pub device_token: std::option::Option<std::string::String>,
     /// <p>The VOIP device token for the APNS and APNS_SANDBOX endpoint types.</p>
+    #[doc(hidden)]
     pub voip_device_token: std::option::Option<std::string::String>,
 }
 impl EndpointAttributes {
@@ -282,11 +285,10 @@ impl std::fmt::Debug for EndpointAttributes {
         formatter.finish()
     }
 }
-/// See [`EndpointAttributes`](crate::model::EndpointAttributes)
+/// See [`EndpointAttributes`](crate::model::EndpointAttributes).
 pub mod endpoint_attributes {
 
-    /// A builder for [`EndpointAttributes`](crate::model::EndpointAttributes)
-    #[non_exhaustive]
+    /// A builder for [`EndpointAttributes`](crate::model::EndpointAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_token: std::option::Option<std::string::String>,
@@ -316,7 +318,7 @@ pub mod endpoint_attributes {
             self.voip_device_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointAttributes`](crate::model::EndpointAttributes)
+        /// Consumes the builder and constructs a [`EndpointAttributes`](crate::model::EndpointAttributes).
         pub fn build(self) -> crate::model::EndpointAttributes {
             crate::model::EndpointAttributes {
                 device_token: self.device_token,
@@ -326,7 +328,7 @@ pub mod endpoint_attributes {
     }
 }
 impl EndpointAttributes {
-    /// Creates a new builder-style object to manufacture [`EndpointAttributes`](crate::model::EndpointAttributes)
+    /// Creates a new builder-style object to manufacture [`EndpointAttributes`](crate::model::EndpointAttributes).
     pub fn builder() -> crate::model::endpoint_attributes::Builder {
         crate::model::endpoint_attributes::Builder::default()
     }
@@ -396,6 +398,7 @@ impl AsRef<str> for AppInstanceUserEndpointType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstanceRetentionSettings {
     /// <p>The length of time in days to retain the messages in a channel.</p>
+    #[doc(hidden)]
     pub channel_retention_settings: std::option::Option<crate::model::ChannelRetentionSettings>,
 }
 impl AppInstanceRetentionSettings {
@@ -416,11 +419,10 @@ impl std::fmt::Debug for AppInstanceRetentionSettings {
         formatter.finish()
     }
 }
-/// See [`AppInstanceRetentionSettings`](crate::model::AppInstanceRetentionSettings)
+/// See [`AppInstanceRetentionSettings`](crate::model::AppInstanceRetentionSettings).
 pub mod app_instance_retention_settings {
 
-    /// A builder for [`AppInstanceRetentionSettings`](crate::model::AppInstanceRetentionSettings)
-    #[non_exhaustive]
+    /// A builder for [`AppInstanceRetentionSettings`](crate::model::AppInstanceRetentionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_retention_settings:
@@ -443,7 +445,7 @@ pub mod app_instance_retention_settings {
             self.channel_retention_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstanceRetentionSettings`](crate::model::AppInstanceRetentionSettings)
+        /// Consumes the builder and constructs a [`AppInstanceRetentionSettings`](crate::model::AppInstanceRetentionSettings).
         pub fn build(self) -> crate::model::AppInstanceRetentionSettings {
             crate::model::AppInstanceRetentionSettings {
                 channel_retention_settings: self.channel_retention_settings,
@@ -452,7 +454,7 @@ pub mod app_instance_retention_settings {
     }
 }
 impl AppInstanceRetentionSettings {
-    /// Creates a new builder-style object to manufacture [`AppInstanceRetentionSettings`](crate::model::AppInstanceRetentionSettings)
+    /// Creates a new builder-style object to manufacture [`AppInstanceRetentionSettings`](crate::model::AppInstanceRetentionSettings).
     pub fn builder() -> crate::model::app_instance_retention_settings::Builder {
         crate::model::app_instance_retention_settings::Builder::default()
     }
@@ -463,6 +465,7 @@ impl AppInstanceRetentionSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelRetentionSettings {
     /// <p>The time in days to retain the messages in a channel.</p>
+    #[doc(hidden)]
     pub retention_days: std::option::Option<i32>,
 }
 impl ChannelRetentionSettings {
@@ -478,11 +481,10 @@ impl std::fmt::Debug for ChannelRetentionSettings {
         formatter.finish()
     }
 }
-/// See [`ChannelRetentionSettings`](crate::model::ChannelRetentionSettings)
+/// See [`ChannelRetentionSettings`](crate::model::ChannelRetentionSettings).
 pub mod channel_retention_settings {
 
-    /// A builder for [`ChannelRetentionSettings`](crate::model::ChannelRetentionSettings)
-    #[non_exhaustive]
+    /// A builder for [`ChannelRetentionSettings`](crate::model::ChannelRetentionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) retention_days: std::option::Option<i32>,
@@ -498,7 +500,7 @@ pub mod channel_retention_settings {
             self.retention_days = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelRetentionSettings`](crate::model::ChannelRetentionSettings)
+        /// Consumes the builder and constructs a [`ChannelRetentionSettings`](crate::model::ChannelRetentionSettings).
         pub fn build(self) -> crate::model::ChannelRetentionSettings {
             crate::model::ChannelRetentionSettings {
                 retention_days: self.retention_days,
@@ -507,7 +509,7 @@ pub mod channel_retention_settings {
     }
 }
 impl ChannelRetentionSettings {
-    /// Creates a new builder-style object to manufacture [`ChannelRetentionSettings`](crate::model::ChannelRetentionSettings)
+    /// Creates a new builder-style object to manufacture [`ChannelRetentionSettings`](crate::model::ChannelRetentionSettings).
     pub fn builder() -> crate::model::channel_retention_settings::Builder {
         crate::model::channel_retention_settings::Builder::default()
     }
@@ -518,10 +520,13 @@ impl ChannelRetentionSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstanceUserSummary {
     /// <p>The ARN of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user_arn: std::option::Option<std::string::String>,
     /// <p>The name of an <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The metadata of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<std::string::String>,
 }
 impl AppInstanceUserSummary {
@@ -547,11 +552,10 @@ impl std::fmt::Debug for AppInstanceUserSummary {
         formatter.finish()
     }
 }
-/// See [`AppInstanceUserSummary`](crate::model::AppInstanceUserSummary)
+/// See [`AppInstanceUserSummary`](crate::model::AppInstanceUserSummary).
 pub mod app_instance_user_summary {
 
-    /// A builder for [`AppInstanceUserSummary`](crate::model::AppInstanceUserSummary)
-    #[non_exhaustive]
+    /// A builder for [`AppInstanceUserSummary`](crate::model::AppInstanceUserSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_arn: std::option::Option<std::string::String>,
@@ -592,7 +596,7 @@ pub mod app_instance_user_summary {
             self.metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstanceUserSummary`](crate::model::AppInstanceUserSummary)
+        /// Consumes the builder and constructs a [`AppInstanceUserSummary`](crate::model::AppInstanceUserSummary).
         pub fn build(self) -> crate::model::AppInstanceUserSummary {
             crate::model::AppInstanceUserSummary {
                 app_instance_user_arn: self.app_instance_user_arn,
@@ -603,7 +607,7 @@ pub mod app_instance_user_summary {
     }
 }
 impl AppInstanceUserSummary {
-    /// Creates a new builder-style object to manufacture [`AppInstanceUserSummary`](crate::model::AppInstanceUserSummary)
+    /// Creates a new builder-style object to manufacture [`AppInstanceUserSummary`](crate::model::AppInstanceUserSummary).
     pub fn builder() -> crate::model::app_instance_user_summary::Builder {
         crate::model::app_instance_user_summary::Builder::default()
     }
@@ -614,16 +618,22 @@ impl AppInstanceUserSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstanceUserEndpointSummary {
     /// <p>The ARN of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub endpoint_id: std::option::Option<std::string::String>,
     /// <p>The name of the <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AppInstanceUserEndpointType>,
     /// <p>BBoolean that controls whether the <code>AppInstanceUserEndpoint</code> is opted in to receive messages. <code>ALL</code> indicates the endpoint will receive all messages. <code>NONE</code> indicates the endpoint will receive no messages.</p>
+    #[doc(hidden)]
     pub allow_messages: std::option::Option<crate::model::AllowMessages>,
     /// <p>A read-only field that represent the state of an <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub endpoint_state: std::option::Option<crate::model::EndpointState>,
 }
 impl AppInstanceUserEndpointSummary {
@@ -664,11 +674,10 @@ impl std::fmt::Debug for AppInstanceUserEndpointSummary {
         formatter.finish()
     }
 }
-/// See [`AppInstanceUserEndpointSummary`](crate::model::AppInstanceUserEndpointSummary)
+/// See [`AppInstanceUserEndpointSummary`](crate::model::AppInstanceUserEndpointSummary).
 pub mod app_instance_user_endpoint_summary {
 
-    /// A builder for [`AppInstanceUserEndpointSummary`](crate::model::AppInstanceUserEndpointSummary)
-    #[non_exhaustive]
+    /// A builder for [`AppInstanceUserEndpointSummary`](crate::model::AppInstanceUserEndpointSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_arn: std::option::Option<std::string::String>,
@@ -751,7 +760,7 @@ pub mod app_instance_user_endpoint_summary {
             self.endpoint_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstanceUserEndpointSummary`](crate::model::AppInstanceUserEndpointSummary)
+        /// Consumes the builder and constructs a [`AppInstanceUserEndpointSummary`](crate::model::AppInstanceUserEndpointSummary).
         pub fn build(self) -> crate::model::AppInstanceUserEndpointSummary {
             crate::model::AppInstanceUserEndpointSummary {
                 app_instance_user_arn: self.app_instance_user_arn,
@@ -765,7 +774,7 @@ pub mod app_instance_user_endpoint_summary {
     }
 }
 impl AppInstanceUserEndpointSummary {
-    /// Creates a new builder-style object to manufacture [`AppInstanceUserEndpointSummary`](crate::model::AppInstanceUserEndpointSummary)
+    /// Creates a new builder-style object to manufacture [`AppInstanceUserEndpointSummary`](crate::model::AppInstanceUserEndpointSummary).
     pub fn builder() -> crate::model::app_instance_user_endpoint_summary::Builder {
         crate::model::app_instance_user_endpoint_summary::Builder::default()
     }
@@ -782,8 +791,10 @@ impl AppInstanceUserEndpointSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointState {
     /// <p>Enum that indicates the Status of an <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EndpointStatus>,
     /// <p>The reason for the <code>EndpointStatus</code>.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<crate::model::EndpointStatusReason>,
 }
 impl EndpointState {
@@ -804,11 +815,10 @@ impl std::fmt::Debug for EndpointState {
         formatter.finish()
     }
 }
-/// See [`EndpointState`](crate::model::EndpointState)
+/// See [`EndpointState`](crate::model::EndpointState).
 pub mod endpoint_state {
 
-    /// A builder for [`EndpointState`](crate::model::EndpointState)
-    #[non_exhaustive]
+    /// A builder for [`EndpointState`](crate::model::EndpointState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::EndpointStatus>,
@@ -841,7 +851,7 @@ pub mod endpoint_state {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointState`](crate::model::EndpointState)
+        /// Consumes the builder and constructs a [`EndpointState`](crate::model::EndpointState).
         pub fn build(self) -> crate::model::EndpointState {
             crate::model::EndpointState {
                 status: self.status,
@@ -851,7 +861,7 @@ pub mod endpoint_state {
     }
 }
 impl EndpointState {
-    /// Creates a new builder-style object to manufacture [`EndpointState`](crate::model::EndpointState)
+    /// Creates a new builder-style object to manufacture [`EndpointState`](crate::model::EndpointState).
     pub fn builder() -> crate::model::endpoint_state::Builder {
         crate::model::endpoint_state::Builder::default()
     }
@@ -972,10 +982,13 @@ impl AsRef<str> for EndpointStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstanceSummary {
     /// <p>The <code>AppInstance</code> ARN.</p>
+    #[doc(hidden)]
     pub app_instance_arn: std::option::Option<std::string::String>,
     /// <p>The name of the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The metadata of the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<std::string::String>,
 }
 impl AppInstanceSummary {
@@ -1001,11 +1014,10 @@ impl std::fmt::Debug for AppInstanceSummary {
         formatter.finish()
     }
 }
-/// See [`AppInstanceSummary`](crate::model::AppInstanceSummary)
+/// See [`AppInstanceSummary`](crate::model::AppInstanceSummary).
 pub mod app_instance_summary {
 
-    /// A builder for [`AppInstanceSummary`](crate::model::AppInstanceSummary)
-    #[non_exhaustive]
+    /// A builder for [`AppInstanceSummary`](crate::model::AppInstanceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_arn: std::option::Option<std::string::String>,
@@ -1046,7 +1058,7 @@ pub mod app_instance_summary {
             self.metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstanceSummary`](crate::model::AppInstanceSummary)
+        /// Consumes the builder and constructs a [`AppInstanceSummary`](crate::model::AppInstanceSummary).
         pub fn build(self) -> crate::model::AppInstanceSummary {
             crate::model::AppInstanceSummary {
                 app_instance_arn: self.app_instance_arn,
@@ -1057,7 +1069,7 @@ pub mod app_instance_summary {
     }
 }
 impl AppInstanceSummary {
-    /// Creates a new builder-style object to manufacture [`AppInstanceSummary`](crate::model::AppInstanceSummary)
+    /// Creates a new builder-style object to manufacture [`AppInstanceSummary`](crate::model::AppInstanceSummary).
     pub fn builder() -> crate::model::app_instance_summary::Builder {
         crate::model::app_instance_summary::Builder::default()
     }
@@ -1068,6 +1080,7 @@ impl AppInstanceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstanceAdminSummary {
     /// <p>The details of the <code>AppInstanceAdmin</code>.</p>
+    #[doc(hidden)]
     pub admin: std::option::Option<crate::model::Identity>,
 }
 impl AppInstanceAdminSummary {
@@ -1083,11 +1096,10 @@ impl std::fmt::Debug for AppInstanceAdminSummary {
         formatter.finish()
     }
 }
-/// See [`AppInstanceAdminSummary`](crate::model::AppInstanceAdminSummary)
+/// See [`AppInstanceAdminSummary`](crate::model::AppInstanceAdminSummary).
 pub mod app_instance_admin_summary {
 
-    /// A builder for [`AppInstanceAdminSummary`](crate::model::AppInstanceAdminSummary)
-    #[non_exhaustive]
+    /// A builder for [`AppInstanceAdminSummary`](crate::model::AppInstanceAdminSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) admin: std::option::Option<crate::model::Identity>,
@@ -1103,14 +1115,14 @@ pub mod app_instance_admin_summary {
             self.admin = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstanceAdminSummary`](crate::model::AppInstanceAdminSummary)
+        /// Consumes the builder and constructs a [`AppInstanceAdminSummary`](crate::model::AppInstanceAdminSummary).
         pub fn build(self) -> crate::model::AppInstanceAdminSummary {
             crate::model::AppInstanceAdminSummary { admin: self.admin }
         }
     }
 }
 impl AppInstanceAdminSummary {
-    /// Creates a new builder-style object to manufacture [`AppInstanceAdminSummary`](crate::model::AppInstanceAdminSummary)
+    /// Creates a new builder-style object to manufacture [`AppInstanceAdminSummary`](crate::model::AppInstanceAdminSummary).
     pub fn builder() -> crate::model::app_instance_admin_summary::Builder {
         crate::model::app_instance_admin_summary::Builder::default()
     }
@@ -1121,8 +1133,10 @@ impl AppInstanceAdminSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Identity {
     /// <p>The ARN in an Identity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name in an Identity.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl Identity {
@@ -1143,11 +1157,10 @@ impl std::fmt::Debug for Identity {
         formatter.finish()
     }
 }
-/// See [`Identity`](crate::model::Identity)
+/// See [`Identity`](crate::model::Identity).
 pub mod identity {
 
-    /// A builder for [`Identity`](crate::model::Identity)
-    #[non_exhaustive]
+    /// A builder for [`Identity`](crate::model::Identity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1174,7 +1187,7 @@ pub mod identity {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Identity`](crate::model::Identity)
+        /// Consumes the builder and constructs a [`Identity`](crate::model::Identity).
         pub fn build(self) -> crate::model::Identity {
             crate::model::Identity {
                 arn: self.arn,
@@ -1184,7 +1197,7 @@ pub mod identity {
     }
 }
 impl Identity {
-    /// Creates a new builder-style object to manufacture [`Identity`](crate::model::Identity)
+    /// Creates a new builder-style object to manufacture [`Identity`](crate::model::Identity).
     pub fn builder() -> crate::model::identity::Builder {
         crate::model::identity::Builder::default()
     }
@@ -1195,22 +1208,31 @@ impl Identity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstanceUserEndpoint {
     /// <p>The ARN of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub endpoint_id: std::option::Option<std::string::String>,
     /// <p>The name of the <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AppInstanceUserEndpointType>,
     /// <p>The ARN of the resource to which the endpoint belongs.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The attributes of an <code>Endpoint</code>.</p>
+    #[doc(hidden)]
     pub endpoint_attributes: std::option::Option<crate::model::EndpointAttributes>,
     /// <p>The time at which an <code>AppInstanceUserEndpoint</code> was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which an <code>AppInstanceUserEndpoint</code> was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Boolean that controls whether the <code>AppInstanceUserEndpoint</code> is opted in to receive messages. <code>ALL</code> indicates the endpoint will receive all messages. <code>NONE</code> indicates the endpoint will receive no messages.</p>
+    #[doc(hidden)]
     pub allow_messages: std::option::Option<crate::model::AllowMessages>,
     /// <p>A read-only field that represents the state of an <code>AppInstanceUserEndpoint</code>. Supported values:</p>
     /// <ul>
@@ -1219,6 +1241,7 @@ pub struct AppInstanceUserEndpoint {
     /// <li> <p> <code>INVALID_DEVICE_TOKEN</code> indicates that an <code>AppInstanceUserEndpoint</code> is <code>INACTIVE</code> due to invalid device token</p> </li>
     /// <li> <p> <code>INVALID_PINPOINT_ARN</code> indicates that an <code>AppInstanceUserEndpoint</code> is <code>INACTIVE</code> due to an invalid pinpoint ARN that was input through the <code>ResourceArn</code> field.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub endpoint_state: std::option::Option<crate::model::EndpointState>,
 }
 impl AppInstanceUserEndpoint {
@@ -1285,11 +1308,10 @@ impl std::fmt::Debug for AppInstanceUserEndpoint {
         formatter.finish()
     }
 }
-/// See [`AppInstanceUserEndpoint`](crate::model::AppInstanceUserEndpoint)
+/// See [`AppInstanceUserEndpoint`](crate::model::AppInstanceUserEndpoint).
 pub mod app_instance_user_endpoint {
 
-    /// A builder for [`AppInstanceUserEndpoint`](crate::model::AppInstanceUserEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`AppInstanceUserEndpoint`](crate::model::AppInstanceUserEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_arn: std::option::Option<std::string::String>,
@@ -1437,7 +1459,7 @@ pub mod app_instance_user_endpoint {
             self.endpoint_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstanceUserEndpoint`](crate::model::AppInstanceUserEndpoint)
+        /// Consumes the builder and constructs a [`AppInstanceUserEndpoint`](crate::model::AppInstanceUserEndpoint).
         pub fn build(self) -> crate::model::AppInstanceUserEndpoint {
             crate::model::AppInstanceUserEndpoint {
                 app_instance_user_arn: self.app_instance_user_arn,
@@ -1455,7 +1477,7 @@ pub mod app_instance_user_endpoint {
     }
 }
 impl AppInstanceUserEndpoint {
-    /// Creates a new builder-style object to manufacture [`AppInstanceUserEndpoint`](crate::model::AppInstanceUserEndpoint)
+    /// Creates a new builder-style object to manufacture [`AppInstanceUserEndpoint`](crate::model::AppInstanceUserEndpoint).
     pub fn builder() -> crate::model::app_instance_user_endpoint::Builder {
         crate::model::app_instance_user_endpoint::Builder::default()
     }
@@ -1466,14 +1488,19 @@ impl AppInstanceUserEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstanceUser {
     /// <p>The ARN of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user_arn: std::option::Option<std::string::String>,
     /// <p>The name of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The metadata of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<std::string::String>,
     /// <p>The time at which the <code>AppInstanceUser</code> was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the <code>AppInstanceUser</code> was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AppInstanceUser {
@@ -1509,11 +1536,10 @@ impl std::fmt::Debug for AppInstanceUser {
         formatter.finish()
     }
 }
-/// See [`AppInstanceUser`](crate::model::AppInstanceUser)
+/// See [`AppInstanceUser`](crate::model::AppInstanceUser).
 pub mod app_instance_user {
 
-    /// A builder for [`AppInstanceUser`](crate::model::AppInstanceUser)
-    #[non_exhaustive]
+    /// A builder for [`AppInstanceUser`](crate::model::AppInstanceUser).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_arn: std::option::Option<std::string::String>,
@@ -1582,7 +1608,7 @@ pub mod app_instance_user {
             self.last_updated_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstanceUser`](crate::model::AppInstanceUser)
+        /// Consumes the builder and constructs a [`AppInstanceUser`](crate::model::AppInstanceUser).
         pub fn build(self) -> crate::model::AppInstanceUser {
             crate::model::AppInstanceUser {
                 app_instance_user_arn: self.app_instance_user_arn,
@@ -1595,7 +1621,7 @@ pub mod app_instance_user {
     }
 }
 impl AppInstanceUser {
-    /// Creates a new builder-style object to manufacture [`AppInstanceUser`](crate::model::AppInstanceUser)
+    /// Creates a new builder-style object to manufacture [`AppInstanceUser`](crate::model::AppInstanceUser).
     pub fn builder() -> crate::model::app_instance_user::Builder {
         crate::model::app_instance_user::Builder::default()
     }
@@ -1606,10 +1632,13 @@ impl AppInstanceUser {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstanceAdmin {
     /// <p>The <code>AppInstanceAdmin</code> data.</p>
+    #[doc(hidden)]
     pub admin: std::option::Option<crate::model::Identity>,
     /// <p>The ARN of the <code>AppInstance</code> for which the user is an administrator.</p>
+    #[doc(hidden)]
     pub app_instance_arn: std::option::Option<std::string::String>,
     /// <p>The time at which an administrator was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AppInstanceAdmin {
@@ -1635,11 +1664,10 @@ impl std::fmt::Debug for AppInstanceAdmin {
         formatter.finish()
     }
 }
-/// See [`AppInstanceAdmin`](crate::model::AppInstanceAdmin)
+/// See [`AppInstanceAdmin`](crate::model::AppInstanceAdmin).
 pub mod app_instance_admin {
 
-    /// A builder for [`AppInstanceAdmin`](crate::model::AppInstanceAdmin)
-    #[non_exhaustive]
+    /// A builder for [`AppInstanceAdmin`](crate::model::AppInstanceAdmin).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) admin: std::option::Option<crate::model::Identity>,
@@ -1683,7 +1711,7 @@ pub mod app_instance_admin {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstanceAdmin`](crate::model::AppInstanceAdmin)
+        /// Consumes the builder and constructs a [`AppInstanceAdmin`](crate::model::AppInstanceAdmin).
         pub fn build(self) -> crate::model::AppInstanceAdmin {
             crate::model::AppInstanceAdmin {
                 admin: self.admin,
@@ -1694,7 +1722,7 @@ pub mod app_instance_admin {
     }
 }
 impl AppInstanceAdmin {
-    /// Creates a new builder-style object to manufacture [`AppInstanceAdmin`](crate::model::AppInstanceAdmin)
+    /// Creates a new builder-style object to manufacture [`AppInstanceAdmin`](crate::model::AppInstanceAdmin).
     pub fn builder() -> crate::model::app_instance_admin::Builder {
         crate::model::app_instance_admin::Builder::default()
     }
@@ -1705,14 +1733,19 @@ impl AppInstanceAdmin {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppInstance {
     /// <p>The ARN of the messaging instance.</p>
+    #[doc(hidden)]
     pub app_instance_arn: std::option::Option<std::string::String>,
     /// <p>The name of an <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The time at which an <code>AppInstance</code> was created. In epoch milliseconds.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time an <code>AppInstance</code> was last updated. In epoch milliseconds.</p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The metadata of an <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<std::string::String>,
 }
 impl AppInstance {
@@ -1748,11 +1781,10 @@ impl std::fmt::Debug for AppInstance {
         formatter.finish()
     }
 }
-/// See [`AppInstance`](crate::model::AppInstance)
+/// See [`AppInstance`](crate::model::AppInstance).
 pub mod app_instance {
 
-    /// A builder for [`AppInstance`](crate::model::AppInstance)
-    #[non_exhaustive]
+    /// A builder for [`AppInstance`](crate::model::AppInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_arn: std::option::Option<std::string::String>,
@@ -1821,7 +1853,7 @@ pub mod app_instance {
             self.metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppInstance`](crate::model::AppInstance)
+        /// Consumes the builder and constructs a [`AppInstance`](crate::model::AppInstance).
         pub fn build(self) -> crate::model::AppInstance {
             crate::model::AppInstance {
                 app_instance_arn: self.app_instance_arn,
@@ -1834,7 +1866,7 @@ pub mod app_instance {
     }
 }
 impl AppInstance {
-    /// Creates a new builder-style object to manufacture [`AppInstance`](crate::model::AppInstance)
+    /// Creates a new builder-style object to manufacture [`AppInstance`](crate::model::AppInstance).
     pub fn builder() -> crate::model::app_instance::Builder {
         crate::model::app_instance::Builder::default()
     }

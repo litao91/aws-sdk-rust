@@ -59,14 +59,17 @@ impl AsRef<str> for RootDeviceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Source {
     /// <p>The repository type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::SourceType>,
     /// <p>The source URL. The following is an example of an Amazon S3 source URL: <code>https://s3.amazonaws.com/opsworks-demo-bucket/opsworks_cookbook_demo.tar.gz</code>.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>This parameter depends on the repository type.</p>
     /// <ul>
     /// <li> <p>For Amazon S3 bundles, set <code>Username</code> to the appropriate IAM access key ID.</p> </li>
     /// <li> <p>For HTTP bundles, Git repositories, and Subversion repositories, set <code>Username</code> to the user name.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>When included in a request, the parameter depends on the repository type.</p>
     /// <ul>
@@ -75,11 +78,14 @@ pub struct Source {
     /// </ul>
     /// <p>For more information on how to safely handle IAM credentials, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html">https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html</a>.</p>
     /// <p>In responses, AWS OpsWorks Stacks returns <code>*****FILTERED*****</code> instead of the actual value.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>In requests, the repository's SSH key.</p>
     /// <p>In responses, AWS OpsWorks Stacks returns <code>*****FILTERED*****</code> instead of the actual value.</p>
+    #[doc(hidden)]
     pub ssh_key: std::option::Option<std::string::String>,
     /// <p>The application's version. AWS OpsWorks Stacks enables you to easily deploy new versions of an application. One of the simplest approaches is to have branches or revisions in your repository that represent different versions that can potentially be deployed.</p>
+    #[doc(hidden)]
     pub revision: std::option::Option<std::string::String>,
 }
 impl Source {
@@ -131,11 +137,10 @@ impl std::fmt::Debug for Source {
         formatter.finish()
     }
 }
-/// See [`Source`](crate::model::Source)
+/// See [`Source`](crate::model::Source).
 pub mod source {
 
-    /// A builder for [`Source`](crate::model::Source)
-    #[non_exhaustive]
+    /// A builder for [`Source`](crate::model::Source).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::SourceType>,
@@ -228,7 +233,7 @@ pub mod source {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`Source`](crate::model::Source)
+        /// Consumes the builder and constructs a [`Source`](crate::model::Source).
         pub fn build(self) -> crate::model::Source {
             crate::model::Source {
                 r#type: self.r#type,
@@ -242,7 +247,7 @@ pub mod source {
     }
 }
 impl Source {
-    /// Creates a new builder-style object to manufacture [`Source`](crate::model::Source)
+    /// Creates a new builder-style object to manufacture [`Source`](crate::model::Source).
     pub fn builder() -> crate::model::source::Builder {
         crate::model::source::Builder::default()
     }
@@ -316,8 +321,10 @@ impl AsRef<str> for SourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChefConfiguration {
     /// <p>Whether to enable Berkshelf.</p>
+    #[doc(hidden)]
     pub manage_berkshelf: std::option::Option<bool>,
     /// <p>The Berkshelf version.</p>
+    #[doc(hidden)]
     pub berkshelf_version: std::option::Option<std::string::String>,
 }
 impl ChefConfiguration {
@@ -338,11 +345,10 @@ impl std::fmt::Debug for ChefConfiguration {
         formatter.finish()
     }
 }
-/// See [`ChefConfiguration`](crate::model::ChefConfiguration)
+/// See [`ChefConfiguration`](crate::model::ChefConfiguration).
 pub mod chef_configuration {
 
-    /// A builder for [`ChefConfiguration`](crate::model::ChefConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ChefConfiguration`](crate::model::ChefConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manage_berkshelf: std::option::Option<bool>,
@@ -372,7 +378,7 @@ pub mod chef_configuration {
             self.berkshelf_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChefConfiguration`](crate::model::ChefConfiguration)
+        /// Consumes the builder and constructs a [`ChefConfiguration`](crate::model::ChefConfiguration).
         pub fn build(self) -> crate::model::ChefConfiguration {
             crate::model::ChefConfiguration {
                 manage_berkshelf: self.manage_berkshelf,
@@ -382,7 +388,7 @@ pub mod chef_configuration {
     }
 }
 impl ChefConfiguration {
-    /// Creates a new builder-style object to manufacture [`ChefConfiguration`](crate::model::ChefConfiguration)
+    /// Creates a new builder-style object to manufacture [`ChefConfiguration`](crate::model::ChefConfiguration).
     pub fn builder() -> crate::model::chef_configuration::Builder {
         crate::model::chef_configuration::Builder::default()
     }
@@ -393,8 +399,10 @@ impl ChefConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StackConfigurationManager {
     /// <p>The name. This parameter must be set to "Chef".</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Chef version. This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows stacks. The default value for Linux stacks is 11.4.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl StackConfigurationManager {
@@ -415,11 +423,10 @@ impl std::fmt::Debug for StackConfigurationManager {
         formatter.finish()
     }
 }
-/// See [`StackConfigurationManager`](crate::model::StackConfigurationManager)
+/// See [`StackConfigurationManager`](crate::model::StackConfigurationManager).
 pub mod stack_configuration_manager {
 
-    /// A builder for [`StackConfigurationManager`](crate::model::StackConfigurationManager)
-    #[non_exhaustive]
+    /// A builder for [`StackConfigurationManager`](crate::model::StackConfigurationManager).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -446,7 +453,7 @@ pub mod stack_configuration_manager {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackConfigurationManager`](crate::model::StackConfigurationManager)
+        /// Consumes the builder and constructs a [`StackConfigurationManager`](crate::model::StackConfigurationManager).
         pub fn build(self) -> crate::model::StackConfigurationManager {
             crate::model::StackConfigurationManager {
                 name: self.name,
@@ -456,7 +463,7 @@ pub mod stack_configuration_manager {
     }
 }
 impl StackConfigurationManager {
-    /// Creates a new builder-style object to manufacture [`StackConfigurationManager`](crate::model::StackConfigurationManager)
+    /// Creates a new builder-style object to manufacture [`StackConfigurationManager`](crate::model::StackConfigurationManager).
     pub fn builder() -> crate::model::stack_configuration_manager::Builder {
         crate::model::stack_configuration_manager::Builder::default()
     }
@@ -518,6 +525,7 @@ impl AsRef<str> for StackAttributesKeys {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleEventConfiguration {
     /// <p>A <code>ShutdownEventConfiguration</code> object that specifies the Shutdown event configuration.</p>
+    #[doc(hidden)]
     pub shutdown: std::option::Option<crate::model::ShutdownEventConfiguration>,
 }
 impl LifecycleEventConfiguration {
@@ -533,11 +541,10 @@ impl std::fmt::Debug for LifecycleEventConfiguration {
         formatter.finish()
     }
 }
-/// See [`LifecycleEventConfiguration`](crate::model::LifecycleEventConfiguration)
+/// See [`LifecycleEventConfiguration`](crate::model::LifecycleEventConfiguration).
 pub mod lifecycle_event_configuration {
 
-    /// A builder for [`LifecycleEventConfiguration`](crate::model::LifecycleEventConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleEventConfiguration`](crate::model::LifecycleEventConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) shutdown: std::option::Option<crate::model::ShutdownEventConfiguration>,
@@ -556,7 +563,7 @@ pub mod lifecycle_event_configuration {
             self.shutdown = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleEventConfiguration`](crate::model::LifecycleEventConfiguration)
+        /// Consumes the builder and constructs a [`LifecycleEventConfiguration`](crate::model::LifecycleEventConfiguration).
         pub fn build(self) -> crate::model::LifecycleEventConfiguration {
             crate::model::LifecycleEventConfiguration {
                 shutdown: self.shutdown,
@@ -565,7 +572,7 @@ pub mod lifecycle_event_configuration {
     }
 }
 impl LifecycleEventConfiguration {
-    /// Creates a new builder-style object to manufacture [`LifecycleEventConfiguration`](crate::model::LifecycleEventConfiguration)
+    /// Creates a new builder-style object to manufacture [`LifecycleEventConfiguration`](crate::model::LifecycleEventConfiguration).
     pub fn builder() -> crate::model::lifecycle_event_configuration::Builder {
         crate::model::lifecycle_event_configuration::Builder::default()
     }
@@ -576,8 +583,10 @@ impl LifecycleEventConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ShutdownEventConfiguration {
     /// <p>The time, in seconds, that AWS OpsWorks Stacks will wait after triggering a Shutdown event before shutting down an instance.</p>
+    #[doc(hidden)]
     pub execution_timeout: std::option::Option<i32>,
     /// <p>Whether to enable Elastic Load Balancing connection draining. For more information, see <a href="https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain">Connection Draining</a> </p>
+    #[doc(hidden)]
     pub delay_until_elb_connections_drained: std::option::Option<bool>,
 }
 impl ShutdownEventConfiguration {
@@ -601,11 +610,10 @@ impl std::fmt::Debug for ShutdownEventConfiguration {
         formatter.finish()
     }
 }
-/// See [`ShutdownEventConfiguration`](crate::model::ShutdownEventConfiguration)
+/// See [`ShutdownEventConfiguration`](crate::model::ShutdownEventConfiguration).
 pub mod shutdown_event_configuration {
 
-    /// A builder for [`ShutdownEventConfiguration`](crate::model::ShutdownEventConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ShutdownEventConfiguration`](crate::model::ShutdownEventConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) execution_timeout: std::option::Option<i32>,
@@ -635,7 +643,7 @@ pub mod shutdown_event_configuration {
             self.delay_until_elb_connections_drained = input;
             self
         }
-        /// Consumes the builder and constructs a [`ShutdownEventConfiguration`](crate::model::ShutdownEventConfiguration)
+        /// Consumes the builder and constructs a [`ShutdownEventConfiguration`](crate::model::ShutdownEventConfiguration).
         pub fn build(self) -> crate::model::ShutdownEventConfiguration {
             crate::model::ShutdownEventConfiguration {
                 execution_timeout: self.execution_timeout,
@@ -645,7 +653,7 @@ pub mod shutdown_event_configuration {
     }
 }
 impl ShutdownEventConfiguration {
-    /// Creates a new builder-style object to manufacture [`ShutdownEventConfiguration`](crate::model::ShutdownEventConfiguration)
+    /// Creates a new builder-style object to manufacture [`ShutdownEventConfiguration`](crate::model::ShutdownEventConfiguration).
     pub fn builder() -> crate::model::shutdown_event_configuration::Builder {
         crate::model::shutdown_event_configuration::Builder::default()
     }
@@ -657,14 +665,19 @@ impl ShutdownEventConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Recipes {
     /// <p>An array of custom recipe names to be run following a <code>setup</code> event.</p>
+    #[doc(hidden)]
     pub setup: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of custom recipe names to be run following a <code>configure</code> event.</p>
+    #[doc(hidden)]
     pub configure: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of custom recipe names to be run following a <code>deploy</code> event.</p>
+    #[doc(hidden)]
     pub deploy: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of custom recipe names to be run following a <code>undeploy</code> event.</p>
+    #[doc(hidden)]
     pub undeploy: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of custom recipe names to be run following a <code>shutdown</code> event.</p>
+    #[doc(hidden)]
     pub shutdown: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Recipes {
@@ -700,11 +713,10 @@ impl std::fmt::Debug for Recipes {
         formatter.finish()
     }
 }
-/// See [`Recipes`](crate::model::Recipes)
+/// See [`Recipes`](crate::model::Recipes).
 pub mod recipes {
 
-    /// A builder for [`Recipes`](crate::model::Recipes)
-    #[non_exhaustive]
+    /// A builder for [`Recipes`](crate::model::Recipes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) setup: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -809,7 +821,7 @@ pub mod recipes {
             self.shutdown = input;
             self
         }
-        /// Consumes the builder and constructs a [`Recipes`](crate::model::Recipes)
+        /// Consumes the builder and constructs a [`Recipes`](crate::model::Recipes).
         pub fn build(self) -> crate::model::Recipes {
             crate::model::Recipes {
                 setup: self.setup,
@@ -822,7 +834,7 @@ pub mod recipes {
     }
 }
 impl Recipes {
-    /// Creates a new builder-style object to manufacture [`Recipes`](crate::model::Recipes)
+    /// Creates a new builder-style object to manufacture [`Recipes`](crate::model::Recipes).
     pub fn builder() -> crate::model::recipes::Builder {
         crate::model::recipes::Builder::default()
     }
@@ -833,12 +845,16 @@ impl Recipes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VolumeConfiguration {
     /// <p>The volume mount point. For example "/dev/sdh".</p>
+    #[doc(hidden)]
     pub mount_point: std::option::Option<std::string::String>,
     /// <p>The volume <a href="http://en.wikipedia.org/wiki/Standard_RAID_levels">RAID level</a>.</p>
+    #[doc(hidden)]
     pub raid_level: std::option::Option<i32>,
     /// <p>The number of disks in the volume.</p>
+    #[doc(hidden)]
     pub number_of_disks: std::option::Option<i32>,
     /// <p>The volume size.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i32>,
     /// <p>The volume type. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html"> Amazon EBS Volume Types</a>.</p>
     /// <ul>
@@ -848,10 +864,13 @@ pub struct VolumeConfiguration {
     /// <li> <p> <code>st1</code> - Throughput Optimized hard disk drive (HDD). Throughput optimized HDD volumes must have a minimum size of 500 GiB and a maximum size of 16384 GiB.</p> </li>
     /// <li> <p> <code>sc1</code> - Cold HDD. Cold HDD volumes must have a minimum size of 500 GiB and a maximum size of 16384 GiB.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<std::string::String>,
     /// <p>For PIOPS volumes, the IOPS per disk.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>Specifies whether an Amazon EBS volume is encrypted. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a>.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
 }
 impl VolumeConfiguration {
@@ -904,11 +923,10 @@ impl std::fmt::Debug for VolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`VolumeConfiguration`](crate::model::VolumeConfiguration)
+/// See [`VolumeConfiguration`](crate::model::VolumeConfiguration).
 pub mod volume_configuration {
 
-    /// A builder for [`VolumeConfiguration`](crate::model::VolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`VolumeConfiguration`](crate::model::VolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mount_point: std::option::Option<std::string::String>,
@@ -1004,7 +1022,7 @@ pub mod volume_configuration {
             self.encrypted = input;
             self
         }
-        /// Consumes the builder and constructs a [`VolumeConfiguration`](crate::model::VolumeConfiguration)
+        /// Consumes the builder and constructs a [`VolumeConfiguration`](crate::model::VolumeConfiguration).
         pub fn build(self) -> crate::model::VolumeConfiguration {
             crate::model::VolumeConfiguration {
                 mount_point: self.mount_point,
@@ -1019,7 +1037,7 @@ pub mod volume_configuration {
     }
 }
 impl VolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`VolumeConfiguration`](crate::model::VolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`VolumeConfiguration`](crate::model::VolumeConfiguration).
     pub fn builder() -> crate::model::volume_configuration::Builder {
         crate::model::volume_configuration::Builder::default()
     }
@@ -1030,8 +1048,10 @@ impl VolumeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogsConfiguration {
     /// <p>Whether CloudWatch Logs is enabled for a layer.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>A list of configuration options for CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_streams: std::option::Option<std::vec::Vec<crate::model::CloudWatchLogsLogStream>>,
 }
 impl CloudWatchLogsConfiguration {
@@ -1052,11 +1072,10 @@ impl std::fmt::Debug for CloudWatchLogsConfiguration {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsConfiguration`](crate::model::CloudWatchLogsConfiguration)
+/// See [`CloudWatchLogsConfiguration`](crate::model::CloudWatchLogsConfiguration).
 pub mod cloud_watch_logs_configuration {
 
-    /// A builder for [`CloudWatchLogsConfiguration`](crate::model::CloudWatchLogsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsConfiguration`](crate::model::CloudWatchLogsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -1093,7 +1112,7 @@ pub mod cloud_watch_logs_configuration {
             self.log_streams = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsConfiguration`](crate::model::CloudWatchLogsConfiguration)
+        /// Consumes the builder and constructs a [`CloudWatchLogsConfiguration`](crate::model::CloudWatchLogsConfiguration).
         pub fn build(self) -> crate::model::CloudWatchLogsConfiguration {
             crate::model::CloudWatchLogsConfiguration {
                 enabled: self.enabled,
@@ -1103,7 +1122,7 @@ pub mod cloud_watch_logs_configuration {
     }
 }
 impl CloudWatchLogsConfiguration {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsConfiguration`](crate::model::CloudWatchLogsConfiguration)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsConfiguration`](crate::model::CloudWatchLogsConfiguration).
     pub fn builder() -> crate::model::cloud_watch_logs_configuration::Builder {
         crate::model::cloud_watch_logs_configuration::Builder::default()
     }
@@ -1114,28 +1133,39 @@ impl CloudWatchLogsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogsLogStream {
     /// <p>Specifies the destination log group. A log group is created automatically if it doesn't already exist. Log group names can be between 1 and 512 characters long. Allowed characters include a-z, A-Z, 0-9, '_' (underscore), '-' (hyphen), '/' (forward slash), and '.' (period).</p>
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
     /// <p>Specifies how the time stamp is extracted from logs. For more information, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html">CloudWatch Logs Agent Reference</a>.</p>
+    #[doc(hidden)]
     pub datetime_format: std::option::Option<std::string::String>,
     /// <p>Specifies the time zone of log event time stamps.</p>
+    #[doc(hidden)]
     pub time_zone: std::option::Option<crate::model::CloudWatchLogsTimeZone>,
     /// <p>Specifies log files that you want to push to CloudWatch Logs.</p>
     /// <p> <code>File</code> can point to a specific file or multiple files (by using wild card characters such as <code>/var/log/system.log*</code>). Only the latest file is pushed to CloudWatch Logs, based on file modification time. We recommend that you use wild card characters to specify a series of files of the same type, such as <code>access_log.2014-06-01-01</code>, <code>access_log.2014-06-01-02</code>, and so on by using a pattern like <code>access_log.*</code>. Don't use a wildcard to match multiple file types, such as <code>access_log_80</code> and <code>access_log_443</code>. To specify multiple, different file types, add another log stream entry to the configuration file, so that each log file type is stored in a different log group.</p>
     /// <p>Zipped files are not supported.</p>
+    #[doc(hidden)]
     pub file: std::option::Option<std::string::String>,
     /// <p>Specifies the range of lines for identifying a file. The valid values are one number, or two dash-delimited numbers, such as '1', '2-5'. The default value is '1', meaning the first line is used to calculate the fingerprint. Fingerprint lines are not sent to CloudWatch Logs unless all specified lines are available.</p>
+    #[doc(hidden)]
     pub file_fingerprint_lines: std::option::Option<std::string::String>,
     /// <p>Specifies the pattern for identifying the start of a log message.</p>
+    #[doc(hidden)]
     pub multi_line_start_pattern: std::option::Option<std::string::String>,
     /// <p>Specifies where to start to read data (start_of_file or end_of_file). The default is start_of_file. This setting is only used if there is no state persisted for that log stream.</p>
+    #[doc(hidden)]
     pub initial_position: std::option::Option<crate::model::CloudWatchLogsInitialPosition>,
     /// <p>Specifies the encoding of the log file so that the file can be read correctly. The default is <code>utf_8</code>. Encodings supported by Python <code>codecs.decode()</code> can be used here.</p>
+    #[doc(hidden)]
     pub encoding: std::option::Option<crate::model::CloudWatchLogsEncoding>,
     /// <p>Specifies the time duration for the batching of log events. The minimum value is 5000ms and default value is 5000ms.</p>
+    #[doc(hidden)]
     pub buffer_duration: std::option::Option<i32>,
     /// <p>Specifies the max number of log events in a batch, up to 10000. The default value is 1000.</p>
+    #[doc(hidden)]
     pub batch_count: std::option::Option<i32>,
     /// <p>Specifies the maximum size of log events in a batch, in bytes, up to 1048576 bytes. The default value is 32768 bytes. This size is calculated as the sum of all event messages in UTF-8, plus 26 bytes for each log event.</p>
+    #[doc(hidden)]
     pub batch_size: std::option::Option<i32>,
 }
 impl CloudWatchLogsLogStream {
@@ -1205,11 +1235,10 @@ impl std::fmt::Debug for CloudWatchLogsLogStream {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsLogStream`](crate::model::CloudWatchLogsLogStream)
+/// See [`CloudWatchLogsLogStream`](crate::model::CloudWatchLogsLogStream).
 pub mod cloud_watch_logs_log_stream {
 
-    /// A builder for [`CloudWatchLogsLogStream`](crate::model::CloudWatchLogsLogStream)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsLogStream`](crate::model::CloudWatchLogsLogStream).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_group_name: std::option::Option<std::string::String>,
@@ -1364,7 +1393,7 @@ pub mod cloud_watch_logs_log_stream {
             self.batch_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsLogStream`](crate::model::CloudWatchLogsLogStream)
+        /// Consumes the builder and constructs a [`CloudWatchLogsLogStream`](crate::model::CloudWatchLogsLogStream).
         pub fn build(self) -> crate::model::CloudWatchLogsLogStream {
             crate::model::CloudWatchLogsLogStream {
                 log_group_name: self.log_group_name,
@@ -1383,7 +1412,7 @@ pub mod cloud_watch_logs_log_stream {
     }
 }
 impl CloudWatchLogsLogStream {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsLogStream`](crate::model::CloudWatchLogsLogStream)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsLogStream`](crate::model::CloudWatchLogsLogStream).
     pub fn builder() -> crate::model::cloud_watch_logs_log_stream::Builder {
         crate::model::cloud_watch_logs_log_stream::Builder::default()
     }
@@ -2295,10 +2324,13 @@ impl AsRef<str> for AutoScalingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentVariable {
     /// <p>(Required) The environment variable's name, which can consist of up to 64 characters and must be specified. The name can contain upper- and lowercase letters, numbers, and underscores (_), but it must start with a letter or underscore.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>(Optional) The environment variable's value, which can be left empty. If you specify a value, it can contain up to 256 characters, which must all be printable.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>(Optional) Whether the variable's value will be returned by the <code>DescribeApps</code> action. To conceal an environment variable's value, set <code>Secure</code> to <code>true</code>. <code>DescribeApps</code> then returns <code>*****FILTERED*****</code> instead of the actual value. The default value for <code>Secure</code> is <code>false</code>. </p>
+    #[doc(hidden)]
     pub secure: std::option::Option<bool>,
 }
 impl EnvironmentVariable {
@@ -2324,11 +2356,10 @@ impl std::fmt::Debug for EnvironmentVariable {
         formatter.finish()
     }
 }
-/// See [`EnvironmentVariable`](crate::model::EnvironmentVariable)
+/// See [`EnvironmentVariable`](crate::model::EnvironmentVariable).
 pub mod environment_variable {
 
-    /// A builder for [`EnvironmentVariable`](crate::model::EnvironmentVariable)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentVariable`](crate::model::EnvironmentVariable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -2366,7 +2397,7 @@ pub mod environment_variable {
             self.secure = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentVariable`](crate::model::EnvironmentVariable)
+        /// Consumes the builder and constructs a [`EnvironmentVariable`](crate::model::EnvironmentVariable).
         pub fn build(self) -> crate::model::EnvironmentVariable {
             crate::model::EnvironmentVariable {
                 key: self.key,
@@ -2377,7 +2408,7 @@ pub mod environment_variable {
     }
 }
 impl EnvironmentVariable {
-    /// Creates a new builder-style object to manufacture [`EnvironmentVariable`](crate::model::EnvironmentVariable)
+    /// Creates a new builder-style object to manufacture [`EnvironmentVariable`](crate::model::EnvironmentVariable).
     pub fn builder() -> crate::model::environment_variable::Builder {
         crate::model::environment_variable::Builder::default()
     }
@@ -2456,10 +2487,13 @@ impl AsRef<str> for AppAttributesKeys {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SslConfiguration {
     /// <p>The contents of the certificate's domain.crt file.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<std::string::String>,
     /// <p>The private key; the contents of the certificate's domain.kex file.</p>
+    #[doc(hidden)]
     pub private_key: std::option::Option<std::string::String>,
     /// <p>Optional. Can be used to specify an intermediate certificate authority key or client authentication.</p>
+    #[doc(hidden)]
     pub chain: std::option::Option<std::string::String>,
 }
 impl SslConfiguration {
@@ -2485,11 +2519,10 @@ impl std::fmt::Debug for SslConfiguration {
         formatter.finish()
     }
 }
-/// See [`SslConfiguration`](crate::model::SslConfiguration)
+/// See [`SslConfiguration`](crate::model::SslConfiguration).
 pub mod ssl_configuration {
 
-    /// A builder for [`SslConfiguration`](crate::model::SslConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SslConfiguration`](crate::model::SslConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate: std::option::Option<std::string::String>,
@@ -2527,7 +2560,7 @@ pub mod ssl_configuration {
             self.chain = input;
             self
         }
-        /// Consumes the builder and constructs a [`SslConfiguration`](crate::model::SslConfiguration)
+        /// Consumes the builder and constructs a [`SslConfiguration`](crate::model::SslConfiguration).
         pub fn build(self) -> crate::model::SslConfiguration {
             crate::model::SslConfiguration {
                 certificate: self.certificate,
@@ -2538,7 +2571,7 @@ pub mod ssl_configuration {
     }
 }
 impl SslConfiguration {
-    /// Creates a new builder-style object to manufacture [`SslConfiguration`](crate::model::SslConfiguration)
+    /// Creates a new builder-style object to manufacture [`SslConfiguration`](crate::model::SslConfiguration).
     pub fn builder() -> crate::model::ssl_configuration::Builder {
         crate::model::ssl_configuration::Builder::default()
     }
@@ -2632,10 +2665,13 @@ impl AsRef<str> for AppType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataSource {
     /// <p>The data source's type, <code>AutoSelectOpsworksMysqlInstance</code>, <code>OpsworksMysqlInstance</code>, <code>RdsDbInstance</code>, or <code>None</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The data source's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The database name.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
 }
 impl DataSource {
@@ -2661,11 +2697,10 @@ impl std::fmt::Debug for DataSource {
         formatter.finish()
     }
 }
-/// See [`DataSource`](crate::model::DataSource)
+/// See [`DataSource`](crate::model::DataSource).
 pub mod data_source {
 
-    /// A builder for [`DataSource`](crate::model::DataSource)
-    #[non_exhaustive]
+    /// A builder for [`DataSource`](crate::model::DataSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -2706,7 +2741,7 @@ pub mod data_source {
             self.database_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataSource`](crate::model::DataSource)
+        /// Consumes the builder and constructs a [`DataSource`](crate::model::DataSource).
         pub fn build(self) -> crate::model::DataSource {
             crate::model::DataSource {
                 r#type: self.r#type,
@@ -2717,7 +2752,7 @@ pub mod data_source {
     }
 }
 impl DataSource {
-    /// Creates a new builder-style object to manufacture [`DataSource`](crate::model::DataSource)
+    /// Creates a new builder-style object to manufacture [`DataSource`](crate::model::DataSource).
     pub fn builder() -> crate::model::data_source::Builder {
         crate::model::data_source::Builder::default()
     }
@@ -2735,24 +2770,31 @@ impl DataSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WeeklyAutoScalingSchedule {
     /// <p>The schedule for Monday.</p>
+    #[doc(hidden)]
     pub monday:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The schedule for Tuesday.</p>
+    #[doc(hidden)]
     pub tuesday:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The schedule for Wednesday.</p>
+    #[doc(hidden)]
     pub wednesday:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The schedule for Thursday.</p>
+    #[doc(hidden)]
     pub thursday:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The schedule for Friday.</p>
+    #[doc(hidden)]
     pub friday:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The schedule for Saturday.</p>
+    #[doc(hidden)]
     pub saturday:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The schedule for Sunday.</p>
+    #[doc(hidden)]
     pub sunday:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2820,11 +2862,10 @@ impl std::fmt::Debug for WeeklyAutoScalingSchedule {
         formatter.finish()
     }
 }
-/// See [`WeeklyAutoScalingSchedule`](crate::model::WeeklyAutoScalingSchedule)
+/// See [`WeeklyAutoScalingSchedule`](crate::model::WeeklyAutoScalingSchedule).
 pub mod weekly_auto_scaling_schedule {
 
-    /// A builder for [`WeeklyAutoScalingSchedule`](crate::model::WeeklyAutoScalingSchedule)
-    #[non_exhaustive]
+    /// A builder for [`WeeklyAutoScalingSchedule`](crate::model::WeeklyAutoScalingSchedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monday: std::option::Option<
@@ -3025,7 +3066,7 @@ pub mod weekly_auto_scaling_schedule {
             self.sunday = input;
             self
         }
-        /// Consumes the builder and constructs a [`WeeklyAutoScalingSchedule`](crate::model::WeeklyAutoScalingSchedule)
+        /// Consumes the builder and constructs a [`WeeklyAutoScalingSchedule`](crate::model::WeeklyAutoScalingSchedule).
         pub fn build(self) -> crate::model::WeeklyAutoScalingSchedule {
             crate::model::WeeklyAutoScalingSchedule {
                 monday: self.monday,
@@ -3040,7 +3081,7 @@ pub mod weekly_auto_scaling_schedule {
     }
 }
 impl WeeklyAutoScalingSchedule {
-    /// Creates a new builder-style object to manufacture [`WeeklyAutoScalingSchedule`](crate::model::WeeklyAutoScalingSchedule)
+    /// Creates a new builder-style object to manufacture [`WeeklyAutoScalingSchedule`](crate::model::WeeklyAutoScalingSchedule).
     pub fn builder() -> crate::model::weekly_auto_scaling_schedule::Builder {
         crate::model::weekly_auto_scaling_schedule::Builder::default()
     }
@@ -3051,20 +3092,27 @@ impl WeeklyAutoScalingSchedule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingThresholds {
     /// <p>The number of instances to add or remove when the load exceeds a threshold.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
     /// <p>The amount of time, in minutes, that the load must exceed a threshold before more instances are added or removed.</p>
+    #[doc(hidden)]
     pub thresholds_wait_time: std::option::Option<i32>,
     /// <p>The amount of time (in minutes) after a scaling event occurs that AWS OpsWorks Stacks should ignore metrics and suppress additional scaling events. For example, AWS OpsWorks Stacks adds new instances following an upscaling event but the instances won't start reducing the load until they have been booted and configured. There is no point in raising additional scaling events during that operation, which typically takes several minutes. <code>IgnoreMetricsTime</code> allows you to direct AWS OpsWorks Stacks to suppress scaling events long enough to get the new instances online.</p>
+    #[doc(hidden)]
     pub ignore_metrics_time: std::option::Option<i32>,
     /// <p>The CPU utilization threshold, as a percent of the available CPU. A value of -1 disables the threshold.</p>
+    #[doc(hidden)]
     pub cpu_threshold: std::option::Option<f64>,
     /// <p>The memory utilization threshold, as a percent of the available memory. A value of -1 disables the threshold.</p>
+    #[doc(hidden)]
     pub memory_threshold: std::option::Option<f64>,
     /// <p>The load threshold. A value of -1 disables the threshold. For more information about how load is computed, see <a href="http://en.wikipedia.org/wiki/Load_%28computing%29">Load (computing)</a>.</p>
+    #[doc(hidden)]
     pub load_threshold: std::option::Option<f64>,
     /// <p>Custom Cloudwatch auto scaling alarms, to be used as thresholds. This parameter takes a list of up to five alarm names, which are case sensitive and must be in the same region as the stack.</p> <note>
     /// <p>To use custom alarms, you must update your service role to allow <code>cloudwatch:DescribeAlarms</code>. You can either have AWS OpsWorks Stacks update the role for you when you first use this feature or you can edit the role manually. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-servicerole.html">Allowing AWS OpsWorks Stacks to Act on Your Behalf</a>.</p>
     /// </note>
+    #[doc(hidden)]
     pub alarms: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AutoScalingThresholds {
@@ -3112,11 +3160,10 @@ impl std::fmt::Debug for AutoScalingThresholds {
         formatter.finish()
     }
 }
-/// See [`AutoScalingThresholds`](crate::model::AutoScalingThresholds)
+/// See [`AutoScalingThresholds`](crate::model::AutoScalingThresholds).
 pub mod auto_scaling_thresholds {
 
-    /// A builder for [`AutoScalingThresholds`](crate::model::AutoScalingThresholds)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingThresholds`](crate::model::AutoScalingThresholds).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_count: std::option::Option<i32>,
@@ -3211,7 +3258,7 @@ pub mod auto_scaling_thresholds {
             self.alarms = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingThresholds`](crate::model::AutoScalingThresholds)
+        /// Consumes the builder and constructs a [`AutoScalingThresholds`](crate::model::AutoScalingThresholds).
         pub fn build(self) -> crate::model::AutoScalingThresholds {
             crate::model::AutoScalingThresholds {
                 instance_count: self.instance_count,
@@ -3226,7 +3273,7 @@ pub mod auto_scaling_thresholds {
     }
 }
 impl AutoScalingThresholds {
-    /// Creates a new builder-style object to manufacture [`AutoScalingThresholds`](crate::model::AutoScalingThresholds)
+    /// Creates a new builder-style object to manufacture [`AutoScalingThresholds`](crate::model::AutoScalingThresholds).
     pub fn builder() -> crate::model::auto_scaling_thresholds::Builder {
         crate::model::auto_scaling_thresholds::Builder::default()
     }
@@ -3237,8 +3284,10 @@ impl AutoScalingThresholds {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceIdentity {
     /// <p>A JSON document that contains the metadata.</p>
+    #[doc(hidden)]
     pub document: std::option::Option<std::string::String>,
     /// <p>A signature that can be used to verify the document's accuracy and authenticity.</p>
+    #[doc(hidden)]
     pub signature: std::option::Option<std::string::String>,
 }
 impl InstanceIdentity {
@@ -3259,11 +3308,10 @@ impl std::fmt::Debug for InstanceIdentity {
         formatter.finish()
     }
 }
-/// See [`InstanceIdentity`](crate::model::InstanceIdentity)
+/// See [`InstanceIdentity`](crate::model::InstanceIdentity).
 pub mod instance_identity {
 
-    /// A builder for [`InstanceIdentity`](crate::model::InstanceIdentity)
-    #[non_exhaustive]
+    /// A builder for [`InstanceIdentity`](crate::model::InstanceIdentity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) document: std::option::Option<std::string::String>,
@@ -3290,7 +3338,7 @@ pub mod instance_identity {
             self.signature = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceIdentity`](crate::model::InstanceIdentity)
+        /// Consumes the builder and constructs a [`InstanceIdentity`](crate::model::InstanceIdentity).
         pub fn build(self) -> crate::model::InstanceIdentity {
             crate::model::InstanceIdentity {
                 document: self.document,
@@ -3300,7 +3348,7 @@ pub mod instance_identity {
     }
 }
 impl InstanceIdentity {
-    /// Creates a new builder-style object to manufacture [`InstanceIdentity`](crate::model::InstanceIdentity)
+    /// Creates a new builder-style object to manufacture [`InstanceIdentity`](crate::model::InstanceIdentity).
     pub fn builder() -> crate::model::instance_identity::Builder {
         crate::model::instance_identity::Builder::default()
     }
@@ -3311,12 +3359,16 @@ impl InstanceIdentity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TemporaryCredential {
     /// <p>The user name.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The password.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>The length of time (in minutes) that the grant is valid. When the grant expires, at the end of this period, the user will no longer be able to use the credentials to log in. If they are logged in at the time, they will be automatically logged out.</p>
+    #[doc(hidden)]
     pub valid_for_in_minutes: std::option::Option<i32>,
     /// <p>The instance's AWS OpsWorks Stacks ID.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
 }
 impl TemporaryCredential {
@@ -3347,11 +3399,10 @@ impl std::fmt::Debug for TemporaryCredential {
         formatter.finish()
     }
 }
-/// See [`TemporaryCredential`](crate::model::TemporaryCredential)
+/// See [`TemporaryCredential`](crate::model::TemporaryCredential).
 pub mod temporary_credential {
 
-    /// A builder for [`TemporaryCredential`](crate::model::TemporaryCredential)
-    #[non_exhaustive]
+    /// A builder for [`TemporaryCredential`](crate::model::TemporaryCredential).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -3400,7 +3451,7 @@ pub mod temporary_credential {
             self.instance_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemporaryCredential`](crate::model::TemporaryCredential)
+        /// Consumes the builder and constructs a [`TemporaryCredential`](crate::model::TemporaryCredential).
         pub fn build(self) -> crate::model::TemporaryCredential {
             crate::model::TemporaryCredential {
                 username: self.username,
@@ -3412,7 +3463,7 @@ pub mod temporary_credential {
     }
 }
 impl TemporaryCredential {
-    /// Creates a new builder-style object to manufacture [`TemporaryCredential`](crate::model::TemporaryCredential)
+    /// Creates a new builder-style object to manufacture [`TemporaryCredential`](crate::model::TemporaryCredential).
     pub fn builder() -> crate::model::temporary_credential::Builder {
         crate::model::temporary_credential::Builder::default()
     }
@@ -3423,26 +3474,37 @@ impl TemporaryCredential {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Volume {
     /// <p>The volume ID.</p>
+    #[doc(hidden)]
     pub volume_id: std::option::Option<std::string::String>,
     /// <p>The Amazon EC2 volume ID.</p>
+    #[doc(hidden)]
     pub ec2_volume_id: std::option::Option<std::string::String>,
     /// <p>The volume name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The RAID array ID.</p>
+    #[doc(hidden)]
     pub raid_array_id: std::option::Option<std::string::String>,
     /// <p>The instance ID.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The value returned by <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DescribeVolumes.html">DescribeVolumes</a>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The volume size.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i32>,
     /// <p>The device name.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<std::string::String>,
     /// <p>The volume mount point. For example, "/mnt/disk1".</p>
+    #[doc(hidden)]
     pub mount_point: std::option::Option<std::string::String>,
     /// <p>The AWS region. For more information about AWS regions, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The volume Availability Zone. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The volume type. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html"> Amazon EBS Volume Types</a>.</p>
     /// <ul>
@@ -3452,10 +3514,13 @@ pub struct Volume {
     /// <li> <p> <code>st1</code> - Throughput Optimized hard disk drive (HDD). Throughput optimized HDD volumes must have a minimum size of 500 GiB and a maximum size of 16384 GiB.</p> </li>
     /// <li> <p> <code>sc1</code> - Cold HDD. Cold HDD volumes must have a minimum size of 500 GiB and a maximum size of 16384 GiB.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<std::string::String>,
     /// <p>For PIOPS volumes, the IOPS per disk.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>Specifies whether an Amazon EBS volume is encrypted. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a>.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
 }
 impl Volume {
@@ -3543,11 +3608,10 @@ impl std::fmt::Debug for Volume {
         formatter.finish()
     }
 }
-/// See [`Volume`](crate::model::Volume)
+/// See [`Volume`](crate::model::Volume).
 pub mod volume {
 
-    /// A builder for [`Volume`](crate::model::Volume)
-    #[non_exhaustive]
+    /// A builder for [`Volume`](crate::model::Volume).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_id: std::option::Option<std::string::String>,
@@ -3729,7 +3793,7 @@ pub mod volume {
             self.encrypted = input;
             self
         }
-        /// Consumes the builder and constructs a [`Volume`](crate::model::Volume)
+        /// Consumes the builder and constructs a [`Volume`](crate::model::Volume).
         pub fn build(self) -> crate::model::Volume {
             crate::model::Volume {
                 volume_id: self.volume_id,
@@ -3751,7 +3815,7 @@ pub mod volume {
     }
 }
 impl Volume {
-    /// Creates a new builder-style object to manufacture [`Volume`](crate::model::Volume)
+    /// Creates a new builder-style object to manufacture [`Volume`](crate::model::Volume).
     pub fn builder() -> crate::model::volume::Builder {
         crate::model::volume::Builder::default()
     }
@@ -3762,14 +3826,19 @@ impl Volume {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserProfile {
     /// <p>The user's IAM ARN.</p>
+    #[doc(hidden)]
     pub iam_user_arn: std::option::Option<std::string::String>,
     /// <p>The user's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The user's SSH user name.</p>
+    #[doc(hidden)]
     pub ssh_username: std::option::Option<std::string::String>,
     /// <p>The user's SSH public key.</p>
+    #[doc(hidden)]
     pub ssh_public_key: std::option::Option<std::string::String>,
     /// <p>Whether users can specify their own SSH public key through the My Settings page. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html">Managing User Permissions</a>.</p>
+    #[doc(hidden)]
     pub allow_self_management: std::option::Option<bool>,
 }
 impl UserProfile {
@@ -3805,11 +3874,10 @@ impl std::fmt::Debug for UserProfile {
         formatter.finish()
     }
 }
-/// See [`UserProfile`](crate::model::UserProfile)
+/// See [`UserProfile`](crate::model::UserProfile).
 pub mod user_profile {
 
-    /// A builder for [`UserProfile`](crate::model::UserProfile)
-    #[non_exhaustive]
+    /// A builder for [`UserProfile`](crate::model::UserProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) iam_user_arn: std::option::Option<std::string::String>,
@@ -3872,7 +3940,7 @@ pub mod user_profile {
             self.allow_self_management = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserProfile`](crate::model::UserProfile)
+        /// Consumes the builder and constructs a [`UserProfile`](crate::model::UserProfile).
         pub fn build(self) -> crate::model::UserProfile {
             crate::model::UserProfile {
                 iam_user_arn: self.iam_user_arn,
@@ -3885,7 +3953,7 @@ pub mod user_profile {
     }
 }
 impl UserProfile {
-    /// Creates a new builder-style object to manufacture [`UserProfile`](crate::model::UserProfile)
+    /// Creates a new builder-style object to manufacture [`UserProfile`](crate::model::UserProfile).
     pub fn builder() -> crate::model::user_profile::Builder {
         crate::model::user_profile::Builder::default()
     }
@@ -3896,8 +3964,10 @@ impl UserProfile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeBasedAutoScalingConfiguration {
     /// <p>The instance ID.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>A <code>WeeklyAutoScalingSchedule</code> object with the instance schedule.</p>
+    #[doc(hidden)]
     pub auto_scaling_schedule: std::option::Option<crate::model::WeeklyAutoScalingSchedule>,
 }
 impl TimeBasedAutoScalingConfiguration {
@@ -3920,11 +3990,10 @@ impl std::fmt::Debug for TimeBasedAutoScalingConfiguration {
         formatter.finish()
     }
 }
-/// See [`TimeBasedAutoScalingConfiguration`](crate::model::TimeBasedAutoScalingConfiguration)
+/// See [`TimeBasedAutoScalingConfiguration`](crate::model::TimeBasedAutoScalingConfiguration).
 pub mod time_based_auto_scaling_configuration {
 
-    /// A builder for [`TimeBasedAutoScalingConfiguration`](crate::model::TimeBasedAutoScalingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TimeBasedAutoScalingConfiguration`](crate::model::TimeBasedAutoScalingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_id: std::option::Option<std::string::String>,
@@ -3958,7 +4027,7 @@ pub mod time_based_auto_scaling_configuration {
             self.auto_scaling_schedule = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeBasedAutoScalingConfiguration`](crate::model::TimeBasedAutoScalingConfiguration)
+        /// Consumes the builder and constructs a [`TimeBasedAutoScalingConfiguration`](crate::model::TimeBasedAutoScalingConfiguration).
         pub fn build(self) -> crate::model::TimeBasedAutoScalingConfiguration {
             crate::model::TimeBasedAutoScalingConfiguration {
                 instance_id: self.instance_id,
@@ -3968,7 +4037,7 @@ pub mod time_based_auto_scaling_configuration {
     }
 }
 impl TimeBasedAutoScalingConfiguration {
-    /// Creates a new builder-style object to manufacture [`TimeBasedAutoScalingConfiguration`](crate::model::TimeBasedAutoScalingConfiguration)
+    /// Creates a new builder-style object to manufacture [`TimeBasedAutoScalingConfiguration`](crate::model::TimeBasedAutoScalingConfiguration).
     pub fn builder() -> crate::model::time_based_auto_scaling_configuration::Builder {
         crate::model::time_based_auto_scaling_configuration::Builder::default()
     }
@@ -3979,16 +4048,22 @@ impl TimeBasedAutoScalingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StackSummary {
     /// <p>The stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The stack name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The stack's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The number of layers.</p>
+    #[doc(hidden)]
     pub layers_count: std::option::Option<i32>,
     /// <p>The number of apps.</p>
+    #[doc(hidden)]
     pub apps_count: std::option::Option<i32>,
     /// <p>An <code>InstancesCount</code> object with the number of instances in each status.</p>
+    #[doc(hidden)]
     pub instances_count: std::option::Option<crate::model::InstancesCount>,
 }
 impl StackSummary {
@@ -4029,11 +4104,10 @@ impl std::fmt::Debug for StackSummary {
         formatter.finish()
     }
 }
-/// See [`StackSummary`](crate::model::StackSummary)
+/// See [`StackSummary`](crate::model::StackSummary).
 pub mod stack_summary {
 
-    /// A builder for [`StackSummary`](crate::model::StackSummary)
-    #[non_exhaustive]
+    /// A builder for [`StackSummary`](crate::model::StackSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_id: std::option::Option<std::string::String>,
@@ -4107,7 +4181,7 @@ pub mod stack_summary {
             self.instances_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSummary`](crate::model::StackSummary)
+        /// Consumes the builder and constructs a [`StackSummary`](crate::model::StackSummary).
         pub fn build(self) -> crate::model::StackSummary {
             crate::model::StackSummary {
                 stack_id: self.stack_id,
@@ -4121,7 +4195,7 @@ pub mod stack_summary {
     }
 }
 impl StackSummary {
-    /// Creates a new builder-style object to manufacture [`StackSummary`](crate::model::StackSummary)
+    /// Creates a new builder-style object to manufacture [`StackSummary`](crate::model::StackSummary).
     pub fn builder() -> crate::model::stack_summary::Builder {
         crate::model::stack_summary::Builder::default()
     }
@@ -4132,44 +4206,64 @@ impl StackSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstancesCount {
     /// <p>The number of instances in the Assigning state.</p>
+    #[doc(hidden)]
     pub assigning: std::option::Option<i32>,
     /// <p>The number of instances with <code>booting</code> status.</p>
+    #[doc(hidden)]
     pub booting: std::option::Option<i32>,
     /// <p>The number of instances with <code>connection_lost</code> status.</p>
+    #[doc(hidden)]
     pub connection_lost: std::option::Option<i32>,
     /// <p>The number of instances in the Deregistering state.</p>
+    #[doc(hidden)]
     pub deregistering: std::option::Option<i32>,
     /// <p>The number of instances with <code>online</code> status.</p>
+    #[doc(hidden)]
     pub online: std::option::Option<i32>,
     /// <p>The number of instances with <code>pending</code> status.</p>
+    #[doc(hidden)]
     pub pending: std::option::Option<i32>,
     /// <p>The number of instances with <code>rebooting</code> status.</p>
+    #[doc(hidden)]
     pub rebooting: std::option::Option<i32>,
     /// <p>The number of instances in the Registered state.</p>
+    #[doc(hidden)]
     pub registered: std::option::Option<i32>,
     /// <p>The number of instances in the Registering state.</p>
+    #[doc(hidden)]
     pub registering: std::option::Option<i32>,
     /// <p>The number of instances with <code>requested</code> status.</p>
+    #[doc(hidden)]
     pub requested: std::option::Option<i32>,
     /// <p>The number of instances with <code>running_setup</code> status.</p>
+    #[doc(hidden)]
     pub running_setup: std::option::Option<i32>,
     /// <p>The number of instances with <code>setup_failed</code> status.</p>
+    #[doc(hidden)]
     pub setup_failed: std::option::Option<i32>,
     /// <p>The number of instances with <code>shutting_down</code> status.</p>
+    #[doc(hidden)]
     pub shutting_down: std::option::Option<i32>,
     /// <p>The number of instances with <code>start_failed</code> status.</p>
+    #[doc(hidden)]
     pub start_failed: std::option::Option<i32>,
     /// <p>The number of instances with <code>stop_failed</code> status.</p>
+    #[doc(hidden)]
     pub stop_failed: std::option::Option<i32>,
     /// <p>The number of instances with <code>stopped</code> status.</p>
+    #[doc(hidden)]
     pub stopped: std::option::Option<i32>,
     /// <p>The number of instances with <code>stopping</code> status.</p>
+    #[doc(hidden)]
     pub stopping: std::option::Option<i32>,
     /// <p>The number of instances with <code>terminated</code> status.</p>
+    #[doc(hidden)]
     pub terminated: std::option::Option<i32>,
     /// <p>The number of instances with <code>terminating</code> status.</p>
+    #[doc(hidden)]
     pub terminating: std::option::Option<i32>,
     /// <p>The number of instances in the Unassigning state.</p>
+    #[doc(hidden)]
     pub unassigning: std::option::Option<i32>,
 }
 impl InstancesCount {
@@ -4280,11 +4374,10 @@ impl std::fmt::Debug for InstancesCount {
         formatter.finish()
     }
 }
-/// See [`InstancesCount`](crate::model::InstancesCount)
+/// See [`InstancesCount`](crate::model::InstancesCount).
 pub mod instances_count {
 
-    /// A builder for [`InstancesCount`](crate::model::InstancesCount)
-    #[non_exhaustive]
+    /// A builder for [`InstancesCount`](crate::model::InstancesCount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assigning: std::option::Option<i32>,
@@ -4509,7 +4602,7 @@ pub mod instances_count {
             self.unassigning = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstancesCount`](crate::model::InstancesCount)
+        /// Consumes the builder and constructs a [`InstancesCount`](crate::model::InstancesCount).
         pub fn build(self) -> crate::model::InstancesCount {
             crate::model::InstancesCount {
                 assigning: self.assigning,
@@ -4537,7 +4630,7 @@ pub mod instances_count {
     }
 }
 impl InstancesCount {
-    /// Creates a new builder-style object to manufacture [`InstancesCount`](crate::model::InstancesCount)
+    /// Creates a new builder-style object to manufacture [`InstancesCount`](crate::model::InstancesCount).
     pub fn builder() -> crate::model::instances_count::Builder {
         crate::model::instances_count::Builder::default()
     }
@@ -4548,52 +4641,74 @@ impl InstancesCount {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Stack {
     /// <p>The stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The stack name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The stack's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The stack AWS region, such as "ap-northeast-2". For more information about AWS regions, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The VPC ID; applicable only if the stack is running in a VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The stack's attributes.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<crate::model::StackAttributesKeys, std::string::String>,
     >,
     /// <p>The stack AWS Identity and Access Management (IAM) role.</p>
+    #[doc(hidden)]
     pub service_role_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of an IAM profile that is the default profile for all of the stack's EC2 instances. For more information about IAM ARNs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">Using Identifiers</a>.</p>
+    #[doc(hidden)]
     pub default_instance_profile_arn: std::option::Option<std::string::String>,
     /// <p>The stack's default operating system.</p>
+    #[doc(hidden)]
     pub default_os: std::option::Option<std::string::String>,
     /// <p>The stack host name theme, with spaces replaced by underscores.</p>
+    #[doc(hidden)]
     pub hostname_theme: std::option::Option<std::string::String>,
     /// <p>The stack's default Availability Zone. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>.</p>
+    #[doc(hidden)]
     pub default_availability_zone: std::option::Option<std::string::String>,
     /// <p>The default subnet ID; applicable only if the stack is running in a VPC.</p>
+    #[doc(hidden)]
     pub default_subnet_id: std::option::Option<std::string::String>,
     /// <p>A JSON object that contains user-defined attributes to be added to the stack configuration and deployment attributes. You can use custom JSON to override the corresponding default stack configuration attribute values or to pass data to recipes. The string should be in the following format:</p>
     /// <p> <code>"{\"key1\": \"value1\", \"key2\": \"value2\",...}"</code> </p>
     /// <p>For more information on custom JSON, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-json.html">Use Custom JSON to Modify the Stack Configuration Attributes</a>.</p>
+    #[doc(hidden)]
     pub custom_json: std::option::Option<std::string::String>,
     /// <p>The configuration manager.</p>
+    #[doc(hidden)]
     pub configuration_manager: std::option::Option<crate::model::StackConfigurationManager>,
     /// <p>A <code>ChefConfiguration</code> object that specifies whether to enable Berkshelf and the Berkshelf version. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html">Create a New Stack</a>.</p>
+    #[doc(hidden)]
     pub chef_configuration: std::option::Option<crate::model::ChefConfiguration>,
     /// <p>Whether the stack uses custom cookbooks.</p>
+    #[doc(hidden)]
     pub use_custom_cookbooks: std::option::Option<bool>,
     /// <p>Whether the stack automatically associates the AWS OpsWorks Stacks built-in security groups with the stack's layers.</p>
+    #[doc(hidden)]
     pub use_opsworks_security_groups: std::option::Option<bool>,
     /// <p>Contains the information required to retrieve an app or cookbook from a repository. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html">Adding Apps</a> or <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html">Cookbooks and Recipes</a>.</p>
+    #[doc(hidden)]
     pub custom_cookbooks_source: std::option::Option<crate::model::Source>,
     /// <p>A default Amazon EC2 key pair for the stack's instances. You can override this value when you create or update an instance.</p>
+    #[doc(hidden)]
     pub default_ssh_key_name: std::option::Option<std::string::String>,
     /// <p>The date when the stack was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
     /// <p>The default root device type. This value is used by default for all instances in the stack, but you can override it when you create an instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">Storage for the Root Device</a>.</p>
+    #[doc(hidden)]
     pub default_root_device_type: std::option::Option<crate::model::RootDeviceType>,
     /// <p>The agent version. This parameter is set to <code>LATEST</code> for auto-update. or a version number for a fixed agent version.</p>
+    #[doc(hidden)]
     pub agent_version: std::option::Option<std::string::String>,
 }
 impl Stack {
@@ -4728,11 +4843,10 @@ impl std::fmt::Debug for Stack {
         formatter.finish()
     }
 }
-/// See [`Stack`](crate::model::Stack)
+/// See [`Stack`](crate::model::Stack).
 pub mod stack {
 
-    /// A builder for [`Stack`](crate::model::Stack)
-    #[non_exhaustive]
+    /// A builder for [`Stack`](crate::model::Stack).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_id: std::option::Option<std::string::String>,
@@ -5043,7 +5157,7 @@ pub mod stack {
             self.agent_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`Stack`](crate::model::Stack)
+        /// Consumes the builder and constructs a [`Stack`](crate::model::Stack).
         pub fn build(self) -> crate::model::Stack {
             crate::model::Stack {
                 stack_id: self.stack_id,
@@ -5073,7 +5187,7 @@ pub mod stack {
     }
 }
 impl Stack {
-    /// Creates a new builder-style object to manufacture [`Stack`](crate::model::Stack)
+    /// Creates a new builder-style object to manufacture [`Stack`](crate::model::Stack).
     pub fn builder() -> crate::model::stack::Builder {
         crate::model::stack::Builder::default()
     }
@@ -5084,16 +5198,22 @@ impl Stack {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceError {
     /// <p>The error ID.</p>
+    #[doc(hidden)]
     pub service_error_id: std::option::Option<std::string::String>,
     /// <p>The stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The instance ID.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The error type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>A message that describes the error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>When the error occurred.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
 }
 impl ServiceError {
@@ -5134,11 +5254,10 @@ impl std::fmt::Debug for ServiceError {
         formatter.finish()
     }
 }
-/// See [`ServiceError`](crate::model::ServiceError)
+/// See [`ServiceError`](crate::model::ServiceError).
 pub mod service_error {
 
-    /// A builder for [`ServiceError`](crate::model::ServiceError)
-    #[non_exhaustive]
+    /// A builder for [`ServiceError`](crate::model::ServiceError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_error_id: std::option::Option<std::string::String>,
@@ -5212,7 +5331,7 @@ pub mod service_error {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceError`](crate::model::ServiceError)
+        /// Consumes the builder and constructs a [`ServiceError`](crate::model::ServiceError).
         pub fn build(self) -> crate::model::ServiceError {
             crate::model::ServiceError {
                 service_error_id: self.service_error_id,
@@ -5226,7 +5345,7 @@ pub mod service_error {
     }
 }
 impl ServiceError {
-    /// Creates a new builder-style object to manufacture [`ServiceError`](crate::model::ServiceError)
+    /// Creates a new builder-style object to manufacture [`ServiceError`](crate::model::ServiceError).
     pub fn builder() -> crate::model::service_error::Builder {
         crate::model::service_error::Builder::default()
     }
@@ -5237,22 +5356,31 @@ impl ServiceError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RdsDbInstance {
     /// <p>The instance's ARN.</p>
+    #[doc(hidden)]
     pub rds_db_instance_arn: std::option::Option<std::string::String>,
     /// <p>The DB instance identifier.</p>
+    #[doc(hidden)]
     pub db_instance_identifier: std::option::Option<std::string::String>,
     /// <p>The master user name.</p>
+    #[doc(hidden)]
     pub db_user: std::option::Option<std::string::String>,
     /// <p>AWS OpsWorks Stacks returns <code>*****FILTERED*****</code> instead of the actual value.</p>
+    #[doc(hidden)]
     pub db_password: std::option::Option<std::string::String>,
     /// <p>The instance's AWS region.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The instance's address.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The instance's database engine.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The ID of the stack with which the instance is registered.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>Set to <code>true</code> if AWS OpsWorks Stacks is unable to discover the Amazon RDS instance. AWS OpsWorks Stacks attempts to discover the instance only once. If this value is set to <code>true</code>, you must deregister the instance, and then register it again.</p>
+    #[doc(hidden)]
     pub missing_on_rds: std::option::Option<bool>,
 }
 impl RdsDbInstance {
@@ -5308,11 +5436,10 @@ impl std::fmt::Debug for RdsDbInstance {
         formatter.finish()
     }
 }
-/// See [`RdsDbInstance`](crate::model::RdsDbInstance)
+/// See [`RdsDbInstance`](crate::model::RdsDbInstance).
 pub mod rds_db_instance {
 
-    /// A builder for [`RdsDbInstance`](crate::model::RdsDbInstance)
-    #[non_exhaustive]
+    /// A builder for [`RdsDbInstance`](crate::model::RdsDbInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rds_db_instance_arn: std::option::Option<std::string::String>,
@@ -5422,7 +5549,7 @@ pub mod rds_db_instance {
             self.missing_on_rds = input;
             self
         }
-        /// Consumes the builder and constructs a [`RdsDbInstance`](crate::model::RdsDbInstance)
+        /// Consumes the builder and constructs a [`RdsDbInstance`](crate::model::RdsDbInstance).
         pub fn build(self) -> crate::model::RdsDbInstance {
             crate::model::RdsDbInstance {
                 rds_db_instance_arn: self.rds_db_instance_arn,
@@ -5439,7 +5566,7 @@ pub mod rds_db_instance {
     }
 }
 impl RdsDbInstance {
-    /// Creates a new builder-style object to manufacture [`RdsDbInstance`](crate::model::RdsDbInstance)
+    /// Creates a new builder-style object to manufacture [`RdsDbInstance`](crate::model::RdsDbInstance).
     pub fn builder() -> crate::model::rds_db_instance::Builder {
         crate::model::rds_db_instance::Builder::default()
     }
@@ -5450,30 +5577,43 @@ impl RdsDbInstance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RaidArray {
     /// <p>The array ID.</p>
+    #[doc(hidden)]
     pub raid_array_id: std::option::Option<std::string::String>,
     /// <p>The instance ID.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The array name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The <a href="http://en.wikipedia.org/wiki/Standard_RAID_levels">RAID level</a>.</p>
+    #[doc(hidden)]
     pub raid_level: std::option::Option<i32>,
     /// <p>The number of disks in the array.</p>
+    #[doc(hidden)]
     pub number_of_disks: std::option::Option<i32>,
     /// <p>The array's size.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i32>,
     /// <p>The array's Linux device. For example /dev/mdadm0.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<std::string::String>,
     /// <p>The array's mount point.</p>
+    #[doc(hidden)]
     pub mount_point: std::option::Option<std::string::String>,
     /// <p>The array's Availability Zone. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>When the RAID array was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
     /// <p>The stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The volume type, standard or PIOPS.</p>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<std::string::String>,
     /// <p>For PIOPS volumes, the IOPS per disk.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
 }
 impl RaidArray {
@@ -5549,11 +5689,10 @@ impl std::fmt::Debug for RaidArray {
         formatter.finish()
     }
 }
-/// See [`RaidArray`](crate::model::RaidArray)
+/// See [`RaidArray`](crate::model::RaidArray).
 pub mod raid_array {
 
-    /// A builder for [`RaidArray`](crate::model::RaidArray)
-    #[non_exhaustive]
+    /// A builder for [`RaidArray`](crate::model::RaidArray).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) raid_array_id: std::option::Option<std::string::String>,
@@ -5707,7 +5846,7 @@ pub mod raid_array {
             self.iops = input;
             self
         }
-        /// Consumes the builder and constructs a [`RaidArray`](crate::model::RaidArray)
+        /// Consumes the builder and constructs a [`RaidArray`](crate::model::RaidArray).
         pub fn build(self) -> crate::model::RaidArray {
             crate::model::RaidArray {
                 raid_array_id: self.raid_array_id,
@@ -5728,7 +5867,7 @@ pub mod raid_array {
     }
 }
 impl RaidArray {
-    /// Creates a new builder-style object to manufacture [`RaidArray`](crate::model::RaidArray)
+    /// Creates a new builder-style object to manufacture [`RaidArray`](crate::model::RaidArray).
     pub fn builder() -> crate::model::raid_array::Builder {
         crate::model::raid_array::Builder::default()
     }
@@ -5739,12 +5878,16 @@ impl RaidArray {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Permission {
     /// <p>A stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for an AWS Identity and Access Management (IAM) role. For more information about IAM ARNs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">Using Identifiers</a>.</p>
+    #[doc(hidden)]
     pub iam_user_arn: std::option::Option<std::string::String>,
     /// <p>Whether the user can use SSH.</p>
+    #[doc(hidden)]
     pub allow_ssh: std::option::Option<bool>,
     /// <p>Whether the user can use <b>sudo</b>.</p>
+    #[doc(hidden)]
     pub allow_sudo: std::option::Option<bool>,
     /// <p>The user's permission level, which must be the following:</p>
     /// <ul>
@@ -5755,6 +5898,7 @@ pub struct Permission {
     /// <li> <p> <code>iam_only</code> </p> </li>
     /// </ul>
     /// <p>For more information on the permissions associated with these levels, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User Permissions</a> </p>
+    #[doc(hidden)]
     pub level: std::option::Option<std::string::String>,
 }
 impl Permission {
@@ -5798,11 +5942,10 @@ impl std::fmt::Debug for Permission {
         formatter.finish()
     }
 }
-/// See [`Permission`](crate::model::Permission)
+/// See [`Permission`](crate::model::Permission).
 pub mod permission {
 
-    /// A builder for [`Permission`](crate::model::Permission)
-    #[non_exhaustive]
+    /// A builder for [`Permission`](crate::model::Permission).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_id: std::option::Option<std::string::String>,
@@ -5878,7 +6021,7 @@ pub mod permission {
             self.level = input;
             self
         }
-        /// Consumes the builder and constructs a [`Permission`](crate::model::Permission)
+        /// Consumes the builder and constructs a [`Permission`](crate::model::Permission).
         pub fn build(self) -> crate::model::Permission {
             crate::model::Permission {
                 stack_id: self.stack_id,
@@ -5891,7 +6034,7 @@ pub mod permission {
     }
 }
 impl Permission {
-    /// Creates a new builder-style object to manufacture [`Permission`](crate::model::Permission)
+    /// Creates a new builder-style object to manufacture [`Permission`](crate::model::Permission).
     pub fn builder() -> crate::model::permission::Builder {
         crate::model::permission::Builder::default()
     }
@@ -5902,19 +6045,26 @@ impl Permission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OperatingSystem {
     /// <p>The name of the operating system, such as <code>Amazon Linux 2018.03</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ID of a supported operating system, such as <code>Amazon Linux 2018.03</code>.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of a supported operating system, either <code>Linux</code> or <code>Windows</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>Supported configuration manager name and versions for an AWS OpsWorks Stacks operating system.</p>
+    #[doc(hidden)]
     pub configuration_managers:
         std::option::Option<std::vec::Vec<crate::model::OperatingSystemConfigurationManager>>,
     /// <p>A short name for the operating system manufacturer.</p>
+    #[doc(hidden)]
     pub reported_name: std::option::Option<std::string::String>,
     /// <p>The version of the operating system, including the release and edition, if applicable.</p>
+    #[doc(hidden)]
     pub reported_version: std::option::Option<std::string::String>,
     /// <p>Indicates that an operating system is not supported for new instances.</p>
+    #[doc(hidden)]
     pub supported: std::option::Option<bool>,
 }
 impl OperatingSystem {
@@ -5962,11 +6112,10 @@ impl std::fmt::Debug for OperatingSystem {
         formatter.finish()
     }
 }
-/// See [`OperatingSystem`](crate::model::OperatingSystem)
+/// See [`OperatingSystem`](crate::model::OperatingSystem).
 pub mod operating_system {
 
-    /// A builder for [`OperatingSystem`](crate::model::OperatingSystem)
-    #[non_exhaustive]
+    /// A builder for [`OperatingSystem`](crate::model::OperatingSystem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6069,7 +6218,7 @@ pub mod operating_system {
             self.supported = input;
             self
         }
-        /// Consumes the builder and constructs a [`OperatingSystem`](crate::model::OperatingSystem)
+        /// Consumes the builder and constructs a [`OperatingSystem`](crate::model::OperatingSystem).
         pub fn build(self) -> crate::model::OperatingSystem {
             crate::model::OperatingSystem {
                 name: self.name,
@@ -6084,7 +6233,7 @@ pub mod operating_system {
     }
 }
 impl OperatingSystem {
-    /// Creates a new builder-style object to manufacture [`OperatingSystem`](crate::model::OperatingSystem)
+    /// Creates a new builder-style object to manufacture [`OperatingSystem`](crate::model::OperatingSystem).
     pub fn builder() -> crate::model::operating_system::Builder {
         crate::model::operating_system::Builder::default()
     }
@@ -6095,8 +6244,10 @@ impl OperatingSystem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OperatingSystemConfigurationManager {
     /// <p>The name of the configuration manager, which is Chef.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The versions of the configuration manager that are supported by an operating system.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl OperatingSystemConfigurationManager {
@@ -6117,11 +6268,10 @@ impl std::fmt::Debug for OperatingSystemConfigurationManager {
         formatter.finish()
     }
 }
-/// See [`OperatingSystemConfigurationManager`](crate::model::OperatingSystemConfigurationManager)
+/// See [`OperatingSystemConfigurationManager`](crate::model::OperatingSystemConfigurationManager).
 pub mod operating_system_configuration_manager {
 
-    /// A builder for [`OperatingSystemConfigurationManager`](crate::model::OperatingSystemConfigurationManager)
-    #[non_exhaustive]
+    /// A builder for [`OperatingSystemConfigurationManager`](crate::model::OperatingSystemConfigurationManager).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6148,7 +6298,7 @@ pub mod operating_system_configuration_manager {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`OperatingSystemConfigurationManager`](crate::model::OperatingSystemConfigurationManager)
+        /// Consumes the builder and constructs a [`OperatingSystemConfigurationManager`](crate::model::OperatingSystemConfigurationManager).
         pub fn build(self) -> crate::model::OperatingSystemConfigurationManager {
             crate::model::OperatingSystemConfigurationManager {
                 name: self.name,
@@ -6158,7 +6308,7 @@ pub mod operating_system_configuration_manager {
     }
 }
 impl OperatingSystemConfigurationManager {
-    /// Creates a new builder-style object to manufacture [`OperatingSystemConfigurationManager`](crate::model::OperatingSystemConfigurationManager)
+    /// Creates a new builder-style object to manufacture [`OperatingSystemConfigurationManager`](crate::model::OperatingSystemConfigurationManager).
     pub fn builder() -> crate::model::operating_system_configuration_manager::Builder {
         crate::model::operating_system_configuration_manager::Builder::default()
     }
@@ -6169,12 +6319,16 @@ impl OperatingSystemConfigurationManager {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelfUserProfile {
     /// <p>The user's IAM ARN.</p>
+    #[doc(hidden)]
     pub iam_user_arn: std::option::Option<std::string::String>,
     /// <p>The user's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The user's SSH user name.</p>
+    #[doc(hidden)]
     pub ssh_username: std::option::Option<std::string::String>,
     /// <p>The user's SSH public key.</p>
+    #[doc(hidden)]
     pub ssh_public_key: std::option::Option<std::string::String>,
 }
 impl SelfUserProfile {
@@ -6205,11 +6359,10 @@ impl std::fmt::Debug for SelfUserProfile {
         formatter.finish()
     }
 }
-/// See [`SelfUserProfile`](crate::model::SelfUserProfile)
+/// See [`SelfUserProfile`](crate::model::SelfUserProfile).
 pub mod self_user_profile {
 
-    /// A builder for [`SelfUserProfile`](crate::model::SelfUserProfile)
-    #[non_exhaustive]
+    /// A builder for [`SelfUserProfile`](crate::model::SelfUserProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) iam_user_arn: std::option::Option<std::string::String>,
@@ -6261,7 +6414,7 @@ pub mod self_user_profile {
             self.ssh_public_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelfUserProfile`](crate::model::SelfUserProfile)
+        /// Consumes the builder and constructs a [`SelfUserProfile`](crate::model::SelfUserProfile).
         pub fn build(self) -> crate::model::SelfUserProfile {
             crate::model::SelfUserProfile {
                 iam_user_arn: self.iam_user_arn,
@@ -6273,7 +6426,7 @@ pub mod self_user_profile {
     }
 }
 impl SelfUserProfile {
-    /// Creates a new builder-style object to manufacture [`SelfUserProfile`](crate::model::SelfUserProfile)
+    /// Creates a new builder-style object to manufacture [`SelfUserProfile`](crate::model::SelfUserProfile).
     pub fn builder() -> crate::model::self_user_profile::Builder {
         crate::model::self_user_profile::Builder::default()
     }
@@ -6284,12 +6437,16 @@ impl SelfUserProfile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBasedAutoScalingConfiguration {
     /// <p>The layer ID.</p>
+    #[doc(hidden)]
     pub layer_id: std::option::Option<std::string::String>,
     /// <p>Whether load-based auto scaling is enabled for the layer.</p>
+    #[doc(hidden)]
     pub enable: std::option::Option<bool>,
     /// <p>An <code>AutoScalingThresholds</code> object that describes the upscaling configuration, which defines how and when AWS OpsWorks Stacks increases the number of instances.</p>
+    #[doc(hidden)]
     pub up_scaling: std::option::Option<crate::model::AutoScalingThresholds>,
     /// <p>An <code>AutoScalingThresholds</code> object that describes the downscaling configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.</p>
+    #[doc(hidden)]
     pub down_scaling: std::option::Option<crate::model::AutoScalingThresholds>,
 }
 impl LoadBasedAutoScalingConfiguration {
@@ -6320,11 +6477,10 @@ impl std::fmt::Debug for LoadBasedAutoScalingConfiguration {
         formatter.finish()
     }
 }
-/// See [`LoadBasedAutoScalingConfiguration`](crate::model::LoadBasedAutoScalingConfiguration)
+/// See [`LoadBasedAutoScalingConfiguration`](crate::model::LoadBasedAutoScalingConfiguration).
 pub mod load_based_auto_scaling_configuration {
 
-    /// A builder for [`LoadBasedAutoScalingConfiguration`](crate::model::LoadBasedAutoScalingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LoadBasedAutoScalingConfiguration`](crate::model::LoadBasedAutoScalingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) layer_id: std::option::Option<std::string::String>,
@@ -6379,7 +6535,7 @@ pub mod load_based_auto_scaling_configuration {
             self.down_scaling = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBasedAutoScalingConfiguration`](crate::model::LoadBasedAutoScalingConfiguration)
+        /// Consumes the builder and constructs a [`LoadBasedAutoScalingConfiguration`](crate::model::LoadBasedAutoScalingConfiguration).
         pub fn build(self) -> crate::model::LoadBasedAutoScalingConfiguration {
             crate::model::LoadBasedAutoScalingConfiguration {
                 layer_id: self.layer_id,
@@ -6391,7 +6547,7 @@ pub mod load_based_auto_scaling_configuration {
     }
 }
 impl LoadBasedAutoScalingConfiguration {
-    /// Creates a new builder-style object to manufacture [`LoadBasedAutoScalingConfiguration`](crate::model::LoadBasedAutoScalingConfiguration)
+    /// Creates a new builder-style object to manufacture [`LoadBasedAutoScalingConfiguration`](crate::model::LoadBasedAutoScalingConfiguration).
     pub fn builder() -> crate::model::load_based_auto_scaling_configuration::Builder {
         crate::model::load_based_auto_scaling_configuration::Builder::default()
     }
@@ -6402,59 +6558,82 @@ impl LoadBasedAutoScalingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Layer {
     /// <p>The Amazon Resource Number (ARN) of a layer.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The layer stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The layer ID.</p>
+    #[doc(hidden)]
     pub layer_id: std::option::Option<std::string::String>,
     /// <p>The layer type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::LayerType>,
     /// <p>The layer name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The layer short name.</p>
+    #[doc(hidden)]
     pub shortname: std::option::Option<std::string::String>,
     /// <p>The layer attributes.</p>
     /// <p>For the <code>HaproxyStatsPassword</code>, <code>MysqlRootPassword</code>, and <code>GangliaPassword</code> attributes, AWS OpsWorks Stacks returns <code>*****FILTERED*****</code> instead of the actual value</p>
     /// <p>For an ECS Cluster layer, AWS OpsWorks Stacks the <code>EcsClusterArn</code> attribute is set to the cluster's ARN.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<crate::model::LayerAttributesKeys, std::string::String>,
     >,
     /// <p>The Amazon CloudWatch Logs configuration settings for the layer.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs_configuration:
         std::option::Option<crate::model::CloudWatchLogsConfiguration>,
     /// <p>The ARN of the default IAM profile to be used for the layer's EC2 instances. For more information about IAM ARNs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">Using Identifiers</a>.</p>
+    #[doc(hidden)]
     pub custom_instance_profile_arn: std::option::Option<std::string::String>,
     /// <p>A JSON formatted string containing the layer's custom stack configuration and deployment attributes.</p>
+    #[doc(hidden)]
     pub custom_json: std::option::Option<std::string::String>,
     /// <p>An array containing the layer's custom security group IDs.</p>
+    #[doc(hidden)]
     pub custom_security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array containing the layer's security group names.</p>
+    #[doc(hidden)]
     pub default_security_group_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of <code>Package</code> objects that describe the layer's packages.</p>
+    #[doc(hidden)]
     pub packages: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A <code>VolumeConfigurations</code> object that describes the layer's Amazon EBS volumes.</p>
+    #[doc(hidden)]
     pub volume_configurations:
         std::option::Option<std::vec::Vec<crate::model::VolumeConfiguration>>,
     /// <p>Whether auto healing is disabled for the layer.</p>
+    #[doc(hidden)]
     pub enable_auto_healing: std::option::Option<bool>,
     /// <p>Whether to automatically assign an <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP address</a> to the layer's instances. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How to Edit a Layer</a>.</p>
+    #[doc(hidden)]
     pub auto_assign_elastic_ips: std::option::Option<bool>,
     /// <p>For stacks that are running in a VPC, whether to automatically assign a public IP address to the layer's instances. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html">How to Edit a Layer</a>.</p>
+    #[doc(hidden)]
     pub auto_assign_public_ips: std::option::Option<bool>,
     /// <p>AWS OpsWorks Stacks supports five lifecycle events: <b>setup</b>, <b>configuration</b>, <b>deploy</b>, <b>undeploy</b>, and <b>shutdown</b>. For each layer, AWS OpsWorks Stacks runs a set of standard recipes for each event. You can also provide custom recipes for any or all layers and events. AWS OpsWorks Stacks runs custom event recipes after the standard recipes. <code>LayerCustomRecipes</code> specifies the custom recipes for a particular layer to be run in response to each of the five events.</p>
     /// <p>To specify a recipe, use the cookbook's directory name in the repository followed by two colons and the recipe name, which is the recipe's file name without the <code>.rb</code> extension. For example: <code>phpapp2::dbsetup</code> specifies the <code>dbsetup.rb</code> recipe in the repository's <code>phpapp2</code> folder.</p>
+    #[doc(hidden)]
     pub default_recipes: std::option::Option<crate::model::Recipes>,
     /// <p>A <code>LayerCustomRecipes</code> object that specifies the layer's custom recipes.</p>
+    #[doc(hidden)]
     pub custom_recipes: std::option::Option<crate::model::Recipes>,
     /// <p>Date when the layer was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
     /// <p>Whether to install operating system and package updates when the instance boots. The default value is <code>true</code>. If this value is set to <code>false</code>, you must then update your instances manually by using <code>CreateDeployment</code> to run the <code>update_dependencies</code> stack command or manually running <code>yum</code> (Amazon Linux) or <code>apt-get</code> (Ubuntu) on the instances. </p> <note>
     /// <p>We strongly recommend using the default value of <code>true</code>, to ensure that your instances have the latest security updates.</p>
     /// </note>
+    #[doc(hidden)]
     pub install_updates_on_boot: std::option::Option<bool>,
     /// <p>Whether the layer uses Amazon EBS-optimized instances.</p>
+    #[doc(hidden)]
     pub use_ebs_optimized_instances: std::option::Option<bool>,
     /// <p>A <code>LifeCycleEventConfiguration</code> object that specifies the Shutdown event configuration.</p>
+    #[doc(hidden)]
     pub lifecycle_event_configuration:
         std::option::Option<crate::model::LifecycleEventConfiguration>,
 }
@@ -6611,11 +6790,10 @@ impl std::fmt::Debug for Layer {
         formatter.finish()
     }
 }
-/// See [`Layer`](crate::model::Layer)
+/// See [`Layer`](crate::model::Layer).
 pub mod layer {
 
-    /// A builder for [`Layer`](crate::model::Layer)
-    #[non_exhaustive]
+    /// A builder for [`Layer`](crate::model::Layer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6968,7 +7146,7 @@ pub mod layer {
             self.lifecycle_event_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`Layer`](crate::model::Layer)
+        /// Consumes the builder and constructs a [`Layer`](crate::model::Layer).
         pub fn build(self) -> crate::model::Layer {
             crate::model::Layer {
                 arn: self.arn,
@@ -6999,7 +7177,7 @@ pub mod layer {
     }
 }
 impl Layer {
-    /// Creates a new builder-style object to manufacture [`Layer`](crate::model::Layer)
+    /// Creates a new builder-style object to manufacture [`Layer`](crate::model::Layer).
     pub fn builder() -> crate::model::layer::Builder {
         crate::model::layer::Builder::default()
     }
@@ -7118,80 +7296,117 @@ impl AsRef<str> for LayerType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Instance {
     /// <p>The agent version. This parameter is set to <code>INHERIT</code> if the instance inherits the default stack setting or to a a version number for a fixed agent version.</p>
+    #[doc(hidden)]
     pub agent_version: std::option::Option<std::string::String>,
     /// <p>A custom AMI ID to be used to create the instance. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html">Instances</a> </p>
+    #[doc(hidden)]
     pub ami_id: std::option::Option<std::string::String>,
     /// <p>The instance architecture: "i386" or "x86_64".</p>
+    #[doc(hidden)]
     pub architecture: std::option::Option<crate::model::Architecture>,
     /// <p>The instance's Amazon Resource Number (ARN).</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>For load-based or time-based instances, the type.</p>
+    #[doc(hidden)]
     pub auto_scaling_type: std::option::Option<crate::model::AutoScalingType>,
     /// <p>The instance Availability Zone. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>An array of <code>BlockDeviceMapping</code> objects that specify the instance's block device mappings.</p>
+    #[doc(hidden)]
     pub block_device_mappings: std::option::Option<std::vec::Vec<crate::model::BlockDeviceMapping>>,
     /// <p>The time that the instance was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
     /// <p>Whether this is an Amazon EBS-optimized instance.</p>
+    #[doc(hidden)]
     pub ebs_optimized: std::option::Option<bool>,
     /// <p>The ID of the associated Amazon EC2 instance.</p>
+    #[doc(hidden)]
     pub ec2_instance_id: std::option::Option<std::string::String>,
     /// <p>For container instances, the Amazon ECS cluster's ARN.</p>
+    #[doc(hidden)]
     pub ecs_cluster_arn: std::option::Option<std::string::String>,
     /// <p>For container instances, the instance's ARN.</p>
+    #[doc(hidden)]
     pub ecs_container_instance_arn: std::option::Option<std::string::String>,
     /// <p>The instance <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP address </a>.</p>
+    #[doc(hidden)]
     pub elastic_ip: std::option::Option<std::string::String>,
     /// <p>The instance host name.</p>
+    #[doc(hidden)]
     pub hostname: std::option::Option<std::string::String>,
     /// <p>For registered instances, the infrastructure class: <code>ec2</code> or <code>on-premises</code>.</p>
+    #[doc(hidden)]
     pub infrastructure_class: std::option::Option<std::string::String>,
     /// <p>Whether to install operating system and package updates when the instance boots. The default value is <code>true</code>. If this value is set to <code>false</code>, you must then update your instances manually by using <code>CreateDeployment</code> to run the <code>update_dependencies</code> stack command or by manually running <code>yum</code> (Amazon Linux) or <code>apt-get</code> (Ubuntu) on the instances. </p> <note>
     /// <p>We strongly recommend using the default value of <code>true</code>, to ensure that your instances have the latest security updates.</p>
     /// </note>
+    #[doc(hidden)]
     pub install_updates_on_boot: std::option::Option<bool>,
     /// <p>The instance ID.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the instance's IAM profile. For more information about IAM ARNs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">Using Identifiers</a>.</p>
+    #[doc(hidden)]
     pub instance_profile_arn: std::option::Option<std::string::String>,
     /// <p>The instance type, such as <code>t2.micro</code>.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The ID of the last service error. For more information, call <code>DescribeServiceErrors</code>.</p>
+    #[doc(hidden)]
     pub last_service_error_id: std::option::Option<std::string::String>,
     /// <p>An array containing the instance layer IDs.</p>
+    #[doc(hidden)]
     pub layer_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The instance's operating system.</p>
+    #[doc(hidden)]
     pub os: std::option::Option<std::string::String>,
     /// <p>The instance's platform.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The instance's private DNS name.</p>
+    #[doc(hidden)]
     pub private_dns: std::option::Option<std::string::String>,
     /// <p>The instance's private IP address.</p>
+    #[doc(hidden)]
     pub private_ip: std::option::Option<std::string::String>,
     /// <p>The instance public DNS name.</p>
+    #[doc(hidden)]
     pub public_dns: std::option::Option<std::string::String>,
     /// <p>The instance public IP address.</p>
+    #[doc(hidden)]
     pub public_ip: std::option::Option<std::string::String>,
     /// <p>For registered instances, who performed the registration.</p>
+    #[doc(hidden)]
     pub registered_by: std::option::Option<std::string::String>,
     /// <p>The instance's reported AWS OpsWorks Stacks agent version.</p>
+    #[doc(hidden)]
     pub reported_agent_version: std::option::Option<std::string::String>,
     /// <p>For registered instances, the reported operating system.</p>
+    #[doc(hidden)]
     pub reported_os: std::option::Option<crate::model::ReportedOs>,
     /// <p>The instance's root device type. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">Storage for the Root Device</a>.</p>
+    #[doc(hidden)]
     pub root_device_type: std::option::Option<crate::model::RootDeviceType>,
     /// <p>The root device volume ID.</p>
+    #[doc(hidden)]
     pub root_device_volume_id: std::option::Option<std::string::String>,
     /// <p>An array containing the instance security group IDs.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The SSH key's Deep Security Agent (DSA) fingerprint.</p>
+    #[doc(hidden)]
     pub ssh_host_dsa_key_fingerprint: std::option::Option<std::string::String>,
     /// <p>The SSH key's RSA fingerprint.</p>
+    #[doc(hidden)]
     pub ssh_host_rsa_key_fingerprint: std::option::Option<std::string::String>,
     /// <p>The instance's Amazon EC2 key-pair name.</p>
+    #[doc(hidden)]
     pub ssh_key_name: std::option::Option<std::string::String>,
     /// <p>The stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The instance status:</p>
     /// <ul>
@@ -7211,12 +7426,16 @@ pub struct Instance {
     /// <li> <p> <code>terminated</code> </p> </li>
     /// <li> <p> <code>terminating</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The instance's subnet ID; applicable only if the stack is running in a VPC.</p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
     /// <p>The instance's tenancy option, such as <code>dedicated</code> or <code>host</code>.</p>
+    #[doc(hidden)]
     pub tenancy: std::option::Option<std::string::String>,
     /// <p>The instance's virtualization type: <code>paravirtual</code> or <code>hvm</code>.</p>
+    #[doc(hidden)]
     pub virtualization_type: std::option::Option<crate::model::VirtualizationType>,
 }
 impl Instance {
@@ -7462,11 +7681,10 @@ impl std::fmt::Debug for Instance {
         formatter.finish()
     }
 }
-/// See [`Instance`](crate::model::Instance)
+/// See [`Instance`](crate::model::Instance).
 pub mod instance {
 
-    /// A builder for [`Instance`](crate::model::Instance)
-    #[non_exhaustive]
+    /// A builder for [`Instance`](crate::model::Instance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) agent_version: std::option::Option<std::string::String>,
@@ -8051,7 +8269,7 @@ pub mod instance {
             self.virtualization_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance)
+        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance).
         pub fn build(self) -> crate::model::Instance {
             crate::model::Instance {
                 agent_version: self.agent_version,
@@ -8100,7 +8318,7 @@ pub mod instance {
     }
 }
 impl Instance {
-    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance)
+    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance).
     pub fn builder() -> crate::model::instance::Builder {
         crate::model::instance::Builder::default()
     }
@@ -8166,10 +8384,13 @@ impl AsRef<str> for VirtualizationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportedOs {
     /// <p>The operating system family.</p>
+    #[doc(hidden)]
     pub family: std::option::Option<std::string::String>,
     /// <p>The operating system name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The operating system version.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl ReportedOs {
@@ -8195,11 +8416,10 @@ impl std::fmt::Debug for ReportedOs {
         formatter.finish()
     }
 }
-/// See [`ReportedOs`](crate::model::ReportedOs)
+/// See [`ReportedOs`](crate::model::ReportedOs).
 pub mod reported_os {
 
-    /// A builder for [`ReportedOs`](crate::model::ReportedOs)
-    #[non_exhaustive]
+    /// A builder for [`ReportedOs`](crate::model::ReportedOs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) family: std::option::Option<std::string::String>,
@@ -8237,7 +8457,7 @@ pub mod reported_os {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportedOs`](crate::model::ReportedOs)
+        /// Consumes the builder and constructs a [`ReportedOs`](crate::model::ReportedOs).
         pub fn build(self) -> crate::model::ReportedOs {
             crate::model::ReportedOs {
                 family: self.family,
@@ -8248,7 +8468,7 @@ pub mod reported_os {
     }
 }
 impl ReportedOs {
-    /// Creates a new builder-style object to manufacture [`ReportedOs`](crate::model::ReportedOs)
+    /// Creates a new builder-style object to manufacture [`ReportedOs`](crate::model::ReportedOs).
     pub fn builder() -> crate::model::reported_os::Builder {
         crate::model::reported_os::Builder::default()
     }
@@ -8259,12 +8479,16 @@ impl ReportedOs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BlockDeviceMapping {
     /// <p>The device name that is exposed to the instance, such as <code>/dev/sdh</code>. For the root device, you can use the explicit device name or you can set this parameter to <code>ROOT_DEVICE</code> and AWS OpsWorks Stacks will provide the correct device name.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>Suppresses the specified device included in the AMI's block device mapping.</p>
+    #[doc(hidden)]
     pub no_device: std::option::Option<std::string::String>,
     /// <p>The virtual device name. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html">BlockDeviceMapping</a>.</p>
+    #[doc(hidden)]
     pub virtual_name: std::option::Option<std::string::String>,
     /// <p>An <code>EBSBlockDevice</code> that defines how to configure an Amazon EBS volume when the instance is launched.</p>
+    #[doc(hidden)]
     pub ebs: std::option::Option<crate::model::EbsBlockDevice>,
 }
 impl BlockDeviceMapping {
@@ -8295,11 +8519,10 @@ impl std::fmt::Debug for BlockDeviceMapping {
         formatter.finish()
     }
 }
-/// See [`BlockDeviceMapping`](crate::model::BlockDeviceMapping)
+/// See [`BlockDeviceMapping`](crate::model::BlockDeviceMapping).
 pub mod block_device_mapping {
 
-    /// A builder for [`BlockDeviceMapping`](crate::model::BlockDeviceMapping)
-    #[non_exhaustive]
+    /// A builder for [`BlockDeviceMapping`](crate::model::BlockDeviceMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -8348,7 +8571,7 @@ pub mod block_device_mapping {
             self.ebs = input;
             self
         }
-        /// Consumes the builder and constructs a [`BlockDeviceMapping`](crate::model::BlockDeviceMapping)
+        /// Consumes the builder and constructs a [`BlockDeviceMapping`](crate::model::BlockDeviceMapping).
         pub fn build(self) -> crate::model::BlockDeviceMapping {
             crate::model::BlockDeviceMapping {
                 device_name: self.device_name,
@@ -8360,7 +8583,7 @@ pub mod block_device_mapping {
     }
 }
 impl BlockDeviceMapping {
-    /// Creates a new builder-style object to manufacture [`BlockDeviceMapping`](crate::model::BlockDeviceMapping)
+    /// Creates a new builder-style object to manufacture [`BlockDeviceMapping`](crate::model::BlockDeviceMapping).
     pub fn builder() -> crate::model::block_device_mapping::Builder {
         crate::model::block_device_mapping::Builder::default()
     }
@@ -8371,15 +8594,20 @@ impl BlockDeviceMapping {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsBlockDevice {
     /// <p>The snapshot ID.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>The number of I/O operations per second (IOPS) that the volume supports. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html">EbsBlockDevice</a>.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>The volume size, in GiB. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html">EbsBlockDevice</a>.</p>
+    #[doc(hidden)]
     pub volume_size: std::option::Option<i32>,
     /// <p>The volume type. <code>gp2</code> for General Purpose (SSD) volumes, <code>io1</code> for Provisioned IOPS (SSD) volumes, <code>st1</code> for Throughput Optimized hard disk drives (HDD), <code>sc1</code> for Cold HDD,and <code>standard</code> for Magnetic volumes.</p>
     /// <p>If you specify the <code>io1</code> volume type, you must also specify a value for the <code>Iops</code> attribute. The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1. AWS uses the default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x (volume size).</p>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<crate::model::VolumeType>,
     /// <p>Whether the volume is deleted on instance termination.</p>
+    #[doc(hidden)]
     pub delete_on_termination: std::option::Option<bool>,
 }
 impl EbsBlockDevice {
@@ -8416,11 +8644,10 @@ impl std::fmt::Debug for EbsBlockDevice {
         formatter.finish()
     }
 }
-/// See [`EbsBlockDevice`](crate::model::EbsBlockDevice)
+/// See [`EbsBlockDevice`](crate::model::EbsBlockDevice).
 pub mod ebs_block_device {
 
-    /// A builder for [`EbsBlockDevice`](crate::model::EbsBlockDevice)
-    #[non_exhaustive]
+    /// A builder for [`EbsBlockDevice`](crate::model::EbsBlockDevice).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_id: std::option::Option<std::string::String>,
@@ -8485,7 +8712,7 @@ pub mod ebs_block_device {
             self.delete_on_termination = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsBlockDevice`](crate::model::EbsBlockDevice)
+        /// Consumes the builder and constructs a [`EbsBlockDevice`](crate::model::EbsBlockDevice).
         pub fn build(self) -> crate::model::EbsBlockDevice {
             crate::model::EbsBlockDevice {
                 snapshot_id: self.snapshot_id,
@@ -8498,7 +8725,7 @@ pub mod ebs_block_device {
     }
 }
 impl EbsBlockDevice {
-    /// Creates a new builder-style object to manufacture [`EbsBlockDevice`](crate::model::EbsBlockDevice)
+    /// Creates a new builder-style object to manufacture [`EbsBlockDevice`](crate::model::EbsBlockDevice).
     pub fn builder() -> crate::model::ebs_block_device::Builder {
         crate::model::ebs_block_device::Builder::default()
     }
@@ -8568,22 +8795,31 @@ impl AsRef<str> for VolumeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticLoadBalancer {
     /// <p>The Elastic Load Balancing instance's name.</p>
+    #[doc(hidden)]
     pub elastic_load_balancer_name: std::option::Option<std::string::String>,
     /// <p>The instance's AWS region.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The instance's public DNS name.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>The ID of the stack that the instance is associated with.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The ID of the layer that the instance is attached to.</p>
+    #[doc(hidden)]
     pub layer_id: std::option::Option<std::string::String>,
     /// <p>The VPC ID.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>A list of Availability Zones.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of subnet IDs, if the stack is running in a VPC.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of the EC2 instances that the Elastic Load Balancing instance is managing traffic for.</p>
+    #[doc(hidden)]
     pub ec2_instance_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ElasticLoadBalancer {
@@ -8642,11 +8878,10 @@ impl std::fmt::Debug for ElasticLoadBalancer {
         formatter.finish()
     }
 }
-/// See [`ElasticLoadBalancer`](crate::model::ElasticLoadBalancer)
+/// See [`ElasticLoadBalancer`](crate::model::ElasticLoadBalancer).
 pub mod elastic_load_balancer {
 
-    /// A builder for [`ElasticLoadBalancer`](crate::model::ElasticLoadBalancer)
-    #[non_exhaustive]
+    /// A builder for [`ElasticLoadBalancer`](crate::model::ElasticLoadBalancer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) elastic_load_balancer_name: std::option::Option<std::string::String>,
@@ -8780,7 +9015,7 @@ pub mod elastic_load_balancer {
             self.ec2_instance_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticLoadBalancer`](crate::model::ElasticLoadBalancer)
+        /// Consumes the builder and constructs a [`ElasticLoadBalancer`](crate::model::ElasticLoadBalancer).
         pub fn build(self) -> crate::model::ElasticLoadBalancer {
             crate::model::ElasticLoadBalancer {
                 elastic_load_balancer_name: self.elastic_load_balancer_name,
@@ -8797,7 +9032,7 @@ pub mod elastic_load_balancer {
     }
 }
 impl ElasticLoadBalancer {
-    /// Creates a new builder-style object to manufacture [`ElasticLoadBalancer`](crate::model::ElasticLoadBalancer)
+    /// Creates a new builder-style object to manufacture [`ElasticLoadBalancer`](crate::model::ElasticLoadBalancer).
     pub fn builder() -> crate::model::elastic_load_balancer::Builder {
         crate::model::elastic_load_balancer::Builder::default()
     }
@@ -8808,14 +9043,19 @@ impl ElasticLoadBalancer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticIp {
     /// <p>The IP address.</p>
+    #[doc(hidden)]
     pub ip: std::option::Option<std::string::String>,
     /// <p>The name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The domain.</p>
+    #[doc(hidden)]
     pub domain: std::option::Option<std::string::String>,
     /// <p>The AWS region. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and Endpoints</a>.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The ID of the instance that the address is attached to.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
 }
 impl ElasticIp {
@@ -8851,11 +9091,10 @@ impl std::fmt::Debug for ElasticIp {
         formatter.finish()
     }
 }
-/// See [`ElasticIp`](crate::model::ElasticIp)
+/// See [`ElasticIp`](crate::model::ElasticIp).
 pub mod elastic_ip {
 
-    /// A builder for [`ElasticIp`](crate::model::ElasticIp)
-    #[non_exhaustive]
+    /// A builder for [`ElasticIp`](crate::model::ElasticIp).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip: std::option::Option<std::string::String>,
@@ -8915,7 +9154,7 @@ pub mod elastic_ip {
             self.instance_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticIp`](crate::model::ElasticIp)
+        /// Consumes the builder and constructs a [`ElasticIp`](crate::model::ElasticIp).
         pub fn build(self) -> crate::model::ElasticIp {
             crate::model::ElasticIp {
                 ip: self.ip,
@@ -8928,7 +9167,7 @@ pub mod elastic_ip {
     }
 }
 impl ElasticIp {
-    /// Creates a new builder-style object to manufacture [`ElasticIp`](crate::model::ElasticIp)
+    /// Creates a new builder-style object to manufacture [`ElasticIp`](crate::model::ElasticIp).
     pub fn builder() -> crate::model::elastic_ip::Builder {
         crate::model::elastic_ip::Builder::default()
     }
@@ -8939,12 +9178,16 @@ impl ElasticIp {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EcsCluster {
     /// <p>The cluster's ARN.</p>
+    #[doc(hidden)]
     pub ecs_cluster_arn: std::option::Option<std::string::String>,
     /// <p>The cluster name.</p>
+    #[doc(hidden)]
     pub ecs_cluster_name: std::option::Option<std::string::String>,
     /// <p>The stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The time and date that the cluster was registered with the stack.</p>
+    #[doc(hidden)]
     pub registered_at: std::option::Option<std::string::String>,
 }
 impl EcsCluster {
@@ -8975,11 +9218,10 @@ impl std::fmt::Debug for EcsCluster {
         formatter.finish()
     }
 }
-/// See [`EcsCluster`](crate::model::EcsCluster)
+/// See [`EcsCluster`](crate::model::EcsCluster).
 pub mod ecs_cluster {
 
-    /// A builder for [`EcsCluster`](crate::model::EcsCluster)
-    #[non_exhaustive]
+    /// A builder for [`EcsCluster`](crate::model::EcsCluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ecs_cluster_arn: std::option::Option<std::string::String>,
@@ -9037,7 +9279,7 @@ pub mod ecs_cluster {
             self.registered_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`EcsCluster`](crate::model::EcsCluster)
+        /// Consumes the builder and constructs a [`EcsCluster`](crate::model::EcsCluster).
         pub fn build(self) -> crate::model::EcsCluster {
             crate::model::EcsCluster {
                 ecs_cluster_arn: self.ecs_cluster_arn,
@@ -9049,7 +9291,7 @@ pub mod ecs_cluster {
     }
 }
 impl EcsCluster {
-    /// Creates a new builder-style object to manufacture [`EcsCluster`](crate::model::EcsCluster)
+    /// Creates a new builder-style object to manufacture [`EcsCluster`](crate::model::EcsCluster).
     pub fn builder() -> crate::model::ecs_cluster::Builder {
         crate::model::ecs_cluster::Builder::default()
     }
@@ -9060,22 +9302,31 @@ impl EcsCluster {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Deployment {
     /// <p>The deployment ID.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The app ID.</p>
+    #[doc(hidden)]
     pub app_id: std::option::Option<std::string::String>,
     /// <p>Date when the deployment was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
     /// <p>Date when the deployment completed.</p>
+    #[doc(hidden)]
     pub completed_at: std::option::Option<std::string::String>,
     /// <p>The deployment duration.</p>
+    #[doc(hidden)]
     pub duration: std::option::Option<i32>,
     /// <p>The user's IAM ARN.</p>
+    #[doc(hidden)]
     pub iam_user_arn: std::option::Option<std::string::String>,
     /// <p>A user-defined comment.</p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
     /// <p>Used to specify a stack or deployment command.</p>
+    #[doc(hidden)]
     pub command: std::option::Option<crate::model::DeploymentCommand>,
     /// <p>The deployment status:</p>
     /// <ul>
@@ -9083,12 +9334,15 @@ pub struct Deployment {
     /// <li> <p>successful</p> </li>
     /// <li> <p>failed</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>A string that contains user-defined custom JSON. It can be used to override the corresponding default stack configuration attribute values for stack or to pass data to recipes. The string should be in the following format:</p>
     /// <p> <code>"{\"key1\": \"value1\", \"key2\": \"value2\",...}"</code> </p>
     /// <p>For more information on custom JSON, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-json.html">Use Custom JSON to Modify the Stack Configuration Attributes</a>.</p>
+    #[doc(hidden)]
     pub custom_json: std::option::Option<std::string::String>,
     /// <p>The IDs of the target instances.</p>
+    #[doc(hidden)]
     pub instance_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Deployment {
@@ -9166,11 +9420,10 @@ impl std::fmt::Debug for Deployment {
         formatter.finish()
     }
 }
-/// See [`Deployment`](crate::model::Deployment)
+/// See [`Deployment`](crate::model::Deployment).
 pub mod deployment {
 
-    /// A builder for [`Deployment`](crate::model::Deployment)
-    #[non_exhaustive]
+    /// A builder for [`Deployment`](crate::model::Deployment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -9336,7 +9589,7 @@ pub mod deployment {
             self.instance_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`Deployment`](crate::model::Deployment)
+        /// Consumes the builder and constructs a [`Deployment`](crate::model::Deployment).
         pub fn build(self) -> crate::model::Deployment {
             crate::model::Deployment {
                 deployment_id: self.deployment_id,
@@ -9356,7 +9609,7 @@ pub mod deployment {
     }
 }
 impl Deployment {
-    /// Creates a new builder-style object to manufacture [`Deployment`](crate::model::Deployment)
+    /// Creates a new builder-style object to manufacture [`Deployment`](crate::model::Deployment).
     pub fn builder() -> crate::model::deployment::Builder {
         crate::model::deployment::Builder::default()
     }
@@ -9385,6 +9638,7 @@ pub struct DeploymentCommand {
     /// <li> <p> <code>restart</code>: Restart the app's web or application server.</p> </li>
     /// <li> <p> <code>undeploy</code>: Undeploy the app.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::DeploymentCommandName>,
     /// <p>The arguments of those commands that take arguments. It should be set to a JSON object with the following format:</p>
     /// <p> <code>{"arg_name1" : ["value1", "value2", ...], "arg_name2" : ["value1", "value2", ...], ...}</code> </p>
@@ -9395,6 +9649,7 @@ pub struct DeploymentCommand {
     /// </ul>
     /// <p>For example, to upgrade an instance to Amazon Linux 2016.09, set <code>Args</code> to the following.</p>
     /// <p> <code> { "upgrade_os_to":["Amazon Linux 2016.09"], "allow_reboot":["true"] } </code> </p>
+    #[doc(hidden)]
     pub args: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
@@ -9447,11 +9702,10 @@ impl std::fmt::Debug for DeploymentCommand {
         formatter.finish()
     }
 }
-/// See [`DeploymentCommand`](crate::model::DeploymentCommand)
+/// See [`DeploymentCommand`](crate::model::DeploymentCommand).
 pub mod deployment_command {
 
-    /// A builder for [`DeploymentCommand`](crate::model::DeploymentCommand)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentCommand`](crate::model::DeploymentCommand).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::DeploymentCommandName>,
@@ -9550,7 +9804,7 @@ pub mod deployment_command {
             self.args = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentCommand`](crate::model::DeploymentCommand)
+        /// Consumes the builder and constructs a [`DeploymentCommand`](crate::model::DeploymentCommand).
         pub fn build(self) -> crate::model::DeploymentCommand {
             crate::model::DeploymentCommand {
                 name: self.name,
@@ -9560,7 +9814,7 @@ pub mod deployment_command {
     }
 }
 impl DeploymentCommand {
-    /// Creates a new builder-style object to manufacture [`DeploymentCommand`](crate::model::DeploymentCommand)
+    /// Creates a new builder-style object to manufacture [`DeploymentCommand`](crate::model::DeploymentCommand).
     pub fn builder() -> crate::model::deployment_command::Builder {
         crate::model::deployment_command::Builder::default()
     }
@@ -9679,16 +9933,22 @@ impl AsRef<str> for DeploymentCommandName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Command {
     /// <p>The command ID.</p>
+    #[doc(hidden)]
     pub command_id: std::option::Option<std::string::String>,
     /// <p>The ID of the instance where the command was executed.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The command deployment ID.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>Date and time when the command was run.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
     /// <p>Date and time when the command was acknowledged.</p>
+    #[doc(hidden)]
     pub acknowledged_at: std::option::Option<std::string::String>,
     /// <p>Date when the command completed.</p>
+    #[doc(hidden)]
     pub completed_at: std::option::Option<std::string::String>,
     /// <p>The command status:</p>
     /// <ul>
@@ -9697,10 +9957,13 @@ pub struct Command {
     /// <li> <p>skipped</p> </li>
     /// <li> <p>pending</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The command exit code.</p>
+    #[doc(hidden)]
     pub exit_code: std::option::Option<i32>,
     /// <p>The URL of the command log.</p>
+    #[doc(hidden)]
     pub log_url: std::option::Option<std::string::String>,
     /// <p>The command type:</p>
     /// <ul>
@@ -9717,6 +9980,7 @@ pub struct Command {
     /// <li> <p> <code>update_custom_cookbooks</code> </p> </li>
     /// <li> <p> <code>update_dependencies</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl Command {
@@ -9797,11 +10061,10 @@ impl std::fmt::Debug for Command {
         formatter.finish()
     }
 }
-/// See [`Command`](crate::model::Command)
+/// See [`Command`](crate::model::Command).
 pub mod command {
 
-    /// A builder for [`Command`](crate::model::Command)
-    #[non_exhaustive]
+    /// A builder for [`Command`](crate::model::Command).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) command_id: std::option::Option<std::string::String>,
@@ -9962,7 +10225,7 @@ pub mod command {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Command`](crate::model::Command)
+        /// Consumes the builder and constructs a [`Command`](crate::model::Command).
         pub fn build(self) -> crate::model::Command {
             crate::model::Command {
                 command_id: self.command_id,
@@ -9980,7 +10243,7 @@ pub mod command {
     }
 }
 impl Command {
-    /// Creates a new builder-style object to manufacture [`Command`](crate::model::Command)
+    /// Creates a new builder-style object to manufacture [`Command`](crate::model::Command).
     pub fn builder() -> crate::model::command::Builder {
         crate::model::command::Builder::default()
     }
@@ -9991,36 +10254,50 @@ impl Command {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct App {
     /// <p>The app ID.</p>
+    #[doc(hidden)]
     pub app_id: std::option::Option<std::string::String>,
     /// <p>The app stack ID.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
     /// <p>The app's short name.</p>
+    #[doc(hidden)]
     pub shortname: std::option::Option<std::string::String>,
     /// <p>The app name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the app.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The app's data sources.</p>
+    #[doc(hidden)]
     pub data_sources: std::option::Option<std::vec::Vec<crate::model::DataSource>>,
     /// <p>The app type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AppType>,
     /// <p>A <code>Source</code> object that describes the app repository.</p>
+    #[doc(hidden)]
     pub app_source: std::option::Option<crate::model::Source>,
     /// <p>The app vhost settings with multiple domains separated by commas. For example: <code>'www.example.com, example.com'</code> </p>
+    #[doc(hidden)]
     pub domains: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Whether to enable SSL for the app.</p>
+    #[doc(hidden)]
     pub enable_ssl: std::option::Option<bool>,
     /// <p>An <code>SslConfiguration</code> object with the SSL configuration.</p>
+    #[doc(hidden)]
     pub ssl_configuration: std::option::Option<crate::model::SslConfiguration>,
     /// <p>The stack attributes.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<crate::model::AppAttributesKeys, std::string::String>,
     >,
     /// <p>When the app was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
     /// <p>An array of <code>EnvironmentVariable</code> objects that specify environment variables to be associated with the app. After you deploy the app, these variables are defined on the associated app server instances. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html#workingapps-creating-environment"> Environment Variables</a>. </p> <note>
     /// <p>There is no specific limit on the number of environment variables. However, the size of the associated data structure - which includes the variable names, values, and protected flag values - cannot exceed 20 KB. This limit should accommodate most if not all use cases, but if you do exceed it, you will cause an exception (API) with an "Environment: is too large (maximum is 20 KB)" message.</p>
     /// </note>
+    #[doc(hidden)]
     pub environment: std::option::Option<std::vec::Vec<crate::model::EnvironmentVariable>>,
 }
 impl App {
@@ -10107,11 +10384,10 @@ impl std::fmt::Debug for App {
         formatter.finish()
     }
 }
-/// See [`App`](crate::model::App)
+/// See [`App`](crate::model::App).
 pub mod app {
 
-    /// A builder for [`App`](crate::model::App)
-    #[non_exhaustive]
+    /// A builder for [`App`](crate::model::App).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_id: std::option::Option<std::string::String>,
@@ -10322,7 +10598,7 @@ pub mod app {
             self.environment = input;
             self
         }
-        /// Consumes the builder and constructs a [`App`](crate::model::App)
+        /// Consumes the builder and constructs a [`App`](crate::model::App).
         pub fn build(self) -> crate::model::App {
             crate::model::App {
                 app_id: self.app_id,
@@ -10344,7 +10620,7 @@ pub mod app {
     }
 }
 impl App {
-    /// Creates a new builder-style object to manufacture [`App`](crate::model::App)
+    /// Creates a new builder-style object to manufacture [`App`](crate::model::App).
     pub fn builder() -> crate::model::app::Builder {
         crate::model::app::Builder::default()
     }
@@ -10355,8 +10631,10 @@ impl App {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AgentVersion {
     /// <p>The agent version.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The configuration manager.</p>
+    #[doc(hidden)]
     pub configuration_manager: std::option::Option<crate::model::StackConfigurationManager>,
 }
 impl AgentVersion {
@@ -10379,11 +10657,10 @@ impl std::fmt::Debug for AgentVersion {
         formatter.finish()
     }
 }
-/// See [`AgentVersion`](crate::model::AgentVersion)
+/// See [`AgentVersion`](crate::model::AgentVersion).
 pub mod agent_version {
 
-    /// A builder for [`AgentVersion`](crate::model::AgentVersion)
-    #[non_exhaustive]
+    /// A builder for [`AgentVersion`](crate::model::AgentVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version: std::option::Option<std::string::String>,
@@ -10417,7 +10694,7 @@ pub mod agent_version {
             self.configuration_manager = input;
             self
         }
-        /// Consumes the builder and constructs a [`AgentVersion`](crate::model::AgentVersion)
+        /// Consumes the builder and constructs a [`AgentVersion`](crate::model::AgentVersion).
         pub fn build(self) -> crate::model::AgentVersion {
             crate::model::AgentVersion {
                 version: self.version,
@@ -10427,7 +10704,7 @@ pub mod agent_version {
     }
 }
 impl AgentVersion {
-    /// Creates a new builder-style object to manufacture [`AgentVersion`](crate::model::AgentVersion)
+    /// Creates a new builder-style object to manufacture [`AgentVersion`](crate::model::AgentVersion).
     pub fn builder() -> crate::model::agent_version::Builder {
         crate::model::agent_version::Builder::default()
     }

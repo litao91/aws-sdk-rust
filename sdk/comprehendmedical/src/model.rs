@@ -55,8 +55,10 @@ impl AsRef<str> for LanguageCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputDataConfig {
     /// <p>When you use the <code>OutputDataConfig</code> object with asynchronous operations, you specify the Amazon S3 location where you want to write the output data. The URI must be in the same region as the API endpoint that you are calling. The location is used as the prefix for the actual location of the output.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The path to the output data files in the S3 bucket. Comprehend Medical; creates an output directory using the job ID so that the output from one job does not overwrite the output of another.</p>
+    #[doc(hidden)]
     pub s3_key: std::option::Option<std::string::String>,
 }
 impl OutputDataConfig {
@@ -77,11 +79,10 @@ impl std::fmt::Debug for OutputDataConfig {
         formatter.finish()
     }
 }
-/// See [`OutputDataConfig`](crate::model::OutputDataConfig)
+/// See [`OutputDataConfig`](crate::model::OutputDataConfig).
 pub mod output_data_config {
 
-    /// A builder for [`OutputDataConfig`](crate::model::OutputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`OutputDataConfig`](crate::model::OutputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket: std::option::Option<std::string::String>,
@@ -108,7 +109,7 @@ pub mod output_data_config {
             self.s3_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputDataConfig`](crate::model::OutputDataConfig)
+        /// Consumes the builder and constructs a [`OutputDataConfig`](crate::model::OutputDataConfig).
         pub fn build(self) -> crate::model::OutputDataConfig {
             crate::model::OutputDataConfig {
                 s3_bucket: self.s3_bucket,
@@ -118,7 +119,7 @@ pub mod output_data_config {
     }
 }
 impl OutputDataConfig {
-    /// Creates a new builder-style object to manufacture [`OutputDataConfig`](crate::model::OutputDataConfig)
+    /// Creates a new builder-style object to manufacture [`OutputDataConfig`](crate::model::OutputDataConfig).
     pub fn builder() -> crate::model::output_data_config::Builder {
         crate::model::output_data_config::Builder::default()
     }
@@ -130,8 +131,10 @@ impl OutputDataConfig {
 pub struct InputDataConfig {
     /// <p>The URI of the S3 bucket that contains the input data. The bucket must be in the same region as the API endpoint that you are calling.</p>
     /// <p>Each file in the document collection must be less than 40 KB. You can store a maximum of 30 GB in the bucket.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The path to the input data files in the S3 bucket.</p>
+    #[doc(hidden)]
     pub s3_key: std::option::Option<std::string::String>,
 }
 impl InputDataConfig {
@@ -153,11 +156,10 @@ impl std::fmt::Debug for InputDataConfig {
         formatter.finish()
     }
 }
-/// See [`InputDataConfig`](crate::model::InputDataConfig)
+/// See [`InputDataConfig`](crate::model::InputDataConfig).
 pub mod input_data_config {
 
-    /// A builder for [`InputDataConfig`](crate::model::InputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`InputDataConfig`](crate::model::InputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket: std::option::Option<std::string::String>,
@@ -186,7 +188,7 @@ pub mod input_data_config {
             self.s3_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputDataConfig`](crate::model::InputDataConfig)
+        /// Consumes the builder and constructs a [`InputDataConfig`](crate::model::InputDataConfig).
         pub fn build(self) -> crate::model::InputDataConfig {
             crate::model::InputDataConfig {
                 s3_bucket: self.s3_bucket,
@@ -196,7 +198,7 @@ pub mod input_data_config {
     }
 }
 impl InputDataConfig {
-    /// Creates a new builder-style object to manufacture [`InputDataConfig`](crate::model::InputDataConfig)
+    /// Creates a new builder-style object to manufacture [`InputDataConfig`](crate::model::InputDataConfig).
     pub fn builder() -> crate::model::input_data_config::Builder {
         crate::model::input_data_config::Builder::default()
     }
@@ -207,32 +209,46 @@ impl InputDataConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComprehendMedicalAsyncJobProperties {
     /// <p>The identifier assigned to the detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The name that you assigned to the detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description of the status of a job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the detection job completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that job metadata is deleted from the server. Output files in your S3 bucket will not be deleted. After the metadata is deleted, the job will no longer appear in the results of the <code>ListEntitiesDetectionV2Job</code> or the <code>ListPHIDetectionJobs</code> operation.</p>
+    #[doc(hidden)]
     pub expiration_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input data configuration that you supplied when you created the detection job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that you supplied when you created the detection job.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The language code of the input documents.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The Amazon Resource Name (ARN) that gives Comprehend Medical; read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The path to the file that describes the results of a batch job.</p>
+    #[doc(hidden)]
     pub manifest_file_path: std::option::Option<std::string::String>,
     /// <p>The AWS Key Management Service key, if any, used to encrypt the output files. </p>
+    #[doc(hidden)]
     pub kms_key: std::option::Option<std::string::String>,
     /// <p>The version of the model used to analyze the documents. The version number looks like X.X.X. You can use this information to track the model used for a particular batch of documents.</p>
+    #[doc(hidden)]
     pub model_version: std::option::Option<std::string::String>,
 }
 impl ComprehendMedicalAsyncJobProperties {
@@ -313,11 +329,10 @@ impl std::fmt::Debug for ComprehendMedicalAsyncJobProperties {
         formatter.finish()
     }
 }
-/// See [`ComprehendMedicalAsyncJobProperties`](crate::model::ComprehendMedicalAsyncJobProperties)
+/// See [`ComprehendMedicalAsyncJobProperties`](crate::model::ComprehendMedicalAsyncJobProperties).
 pub mod comprehend_medical_async_job_properties {
 
-    /// A builder for [`ComprehendMedicalAsyncJobProperties`](crate::model::ComprehendMedicalAsyncJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`ComprehendMedicalAsyncJobProperties`](crate::model::ComprehendMedicalAsyncJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -506,7 +521,7 @@ pub mod comprehend_medical_async_job_properties {
             self.model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComprehendMedicalAsyncJobProperties`](crate::model::ComprehendMedicalAsyncJobProperties)
+        /// Consumes the builder and constructs a [`ComprehendMedicalAsyncJobProperties`](crate::model::ComprehendMedicalAsyncJobProperties).
         pub fn build(self) -> crate::model::ComprehendMedicalAsyncJobProperties {
             crate::model::ComprehendMedicalAsyncJobProperties {
                 job_id: self.job_id,
@@ -528,7 +543,7 @@ pub mod comprehend_medical_async_job_properties {
     }
 }
 impl ComprehendMedicalAsyncJobProperties {
-    /// Creates a new builder-style object to manufacture [`ComprehendMedicalAsyncJobProperties`](crate::model::ComprehendMedicalAsyncJobProperties)
+    /// Creates a new builder-style object to manufacture [`ComprehendMedicalAsyncJobProperties`](crate::model::ComprehendMedicalAsyncJobProperties).
     pub fn builder() -> crate::model::comprehend_medical_async_job_properties::Builder {
         crate::model::comprehend_medical_async_job_properties::Builder::default()
     }
@@ -622,12 +637,16 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComprehendMedicalAsyncJobFilter {
     /// <p>Filters on the name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ComprehendMedicalAsyncJobFilter {
@@ -658,11 +677,10 @@ impl std::fmt::Debug for ComprehendMedicalAsyncJobFilter {
         formatter.finish()
     }
 }
-/// See [`ComprehendMedicalAsyncJobFilter`](crate::model::ComprehendMedicalAsyncJobFilter)
+/// See [`ComprehendMedicalAsyncJobFilter`](crate::model::ComprehendMedicalAsyncJobFilter).
 pub mod comprehend_medical_async_job_filter {
 
-    /// A builder for [`ComprehendMedicalAsyncJobFilter`](crate::model::ComprehendMedicalAsyncJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`ComprehendMedicalAsyncJobFilter`](crate::model::ComprehendMedicalAsyncJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -720,7 +738,7 @@ pub mod comprehend_medical_async_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComprehendMedicalAsyncJobFilter`](crate::model::ComprehendMedicalAsyncJobFilter)
+        /// Consumes the builder and constructs a [`ComprehendMedicalAsyncJobFilter`](crate::model::ComprehendMedicalAsyncJobFilter).
         pub fn build(self) -> crate::model::ComprehendMedicalAsyncJobFilter {
             crate::model::ComprehendMedicalAsyncJobFilter {
                 job_name: self.job_name,
@@ -732,7 +750,7 @@ pub mod comprehend_medical_async_job_filter {
     }
 }
 impl ComprehendMedicalAsyncJobFilter {
-    /// Creates a new builder-style object to manufacture [`ComprehendMedicalAsyncJobFilter`](crate::model::ComprehendMedicalAsyncJobFilter)
+    /// Creates a new builder-style object to manufacture [`ComprehendMedicalAsyncJobFilter`](crate::model::ComprehendMedicalAsyncJobFilter).
     pub fn builder() -> crate::model::comprehend_medical_async_job_filter::Builder {
         crate::model::comprehend_medical_async_job_filter::Builder::default()
     }
@@ -743,6 +761,7 @@ impl ComprehendMedicalAsyncJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Characters {
     /// <p> The number of characters present in the input text document as processed by Comprehend Medical. </p>
+    #[doc(hidden)]
     pub original_text_characters: std::option::Option<i32>,
 }
 impl Characters {
@@ -758,11 +777,10 @@ impl std::fmt::Debug for Characters {
         formatter.finish()
     }
 }
-/// See [`Characters`](crate::model::Characters)
+/// See [`Characters`](crate::model::Characters).
 pub mod characters {
 
-    /// A builder for [`Characters`](crate::model::Characters)
-    #[non_exhaustive]
+    /// A builder for [`Characters`](crate::model::Characters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) original_text_characters: std::option::Option<i32>,
@@ -778,7 +796,7 @@ pub mod characters {
             self.original_text_characters = input;
             self
         }
-        /// Consumes the builder and constructs a [`Characters`](crate::model::Characters)
+        /// Consumes the builder and constructs a [`Characters`](crate::model::Characters).
         pub fn build(self) -> crate::model::Characters {
             crate::model::Characters {
                 original_text_characters: self.original_text_characters,
@@ -787,7 +805,7 @@ pub mod characters {
     }
 }
 impl Characters {
-    /// Creates a new builder-style object to manufacture [`Characters`](crate::model::Characters)
+    /// Creates a new builder-style object to manufacture [`Characters`](crate::model::Characters).
     pub fn builder() -> crate::model::characters::Builder {
         crate::model::characters::Builder::default()
     }
@@ -798,10 +816,13 @@ impl Characters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnomedctDetails {
     /// <p> The edition of SNOMED-CT used. The edition used for the InferSNOMEDCT editions is the US edition. </p>
+    #[doc(hidden)]
     pub edition: std::option::Option<std::string::String>,
     /// <p> The language used in the SNOMED-CT ontology. All Amazon Comprehend Medical operations are US English (en). </p>
+    #[doc(hidden)]
     pub language: std::option::Option<std::string::String>,
     /// <p> The version date of the SNOMED-CT ontology used. </p>
+    #[doc(hidden)]
     pub version_date: std::option::Option<std::string::String>,
 }
 impl SnomedctDetails {
@@ -827,11 +848,10 @@ impl std::fmt::Debug for SnomedctDetails {
         formatter.finish()
     }
 }
-/// See [`SnomedctDetails`](crate::model::SnomedctDetails)
+/// See [`SnomedctDetails`](crate::model::SnomedctDetails).
 pub mod snomedct_details {
 
-    /// A builder for [`SnomedctDetails`](crate::model::SnomedctDetails)
-    #[non_exhaustive]
+    /// A builder for [`SnomedctDetails`](crate::model::SnomedctDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) edition: std::option::Option<std::string::String>,
@@ -869,7 +889,7 @@ pub mod snomedct_details {
             self.version_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnomedctDetails`](crate::model::SnomedctDetails)
+        /// Consumes the builder and constructs a [`SnomedctDetails`](crate::model::SnomedctDetails).
         pub fn build(self) -> crate::model::SnomedctDetails {
             crate::model::SnomedctDetails {
                 edition: self.edition,
@@ -880,7 +900,7 @@ pub mod snomedct_details {
     }
 }
 impl SnomedctDetails {
-    /// Creates a new builder-style object to manufacture [`SnomedctDetails`](crate::model::SnomedctDetails)
+    /// Creates a new builder-style object to manufacture [`SnomedctDetails`](crate::model::SnomedctDetails).
     pub fn builder() -> crate::model::snomedct_details::Builder {
         crate::model::snomedct_details::Builder::default()
     }
@@ -891,24 +911,34 @@ impl SnomedctDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnomedctEntity {
     /// <p> The numeric identifier for the entity. This is a monotonically increasing id unique within this response rather than a global unique identifier. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p> The segment of input text extracted as this entity. </p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p> The category of the detected entity. Possible categories are MEDICAL_CONDITION, ANATOMY, or TEST_TREATMENT_PROCEDURE. </p>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::SnomedctEntityCategory>,
     /// <p> Describes the specific type of entity with category of entities. Possible types include DX_NAME, ACUITY, DIRECTION, SYSTEM_ORGAN_SITE, TEST_NAME, TEST_VALUE, TEST_UNIT, PROCEDURE_NAME, or TREATMENT_NAME. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::SnomedctEntityType>,
     /// <p> The level of confidence that Comprehend Medical has in the accuracy of the detected entity. </p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p> The 0-based character offset in the input text that shows where the entity begins. The offset returns the UTF-8 code point in the string. </p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p> The 0-based character offset in the input text that shows where the entity ends. The offset returns the UTF-8 code point in the string. </p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p> An extracted segment of the text that is an attribute of an entity, or otherwise related to an entity, such as the dosage of a medication taken. </p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::SnomedctAttribute>>,
     /// <p> Contextual information for the entity. </p>
+    #[doc(hidden)]
     pub traits: std::option::Option<std::vec::Vec<crate::model::SnomedctTrait>>,
     /// <p> The SNOMED concepts that the entity could refer to, along with a score indicating the likelihood of the match. </p>
+    #[doc(hidden)]
     pub snomedct_concepts: std::option::Option<std::vec::Vec<crate::model::SnomedctConcept>>,
 }
 impl SnomedctEntity {
@@ -969,11 +999,10 @@ impl std::fmt::Debug for SnomedctEntity {
         formatter.finish()
     }
 }
-/// See [`SnomedctEntity`](crate::model::SnomedctEntity)
+/// See [`SnomedctEntity`](crate::model::SnomedctEntity).
 pub mod snomedct_entity {
 
-    /// A builder for [`SnomedctEntity`](crate::model::SnomedctEntity)
-    #[non_exhaustive]
+    /// A builder for [`SnomedctEntity`](crate::model::SnomedctEntity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<i32>,
@@ -1122,7 +1151,7 @@ pub mod snomedct_entity {
             self.snomedct_concepts = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnomedctEntity`](crate::model::SnomedctEntity)
+        /// Consumes the builder and constructs a [`SnomedctEntity`](crate::model::SnomedctEntity).
         pub fn build(self) -> crate::model::SnomedctEntity {
             crate::model::SnomedctEntity {
                 id: self.id,
@@ -1140,7 +1169,7 @@ pub mod snomedct_entity {
     }
 }
 impl SnomedctEntity {
-    /// Creates a new builder-style object to manufacture [`SnomedctEntity`](crate::model::SnomedctEntity)
+    /// Creates a new builder-style object to manufacture [`SnomedctEntity`](crate::model::SnomedctEntity).
     pub fn builder() -> crate::model::snomedct_entity::Builder {
         crate::model::snomedct_entity::Builder::default()
     }
@@ -1151,10 +1180,13 @@ impl SnomedctEntity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnomedctConcept {
     /// <p> The description of the SNOMED-CT concept. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The numeric ID for the SNOMED-CT concept. </p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p> The level of confidence Comprehend Medical has that the entity should be linked to the identified SNOMED-CT concept. </p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl SnomedctConcept {
@@ -1180,11 +1212,10 @@ impl std::fmt::Debug for SnomedctConcept {
         formatter.finish()
     }
 }
-/// See [`SnomedctConcept`](crate::model::SnomedctConcept)
+/// See [`SnomedctConcept`](crate::model::SnomedctConcept).
 pub mod snomedct_concept {
 
-    /// A builder for [`SnomedctConcept`](crate::model::SnomedctConcept)
-    #[non_exhaustive]
+    /// A builder for [`SnomedctConcept`](crate::model::SnomedctConcept).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -1222,7 +1253,7 @@ pub mod snomedct_concept {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnomedctConcept`](crate::model::SnomedctConcept)
+        /// Consumes the builder and constructs a [`SnomedctConcept`](crate::model::SnomedctConcept).
         pub fn build(self) -> crate::model::SnomedctConcept {
             crate::model::SnomedctConcept {
                 description: self.description,
@@ -1233,7 +1264,7 @@ pub mod snomedct_concept {
     }
 }
 impl SnomedctConcept {
-    /// Creates a new builder-style object to manufacture [`SnomedctConcept`](crate::model::SnomedctConcept)
+    /// Creates a new builder-style object to manufacture [`SnomedctConcept`](crate::model::SnomedctConcept).
     pub fn builder() -> crate::model::snomedct_concept::Builder {
         crate::model::snomedct_concept::Builder::default()
     }
@@ -1244,8 +1275,10 @@ impl SnomedctConcept {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnomedctTrait {
     /// <p> The name or contextual description of a detected trait. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::SnomedctTraitName>,
     /// <p> The level of confidence that Comprehend Medical has in the accuracy of a detected trait. </p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl SnomedctTrait {
@@ -1266,11 +1299,10 @@ impl std::fmt::Debug for SnomedctTrait {
         formatter.finish()
     }
 }
-/// See [`SnomedctTrait`](crate::model::SnomedctTrait)
+/// See [`SnomedctTrait`](crate::model::SnomedctTrait).
 pub mod snomedct_trait {
 
-    /// A builder for [`SnomedctTrait`](crate::model::SnomedctTrait)
-    #[non_exhaustive]
+    /// A builder for [`SnomedctTrait`](crate::model::SnomedctTrait).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::SnomedctTraitName>,
@@ -1300,7 +1332,7 @@ pub mod snomedct_trait {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnomedctTrait`](crate::model::SnomedctTrait)
+        /// Consumes the builder and constructs a [`SnomedctTrait`](crate::model::SnomedctTrait).
         pub fn build(self) -> crate::model::SnomedctTrait {
             crate::model::SnomedctTrait {
                 name: self.name,
@@ -1310,7 +1342,7 @@ pub mod snomedct_trait {
     }
 }
 impl SnomedctTrait {
-    /// Creates a new builder-style object to manufacture [`SnomedctTrait`](crate::model::SnomedctTrait)
+    /// Creates a new builder-style object to manufacture [`SnomedctTrait`](crate::model::SnomedctTrait).
     pub fn builder() -> crate::model::snomedct_trait::Builder {
         crate::model::snomedct_trait::Builder::default()
     }
@@ -1384,26 +1416,37 @@ impl AsRef<str> for SnomedctTraitName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnomedctAttribute {
     /// <p> The category of the detected attribute. Possible categories include MEDICAL_CONDITION, ANATOMY, and TEST_TREATMENT_PROCEDURE. </p>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::SnomedctEntityCategory>,
     /// <p> The type of attribute. Possible types include DX_NAME, ACUITY, DIRECTION, SYSTEM_ORGAN_SITE,TEST_NAME, TEST_VALUE, TEST_UNIT, PROCEDURE_NAME, and TREATMENT_NAME. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::SnomedctAttributeType>,
     /// <p> The level of confidence that Comprehend Medical has that the segment of text is correctly recognized as an attribute. </p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p> The level of confidence that Comprehend Medical has that this attribute is correctly related to this entity. </p>
+    #[doc(hidden)]
     pub relationship_score: std::option::Option<f32>,
     /// <p> The type of relationship that exists between the entity and the related attribute. </p>
+    #[doc(hidden)]
     pub relationship_type: std::option::Option<crate::model::SnomedctRelationshipType>,
     /// <p> The numeric identifier for this attribute. This is a monotonically increasing id unique within this response rather than a global unique identifier. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p> The 0-based character offset in the input text that shows where the attribute begins. The offset returns the UTF-8 code point in the string. </p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p> The 0-based character offset in the input text that shows where the attribute ends. The offset returns the UTF-8 code point in the string. </p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p> The segment of input text extracted as this attribute. </p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p> Contextual information for an attribute. Examples include signs, symptoms, diagnosis, and negation. </p>
+    #[doc(hidden)]
     pub traits: std::option::Option<std::vec::Vec<crate::model::SnomedctTrait>>,
     /// <p> The SNOMED-CT concepts specific to an attribute, along with a score indicating the likelihood of the match. </p>
+    #[doc(hidden)]
     pub snomedct_concepts: std::option::Option<std::vec::Vec<crate::model::SnomedctConcept>>,
 }
 impl SnomedctAttribute {
@@ -1471,11 +1514,10 @@ impl std::fmt::Debug for SnomedctAttribute {
         formatter.finish()
     }
 }
-/// See [`SnomedctAttribute`](crate::model::SnomedctAttribute)
+/// See [`SnomedctAttribute`](crate::model::SnomedctAttribute).
 pub mod snomedct_attribute {
 
-    /// A builder for [`SnomedctAttribute`](crate::model::SnomedctAttribute)
-    #[non_exhaustive]
+    /// A builder for [`SnomedctAttribute`](crate::model::SnomedctAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) category: std::option::Option<crate::model::SnomedctEntityCategory>,
@@ -1629,7 +1671,7 @@ pub mod snomedct_attribute {
             self.snomedct_concepts = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnomedctAttribute`](crate::model::SnomedctAttribute)
+        /// Consumes the builder and constructs a [`SnomedctAttribute`](crate::model::SnomedctAttribute).
         pub fn build(self) -> crate::model::SnomedctAttribute {
             crate::model::SnomedctAttribute {
                 category: self.category,
@@ -1648,7 +1690,7 @@ pub mod snomedct_attribute {
     }
 }
 impl SnomedctAttribute {
-    /// Creates a new builder-style object to manufacture [`SnomedctAttribute`](crate::model::SnomedctAttribute)
+    /// Creates a new builder-style object to manufacture [`SnomedctAttribute`](crate::model::SnomedctAttribute).
     pub fn builder() -> crate::model::snomedct_attribute::Builder {
         crate::model::snomedct_attribute::Builder::default()
     }
@@ -1937,24 +1979,34 @@ impl AsRef<str> for SnomedctEntityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RxNormEntity {
     /// <p>The numeric identifier for the entity. This is a monotonically increasing id unique within this response rather than a global unique identifier.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p>The segment of input text extracted from which the entity was detected.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The category of the entity. The recognized categories are <code>GENERIC</code> or <code>BRAND_NAME</code>.</p>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::RxNormEntityCategory>,
     /// <p> Describes the specific type of entity. For InferRxNorm, the recognized entity type is <code>MEDICATION</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RxNormEntityType>,
     /// <p>The level of confidence that Amazon Comprehend Medical has in the accuracy of the detected entity.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p>The 0-based character offset in the input text that shows where the entity begins. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p>The 0-based character offset in the input text that shows where the entity ends. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p>The extracted attributes that relate to the entity. The attributes recognized by InferRxNorm are <code>DOSAGE</code>, <code>DURATION</code>, <code>FORM</code>, <code>FREQUENCY</code>, <code>RATE</code>, <code>ROUTE_OR_MODE</code>, and <code>STRENGTH</code>.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::RxNormAttribute>>,
     /// <p> Contextual information for the entity.</p>
+    #[doc(hidden)]
     pub traits: std::option::Option<std::vec::Vec<crate::model::RxNormTrait>>,
     /// <p> The RxNorm concepts that the entity could refer to, along with a score indicating the likelihood of the match.</p>
+    #[doc(hidden)]
     pub rx_norm_concepts: std::option::Option<std::vec::Vec<crate::model::RxNormConcept>>,
 }
 impl RxNormEntity {
@@ -2015,11 +2067,10 @@ impl std::fmt::Debug for RxNormEntity {
         formatter.finish()
     }
 }
-/// See [`RxNormEntity`](crate::model::RxNormEntity)
+/// See [`RxNormEntity`](crate::model::RxNormEntity).
 pub mod rx_norm_entity {
 
-    /// A builder for [`RxNormEntity`](crate::model::RxNormEntity)
-    #[non_exhaustive]
+    /// A builder for [`RxNormEntity`](crate::model::RxNormEntity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<i32>,
@@ -2168,7 +2219,7 @@ pub mod rx_norm_entity {
             self.rx_norm_concepts = input;
             self
         }
-        /// Consumes the builder and constructs a [`RxNormEntity`](crate::model::RxNormEntity)
+        /// Consumes the builder and constructs a [`RxNormEntity`](crate::model::RxNormEntity).
         pub fn build(self) -> crate::model::RxNormEntity {
             crate::model::RxNormEntity {
                 id: self.id,
@@ -2186,7 +2237,7 @@ pub mod rx_norm_entity {
     }
 }
 impl RxNormEntity {
-    /// Creates a new builder-style object to manufacture [`RxNormEntity`](crate::model::RxNormEntity)
+    /// Creates a new builder-style object to manufacture [`RxNormEntity`](crate::model::RxNormEntity).
     pub fn builder() -> crate::model::rx_norm_entity::Builder {
         crate::model::rx_norm_entity::Builder::default()
     }
@@ -2197,10 +2248,13 @@ impl RxNormEntity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RxNormConcept {
     /// <p>The description of the RxNorm concept.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>RxNorm concept ID, also known as the RxCUI.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The level of confidence that Amazon Comprehend Medical has that the entity is accurately linked to the reported RxNorm concept.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl RxNormConcept {
@@ -2226,11 +2280,10 @@ impl std::fmt::Debug for RxNormConcept {
         formatter.finish()
     }
 }
-/// See [`RxNormConcept`](crate::model::RxNormConcept)
+/// See [`RxNormConcept`](crate::model::RxNormConcept).
 pub mod rx_norm_concept {
 
-    /// A builder for [`RxNormConcept`](crate::model::RxNormConcept)
-    #[non_exhaustive]
+    /// A builder for [`RxNormConcept`](crate::model::RxNormConcept).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -2268,7 +2321,7 @@ pub mod rx_norm_concept {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`RxNormConcept`](crate::model::RxNormConcept)
+        /// Consumes the builder and constructs a [`RxNormConcept`](crate::model::RxNormConcept).
         pub fn build(self) -> crate::model::RxNormConcept {
             crate::model::RxNormConcept {
                 description: self.description,
@@ -2279,7 +2332,7 @@ pub mod rx_norm_concept {
     }
 }
 impl RxNormConcept {
-    /// Creates a new builder-style object to manufacture [`RxNormConcept`](crate::model::RxNormConcept)
+    /// Creates a new builder-style object to manufacture [`RxNormConcept`](crate::model::RxNormConcept).
     pub fn builder() -> crate::model::rx_norm_concept::Builder {
         crate::model::rx_norm_concept::Builder::default()
     }
@@ -2290,8 +2343,10 @@ impl RxNormConcept {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RxNormTrait {
     /// <p>Provides a name or contextual description about the trait.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::RxNormTraitName>,
     /// <p>The level of confidence that Amazon Comprehend Medical has in the accuracy of the detected trait.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl RxNormTrait {
@@ -2312,11 +2367,10 @@ impl std::fmt::Debug for RxNormTrait {
         formatter.finish()
     }
 }
-/// See [`RxNormTrait`](crate::model::RxNormTrait)
+/// See [`RxNormTrait`](crate::model::RxNormTrait).
 pub mod rx_norm_trait {
 
-    /// A builder for [`RxNormTrait`](crate::model::RxNormTrait)
-    #[non_exhaustive]
+    /// A builder for [`RxNormTrait`](crate::model::RxNormTrait).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::RxNormTraitName>,
@@ -2346,7 +2400,7 @@ pub mod rx_norm_trait {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`RxNormTrait`](crate::model::RxNormTrait)
+        /// Consumes the builder and constructs a [`RxNormTrait`](crate::model::RxNormTrait).
         pub fn build(self) -> crate::model::RxNormTrait {
             crate::model::RxNormTrait {
                 name: self.name,
@@ -2356,7 +2410,7 @@ pub mod rx_norm_trait {
     }
 }
 impl RxNormTrait {
-    /// Creates a new builder-style object to manufacture [`RxNormTrait`](crate::model::RxNormTrait)
+    /// Creates a new builder-style object to manufacture [`RxNormTrait`](crate::model::RxNormTrait).
     pub fn builder() -> crate::model::rx_norm_trait::Builder {
         crate::model::rx_norm_trait::Builder::default()
     }
@@ -2418,20 +2472,28 @@ impl AsRef<str> for RxNormTraitName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RxNormAttribute {
     /// <p>The type of attribute. The types of attributes recognized by InferRxNorm are <code>BRAND_NAME</code> and <code>GENERIC_NAME</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RxNormAttributeType>,
     /// <p>The level of confidence that Comprehend Medical has that the segment of text is correctly recognized as an attribute.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p>The level of confidence that Amazon Comprehend Medical has that the attribute is accurately linked to an entity.</p>
+    #[doc(hidden)]
     pub relationship_score: std::option::Option<f32>,
     /// <p>The numeric identifier for this attribute. This is a monotonically increasing id unique within this response rather than a global unique identifier.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p>The 0-based character offset in the input text that shows where the attribute begins. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p>The 0-based character offset in the input text that shows where the attribute ends. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p>The segment of input text which corresponds to the detected attribute.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>Contextual information for the attribute. InferRxNorm recognizes the trait <code>NEGATION</code> for attributes, i.e. that the patient is not taking a specific dose or form of a medication.</p>
+    #[doc(hidden)]
     pub traits: std::option::Option<std::vec::Vec<crate::model::RxNormTrait>>,
 }
 impl RxNormAttribute {
@@ -2482,11 +2544,10 @@ impl std::fmt::Debug for RxNormAttribute {
         formatter.finish()
     }
 }
-/// See [`RxNormAttribute`](crate::model::RxNormAttribute)
+/// See [`RxNormAttribute`](crate::model::RxNormAttribute).
 pub mod rx_norm_attribute {
 
-    /// A builder for [`RxNormAttribute`](crate::model::RxNormAttribute)
-    #[non_exhaustive]
+    /// A builder for [`RxNormAttribute`](crate::model::RxNormAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::RxNormAttributeType>,
@@ -2591,7 +2652,7 @@ pub mod rx_norm_attribute {
             self.traits = input;
             self
         }
-        /// Consumes the builder and constructs a [`RxNormAttribute`](crate::model::RxNormAttribute)
+        /// Consumes the builder and constructs a [`RxNormAttribute`](crate::model::RxNormAttribute).
         pub fn build(self) -> crate::model::RxNormAttribute {
             crate::model::RxNormAttribute {
                 r#type: self.r#type,
@@ -2607,7 +2668,7 @@ pub mod rx_norm_attribute {
     }
 }
 impl RxNormAttribute {
-    /// Creates a new builder-style object to manufacture [`RxNormAttribute`](crate::model::RxNormAttribute)
+    /// Creates a new builder-style object to manufacture [`RxNormAttribute`](crate::model::RxNormAttribute).
     pub fn builder() -> crate::model::rx_norm_attribute::Builder {
         crate::model::rx_norm_attribute::Builder::default()
     }
@@ -2807,24 +2868,34 @@ impl AsRef<str> for RxNormEntityCategory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Icd10CmEntity {
     /// <p>The numeric identifier for the entity. This is a monotonically increasing id unique within this response rather than a global unique identifier.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p>The segment of input text that is matched to the detected entity.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p> The category of the entity. InferICD10CM detects entities in the <code>MEDICAL_CONDITION</code> category. </p>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::Icd10CmEntityCategory>,
     /// <p>Describes the specific type of entity with category of entities. InferICD10CM detects entities of the type <code>DX_NAME</code> and <code>TIME_EXPRESSION</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Icd10CmEntityType>,
     /// <p>The level of confidence that Amazon Comprehend Medical has in the accuracy of the detection.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p>The 0-based character offset in the input text that shows where the entity begins. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p>The 0-based character offset in the input text that shows where the entity ends. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p>The detected attributes that relate to the entity. An extracted segment of the text that is an attribute of an entity, or otherwise related to an entity, such as the nature of a medical condition.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::Icd10CmAttribute>>,
     /// <p>Provides Contextual information for the entity. The traits recognized by InferICD10CM are <code>DIAGNOSIS</code>, <code>SIGN</code>, <code>SYMPTOM</code>, and <code>NEGATION.</code> </p>
+    #[doc(hidden)]
     pub traits: std::option::Option<std::vec::Vec<crate::model::Icd10CmTrait>>,
     /// <p>The ICD-10-CM concepts that the entity could refer to, along with a score indicating the likelihood of the match.</p>
+    #[doc(hidden)]
     pub icd10_cm_concepts: std::option::Option<std::vec::Vec<crate::model::Icd10CmConcept>>,
 }
 impl Icd10CmEntity {
@@ -2885,11 +2956,10 @@ impl std::fmt::Debug for Icd10CmEntity {
         formatter.finish()
     }
 }
-/// See [`Icd10CmEntity`](crate::model::Icd10CmEntity)
+/// See [`Icd10CmEntity`](crate::model::Icd10CmEntity).
 pub mod icd10_cm_entity {
 
-    /// A builder for [`Icd10CmEntity`](crate::model::Icd10CmEntity)
-    #[non_exhaustive]
+    /// A builder for [`Icd10CmEntity`](crate::model::Icd10CmEntity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<i32>,
@@ -3038,7 +3108,7 @@ pub mod icd10_cm_entity {
             self.icd10_cm_concepts = input;
             self
         }
-        /// Consumes the builder and constructs a [`Icd10CmEntity`](crate::model::Icd10CmEntity)
+        /// Consumes the builder and constructs a [`Icd10CmEntity`](crate::model::Icd10CmEntity).
         pub fn build(self) -> crate::model::Icd10CmEntity {
             crate::model::Icd10CmEntity {
                 id: self.id,
@@ -3056,7 +3126,7 @@ pub mod icd10_cm_entity {
     }
 }
 impl Icd10CmEntity {
-    /// Creates a new builder-style object to manufacture [`Icd10CmEntity`](crate::model::Icd10CmEntity)
+    /// Creates a new builder-style object to manufacture [`Icd10CmEntity`](crate::model::Icd10CmEntity).
     pub fn builder() -> crate::model::icd10_cm_entity::Builder {
         crate::model::icd10_cm_entity::Builder::default()
     }
@@ -3067,10 +3137,13 @@ impl Icd10CmEntity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Icd10CmConcept {
     /// <p>The long description of the ICD-10-CM code in the ontology.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ICD-10-CM code that identifies the concept found in the knowledge base from the Centers for Disease Control.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The level of confidence that Amazon Comprehend Medical has that the entity is accurately linked to an ICD-10-CM concept.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl Icd10CmConcept {
@@ -3096,11 +3169,10 @@ impl std::fmt::Debug for Icd10CmConcept {
         formatter.finish()
     }
 }
-/// See [`Icd10CmConcept`](crate::model::Icd10CmConcept)
+/// See [`Icd10CmConcept`](crate::model::Icd10CmConcept).
 pub mod icd10_cm_concept {
 
-    /// A builder for [`Icd10CmConcept`](crate::model::Icd10CmConcept)
-    #[non_exhaustive]
+    /// A builder for [`Icd10CmConcept`](crate::model::Icd10CmConcept).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -3138,7 +3210,7 @@ pub mod icd10_cm_concept {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`Icd10CmConcept`](crate::model::Icd10CmConcept)
+        /// Consumes the builder and constructs a [`Icd10CmConcept`](crate::model::Icd10CmConcept).
         pub fn build(self) -> crate::model::Icd10CmConcept {
             crate::model::Icd10CmConcept {
                 description: self.description,
@@ -3149,7 +3221,7 @@ pub mod icd10_cm_concept {
     }
 }
 impl Icd10CmConcept {
-    /// Creates a new builder-style object to manufacture [`Icd10CmConcept`](crate::model::Icd10CmConcept)
+    /// Creates a new builder-style object to manufacture [`Icd10CmConcept`](crate::model::Icd10CmConcept).
     pub fn builder() -> crate::model::icd10_cm_concept::Builder {
         crate::model::icd10_cm_concept::Builder::default()
     }
@@ -3160,8 +3232,10 @@ impl Icd10CmConcept {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Icd10CmTrait {
     /// <p>Provides a name or contextual description about the trait.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::Icd10CmTraitName>,
     /// <p>The level of confidence that Comprehend Medical; has that the segment of text is correctly recognized as a trait.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl Icd10CmTrait {
@@ -3182,11 +3256,10 @@ impl std::fmt::Debug for Icd10CmTrait {
         formatter.finish()
     }
 }
-/// See [`Icd10CmTrait`](crate::model::Icd10CmTrait)
+/// See [`Icd10CmTrait`](crate::model::Icd10CmTrait).
 pub mod icd10_cm_trait {
 
-    /// A builder for [`Icd10CmTrait`](crate::model::Icd10CmTrait)
-    #[non_exhaustive]
+    /// A builder for [`Icd10CmTrait`](crate::model::Icd10CmTrait).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::Icd10CmTraitName>,
@@ -3216,7 +3289,7 @@ pub mod icd10_cm_trait {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`Icd10CmTrait`](crate::model::Icd10CmTrait)
+        /// Consumes the builder and constructs a [`Icd10CmTrait`](crate::model::Icd10CmTrait).
         pub fn build(self) -> crate::model::Icd10CmTrait {
             crate::model::Icd10CmTrait {
                 name: self.name,
@@ -3226,7 +3299,7 @@ pub mod icd10_cm_trait {
     }
 }
 impl Icd10CmTrait {
-    /// Creates a new builder-style object to manufacture [`Icd10CmTrait`](crate::model::Icd10CmTrait)
+    /// Creates a new builder-style object to manufacture [`Icd10CmTrait`](crate::model::Icd10CmTrait).
     pub fn builder() -> crate::model::icd10_cm_trait::Builder {
         crate::model::icd10_cm_trait::Builder::default()
     }
@@ -3300,24 +3373,34 @@ impl AsRef<str> for Icd10CmTraitName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Icd10CmAttribute {
     /// <p>The type of attribute. InferICD10CM detects entities of the type <code>DX_NAME</code>. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Icd10CmAttributeType>,
     /// <p>The level of confidence that Amazon Comprehend Medical has that the segment of text is correctly recognized as an attribute.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p>The level of confidence that Amazon Comprehend Medical has that this attribute is correctly related to this entity.</p>
+    #[doc(hidden)]
     pub relationship_score: std::option::Option<f32>,
     /// <p>The numeric identifier for this attribute. This is a monotonically increasing id unique within this response rather than a global unique identifier.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p>The 0-based character offset in the input text that shows where the attribute begins. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p>The 0-based character offset in the input text that shows where the attribute ends. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p>The segment of input text which contains the detected attribute.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The contextual information for the attribute. The traits recognized by InferICD10CM are <code>DIAGNOSIS</code>, <code>SIGN</code>, <code>SYMPTOM</code>, and <code>NEGATION</code>.</p>
+    #[doc(hidden)]
     pub traits: std::option::Option<std::vec::Vec<crate::model::Icd10CmTrait>>,
     /// <p>The category of attribute. Can be either of <code>DX_NAME</code> or <code>TIME_EXPRESSION</code>.</p>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::Icd10CmEntityType>,
     /// <p>The type of relationship between the entity and attribute. Type for the relationship can be either of <code>OVERLAP</code> or <code>SYSTEM_ORGAN_SITE</code>.</p>
+    #[doc(hidden)]
     pub relationship_type: std::option::Option<crate::model::Icd10CmRelationshipType>,
 }
 impl Icd10CmAttribute {
@@ -3378,11 +3461,10 @@ impl std::fmt::Debug for Icd10CmAttribute {
         formatter.finish()
     }
 }
-/// See [`Icd10CmAttribute`](crate::model::Icd10CmAttribute)
+/// See [`Icd10CmAttribute`](crate::model::Icd10CmAttribute).
 pub mod icd10_cm_attribute {
 
-    /// A builder for [`Icd10CmAttribute`](crate::model::Icd10CmAttribute)
-    #[non_exhaustive]
+    /// A builder for [`Icd10CmAttribute`](crate::model::Icd10CmAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::Icd10CmAttributeType>,
@@ -3515,7 +3597,7 @@ pub mod icd10_cm_attribute {
             self.relationship_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Icd10CmAttribute`](crate::model::Icd10CmAttribute)
+        /// Consumes the builder and constructs a [`Icd10CmAttribute`](crate::model::Icd10CmAttribute).
         pub fn build(self) -> crate::model::Icd10CmAttribute {
             crate::model::Icd10CmAttribute {
                 r#type: self.r#type,
@@ -3533,7 +3615,7 @@ pub mod icd10_cm_attribute {
     }
 }
 impl Icd10CmAttribute {
-    /// Creates a new builder-style object to manufacture [`Icd10CmAttribute`](crate::model::Icd10CmAttribute)
+    /// Creates a new builder-style object to manufacture [`Icd10CmAttribute`](crate::model::Icd10CmAttribute).
     pub fn builder() -> crate::model::icd10_cm_attribute::Builder {
         crate::model::icd10_cm_attribute::Builder::default()
     }
@@ -3788,22 +3870,31 @@ impl AsRef<str> for Icd10CmEntityCategory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Entity {
     /// <p> The numeric identifier for the entity. This is a monotonically increasing id unique within this response rather than a global unique identifier. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p> The 0-based character offset in the input text that shows where the entity begins. The offset returns the UTF-8 code point in the string. </p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p> The 0-based character offset in the input text that shows where the entity ends. The offset returns the UTF-8 code point in the string. </p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p>The level of confidence that Comprehend Medical; has in the accuracy of the detection.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p> The segment of input text extracted as this entity.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p> The category of the entity.</p>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::EntityType>,
     /// <p> Describes the specific type of entity with category of entities.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EntitySubType>,
     /// <p>Contextual information for the entity.</p>
+    #[doc(hidden)]
     pub traits: std::option::Option<std::vec::Vec<crate::model::Trait>>,
     /// <p> The extracted attributes that relate to this entity.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::Attribute>>,
 }
 impl Entity {
@@ -3859,11 +3950,10 @@ impl std::fmt::Debug for Entity {
         formatter.finish()
     }
 }
-/// See [`Entity`](crate::model::Entity)
+/// See [`Entity`](crate::model::Entity).
 pub mod entity {
 
-    /// A builder for [`Entity`](crate::model::Entity)
-    #[non_exhaustive]
+    /// A builder for [`Entity`](crate::model::Entity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<i32>,
@@ -3988,7 +4078,7 @@ pub mod entity {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Entity`](crate::model::Entity)
+        /// Consumes the builder and constructs a [`Entity`](crate::model::Entity).
         pub fn build(self) -> crate::model::Entity {
             crate::model::Entity {
                 id: self.id,
@@ -4005,7 +4095,7 @@ pub mod entity {
     }
 }
 impl Entity {
-    /// Creates a new builder-style object to manufacture [`Entity`](crate::model::Entity)
+    /// Creates a new builder-style object to manufacture [`Entity`](crate::model::Entity).
     pub fn builder() -> crate::model::entity::Builder {
         crate::model::entity::Builder::default()
     }
@@ -4016,24 +4106,34 @@ impl Entity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Attribute {
     /// <p> The type of attribute. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EntitySubType>,
     /// <p> The level of confidence that Comprehend Medical; has that the segment of text is correctly recognized as an attribute. </p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p> The level of confidence that Comprehend Medical; has that this attribute is correctly related to this entity. </p>
+    #[doc(hidden)]
     pub relationship_score: std::option::Option<f32>,
     /// <p>The type of relationship between the entity and attribute. Type for the relationship is <code>OVERLAP</code>, indicating that the entity occurred at the same time as the <code>Date_Expression</code>. </p>
+    #[doc(hidden)]
     pub relationship_type: std::option::Option<crate::model::RelationshipType>,
     /// <p> The numeric identifier for this attribute. This is a monotonically increasing id unique within this response rather than a global unique identifier. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p> The 0-based character offset in the input text that shows where the attribute begins. The offset returns the UTF-8 code point in the string. </p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p> The 0-based character offset in the input text that shows where the attribute ends. The offset returns the UTF-8 code point in the string.</p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p> The segment of input text extracted as this attribute.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p> The category of attribute. </p>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::EntityType>,
     /// <p> Contextual information for this attribute. </p>
+    #[doc(hidden)]
     pub traits: std::option::Option<std::vec::Vec<crate::model::Trait>>,
 }
 impl Attribute {
@@ -4094,11 +4194,10 @@ impl std::fmt::Debug for Attribute {
         formatter.finish()
     }
 }
-/// See [`Attribute`](crate::model::Attribute)
+/// See [`Attribute`](crate::model::Attribute).
 pub mod attribute {
 
-    /// A builder for [`Attribute`](crate::model::Attribute)
-    #[non_exhaustive]
+    /// A builder for [`Attribute`](crate::model::Attribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::EntitySubType>,
@@ -4228,7 +4327,7 @@ pub mod attribute {
             self.traits = input;
             self
         }
-        /// Consumes the builder and constructs a [`Attribute`](crate::model::Attribute)
+        /// Consumes the builder and constructs a [`Attribute`](crate::model::Attribute).
         pub fn build(self) -> crate::model::Attribute {
             crate::model::Attribute {
                 r#type: self.r#type,
@@ -4246,7 +4345,7 @@ pub mod attribute {
     }
 }
 impl Attribute {
-    /// Creates a new builder-style object to manufacture [`Attribute`](crate::model::Attribute)
+    /// Creates a new builder-style object to manufacture [`Attribute`](crate::model::Attribute).
     pub fn builder() -> crate::model::attribute::Builder {
         crate::model::attribute::Builder::default()
     }
@@ -4257,8 +4356,10 @@ impl Attribute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Trait {
     /// <p> Provides a name or contextual description about the trait. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::AttributeName>,
     /// <p> The level of confidence that Comprehend Medical; has in the accuracy of this trait.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl Trait {
@@ -4279,11 +4380,10 @@ impl std::fmt::Debug for Trait {
         formatter.finish()
     }
 }
-/// See [`Trait`](crate::model::Trait)
+/// See [`Trait`](crate::model::Trait).
 pub mod r#trait {
 
-    /// A builder for [`Trait`](crate::model::Trait)
-    #[non_exhaustive]
+    /// A builder for [`Trait`](crate::model::Trait).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::AttributeName>,
@@ -4310,7 +4410,7 @@ pub mod r#trait {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`Trait`](crate::model::Trait)
+        /// Consumes the builder and constructs a [`Trait`](crate::model::Trait).
         pub fn build(self) -> crate::model::Trait {
             crate::model::Trait {
                 name: self.name,
@@ -4320,7 +4420,7 @@ pub mod r#trait {
     }
 }
 impl Trait {
-    /// Creates a new builder-style object to manufacture [`Trait`](crate::model::Trait)
+    /// Creates a new builder-style object to manufacture [`Trait`](crate::model::Trait).
     pub fn builder() -> crate::model::r#trait::Builder {
         crate::model::r#trait::Builder::default()
     }
@@ -4853,8 +4953,10 @@ impl AsRef<str> for EntitySubType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UnmappedAttribute {
     /// <p> The type of the unmapped attribute, could be one of the following values: "MEDICATION", "MEDICAL_CONDITION", "ANATOMY", "TEST_AND_TREATMENT_PROCEDURE" or "PROTECTED_HEALTH_INFORMATION". </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EntityType>,
     /// <p> The specific attribute that has been extracted but not mapped to an entity. </p>
+    #[doc(hidden)]
     pub attribute: std::option::Option<crate::model::Attribute>,
 }
 impl UnmappedAttribute {
@@ -4875,11 +4977,10 @@ impl std::fmt::Debug for UnmappedAttribute {
         formatter.finish()
     }
 }
-/// See [`UnmappedAttribute`](crate::model::UnmappedAttribute)
+/// See [`UnmappedAttribute`](crate::model::UnmappedAttribute).
 pub mod unmapped_attribute {
 
-    /// A builder for [`UnmappedAttribute`](crate::model::UnmappedAttribute)
-    #[non_exhaustive]
+    /// A builder for [`UnmappedAttribute`](crate::model::UnmappedAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::EntityType>,
@@ -4909,7 +5010,7 @@ pub mod unmapped_attribute {
             self.attribute = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnmappedAttribute`](crate::model::UnmappedAttribute)
+        /// Consumes the builder and constructs a [`UnmappedAttribute`](crate::model::UnmappedAttribute).
         pub fn build(self) -> crate::model::UnmappedAttribute {
             crate::model::UnmappedAttribute {
                 r#type: self.r#type,
@@ -4919,7 +5020,7 @@ pub mod unmapped_attribute {
     }
 }
 impl UnmappedAttribute {
-    /// Creates a new builder-style object to manufacture [`UnmappedAttribute`](crate::model::UnmappedAttribute)
+    /// Creates a new builder-style object to manufacture [`UnmappedAttribute`](crate::model::UnmappedAttribute).
     pub fn builder() -> crate::model::unmapped_attribute::Builder {
         crate::model::unmapped_attribute::Builder::default()
     }

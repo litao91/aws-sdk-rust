@@ -10,7 +10,7 @@ pub struct AcceptInvitation {
     _private: (),
 }
 impl AcceptInvitation {
-    /// Creates a new builder-style object to manufacture [`AcceptInvitationInput`](crate::input::AcceptInvitationInput)
+    /// Creates a new builder-style object to manufacture [`AcceptInvitationInput`](crate::input::AcceptInvitationInput).
     pub fn builder() -> crate::input::accept_invitation_input::Builder {
         crate::input::accept_invitation_input::Builder::default()
     }
@@ -33,6 +33,74 @@ impl aws_smithy_http::response::ParseStrictResponse for AcceptInvitation {
     }
 }
 
+/// Operation shape for `BatchGetGraphMemberDatasources`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`batch_get_graph_member_datasources`](crate::client::Client::batch_get_graph_member_datasources).
+///
+/// See [`crate::client::fluent_builders::BatchGetGraphMemberDatasources`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct BatchGetGraphMemberDatasources {
+    _private: (),
+}
+impl BatchGetGraphMemberDatasources {
+    /// Creates a new builder-style object to manufacture [`BatchGetGraphMemberDatasourcesInput`](crate::input::BatchGetGraphMemberDatasourcesInput).
+    pub fn builder() -> crate::input::batch_get_graph_member_datasources_input::Builder {
+        crate::input::batch_get_graph_member_datasources_input::Builder::default()
+    }
+    /// Creates a new `BatchGetGraphMemberDatasources` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for BatchGetGraphMemberDatasources {
+    type Output = std::result::Result<
+        crate::output::BatchGetGraphMemberDatasourcesOutput,
+        crate::error::BatchGetGraphMemberDatasourcesError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_batch_get_graph_member_datasources_error(response)
+        } else {
+            crate::operation_deser::parse_batch_get_graph_member_datasources_response(response)
+        }
+    }
+}
+
+/// Operation shape for `BatchGetMembershipDatasources`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`batch_get_membership_datasources`](crate::client::Client::batch_get_membership_datasources).
+///
+/// See [`crate::client::fluent_builders::BatchGetMembershipDatasources`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct BatchGetMembershipDatasources {
+    _private: (),
+}
+impl BatchGetMembershipDatasources {
+    /// Creates a new builder-style object to manufacture [`BatchGetMembershipDatasourcesInput`](crate::input::BatchGetMembershipDatasourcesInput).
+    pub fn builder() -> crate::input::batch_get_membership_datasources_input::Builder {
+        crate::input::batch_get_membership_datasources_input::Builder::default()
+    }
+    /// Creates a new `BatchGetMembershipDatasources` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for BatchGetMembershipDatasources {
+    type Output = std::result::Result<
+        crate::output::BatchGetMembershipDatasourcesOutput,
+        crate::error::BatchGetMembershipDatasourcesError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_batch_get_membership_datasources_error(response)
+        } else {
+            crate::operation_deser::parse_batch_get_membership_datasources_response(response)
+        }
+    }
+}
+
 /// Operation shape for `CreateGraph`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -44,7 +112,7 @@ pub struct CreateGraph {
     _private: (),
 }
 impl CreateGraph {
-    /// Creates a new builder-style object to manufacture [`CreateGraphInput`](crate::input::CreateGraphInput)
+    /// Creates a new builder-style object to manufacture [`CreateGraphInput`](crate::input::CreateGraphInput).
     pub fn builder() -> crate::input::create_graph_input::Builder {
         crate::input::create_graph_input::Builder::default()
     }
@@ -76,7 +144,7 @@ pub struct CreateMembers {
     _private: (),
 }
 impl CreateMembers {
-    /// Creates a new builder-style object to manufacture [`CreateMembersInput`](crate::input::CreateMembersInput)
+    /// Creates a new builder-style object to manufacture [`CreateMembersInput`](crate::input::CreateMembersInput).
     pub fn builder() -> crate::input::create_members_input::Builder {
         crate::input::create_members_input::Builder::default()
     }
@@ -108,7 +176,7 @@ pub struct DeleteGraph {
     _private: (),
 }
 impl DeleteGraph {
-    /// Creates a new builder-style object to manufacture [`DeleteGraphInput`](crate::input::DeleteGraphInput)
+    /// Creates a new builder-style object to manufacture [`DeleteGraphInput`](crate::input::DeleteGraphInput).
     pub fn builder() -> crate::input::delete_graph_input::Builder {
         crate::input::delete_graph_input::Builder::default()
     }
@@ -140,7 +208,7 @@ pub struct DeleteMembers {
     _private: (),
 }
 impl DeleteMembers {
-    /// Creates a new builder-style object to manufacture [`DeleteMembersInput`](crate::input::DeleteMembersInput)
+    /// Creates a new builder-style object to manufacture [`DeleteMembersInput`](crate::input::DeleteMembersInput).
     pub fn builder() -> crate::input::delete_members_input::Builder {
         crate::input::delete_members_input::Builder::default()
     }
@@ -172,7 +240,7 @@ pub struct DescribeOrganizationConfiguration {
     _private: (),
 }
 impl DescribeOrganizationConfiguration {
-    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigurationInput`](crate::input::DescribeOrganizationConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigurationInput`](crate::input::DescribeOrganizationConfigurationInput).
     pub fn builder() -> crate::input::describe_organization_configuration_input::Builder {
         crate::input::describe_organization_configuration_input::Builder::default()
     }
@@ -206,7 +274,7 @@ pub struct DisableOrganizationAdminAccount {
     _private: (),
 }
 impl DisableOrganizationAdminAccount {
-    /// Creates a new builder-style object to manufacture [`DisableOrganizationAdminAccountInput`](crate::input::DisableOrganizationAdminAccountInput)
+    /// Creates a new builder-style object to manufacture [`DisableOrganizationAdminAccountInput`](crate::input::DisableOrganizationAdminAccountInput).
     pub fn builder() -> crate::input::disable_organization_admin_account_input::Builder {
         crate::input::disable_organization_admin_account_input::Builder::default()
     }
@@ -240,7 +308,7 @@ pub struct DisassociateMembership {
     _private: (),
 }
 impl DisassociateMembership {
-    /// Creates a new builder-style object to manufacture [`DisassociateMembershipInput`](crate::input::DisassociateMembershipInput)
+    /// Creates a new builder-style object to manufacture [`DisassociateMembershipInput`](crate::input::DisassociateMembershipInput).
     pub fn builder() -> crate::input::disassociate_membership_input::Builder {
         crate::input::disassociate_membership_input::Builder::default()
     }
@@ -274,7 +342,7 @@ pub struct EnableOrganizationAdminAccount {
     _private: (),
 }
 impl EnableOrganizationAdminAccount {
-    /// Creates a new builder-style object to manufacture [`EnableOrganizationAdminAccountInput`](crate::input::EnableOrganizationAdminAccountInput)
+    /// Creates a new builder-style object to manufacture [`EnableOrganizationAdminAccountInput`](crate::input::EnableOrganizationAdminAccountInput).
     pub fn builder() -> crate::input::enable_organization_admin_account_input::Builder {
         crate::input::enable_organization_admin_account_input::Builder::default()
     }
@@ -308,7 +376,7 @@ pub struct GetMembers {
     _private: (),
 }
 impl GetMembers {
-    /// Creates a new builder-style object to manufacture [`GetMembersInput`](crate::input::GetMembersInput)
+    /// Creates a new builder-style object to manufacture [`GetMembersInput`](crate::input::GetMembersInput).
     pub fn builder() -> crate::input::get_members_input::Builder {
         crate::input::get_members_input::Builder::default()
     }
@@ -329,6 +397,40 @@ impl aws_smithy_http::response::ParseStrictResponse for GetMembers {
     }
 }
 
+/// Operation shape for `ListDatasourcePackages`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_datasource_packages`](crate::client::Client::list_datasource_packages).
+///
+/// See [`crate::client::fluent_builders::ListDatasourcePackages`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListDatasourcePackages {
+    _private: (),
+}
+impl ListDatasourcePackages {
+    /// Creates a new builder-style object to manufacture [`ListDatasourcePackagesInput`](crate::input::ListDatasourcePackagesInput).
+    pub fn builder() -> crate::input::list_datasource_packages_input::Builder {
+        crate::input::list_datasource_packages_input::Builder::default()
+    }
+    /// Creates a new `ListDatasourcePackages` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListDatasourcePackages {
+    type Output = std::result::Result<
+        crate::output::ListDatasourcePackagesOutput,
+        crate::error::ListDatasourcePackagesError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_datasource_packages_error(response)
+        } else {
+            crate::operation_deser::parse_list_datasource_packages_response(response)
+        }
+    }
+}
+
 /// Operation shape for `ListGraphs`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -340,7 +442,7 @@ pub struct ListGraphs {
     _private: (),
 }
 impl ListGraphs {
-    /// Creates a new builder-style object to manufacture [`ListGraphsInput`](crate::input::ListGraphsInput)
+    /// Creates a new builder-style object to manufacture [`ListGraphsInput`](crate::input::ListGraphsInput).
     pub fn builder() -> crate::input::list_graphs_input::Builder {
         crate::input::list_graphs_input::Builder::default()
     }
@@ -372,7 +474,7 @@ pub struct ListInvitations {
     _private: (),
 }
 impl ListInvitations {
-    /// Creates a new builder-style object to manufacture [`ListInvitationsInput`](crate::input::ListInvitationsInput)
+    /// Creates a new builder-style object to manufacture [`ListInvitationsInput`](crate::input::ListInvitationsInput).
     pub fn builder() -> crate::input::list_invitations_input::Builder {
         crate::input::list_invitations_input::Builder::default()
     }
@@ -406,7 +508,7 @@ pub struct ListMembers {
     _private: (),
 }
 impl ListMembers {
-    /// Creates a new builder-style object to manufacture [`ListMembersInput`](crate::input::ListMembersInput)
+    /// Creates a new builder-style object to manufacture [`ListMembersInput`](crate::input::ListMembersInput).
     pub fn builder() -> crate::input::list_members_input::Builder {
         crate::input::list_members_input::Builder::default()
     }
@@ -438,7 +540,7 @@ pub struct ListOrganizationAdminAccounts {
     _private: (),
 }
 impl ListOrganizationAdminAccounts {
-    /// Creates a new builder-style object to manufacture [`ListOrganizationAdminAccountsInput`](crate::input::ListOrganizationAdminAccountsInput)
+    /// Creates a new builder-style object to manufacture [`ListOrganizationAdminAccountsInput`](crate::input::ListOrganizationAdminAccountsInput).
     pub fn builder() -> crate::input::list_organization_admin_accounts_input::Builder {
         crate::input::list_organization_admin_accounts_input::Builder::default()
     }
@@ -472,7 +574,7 @@ pub struct ListTagsForResource {
     _private: (),
 }
 impl ListTagsForResource {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
     pub fn builder() -> crate::input::list_tags_for_resource_input::Builder {
         crate::input::list_tags_for_resource_input::Builder::default()
     }
@@ -506,7 +608,7 @@ pub struct RejectInvitation {
     _private: (),
 }
 impl RejectInvitation {
-    /// Creates a new builder-style object to manufacture [`RejectInvitationInput`](crate::input::RejectInvitationInput)
+    /// Creates a new builder-style object to manufacture [`RejectInvitationInput`](crate::input::RejectInvitationInput).
     pub fn builder() -> crate::input::reject_invitation_input::Builder {
         crate::input::reject_invitation_input::Builder::default()
     }
@@ -540,7 +642,7 @@ pub struct StartMonitoringMember {
     _private: (),
 }
 impl StartMonitoringMember {
-    /// Creates a new builder-style object to manufacture [`StartMonitoringMemberInput`](crate::input::StartMonitoringMemberInput)
+    /// Creates a new builder-style object to manufacture [`StartMonitoringMemberInput`](crate::input::StartMonitoringMemberInput).
     pub fn builder() -> crate::input::start_monitoring_member_input::Builder {
         crate::input::start_monitoring_member_input::Builder::default()
     }
@@ -574,7 +676,7 @@ pub struct TagResource {
     _private: (),
 }
 impl TagResource {
-    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput)
+    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
     pub fn builder() -> crate::input::tag_resource_input::Builder {
         crate::input::tag_resource_input::Builder::default()
     }
@@ -606,7 +708,7 @@ pub struct UntagResource {
     _private: (),
 }
 impl UntagResource {
-    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
     pub fn builder() -> crate::input::untag_resource_input::Builder {
         crate::input::untag_resource_input::Builder::default()
     }
@@ -627,6 +729,40 @@ impl aws_smithy_http::response::ParseStrictResponse for UntagResource {
     }
 }
 
+/// Operation shape for `UpdateDatasourcePackages`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`update_datasource_packages`](crate::client::Client::update_datasource_packages).
+///
+/// See [`crate::client::fluent_builders::UpdateDatasourcePackages`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct UpdateDatasourcePackages {
+    _private: (),
+}
+impl UpdateDatasourcePackages {
+    /// Creates a new builder-style object to manufacture [`UpdateDatasourcePackagesInput`](crate::input::UpdateDatasourcePackagesInput).
+    pub fn builder() -> crate::input::update_datasource_packages_input::Builder {
+        crate::input::update_datasource_packages_input::Builder::default()
+    }
+    /// Creates a new `UpdateDatasourcePackages` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for UpdateDatasourcePackages {
+    type Output = std::result::Result<
+        crate::output::UpdateDatasourcePackagesOutput,
+        crate::error::UpdateDatasourcePackagesError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_update_datasource_packages_error(response)
+        } else {
+            crate::operation_deser::parse_update_datasource_packages_response(response)
+        }
+    }
+}
+
 /// Operation shape for `UpdateOrganizationConfiguration`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -638,7 +774,7 @@ pub struct UpdateOrganizationConfiguration {
     _private: (),
 }
 impl UpdateOrganizationConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateOrganizationConfigurationInput`](crate::input::UpdateOrganizationConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`UpdateOrganizationConfigurationInput`](crate::input::UpdateOrganizationConfigurationInput).
     pub fn builder() -> crate::input::update_organization_configuration_input::Builder {
         crate::input::update_organization_configuration_input::Builder::default()
     }

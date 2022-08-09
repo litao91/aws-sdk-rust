@@ -9,22 +9,21 @@ impl std::fmt::Debug for LogoutOutput {
         formatter.finish()
     }
 }
-/// See [`LogoutOutput`](crate::output::LogoutOutput)
+/// See [`LogoutOutput`](crate::output::LogoutOutput).
 pub mod logout_output {
 
-    /// A builder for [`LogoutOutput`](crate::output::LogoutOutput)
-    #[non_exhaustive]
+    /// A builder for [`LogoutOutput`](crate::output::LogoutOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`LogoutOutput`](crate::output::LogoutOutput)
+        /// Consumes the builder and constructs a [`LogoutOutput`](crate::output::LogoutOutput).
         pub fn build(self) -> crate::output::LogoutOutput {
             crate::output::LogoutOutput {}
         }
     }
 }
 impl LogoutOutput {
-    /// Creates a new builder-style object to manufacture [`LogoutOutput`](crate::output::LogoutOutput)
+    /// Creates a new builder-style object to manufacture [`LogoutOutput`](crate::output::LogoutOutput).
     pub fn builder() -> crate::output::logout_output::Builder {
         crate::output::logout_output::Builder::default()
     }
@@ -35,8 +34,10 @@ impl LogoutOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAccountsOutput {
     /// <p>The page token client that is used to retrieve the list of accounts.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>A paginated response with the list of account information and the next token if more results are available.</p>
+    #[doc(hidden)]
     pub account_list: std::option::Option<std::vec::Vec<crate::model::AccountInfo>>,
 }
 impl ListAccountsOutput {
@@ -57,11 +58,10 @@ impl std::fmt::Debug for ListAccountsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccountsOutput`](crate::output::ListAccountsOutput)
+/// See [`ListAccountsOutput`](crate::output::ListAccountsOutput).
 pub mod list_accounts_output {
 
-    /// A builder for [`ListAccountsOutput`](crate::output::ListAccountsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAccountsOutput`](crate::output::ListAccountsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -97,7 +97,7 @@ pub mod list_accounts_output {
             self.account_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountsOutput`](crate::output::ListAccountsOutput)
+        /// Consumes the builder and constructs a [`ListAccountsOutput`](crate::output::ListAccountsOutput).
         pub fn build(self) -> crate::output::ListAccountsOutput {
             crate::output::ListAccountsOutput {
                 next_token: self.next_token,
@@ -107,7 +107,7 @@ pub mod list_accounts_output {
     }
 }
 impl ListAccountsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccountsOutput`](crate::output::ListAccountsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccountsOutput`](crate::output::ListAccountsOutput).
     pub fn builder() -> crate::output::list_accounts_output::Builder {
         crate::output::list_accounts_output::Builder::default()
     }
@@ -118,8 +118,10 @@ impl ListAccountsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAccountRolesOutput {
     /// <p>The page token client that is used to retrieve the list of accounts.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>A paginated response with the list of roles and the next token if more results are available.</p>
+    #[doc(hidden)]
     pub role_list: std::option::Option<std::vec::Vec<crate::model::RoleInfo>>,
 }
 impl ListAccountRolesOutput {
@@ -140,11 +142,10 @@ impl std::fmt::Debug for ListAccountRolesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccountRolesOutput`](crate::output::ListAccountRolesOutput)
+/// See [`ListAccountRolesOutput`](crate::output::ListAccountRolesOutput).
 pub mod list_account_roles_output {
 
-    /// A builder for [`ListAccountRolesOutput`](crate::output::ListAccountRolesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAccountRolesOutput`](crate::output::ListAccountRolesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -180,7 +181,7 @@ pub mod list_account_roles_output {
             self.role_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountRolesOutput`](crate::output::ListAccountRolesOutput)
+        /// Consumes the builder and constructs a [`ListAccountRolesOutput`](crate::output::ListAccountRolesOutput).
         pub fn build(self) -> crate::output::ListAccountRolesOutput {
             crate::output::ListAccountRolesOutput {
                 next_token: self.next_token,
@@ -190,7 +191,7 @@ pub mod list_account_roles_output {
     }
 }
 impl ListAccountRolesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccountRolesOutput`](crate::output::ListAccountRolesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccountRolesOutput`](crate::output::ListAccountRolesOutput).
     pub fn builder() -> crate::output::list_account_roles_output::Builder {
         crate::output::list_account_roles_output::Builder::default()
     }
@@ -201,6 +202,7 @@ impl ListAccountRolesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRoleCredentialsOutput {
     /// <p>The credentials for the role that is assigned to the user.</p>
+    #[doc(hidden)]
     pub role_credentials: std::option::Option<crate::model::RoleCredentials>,
 }
 impl GetRoleCredentialsOutput {
@@ -216,11 +218,10 @@ impl std::fmt::Debug for GetRoleCredentialsOutput {
         formatter.finish()
     }
 }
-/// See [`GetRoleCredentialsOutput`](crate::output::GetRoleCredentialsOutput)
+/// See [`GetRoleCredentialsOutput`](crate::output::GetRoleCredentialsOutput).
 pub mod get_role_credentials_output {
 
-    /// A builder for [`GetRoleCredentialsOutput`](crate::output::GetRoleCredentialsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRoleCredentialsOutput`](crate::output::GetRoleCredentialsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_credentials: std::option::Option<crate::model::RoleCredentials>,
@@ -239,7 +240,7 @@ pub mod get_role_credentials_output {
             self.role_credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRoleCredentialsOutput`](crate::output::GetRoleCredentialsOutput)
+        /// Consumes the builder and constructs a [`GetRoleCredentialsOutput`](crate::output::GetRoleCredentialsOutput).
         pub fn build(self) -> crate::output::GetRoleCredentialsOutput {
             crate::output::GetRoleCredentialsOutput {
                 role_credentials: self.role_credentials,
@@ -248,7 +249,7 @@ pub mod get_role_credentials_output {
     }
 }
 impl GetRoleCredentialsOutput {
-    /// Creates a new builder-style object to manufacture [`GetRoleCredentialsOutput`](crate::output::GetRoleCredentialsOutput)
+    /// Creates a new builder-style object to manufacture [`GetRoleCredentialsOutput`](crate::output::GetRoleCredentialsOutput).
     pub fn builder() -> crate::output::get_role_credentials_output::Builder {
         crate::output::get_role_credentials_output::Builder::default()
     }

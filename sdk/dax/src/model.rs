@@ -9,12 +9,16 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SubnetGroup {
     /// <p>The name of the subnet group.</p>
+    #[doc(hidden)]
     pub subnet_group_name: std::option::Option<std::string::String>,
     /// <p>The description of the subnet group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Virtual Private Cloud identifier (VPC ID) of the subnet group.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>A list of subnets associated with the subnet group. </p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<crate::model::Subnet>>,
 }
 impl SubnetGroup {
@@ -45,11 +49,10 @@ impl std::fmt::Debug for SubnetGroup {
         formatter.finish()
     }
 }
-/// See [`SubnetGroup`](crate::model::SubnetGroup)
+/// See [`SubnetGroup`](crate::model::SubnetGroup).
 pub mod subnet_group {
 
-    /// A builder for [`SubnetGroup`](crate::model::SubnetGroup)
-    #[non_exhaustive]
+    /// A builder for [`SubnetGroup`](crate::model::SubnetGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_group_name: std::option::Option<std::string::String>,
@@ -110,7 +113,7 @@ pub mod subnet_group {
             self.subnets = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubnetGroup`](crate::model::SubnetGroup)
+        /// Consumes the builder and constructs a [`SubnetGroup`](crate::model::SubnetGroup).
         pub fn build(self) -> crate::model::SubnetGroup {
             crate::model::SubnetGroup {
                 subnet_group_name: self.subnet_group_name,
@@ -122,7 +125,7 @@ pub mod subnet_group {
     }
 }
 impl SubnetGroup {
-    /// Creates a new builder-style object to manufacture [`SubnetGroup`](crate::model::SubnetGroup)
+    /// Creates a new builder-style object to manufacture [`SubnetGroup`](crate::model::SubnetGroup).
     pub fn builder() -> crate::model::subnet_group::Builder {
         crate::model::subnet_group::Builder::default()
     }
@@ -133,8 +136,10 @@ impl SubnetGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subnet {
     /// <p>The system-assigned identifier for the subnet.</p>
+    #[doc(hidden)]
     pub subnet_identifier: std::option::Option<std::string::String>,
     /// <p>The Availability Zone (AZ) for the subnet.</p>
+    #[doc(hidden)]
     pub subnet_availability_zone: std::option::Option<std::string::String>,
 }
 impl Subnet {
@@ -155,11 +160,10 @@ impl std::fmt::Debug for Subnet {
         formatter.finish()
     }
 }
-/// See [`Subnet`](crate::model::Subnet)
+/// See [`Subnet`](crate::model::Subnet).
 pub mod subnet {
 
-    /// A builder for [`Subnet`](crate::model::Subnet)
-    #[non_exhaustive]
+    /// A builder for [`Subnet`](crate::model::Subnet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_identifier: std::option::Option<std::string::String>,
@@ -192,7 +196,7 @@ pub mod subnet {
             self.subnet_availability_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subnet`](crate::model::Subnet)
+        /// Consumes the builder and constructs a [`Subnet`](crate::model::Subnet).
         pub fn build(self) -> crate::model::Subnet {
             crate::model::Subnet {
                 subnet_identifier: self.subnet_identifier,
@@ -202,7 +206,7 @@ pub mod subnet {
     }
 }
 impl Subnet {
-    /// Creates a new builder-style object to manufacture [`Subnet`](crate::model::Subnet)
+    /// Creates a new builder-style object to manufacture [`Subnet`](crate::model::Subnet).
     pub fn builder() -> crate::model::subnet::Builder {
         crate::model::subnet::Builder::default()
     }
@@ -213,8 +217,10 @@ impl Subnet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParameterGroup {
     /// <p>The name of the parameter group.</p>
+    #[doc(hidden)]
     pub parameter_group_name: std::option::Option<std::string::String>,
     /// <p>A description of the parameter group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl ParameterGroup {
@@ -235,11 +241,10 @@ impl std::fmt::Debug for ParameterGroup {
         formatter.finish()
     }
 }
-/// See [`ParameterGroup`](crate::model::ParameterGroup)
+/// See [`ParameterGroup`](crate::model::ParameterGroup).
 pub mod parameter_group {
 
-    /// A builder for [`ParameterGroup`](crate::model::ParameterGroup)
-    #[non_exhaustive]
+    /// A builder for [`ParameterGroup`](crate::model::ParameterGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_group_name: std::option::Option<std::string::String>,
@@ -269,7 +274,7 @@ pub mod parameter_group {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParameterGroup`](crate::model::ParameterGroup)
+        /// Consumes the builder and constructs a [`ParameterGroup`](crate::model::ParameterGroup).
         pub fn build(self) -> crate::model::ParameterGroup {
             crate::model::ParameterGroup {
                 parameter_group_name: self.parameter_group_name,
@@ -279,7 +284,7 @@ pub mod parameter_group {
     }
 }
 impl ParameterGroup {
-    /// Creates a new builder-style object to manufacture [`ParameterGroup`](crate::model::ParameterGroup)
+    /// Creates a new builder-style object to manufacture [`ParameterGroup`](crate::model::ParameterGroup).
     pub fn builder() -> crate::model::parameter_group::Builder {
         crate::model::parameter_group::Builder::default()
     }
@@ -290,8 +295,10 @@ impl ParameterGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParameterNameValue {
     /// <p>The name of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>The value of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
 }
 impl ParameterNameValue {
@@ -312,11 +319,10 @@ impl std::fmt::Debug for ParameterNameValue {
         formatter.finish()
     }
 }
-/// See [`ParameterNameValue`](crate::model::ParameterNameValue)
+/// See [`ParameterNameValue`](crate::model::ParameterNameValue).
 pub mod parameter_name_value {
 
-    /// A builder for [`ParameterNameValue`](crate::model::ParameterNameValue)
-    #[non_exhaustive]
+    /// A builder for [`ParameterNameValue`](crate::model::ParameterNameValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_name: std::option::Option<std::string::String>,
@@ -349,7 +355,7 @@ pub mod parameter_name_value {
             self.parameter_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParameterNameValue`](crate::model::ParameterNameValue)
+        /// Consumes the builder and constructs a [`ParameterNameValue`](crate::model::ParameterNameValue).
         pub fn build(self) -> crate::model::ParameterNameValue {
             crate::model::ParameterNameValue {
                 parameter_name: self.parameter_name,
@@ -359,7 +365,7 @@ pub mod parameter_name_value {
     }
 }
 impl ParameterNameValue {
-    /// Creates a new builder-style object to manufacture [`ParameterNameValue`](crate::model::ParameterNameValue)
+    /// Creates a new builder-style object to manufacture [`ParameterNameValue`](crate::model::ParameterNameValue).
     pub fn builder() -> crate::model::parameter_name_value::Builder {
         crate::model::parameter_name_value::Builder::default()
     }
@@ -370,43 +376,61 @@ impl ParameterNameValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cluster {
     /// <p>The name of the DAX cluster.</p>
+    #[doc(hidden)]
     pub cluster_name: std::option::Option<std::string::String>,
     /// <p>The description of the cluster.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that uniquely identifies the cluster. </p>
+    #[doc(hidden)]
     pub cluster_arn: std::option::Option<std::string::String>,
     /// <p>The total number of nodes in the cluster.</p>
+    #[doc(hidden)]
     pub total_nodes: std::option::Option<i32>,
     /// <p>The number of nodes in the cluster that are active (i.e., capable of serving requests).</p>
+    #[doc(hidden)]
     pub active_nodes: std::option::Option<i32>,
     /// <p>The node type for the nodes in the cluster. (All nodes in a DAX cluster are of the same type.)</p>
+    #[doc(hidden)]
     pub node_type: std::option::Option<std::string::String>,
     /// <p>The current status of the cluster.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The endpoint for this DAX cluster, consisting of a DNS name, a port number, and a URL. Applications should use the URL to configure the DAX client to find their cluster.</p>
+    #[doc(hidden)]
     pub cluster_discovery_endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>A list of nodes to be removed from the cluster.</p>
+    #[doc(hidden)]
     pub node_ids_to_remove: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of nodes that are currently in the cluster.</p>
+    #[doc(hidden)]
     pub nodes: std::option::Option<std::vec::Vec<crate::model::Node>>,
     /// <p>A range of time when maintenance of DAX cluster software will be performed. For example: <code>sun:01:00-sun:09:00</code>. Cluster maintenance normally takes less than 30 minutes, and is performed automatically within the maintenance window.</p>
+    #[doc(hidden)]
     pub preferred_maintenance_window: std::option::Option<std::string::String>,
     /// <p>Describes a notification topic and its status. Notification topics are used for publishing DAX events to subscribers using Amazon Simple Notification Service (SNS).</p>
+    #[doc(hidden)]
     pub notification_configuration: std::option::Option<crate::model::NotificationConfiguration>,
     /// <p>The subnet group where the DAX cluster is running.</p>
+    #[doc(hidden)]
     pub subnet_group: std::option::Option<std::string::String>,
     /// <p>A list of security groups, and the status of each, for the nodes in the cluster.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<crate::model::SecurityGroupMembership>>,
     /// <p>A valid Amazon Resource Name (ARN) that identifies an IAM role. At runtime, DAX will assume this role and use the role's permissions to access DynamoDB on your behalf.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>The parameter group being used by nodes in the cluster.</p>
+    #[doc(hidden)]
     pub parameter_group: std::option::Option<crate::model::ParameterGroupStatus>,
     /// <p>The description of the server-side encryption status on the specified DAX cluster.</p>
+    #[doc(hidden)]
     pub sse_description: std::option::Option<crate::model::SseDescription>,
     /// <p>The type of encryption supported by the cluster's endpoint. Values are:</p>
     /// <ul>
     /// <li> <p> <code>NONE</code> for no encryption</p> <p> <code>TLS</code> for Transport Layer Security</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cluster_endpoint_encryption_type:
         std::option::Option<crate::model::ClusterEndpointEncryptionType>,
 }
@@ -527,11 +551,10 @@ impl std::fmt::Debug for Cluster {
         formatter.finish()
     }
 }
-/// See [`Cluster`](crate::model::Cluster)
+/// See [`Cluster`](crate::model::Cluster).
 pub mod cluster {
 
-    /// A builder for [`Cluster`](crate::model::Cluster)
-    #[non_exhaustive]
+    /// A builder for [`Cluster`](crate::model::Cluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster_name: std::option::Option<std::string::String>,
@@ -797,7 +820,7 @@ pub mod cluster {
             self.cluster_endpoint_encryption_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster)
+        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster).
         pub fn build(self) -> crate::model::Cluster {
             crate::model::Cluster {
                 cluster_name: self.cluster_name,
@@ -823,7 +846,7 @@ pub mod cluster {
     }
 }
 impl Cluster {
-    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster)
+    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster).
     pub fn builder() -> crate::model::cluster::Builder {
         crate::model::cluster::Builder::default()
     }
@@ -895,6 +918,7 @@ pub struct SseDescription {
     /// <li> <p> <code>DISABLING</code> - Server-side encryption is being disabled.</p> </li>
     /// <li> <p> <code>DISABLED</code> - Server-side encryption is disabled.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SseStatus>,
 }
 impl SseDescription {
@@ -916,11 +940,10 @@ impl std::fmt::Debug for SseDescription {
         formatter.finish()
     }
 }
-/// See [`SseDescription`](crate::model::SseDescription)
+/// See [`SseDescription`](crate::model::SseDescription).
 pub mod sse_description {
 
-    /// A builder for [`SseDescription`](crate::model::SseDescription)
-    #[non_exhaustive]
+    /// A builder for [`SseDescription`](crate::model::SseDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::SseStatus>,
@@ -948,7 +971,7 @@ pub mod sse_description {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`SseDescription`](crate::model::SseDescription)
+        /// Consumes the builder and constructs a [`SseDescription`](crate::model::SseDescription).
         pub fn build(self) -> crate::model::SseDescription {
             crate::model::SseDescription {
                 status: self.status,
@@ -957,7 +980,7 @@ pub mod sse_description {
     }
 }
 impl SseDescription {
-    /// Creates a new builder-style object to manufacture [`SseDescription`](crate::model::SseDescription)
+    /// Creates a new builder-style object to manufacture [`SseDescription`](crate::model::SseDescription).
     pub fn builder() -> crate::model::sse_description::Builder {
         crate::model::sse_description::Builder::default()
     }
@@ -1031,10 +1054,13 @@ impl AsRef<str> for SseStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParameterGroupStatus {
     /// <p>The name of the parameter group.</p>
+    #[doc(hidden)]
     pub parameter_group_name: std::option::Option<std::string::String>,
     /// <p>The status of parameter updates. </p>
+    #[doc(hidden)]
     pub parameter_apply_status: std::option::Option<std::string::String>,
     /// <p>The node IDs of one or more nodes to be rebooted.</p>
+    #[doc(hidden)]
     pub node_ids_to_reboot: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ParameterGroupStatus {
@@ -1060,11 +1086,10 @@ impl std::fmt::Debug for ParameterGroupStatus {
         formatter.finish()
     }
 }
-/// See [`ParameterGroupStatus`](crate::model::ParameterGroupStatus)
+/// See [`ParameterGroupStatus`](crate::model::ParameterGroupStatus).
 pub mod parameter_group_status {
 
-    /// A builder for [`ParameterGroupStatus`](crate::model::ParameterGroupStatus)
-    #[non_exhaustive]
+    /// A builder for [`ParameterGroupStatus`](crate::model::ParameterGroupStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_group_name: std::option::Option<std::string::String>,
@@ -1117,7 +1142,7 @@ pub mod parameter_group_status {
             self.node_ids_to_reboot = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParameterGroupStatus`](crate::model::ParameterGroupStatus)
+        /// Consumes the builder and constructs a [`ParameterGroupStatus`](crate::model::ParameterGroupStatus).
         pub fn build(self) -> crate::model::ParameterGroupStatus {
             crate::model::ParameterGroupStatus {
                 parameter_group_name: self.parameter_group_name,
@@ -1128,7 +1153,7 @@ pub mod parameter_group_status {
     }
 }
 impl ParameterGroupStatus {
-    /// Creates a new builder-style object to manufacture [`ParameterGroupStatus`](crate::model::ParameterGroupStatus)
+    /// Creates a new builder-style object to manufacture [`ParameterGroupStatus`](crate::model::ParameterGroupStatus).
     pub fn builder() -> crate::model::parameter_group_status::Builder {
         crate::model::parameter_group_status::Builder::default()
     }
@@ -1139,8 +1164,10 @@ impl ParameterGroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecurityGroupMembership {
     /// <p>The unique ID for this security group.</p>
+    #[doc(hidden)]
     pub security_group_identifier: std::option::Option<std::string::String>,
     /// <p>The status of this security group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl SecurityGroupMembership {
@@ -1161,11 +1188,10 @@ impl std::fmt::Debug for SecurityGroupMembership {
         formatter.finish()
     }
 }
-/// See [`SecurityGroupMembership`](crate::model::SecurityGroupMembership)
+/// See [`SecurityGroupMembership`](crate::model::SecurityGroupMembership).
 pub mod security_group_membership {
 
-    /// A builder for [`SecurityGroupMembership`](crate::model::SecurityGroupMembership)
-    #[non_exhaustive]
+    /// A builder for [`SecurityGroupMembership`](crate::model::SecurityGroupMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_group_identifier: std::option::Option<std::string::String>,
@@ -1195,7 +1221,7 @@ pub mod security_group_membership {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecurityGroupMembership`](crate::model::SecurityGroupMembership)
+        /// Consumes the builder and constructs a [`SecurityGroupMembership`](crate::model::SecurityGroupMembership).
         pub fn build(self) -> crate::model::SecurityGroupMembership {
             crate::model::SecurityGroupMembership {
                 security_group_identifier: self.security_group_identifier,
@@ -1205,7 +1231,7 @@ pub mod security_group_membership {
     }
 }
 impl SecurityGroupMembership {
-    /// Creates a new builder-style object to manufacture [`SecurityGroupMembership`](crate::model::SecurityGroupMembership)
+    /// Creates a new builder-style object to manufacture [`SecurityGroupMembership`](crate::model::SecurityGroupMembership).
     pub fn builder() -> crate::model::security_group_membership::Builder {
         crate::model::security_group_membership::Builder::default()
     }
@@ -1216,8 +1242,10 @@ impl SecurityGroupMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationConfiguration {
     /// <p>The Amazon Resource Name (ARN) that identifies the topic. </p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
     /// <p>The current state of the topic. A value of “active” means that notifications will be sent to the topic. A value of “inactive” means that notifications will not be sent to the topic.</p>
+    #[doc(hidden)]
     pub topic_status: std::option::Option<std::string::String>,
 }
 impl NotificationConfiguration {
@@ -1238,11 +1266,10 @@ impl std::fmt::Debug for NotificationConfiguration {
         formatter.finish()
     }
 }
-/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration).
 pub mod notification_configuration {
 
-    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_arn: std::option::Option<std::string::String>,
@@ -1269,7 +1296,7 @@ pub mod notification_configuration {
             self.topic_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration).
         pub fn build(self) -> crate::model::NotificationConfiguration {
             crate::model::NotificationConfiguration {
                 topic_arn: self.topic_arn,
@@ -1279,7 +1306,7 @@ pub mod notification_configuration {
     }
 }
 impl NotificationConfiguration {
-    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     pub fn builder() -> crate::model::notification_configuration::Builder {
         crate::model::notification_configuration::Builder::default()
     }
@@ -1290,16 +1317,22 @@ impl NotificationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Node {
     /// <p>A system-generated identifier for the node.</p>
+    #[doc(hidden)]
     pub node_id: std::option::Option<std::string::String>,
     /// <p>The endpoint for the node, consisting of a DNS name and a port number. Client applications can connect directly to a node endpoint, if desired (as an alternative to allowing DAX client software to intelligently route requests and responses to nodes in the DAX cluster.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>The date and time (in UNIX epoch format) when the node was launched.</p>
+    #[doc(hidden)]
     pub node_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Availability Zone (AZ) in which the node has been deployed.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The current status of the node. For example: <code>available</code>.</p>
+    #[doc(hidden)]
     pub node_status: std::option::Option<std::string::String>,
     /// <p>The status of the parameter group associated with this node. For example, <code>in-sync</code>.</p>
+    #[doc(hidden)]
     pub parameter_group_status: std::option::Option<std::string::String>,
 }
 impl Node {
@@ -1340,11 +1373,10 @@ impl std::fmt::Debug for Node {
         formatter.finish()
     }
 }
-/// See [`Node`](crate::model::Node)
+/// See [`Node`](crate::model::Node).
 pub mod node {
 
-    /// A builder for [`Node`](crate::model::Node)
-    #[non_exhaustive]
+    /// A builder for [`Node`](crate::model::Node).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) node_id: std::option::Option<std::string::String>,
@@ -1424,7 +1456,7 @@ pub mod node {
             self.parameter_group_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Node`](crate::model::Node)
+        /// Consumes the builder and constructs a [`Node`](crate::model::Node).
         pub fn build(self) -> crate::model::Node {
             crate::model::Node {
                 node_id: self.node_id,
@@ -1438,7 +1470,7 @@ pub mod node {
     }
 }
 impl Node {
-    /// Creates a new builder-style object to manufacture [`Node`](crate::model::Node)
+    /// Creates a new builder-style object to manufacture [`Node`](crate::model::Node).
     pub fn builder() -> crate::model::node::Builder {
         crate::model::node::Builder::default()
     }
@@ -1449,10 +1481,13 @@ impl Node {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Endpoint {
     /// <p>The DNS hostname of the endpoint.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The port number that applications should use to connect to the endpoint.</p>
+    #[doc(hidden)]
     pub port: i32,
     /// <p>The URL that applications should use to connect to the endpoint. The default ports are 8111 for the "dax" protocol and 9111 for the "daxs" protocol.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl Endpoint {
@@ -1478,11 +1513,10 @@ impl std::fmt::Debug for Endpoint {
         formatter.finish()
     }
 }
-/// See [`Endpoint`](crate::model::Endpoint)
+/// See [`Endpoint`](crate::model::Endpoint).
 pub mod endpoint {
 
-    /// A builder for [`Endpoint`](crate::model::Endpoint)
-    #[non_exhaustive]
+    /// A builder for [`Endpoint`](crate::model::Endpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -1520,7 +1554,7 @@ pub mod endpoint {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint)
+        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint).
         pub fn build(self) -> crate::model::Endpoint {
             crate::model::Endpoint {
                 address: self.address,
@@ -1531,7 +1565,7 @@ pub mod endpoint {
     }
 }
 impl Endpoint {
-    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint)
+    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint).
     pub fn builder() -> crate::model::endpoint::Builder {
         crate::model::endpoint::Builder::default()
     }
@@ -1544,8 +1578,10 @@ impl Endpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key for the tag. Tag keys are case sensitive. Every DAX cluster can only have one tag with the same key. If you try to add an existing tag (same key), the existing tag value will be updated to the new value.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag. Tag values are case-sensitive and can be null. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -1566,11 +1602,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1597,7 +1632,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -1607,7 +1642,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1618,25 +1653,35 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Parameter {
     /// <p>The name of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>Determines whether the parameter can be applied to any nodes, or only nodes of a particular type.</p>
+    #[doc(hidden)]
     pub parameter_type: std::option::Option<crate::model::ParameterType>,
     /// <p>The value for the parameter.</p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
     /// <p>A list of node types, and specific parameter values for each node.</p>
+    #[doc(hidden)]
     pub node_type_specific_values:
         std::option::Option<std::vec::Vec<crate::model::NodeTypeSpecificValue>>,
     /// <p>A description of the parameter</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>How the parameter is defined. For example, <code>system</code> denotes a system-defined parameter.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
     /// <p>The data type of the parameter. For example, <code>integer</code>:</p>
+    #[doc(hidden)]
     pub data_type: std::option::Option<std::string::String>,
     /// <p>A range of values within which the parameter can be set.</p>
+    #[doc(hidden)]
     pub allowed_values: std::option::Option<std::string::String>,
     /// <p>Whether the customer is allowed to modify the parameter.</p>
+    #[doc(hidden)]
     pub is_modifiable: std::option::Option<crate::model::IsModifiable>,
     /// <p>The conditions under which changes to this parameter can be applied. For example, <code>requires-reboot</code> indicates that a new value for this parameter will only take effect if a node is rebooted.</p>
+    #[doc(hidden)]
     pub change_type: std::option::Option<crate::model::ChangeType>,
 }
 impl Parameter {
@@ -1699,11 +1744,10 @@ impl std::fmt::Debug for Parameter {
         formatter.finish()
     }
 }
-/// See [`Parameter`](crate::model::Parameter)
+/// See [`Parameter`](crate::model::Parameter).
 pub mod parameter {
 
-    /// A builder for [`Parameter`](crate::model::Parameter)
-    #[non_exhaustive]
+    /// A builder for [`Parameter`](crate::model::Parameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_name: std::option::Option<std::string::String>,
@@ -1849,7 +1893,7 @@ pub mod parameter {
             self.change_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter)
+        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter).
         pub fn build(self) -> crate::model::Parameter {
             crate::model::Parameter {
                 parameter_name: self.parameter_name,
@@ -1867,7 +1911,7 @@ pub mod parameter {
     }
 }
 impl Parameter {
-    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter)
+    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter).
     pub fn builder() -> crate::model::parameter::Builder {
         crate::model::parameter::Builder::default()
     }
@@ -1992,8 +2036,10 @@ impl AsRef<str> for IsModifiable {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeTypeSpecificValue {
     /// <p>A node type to which the parameter value applies.</p>
+    #[doc(hidden)]
     pub node_type: std::option::Option<std::string::String>,
     /// <p>The parameter value for this node type.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl NodeTypeSpecificValue {
@@ -2014,11 +2060,10 @@ impl std::fmt::Debug for NodeTypeSpecificValue {
         formatter.finish()
     }
 }
-/// See [`NodeTypeSpecificValue`](crate::model::NodeTypeSpecificValue)
+/// See [`NodeTypeSpecificValue`](crate::model::NodeTypeSpecificValue).
 pub mod node_type_specific_value {
 
-    /// A builder for [`NodeTypeSpecificValue`](crate::model::NodeTypeSpecificValue)
-    #[non_exhaustive]
+    /// A builder for [`NodeTypeSpecificValue`](crate::model::NodeTypeSpecificValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) node_type: std::option::Option<std::string::String>,
@@ -2045,7 +2090,7 @@ pub mod node_type_specific_value {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeTypeSpecificValue`](crate::model::NodeTypeSpecificValue)
+        /// Consumes the builder and constructs a [`NodeTypeSpecificValue`](crate::model::NodeTypeSpecificValue).
         pub fn build(self) -> crate::model::NodeTypeSpecificValue {
             crate::model::NodeTypeSpecificValue {
                 node_type: self.node_type,
@@ -2055,7 +2100,7 @@ pub mod node_type_specific_value {
     }
 }
 impl NodeTypeSpecificValue {
-    /// Creates a new builder-style object to manufacture [`NodeTypeSpecificValue`](crate::model::NodeTypeSpecificValue)
+    /// Creates a new builder-style object to manufacture [`NodeTypeSpecificValue`](crate::model::NodeTypeSpecificValue).
     pub fn builder() -> crate::model::node_type_specific_value::Builder {
         crate::model::node_type_specific_value::Builder::default()
     }
@@ -2121,12 +2166,16 @@ impl AsRef<str> for ParameterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>The source of the event. For example, if the event occurred at the node level, the source would be the node ID.</p>
+    #[doc(hidden)]
     pub source_name: std::option::Option<std::string::String>,
     /// <p>Specifies the origin of this event - a cluster, a parameter group, a node ID, etc.</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::SourceType>,
     /// <p>A user-defined message associated with the event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The date and time when the event occurred.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Event {
@@ -2157,11 +2206,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_name: std::option::Option<std::string::String>,
@@ -2213,7 +2261,7 @@ pub mod event {
             self.date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 source_name: self.source_name,
@@ -2225,7 +2273,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -2295,6 +2343,7 @@ impl AsRef<str> for SourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SseSpecification {
     /// <p>Indicates whether server-side encryption is enabled (true) or disabled (false) on the cluster.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl SseSpecification {
@@ -2310,11 +2359,10 @@ impl std::fmt::Debug for SseSpecification {
         formatter.finish()
     }
 }
-/// See [`SseSpecification`](crate::model::SseSpecification)
+/// See [`SseSpecification`](crate::model::SseSpecification).
 pub mod sse_specification {
 
-    /// A builder for [`SseSpecification`](crate::model::SseSpecification)
-    #[non_exhaustive]
+    /// A builder for [`SseSpecification`](crate::model::SseSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2330,7 +2378,7 @@ pub mod sse_specification {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`SseSpecification`](crate::model::SseSpecification)
+        /// Consumes the builder and constructs a [`SseSpecification`](crate::model::SseSpecification).
         pub fn build(self) -> crate::model::SseSpecification {
             crate::model::SseSpecification {
                 enabled: self.enabled,
@@ -2339,7 +2387,7 @@ pub mod sse_specification {
     }
 }
 impl SseSpecification {
-    /// Creates a new builder-style object to manufacture [`SseSpecification`](crate::model::SseSpecification)
+    /// Creates a new builder-style object to manufacture [`SseSpecification`](crate::model::SseSpecification).
     pub fn builder() -> crate::model::sse_specification::Builder {
         crate::model::sse_specification::Builder::default()
     }

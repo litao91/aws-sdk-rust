@@ -9,24 +9,53 @@ impl std::fmt::Debug for UpdateOrganizationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
+/// See [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput).
 pub mod update_organization_configuration_output {
 
-    /// A builder for [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
+        /// Consumes the builder and constructs a [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput).
         pub fn build(self) -> crate::output::UpdateOrganizationConfigurationOutput {
             crate::output::UpdateOrganizationConfigurationOutput {}
         }
     }
 }
 impl UpdateOrganizationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput).
     pub fn builder() -> crate::output::update_organization_configuration_output::Builder {
         crate::output::update_organization_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateDatasourcePackagesOutput {}
+impl std::fmt::Debug for UpdateDatasourcePackagesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateDatasourcePackagesOutput");
+        formatter.finish()
+    }
+}
+/// See [`UpdateDatasourcePackagesOutput`](crate::output::UpdateDatasourcePackagesOutput).
+pub mod update_datasource_packages_output {
+
+    /// A builder for [`UpdateDatasourcePackagesOutput`](crate::output::UpdateDatasourcePackagesOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`UpdateDatasourcePackagesOutput`](crate::output::UpdateDatasourcePackagesOutput).
+        pub fn build(self) -> crate::output::UpdateDatasourcePackagesOutput {
+            crate::output::UpdateDatasourcePackagesOutput {}
+        }
+    }
+}
+impl UpdateDatasourcePackagesOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateDatasourcePackagesOutput`](crate::output::UpdateDatasourcePackagesOutput).
+    pub fn builder() -> crate::output::update_datasource_packages_output::Builder {
+        crate::output::update_datasource_packages_output::Builder::default()
     }
 }
 
@@ -40,22 +69,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -71,22 +99,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -102,22 +129,21 @@ impl std::fmt::Debug for StartMonitoringMemberOutput {
         formatter.finish()
     }
 }
-/// See [`StartMonitoringMemberOutput`](crate::output::StartMonitoringMemberOutput)
+/// See [`StartMonitoringMemberOutput`](crate::output::StartMonitoringMemberOutput).
 pub mod start_monitoring_member_output {
 
-    /// A builder for [`StartMonitoringMemberOutput`](crate::output::StartMonitoringMemberOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartMonitoringMemberOutput`](crate::output::StartMonitoringMemberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StartMonitoringMemberOutput`](crate::output::StartMonitoringMemberOutput)
+        /// Consumes the builder and constructs a [`StartMonitoringMemberOutput`](crate::output::StartMonitoringMemberOutput).
         pub fn build(self) -> crate::output::StartMonitoringMemberOutput {
             crate::output::StartMonitoringMemberOutput {}
         }
     }
 }
 impl StartMonitoringMemberOutput {
-    /// Creates a new builder-style object to manufacture [`StartMonitoringMemberOutput`](crate::output::StartMonitoringMemberOutput)
+    /// Creates a new builder-style object to manufacture [`StartMonitoringMemberOutput`](crate::output::StartMonitoringMemberOutput).
     pub fn builder() -> crate::output::start_monitoring_member_output::Builder {
         crate::output::start_monitoring_member_output::Builder::default()
     }
@@ -133,22 +159,21 @@ impl std::fmt::Debug for RejectInvitationOutput {
         formatter.finish()
     }
 }
-/// See [`RejectInvitationOutput`](crate::output::RejectInvitationOutput)
+/// See [`RejectInvitationOutput`](crate::output::RejectInvitationOutput).
 pub mod reject_invitation_output {
 
-    /// A builder for [`RejectInvitationOutput`](crate::output::RejectInvitationOutput)
-    #[non_exhaustive]
+    /// A builder for [`RejectInvitationOutput`](crate::output::RejectInvitationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RejectInvitationOutput`](crate::output::RejectInvitationOutput)
+        /// Consumes the builder and constructs a [`RejectInvitationOutput`](crate::output::RejectInvitationOutput).
         pub fn build(self) -> crate::output::RejectInvitationOutput {
             crate::output::RejectInvitationOutput {}
         }
     }
 }
 impl RejectInvitationOutput {
-    /// Creates a new builder-style object to manufacture [`RejectInvitationOutput`](crate::output::RejectInvitationOutput)
+    /// Creates a new builder-style object to manufacture [`RejectInvitationOutput`](crate::output::RejectInvitationOutput).
     pub fn builder() -> crate::output::reject_invitation_output::Builder {
         crate::output::reject_invitation_output::Builder::default()
     }
@@ -159,6 +184,7 @@ impl RejectInvitationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tag values that are assigned to the behavior graph. The request returns up to 50 tag values.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -178,11 +204,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -215,14 +240,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -232,13 +257,15 @@ impl ListTagsForResourceOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListOrganizationAdminAccountsOutput {
-    /// <p>The list of delegated administrator accounts.</p>
+    /// <p>The list of Detective administrator accounts.</p>
+    #[doc(hidden)]
     pub administrators: std::option::Option<std::vec::Vec<crate::model::Administrator>>,
     /// <p>If there are more accounts remaining in the results, then this is the pagination token to use to request the next page of accounts.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListOrganizationAdminAccountsOutput {
-    /// <p>The list of delegated administrator accounts.</p>
+    /// <p>The list of Detective administrator accounts.</p>
     pub fn administrators(&self) -> std::option::Option<&[crate::model::Administrator]> {
         self.administrators.as_deref()
     }
@@ -255,11 +282,10 @@ impl std::fmt::Debug for ListOrganizationAdminAccountsOutput {
         formatter.finish()
     }
 }
-/// See [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
+/// See [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput).
 pub mod list_organization_admin_accounts_output {
 
-    /// A builder for [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) administrators: std::option::Option<std::vec::Vec<crate::model::Administrator>>,
@@ -270,14 +296,14 @@ pub mod list_organization_admin_accounts_output {
         ///
         /// To override the contents of this collection use [`set_administrators`](Self::set_administrators).
         ///
-        /// <p>The list of delegated administrator accounts.</p>
+        /// <p>The list of Detective administrator accounts.</p>
         pub fn administrators(mut self, input: crate::model::Administrator) -> Self {
             let mut v = self.administrators.unwrap_or_default();
             v.push(input);
             self.administrators = Some(v);
             self
         }
-        /// <p>The list of delegated administrator accounts.</p>
+        /// <p>The list of Detective administrator accounts.</p>
         pub fn set_administrators(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::Administrator>>,
@@ -295,7 +321,7 @@ pub mod list_organization_admin_accounts_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
+        /// Consumes the builder and constructs a [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput).
         pub fn build(self) -> crate::output::ListOrganizationAdminAccountsOutput {
             crate::output::ListOrganizationAdminAccountsOutput {
                 administrators: self.administrators,
@@ -305,7 +331,7 @@ pub mod list_organization_admin_accounts_output {
     }
 }
 impl ListOrganizationAdminAccountsOutput {
-    /// Creates a new builder-style object to manufacture [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
+    /// Creates a new builder-style object to manufacture [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput).
     pub fn builder() -> crate::output::list_organization_admin_accounts_output::Builder {
         crate::output::list_organization_admin_accounts_output::Builder::default()
     }
@@ -318,8 +344,10 @@ pub struct ListMembersOutput {
     /// <p>The list of member accounts in the behavior graph.</p>
     /// <p>For invited accounts, the results include member accounts that did not pass verification and member accounts that have not yet accepted the invitation to the behavior graph. The results do not include member accounts that were removed from the behavior graph.</p>
     /// <p>For the organization behavior graph, the results do not include organization accounts that the Detective administrator account has not enabled as member accounts.</p>
+    #[doc(hidden)]
     pub member_details: std::option::Option<std::vec::Vec<crate::model::MemberDetail>>,
     /// <p>If there are more member accounts remaining in the results, then use this pagination token to request the next page of member accounts.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListMembersOutput {
@@ -342,11 +370,10 @@ impl std::fmt::Debug for ListMembersOutput {
         formatter.finish()
     }
 }
-/// See [`ListMembersOutput`](crate::output::ListMembersOutput)
+/// See [`ListMembersOutput`](crate::output::ListMembersOutput).
 pub mod list_members_output {
 
-    /// A builder for [`ListMembersOutput`](crate::output::ListMembersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMembersOutput`](crate::output::ListMembersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) member_details: std::option::Option<std::vec::Vec<crate::model::MemberDetail>>,
@@ -386,7 +413,7 @@ pub mod list_members_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMembersOutput`](crate::output::ListMembersOutput)
+        /// Consumes the builder and constructs a [`ListMembersOutput`](crate::output::ListMembersOutput).
         pub fn build(self) -> crate::output::ListMembersOutput {
             crate::output::ListMembersOutput {
                 member_details: self.member_details,
@@ -396,7 +423,7 @@ pub mod list_members_output {
     }
 }
 impl ListMembersOutput {
-    /// Creates a new builder-style object to manufacture [`ListMembersOutput`](crate::output::ListMembersOutput)
+    /// Creates a new builder-style object to manufacture [`ListMembersOutput`](crate::output::ListMembersOutput).
     pub fn builder() -> crate::output::list_members_output::Builder {
         crate::output::list_members_output::Builder::default()
     }
@@ -407,8 +434,10 @@ impl ListMembersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListInvitationsOutput {
     /// <p>The list of behavior graphs for which the member account has open or accepted invitations.</p>
+    #[doc(hidden)]
     pub invitations: std::option::Option<std::vec::Vec<crate::model::MemberDetail>>,
     /// <p>If there are more behavior graphs remaining in the results, then this is the pagination token to use to request the next page of behavior graphs.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListInvitationsOutput {
@@ -429,11 +458,10 @@ impl std::fmt::Debug for ListInvitationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
+/// See [`ListInvitationsOutput`](crate::output::ListInvitationsOutput).
 pub mod list_invitations_output {
 
-    /// A builder for [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListInvitationsOutput`](crate::output::ListInvitationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) invitations: std::option::Option<std::vec::Vec<crate::model::MemberDetail>>,
@@ -469,7 +497,7 @@ pub mod list_invitations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
+        /// Consumes the builder and constructs a [`ListInvitationsOutput`](crate::output::ListInvitationsOutput).
         pub fn build(self) -> crate::output::ListInvitationsOutput {
             crate::output::ListInvitationsOutput {
                 invitations: self.invitations,
@@ -479,7 +507,7 @@ pub mod list_invitations_output {
     }
 }
 impl ListInvitationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListInvitationsOutput`](crate::output::ListInvitationsOutput).
     pub fn builder() -> crate::output::list_invitations_output::Builder {
         crate::output::list_invitations_output::Builder::default()
     }
@@ -490,8 +518,10 @@ impl ListInvitationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGraphsOutput {
     /// <p>A list of behavior graphs that the account is an administrator account for.</p>
+    #[doc(hidden)]
     pub graph_list: std::option::Option<std::vec::Vec<crate::model::Graph>>,
     /// <p>If there are more behavior graphs remaining in the results, then this is the pagination token to use to request the next page of behavior graphs.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListGraphsOutput {
@@ -512,11 +542,10 @@ impl std::fmt::Debug for ListGraphsOutput {
         formatter.finish()
     }
 }
-/// See [`ListGraphsOutput`](crate::output::ListGraphsOutput)
+/// See [`ListGraphsOutput`](crate::output::ListGraphsOutput).
 pub mod list_graphs_output {
 
-    /// A builder for [`ListGraphsOutput`](crate::output::ListGraphsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGraphsOutput`](crate::output::ListGraphsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) graph_list: std::option::Option<std::vec::Vec<crate::model::Graph>>,
@@ -552,7 +581,7 @@ pub mod list_graphs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGraphsOutput`](crate::output::ListGraphsOutput)
+        /// Consumes the builder and constructs a [`ListGraphsOutput`](crate::output::ListGraphsOutput).
         pub fn build(self) -> crate::output::ListGraphsOutput {
             crate::output::ListGraphsOutput {
                 graph_list: self.graph_list,
@@ -562,7 +591,7 @@ pub mod list_graphs_output {
     }
 }
 impl ListGraphsOutput {
-    /// Creates a new builder-style object to manufacture [`ListGraphsOutput`](crate::output::ListGraphsOutput)
+    /// Creates a new builder-style object to manufacture [`ListGraphsOutput`](crate::output::ListGraphsOutput).
     pub fn builder() -> crate::output::list_graphs_output::Builder {
         crate::output::list_graphs_output::Builder::default()
     }
@@ -571,11 +600,123 @@ impl ListGraphsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListDatasourcePackagesOutput {
+    /// <p>Details on the data source packages active in the behavior graph.</p>
+    #[doc(hidden)]
+    pub datasource_packages: std::option::Option<
+        std::collections::HashMap<
+            crate::model::DatasourcePackage,
+            crate::model::DatasourcePackageIngestDetail,
+        >,
+    >,
+    /// <p>For requests to get the next page of results, the pagination token that was returned with the previous set of results. The initial request does not include a pagination token.</p>
+    #[doc(hidden)]
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListDatasourcePackagesOutput {
+    /// <p>Details on the data source packages active in the behavior graph.</p>
+    pub fn datasource_packages(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<
+            crate::model::DatasourcePackage,
+            crate::model::DatasourcePackageIngestDetail,
+        >,
+    > {
+        self.datasource_packages.as_ref()
+    }
+    /// <p>For requests to get the next page of results, the pagination token that was returned with the previous set of results. The initial request does not include a pagination token.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListDatasourcePackagesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListDatasourcePackagesOutput");
+        formatter.field("datasource_packages", &self.datasource_packages);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListDatasourcePackagesOutput`](crate::output::ListDatasourcePackagesOutput).
+pub mod list_datasource_packages_output {
+
+    /// A builder for [`ListDatasourcePackagesOutput`](crate::output::ListDatasourcePackagesOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) datasource_packages: std::option::Option<
+            std::collections::HashMap<
+                crate::model::DatasourcePackage,
+                crate::model::DatasourcePackageIngestDetail,
+            >,
+        >,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Adds a key-value pair to `datasource_packages`.
+        ///
+        /// To override the contents of this collection use [`set_datasource_packages`](Self::set_datasource_packages).
+        ///
+        /// <p>Details on the data source packages active in the behavior graph.</p>
+        pub fn datasource_packages(
+            mut self,
+            k: crate::model::DatasourcePackage,
+            v: crate::model::DatasourcePackageIngestDetail,
+        ) -> Self {
+            let mut hash_map = self.datasource_packages.unwrap_or_default();
+            hash_map.insert(k, v);
+            self.datasource_packages = Some(hash_map);
+            self
+        }
+        /// <p>Details on the data source packages active in the behavior graph.</p>
+        pub fn set_datasource_packages(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    crate::model::DatasourcePackage,
+                    crate::model::DatasourcePackageIngestDetail,
+                >,
+            >,
+        ) -> Self {
+            self.datasource_packages = input;
+            self
+        }
+        /// <p>For requests to get the next page of results, the pagination token that was returned with the previous set of results. The initial request does not include a pagination token.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>For requests to get the next page of results, the pagination token that was returned with the previous set of results. The initial request does not include a pagination token.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListDatasourcePackagesOutput`](crate::output::ListDatasourcePackagesOutput).
+        pub fn build(self) -> crate::output::ListDatasourcePackagesOutput {
+            crate::output::ListDatasourcePackagesOutput {
+                datasource_packages: self.datasource_packages,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListDatasourcePackagesOutput {
+    /// Creates a new builder-style object to manufacture [`ListDatasourcePackagesOutput`](crate::output::ListDatasourcePackagesOutput).
+    pub fn builder() -> crate::output::list_datasource_packages_output::Builder {
+        crate::output::list_datasource_packages_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMembersOutput {
     /// <p>The member account details that Detective is returning in response to the request.</p>
+    #[doc(hidden)]
     pub member_details: std::option::Option<std::vec::Vec<crate::model::MemberDetail>>,
     /// <p>The requested member accounts for which Detective was unable to return member details.</p>
     /// <p>For each account, provides the reason why the request could not be processed.</p>
+    #[doc(hidden)]
     pub unprocessed_accounts: std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
 }
 impl GetMembersOutput {
@@ -597,11 +738,10 @@ impl std::fmt::Debug for GetMembersOutput {
         formatter.finish()
     }
 }
-/// See [`GetMembersOutput`](crate::output::GetMembersOutput)
+/// See [`GetMembersOutput`](crate::output::GetMembersOutput).
 pub mod get_members_output {
 
-    /// A builder for [`GetMembersOutput`](crate::output::GetMembersOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMembersOutput`](crate::output::GetMembersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) member_details: std::option::Option<std::vec::Vec<crate::model::MemberDetail>>,
@@ -649,7 +789,7 @@ pub mod get_members_output {
             self.unprocessed_accounts = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMembersOutput`](crate::output::GetMembersOutput)
+        /// Consumes the builder and constructs a [`GetMembersOutput`](crate::output::GetMembersOutput).
         pub fn build(self) -> crate::output::GetMembersOutput {
             crate::output::GetMembersOutput {
                 member_details: self.member_details,
@@ -659,7 +799,7 @@ pub mod get_members_output {
     }
 }
 impl GetMembersOutput {
-    /// Creates a new builder-style object to manufacture [`GetMembersOutput`](crate::output::GetMembersOutput)
+    /// Creates a new builder-style object to manufacture [`GetMembersOutput`](crate::output::GetMembersOutput).
     pub fn builder() -> crate::output::get_members_output::Builder {
         crate::output::get_members_output::Builder::default()
     }
@@ -675,22 +815,21 @@ impl std::fmt::Debug for EnableOrganizationAdminAccountOutput {
         formatter.finish()
     }
 }
-/// See [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
+/// See [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput).
 pub mod enable_organization_admin_account_output {
 
-    /// A builder for [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
+        /// Consumes the builder and constructs a [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput).
         pub fn build(self) -> crate::output::EnableOrganizationAdminAccountOutput {
             crate::output::EnableOrganizationAdminAccountOutput {}
         }
     }
 }
 impl EnableOrganizationAdminAccountOutput {
-    /// Creates a new builder-style object to manufacture [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
+    /// Creates a new builder-style object to manufacture [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput).
     pub fn builder() -> crate::output::enable_organization_admin_account_output::Builder {
         crate::output::enable_organization_admin_account_output::Builder::default()
     }
@@ -706,22 +845,21 @@ impl std::fmt::Debug for DisassociateMembershipOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateMembershipOutput`](crate::output::DisassociateMembershipOutput)
+/// See [`DisassociateMembershipOutput`](crate::output::DisassociateMembershipOutput).
 pub mod disassociate_membership_output {
 
-    /// A builder for [`DisassociateMembershipOutput`](crate::output::DisassociateMembershipOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateMembershipOutput`](crate::output::DisassociateMembershipOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateMembershipOutput`](crate::output::DisassociateMembershipOutput)
+        /// Consumes the builder and constructs a [`DisassociateMembershipOutput`](crate::output::DisassociateMembershipOutput).
         pub fn build(self) -> crate::output::DisassociateMembershipOutput {
             crate::output::DisassociateMembershipOutput {}
         }
     }
 }
 impl DisassociateMembershipOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateMembershipOutput`](crate::output::DisassociateMembershipOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateMembershipOutput`](crate::output::DisassociateMembershipOutput).
     pub fn builder() -> crate::output::disassociate_membership_output::Builder {
         crate::output::disassociate_membership_output::Builder::default()
     }
@@ -737,22 +875,21 @@ impl std::fmt::Debug for DisableOrganizationAdminAccountOutput {
         formatter.finish()
     }
 }
-/// See [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
+/// See [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput).
 pub mod disable_organization_admin_account_output {
 
-    /// A builder for [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
+        /// Consumes the builder and constructs a [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput).
         pub fn build(self) -> crate::output::DisableOrganizationAdminAccountOutput {
             crate::output::DisableOrganizationAdminAccountOutput {}
         }
     }
 }
 impl DisableOrganizationAdminAccountOutput {
-    /// Creates a new builder-style object to manufacture [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
+    /// Creates a new builder-style object to manufacture [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput).
     pub fn builder() -> crate::output::disable_organization_admin_account_output::Builder {
         crate::output::disable_organization_admin_account_output::Builder::default()
     }
@@ -763,6 +900,7 @@ impl DisableOrganizationAdminAccountOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOrganizationConfigurationOutput {
     /// <p>Indicates whether to automatically enable new organization accounts as member accounts in the organization behavior graph.</p>
+    #[doc(hidden)]
     pub auto_enable: bool,
 }
 impl DescribeOrganizationConfigurationOutput {
@@ -778,11 +916,10 @@ impl std::fmt::Debug for DescribeOrganizationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
+/// See [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput).
 pub mod describe_organization_configuration_output {
 
-    /// A builder for [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_enable: std::option::Option<bool>,
@@ -798,7 +935,7 @@ pub mod describe_organization_configuration_output {
             self.auto_enable = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
+        /// Consumes the builder and constructs a [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput).
         pub fn build(self) -> crate::output::DescribeOrganizationConfigurationOutput {
             crate::output::DescribeOrganizationConfigurationOutput {
                 auto_enable: self.auto_enable.unwrap_or_default(),
@@ -807,7 +944,7 @@ pub mod describe_organization_configuration_output {
     }
 }
 impl DescribeOrganizationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput).
     pub fn builder() -> crate::output::describe_organization_configuration_output::Builder {
         crate::output::describe_organization_configuration_output::Builder::default()
     }
@@ -818,8 +955,10 @@ impl DescribeOrganizationConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteMembersOutput {
     /// <p>The list of Amazon Web Services account identifiers for the member accounts that Detective successfully removed from the behavior graph.</p>
+    #[doc(hidden)]
     pub account_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The list of member accounts that Detective was not able to remove from the behavior graph. For each member account, provides the reason that the deletion could not be processed.</p>
+    #[doc(hidden)]
     pub unprocessed_accounts: std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
 }
 impl DeleteMembersOutput {
@@ -840,11 +979,10 @@ impl std::fmt::Debug for DeleteMembersOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMembersOutput`](crate::output::DeleteMembersOutput)
+/// See [`DeleteMembersOutput`](crate::output::DeleteMembersOutput).
 pub mod delete_members_output {
 
-    /// A builder for [`DeleteMembersOutput`](crate::output::DeleteMembersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMembersOutput`](crate::output::DeleteMembersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -890,7 +1028,7 @@ pub mod delete_members_output {
             self.unprocessed_accounts = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteMembersOutput`](crate::output::DeleteMembersOutput)
+        /// Consumes the builder and constructs a [`DeleteMembersOutput`](crate::output::DeleteMembersOutput).
         pub fn build(self) -> crate::output::DeleteMembersOutput {
             crate::output::DeleteMembersOutput {
                 account_ids: self.account_ids,
@@ -900,7 +1038,7 @@ pub mod delete_members_output {
     }
 }
 impl DeleteMembersOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMembersOutput`](crate::output::DeleteMembersOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMembersOutput`](crate::output::DeleteMembersOutput).
     pub fn builder() -> crate::output::delete_members_output::Builder {
         crate::output::delete_members_output::Builder::default()
     }
@@ -916,22 +1054,21 @@ impl std::fmt::Debug for DeleteGraphOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteGraphOutput`](crate::output::DeleteGraphOutput)
+/// See [`DeleteGraphOutput`](crate::output::DeleteGraphOutput).
 pub mod delete_graph_output {
 
-    /// A builder for [`DeleteGraphOutput`](crate::output::DeleteGraphOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteGraphOutput`](crate::output::DeleteGraphOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteGraphOutput`](crate::output::DeleteGraphOutput)
+        /// Consumes the builder and constructs a [`DeleteGraphOutput`](crate::output::DeleteGraphOutput).
         pub fn build(self) -> crate::output::DeleteGraphOutput {
             crate::output::DeleteGraphOutput {}
         }
     }
 }
 impl DeleteGraphOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteGraphOutput`](crate::output::DeleteGraphOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteGraphOutput`](crate::output::DeleteGraphOutput).
     pub fn builder() -> crate::output::delete_graph_output::Builder {
         crate::output::delete_graph_output::Builder::default()
     }
@@ -942,8 +1079,10 @@ impl DeleteGraphOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateMembersOutput {
     /// <p>The set of member account invitation or enablement requests that Detective was able to process. This includes accounts that are being verified, that failed verification, and that passed verification and are being sent an invitation or are being enabled.</p>
+    #[doc(hidden)]
     pub members: std::option::Option<std::vec::Vec<crate::model::MemberDetail>>,
     /// <p>The list of accounts for which Detective was unable to process the invitation or enablement request. For each account, the list provides the reason why the request could not be processed. The list includes accounts that are already member accounts in the behavior graph.</p>
+    #[doc(hidden)]
     pub unprocessed_accounts: std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
 }
 impl CreateMembersOutput {
@@ -964,11 +1103,10 @@ impl std::fmt::Debug for CreateMembersOutput {
         formatter.finish()
     }
 }
-/// See [`CreateMembersOutput`](crate::output::CreateMembersOutput)
+/// See [`CreateMembersOutput`](crate::output::CreateMembersOutput).
 pub mod create_members_output {
 
-    /// A builder for [`CreateMembersOutput`](crate::output::CreateMembersOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateMembersOutput`](crate::output::CreateMembersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) members: std::option::Option<std::vec::Vec<crate::model::MemberDetail>>,
@@ -1014,7 +1152,7 @@ pub mod create_members_output {
             self.unprocessed_accounts = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateMembersOutput`](crate::output::CreateMembersOutput)
+        /// Consumes the builder and constructs a [`CreateMembersOutput`](crate::output::CreateMembersOutput).
         pub fn build(self) -> crate::output::CreateMembersOutput {
             crate::output::CreateMembersOutput {
                 members: self.members,
@@ -1024,7 +1162,7 @@ pub mod create_members_output {
     }
 }
 impl CreateMembersOutput {
-    /// Creates a new builder-style object to manufacture [`CreateMembersOutput`](crate::output::CreateMembersOutput)
+    /// Creates a new builder-style object to manufacture [`CreateMembersOutput`](crate::output::CreateMembersOutput).
     pub fn builder() -> crate::output::create_members_output::Builder {
         crate::output::create_members_output::Builder::default()
     }
@@ -1035,6 +1173,7 @@ impl CreateMembersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateGraphOutput {
     /// <p>The ARN of the new behavior graph.</p>
+    #[doc(hidden)]
     pub graph_arn: std::option::Option<std::string::String>,
 }
 impl CreateGraphOutput {
@@ -1050,11 +1189,10 @@ impl std::fmt::Debug for CreateGraphOutput {
         formatter.finish()
     }
 }
-/// See [`CreateGraphOutput`](crate::output::CreateGraphOutput)
+/// See [`CreateGraphOutput`](crate::output::CreateGraphOutput).
 pub mod create_graph_output {
 
-    /// A builder for [`CreateGraphOutput`](crate::output::CreateGraphOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateGraphOutput`](crate::output::CreateGraphOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) graph_arn: std::option::Option<std::string::String>,
@@ -1070,7 +1208,7 @@ pub mod create_graph_output {
             self.graph_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateGraphOutput`](crate::output::CreateGraphOutput)
+        /// Consumes the builder and constructs a [`CreateGraphOutput`](crate::output::CreateGraphOutput).
         pub fn build(self) -> crate::output::CreateGraphOutput {
             crate::output::CreateGraphOutput {
                 graph_arn: self.graph_arn,
@@ -1079,9 +1217,207 @@ pub mod create_graph_output {
     }
 }
 impl CreateGraphOutput {
-    /// Creates a new builder-style object to manufacture [`CreateGraphOutput`](crate::output::CreateGraphOutput)
+    /// Creates a new builder-style object to manufacture [`CreateGraphOutput`](crate::output::CreateGraphOutput).
     pub fn builder() -> crate::output::create_graph_output::Builder {
         crate::output::create_graph_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct BatchGetMembershipDatasourcesOutput {
+    /// <p>Details on the data source package history for an member of the behavior graph.</p>
+    #[doc(hidden)]
+    pub membership_datasources:
+        std::option::Option<std::vec::Vec<crate::model::MembershipDatasources>>,
+    /// <p>Graphs that data source package information could not be retrieved for.</p>
+    #[doc(hidden)]
+    pub unprocessed_graphs: std::option::Option<std::vec::Vec<crate::model::UnprocessedGraph>>,
+}
+impl BatchGetMembershipDatasourcesOutput {
+    /// <p>Details on the data source package history for an member of the behavior graph.</p>
+    pub fn membership_datasources(
+        &self,
+    ) -> std::option::Option<&[crate::model::MembershipDatasources]> {
+        self.membership_datasources.as_deref()
+    }
+    /// <p>Graphs that data source package information could not be retrieved for.</p>
+    pub fn unprocessed_graphs(&self) -> std::option::Option<&[crate::model::UnprocessedGraph]> {
+        self.unprocessed_graphs.as_deref()
+    }
+}
+impl std::fmt::Debug for BatchGetMembershipDatasourcesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("BatchGetMembershipDatasourcesOutput");
+        formatter.field("membership_datasources", &self.membership_datasources);
+        formatter.field("unprocessed_graphs", &self.unprocessed_graphs);
+        formatter.finish()
+    }
+}
+/// See [`BatchGetMembershipDatasourcesOutput`](crate::output::BatchGetMembershipDatasourcesOutput).
+pub mod batch_get_membership_datasources_output {
+
+    /// A builder for [`BatchGetMembershipDatasourcesOutput`](crate::output::BatchGetMembershipDatasourcesOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) membership_datasources:
+            std::option::Option<std::vec::Vec<crate::model::MembershipDatasources>>,
+        pub(crate) unprocessed_graphs:
+            std::option::Option<std::vec::Vec<crate::model::UnprocessedGraph>>,
+    }
+    impl Builder {
+        /// Appends an item to `membership_datasources`.
+        ///
+        /// To override the contents of this collection use [`set_membership_datasources`](Self::set_membership_datasources).
+        ///
+        /// <p>Details on the data source package history for an member of the behavior graph.</p>
+        pub fn membership_datasources(
+            mut self,
+            input: crate::model::MembershipDatasources,
+        ) -> Self {
+            let mut v = self.membership_datasources.unwrap_or_default();
+            v.push(input);
+            self.membership_datasources = Some(v);
+            self
+        }
+        /// <p>Details on the data source package history for an member of the behavior graph.</p>
+        pub fn set_membership_datasources(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::MembershipDatasources>>,
+        ) -> Self {
+            self.membership_datasources = input;
+            self
+        }
+        /// Appends an item to `unprocessed_graphs`.
+        ///
+        /// To override the contents of this collection use [`set_unprocessed_graphs`](Self::set_unprocessed_graphs).
+        ///
+        /// <p>Graphs that data source package information could not be retrieved for.</p>
+        pub fn unprocessed_graphs(mut self, input: crate::model::UnprocessedGraph) -> Self {
+            let mut v = self.unprocessed_graphs.unwrap_or_default();
+            v.push(input);
+            self.unprocessed_graphs = Some(v);
+            self
+        }
+        /// <p>Graphs that data source package information could not be retrieved for.</p>
+        pub fn set_unprocessed_graphs(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::UnprocessedGraph>>,
+        ) -> Self {
+            self.unprocessed_graphs = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`BatchGetMembershipDatasourcesOutput`](crate::output::BatchGetMembershipDatasourcesOutput).
+        pub fn build(self) -> crate::output::BatchGetMembershipDatasourcesOutput {
+            crate::output::BatchGetMembershipDatasourcesOutput {
+                membership_datasources: self.membership_datasources,
+                unprocessed_graphs: self.unprocessed_graphs,
+            }
+        }
+    }
+}
+impl BatchGetMembershipDatasourcesOutput {
+    /// Creates a new builder-style object to manufacture [`BatchGetMembershipDatasourcesOutput`](crate::output::BatchGetMembershipDatasourcesOutput).
+    pub fn builder() -> crate::output::batch_get_membership_datasources_output::Builder {
+        crate::output::batch_get_membership_datasources_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct BatchGetGraphMemberDatasourcesOutput {
+    /// <p>Details on the status of data source packages for members of the behavior graph.</p>
+    #[doc(hidden)]
+    pub member_datasources: std::option::Option<std::vec::Vec<crate::model::MembershipDatasources>>,
+    /// <p>Accounts that data source package information could not be retrieved for.</p>
+    #[doc(hidden)]
+    pub unprocessed_accounts: std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
+}
+impl BatchGetGraphMemberDatasourcesOutput {
+    /// <p>Details on the status of data source packages for members of the behavior graph.</p>
+    pub fn member_datasources(
+        &self,
+    ) -> std::option::Option<&[crate::model::MembershipDatasources]> {
+        self.member_datasources.as_deref()
+    }
+    /// <p>Accounts that data source package information could not be retrieved for.</p>
+    pub fn unprocessed_accounts(&self) -> std::option::Option<&[crate::model::UnprocessedAccount]> {
+        self.unprocessed_accounts.as_deref()
+    }
+}
+impl std::fmt::Debug for BatchGetGraphMemberDatasourcesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("BatchGetGraphMemberDatasourcesOutput");
+        formatter.field("member_datasources", &self.member_datasources);
+        formatter.field("unprocessed_accounts", &self.unprocessed_accounts);
+        formatter.finish()
+    }
+}
+/// See [`BatchGetGraphMemberDatasourcesOutput`](crate::output::BatchGetGraphMemberDatasourcesOutput).
+pub mod batch_get_graph_member_datasources_output {
+
+    /// A builder for [`BatchGetGraphMemberDatasourcesOutput`](crate::output::BatchGetGraphMemberDatasourcesOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) member_datasources:
+            std::option::Option<std::vec::Vec<crate::model::MembershipDatasources>>,
+        pub(crate) unprocessed_accounts:
+            std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
+    }
+    impl Builder {
+        /// Appends an item to `member_datasources`.
+        ///
+        /// To override the contents of this collection use [`set_member_datasources`](Self::set_member_datasources).
+        ///
+        /// <p>Details on the status of data source packages for members of the behavior graph.</p>
+        pub fn member_datasources(mut self, input: crate::model::MembershipDatasources) -> Self {
+            let mut v = self.member_datasources.unwrap_or_default();
+            v.push(input);
+            self.member_datasources = Some(v);
+            self
+        }
+        /// <p>Details on the status of data source packages for members of the behavior graph.</p>
+        pub fn set_member_datasources(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::MembershipDatasources>>,
+        ) -> Self {
+            self.member_datasources = input;
+            self
+        }
+        /// Appends an item to `unprocessed_accounts`.
+        ///
+        /// To override the contents of this collection use [`set_unprocessed_accounts`](Self::set_unprocessed_accounts).
+        ///
+        /// <p>Accounts that data source package information could not be retrieved for.</p>
+        pub fn unprocessed_accounts(mut self, input: crate::model::UnprocessedAccount) -> Self {
+            let mut v = self.unprocessed_accounts.unwrap_or_default();
+            v.push(input);
+            self.unprocessed_accounts = Some(v);
+            self
+        }
+        /// <p>Accounts that data source package information could not be retrieved for.</p>
+        pub fn set_unprocessed_accounts(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
+        ) -> Self {
+            self.unprocessed_accounts = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`BatchGetGraphMemberDatasourcesOutput`](crate::output::BatchGetGraphMemberDatasourcesOutput).
+        pub fn build(self) -> crate::output::BatchGetGraphMemberDatasourcesOutput {
+            crate::output::BatchGetGraphMemberDatasourcesOutput {
+                member_datasources: self.member_datasources,
+                unprocessed_accounts: self.unprocessed_accounts,
+            }
+        }
+    }
+}
+impl BatchGetGraphMemberDatasourcesOutput {
+    /// Creates a new builder-style object to manufacture [`BatchGetGraphMemberDatasourcesOutput`](crate::output::BatchGetGraphMemberDatasourcesOutput).
+    pub fn builder() -> crate::output::batch_get_graph_member_datasources_output::Builder {
+        crate::output::batch_get_graph_member_datasources_output::Builder::default()
     }
 }
 
@@ -1095,22 +1431,21 @@ impl std::fmt::Debug for AcceptInvitationOutput {
         formatter.finish()
     }
 }
-/// See [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
+/// See [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput).
 pub mod accept_invitation_output {
 
-    /// A builder for [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
-    #[non_exhaustive]
+    /// A builder for [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
+        /// Consumes the builder and constructs a [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput).
         pub fn build(self) -> crate::output::AcceptInvitationOutput {
             crate::output::AcceptInvitationOutput {}
         }
     }
 }
 impl AcceptInvitationOutput {
-    /// Creates a new builder-style object to manufacture [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
+    /// Creates a new builder-style object to manufacture [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput).
     pub fn builder() -> crate::output::accept_invitation_output::Builder {
         crate::output::accept_invitation_output::Builder::default()
     }

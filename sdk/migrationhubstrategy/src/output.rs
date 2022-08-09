@@ -9,22 +9,21 @@ impl std::fmt::Debug for UpdateServerConfigOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateServerConfigOutput`](crate::output::UpdateServerConfigOutput)
+/// See [`UpdateServerConfigOutput`](crate::output::UpdateServerConfigOutput).
 pub mod update_server_config_output {
 
-    /// A builder for [`UpdateServerConfigOutput`](crate::output::UpdateServerConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateServerConfigOutput`](crate::output::UpdateServerConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateServerConfigOutput`](crate::output::UpdateServerConfigOutput)
+        /// Consumes the builder and constructs a [`UpdateServerConfigOutput`](crate::output::UpdateServerConfigOutput).
         pub fn build(self) -> crate::output::UpdateServerConfigOutput {
             crate::output::UpdateServerConfigOutput {}
         }
     }
 }
 impl UpdateServerConfigOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateServerConfigOutput`](crate::output::UpdateServerConfigOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateServerConfigOutput`](crate::output::UpdateServerConfigOutput).
     pub fn builder() -> crate::output::update_server_config_output::Builder {
         crate::output::update_server_config_output::Builder::default()
     }
@@ -40,22 +39,21 @@ impl std::fmt::Debug for UpdateApplicationComponentConfigOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateApplicationComponentConfigOutput`](crate::output::UpdateApplicationComponentConfigOutput)
+/// See [`UpdateApplicationComponentConfigOutput`](crate::output::UpdateApplicationComponentConfigOutput).
 pub mod update_application_component_config_output {
 
-    /// A builder for [`UpdateApplicationComponentConfigOutput`](crate::output::UpdateApplicationComponentConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateApplicationComponentConfigOutput`](crate::output::UpdateApplicationComponentConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateApplicationComponentConfigOutput`](crate::output::UpdateApplicationComponentConfigOutput)
+        /// Consumes the builder and constructs a [`UpdateApplicationComponentConfigOutput`](crate::output::UpdateApplicationComponentConfigOutput).
         pub fn build(self) -> crate::output::UpdateApplicationComponentConfigOutput {
             crate::output::UpdateApplicationComponentConfigOutput {}
         }
     }
 }
 impl UpdateApplicationComponentConfigOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateApplicationComponentConfigOutput`](crate::output::UpdateApplicationComponentConfigOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateApplicationComponentConfigOutput`](crate::output::UpdateApplicationComponentConfigOutput).
     pub fn builder() -> crate::output::update_application_component_config_output::Builder {
         crate::output::update_application_component_config_output::Builder::default()
     }
@@ -71,22 +69,21 @@ impl std::fmt::Debug for StopAssessmentOutput {
         formatter.finish()
     }
 }
-/// See [`StopAssessmentOutput`](crate::output::StopAssessmentOutput)
+/// See [`StopAssessmentOutput`](crate::output::StopAssessmentOutput).
 pub mod stop_assessment_output {
 
-    /// A builder for [`StopAssessmentOutput`](crate::output::StopAssessmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopAssessmentOutput`](crate::output::StopAssessmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StopAssessmentOutput`](crate::output::StopAssessmentOutput)
+        /// Consumes the builder and constructs a [`StopAssessmentOutput`](crate::output::StopAssessmentOutput).
         pub fn build(self) -> crate::output::StopAssessmentOutput {
             crate::output::StopAssessmentOutput {}
         }
     }
 }
 impl StopAssessmentOutput {
-    /// Creates a new builder-style object to manufacture [`StopAssessmentOutput`](crate::output::StopAssessmentOutput)
+    /// Creates a new builder-style object to manufacture [`StopAssessmentOutput`](crate::output::StopAssessmentOutput).
     pub fn builder() -> crate::output::stop_assessment_output::Builder {
         crate::output::stop_assessment_output::Builder::default()
     }
@@ -97,6 +94,7 @@ impl StopAssessmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartRecommendationReportGenerationOutput {
     /// <p> The ID of the recommendation report generation task. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl StartRecommendationReportGenerationOutput {
@@ -112,11 +110,10 @@ impl std::fmt::Debug for StartRecommendationReportGenerationOutput {
         formatter.finish()
     }
 }
-/// See [`StartRecommendationReportGenerationOutput`](crate::output::StartRecommendationReportGenerationOutput)
+/// See [`StartRecommendationReportGenerationOutput`](crate::output::StartRecommendationReportGenerationOutput).
 pub mod start_recommendation_report_generation_output {
 
-    /// A builder for [`StartRecommendationReportGenerationOutput`](crate::output::StartRecommendationReportGenerationOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartRecommendationReportGenerationOutput`](crate::output::StartRecommendationReportGenerationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -132,14 +129,14 @@ pub mod start_recommendation_report_generation_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartRecommendationReportGenerationOutput`](crate::output::StartRecommendationReportGenerationOutput)
+        /// Consumes the builder and constructs a [`StartRecommendationReportGenerationOutput`](crate::output::StartRecommendationReportGenerationOutput).
         pub fn build(self) -> crate::output::StartRecommendationReportGenerationOutput {
             crate::output::StartRecommendationReportGenerationOutput { id: self.id }
         }
     }
 }
 impl StartRecommendationReportGenerationOutput {
-    /// Creates a new builder-style object to manufacture [`StartRecommendationReportGenerationOutput`](crate::output::StartRecommendationReportGenerationOutput)
+    /// Creates a new builder-style object to manufacture [`StartRecommendationReportGenerationOutput`](crate::output::StartRecommendationReportGenerationOutput).
     pub fn builder() -> crate::output::start_recommendation_report_generation_output::Builder {
         crate::output::start_recommendation_report_generation_output::Builder::default()
     }
@@ -150,6 +147,7 @@ impl StartRecommendationReportGenerationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartImportFileTaskOutput {
     /// <p> The ID for a specific import task. The ID is unique within an AWS account. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl StartImportFileTaskOutput {
@@ -165,11 +163,10 @@ impl std::fmt::Debug for StartImportFileTaskOutput {
         formatter.finish()
     }
 }
-/// See [`StartImportFileTaskOutput`](crate::output::StartImportFileTaskOutput)
+/// See [`StartImportFileTaskOutput`](crate::output::StartImportFileTaskOutput).
 pub mod start_import_file_task_output {
 
-    /// A builder for [`StartImportFileTaskOutput`](crate::output::StartImportFileTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartImportFileTaskOutput`](crate::output::StartImportFileTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -185,14 +182,14 @@ pub mod start_import_file_task_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartImportFileTaskOutput`](crate::output::StartImportFileTaskOutput)
+        /// Consumes the builder and constructs a [`StartImportFileTaskOutput`](crate::output::StartImportFileTaskOutput).
         pub fn build(self) -> crate::output::StartImportFileTaskOutput {
             crate::output::StartImportFileTaskOutput { id: self.id }
         }
     }
 }
 impl StartImportFileTaskOutput {
-    /// Creates a new builder-style object to manufacture [`StartImportFileTaskOutput`](crate::output::StartImportFileTaskOutput)
+    /// Creates a new builder-style object to manufacture [`StartImportFileTaskOutput`](crate::output::StartImportFileTaskOutput).
     pub fn builder() -> crate::output::start_import_file_task_output::Builder {
         crate::output::start_import_file_task_output::Builder::default()
     }
@@ -203,6 +200,7 @@ impl StartImportFileTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartAssessmentOutput {
     /// <p> The ID of the assessment. </p>
+    #[doc(hidden)]
     pub assessment_id: std::option::Option<std::string::String>,
 }
 impl StartAssessmentOutput {
@@ -218,11 +216,10 @@ impl std::fmt::Debug for StartAssessmentOutput {
         formatter.finish()
     }
 }
-/// See [`StartAssessmentOutput`](crate::output::StartAssessmentOutput)
+/// See [`StartAssessmentOutput`](crate::output::StartAssessmentOutput).
 pub mod start_assessment_output {
 
-    /// A builder for [`StartAssessmentOutput`](crate::output::StartAssessmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartAssessmentOutput`](crate::output::StartAssessmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assessment_id: std::option::Option<std::string::String>,
@@ -241,7 +238,7 @@ pub mod start_assessment_output {
             self.assessment_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartAssessmentOutput`](crate::output::StartAssessmentOutput)
+        /// Consumes the builder and constructs a [`StartAssessmentOutput`](crate::output::StartAssessmentOutput).
         pub fn build(self) -> crate::output::StartAssessmentOutput {
             crate::output::StartAssessmentOutput {
                 assessment_id: self.assessment_id,
@@ -250,7 +247,7 @@ pub mod start_assessment_output {
     }
 }
 impl StartAssessmentOutput {
-    /// Creates a new builder-style object to manufacture [`StartAssessmentOutput`](crate::output::StartAssessmentOutput)
+    /// Creates a new builder-style object to manufacture [`StartAssessmentOutput`](crate::output::StartAssessmentOutput).
     pub fn builder() -> crate::output::start_assessment_output::Builder {
         crate::output::start_assessment_output::Builder::default()
     }
@@ -266,22 +263,21 @@ impl std::fmt::Debug for PutPortfolioPreferencesOutput {
         formatter.finish()
     }
 }
-/// See [`PutPortfolioPreferencesOutput`](crate::output::PutPortfolioPreferencesOutput)
+/// See [`PutPortfolioPreferencesOutput`](crate::output::PutPortfolioPreferencesOutput).
 pub mod put_portfolio_preferences_output {
 
-    /// A builder for [`PutPortfolioPreferencesOutput`](crate::output::PutPortfolioPreferencesOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutPortfolioPreferencesOutput`](crate::output::PutPortfolioPreferencesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutPortfolioPreferencesOutput`](crate::output::PutPortfolioPreferencesOutput)
+        /// Consumes the builder and constructs a [`PutPortfolioPreferencesOutput`](crate::output::PutPortfolioPreferencesOutput).
         pub fn build(self) -> crate::output::PutPortfolioPreferencesOutput {
             crate::output::PutPortfolioPreferencesOutput {}
         }
     }
 }
 impl PutPortfolioPreferencesOutput {
-    /// Creates a new builder-style object to manufacture [`PutPortfolioPreferencesOutput`](crate::output::PutPortfolioPreferencesOutput)
+    /// Creates a new builder-style object to manufacture [`PutPortfolioPreferencesOutput`](crate::output::PutPortfolioPreferencesOutput).
     pub fn builder() -> crate::output::put_portfolio_preferences_output::Builder {
         crate::output::put_portfolio_preferences_output::Builder::default()
     }
@@ -292,8 +288,10 @@ impl PutPortfolioPreferencesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListServersOutput {
     /// <p> The list of servers with detailed information about each server. </p>
+    #[doc(hidden)]
     pub server_infos: std::option::Option<std::vec::Vec<crate::model::ServerDetail>>,
     /// <p> The token you use to retrieve the next set of results, or null if there are no more results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListServersOutput {
@@ -314,11 +312,10 @@ impl std::fmt::Debug for ListServersOutput {
         formatter.finish()
     }
 }
-/// See [`ListServersOutput`](crate::output::ListServersOutput)
+/// See [`ListServersOutput`](crate::output::ListServersOutput).
 pub mod list_servers_output {
 
-    /// A builder for [`ListServersOutput`](crate::output::ListServersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListServersOutput`](crate::output::ListServersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_infos: std::option::Option<std::vec::Vec<crate::model::ServerDetail>>,
@@ -354,7 +351,7 @@ pub mod list_servers_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListServersOutput`](crate::output::ListServersOutput)
+        /// Consumes the builder and constructs a [`ListServersOutput`](crate::output::ListServersOutput).
         pub fn build(self) -> crate::output::ListServersOutput {
             crate::output::ListServersOutput {
                 server_infos: self.server_infos,
@@ -364,7 +361,7 @@ pub mod list_servers_output {
     }
 }
 impl ListServersOutput {
-    /// Creates a new builder-style object to manufacture [`ListServersOutput`](crate::output::ListServersOutput)
+    /// Creates a new builder-style object to manufacture [`ListServersOutput`](crate::output::ListServersOutput).
     pub fn builder() -> crate::output::list_servers_output::Builder {
         crate::output::list_servers_output::Builder::default()
     }
@@ -375,8 +372,10 @@ impl ListServersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListImportFileTaskOutput {
     /// <p> Lists information about the files you import.</p>
+    #[doc(hidden)]
     pub task_infos: std::option::Option<std::vec::Vec<crate::model::ImportFileTaskInformation>>,
     /// <p> The token you use to retrieve the next set of results, or null if there are no more results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListImportFileTaskOutput {
@@ -397,11 +396,10 @@ impl std::fmt::Debug for ListImportFileTaskOutput {
         formatter.finish()
     }
 }
-/// See [`ListImportFileTaskOutput`](crate::output::ListImportFileTaskOutput)
+/// See [`ListImportFileTaskOutput`](crate::output::ListImportFileTaskOutput).
 pub mod list_import_file_task_output {
 
-    /// A builder for [`ListImportFileTaskOutput`](crate::output::ListImportFileTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListImportFileTaskOutput`](crate::output::ListImportFileTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_infos:
@@ -438,7 +436,7 @@ pub mod list_import_file_task_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListImportFileTaskOutput`](crate::output::ListImportFileTaskOutput)
+        /// Consumes the builder and constructs a [`ListImportFileTaskOutput`](crate::output::ListImportFileTaskOutput).
         pub fn build(self) -> crate::output::ListImportFileTaskOutput {
             crate::output::ListImportFileTaskOutput {
                 task_infos: self.task_infos,
@@ -448,7 +446,7 @@ pub mod list_import_file_task_output {
     }
 }
 impl ListImportFileTaskOutput {
-    /// Creates a new builder-style object to manufacture [`ListImportFileTaskOutput`](crate::output::ListImportFileTaskOutput)
+    /// Creates a new builder-style object to manufacture [`ListImportFileTaskOutput`](crate::output::ListImportFileTaskOutput).
     pub fn builder() -> crate::output::list_import_file_task_output::Builder {
         crate::output::list_import_file_task_output::Builder::default()
     }
@@ -459,8 +457,10 @@ impl ListImportFileTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCollectorsOutput {
     /// <p> The list of all the installed collectors. </p>
+    #[doc(hidden)]
     pub collectors: std::option::Option<std::vec::Vec<crate::model::Collector>>,
     /// <p> The token you use to retrieve the next set of results, or null if there are no more results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListCollectorsOutput {
@@ -481,11 +481,10 @@ impl std::fmt::Debug for ListCollectorsOutput {
         formatter.finish()
     }
 }
-/// See [`ListCollectorsOutput`](crate::output::ListCollectorsOutput)
+/// See [`ListCollectorsOutput`](crate::output::ListCollectorsOutput).
 pub mod list_collectors_output {
 
-    /// A builder for [`ListCollectorsOutput`](crate::output::ListCollectorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListCollectorsOutput`](crate::output::ListCollectorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collectors: std::option::Option<std::vec::Vec<crate::model::Collector>>,
@@ -521,7 +520,7 @@ pub mod list_collectors_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCollectorsOutput`](crate::output::ListCollectorsOutput)
+        /// Consumes the builder and constructs a [`ListCollectorsOutput`](crate::output::ListCollectorsOutput).
         pub fn build(self) -> crate::output::ListCollectorsOutput {
             crate::output::ListCollectorsOutput {
                 collectors: self.collectors,
@@ -531,7 +530,7 @@ pub mod list_collectors_output {
     }
 }
 impl ListCollectorsOutput {
-    /// Creates a new builder-style object to manufacture [`ListCollectorsOutput`](crate::output::ListCollectorsOutput)
+    /// Creates a new builder-style object to manufacture [`ListCollectorsOutput`](crate::output::ListCollectorsOutput).
     pub fn builder() -> crate::output::list_collectors_output::Builder {
         crate::output::list_collectors_output::Builder::default()
     }
@@ -542,9 +541,11 @@ impl ListCollectorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListApplicationComponentsOutput {
     /// <p> The list of application components with detailed information about each component. </p>
+    #[doc(hidden)]
     pub application_component_infos:
         std::option::Option<std::vec::Vec<crate::model::ApplicationComponentDetail>>,
     /// <p> The token you use to retrieve the next set of results, or null if there are no more results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListApplicationComponentsOutput {
@@ -570,11 +571,10 @@ impl std::fmt::Debug for ListApplicationComponentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListApplicationComponentsOutput`](crate::output::ListApplicationComponentsOutput)
+/// See [`ListApplicationComponentsOutput`](crate::output::ListApplicationComponentsOutput).
 pub mod list_application_components_output {
 
-    /// A builder for [`ListApplicationComponentsOutput`](crate::output::ListApplicationComponentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListApplicationComponentsOutput`](crate::output::ListApplicationComponentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_component_infos:
@@ -614,7 +614,7 @@ pub mod list_application_components_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListApplicationComponentsOutput`](crate::output::ListApplicationComponentsOutput)
+        /// Consumes the builder and constructs a [`ListApplicationComponentsOutput`](crate::output::ListApplicationComponentsOutput).
         pub fn build(self) -> crate::output::ListApplicationComponentsOutput {
             crate::output::ListApplicationComponentsOutput {
                 application_component_infos: self.application_component_infos,
@@ -624,7 +624,7 @@ pub mod list_application_components_output {
     }
 }
 impl ListApplicationComponentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListApplicationComponentsOutput`](crate::output::ListApplicationComponentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListApplicationComponentsOutput`](crate::output::ListApplicationComponentsOutput).
     pub fn builder() -> crate::output::list_application_components_output::Builder {
         crate::output::list_application_components_output::Builder::default()
     }
@@ -635,6 +635,7 @@ impl ListApplicationComponentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServerStrategiesOutput {
     /// <p> A list of strategy recommendations for the server. </p>
+    #[doc(hidden)]
     pub server_strategies: std::option::Option<std::vec::Vec<crate::model::ServerStrategy>>,
 }
 impl GetServerStrategiesOutput {
@@ -650,11 +651,10 @@ impl std::fmt::Debug for GetServerStrategiesOutput {
         formatter.finish()
     }
 }
-/// See [`GetServerStrategiesOutput`](crate::output::GetServerStrategiesOutput)
+/// See [`GetServerStrategiesOutput`](crate::output::GetServerStrategiesOutput).
 pub mod get_server_strategies_output {
 
-    /// A builder for [`GetServerStrategiesOutput`](crate::output::GetServerStrategiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetServerStrategiesOutput`](crate::output::GetServerStrategiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_strategies:
@@ -680,7 +680,7 @@ pub mod get_server_strategies_output {
             self.server_strategies = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetServerStrategiesOutput`](crate::output::GetServerStrategiesOutput)
+        /// Consumes the builder and constructs a [`GetServerStrategiesOutput`](crate::output::GetServerStrategiesOutput).
         pub fn build(self) -> crate::output::GetServerStrategiesOutput {
             crate::output::GetServerStrategiesOutput {
                 server_strategies: self.server_strategies,
@@ -689,7 +689,7 @@ pub mod get_server_strategies_output {
     }
 }
 impl GetServerStrategiesOutput {
-    /// Creates a new builder-style object to manufacture [`GetServerStrategiesOutput`](crate::output::GetServerStrategiesOutput)
+    /// Creates a new builder-style object to manufacture [`GetServerStrategiesOutput`](crate::output::GetServerStrategiesOutput).
     pub fn builder() -> crate::output::get_server_strategies_output::Builder {
         crate::output::get_server_strategies_output::Builder::default()
     }
@@ -700,10 +700,13 @@ impl GetServerStrategiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServerDetailsOutput {
     /// <p> The token you use to retrieve the next set of results, or null if there are no more results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p> Detailed information about the server. </p>
+    #[doc(hidden)]
     pub server_detail: std::option::Option<crate::model::ServerDetail>,
     /// <p> The associated application group the server belongs to, as defined in AWS Application Discovery Service. </p>
+    #[doc(hidden)]
     pub associated_applications:
         std::option::Option<std::vec::Vec<crate::model::AssociatedApplication>>,
 }
@@ -732,11 +735,10 @@ impl std::fmt::Debug for GetServerDetailsOutput {
         formatter.finish()
     }
 }
-/// See [`GetServerDetailsOutput`](crate::output::GetServerDetailsOutput)
+/// See [`GetServerDetailsOutput`](crate::output::GetServerDetailsOutput).
 pub mod get_server_details_output {
 
-    /// A builder for [`GetServerDetailsOutput`](crate::output::GetServerDetailsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetServerDetailsOutput`](crate::output::GetServerDetailsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -790,7 +792,7 @@ pub mod get_server_details_output {
             self.associated_applications = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetServerDetailsOutput`](crate::output::GetServerDetailsOutput)
+        /// Consumes the builder and constructs a [`GetServerDetailsOutput`](crate::output::GetServerDetailsOutput).
         pub fn build(self) -> crate::output::GetServerDetailsOutput {
             crate::output::GetServerDetailsOutput {
                 next_token: self.next_token,
@@ -801,7 +803,7 @@ pub mod get_server_details_output {
     }
 }
 impl GetServerDetailsOutput {
-    /// Creates a new builder-style object to manufacture [`GetServerDetailsOutput`](crate::output::GetServerDetailsOutput)
+    /// Creates a new builder-style object to manufacture [`GetServerDetailsOutput`](crate::output::GetServerDetailsOutput).
     pub fn builder() -> crate::output::get_server_details_output::Builder {
         crate::output::get_server_details_output::Builder::default()
     }
@@ -812,8 +814,10 @@ impl GetServerDetailsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRecommendationReportDetailsOutput {
     /// <p> The ID of the recommendation report generation task. See the response of <code>StartRecommendationReportGeneration</code>. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> Detailed information about the recommendation report. </p>
+    #[doc(hidden)]
     pub recommendation_report_details:
         std::option::Option<crate::model::RecommendationReportDetails>,
 }
@@ -840,11 +844,10 @@ impl std::fmt::Debug for GetRecommendationReportDetailsOutput {
         formatter.finish()
     }
 }
-/// See [`GetRecommendationReportDetailsOutput`](crate::output::GetRecommendationReportDetailsOutput)
+/// See [`GetRecommendationReportDetailsOutput`](crate::output::GetRecommendationReportDetailsOutput).
 pub mod get_recommendation_report_details_output {
 
-    /// A builder for [`GetRecommendationReportDetailsOutput`](crate::output::GetRecommendationReportDetailsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRecommendationReportDetailsOutput`](crate::output::GetRecommendationReportDetailsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -878,7 +881,7 @@ pub mod get_recommendation_report_details_output {
             self.recommendation_report_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRecommendationReportDetailsOutput`](crate::output::GetRecommendationReportDetailsOutput)
+        /// Consumes the builder and constructs a [`GetRecommendationReportDetailsOutput`](crate::output::GetRecommendationReportDetailsOutput).
         pub fn build(self) -> crate::output::GetRecommendationReportDetailsOutput {
             crate::output::GetRecommendationReportDetailsOutput {
                 id: self.id,
@@ -888,7 +891,7 @@ pub mod get_recommendation_report_details_output {
     }
 }
 impl GetRecommendationReportDetailsOutput {
-    /// Creates a new builder-style object to manufacture [`GetRecommendationReportDetailsOutput`](crate::output::GetRecommendationReportDetailsOutput)
+    /// Creates a new builder-style object to manufacture [`GetRecommendationReportDetailsOutput`](crate::output::GetRecommendationReportDetailsOutput).
     pub fn builder() -> crate::output::get_recommendation_report_details_output::Builder {
         crate::output::get_recommendation_report_details_output::Builder::default()
     }
@@ -899,6 +902,7 @@ impl GetRecommendationReportDetailsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPortfolioSummaryOutput {
     /// <p> An assessment summary for the portfolio including the number of servers to rehost and the overall number of anti-patterns. </p>
+    #[doc(hidden)]
     pub assessment_summary: std::option::Option<crate::model::AssessmentSummary>,
 }
 impl GetPortfolioSummaryOutput {
@@ -914,11 +918,10 @@ impl std::fmt::Debug for GetPortfolioSummaryOutput {
         formatter.finish()
     }
 }
-/// See [`GetPortfolioSummaryOutput`](crate::output::GetPortfolioSummaryOutput)
+/// See [`GetPortfolioSummaryOutput`](crate::output::GetPortfolioSummaryOutput).
 pub mod get_portfolio_summary_output {
 
-    /// A builder for [`GetPortfolioSummaryOutput`](crate::output::GetPortfolioSummaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPortfolioSummaryOutput`](crate::output::GetPortfolioSummaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assessment_summary: std::option::Option<crate::model::AssessmentSummary>,
@@ -937,7 +940,7 @@ pub mod get_portfolio_summary_output {
             self.assessment_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPortfolioSummaryOutput`](crate::output::GetPortfolioSummaryOutput)
+        /// Consumes the builder and constructs a [`GetPortfolioSummaryOutput`](crate::output::GetPortfolioSummaryOutput).
         pub fn build(self) -> crate::output::GetPortfolioSummaryOutput {
             crate::output::GetPortfolioSummaryOutput {
                 assessment_summary: self.assessment_summary,
@@ -946,7 +949,7 @@ pub mod get_portfolio_summary_output {
     }
 }
 impl GetPortfolioSummaryOutput {
-    /// Creates a new builder-style object to manufacture [`GetPortfolioSummaryOutput`](crate::output::GetPortfolioSummaryOutput)
+    /// Creates a new builder-style object to manufacture [`GetPortfolioSummaryOutput`](crate::output::GetPortfolioSummaryOutput).
     pub fn builder() -> crate::output::get_portfolio_summary_output::Builder {
         crate::output::get_portfolio_summary_output::Builder::default()
     }
@@ -957,10 +960,13 @@ impl GetPortfolioSummaryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPortfolioPreferencesOutput {
     /// <p> The rank of business goals based on priority. </p>
+    #[doc(hidden)]
     pub prioritize_business_goals: std::option::Option<crate::model::PrioritizeBusinessGoals>,
     /// <p> The transformation preferences for non-database applications. </p>
+    #[doc(hidden)]
     pub application_preferences: std::option::Option<crate::model::ApplicationPreferences>,
     /// <p> The transformation preferences for database applications. </p>
+    #[doc(hidden)]
     pub database_preferences: std::option::Option<crate::model::DatabasePreferences>,
 }
 impl GetPortfolioPreferencesOutput {
@@ -990,11 +996,10 @@ impl std::fmt::Debug for GetPortfolioPreferencesOutput {
         formatter.finish()
     }
 }
-/// See [`GetPortfolioPreferencesOutput`](crate::output::GetPortfolioPreferencesOutput)
+/// See [`GetPortfolioPreferencesOutput`](crate::output::GetPortfolioPreferencesOutput).
 pub mod get_portfolio_preferences_output {
 
-    /// A builder for [`GetPortfolioPreferencesOutput`](crate::output::GetPortfolioPreferencesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPortfolioPreferencesOutput`](crate::output::GetPortfolioPreferencesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prioritize_business_goals:
@@ -1049,7 +1054,7 @@ pub mod get_portfolio_preferences_output {
             self.database_preferences = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPortfolioPreferencesOutput`](crate::output::GetPortfolioPreferencesOutput)
+        /// Consumes the builder and constructs a [`GetPortfolioPreferencesOutput`](crate::output::GetPortfolioPreferencesOutput).
         pub fn build(self) -> crate::output::GetPortfolioPreferencesOutput {
             crate::output::GetPortfolioPreferencesOutput {
                 prioritize_business_goals: self.prioritize_business_goals,
@@ -1060,7 +1065,7 @@ pub mod get_portfolio_preferences_output {
     }
 }
 impl GetPortfolioPreferencesOutput {
-    /// Creates a new builder-style object to manufacture [`GetPortfolioPreferencesOutput`](crate::output::GetPortfolioPreferencesOutput)
+    /// Creates a new builder-style object to manufacture [`GetPortfolioPreferencesOutput`](crate::output::GetPortfolioPreferencesOutput).
     pub fn builder() -> crate::output::get_portfolio_preferences_output::Builder {
         crate::output::get_portfolio_preferences_output::Builder::default()
     }
@@ -1071,26 +1076,37 @@ impl GetPortfolioPreferencesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetImportFileTaskOutput {
     /// <p> The import file task <code>id</code> returned in the response of <code>StartImportFileTask</code>. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> Status of import file task. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ImportFileTaskStatus>,
     /// <p> Start time of the import task. </p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The S3 bucket where import file is located. </p>
+    #[doc(hidden)]
     pub input_s3_bucket: std::option::Option<std::string::String>,
     /// <p> The Amazon S3 key name of the import file. </p>
+    #[doc(hidden)]
     pub input_s3_key: std::option::Option<std::string::String>,
     /// <p> The S3 bucket name for status report of import task. </p>
+    #[doc(hidden)]
     pub status_report_s3_bucket: std::option::Option<std::string::String>,
     /// <p> The Amazon S3 key name for status report of import task. The report contains details about whether each record imported successfully or why it did not.</p>
+    #[doc(hidden)]
     pub status_report_s3_key: std::option::Option<std::string::String>,
     /// <p> The time that the import task completed. </p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The number of records successfully imported. </p>
+    #[doc(hidden)]
     pub number_of_records_success: std::option::Option<i32>,
     /// <p> The number of records that failed to be imported. </p>
+    #[doc(hidden)]
     pub number_of_records_failed: std::option::Option<i32>,
     /// <p> The name of the import task given in <code>StartImportFileTask</code>. </p>
+    #[doc(hidden)]
     pub import_name: std::option::Option<std::string::String>,
 }
 impl GetImportFileTaskOutput {
@@ -1156,11 +1172,10 @@ impl std::fmt::Debug for GetImportFileTaskOutput {
         formatter.finish()
     }
 }
-/// See [`GetImportFileTaskOutput`](crate::output::GetImportFileTaskOutput)
+/// See [`GetImportFileTaskOutput`](crate::output::GetImportFileTaskOutput).
 pub mod get_import_file_task_output {
 
-    /// A builder for [`GetImportFileTaskOutput`](crate::output::GetImportFileTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetImportFileTaskOutput`](crate::output::GetImportFileTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1304,7 +1319,7 @@ pub mod get_import_file_task_output {
             self.import_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetImportFileTaskOutput`](crate::output::GetImportFileTaskOutput)
+        /// Consumes the builder and constructs a [`GetImportFileTaskOutput`](crate::output::GetImportFileTaskOutput).
         pub fn build(self) -> crate::output::GetImportFileTaskOutput {
             crate::output::GetImportFileTaskOutput {
                 id: self.id,
@@ -1323,7 +1338,7 @@ pub mod get_import_file_task_output {
     }
 }
 impl GetImportFileTaskOutput {
-    /// Creates a new builder-style object to manufacture [`GetImportFileTaskOutput`](crate::output::GetImportFileTaskOutput)
+    /// Creates a new builder-style object to manufacture [`GetImportFileTaskOutput`](crate::output::GetImportFileTaskOutput).
     pub fn builder() -> crate::output::get_import_file_task_output::Builder {
         crate::output::get_import_file_task_output::Builder::default()
     }
@@ -1334,8 +1349,10 @@ impl GetImportFileTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAssessmentOutput {
     /// <p> The ID for the specific assessment task. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> Detailed information about the assessment. </p>
+    #[doc(hidden)]
     pub data_collection_details: std::option::Option<crate::model::DataCollectionDetails>,
 }
 impl GetAssessmentOutput {
@@ -1358,11 +1375,10 @@ impl std::fmt::Debug for GetAssessmentOutput {
         formatter.finish()
     }
 }
-/// See [`GetAssessmentOutput`](crate::output::GetAssessmentOutput)
+/// See [`GetAssessmentOutput`](crate::output::GetAssessmentOutput).
 pub mod get_assessment_output {
 
-    /// A builder for [`GetAssessmentOutput`](crate::output::GetAssessmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAssessmentOutput`](crate::output::GetAssessmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1396,7 +1412,7 @@ pub mod get_assessment_output {
             self.data_collection_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAssessmentOutput`](crate::output::GetAssessmentOutput)
+        /// Consumes the builder and constructs a [`GetAssessmentOutput`](crate::output::GetAssessmentOutput).
         pub fn build(self) -> crate::output::GetAssessmentOutput {
             crate::output::GetAssessmentOutput {
                 id: self.id,
@@ -1406,7 +1422,7 @@ pub mod get_assessment_output {
     }
 }
 impl GetAssessmentOutput {
-    /// Creates a new builder-style object to manufacture [`GetAssessmentOutput`](crate::output::GetAssessmentOutput)
+    /// Creates a new builder-style object to manufacture [`GetAssessmentOutput`](crate::output::GetAssessmentOutput).
     pub fn builder() -> crate::output::get_assessment_output::Builder {
         crate::output::get_assessment_output::Builder::default()
     }
@@ -1417,6 +1433,7 @@ impl GetAssessmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetApplicationComponentStrategiesOutput {
     /// <p> A list of application component strategy recommendations. </p>
+    #[doc(hidden)]
     pub application_component_strategies:
         std::option::Option<std::vec::Vec<crate::model::ApplicationComponentStrategy>>,
 }
@@ -1438,11 +1455,10 @@ impl std::fmt::Debug for GetApplicationComponentStrategiesOutput {
         formatter.finish()
     }
 }
-/// See [`GetApplicationComponentStrategiesOutput`](crate::output::GetApplicationComponentStrategiesOutput)
+/// See [`GetApplicationComponentStrategiesOutput`](crate::output::GetApplicationComponentStrategiesOutput).
 pub mod get_application_component_strategies_output {
 
-    /// A builder for [`GetApplicationComponentStrategiesOutput`](crate::output::GetApplicationComponentStrategiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetApplicationComponentStrategiesOutput`](crate::output::GetApplicationComponentStrategiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_component_strategies:
@@ -1471,7 +1487,7 @@ pub mod get_application_component_strategies_output {
             self.application_component_strategies = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApplicationComponentStrategiesOutput`](crate::output::GetApplicationComponentStrategiesOutput)
+        /// Consumes the builder and constructs a [`GetApplicationComponentStrategiesOutput`](crate::output::GetApplicationComponentStrategiesOutput).
         pub fn build(self) -> crate::output::GetApplicationComponentStrategiesOutput {
             crate::output::GetApplicationComponentStrategiesOutput {
                 application_component_strategies: self.application_component_strategies,
@@ -1480,7 +1496,7 @@ pub mod get_application_component_strategies_output {
     }
 }
 impl GetApplicationComponentStrategiesOutput {
-    /// Creates a new builder-style object to manufacture [`GetApplicationComponentStrategiesOutput`](crate::output::GetApplicationComponentStrategiesOutput)
+    /// Creates a new builder-style object to manufacture [`GetApplicationComponentStrategiesOutput`](crate::output::GetApplicationComponentStrategiesOutput).
     pub fn builder() -> crate::output::get_application_component_strategies_output::Builder {
         crate::output::get_application_component_strategies_output::Builder::default()
     }
@@ -1491,13 +1507,17 @@ impl GetApplicationComponentStrategiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetApplicationComponentDetailsOutput {
     /// <p> Detailed information about an application component. </p>
+    #[doc(hidden)]
     pub application_component_detail: std::option::Option<crate::model::ApplicationComponentDetail>,
     /// <p> The associated application group as defined in AWS Application Discovery Service. </p>
+    #[doc(hidden)]
     pub associated_applications:
         std::option::Option<std::vec::Vec<crate::model::AssociatedApplication>>,
     /// <p> Set to true if the application component belongs to more than one application group. </p>
+    #[doc(hidden)]
     pub more_application_resource: std::option::Option<bool>,
     /// <p> A list of the IDs of the servers on which the application component is running. </p>
+    #[doc(hidden)]
     pub associated_server_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GetApplicationComponentDetailsOutput {
@@ -1535,11 +1555,10 @@ impl std::fmt::Debug for GetApplicationComponentDetailsOutput {
         formatter.finish()
     }
 }
-/// See [`GetApplicationComponentDetailsOutput`](crate::output::GetApplicationComponentDetailsOutput)
+/// See [`GetApplicationComponentDetailsOutput`](crate::output::GetApplicationComponentDetailsOutput).
 pub mod get_application_component_details_output {
 
-    /// A builder for [`GetApplicationComponentDetailsOutput`](crate::output::GetApplicationComponentDetailsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetApplicationComponentDetailsOutput`](crate::output::GetApplicationComponentDetailsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_component_detail:
@@ -1617,7 +1636,7 @@ pub mod get_application_component_details_output {
             self.associated_server_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApplicationComponentDetailsOutput`](crate::output::GetApplicationComponentDetailsOutput)
+        /// Consumes the builder and constructs a [`GetApplicationComponentDetailsOutput`](crate::output::GetApplicationComponentDetailsOutput).
         pub fn build(self) -> crate::output::GetApplicationComponentDetailsOutput {
             crate::output::GetApplicationComponentDetailsOutput {
                 application_component_detail: self.application_component_detail,
@@ -1629,7 +1648,7 @@ pub mod get_application_component_details_output {
     }
 }
 impl GetApplicationComponentDetailsOutput {
-    /// Creates a new builder-style object to manufacture [`GetApplicationComponentDetailsOutput`](crate::output::GetApplicationComponentDetailsOutput)
+    /// Creates a new builder-style object to manufacture [`GetApplicationComponentDetailsOutput`](crate::output::GetApplicationComponentDetailsOutput).
     pub fn builder() -> crate::output::get_application_component_details_output::Builder {
         crate::output::get_application_component_details_output::Builder::default()
     }

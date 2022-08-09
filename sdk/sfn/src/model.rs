@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TracingConfiguration {
     /// <p>When set to <code>true</code>, AWS X-Ray tracing is enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl TracingConfiguration {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for TracingConfiguration {
         formatter.finish()
     }
 }
-/// See [`TracingConfiguration`](crate::model::TracingConfiguration)
+/// See [`TracingConfiguration`](crate::model::TracingConfiguration).
 pub mod tracing_configuration {
 
-    /// A builder for [`TracingConfiguration`](crate::model::TracingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TracingConfiguration`](crate::model::TracingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -40,7 +40,7 @@ pub mod tracing_configuration {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`TracingConfiguration`](crate::model::TracingConfiguration)
+        /// Consumes the builder and constructs a [`TracingConfiguration`](crate::model::TracingConfiguration).
         pub fn build(self) -> crate::model::TracingConfiguration {
             crate::model::TracingConfiguration {
                 enabled: self.enabled.unwrap_or_default(),
@@ -49,7 +49,7 @@ pub mod tracing_configuration {
     }
 }
 impl TracingConfiguration {
-    /// Creates a new builder-style object to manufacture [`TracingConfiguration`](crate::model::TracingConfiguration)
+    /// Creates a new builder-style object to manufacture [`TracingConfiguration`](crate::model::TracingConfiguration).
     pub fn builder() -> crate::model::tracing_configuration::Builder {
         crate::model::tracing_configuration::Builder::default()
     }
@@ -60,10 +60,13 @@ impl TracingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingConfiguration {
     /// <p>Defines which category of execution history events are logged.</p>
+    #[doc(hidden)]
     pub level: std::option::Option<crate::model::LogLevel>,
     /// <p>Determines whether execution data is included in your log. When set to <code>false</code>, data is excluded.</p>
+    #[doc(hidden)]
     pub include_execution_data: bool,
     /// <p>An array of objects that describes where your execution history events will be logged. Limited to size 1. Required, if your log level is not set to <code>OFF</code>.</p>
+    #[doc(hidden)]
     pub destinations: std::option::Option<std::vec::Vec<crate::model::LogDestination>>,
 }
 impl LoggingConfiguration {
@@ -89,11 +92,10 @@ impl std::fmt::Debug for LoggingConfiguration {
         formatter.finish()
     }
 }
-/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration).
 pub mod logging_configuration {
 
-    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) level: std::option::Option<crate::model::LogLevel>,
@@ -140,7 +142,7 @@ pub mod logging_configuration {
             self.destinations = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration).
         pub fn build(self) -> crate::model::LoggingConfiguration {
             crate::model::LoggingConfiguration {
                 level: self.level,
@@ -151,7 +153,7 @@ pub mod logging_configuration {
     }
 }
 impl LoggingConfiguration {
-    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     pub fn builder() -> crate::model::logging_configuration::Builder {
         crate::model::logging_configuration::Builder::default()
     }
@@ -162,6 +164,7 @@ impl LoggingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogDestination {
     /// <p>An object describing a CloudWatch log group. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html">AWS::Logs::LogGroup</a> in the AWS CloudFormation User Guide.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs_log_group: std::option::Option<crate::model::CloudWatchLogsLogGroup>,
 }
 impl LogDestination {
@@ -182,11 +185,10 @@ impl std::fmt::Debug for LogDestination {
         formatter.finish()
     }
 }
-/// See [`LogDestination`](crate::model::LogDestination)
+/// See [`LogDestination`](crate::model::LogDestination).
 pub mod log_destination {
 
-    /// A builder for [`LogDestination`](crate::model::LogDestination)
-    #[non_exhaustive]
+    /// A builder for [`LogDestination`](crate::model::LogDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logs_log_group:
@@ -209,7 +211,7 @@ pub mod log_destination {
             self.cloud_watch_logs_log_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogDestination`](crate::model::LogDestination)
+        /// Consumes the builder and constructs a [`LogDestination`](crate::model::LogDestination).
         pub fn build(self) -> crate::model::LogDestination {
             crate::model::LogDestination {
                 cloud_watch_logs_log_group: self.cloud_watch_logs_log_group,
@@ -218,7 +220,7 @@ pub mod log_destination {
     }
 }
 impl LogDestination {
-    /// Creates a new builder-style object to manufacture [`LogDestination`](crate::model::LogDestination)
+    /// Creates a new builder-style object to manufacture [`LogDestination`](crate::model::LogDestination).
     pub fn builder() -> crate::model::log_destination::Builder {
         crate::model::log_destination::Builder::default()
     }
@@ -229,6 +231,7 @@ impl LogDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogsLogGroup {
     /// <p>The ARN of the the CloudWatch log group to which you want your logs emitted to. The ARN must end with <code>:*</code> </p>
+    #[doc(hidden)]
     pub log_group_arn: std::option::Option<std::string::String>,
 }
 impl CloudWatchLogsLogGroup {
@@ -244,11 +247,10 @@ impl std::fmt::Debug for CloudWatchLogsLogGroup {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsLogGroup`](crate::model::CloudWatchLogsLogGroup)
+/// See [`CloudWatchLogsLogGroup`](crate::model::CloudWatchLogsLogGroup).
 pub mod cloud_watch_logs_log_group {
 
-    /// A builder for [`CloudWatchLogsLogGroup`](crate::model::CloudWatchLogsLogGroup)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsLogGroup`](crate::model::CloudWatchLogsLogGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_group_arn: std::option::Option<std::string::String>,
@@ -267,7 +269,7 @@ pub mod cloud_watch_logs_log_group {
             self.log_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsLogGroup`](crate::model::CloudWatchLogsLogGroup)
+        /// Consumes the builder and constructs a [`CloudWatchLogsLogGroup`](crate::model::CloudWatchLogsLogGroup).
         pub fn build(self) -> crate::model::CloudWatchLogsLogGroup {
             crate::model::CloudWatchLogsLogGroup {
                 log_group_arn: self.log_group_arn,
@@ -276,7 +278,7 @@ pub mod cloud_watch_logs_log_group {
     }
 }
 impl CloudWatchLogsLogGroup {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsLogGroup`](crate::model::CloudWatchLogsLogGroup)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsLogGroup`](crate::model::CloudWatchLogsLogGroup).
     pub fn builder() -> crate::model::cloud_watch_logs_log_group::Builder {
         crate::model::cloud_watch_logs_log_group::Builder::default()
     }
@@ -352,8 +354,10 @@ impl AsRef<str> for LogLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of a tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of a tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -374,11 +378,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -405,7 +408,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -415,7 +418,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -426,8 +429,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BillingDetails {
     /// <p>Billed memory consumption of your workflow, in MB.</p>
+    #[doc(hidden)]
     pub billed_memory_used_in_mb: i64,
     /// <p>Billed duration of your workflow, in milliseconds.</p>
+    #[doc(hidden)]
     pub billed_duration_in_milliseconds: i64,
 }
 impl BillingDetails {
@@ -451,11 +456,10 @@ impl std::fmt::Debug for BillingDetails {
         formatter.finish()
     }
 }
-/// See [`BillingDetails`](crate::model::BillingDetails)
+/// See [`BillingDetails`](crate::model::BillingDetails).
 pub mod billing_details {
 
-    /// A builder for [`BillingDetails`](crate::model::BillingDetails)
-    #[non_exhaustive]
+    /// A builder for [`BillingDetails`](crate::model::BillingDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) billed_memory_used_in_mb: std::option::Option<i64>,
@@ -485,7 +489,7 @@ pub mod billing_details {
             self.billed_duration_in_milliseconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`BillingDetails`](crate::model::BillingDetails)
+        /// Consumes the builder and constructs a [`BillingDetails`](crate::model::BillingDetails).
         pub fn build(self) -> crate::model::BillingDetails {
             crate::model::BillingDetails {
                 billed_memory_used_in_mb: self.billed_memory_used_in_mb.unwrap_or_default(),
@@ -497,7 +501,7 @@ pub mod billing_details {
     }
 }
 impl BillingDetails {
-    /// Creates a new builder-style object to manufacture [`BillingDetails`](crate::model::BillingDetails)
+    /// Creates a new builder-style object to manufacture [`BillingDetails`](crate::model::BillingDetails).
     pub fn builder() -> crate::model::billing_details::Builder {
         crate::model::billing_details::Builder::default()
     }
@@ -508,6 +512,7 @@ impl BillingDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchEventsExecutionDataDetails {
     /// <p>Indicates whether input or output was included in the response. Always <code>true</code> for API calls. </p>
+    #[doc(hidden)]
     pub included: bool,
 }
 impl CloudWatchEventsExecutionDataDetails {
@@ -523,11 +528,10 @@ impl std::fmt::Debug for CloudWatchEventsExecutionDataDetails {
         formatter.finish()
     }
 }
-/// See [`CloudWatchEventsExecutionDataDetails`](crate::model::CloudWatchEventsExecutionDataDetails)
+/// See [`CloudWatchEventsExecutionDataDetails`](crate::model::CloudWatchEventsExecutionDataDetails).
 pub mod cloud_watch_events_execution_data_details {
 
-    /// A builder for [`CloudWatchEventsExecutionDataDetails`](crate::model::CloudWatchEventsExecutionDataDetails)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchEventsExecutionDataDetails`](crate::model::CloudWatchEventsExecutionDataDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) included: std::option::Option<bool>,
@@ -543,7 +547,7 @@ pub mod cloud_watch_events_execution_data_details {
             self.included = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchEventsExecutionDataDetails`](crate::model::CloudWatchEventsExecutionDataDetails)
+        /// Consumes the builder and constructs a [`CloudWatchEventsExecutionDataDetails`](crate::model::CloudWatchEventsExecutionDataDetails).
         pub fn build(self) -> crate::model::CloudWatchEventsExecutionDataDetails {
             crate::model::CloudWatchEventsExecutionDataDetails {
                 included: self.included.unwrap_or_default(),
@@ -552,7 +556,7 @@ pub mod cloud_watch_events_execution_data_details {
     }
 }
 impl CloudWatchEventsExecutionDataDetails {
-    /// Creates a new builder-style object to manufacture [`CloudWatchEventsExecutionDataDetails`](crate::model::CloudWatchEventsExecutionDataDetails)
+    /// Creates a new builder-style object to manufacture [`CloudWatchEventsExecutionDataDetails`](crate::model::CloudWatchEventsExecutionDataDetails).
     pub fn builder() -> crate::model::cloud_watch_events_execution_data_details::Builder {
         crate::model::cloud_watch_events_execution_data_details::Builder::default()
     }
@@ -622,6 +626,7 @@ impl AsRef<str> for SyncExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StateMachineListItem {
     /// <p>The Amazon Resource Name (ARN) that identifies the state machine.</p>
+    #[doc(hidden)]
     pub state_machine_arn: std::option::Option<std::string::String>,
     /// <p>The name of the state machine.</p>
     /// <p>A name must <i>not</i> contain:</p>
@@ -633,10 +638,13 @@ pub struct StateMachineListItem {
     /// <li> <p>control characters (<code>U+0000-001F</code>, <code>U+007F-009F</code>)</p> </li>
     /// </ul>
     /// <p>To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::StateMachineType>,
     /// <p>The date the state machine is created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StateMachineListItem {
@@ -676,11 +684,10 @@ impl std::fmt::Debug for StateMachineListItem {
         formatter.finish()
     }
 }
-/// See [`StateMachineListItem`](crate::model::StateMachineListItem)
+/// See [`StateMachineListItem`](crate::model::StateMachineListItem).
 pub mod state_machine_list_item {
 
-    /// A builder for [`StateMachineListItem`](crate::model::StateMachineListItem)
-    #[non_exhaustive]
+    /// A builder for [`StateMachineListItem`](crate::model::StateMachineListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state_machine_arn: std::option::Option<std::string::String>,
@@ -756,7 +763,7 @@ pub mod state_machine_list_item {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`StateMachineListItem`](crate::model::StateMachineListItem)
+        /// Consumes the builder and constructs a [`StateMachineListItem`](crate::model::StateMachineListItem).
         pub fn build(self) -> crate::model::StateMachineListItem {
             crate::model::StateMachineListItem {
                 state_machine_arn: self.state_machine_arn,
@@ -768,7 +775,7 @@ pub mod state_machine_list_item {
     }
 }
 impl StateMachineListItem {
-    /// Creates a new builder-style object to manufacture [`StateMachineListItem`](crate::model::StateMachineListItem)
+    /// Creates a new builder-style object to manufacture [`StateMachineListItem`](crate::model::StateMachineListItem).
     pub fn builder() -> crate::model::state_machine_list_item::Builder {
         crate::model::state_machine_list_item::Builder::default()
     }
@@ -834,8 +841,10 @@ impl AsRef<str> for StateMachineType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionListItem {
     /// <p>The Amazon Resource Name (ARN) that identifies the execution.</p>
+    #[doc(hidden)]
     pub execution_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the executed state machine.</p>
+    #[doc(hidden)]
     pub state_machine_arn: std::option::Option<std::string::String>,
     /// <p>The name of the execution.</p>
     /// <p>A name must <i>not</i> contain:</p>
@@ -847,12 +856,16 @@ pub struct ExecutionListItem {
     /// <li> <p>control characters (<code>U+0000-001F</code>, <code>U+007F-009F</code>)</p> </li>
     /// </ul>
     /// <p>To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current status of the execution.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExecutionStatus>,
     /// <p>The date the execution started.</p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If the execution already ended, the date the execution stopped.</p>
+    #[doc(hidden)]
     pub stop_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ExecutionListItem {
@@ -902,11 +915,10 @@ impl std::fmt::Debug for ExecutionListItem {
         formatter.finish()
     }
 }
-/// See [`ExecutionListItem`](crate::model::ExecutionListItem)
+/// See [`ExecutionListItem`](crate::model::ExecutionListItem).
 pub mod execution_list_item {
 
-    /// A builder for [`ExecutionListItem`](crate::model::ExecutionListItem)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionListItem`](crate::model::ExecutionListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) execution_arn: std::option::Option<std::string::String>,
@@ -1010,7 +1022,7 @@ pub mod execution_list_item {
             self.stop_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionListItem`](crate::model::ExecutionListItem)
+        /// Consumes the builder and constructs a [`ExecutionListItem`](crate::model::ExecutionListItem).
         pub fn build(self) -> crate::model::ExecutionListItem {
             crate::model::ExecutionListItem {
                 execution_arn: self.execution_arn,
@@ -1024,7 +1036,7 @@ pub mod execution_list_item {
     }
 }
 impl ExecutionListItem {
-    /// Creates a new builder-style object to manufacture [`ExecutionListItem`](crate::model::ExecutionListItem)
+    /// Creates a new builder-style object to manufacture [`ExecutionListItem`](crate::model::ExecutionListItem).
     pub fn builder() -> crate::model::execution_list_item::Builder {
         crate::model::execution_list_item::Builder::default()
     }
@@ -1102,6 +1114,7 @@ impl AsRef<str> for ExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityListItem {
     /// <p>The Amazon Resource Name (ARN) that identifies the activity.</p>
+    #[doc(hidden)]
     pub activity_arn: std::option::Option<std::string::String>,
     /// <p>The name of the activity.</p>
     /// <p>A name must <i>not</i> contain:</p>
@@ -1113,8 +1126,10 @@ pub struct ActivityListItem {
     /// <li> <p>control characters (<code>U+0000-001F</code>, <code>U+007F-009F</code>)</p> </li>
     /// </ul>
     /// <p>To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The date the activity is created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ActivityListItem {
@@ -1149,11 +1164,10 @@ impl std::fmt::Debug for ActivityListItem {
         formatter.finish()
     }
 }
-/// See [`ActivityListItem`](crate::model::ActivityListItem)
+/// See [`ActivityListItem`](crate::model::ActivityListItem).
 pub mod activity_list_item {
 
-    /// A builder for [`ActivityListItem`](crate::model::ActivityListItem)
-    #[non_exhaustive]
+    /// A builder for [`ActivityListItem`](crate::model::ActivityListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_arn: std::option::Option<std::string::String>,
@@ -1212,7 +1226,7 @@ pub mod activity_list_item {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityListItem`](crate::model::ActivityListItem)
+        /// Consumes the builder and constructs a [`ActivityListItem`](crate::model::ActivityListItem).
         pub fn build(self) -> crate::model::ActivityListItem {
             crate::model::ActivityListItem {
                 activity_arn: self.activity_arn,
@@ -1223,7 +1237,7 @@ pub mod activity_list_item {
     }
 }
 impl ActivityListItem {
-    /// Creates a new builder-style object to manufacture [`ActivityListItem`](crate::model::ActivityListItem)
+    /// Creates a new builder-style object to manufacture [`ActivityListItem`](crate::model::ActivityListItem).
     pub fn builder() -> crate::model::activity_list_item::Builder {
         crate::model::activity_list_item::Builder::default()
     }
@@ -1234,100 +1248,136 @@ impl ActivityListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HistoryEvent {
     /// <p>The date and time the event occurred.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of the event.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::HistoryEventType>,
     /// <p>The id of the event. Events are numbered sequentially, starting at one.</p>
+    #[doc(hidden)]
     pub id: i64,
     /// <p>The id of the previous event.</p>
+    #[doc(hidden)]
     pub previous_event_id: i64,
     /// <p>Contains details about an activity that failed during an execution.</p>
+    #[doc(hidden)]
     pub activity_failed_event_details:
         std::option::Option<crate::model::ActivityFailedEventDetails>,
     /// <p>Contains details about an activity schedule event that failed during an execution.</p>
+    #[doc(hidden)]
     pub activity_schedule_failed_event_details:
         std::option::Option<crate::model::ActivityScheduleFailedEventDetails>,
     /// <p>Contains details about an activity scheduled during an execution.</p>
+    #[doc(hidden)]
     pub activity_scheduled_event_details:
         std::option::Option<crate::model::ActivityScheduledEventDetails>,
     /// <p>Contains details about the start of an activity during an execution.</p>
+    #[doc(hidden)]
     pub activity_started_event_details:
         std::option::Option<crate::model::ActivityStartedEventDetails>,
     /// <p>Contains details about an activity that successfully terminated during an execution.</p>
+    #[doc(hidden)]
     pub activity_succeeded_event_details:
         std::option::Option<crate::model::ActivitySucceededEventDetails>,
     /// <p>Contains details about an activity timeout that occurred during an execution.</p>
+    #[doc(hidden)]
     pub activity_timed_out_event_details:
         std::option::Option<crate::model::ActivityTimedOutEventDetails>,
     /// <p>Contains details about the failure of a task.</p>
+    #[doc(hidden)]
     pub task_failed_event_details: std::option::Option<crate::model::TaskFailedEventDetails>,
     /// <p>Contains details about a task that was scheduled.</p>
+    #[doc(hidden)]
     pub task_scheduled_event_details: std::option::Option<crate::model::TaskScheduledEventDetails>,
     /// <p>Contains details about a task that failed to start.</p>
+    #[doc(hidden)]
     pub task_start_failed_event_details:
         std::option::Option<crate::model::TaskStartFailedEventDetails>,
     /// <p>Contains details about a task that was started.</p>
+    #[doc(hidden)]
     pub task_started_event_details: std::option::Option<crate::model::TaskStartedEventDetails>,
     /// <p>Contains details about a task that where the submit failed.</p>
+    #[doc(hidden)]
     pub task_submit_failed_event_details:
         std::option::Option<crate::model::TaskSubmitFailedEventDetails>,
     /// <p>Contains details about a submitted task.</p>
+    #[doc(hidden)]
     pub task_submitted_event_details: std::option::Option<crate::model::TaskSubmittedEventDetails>,
     /// <p>Contains details about a task that succeeded.</p>
+    #[doc(hidden)]
     pub task_succeeded_event_details: std::option::Option<crate::model::TaskSucceededEventDetails>,
     /// <p>Contains details about a task that timed out.</p>
+    #[doc(hidden)]
     pub task_timed_out_event_details: std::option::Option<crate::model::TaskTimedOutEventDetails>,
     /// <p>Contains details about an execution failure event.</p>
+    #[doc(hidden)]
     pub execution_failed_event_details:
         std::option::Option<crate::model::ExecutionFailedEventDetails>,
     /// <p>Contains details about the start of the execution.</p>
+    #[doc(hidden)]
     pub execution_started_event_details:
         std::option::Option<crate::model::ExecutionStartedEventDetails>,
     /// <p>Contains details about the successful termination of the execution.</p>
+    #[doc(hidden)]
     pub execution_succeeded_event_details:
         std::option::Option<crate::model::ExecutionSucceededEventDetails>,
     /// <p>Contains details about an abort of an execution.</p>
+    #[doc(hidden)]
     pub execution_aborted_event_details:
         std::option::Option<crate::model::ExecutionAbortedEventDetails>,
     /// <p>Contains details about the execution timeout that occurred during the execution.</p>
+    #[doc(hidden)]
     pub execution_timed_out_event_details:
         std::option::Option<crate::model::ExecutionTimedOutEventDetails>,
     /// <p>Contains details about Map state that was started.</p>
+    #[doc(hidden)]
     pub map_state_started_event_details:
         std::option::Option<crate::model::MapStateStartedEventDetails>,
     /// <p>Contains details about an iteration of a Map state that was started.</p>
+    #[doc(hidden)]
     pub map_iteration_started_event_details:
         std::option::Option<crate::model::MapIterationEventDetails>,
     /// <p>Contains details about an iteration of a Map state that succeeded.</p>
+    #[doc(hidden)]
     pub map_iteration_succeeded_event_details:
         std::option::Option<crate::model::MapIterationEventDetails>,
     /// <p>Contains details about an iteration of a Map state that failed.</p>
+    #[doc(hidden)]
     pub map_iteration_failed_event_details:
         std::option::Option<crate::model::MapIterationEventDetails>,
     /// <p>Contains details about an iteration of a Map state that was aborted.</p>
+    #[doc(hidden)]
     pub map_iteration_aborted_event_details:
         std::option::Option<crate::model::MapIterationEventDetails>,
     /// <p>Contains details about a lambda function that failed during an execution.</p>
+    #[doc(hidden)]
     pub lambda_function_failed_event_details:
         std::option::Option<crate::model::LambdaFunctionFailedEventDetails>,
     /// <p>Contains details about a failed lambda function schedule event that occurred during an execution.</p>
+    #[doc(hidden)]
     pub lambda_function_schedule_failed_event_details:
         std::option::Option<crate::model::LambdaFunctionScheduleFailedEventDetails>,
     /// <p>Contains details about a lambda function scheduled during an execution.</p>
+    #[doc(hidden)]
     pub lambda_function_scheduled_event_details:
         std::option::Option<crate::model::LambdaFunctionScheduledEventDetails>,
     /// <p>Contains details about a lambda function that failed to start during an execution.</p>
+    #[doc(hidden)]
     pub lambda_function_start_failed_event_details:
         std::option::Option<crate::model::LambdaFunctionStartFailedEventDetails>,
     /// <p>Contains details about a lambda function that terminated successfully during an execution.</p>
+    #[doc(hidden)]
     pub lambda_function_succeeded_event_details:
         std::option::Option<crate::model::LambdaFunctionSucceededEventDetails>,
     /// <p>Contains details about a lambda function timeout that occurred during an execution.</p>
+    #[doc(hidden)]
     pub lambda_function_timed_out_event_details:
         std::option::Option<crate::model::LambdaFunctionTimedOutEventDetails>,
     /// <p>Contains details about a state entered during an execution.</p>
+    #[doc(hidden)]
     pub state_entered_event_details: std::option::Option<crate::model::StateEnteredEventDetails>,
     /// <p>Contains details about an exit from a state during an execution.</p>
+    #[doc(hidden)]
     pub state_exited_event_details: std::option::Option<crate::model::StateExitedEventDetails>,
 }
 impl HistoryEvent {
@@ -1675,11 +1725,10 @@ impl std::fmt::Debug for HistoryEvent {
         formatter.finish()
     }
 }
-/// See [`HistoryEvent`](crate::model::HistoryEvent)
+/// See [`HistoryEvent`](crate::model::HistoryEvent).
 pub mod history_event {
 
-    /// A builder for [`HistoryEvent`](crate::model::HistoryEvent)
-    #[non_exhaustive]
+    /// A builder for [`HistoryEvent`](crate::model::HistoryEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -2310,7 +2359,7 @@ pub mod history_event {
             self.state_exited_event_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`HistoryEvent`](crate::model::HistoryEvent)
+        /// Consumes the builder and constructs a [`HistoryEvent`](crate::model::HistoryEvent).
         pub fn build(self) -> crate::model::HistoryEvent {
             crate::model::HistoryEvent {
                 timestamp: self.timestamp,
@@ -2359,7 +2408,7 @@ pub mod history_event {
     }
 }
 impl HistoryEvent {
-    /// Creates a new builder-style object to manufacture [`HistoryEvent`](crate::model::HistoryEvent)
+    /// Creates a new builder-style object to manufacture [`HistoryEvent`](crate::model::HistoryEvent).
     pub fn builder() -> crate::model::history_event::Builder {
         crate::model::history_event::Builder::default()
     }
@@ -2379,10 +2428,13 @@ pub struct StateExitedEventDetails {
     /// <li> <p>control characters (<code>U+0000-001F</code>, <code>U+007F-009F</code>)</p> </li>
     /// </ul>
     /// <p>To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The JSON output data of the state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub output: std::option::Option<std::string::String>,
     /// <p>Contains details about the output of an execution history event.</p>
+    #[doc(hidden)]
     pub output_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
 }
 impl StateExitedEventDetails {
@@ -2419,11 +2471,10 @@ impl std::fmt::Debug for StateExitedEventDetails {
         formatter.finish()
     }
 }
-/// See [`StateExitedEventDetails`](crate::model::StateExitedEventDetails)
+/// See [`StateExitedEventDetails`](crate::model::StateExitedEventDetails).
 pub mod state_exited_event_details {
 
-    /// A builder for [`StateExitedEventDetails`](crate::model::StateExitedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`StateExitedEventDetails`](crate::model::StateExitedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2486,7 +2537,7 @@ pub mod state_exited_event_details {
             self.output_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`StateExitedEventDetails`](crate::model::StateExitedEventDetails)
+        /// Consumes the builder and constructs a [`StateExitedEventDetails`](crate::model::StateExitedEventDetails).
         pub fn build(self) -> crate::model::StateExitedEventDetails {
             crate::model::StateExitedEventDetails {
                 name: self.name,
@@ -2497,7 +2548,7 @@ pub mod state_exited_event_details {
     }
 }
 impl StateExitedEventDetails {
-    /// Creates a new builder-style object to manufacture [`StateExitedEventDetails`](crate::model::StateExitedEventDetails)
+    /// Creates a new builder-style object to manufacture [`StateExitedEventDetails`](crate::model::StateExitedEventDetails).
     pub fn builder() -> crate::model::state_exited_event_details::Builder {
         crate::model::state_exited_event_details::Builder::default()
     }
@@ -2508,6 +2559,7 @@ impl StateExitedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HistoryEventExecutionDataDetails {
     /// <p>Indicates whether input or output was truncated in the response. Always <code>false</code> for API calls.</p>
+    #[doc(hidden)]
     pub truncated: bool,
 }
 impl HistoryEventExecutionDataDetails {
@@ -2523,11 +2575,10 @@ impl std::fmt::Debug for HistoryEventExecutionDataDetails {
         formatter.finish()
     }
 }
-/// See [`HistoryEventExecutionDataDetails`](crate::model::HistoryEventExecutionDataDetails)
+/// See [`HistoryEventExecutionDataDetails`](crate::model::HistoryEventExecutionDataDetails).
 pub mod history_event_execution_data_details {
 
-    /// A builder for [`HistoryEventExecutionDataDetails`](crate::model::HistoryEventExecutionDataDetails)
-    #[non_exhaustive]
+    /// A builder for [`HistoryEventExecutionDataDetails`](crate::model::HistoryEventExecutionDataDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) truncated: std::option::Option<bool>,
@@ -2543,7 +2594,7 @@ pub mod history_event_execution_data_details {
             self.truncated = input;
             self
         }
-        /// Consumes the builder and constructs a [`HistoryEventExecutionDataDetails`](crate::model::HistoryEventExecutionDataDetails)
+        /// Consumes the builder and constructs a [`HistoryEventExecutionDataDetails`](crate::model::HistoryEventExecutionDataDetails).
         pub fn build(self) -> crate::model::HistoryEventExecutionDataDetails {
             crate::model::HistoryEventExecutionDataDetails {
                 truncated: self.truncated.unwrap_or_default(),
@@ -2552,7 +2603,7 @@ pub mod history_event_execution_data_details {
     }
 }
 impl HistoryEventExecutionDataDetails {
-    /// Creates a new builder-style object to manufacture [`HistoryEventExecutionDataDetails`](crate::model::HistoryEventExecutionDataDetails)
+    /// Creates a new builder-style object to manufacture [`HistoryEventExecutionDataDetails`](crate::model::HistoryEventExecutionDataDetails).
     pub fn builder() -> crate::model::history_event_execution_data_details::Builder {
         crate::model::history_event_execution_data_details::Builder::default()
     }
@@ -2563,10 +2614,13 @@ impl HistoryEventExecutionDataDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StateEnteredEventDetails {
     /// <p>The name of the state.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The string that contains the JSON input data for the state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>Contains details about the input for an execution history event.</p>
+    #[doc(hidden)]
     pub input_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
 }
 impl StateEnteredEventDetails {
@@ -2594,11 +2648,10 @@ impl std::fmt::Debug for StateEnteredEventDetails {
         formatter.finish()
     }
 }
-/// See [`StateEnteredEventDetails`](crate::model::StateEnteredEventDetails)
+/// See [`StateEnteredEventDetails`](crate::model::StateEnteredEventDetails).
 pub mod state_entered_event_details {
 
-    /// A builder for [`StateEnteredEventDetails`](crate::model::StateEnteredEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`StateEnteredEventDetails`](crate::model::StateEnteredEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2643,7 +2696,7 @@ pub mod state_entered_event_details {
             self.input_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`StateEnteredEventDetails`](crate::model::StateEnteredEventDetails)
+        /// Consumes the builder and constructs a [`StateEnteredEventDetails`](crate::model::StateEnteredEventDetails).
         pub fn build(self) -> crate::model::StateEnteredEventDetails {
             crate::model::StateEnteredEventDetails {
                 name: self.name,
@@ -2654,7 +2707,7 @@ pub mod state_entered_event_details {
     }
 }
 impl StateEnteredEventDetails {
-    /// Creates a new builder-style object to manufacture [`StateEnteredEventDetails`](crate::model::StateEnteredEventDetails)
+    /// Creates a new builder-style object to manufacture [`StateEnteredEventDetails`](crate::model::StateEnteredEventDetails).
     pub fn builder() -> crate::model::state_entered_event_details::Builder {
         crate::model::state_entered_event_details::Builder::default()
     }
@@ -2665,8 +2718,10 @@ impl StateEnteredEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionTimedOutEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the timeout.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl LambdaFunctionTimedOutEventDetails {
@@ -2687,11 +2742,10 @@ impl std::fmt::Debug for LambdaFunctionTimedOutEventDetails {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionTimedOutEventDetails`](crate::model::LambdaFunctionTimedOutEventDetails)
+/// See [`LambdaFunctionTimedOutEventDetails`](crate::model::LambdaFunctionTimedOutEventDetails).
 pub mod lambda_function_timed_out_event_details {
 
-    /// A builder for [`LambdaFunctionTimedOutEventDetails`](crate::model::LambdaFunctionTimedOutEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionTimedOutEventDetails`](crate::model::LambdaFunctionTimedOutEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -2718,7 +2772,7 @@ pub mod lambda_function_timed_out_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionTimedOutEventDetails`](crate::model::LambdaFunctionTimedOutEventDetails)
+        /// Consumes the builder and constructs a [`LambdaFunctionTimedOutEventDetails`](crate::model::LambdaFunctionTimedOutEventDetails).
         pub fn build(self) -> crate::model::LambdaFunctionTimedOutEventDetails {
             crate::model::LambdaFunctionTimedOutEventDetails {
                 error: self.error,
@@ -2728,7 +2782,7 @@ pub mod lambda_function_timed_out_event_details {
     }
 }
 impl LambdaFunctionTimedOutEventDetails {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionTimedOutEventDetails`](crate::model::LambdaFunctionTimedOutEventDetails)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionTimedOutEventDetails`](crate::model::LambdaFunctionTimedOutEventDetails).
     pub fn builder() -> crate::model::lambda_function_timed_out_event_details::Builder {
         crate::model::lambda_function_timed_out_event_details::Builder::default()
     }
@@ -2739,8 +2793,10 @@ impl LambdaFunctionTimedOutEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionSucceededEventDetails {
     /// <p>The JSON data output by the lambda function. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub output: std::option::Option<std::string::String>,
     /// <p>Contains details about the output of an execution history event.</p>
+    #[doc(hidden)]
     pub output_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
 }
 impl LambdaFunctionSucceededEventDetails {
@@ -2763,11 +2819,10 @@ impl std::fmt::Debug for LambdaFunctionSucceededEventDetails {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionSucceededEventDetails`](crate::model::LambdaFunctionSucceededEventDetails)
+/// See [`LambdaFunctionSucceededEventDetails`](crate::model::LambdaFunctionSucceededEventDetails).
 pub mod lambda_function_succeeded_event_details {
 
-    /// A builder for [`LambdaFunctionSucceededEventDetails`](crate::model::LambdaFunctionSucceededEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionSucceededEventDetails`](crate::model::LambdaFunctionSucceededEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output: std::option::Option<std::string::String>,
@@ -2801,7 +2856,7 @@ pub mod lambda_function_succeeded_event_details {
             self.output_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionSucceededEventDetails`](crate::model::LambdaFunctionSucceededEventDetails)
+        /// Consumes the builder and constructs a [`LambdaFunctionSucceededEventDetails`](crate::model::LambdaFunctionSucceededEventDetails).
         pub fn build(self) -> crate::model::LambdaFunctionSucceededEventDetails {
             crate::model::LambdaFunctionSucceededEventDetails {
                 output: self.output,
@@ -2811,7 +2866,7 @@ pub mod lambda_function_succeeded_event_details {
     }
 }
 impl LambdaFunctionSucceededEventDetails {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionSucceededEventDetails`](crate::model::LambdaFunctionSucceededEventDetails)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionSucceededEventDetails`](crate::model::LambdaFunctionSucceededEventDetails).
     pub fn builder() -> crate::model::lambda_function_succeeded_event_details::Builder {
         crate::model::lambda_function_succeeded_event_details::Builder::default()
     }
@@ -2822,8 +2877,10 @@ impl LambdaFunctionSucceededEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionStartFailedEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl LambdaFunctionStartFailedEventDetails {
@@ -2844,11 +2901,10 @@ impl std::fmt::Debug for LambdaFunctionStartFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionStartFailedEventDetails`](crate::model::LambdaFunctionStartFailedEventDetails)
+/// See [`LambdaFunctionStartFailedEventDetails`](crate::model::LambdaFunctionStartFailedEventDetails).
 pub mod lambda_function_start_failed_event_details {
 
-    /// A builder for [`LambdaFunctionStartFailedEventDetails`](crate::model::LambdaFunctionStartFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionStartFailedEventDetails`](crate::model::LambdaFunctionStartFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -2875,7 +2931,7 @@ pub mod lambda_function_start_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionStartFailedEventDetails`](crate::model::LambdaFunctionStartFailedEventDetails)
+        /// Consumes the builder and constructs a [`LambdaFunctionStartFailedEventDetails`](crate::model::LambdaFunctionStartFailedEventDetails).
         pub fn build(self) -> crate::model::LambdaFunctionStartFailedEventDetails {
             crate::model::LambdaFunctionStartFailedEventDetails {
                 error: self.error,
@@ -2885,7 +2941,7 @@ pub mod lambda_function_start_failed_event_details {
     }
 }
 impl LambdaFunctionStartFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionStartFailedEventDetails`](crate::model::LambdaFunctionStartFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionStartFailedEventDetails`](crate::model::LambdaFunctionStartFailedEventDetails).
     pub fn builder() -> crate::model::lambda_function_start_failed_event_details::Builder {
         crate::model::lambda_function_start_failed_event_details::Builder::default()
     }
@@ -2896,12 +2952,16 @@ impl LambdaFunctionStartFailedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionScheduledEventDetails {
     /// <p>The Amazon Resource Name (ARN) of the scheduled lambda function.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The JSON data input to the lambda function. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>Contains details about input for an execution history event.</p>
+    #[doc(hidden)]
     pub input_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
     /// <p>The maximum allowed duration of the lambda function.</p>
+    #[doc(hidden)]
     pub timeout_in_seconds: std::option::Option<i64>,
 }
 impl LambdaFunctionScheduledEventDetails {
@@ -2934,11 +2994,10 @@ impl std::fmt::Debug for LambdaFunctionScheduledEventDetails {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionScheduledEventDetails`](crate::model::LambdaFunctionScheduledEventDetails)
+/// See [`LambdaFunctionScheduledEventDetails`](crate::model::LambdaFunctionScheduledEventDetails).
 pub mod lambda_function_scheduled_event_details {
 
-    /// A builder for [`LambdaFunctionScheduledEventDetails`](crate::model::LambdaFunctionScheduledEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionScheduledEventDetails`](crate::model::LambdaFunctionScheduledEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource: std::option::Option<std::string::String>,
@@ -2994,7 +3053,7 @@ pub mod lambda_function_scheduled_event_details {
             self.timeout_in_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionScheduledEventDetails`](crate::model::LambdaFunctionScheduledEventDetails)
+        /// Consumes the builder and constructs a [`LambdaFunctionScheduledEventDetails`](crate::model::LambdaFunctionScheduledEventDetails).
         pub fn build(self) -> crate::model::LambdaFunctionScheduledEventDetails {
             crate::model::LambdaFunctionScheduledEventDetails {
                 resource: self.resource,
@@ -3006,7 +3065,7 @@ pub mod lambda_function_scheduled_event_details {
     }
 }
 impl LambdaFunctionScheduledEventDetails {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionScheduledEventDetails`](crate::model::LambdaFunctionScheduledEventDetails)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionScheduledEventDetails`](crate::model::LambdaFunctionScheduledEventDetails).
     pub fn builder() -> crate::model::lambda_function_scheduled_event_details::Builder {
         crate::model::lambda_function_scheduled_event_details::Builder::default()
     }
@@ -3017,8 +3076,10 @@ impl LambdaFunctionScheduledEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionScheduleFailedEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl LambdaFunctionScheduleFailedEventDetails {
@@ -3039,11 +3100,10 @@ impl std::fmt::Debug for LambdaFunctionScheduleFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionScheduleFailedEventDetails`](crate::model::LambdaFunctionScheduleFailedEventDetails)
+/// See [`LambdaFunctionScheduleFailedEventDetails`](crate::model::LambdaFunctionScheduleFailedEventDetails).
 pub mod lambda_function_schedule_failed_event_details {
 
-    /// A builder for [`LambdaFunctionScheduleFailedEventDetails`](crate::model::LambdaFunctionScheduleFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionScheduleFailedEventDetails`](crate::model::LambdaFunctionScheduleFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -3070,7 +3130,7 @@ pub mod lambda_function_schedule_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionScheduleFailedEventDetails`](crate::model::LambdaFunctionScheduleFailedEventDetails)
+        /// Consumes the builder and constructs a [`LambdaFunctionScheduleFailedEventDetails`](crate::model::LambdaFunctionScheduleFailedEventDetails).
         pub fn build(self) -> crate::model::LambdaFunctionScheduleFailedEventDetails {
             crate::model::LambdaFunctionScheduleFailedEventDetails {
                 error: self.error,
@@ -3080,7 +3140,7 @@ pub mod lambda_function_schedule_failed_event_details {
     }
 }
 impl LambdaFunctionScheduleFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionScheduleFailedEventDetails`](crate::model::LambdaFunctionScheduleFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionScheduleFailedEventDetails`](crate::model::LambdaFunctionScheduleFailedEventDetails).
     pub fn builder() -> crate::model::lambda_function_schedule_failed_event_details::Builder {
         crate::model::lambda_function_schedule_failed_event_details::Builder::default()
     }
@@ -3091,8 +3151,10 @@ impl LambdaFunctionScheduleFailedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionFailedEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl LambdaFunctionFailedEventDetails {
@@ -3113,11 +3175,10 @@ impl std::fmt::Debug for LambdaFunctionFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionFailedEventDetails`](crate::model::LambdaFunctionFailedEventDetails)
+/// See [`LambdaFunctionFailedEventDetails`](crate::model::LambdaFunctionFailedEventDetails).
 pub mod lambda_function_failed_event_details {
 
-    /// A builder for [`LambdaFunctionFailedEventDetails`](crate::model::LambdaFunctionFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionFailedEventDetails`](crate::model::LambdaFunctionFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -3144,7 +3205,7 @@ pub mod lambda_function_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionFailedEventDetails`](crate::model::LambdaFunctionFailedEventDetails)
+        /// Consumes the builder and constructs a [`LambdaFunctionFailedEventDetails`](crate::model::LambdaFunctionFailedEventDetails).
         pub fn build(self) -> crate::model::LambdaFunctionFailedEventDetails {
             crate::model::LambdaFunctionFailedEventDetails {
                 error: self.error,
@@ -3154,7 +3215,7 @@ pub mod lambda_function_failed_event_details {
     }
 }
 impl LambdaFunctionFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionFailedEventDetails`](crate::model::LambdaFunctionFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionFailedEventDetails`](crate::model::LambdaFunctionFailedEventDetails).
     pub fn builder() -> crate::model::lambda_function_failed_event_details::Builder {
         crate::model::lambda_function_failed_event_details::Builder::default()
     }
@@ -3165,8 +3226,10 @@ impl LambdaFunctionFailedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MapIterationEventDetails {
     /// <p>The name of the iteration’s parent Map state.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The index of the array belonging to the Map state iteration.</p>
+    #[doc(hidden)]
     pub index: i32,
 }
 impl MapIterationEventDetails {
@@ -3187,11 +3250,10 @@ impl std::fmt::Debug for MapIterationEventDetails {
         formatter.finish()
     }
 }
-/// See [`MapIterationEventDetails`](crate::model::MapIterationEventDetails)
+/// See [`MapIterationEventDetails`](crate::model::MapIterationEventDetails).
 pub mod map_iteration_event_details {
 
-    /// A builder for [`MapIterationEventDetails`](crate::model::MapIterationEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`MapIterationEventDetails`](crate::model::MapIterationEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3218,7 +3280,7 @@ pub mod map_iteration_event_details {
             self.index = input;
             self
         }
-        /// Consumes the builder and constructs a [`MapIterationEventDetails`](crate::model::MapIterationEventDetails)
+        /// Consumes the builder and constructs a [`MapIterationEventDetails`](crate::model::MapIterationEventDetails).
         pub fn build(self) -> crate::model::MapIterationEventDetails {
             crate::model::MapIterationEventDetails {
                 name: self.name,
@@ -3228,7 +3290,7 @@ pub mod map_iteration_event_details {
     }
 }
 impl MapIterationEventDetails {
-    /// Creates a new builder-style object to manufacture [`MapIterationEventDetails`](crate::model::MapIterationEventDetails)
+    /// Creates a new builder-style object to manufacture [`MapIterationEventDetails`](crate::model::MapIterationEventDetails).
     pub fn builder() -> crate::model::map_iteration_event_details::Builder {
         crate::model::map_iteration_event_details::Builder::default()
     }
@@ -3239,6 +3301,7 @@ impl MapIterationEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MapStateStartedEventDetails {
     /// <p>The size of the array for Map state iterations.</p>
+    #[doc(hidden)]
     pub length: i32,
 }
 impl MapStateStartedEventDetails {
@@ -3254,11 +3317,10 @@ impl std::fmt::Debug for MapStateStartedEventDetails {
         formatter.finish()
     }
 }
-/// See [`MapStateStartedEventDetails`](crate::model::MapStateStartedEventDetails)
+/// See [`MapStateStartedEventDetails`](crate::model::MapStateStartedEventDetails).
 pub mod map_state_started_event_details {
 
-    /// A builder for [`MapStateStartedEventDetails`](crate::model::MapStateStartedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`MapStateStartedEventDetails`](crate::model::MapStateStartedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) length: std::option::Option<i32>,
@@ -3274,7 +3336,7 @@ pub mod map_state_started_event_details {
             self.length = input;
             self
         }
-        /// Consumes the builder and constructs a [`MapStateStartedEventDetails`](crate::model::MapStateStartedEventDetails)
+        /// Consumes the builder and constructs a [`MapStateStartedEventDetails`](crate::model::MapStateStartedEventDetails).
         pub fn build(self) -> crate::model::MapStateStartedEventDetails {
             crate::model::MapStateStartedEventDetails {
                 length: self.length.unwrap_or_default(),
@@ -3283,7 +3345,7 @@ pub mod map_state_started_event_details {
     }
 }
 impl MapStateStartedEventDetails {
-    /// Creates a new builder-style object to manufacture [`MapStateStartedEventDetails`](crate::model::MapStateStartedEventDetails)
+    /// Creates a new builder-style object to manufacture [`MapStateStartedEventDetails`](crate::model::MapStateStartedEventDetails).
     pub fn builder() -> crate::model::map_state_started_event_details::Builder {
         crate::model::map_state_started_event_details::Builder::default()
     }
@@ -3294,8 +3356,10 @@ impl MapStateStartedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionTimedOutEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the timeout.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl ExecutionTimedOutEventDetails {
@@ -3316,11 +3380,10 @@ impl std::fmt::Debug for ExecutionTimedOutEventDetails {
         formatter.finish()
     }
 }
-/// See [`ExecutionTimedOutEventDetails`](crate::model::ExecutionTimedOutEventDetails)
+/// See [`ExecutionTimedOutEventDetails`](crate::model::ExecutionTimedOutEventDetails).
 pub mod execution_timed_out_event_details {
 
-    /// A builder for [`ExecutionTimedOutEventDetails`](crate::model::ExecutionTimedOutEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionTimedOutEventDetails`](crate::model::ExecutionTimedOutEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -3347,7 +3410,7 @@ pub mod execution_timed_out_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionTimedOutEventDetails`](crate::model::ExecutionTimedOutEventDetails)
+        /// Consumes the builder and constructs a [`ExecutionTimedOutEventDetails`](crate::model::ExecutionTimedOutEventDetails).
         pub fn build(self) -> crate::model::ExecutionTimedOutEventDetails {
             crate::model::ExecutionTimedOutEventDetails {
                 error: self.error,
@@ -3357,7 +3420,7 @@ pub mod execution_timed_out_event_details {
     }
 }
 impl ExecutionTimedOutEventDetails {
-    /// Creates a new builder-style object to manufacture [`ExecutionTimedOutEventDetails`](crate::model::ExecutionTimedOutEventDetails)
+    /// Creates a new builder-style object to manufacture [`ExecutionTimedOutEventDetails`](crate::model::ExecutionTimedOutEventDetails).
     pub fn builder() -> crate::model::execution_timed_out_event_details::Builder {
         crate::model::execution_timed_out_event_details::Builder::default()
     }
@@ -3368,8 +3431,10 @@ impl ExecutionTimedOutEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionAbortedEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl ExecutionAbortedEventDetails {
@@ -3390,11 +3455,10 @@ impl std::fmt::Debug for ExecutionAbortedEventDetails {
         formatter.finish()
     }
 }
-/// See [`ExecutionAbortedEventDetails`](crate::model::ExecutionAbortedEventDetails)
+/// See [`ExecutionAbortedEventDetails`](crate::model::ExecutionAbortedEventDetails).
 pub mod execution_aborted_event_details {
 
-    /// A builder for [`ExecutionAbortedEventDetails`](crate::model::ExecutionAbortedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionAbortedEventDetails`](crate::model::ExecutionAbortedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -3421,7 +3485,7 @@ pub mod execution_aborted_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionAbortedEventDetails`](crate::model::ExecutionAbortedEventDetails)
+        /// Consumes the builder and constructs a [`ExecutionAbortedEventDetails`](crate::model::ExecutionAbortedEventDetails).
         pub fn build(self) -> crate::model::ExecutionAbortedEventDetails {
             crate::model::ExecutionAbortedEventDetails {
                 error: self.error,
@@ -3431,7 +3495,7 @@ pub mod execution_aborted_event_details {
     }
 }
 impl ExecutionAbortedEventDetails {
-    /// Creates a new builder-style object to manufacture [`ExecutionAbortedEventDetails`](crate::model::ExecutionAbortedEventDetails)
+    /// Creates a new builder-style object to manufacture [`ExecutionAbortedEventDetails`](crate::model::ExecutionAbortedEventDetails).
     pub fn builder() -> crate::model::execution_aborted_event_details::Builder {
         crate::model::execution_aborted_event_details::Builder::default()
     }
@@ -3442,8 +3506,10 @@ impl ExecutionAbortedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionSucceededEventDetails {
     /// <p>The JSON data output by the execution. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub output: std::option::Option<std::string::String>,
     /// <p>Contains details about the output of an execution history event.</p>
+    #[doc(hidden)]
     pub output_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
 }
 impl ExecutionSucceededEventDetails {
@@ -3466,11 +3532,10 @@ impl std::fmt::Debug for ExecutionSucceededEventDetails {
         formatter.finish()
     }
 }
-/// See [`ExecutionSucceededEventDetails`](crate::model::ExecutionSucceededEventDetails)
+/// See [`ExecutionSucceededEventDetails`](crate::model::ExecutionSucceededEventDetails).
 pub mod execution_succeeded_event_details {
 
-    /// A builder for [`ExecutionSucceededEventDetails`](crate::model::ExecutionSucceededEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionSucceededEventDetails`](crate::model::ExecutionSucceededEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output: std::option::Option<std::string::String>,
@@ -3504,7 +3569,7 @@ pub mod execution_succeeded_event_details {
             self.output_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionSucceededEventDetails`](crate::model::ExecutionSucceededEventDetails)
+        /// Consumes the builder and constructs a [`ExecutionSucceededEventDetails`](crate::model::ExecutionSucceededEventDetails).
         pub fn build(self) -> crate::model::ExecutionSucceededEventDetails {
             crate::model::ExecutionSucceededEventDetails {
                 output: self.output,
@@ -3514,7 +3579,7 @@ pub mod execution_succeeded_event_details {
     }
 }
 impl ExecutionSucceededEventDetails {
-    /// Creates a new builder-style object to manufacture [`ExecutionSucceededEventDetails`](crate::model::ExecutionSucceededEventDetails)
+    /// Creates a new builder-style object to manufacture [`ExecutionSucceededEventDetails`](crate::model::ExecutionSucceededEventDetails).
     pub fn builder() -> crate::model::execution_succeeded_event_details::Builder {
         crate::model::execution_succeeded_event_details::Builder::default()
     }
@@ -3525,10 +3590,13 @@ impl ExecutionSucceededEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionStartedEventDetails {
     /// <p>The JSON data input to the execution. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>Contains details about the input for an execution history event.</p>
+    #[doc(hidden)]
     pub input_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl ExecutionStartedEventDetails {
@@ -3556,11 +3624,10 @@ impl std::fmt::Debug for ExecutionStartedEventDetails {
         formatter.finish()
     }
 }
-/// See [`ExecutionStartedEventDetails`](crate::model::ExecutionStartedEventDetails)
+/// See [`ExecutionStartedEventDetails`](crate::model::ExecutionStartedEventDetails).
 pub mod execution_started_event_details {
 
-    /// A builder for [`ExecutionStartedEventDetails`](crate::model::ExecutionStartedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionStartedEventDetails`](crate::model::ExecutionStartedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input: std::option::Option<std::string::String>,
@@ -3605,7 +3672,7 @@ pub mod execution_started_event_details {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionStartedEventDetails`](crate::model::ExecutionStartedEventDetails)
+        /// Consumes the builder and constructs a [`ExecutionStartedEventDetails`](crate::model::ExecutionStartedEventDetails).
         pub fn build(self) -> crate::model::ExecutionStartedEventDetails {
             crate::model::ExecutionStartedEventDetails {
                 input: self.input,
@@ -3616,7 +3683,7 @@ pub mod execution_started_event_details {
     }
 }
 impl ExecutionStartedEventDetails {
-    /// Creates a new builder-style object to manufacture [`ExecutionStartedEventDetails`](crate::model::ExecutionStartedEventDetails)
+    /// Creates a new builder-style object to manufacture [`ExecutionStartedEventDetails`](crate::model::ExecutionStartedEventDetails).
     pub fn builder() -> crate::model::execution_started_event_details::Builder {
         crate::model::execution_started_event_details::Builder::default()
     }
@@ -3627,8 +3694,10 @@ impl ExecutionStartedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionFailedEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl ExecutionFailedEventDetails {
@@ -3649,11 +3718,10 @@ impl std::fmt::Debug for ExecutionFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`ExecutionFailedEventDetails`](crate::model::ExecutionFailedEventDetails)
+/// See [`ExecutionFailedEventDetails`](crate::model::ExecutionFailedEventDetails).
 pub mod execution_failed_event_details {
 
-    /// A builder for [`ExecutionFailedEventDetails`](crate::model::ExecutionFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionFailedEventDetails`](crate::model::ExecutionFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -3680,7 +3748,7 @@ pub mod execution_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionFailedEventDetails`](crate::model::ExecutionFailedEventDetails)
+        /// Consumes the builder and constructs a [`ExecutionFailedEventDetails`](crate::model::ExecutionFailedEventDetails).
         pub fn build(self) -> crate::model::ExecutionFailedEventDetails {
             crate::model::ExecutionFailedEventDetails {
                 error: self.error,
@@ -3690,7 +3758,7 @@ pub mod execution_failed_event_details {
     }
 }
 impl ExecutionFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`ExecutionFailedEventDetails`](crate::model::ExecutionFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`ExecutionFailedEventDetails`](crate::model::ExecutionFailedEventDetails).
     pub fn builder() -> crate::model::execution_failed_event_details::Builder {
         crate::model::execution_failed_event_details::Builder::default()
     }
@@ -3701,12 +3769,16 @@ impl ExecutionFailedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskTimedOutEventDetails {
     /// <p>The action of the resource called by a task state.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The service name of the resource in a task state.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl TaskTimedOutEventDetails {
@@ -3737,11 +3809,10 @@ impl std::fmt::Debug for TaskTimedOutEventDetails {
         formatter.finish()
     }
 }
-/// See [`TaskTimedOutEventDetails`](crate::model::TaskTimedOutEventDetails)
+/// See [`TaskTimedOutEventDetails`](crate::model::TaskTimedOutEventDetails).
 pub mod task_timed_out_event_details {
 
-    /// A builder for [`TaskTimedOutEventDetails`](crate::model::TaskTimedOutEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`TaskTimedOutEventDetails`](crate::model::TaskTimedOutEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -3793,7 +3864,7 @@ pub mod task_timed_out_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskTimedOutEventDetails`](crate::model::TaskTimedOutEventDetails)
+        /// Consumes the builder and constructs a [`TaskTimedOutEventDetails`](crate::model::TaskTimedOutEventDetails).
         pub fn build(self) -> crate::model::TaskTimedOutEventDetails {
             crate::model::TaskTimedOutEventDetails {
                 resource_type: self.resource_type,
@@ -3805,7 +3876,7 @@ pub mod task_timed_out_event_details {
     }
 }
 impl TaskTimedOutEventDetails {
-    /// Creates a new builder-style object to manufacture [`TaskTimedOutEventDetails`](crate::model::TaskTimedOutEventDetails)
+    /// Creates a new builder-style object to manufacture [`TaskTimedOutEventDetails`](crate::model::TaskTimedOutEventDetails).
     pub fn builder() -> crate::model::task_timed_out_event_details::Builder {
         crate::model::task_timed_out_event_details::Builder::default()
     }
@@ -3816,12 +3887,16 @@ impl TaskTimedOutEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskSucceededEventDetails {
     /// <p>The action of the resource called by a task state.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The service name of the resource in a task state.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The full JSON response from a resource when a task has succeeded. This response becomes the output of the related task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub output: std::option::Option<std::string::String>,
     /// <p>Contains details about the output of an execution history event.</p>
+    #[doc(hidden)]
     pub output_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
 }
 impl TaskSucceededEventDetails {
@@ -3854,11 +3929,10 @@ impl std::fmt::Debug for TaskSucceededEventDetails {
         formatter.finish()
     }
 }
-/// See [`TaskSucceededEventDetails`](crate::model::TaskSucceededEventDetails)
+/// See [`TaskSucceededEventDetails`](crate::model::TaskSucceededEventDetails).
 pub mod task_succeeded_event_details {
 
-    /// A builder for [`TaskSucceededEventDetails`](crate::model::TaskSucceededEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`TaskSucceededEventDetails`](crate::model::TaskSucceededEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -3917,7 +3991,7 @@ pub mod task_succeeded_event_details {
             self.output_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskSucceededEventDetails`](crate::model::TaskSucceededEventDetails)
+        /// Consumes the builder and constructs a [`TaskSucceededEventDetails`](crate::model::TaskSucceededEventDetails).
         pub fn build(self) -> crate::model::TaskSucceededEventDetails {
             crate::model::TaskSucceededEventDetails {
                 resource_type: self.resource_type,
@@ -3929,7 +4003,7 @@ pub mod task_succeeded_event_details {
     }
 }
 impl TaskSucceededEventDetails {
-    /// Creates a new builder-style object to manufacture [`TaskSucceededEventDetails`](crate::model::TaskSucceededEventDetails)
+    /// Creates a new builder-style object to manufacture [`TaskSucceededEventDetails`](crate::model::TaskSucceededEventDetails).
     pub fn builder() -> crate::model::task_succeeded_event_details::Builder {
         crate::model::task_succeeded_event_details::Builder::default()
     }
@@ -3940,12 +4014,16 @@ impl TaskSucceededEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskSubmittedEventDetails {
     /// <p>The action of the resource called by a task state.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The service name of the resource in a task state.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The response from a resource when a task has started. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub output: std::option::Option<std::string::String>,
     /// <p>Contains details about the output of an execution history event.</p>
+    #[doc(hidden)]
     pub output_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
 }
 impl TaskSubmittedEventDetails {
@@ -3978,11 +4056,10 @@ impl std::fmt::Debug for TaskSubmittedEventDetails {
         formatter.finish()
     }
 }
-/// See [`TaskSubmittedEventDetails`](crate::model::TaskSubmittedEventDetails)
+/// See [`TaskSubmittedEventDetails`](crate::model::TaskSubmittedEventDetails).
 pub mod task_submitted_event_details {
 
-    /// A builder for [`TaskSubmittedEventDetails`](crate::model::TaskSubmittedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`TaskSubmittedEventDetails`](crate::model::TaskSubmittedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -4041,7 +4118,7 @@ pub mod task_submitted_event_details {
             self.output_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskSubmittedEventDetails`](crate::model::TaskSubmittedEventDetails)
+        /// Consumes the builder and constructs a [`TaskSubmittedEventDetails`](crate::model::TaskSubmittedEventDetails).
         pub fn build(self) -> crate::model::TaskSubmittedEventDetails {
             crate::model::TaskSubmittedEventDetails {
                 resource_type: self.resource_type,
@@ -4053,7 +4130,7 @@ pub mod task_submitted_event_details {
     }
 }
 impl TaskSubmittedEventDetails {
-    /// Creates a new builder-style object to manufacture [`TaskSubmittedEventDetails`](crate::model::TaskSubmittedEventDetails)
+    /// Creates a new builder-style object to manufacture [`TaskSubmittedEventDetails`](crate::model::TaskSubmittedEventDetails).
     pub fn builder() -> crate::model::task_submitted_event_details::Builder {
         crate::model::task_submitted_event_details::Builder::default()
     }
@@ -4064,12 +4141,16 @@ impl TaskSubmittedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskSubmitFailedEventDetails {
     /// <p>The action of the resource called by a task state.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The service name of the resource in a task state.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl TaskSubmitFailedEventDetails {
@@ -4100,11 +4181,10 @@ impl std::fmt::Debug for TaskSubmitFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`TaskSubmitFailedEventDetails`](crate::model::TaskSubmitFailedEventDetails)
+/// See [`TaskSubmitFailedEventDetails`](crate::model::TaskSubmitFailedEventDetails).
 pub mod task_submit_failed_event_details {
 
-    /// A builder for [`TaskSubmitFailedEventDetails`](crate::model::TaskSubmitFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`TaskSubmitFailedEventDetails`](crate::model::TaskSubmitFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -4156,7 +4236,7 @@ pub mod task_submit_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskSubmitFailedEventDetails`](crate::model::TaskSubmitFailedEventDetails)
+        /// Consumes the builder and constructs a [`TaskSubmitFailedEventDetails`](crate::model::TaskSubmitFailedEventDetails).
         pub fn build(self) -> crate::model::TaskSubmitFailedEventDetails {
             crate::model::TaskSubmitFailedEventDetails {
                 resource_type: self.resource_type,
@@ -4168,7 +4248,7 @@ pub mod task_submit_failed_event_details {
     }
 }
 impl TaskSubmitFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`TaskSubmitFailedEventDetails`](crate::model::TaskSubmitFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`TaskSubmitFailedEventDetails`](crate::model::TaskSubmitFailedEventDetails).
     pub fn builder() -> crate::model::task_submit_failed_event_details::Builder {
         crate::model::task_submit_failed_event_details::Builder::default()
     }
@@ -4179,8 +4259,10 @@ impl TaskSubmitFailedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskStartedEventDetails {
     /// <p>The action of the resource called by a task state.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The service name of the resource in a task state.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
 }
 impl TaskStartedEventDetails {
@@ -4201,11 +4283,10 @@ impl std::fmt::Debug for TaskStartedEventDetails {
         formatter.finish()
     }
 }
-/// See [`TaskStartedEventDetails`](crate::model::TaskStartedEventDetails)
+/// See [`TaskStartedEventDetails`](crate::model::TaskStartedEventDetails).
 pub mod task_started_event_details {
 
-    /// A builder for [`TaskStartedEventDetails`](crate::model::TaskStartedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`TaskStartedEventDetails`](crate::model::TaskStartedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -4235,7 +4316,7 @@ pub mod task_started_event_details {
             self.resource = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskStartedEventDetails`](crate::model::TaskStartedEventDetails)
+        /// Consumes the builder and constructs a [`TaskStartedEventDetails`](crate::model::TaskStartedEventDetails).
         pub fn build(self) -> crate::model::TaskStartedEventDetails {
             crate::model::TaskStartedEventDetails {
                 resource_type: self.resource_type,
@@ -4245,7 +4326,7 @@ pub mod task_started_event_details {
     }
 }
 impl TaskStartedEventDetails {
-    /// Creates a new builder-style object to manufacture [`TaskStartedEventDetails`](crate::model::TaskStartedEventDetails)
+    /// Creates a new builder-style object to manufacture [`TaskStartedEventDetails`](crate::model::TaskStartedEventDetails).
     pub fn builder() -> crate::model::task_started_event_details::Builder {
         crate::model::task_started_event_details::Builder::default()
     }
@@ -4256,12 +4337,16 @@ impl TaskStartedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskStartFailedEventDetails {
     /// <p>The action of the resource called by a task state.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The service name of the resource in a task state.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl TaskStartFailedEventDetails {
@@ -4292,11 +4377,10 @@ impl std::fmt::Debug for TaskStartFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`TaskStartFailedEventDetails`](crate::model::TaskStartFailedEventDetails)
+/// See [`TaskStartFailedEventDetails`](crate::model::TaskStartFailedEventDetails).
 pub mod task_start_failed_event_details {
 
-    /// A builder for [`TaskStartFailedEventDetails`](crate::model::TaskStartFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`TaskStartFailedEventDetails`](crate::model::TaskStartFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -4348,7 +4432,7 @@ pub mod task_start_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskStartFailedEventDetails`](crate::model::TaskStartFailedEventDetails)
+        /// Consumes the builder and constructs a [`TaskStartFailedEventDetails`](crate::model::TaskStartFailedEventDetails).
         pub fn build(self) -> crate::model::TaskStartFailedEventDetails {
             crate::model::TaskStartFailedEventDetails {
                 resource_type: self.resource_type,
@@ -4360,7 +4444,7 @@ pub mod task_start_failed_event_details {
     }
 }
 impl TaskStartFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`TaskStartFailedEventDetails`](crate::model::TaskStartFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`TaskStartFailedEventDetails`](crate::model::TaskStartFailedEventDetails).
     pub fn builder() -> crate::model::task_start_failed_event_details::Builder {
         crate::model::task_start_failed_event_details::Builder::default()
     }
@@ -4371,16 +4455,22 @@ impl TaskStartFailedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskScheduledEventDetails {
     /// <p>The action of the resource called by a task state.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The service name of the resource in a task state.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The region of the scheduled task</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The JSON data passed to the resource referenced in a task state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::string::String>,
     /// <p>The maximum allowed duration of the task.</p>
+    #[doc(hidden)]
     pub timeout_in_seconds: std::option::Option<i64>,
     /// <p>The maximum allowed duration between two heartbeats for the task.</p>
+    #[doc(hidden)]
     pub heartbeat_in_seconds: std::option::Option<i64>,
 }
 impl TaskScheduledEventDetails {
@@ -4421,11 +4511,10 @@ impl std::fmt::Debug for TaskScheduledEventDetails {
         formatter.finish()
     }
 }
-/// See [`TaskScheduledEventDetails`](crate::model::TaskScheduledEventDetails)
+/// See [`TaskScheduledEventDetails`](crate::model::TaskScheduledEventDetails).
 pub mod task_scheduled_event_details {
 
-    /// A builder for [`TaskScheduledEventDetails`](crate::model::TaskScheduledEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`TaskScheduledEventDetails`](crate::model::TaskScheduledEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -4499,7 +4588,7 @@ pub mod task_scheduled_event_details {
             self.heartbeat_in_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskScheduledEventDetails`](crate::model::TaskScheduledEventDetails)
+        /// Consumes the builder and constructs a [`TaskScheduledEventDetails`](crate::model::TaskScheduledEventDetails).
         pub fn build(self) -> crate::model::TaskScheduledEventDetails {
             crate::model::TaskScheduledEventDetails {
                 resource_type: self.resource_type,
@@ -4513,7 +4602,7 @@ pub mod task_scheduled_event_details {
     }
 }
 impl TaskScheduledEventDetails {
-    /// Creates a new builder-style object to manufacture [`TaskScheduledEventDetails`](crate::model::TaskScheduledEventDetails)
+    /// Creates a new builder-style object to manufacture [`TaskScheduledEventDetails`](crate::model::TaskScheduledEventDetails).
     pub fn builder() -> crate::model::task_scheduled_event_details::Builder {
         crate::model::task_scheduled_event_details::Builder::default()
     }
@@ -4524,12 +4613,16 @@ impl TaskScheduledEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskFailedEventDetails {
     /// <p>The action of the resource called by a task state.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The service name of the resource in a task state.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl TaskFailedEventDetails {
@@ -4560,11 +4653,10 @@ impl std::fmt::Debug for TaskFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`TaskFailedEventDetails`](crate::model::TaskFailedEventDetails)
+/// See [`TaskFailedEventDetails`](crate::model::TaskFailedEventDetails).
 pub mod task_failed_event_details {
 
-    /// A builder for [`TaskFailedEventDetails`](crate::model::TaskFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`TaskFailedEventDetails`](crate::model::TaskFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -4616,7 +4708,7 @@ pub mod task_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskFailedEventDetails`](crate::model::TaskFailedEventDetails)
+        /// Consumes the builder and constructs a [`TaskFailedEventDetails`](crate::model::TaskFailedEventDetails).
         pub fn build(self) -> crate::model::TaskFailedEventDetails {
             crate::model::TaskFailedEventDetails {
                 resource_type: self.resource_type,
@@ -4628,7 +4720,7 @@ pub mod task_failed_event_details {
     }
 }
 impl TaskFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`TaskFailedEventDetails`](crate::model::TaskFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`TaskFailedEventDetails`](crate::model::TaskFailedEventDetails).
     pub fn builder() -> crate::model::task_failed_event_details::Builder {
         crate::model::task_failed_event_details::Builder::default()
     }
@@ -4639,8 +4731,10 @@ impl TaskFailedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTimedOutEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the timeout.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl ActivityTimedOutEventDetails {
@@ -4661,11 +4755,10 @@ impl std::fmt::Debug for ActivityTimedOutEventDetails {
         formatter.finish()
     }
 }
-/// See [`ActivityTimedOutEventDetails`](crate::model::ActivityTimedOutEventDetails)
+/// See [`ActivityTimedOutEventDetails`](crate::model::ActivityTimedOutEventDetails).
 pub mod activity_timed_out_event_details {
 
-    /// A builder for [`ActivityTimedOutEventDetails`](crate::model::ActivityTimedOutEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTimedOutEventDetails`](crate::model::ActivityTimedOutEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -4692,7 +4785,7 @@ pub mod activity_timed_out_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTimedOutEventDetails`](crate::model::ActivityTimedOutEventDetails)
+        /// Consumes the builder and constructs a [`ActivityTimedOutEventDetails`](crate::model::ActivityTimedOutEventDetails).
         pub fn build(self) -> crate::model::ActivityTimedOutEventDetails {
             crate::model::ActivityTimedOutEventDetails {
                 error: self.error,
@@ -4702,7 +4795,7 @@ pub mod activity_timed_out_event_details {
     }
 }
 impl ActivityTimedOutEventDetails {
-    /// Creates a new builder-style object to manufacture [`ActivityTimedOutEventDetails`](crate::model::ActivityTimedOutEventDetails)
+    /// Creates a new builder-style object to manufacture [`ActivityTimedOutEventDetails`](crate::model::ActivityTimedOutEventDetails).
     pub fn builder() -> crate::model::activity_timed_out_event_details::Builder {
         crate::model::activity_timed_out_event_details::Builder::default()
     }
@@ -4713,8 +4806,10 @@ impl ActivityTimedOutEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivitySucceededEventDetails {
     /// <p>The JSON data output by the activity task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub output: std::option::Option<std::string::String>,
     /// <p>Contains details about the output of an execution history event.</p>
+    #[doc(hidden)]
     pub output_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
 }
 impl ActivitySucceededEventDetails {
@@ -4737,11 +4832,10 @@ impl std::fmt::Debug for ActivitySucceededEventDetails {
         formatter.finish()
     }
 }
-/// See [`ActivitySucceededEventDetails`](crate::model::ActivitySucceededEventDetails)
+/// See [`ActivitySucceededEventDetails`](crate::model::ActivitySucceededEventDetails).
 pub mod activity_succeeded_event_details {
 
-    /// A builder for [`ActivitySucceededEventDetails`](crate::model::ActivitySucceededEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ActivitySucceededEventDetails`](crate::model::ActivitySucceededEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output: std::option::Option<std::string::String>,
@@ -4775,7 +4869,7 @@ pub mod activity_succeeded_event_details {
             self.output_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivitySucceededEventDetails`](crate::model::ActivitySucceededEventDetails)
+        /// Consumes the builder and constructs a [`ActivitySucceededEventDetails`](crate::model::ActivitySucceededEventDetails).
         pub fn build(self) -> crate::model::ActivitySucceededEventDetails {
             crate::model::ActivitySucceededEventDetails {
                 output: self.output,
@@ -4785,7 +4879,7 @@ pub mod activity_succeeded_event_details {
     }
 }
 impl ActivitySucceededEventDetails {
-    /// Creates a new builder-style object to manufacture [`ActivitySucceededEventDetails`](crate::model::ActivitySucceededEventDetails)
+    /// Creates a new builder-style object to manufacture [`ActivitySucceededEventDetails`](crate::model::ActivitySucceededEventDetails).
     pub fn builder() -> crate::model::activity_succeeded_event_details::Builder {
         crate::model::activity_succeeded_event_details::Builder::default()
     }
@@ -4796,6 +4890,7 @@ impl ActivitySucceededEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityStartedEventDetails {
     /// <p>The name of the worker that the task is assigned to. These names are provided by the workers when calling <code>GetActivityTask</code>.</p>
+    #[doc(hidden)]
     pub worker_name: std::option::Option<std::string::String>,
 }
 impl ActivityStartedEventDetails {
@@ -4811,11 +4906,10 @@ impl std::fmt::Debug for ActivityStartedEventDetails {
         formatter.finish()
     }
 }
-/// See [`ActivityStartedEventDetails`](crate::model::ActivityStartedEventDetails)
+/// See [`ActivityStartedEventDetails`](crate::model::ActivityStartedEventDetails).
 pub mod activity_started_event_details {
 
-    /// A builder for [`ActivityStartedEventDetails`](crate::model::ActivityStartedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ActivityStartedEventDetails`](crate::model::ActivityStartedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) worker_name: std::option::Option<std::string::String>,
@@ -4831,7 +4925,7 @@ pub mod activity_started_event_details {
             self.worker_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityStartedEventDetails`](crate::model::ActivityStartedEventDetails)
+        /// Consumes the builder and constructs a [`ActivityStartedEventDetails`](crate::model::ActivityStartedEventDetails).
         pub fn build(self) -> crate::model::ActivityStartedEventDetails {
             crate::model::ActivityStartedEventDetails {
                 worker_name: self.worker_name,
@@ -4840,7 +4934,7 @@ pub mod activity_started_event_details {
     }
 }
 impl ActivityStartedEventDetails {
-    /// Creates a new builder-style object to manufacture [`ActivityStartedEventDetails`](crate::model::ActivityStartedEventDetails)
+    /// Creates a new builder-style object to manufacture [`ActivityStartedEventDetails`](crate::model::ActivityStartedEventDetails).
     pub fn builder() -> crate::model::activity_started_event_details::Builder {
         crate::model::activity_started_event_details::Builder::default()
     }
@@ -4851,14 +4945,19 @@ impl ActivityStartedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityScheduledEventDetails {
     /// <p>The Amazon Resource Name (ARN) of the scheduled activity.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The JSON data input to the activity task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>Contains details about the input for an execution history event.</p>
+    #[doc(hidden)]
     pub input_details: std::option::Option<crate::model::HistoryEventExecutionDataDetails>,
     /// <p>The maximum allowed duration of the activity task.</p>
+    #[doc(hidden)]
     pub timeout_in_seconds: std::option::Option<i64>,
     /// <p>The maximum allowed duration between two heartbeats for the activity task.</p>
+    #[doc(hidden)]
     pub heartbeat_in_seconds: std::option::Option<i64>,
 }
 impl ActivityScheduledEventDetails {
@@ -4896,11 +4995,10 @@ impl std::fmt::Debug for ActivityScheduledEventDetails {
         formatter.finish()
     }
 }
-/// See [`ActivityScheduledEventDetails`](crate::model::ActivityScheduledEventDetails)
+/// See [`ActivityScheduledEventDetails`](crate::model::ActivityScheduledEventDetails).
 pub mod activity_scheduled_event_details {
 
-    /// A builder for [`ActivityScheduledEventDetails`](crate::model::ActivityScheduledEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ActivityScheduledEventDetails`](crate::model::ActivityScheduledEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource: std::option::Option<std::string::String>,
@@ -4967,7 +5065,7 @@ pub mod activity_scheduled_event_details {
             self.heartbeat_in_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityScheduledEventDetails`](crate::model::ActivityScheduledEventDetails)
+        /// Consumes the builder and constructs a [`ActivityScheduledEventDetails`](crate::model::ActivityScheduledEventDetails).
         pub fn build(self) -> crate::model::ActivityScheduledEventDetails {
             crate::model::ActivityScheduledEventDetails {
                 resource: self.resource,
@@ -4980,7 +5078,7 @@ pub mod activity_scheduled_event_details {
     }
 }
 impl ActivityScheduledEventDetails {
-    /// Creates a new builder-style object to manufacture [`ActivityScheduledEventDetails`](crate::model::ActivityScheduledEventDetails)
+    /// Creates a new builder-style object to manufacture [`ActivityScheduledEventDetails`](crate::model::ActivityScheduledEventDetails).
     pub fn builder() -> crate::model::activity_scheduled_event_details::Builder {
         crate::model::activity_scheduled_event_details::Builder::default()
     }
@@ -4991,8 +5089,10 @@ impl ActivityScheduledEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityScheduleFailedEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl ActivityScheduleFailedEventDetails {
@@ -5013,11 +5113,10 @@ impl std::fmt::Debug for ActivityScheduleFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`ActivityScheduleFailedEventDetails`](crate::model::ActivityScheduleFailedEventDetails)
+/// See [`ActivityScheduleFailedEventDetails`](crate::model::ActivityScheduleFailedEventDetails).
 pub mod activity_schedule_failed_event_details {
 
-    /// A builder for [`ActivityScheduleFailedEventDetails`](crate::model::ActivityScheduleFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ActivityScheduleFailedEventDetails`](crate::model::ActivityScheduleFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -5044,7 +5143,7 @@ pub mod activity_schedule_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityScheduleFailedEventDetails`](crate::model::ActivityScheduleFailedEventDetails)
+        /// Consumes the builder and constructs a [`ActivityScheduleFailedEventDetails`](crate::model::ActivityScheduleFailedEventDetails).
         pub fn build(self) -> crate::model::ActivityScheduleFailedEventDetails {
             crate::model::ActivityScheduleFailedEventDetails {
                 error: self.error,
@@ -5054,7 +5153,7 @@ pub mod activity_schedule_failed_event_details {
     }
 }
 impl ActivityScheduleFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`ActivityScheduleFailedEventDetails`](crate::model::ActivityScheduleFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`ActivityScheduleFailedEventDetails`](crate::model::ActivityScheduleFailedEventDetails).
     pub fn builder() -> crate::model::activity_schedule_failed_event_details::Builder {
         crate::model::activity_schedule_failed_event_details::Builder::default()
     }
@@ -5065,8 +5164,10 @@ impl ActivityScheduleFailedEventDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityFailedEventDetails {
     /// <p>The error code of the failure.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>A more detailed explanation of the cause of the failure.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
 }
 impl ActivityFailedEventDetails {
@@ -5087,11 +5188,10 @@ impl std::fmt::Debug for ActivityFailedEventDetails {
         formatter.finish()
     }
 }
-/// See [`ActivityFailedEventDetails`](crate::model::ActivityFailedEventDetails)
+/// See [`ActivityFailedEventDetails`](crate::model::ActivityFailedEventDetails).
 pub mod activity_failed_event_details {
 
-    /// A builder for [`ActivityFailedEventDetails`](crate::model::ActivityFailedEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`ActivityFailedEventDetails`](crate::model::ActivityFailedEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<std::string::String>,
@@ -5118,7 +5218,7 @@ pub mod activity_failed_event_details {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityFailedEventDetails`](crate::model::ActivityFailedEventDetails)
+        /// Consumes the builder and constructs a [`ActivityFailedEventDetails`](crate::model::ActivityFailedEventDetails).
         pub fn build(self) -> crate::model::ActivityFailedEventDetails {
             crate::model::ActivityFailedEventDetails {
                 error: self.error,
@@ -5128,7 +5228,7 @@ pub mod activity_failed_event_details {
     }
 }
 impl ActivityFailedEventDetails {
-    /// Creates a new builder-style object to manufacture [`ActivityFailedEventDetails`](crate::model::ActivityFailedEventDetails)
+    /// Creates a new builder-style object to manufacture [`ActivityFailedEventDetails`](crate::model::ActivityFailedEventDetails).
     pub fn builder() -> crate::model::activity_failed_event_details::Builder {
         crate::model::activity_failed_event_details::Builder::default()
     }

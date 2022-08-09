@@ -6,6 +6,7 @@ pub struct StartConfigurationSessionOutput {
     /// <p>Token encapsulating state about the configuration session. Provide this token to the <code>GetLatestConfiguration</code> API to retrieve configuration data.</p> <important>
     /// <p>This token should only be used once in your first call to <code>GetLatestConfiguration</code>. You MUST use the new token in the <code>GetLatestConfiguration</code> response (<code>NextPollConfigurationToken</code>) in each subsequent call to <code>GetLatestConfiguration</code>.</p>
     /// </important>
+    #[doc(hidden)]
     pub initial_configuration_token: std::option::Option<std::string::String>,
 }
 impl StartConfigurationSessionOutput {
@@ -26,11 +27,10 @@ impl std::fmt::Debug for StartConfigurationSessionOutput {
         formatter.finish()
     }
 }
-/// See [`StartConfigurationSessionOutput`](crate::output::StartConfigurationSessionOutput)
+/// See [`StartConfigurationSessionOutput`](crate::output::StartConfigurationSessionOutput).
 pub mod start_configuration_session_output {
 
-    /// A builder for [`StartConfigurationSessionOutput`](crate::output::StartConfigurationSessionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartConfigurationSessionOutput`](crate::output::StartConfigurationSessionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) initial_configuration_token: std::option::Option<std::string::String>,
@@ -56,7 +56,7 @@ pub mod start_configuration_session_output {
             self.initial_configuration_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartConfigurationSessionOutput`](crate::output::StartConfigurationSessionOutput)
+        /// Consumes the builder and constructs a [`StartConfigurationSessionOutput`](crate::output::StartConfigurationSessionOutput).
         pub fn build(self) -> crate::output::StartConfigurationSessionOutput {
             crate::output::StartConfigurationSessionOutput {
                 initial_configuration_token: self.initial_configuration_token,
@@ -65,7 +65,7 @@ pub mod start_configuration_session_output {
     }
 }
 impl StartConfigurationSessionOutput {
-    /// Creates a new builder-style object to manufacture [`StartConfigurationSessionOutput`](crate::output::StartConfigurationSessionOutput)
+    /// Creates a new builder-style object to manufacture [`StartConfigurationSessionOutput`](crate::output::StartConfigurationSessionOutput).
     pub fn builder() -> crate::output::start_configuration_session_output::Builder {
         crate::output::start_configuration_session_output::Builder::default()
     }
@@ -76,12 +76,16 @@ impl StartConfigurationSessionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLatestConfigurationOutput {
     /// <p>The latest token describing the current state of the configuration session. This MUST be provided to the next call to <code>GetLatestConfiguration.</code> </p>
+    #[doc(hidden)]
     pub next_poll_configuration_token: std::option::Option<std::string::String>,
     /// <p>The amount of time the client should wait before polling for configuration updates again. Use <code>RequiredMinimumPollIntervalInSeconds</code> to set the desired poll interval.</p>
+    #[doc(hidden)]
     pub next_poll_interval_in_seconds: i32,
     /// <p>A standard MIME type describing the format of the configuration content.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The data of the configuration. This may be empty if the client already has the latest version of configuration.</p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<aws_smithy_types::Blob>,
 }
 impl GetLatestConfigurationOutput {
@@ -118,11 +122,10 @@ impl std::fmt::Debug for GetLatestConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetLatestConfigurationOutput`](crate::output::GetLatestConfigurationOutput)
+/// See [`GetLatestConfigurationOutput`](crate::output::GetLatestConfigurationOutput).
 pub mod get_latest_configuration_output {
 
-    /// A builder for [`GetLatestConfigurationOutput`](crate::output::GetLatestConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLatestConfigurationOutput`](crate::output::GetLatestConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_poll_configuration_token: std::option::Option<std::string::String>,
@@ -183,7 +186,7 @@ pub mod get_latest_configuration_output {
             self.configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLatestConfigurationOutput`](crate::output::GetLatestConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetLatestConfigurationOutput`](crate::output::GetLatestConfigurationOutput).
         pub fn build(self) -> crate::output::GetLatestConfigurationOutput {
             crate::output::GetLatestConfigurationOutput {
                 next_poll_configuration_token: self.next_poll_configuration_token,
@@ -197,7 +200,7 @@ pub mod get_latest_configuration_output {
     }
 }
 impl GetLatestConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetLatestConfigurationOutput`](crate::output::GetLatestConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetLatestConfigurationOutput`](crate::output::GetLatestConfigurationOutput).
     pub fn builder() -> crate::output::get_latest_configuration_output::Builder {
         crate::output::get_latest_configuration_output::Builder::default()
     }

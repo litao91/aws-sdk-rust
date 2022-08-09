@@ -6,8 +6,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PredictedItem {
     /// <p>The recommended item ID.</p>
+    #[doc(hidden)]
     pub item_id: std::option::Option<std::string::String>,
     /// <p>A numeric representation of the model's certainty that the item will be the next user selection. For more information on scoring logic, see <code>how-scores-work</code>.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f64>,
 }
 impl PredictedItem {
@@ -28,11 +30,10 @@ impl std::fmt::Debug for PredictedItem {
         formatter.finish()
     }
 }
-/// See [`PredictedItem`](crate::model::PredictedItem)
+/// See [`PredictedItem`](crate::model::PredictedItem).
 pub mod predicted_item {
 
-    /// A builder for [`PredictedItem`](crate::model::PredictedItem)
-    #[non_exhaustive]
+    /// A builder for [`PredictedItem`](crate::model::PredictedItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item_id: std::option::Option<std::string::String>,
@@ -59,7 +60,7 @@ pub mod predicted_item {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictedItem`](crate::model::PredictedItem)
+        /// Consumes the builder and constructs a [`PredictedItem`](crate::model::PredictedItem).
         pub fn build(self) -> crate::model::PredictedItem {
             crate::model::PredictedItem {
                 item_id: self.item_id,
@@ -69,7 +70,7 @@ pub mod predicted_item {
     }
 }
 impl PredictedItem {
-    /// Creates a new builder-style object to manufacture [`PredictedItem`](crate::model::PredictedItem)
+    /// Creates a new builder-style object to manufacture [`PredictedItem`](crate::model::PredictedItem).
     pub fn builder() -> crate::model::predicted_item::Builder {
         crate::model::predicted_item::Builder::default()
     }

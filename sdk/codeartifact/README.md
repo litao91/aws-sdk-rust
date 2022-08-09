@@ -31,6 +31,7 @@ CodeArtifact supports these operations:
   - DeleteRepository: Deletes a repository.
   - DeleteRepositoryPermissionsPolicy: Deletes the resource policy that is set on a repository.
   - DescribeDomain: Returns a DomainDescription object that contains information about the requested domain.
+  - DescribePackage: Returns a [PackageDescription](https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageDescription.html) object that contains details about a package.
   - DescribePackageVersion: Returns a [PackageVersionDescription](https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionDescription.html) object that contains details about a package version.
   - DescribeRepository: Returns a RepositoryDescription object that contains detailed information about the requested repository.
   - DisposePackageVersions: Disposes versions of a package. A package version with the status Disposed cannot be restored because they have been permanently removed from storage.
@@ -54,6 +55,7 @@ CodeArtifact supports these operations:
   - ListRepositories: Returns a list of repositories owned by the Amazon Web Services account that called this method.
   - ListRepositoriesInDomain: Returns a list of the repositories in a domain.
   - PutDomainPermissionsPolicy: Attaches a resource policy to a domain.
+  - PutPackageOriginConfiguration: Sets the package origin configuration for a package, which determine how new versions of the package can be added to a specific repository.
   - PutRepositoryPermissionsPolicy: Sets the resource policy on a repository that specifies permissions to access it.
   - UpdatePackageVersionsStatus: Updates the status of one or more versions of a package.
   - UpdateRepository: Updates the properties of a repository.
@@ -69,10 +71,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-codeartifact = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-codeartifact = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_codeartifact as codeartifact;
+
+#[tokio::main]
+async fn main() -> Result<(), codeartifact::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = codeartifact::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-codeartifact/latest/aws_sdk_codeartifact/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

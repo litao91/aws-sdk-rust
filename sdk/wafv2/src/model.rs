@@ -379,6 +379,7 @@ impl AsRef<str> for ParameterExceptionField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaptchaConfig {
     /// <p>Determines how long a <code>CAPTCHA</code> token remains valid after the client successfully solves a <code>CAPTCHA</code> puzzle. </p>
+    #[doc(hidden)]
     pub immunity_time_property: std::option::Option<crate::model::ImmunityTimeProperty>,
 }
 impl CaptchaConfig {
@@ -396,11 +397,10 @@ impl std::fmt::Debug for CaptchaConfig {
         formatter.finish()
     }
 }
-/// See [`CaptchaConfig`](crate::model::CaptchaConfig)
+/// See [`CaptchaConfig`](crate::model::CaptchaConfig).
 pub mod captcha_config {
 
-    /// A builder for [`CaptchaConfig`](crate::model::CaptchaConfig)
-    #[non_exhaustive]
+    /// A builder for [`CaptchaConfig`](crate::model::CaptchaConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) immunity_time_property: std::option::Option<crate::model::ImmunityTimeProperty>,
@@ -419,7 +419,7 @@ pub mod captcha_config {
             self.immunity_time_property = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptchaConfig`](crate::model::CaptchaConfig)
+        /// Consumes the builder and constructs a [`CaptchaConfig`](crate::model::CaptchaConfig).
         pub fn build(self) -> crate::model::CaptchaConfig {
             crate::model::CaptchaConfig {
                 immunity_time_property: self.immunity_time_property,
@@ -428,7 +428,7 @@ pub mod captcha_config {
     }
 }
 impl CaptchaConfig {
-    /// Creates a new builder-style object to manufacture [`CaptchaConfig`](crate::model::CaptchaConfig)
+    /// Creates a new builder-style object to manufacture [`CaptchaConfig`](crate::model::CaptchaConfig).
     pub fn builder() -> crate::model::captcha_config::Builder {
         crate::model::captcha_config::Builder::default()
     }
@@ -439,6 +439,7 @@ impl CaptchaConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImmunityTimeProperty {
     /// <p>The amount of time, in seconds, that a <code>CAPTCHA</code> token is valid. The default setting is 300.</p>
+    #[doc(hidden)]
     pub immunity_time: std::option::Option<i64>,
 }
 impl ImmunityTimeProperty {
@@ -454,11 +455,10 @@ impl std::fmt::Debug for ImmunityTimeProperty {
         formatter.finish()
     }
 }
-/// See [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty)
+/// See [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty).
 pub mod immunity_time_property {
 
-    /// A builder for [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty)
-    #[non_exhaustive]
+    /// A builder for [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) immunity_time: std::option::Option<i64>,
@@ -474,7 +474,7 @@ pub mod immunity_time_property {
             self.immunity_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty)
+        /// Consumes the builder and constructs a [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty).
         pub fn build(self) -> crate::model::ImmunityTimeProperty {
             crate::model::ImmunityTimeProperty {
                 immunity_time: self.immunity_time,
@@ -483,7 +483,7 @@ pub mod immunity_time_property {
     }
 }
 impl ImmunityTimeProperty {
-    /// Creates a new builder-style object to manufacture [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty)
+    /// Creates a new builder-style object to manufacture [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty).
     pub fn builder() -> crate::model::immunity_time_property::Builder {
         crate::model::immunity_time_property::Builder::default()
     }
@@ -494,10 +494,12 @@ impl ImmunityTimeProperty {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomResponseBody {
     /// <p>The type of content in the payload that you are defining in the <code>Content</code> string.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<crate::model::ResponseContentType>,
     /// <p>The payload of the custom response. </p>
     /// <p>You can use JSON escape strings in JSON content. To do this, you must specify JSON content in the <code>ContentType</code> setting. </p>
     /// <p>For information about the limits on count and size for custom request and response settings, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
 }
 impl CustomResponseBody {
@@ -520,11 +522,10 @@ impl std::fmt::Debug for CustomResponseBody {
         formatter.finish()
     }
 }
-/// See [`CustomResponseBody`](crate::model::CustomResponseBody)
+/// See [`CustomResponseBody`](crate::model::CustomResponseBody).
 pub mod custom_response_body {
 
-    /// A builder for [`CustomResponseBody`](crate::model::CustomResponseBody)
-    #[non_exhaustive]
+    /// A builder for [`CustomResponseBody`](crate::model::CustomResponseBody).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<crate::model::ResponseContentType>,
@@ -558,7 +559,7 @@ pub mod custom_response_body {
             self.content = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomResponseBody`](crate::model::CustomResponseBody)
+        /// Consumes the builder and constructs a [`CustomResponseBody`](crate::model::CustomResponseBody).
         pub fn build(self) -> crate::model::CustomResponseBody {
             crate::model::CustomResponseBody {
                 content_type: self.content_type,
@@ -568,7 +569,7 @@ pub mod custom_response_body {
     }
 }
 impl CustomResponseBody {
-    /// Creates a new builder-style object to manufacture [`CustomResponseBody`](crate::model::CustomResponseBody)
+    /// Creates a new builder-style object to manufacture [`CustomResponseBody`](crate::model::CustomResponseBody).
     pub fn builder() -> crate::model::custom_response_body::Builder {
         crate::model::custom_response_body::Builder::default()
     }
@@ -638,10 +639,13 @@ impl AsRef<str> for ResponseContentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VisibilityConfig {
     /// <p>A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the WAF console. </p>
+    #[doc(hidden)]
     pub sampled_requests_enabled: bool,
     /// <p>A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of available metrics, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF Metrics</a>.</p>
+    #[doc(hidden)]
     pub cloud_watch_metrics_enabled: bool,
-    /// <p>A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names reserved for WAF, for example "All" and "Default_Action." </p>
+    /// <p>A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names reserved for WAF, for example <code>All</code> and <code>Default_Action</code>. </p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
 }
 impl VisibilityConfig {
@@ -653,7 +657,7 @@ impl VisibilityConfig {
     pub fn cloud_watch_metrics_enabled(&self) -> bool {
         self.cloud_watch_metrics_enabled
     }
-    /// <p>A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names reserved for WAF, for example "All" and "Default_Action." </p>
+    /// <p>A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names reserved for WAF, for example <code>All</code> and <code>Default_Action</code>. </p>
     pub fn metric_name(&self) -> std::option::Option<&str> {
         self.metric_name.as_deref()
     }
@@ -670,11 +674,10 @@ impl std::fmt::Debug for VisibilityConfig {
         formatter.finish()
     }
 }
-/// See [`VisibilityConfig`](crate::model::VisibilityConfig)
+/// See [`VisibilityConfig`](crate::model::VisibilityConfig).
 pub mod visibility_config {
 
-    /// A builder for [`VisibilityConfig`](crate::model::VisibilityConfig)
-    #[non_exhaustive]
+    /// A builder for [`VisibilityConfig`](crate::model::VisibilityConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sampled_requests_enabled: std::option::Option<bool>,
@@ -702,17 +705,17 @@ pub mod visibility_config {
             self.cloud_watch_metrics_enabled = input;
             self
         }
-        /// <p>A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names reserved for WAF, for example "All" and "Default_Action." </p>
+        /// <p>A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names reserved for WAF, for example <code>All</code> and <code>Default_Action</code>. </p>
         pub fn metric_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.metric_name = Some(input.into());
             self
         }
-        /// <p>A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names reserved for WAF, for example "All" and "Default_Action." </p>
+        /// <p>A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names reserved for WAF, for example <code>All</code> and <code>Default_Action</code>. </p>
         pub fn set_metric_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.metric_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`VisibilityConfig`](crate::model::VisibilityConfig)
+        /// Consumes the builder and constructs a [`VisibilityConfig`](crate::model::VisibilityConfig).
         pub fn build(self) -> crate::model::VisibilityConfig {
             crate::model::VisibilityConfig {
                 sampled_requests_enabled: self.sampled_requests_enabled.unwrap_or_default(),
@@ -723,7 +726,7 @@ pub mod visibility_config {
     }
 }
 impl VisibilityConfig {
-    /// Creates a new builder-style object to manufacture [`VisibilityConfig`](crate::model::VisibilityConfig)
+    /// Creates a new builder-style object to manufacture [`VisibilityConfig`](crate::model::VisibilityConfig).
     pub fn builder() -> crate::model::visibility_config::Builder {
         crate::model::visibility_config::Builder::default()
     }
@@ -734,10 +737,13 @@ impl VisibilityConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Rule {
     /// <p>The name of the rule. You can't change the name of a <code>Rule</code> after you create it. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>If you define more than one <code>Rule</code> in a <code>WebACL</code>, WAF evaluates each request against the <code>Rules</code> in order based on the value of <code>Priority</code>. WAF processes rules with lower priority first. The priorities don't need to be consecutive, but they must all be different.</p>
+    #[doc(hidden)]
     pub priority: i32,
     /// <p>The WAF processing statement for the rule, for example <code>ByteMatchStatement</code> or <code>SizeConstraintStatement</code>. </p>
+    #[doc(hidden)]
     pub statement: std::option::Option<crate::model::Statement>,
     /// <p>The action that WAF should take on a web request when it matches the rule statement. Settings at the web ACL level can override the rule action setting. </p>
     /// <p>This is used only for rules whose statements do not reference a rule group. Rule statements that reference a rule group include <code>RuleGroupReferenceStatement</code> and <code>ManagedRuleGroupStatement</code>. </p>
@@ -746,11 +752,13 @@ pub struct Rule {
     /// <li> <p>If the rule statement does not reference a rule group, use this rule action setting and not the rule override action setting. </p> </li>
     /// <li> <p>If the rule statement references a rule group, use the override action setting and not this action setting. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::RuleAction>,
     /// <p>The action to use in the place of the action that results from the rule group evaluation. Set the override action to none to leave the result of the rule group alone. Set it to count to override the result to count only. </p>
     /// <p>You can only use this for rule statements that reference a rule group, like <code>RuleGroupReferenceStatement</code> and <code>ManagedRuleGroupStatement</code>. </p> <note>
     /// <p>This option is usually set to none. It does not affect how the rules in the rule group are evaluated. If you want the rules in the rule group to only count matches, do not use this and instead exclude those rules in your rule group reference statement settings. </p>
     /// </note>
+    #[doc(hidden)]
     pub override_action: std::option::Option<crate::model::OverrideAction>,
     /// <p>Labels to apply to web requests that match the rule match statement. WAF applies fully qualified labels to matching web requests. A fully qualified label is the concatenation of a label namespace and a rule label. The rule's rule group or web ACL defines the label namespace. </p>
     /// <p>Rules that run after this rule in the web ACL can match against these labels using a <code>LabelMatchStatement</code>.</p>
@@ -762,10 +770,13 @@ pub struct Rule {
     /// <li> <p>Don't use the following reserved words in your label specification: <code>aws</code>, <code>waf</code>, <code>managed</code>, <code>rulegroup</code>, <code>webacl</code>, <code>regexpatternset</code>, or <code>ipset</code>.</p> </li>
     /// </ul>
     /// <p>For example, <code>myLabelName</code> or <code>nameSpace1:nameSpace2:myLabelName</code>. </p>
+    #[doc(hidden)]
     pub rule_labels: std::option::Option<std::vec::Vec<crate::model::Label>>,
     /// <p>Defines and enables Amazon CloudWatch metrics and web request sample collection. </p>
+    #[doc(hidden)]
     pub visibility_config: std::option::Option<crate::model::VisibilityConfig>,
     /// <p>Specifies how WAF should handle <code>CAPTCHA</code> evaluations. If you don't specify this, WAF uses the <code>CAPTCHA</code> configuration that's defined for the web ACL. </p>
+    #[doc(hidden)]
     pub captcha_config: std::option::Option<crate::model::CaptchaConfig>,
 }
 impl Rule {
@@ -834,11 +845,10 @@ impl std::fmt::Debug for Rule {
         formatter.finish()
     }
 }
-/// See [`Rule`](crate::model::Rule)
+/// See [`Rule`](crate::model::Rule).
 pub mod rule {
 
-    /// A builder for [`Rule`](crate::model::Rule)
-    #[non_exhaustive]
+    /// A builder for [`Rule`](crate::model::Rule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -988,7 +998,7 @@ pub mod rule {
             self.captcha_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule)
+        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule).
         pub fn build(self) -> crate::model::Rule {
             crate::model::Rule {
                 name: self.name,
@@ -1004,7 +1014,7 @@ pub mod rule {
     }
 }
 impl Rule {
-    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule)
+    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule).
     pub fn builder() -> crate::model::rule::Builder {
         crate::model::rule::Builder::default()
     }
@@ -1015,6 +1025,7 @@ impl Rule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Label {
     /// <p>The label string. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl Label {
@@ -1030,11 +1041,10 @@ impl std::fmt::Debug for Label {
         formatter.finish()
     }
 }
-/// See [`Label`](crate::model::Label)
+/// See [`Label`](crate::model::Label).
 pub mod label {
 
-    /// A builder for [`Label`](crate::model::Label)
-    #[non_exhaustive]
+    /// A builder for [`Label`](crate::model::Label).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1050,14 +1060,14 @@ pub mod label {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Label`](crate::model::Label)
+        /// Consumes the builder and constructs a [`Label`](crate::model::Label).
         pub fn build(self) -> crate::model::Label {
             crate::model::Label { name: self.name }
         }
     }
 }
 impl Label {
-    /// Creates a new builder-style object to manufacture [`Label`](crate::model::Label)
+    /// Creates a new builder-style object to manufacture [`Label`](crate::model::Label).
     pub fn builder() -> crate::model::label::Builder {
         crate::model::label::Builder::default()
     }
@@ -1073,8 +1083,10 @@ pub struct OverrideAction {
     /// <p>Override the rule group evaluation result to count only. </p> <note>
     /// <p>This option is usually set to none. It does not affect how the rules in the rule group are evaluated. If you want the rules in the rule group to only count matches, do not use this and instead exclude those rules in your rule group reference statement settings. </p>
     /// </note>
+    #[doc(hidden)]
     pub count: std::option::Option<crate::model::CountAction>,
     /// <p>Don't override the rule group evaluation result. This is the most common setting.</p>
+    #[doc(hidden)]
     pub none: std::option::Option<crate::model::NoneAction>,
 }
 impl OverrideAction {
@@ -1097,11 +1109,10 @@ impl std::fmt::Debug for OverrideAction {
         formatter.finish()
     }
 }
-/// See [`OverrideAction`](crate::model::OverrideAction)
+/// See [`OverrideAction`](crate::model::OverrideAction).
 pub mod override_action {
 
-    /// A builder for [`OverrideAction`](crate::model::OverrideAction)
-    #[non_exhaustive]
+    /// A builder for [`OverrideAction`](crate::model::OverrideAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count: std::option::Option<crate::model::CountAction>,
@@ -1132,7 +1143,7 @@ pub mod override_action {
             self.none = input;
             self
         }
-        /// Consumes the builder and constructs a [`OverrideAction`](crate::model::OverrideAction)
+        /// Consumes the builder and constructs a [`OverrideAction`](crate::model::OverrideAction).
         pub fn build(self) -> crate::model::OverrideAction {
             crate::model::OverrideAction {
                 count: self.count,
@@ -1142,7 +1153,7 @@ pub mod override_action {
     }
 }
 impl OverrideAction {
-    /// Creates a new builder-style object to manufacture [`OverrideAction`](crate::model::OverrideAction)
+    /// Creates a new builder-style object to manufacture [`OverrideAction`](crate::model::OverrideAction).
     pub fn builder() -> crate::model::override_action::Builder {
         crate::model::override_action::Builder::default()
     }
@@ -1160,22 +1171,21 @@ impl std::fmt::Debug for NoneAction {
         formatter.finish()
     }
 }
-/// See [`NoneAction`](crate::model::NoneAction)
+/// See [`NoneAction`](crate::model::NoneAction).
 pub mod none_action {
 
-    /// A builder for [`NoneAction`](crate::model::NoneAction)
-    #[non_exhaustive]
+    /// A builder for [`NoneAction`](crate::model::NoneAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`NoneAction`](crate::model::NoneAction)
+        /// Consumes the builder and constructs a [`NoneAction`](crate::model::NoneAction).
         pub fn build(self) -> crate::model::NoneAction {
             crate::model::NoneAction {}
         }
     }
 }
 impl NoneAction {
-    /// Creates a new builder-style object to manufacture [`NoneAction`](crate::model::NoneAction)
+    /// Creates a new builder-style object to manufacture [`NoneAction`](crate::model::NoneAction).
     pub fn builder() -> crate::model::none_action::Builder {
         crate::model::none_action::Builder::default()
     }
@@ -1188,6 +1198,7 @@ impl NoneAction {
 pub struct CountAction {
     /// <p>Defines custom handling for the web request.</p>
     /// <p>For information about customizing web requests and responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web requests and responses in WAF</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub custom_request_handling: std::option::Option<crate::model::CustomRequestHandling>,
 }
 impl CountAction {
@@ -1206,11 +1217,10 @@ impl std::fmt::Debug for CountAction {
         formatter.finish()
     }
 }
-/// See [`CountAction`](crate::model::CountAction)
+/// See [`CountAction`](crate::model::CountAction).
 pub mod count_action {
 
-    /// A builder for [`CountAction`](crate::model::CountAction)
-    #[non_exhaustive]
+    /// A builder for [`CountAction`](crate::model::CountAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_request_handling:
@@ -1235,7 +1245,7 @@ pub mod count_action {
             self.custom_request_handling = input;
             self
         }
-        /// Consumes the builder and constructs a [`CountAction`](crate::model::CountAction)
+        /// Consumes the builder and constructs a [`CountAction`](crate::model::CountAction).
         pub fn build(self) -> crate::model::CountAction {
             crate::model::CountAction {
                 custom_request_handling: self.custom_request_handling,
@@ -1244,7 +1254,7 @@ pub mod count_action {
     }
 }
 impl CountAction {
-    /// Creates a new builder-style object to manufacture [`CountAction`](crate::model::CountAction)
+    /// Creates a new builder-style object to manufacture [`CountAction`](crate::model::CountAction).
     pub fn builder() -> crate::model::count_action::Builder {
         crate::model::count_action::Builder::default()
     }
@@ -1257,6 +1267,7 @@ impl CountAction {
 pub struct CustomRequestHandling {
     /// <p>The HTTP headers to insert into the request. Duplicate header names are not allowed. </p>
     /// <p>For information about the limits on count and size for custom request and response settings, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub insert_headers: std::option::Option<std::vec::Vec<crate::model::CustomHttpHeader>>,
 }
 impl CustomRequestHandling {
@@ -1273,11 +1284,10 @@ impl std::fmt::Debug for CustomRequestHandling {
         formatter.finish()
     }
 }
-/// See [`CustomRequestHandling`](crate::model::CustomRequestHandling)
+/// See [`CustomRequestHandling`](crate::model::CustomRequestHandling).
 pub mod custom_request_handling {
 
-    /// A builder for [`CustomRequestHandling`](crate::model::CustomRequestHandling)
-    #[non_exhaustive]
+    /// A builder for [`CustomRequestHandling`](crate::model::CustomRequestHandling).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) insert_headers:
@@ -1305,7 +1315,7 @@ pub mod custom_request_handling {
             self.insert_headers = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomRequestHandling`](crate::model::CustomRequestHandling)
+        /// Consumes the builder and constructs a [`CustomRequestHandling`](crate::model::CustomRequestHandling).
         pub fn build(self) -> crate::model::CustomRequestHandling {
             crate::model::CustomRequestHandling {
                 insert_headers: self.insert_headers,
@@ -1314,7 +1324,7 @@ pub mod custom_request_handling {
     }
 }
 impl CustomRequestHandling {
-    /// Creates a new builder-style object to manufacture [`CustomRequestHandling`](crate::model::CustomRequestHandling)
+    /// Creates a new builder-style object to manufacture [`CustomRequestHandling`](crate::model::CustomRequestHandling).
     pub fn builder() -> crate::model::custom_request_handling::Builder {
         crate::model::custom_request_handling::Builder::default()
     }
@@ -1326,8 +1336,10 @@ impl CustomRequestHandling {
 pub struct CustomHttpHeader {
     /// <p>The name of the custom header. </p>
     /// <p>For custom request header insertion, when WAF inserts the header into the request, it prefixes this name <code>x-amzn-waf-</code>, to avoid confusion with the headers that are already in the request. For example, for the header name <code>sample</code>, WAF inserts the header <code>x-amzn-waf-sample</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the custom header.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl CustomHttpHeader {
@@ -1349,11 +1361,10 @@ impl std::fmt::Debug for CustomHttpHeader {
         formatter.finish()
     }
 }
-/// See [`CustomHttpHeader`](crate::model::CustomHttpHeader)
+/// See [`CustomHttpHeader`](crate::model::CustomHttpHeader).
 pub mod custom_http_header {
 
-    /// A builder for [`CustomHttpHeader`](crate::model::CustomHttpHeader)
-    #[non_exhaustive]
+    /// A builder for [`CustomHttpHeader`](crate::model::CustomHttpHeader).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1382,7 +1393,7 @@ pub mod custom_http_header {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomHttpHeader`](crate::model::CustomHttpHeader)
+        /// Consumes the builder and constructs a [`CustomHttpHeader`](crate::model::CustomHttpHeader).
         pub fn build(self) -> crate::model::CustomHttpHeader {
             crate::model::CustomHttpHeader {
                 name: self.name,
@@ -1392,7 +1403,7 @@ pub mod custom_http_header {
     }
 }
 impl CustomHttpHeader {
-    /// Creates a new builder-style object to manufacture [`CustomHttpHeader`](crate::model::CustomHttpHeader)
+    /// Creates a new builder-style object to manufacture [`CustomHttpHeader`](crate::model::CustomHttpHeader).
     pub fn builder() -> crate::model::custom_http_header::Builder {
         crate::model::custom_http_header::Builder::default()
     }
@@ -1403,12 +1414,16 @@ impl CustomHttpHeader {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleAction {
     /// <p>Instructs WAF to block the web request.</p>
+    #[doc(hidden)]
     pub block: std::option::Option<crate::model::BlockAction>,
     /// <p>Instructs WAF to allow the web request.</p>
+    #[doc(hidden)]
     pub allow: std::option::Option<crate::model::AllowAction>,
     /// <p>Instructs WAF to count the web request and allow it.</p>
+    #[doc(hidden)]
     pub count: std::option::Option<crate::model::CountAction>,
     /// <p>Instructs WAF to run a <code>CAPTCHA</code> check against the web request.</p>
+    #[doc(hidden)]
     pub captcha: std::option::Option<crate::model::CaptchaAction>,
 }
 impl RuleAction {
@@ -1439,11 +1454,10 @@ impl std::fmt::Debug for RuleAction {
         formatter.finish()
     }
 }
-/// See [`RuleAction`](crate::model::RuleAction)
+/// See [`RuleAction`](crate::model::RuleAction).
 pub mod rule_action {
 
-    /// A builder for [`RuleAction`](crate::model::RuleAction)
-    #[non_exhaustive]
+    /// A builder for [`RuleAction`](crate::model::RuleAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block: std::option::Option<crate::model::BlockAction>,
@@ -1495,7 +1509,7 @@ pub mod rule_action {
             self.captcha = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleAction`](crate::model::RuleAction)
+        /// Consumes the builder and constructs a [`RuleAction`](crate::model::RuleAction).
         pub fn build(self) -> crate::model::RuleAction {
             crate::model::RuleAction {
                 block: self.block,
@@ -1507,7 +1521,7 @@ pub mod rule_action {
     }
 }
 impl RuleAction {
-    /// Creates a new builder-style object to manufacture [`RuleAction`](crate::model::RuleAction)
+    /// Creates a new builder-style object to manufacture [`RuleAction`](crate::model::RuleAction).
     pub fn builder() -> crate::model::rule_action::Builder {
         crate::model::rule_action::Builder::default()
     }
@@ -1525,12 +1539,12 @@ impl RuleAction {
 /// </ul>
 /// <p>You can configure the expiration time in the <code>CaptchaConfig</code> <code>ImmunityTimeProperty</code> setting at the rule and web ACL level. The rule setting overrides the web ACL setting. </p>
 /// <p>This action option is available for rules. It isn't available for web ACL default actions. </p>
-/// <p>This is used in the context of other settings, for example to specify values for <code>RuleAction</code> and web ACL <code>DefaultAction</code>. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaptchaAction {
     /// <p>Defines custom handling for the web request.</p>
     /// <p>For information about customizing web requests and responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web requests and responses in WAF</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub custom_request_handling: std::option::Option<crate::model::CustomRequestHandling>,
 }
 impl CaptchaAction {
@@ -1549,11 +1563,10 @@ impl std::fmt::Debug for CaptchaAction {
         formatter.finish()
     }
 }
-/// See [`CaptchaAction`](crate::model::CaptchaAction)
+/// See [`CaptchaAction`](crate::model::CaptchaAction).
 pub mod captcha_action {
 
-    /// A builder for [`CaptchaAction`](crate::model::CaptchaAction)
-    #[non_exhaustive]
+    /// A builder for [`CaptchaAction`](crate::model::CaptchaAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_request_handling:
@@ -1578,7 +1591,7 @@ pub mod captcha_action {
             self.custom_request_handling = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptchaAction`](crate::model::CaptchaAction)
+        /// Consumes the builder and constructs a [`CaptchaAction`](crate::model::CaptchaAction).
         pub fn build(self) -> crate::model::CaptchaAction {
             crate::model::CaptchaAction {
                 custom_request_handling: self.custom_request_handling,
@@ -1587,7 +1600,7 @@ pub mod captcha_action {
     }
 }
 impl CaptchaAction {
-    /// Creates a new builder-style object to manufacture [`CaptchaAction`](crate::model::CaptchaAction)
+    /// Creates a new builder-style object to manufacture [`CaptchaAction`](crate::model::CaptchaAction).
     pub fn builder() -> crate::model::captcha_action::Builder {
         crate::model::captcha_action::Builder::default()
     }
@@ -1600,6 +1613,7 @@ impl CaptchaAction {
 pub struct AllowAction {
     /// <p>Defines custom handling for the web request.</p>
     /// <p>For information about customizing web requests and responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web requests and responses in WAF</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub custom_request_handling: std::option::Option<crate::model::CustomRequestHandling>,
 }
 impl AllowAction {
@@ -1618,11 +1632,10 @@ impl std::fmt::Debug for AllowAction {
         formatter.finish()
     }
 }
-/// See [`AllowAction`](crate::model::AllowAction)
+/// See [`AllowAction`](crate::model::AllowAction).
 pub mod allow_action {
 
-    /// A builder for [`AllowAction`](crate::model::AllowAction)
-    #[non_exhaustive]
+    /// A builder for [`AllowAction`](crate::model::AllowAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_request_handling:
@@ -1647,7 +1660,7 @@ pub mod allow_action {
             self.custom_request_handling = input;
             self
         }
-        /// Consumes the builder and constructs a [`AllowAction`](crate::model::AllowAction)
+        /// Consumes the builder and constructs a [`AllowAction`](crate::model::AllowAction).
         pub fn build(self) -> crate::model::AllowAction {
             crate::model::AllowAction {
                 custom_request_handling: self.custom_request_handling,
@@ -1656,7 +1669,7 @@ pub mod allow_action {
     }
 }
 impl AllowAction {
-    /// Creates a new builder-style object to manufacture [`AllowAction`](crate::model::AllowAction)
+    /// Creates a new builder-style object to manufacture [`AllowAction`](crate::model::AllowAction).
     pub fn builder() -> crate::model::allow_action::Builder {
         crate::model::allow_action::Builder::default()
     }
@@ -1669,6 +1682,7 @@ impl AllowAction {
 pub struct BlockAction {
     /// <p>Defines a custom response for the web request.</p>
     /// <p>For information about customizing web requests and responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web requests and responses in WAF</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub custom_response: std::option::Option<crate::model::CustomResponse>,
 }
 impl BlockAction {
@@ -1685,11 +1699,10 @@ impl std::fmt::Debug for BlockAction {
         formatter.finish()
     }
 }
-/// See [`BlockAction`](crate::model::BlockAction)
+/// See [`BlockAction`](crate::model::BlockAction).
 pub mod block_action {
 
-    /// A builder for [`BlockAction`](crate::model::BlockAction)
-    #[non_exhaustive]
+    /// A builder for [`BlockAction`](crate::model::BlockAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_response: std::option::Option<crate::model::CustomResponse>,
@@ -1710,7 +1723,7 @@ pub mod block_action {
             self.custom_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`BlockAction`](crate::model::BlockAction)
+        /// Consumes the builder and constructs a [`BlockAction`](crate::model::BlockAction).
         pub fn build(self) -> crate::model::BlockAction {
             crate::model::BlockAction {
                 custom_response: self.custom_response,
@@ -1719,7 +1732,7 @@ pub mod block_action {
     }
 }
 impl BlockAction {
-    /// Creates a new builder-style object to manufacture [`BlockAction`](crate::model::BlockAction)
+    /// Creates a new builder-style object to manufacture [`BlockAction`](crate::model::BlockAction).
     pub fn builder() -> crate::model::block_action::Builder {
         crate::model::block_action::Builder::default()
     }
@@ -1731,17 +1744,20 @@ impl BlockAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomResponse {
     /// <p>The HTTP status code to return to the client. </p>
-    /// <p>For a list of status codes that you can use in your custom reqponses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html">Supported status codes for custom response</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    /// <p>For a list of status codes that you can use in your custom responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html">Supported status codes for custom response</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub response_code: std::option::Option<i32>,
     /// <p>References the response body that you want WAF to return to the web request client. You can define a custom response for a rule action or a default web ACL action that is set to block. To do this, you first define the response body key and value in the <code>CustomResponseBodies</code> setting for the <code>WebACL</code> or <code>RuleGroup</code> where you want to use it. Then, in the rule action or web ACL default action <code>BlockAction</code> setting, you reference the response body using this key. </p>
+    #[doc(hidden)]
     pub custom_response_body_key: std::option::Option<std::string::String>,
     /// <p>The HTTP headers to use in the response. Duplicate header names are not allowed. </p>
     /// <p>For information about the limits on count and size for custom request and response settings, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub response_headers: std::option::Option<std::vec::Vec<crate::model::CustomHttpHeader>>,
 }
 impl CustomResponse {
     /// <p>The HTTP status code to return to the client. </p>
-    /// <p>For a list of status codes that you can use in your custom reqponses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html">Supported status codes for custom response</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    /// <p>For a list of status codes that you can use in your custom responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html">Supported status codes for custom response</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
     pub fn response_code(&self) -> std::option::Option<i32> {
         self.response_code
     }
@@ -1764,11 +1780,10 @@ impl std::fmt::Debug for CustomResponse {
         formatter.finish()
     }
 }
-/// See [`CustomResponse`](crate::model::CustomResponse)
+/// See [`CustomResponse`](crate::model::CustomResponse).
 pub mod custom_response {
 
-    /// A builder for [`CustomResponse`](crate::model::CustomResponse)
-    #[non_exhaustive]
+    /// A builder for [`CustomResponse`](crate::model::CustomResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) response_code: std::option::Option<i32>,
@@ -1778,13 +1793,13 @@ pub mod custom_response {
     }
     impl Builder {
         /// <p>The HTTP status code to return to the client. </p>
-        /// <p>For a list of status codes that you can use in your custom reqponses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html">Supported status codes for custom response</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+        /// <p>For a list of status codes that you can use in your custom responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html">Supported status codes for custom response</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
         pub fn response_code(mut self, input: i32) -> Self {
             self.response_code = Some(input);
             self
         }
         /// <p>The HTTP status code to return to the client. </p>
-        /// <p>For a list of status codes that you can use in your custom reqponses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html">Supported status codes for custom response</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+        /// <p>For a list of status codes that you can use in your custom responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html">Supported status codes for custom response</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
         pub fn set_response_code(mut self, input: std::option::Option<i32>) -> Self {
             self.response_code = input;
             self
@@ -1823,7 +1838,7 @@ pub mod custom_response {
             self.response_headers = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomResponse`](crate::model::CustomResponse)
+        /// Consumes the builder and constructs a [`CustomResponse`](crate::model::CustomResponse).
         pub fn build(self) -> crate::model::CustomResponse {
             crate::model::CustomResponse {
                 response_code: self.response_code,
@@ -1834,37 +1849,46 @@ pub mod custom_response {
     }
 }
 impl CustomResponse {
-    /// Creates a new builder-style object to manufacture [`CustomResponse`](crate::model::CustomResponse)
+    /// Creates a new builder-style object to manufacture [`CustomResponse`](crate::model::CustomResponse).
     pub fn builder() -> crate::model::custom_response::Builder {
         crate::model::custom_response::Builder::default()
     }
 }
 
 /// <p>The processing guidance for a <code>Rule</code>, used by WAF to determine whether a web request matches the rule. </p>
+/// <p>For example specifications, see the examples section of <code>CreateWebACL</code>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Statement {
-    /// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is refered to as a string match statement.</p>
+    /// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is called a string match statement.</p>
+    #[doc(hidden)]
     pub byte_match_statement: std::option::Option<crate::model::ByteMatchStatement>,
-    /// <p>Attackers sometimes insert malicious SQL code into web requests in an effort to extract data from your database. To allow or block web requests that appear to contain malicious SQL code, create one or more SQL injection match conditions. An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want WAF to inspect. Later in the process, when you create a web ACL, you specify whether to allow or block requests that appear to contain malicious SQL code.</p>
+    /// <p>A rule statement that inspects for malicious SQL code. Attackers insert malicious SQL code into web requests to do things like modify your database or extract data from it. </p>
+    #[doc(hidden)]
     pub sqli_match_statement: std::option::Option<crate::model::SqliMatchStatement>,
-    /// <p>A rule statement that defines a cross-site scripting (XSS) match search for WAF to apply to web requests. XSS attacks are those where the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. The XSS match statement provides the location in requests that you want WAF to search and text transformations to use on the search area before WAF searches for character sequences that are likely to be malicious strings. </p>
+    /// <p>A rule statement that inspects for cross-site scripting (XSS) attacks. In XSS attacks, the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. </p>
+    #[doc(hidden)]
     pub xss_match_statement: std::option::Option<crate::model::XssMatchStatement>,
     /// <p>A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). For example, you can use a size constraint statement to look for query strings that are longer than 100 bytes. </p>
-    /// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you can create a size constraint condition and block requests that have a request body greater than 8192 bytes.</p>
+    /// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you could use a size constraint statement to block requests that have a request body greater than 8192 bytes.</p>
     /// <p>If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one character. For example, the URI <code>/logo.jpg</code> is nine characters long.</p>
+    #[doc(hidden)]
     pub size_constraint_statement: std::option::Option<crate::model::SizeConstraintStatement>,
     /// <p>A rule statement used to identify web requests based on country of origin. </p>
+    #[doc(hidden)]
     pub geo_match_statement: std::option::Option<crate::model::GeoMatchStatement>,
     /// <p>A rule statement used to run the rules that are defined in a <code>RuleGroup</code>. To use this, create a rule group with your rules, then provide the ARN of the rule group in this statement.</p>
     /// <p>You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the top level inside a web ACL. </p>
+    #[doc(hidden)]
     pub rule_group_reference_statement:
         std::option::Option<crate::model::RuleGroupReferenceStatement>,
     /// <p>A rule statement used to detect web requests coming from particular IP addresses or address ranges. To use this, create an <code>IPSet</code> that specifies the addresses you want to detect, then use the ARN of that set in this statement. To create an IP set, see <code>CreateIPSet</code>.</p>
     /// <p>Each IP set rule statement references an IP set. You create and maintain the set independent of your rules. This allows you to use the single set in multiple rules. When you update the referenced set, WAF automatically updates all rules that reference it.</p>
+    #[doc(hidden)]
     pub ip_set_reference_statement: std::option::Option<crate::model::IpSetReferenceStatement>,
     /// <p>A rule statement used to search web request components for matches with regular expressions. To use this, create a <code>RegexPatternSet</code> that specifies the expressions that you want to detect, then use the ARN of that set in this statement. A web request matches the pattern set rule statement if the request component matches any of the patterns in the set. To create a regex pattern set, see <code>CreateRegexPatternSet</code>.</p>
     /// <p>Each regex pattern set rule statement references a regex pattern set. You create and maintain the set independent of your rules. This allows you to use the single set in multiple rules. When you update the referenced set, WAF automatically updates all rules that reference it.</p>
+    #[doc(hidden)]
     pub regex_pattern_set_reference_statement:
         std::option::Option<crate::model::RegexPatternSetReferenceStatement>,
     /// <p>A rate-based rule tracks the rate of requests for each originating IP address, and triggers the rule action when the rate exceeds a limit that you specify on the number of requests in any 5-minute time span. You can use this to put a temporary block on requests from an IP address that is sending excessive requests. </p>
@@ -1875,39 +1899,46 @@ pub struct Statement {
     /// <li> <p>An IP match statement with an IP set that specified the address 192.0.2.44.</p> </li>
     /// <li> <p>A string match statement that searches in the User-Agent header for the string BadBot.</p> </li>
     /// </ul>
-    /// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet both of the conditions in the statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet both conditions are not counted towards the rate limit and are not affected by this rule.</p>
+    /// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet the criteria of both of the nested statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet the criteria of both of the nested statements are not counted towards the rate limit and are not affected by this rule.</p>
     /// <p>You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a web ACL and inside a rule group. </p>
+    #[doc(hidden)]
     pub rate_based_statement: std::option::Option<crate::model::RateBasedStatement>,
     /// <p>A logical rule statement used to combine other rule statements with AND logic. You provide more than one <code>Statement</code> within the <code>AndStatement</code>. </p>
+    #[doc(hidden)]
     pub and_statement: std::option::Option<crate::model::AndStatement>,
     /// <p>A logical rule statement used to combine other rule statements with OR logic. You provide more than one <code>Statement</code> within the <code>OrStatement</code>. </p>
+    #[doc(hidden)]
     pub or_statement: std::option::Option<crate::model::OrStatement>,
     /// <p>A logical rule statement used to negate the results of another rule statement. You provide one <code>Statement</code> within the <code>NotStatement</code>.</p>
+    #[doc(hidden)]
     pub not_statement: std::option::Option<crate::model::NotStatement>,
     /// <p>A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the vendor name and the name of the rule group in this statement. You can retrieve the required names by calling <code>ListAvailableManagedRuleGroups</code>.</p>
     /// <p>You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.</p>
+    #[doc(hidden)]
     pub managed_rule_group_statement: std::option::Option<crate::model::ManagedRuleGroupStatement>,
     /// <p>A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. </p>
     /// <p>The label match statement provides the label or namespace string to search for. The label string can represent a part or all of the fully qualified label name that had been added to the web request. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. If you do not provide the fully qualified name in your label match string, WAF performs the search for labels that were added in the same context as the label match statement. </p>
+    #[doc(hidden)]
     pub label_match_statement: std::option::Option<crate::model::LabelMatchStatement>,
     /// <p>A rule statement used to search web request components for a match against a single regular expression. </p>
+    #[doc(hidden)]
     pub regex_match_statement: std::option::Option<crate::model::RegexMatchStatement>,
 }
 impl Statement {
-    /// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is refered to as a string match statement.</p>
+    /// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is called a string match statement.</p>
     pub fn byte_match_statement(&self) -> std::option::Option<&crate::model::ByteMatchStatement> {
         self.byte_match_statement.as_ref()
     }
-    /// <p>Attackers sometimes insert malicious SQL code into web requests in an effort to extract data from your database. To allow or block web requests that appear to contain malicious SQL code, create one or more SQL injection match conditions. An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want WAF to inspect. Later in the process, when you create a web ACL, you specify whether to allow or block requests that appear to contain malicious SQL code.</p>
+    /// <p>A rule statement that inspects for malicious SQL code. Attackers insert malicious SQL code into web requests to do things like modify your database or extract data from it. </p>
     pub fn sqli_match_statement(&self) -> std::option::Option<&crate::model::SqliMatchStatement> {
         self.sqli_match_statement.as_ref()
     }
-    /// <p>A rule statement that defines a cross-site scripting (XSS) match search for WAF to apply to web requests. XSS attacks are those where the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. The XSS match statement provides the location in requests that you want WAF to search and text transformations to use on the search area before WAF searches for character sequences that are likely to be malicious strings. </p>
+    /// <p>A rule statement that inspects for cross-site scripting (XSS) attacks. In XSS attacks, the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. </p>
     pub fn xss_match_statement(&self) -> std::option::Option<&crate::model::XssMatchStatement> {
         self.xss_match_statement.as_ref()
     }
     /// <p>A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). For example, you can use a size constraint statement to look for query strings that are longer than 100 bytes. </p>
-    /// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you can create a size constraint condition and block requests that have a request body greater than 8192 bytes.</p>
+    /// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you could use a size constraint statement to block requests that have a request body greater than 8192 bytes.</p>
     /// <p>If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one character. For example, the URI <code>/logo.jpg</code> is nine characters long.</p>
     pub fn size_constraint_statement(
         &self,
@@ -1947,7 +1978,7 @@ impl Statement {
     /// <li> <p>An IP match statement with an IP set that specified the address 192.0.2.44.</p> </li>
     /// <li> <p>A string match statement that searches in the User-Agent header for the string BadBot.</p> </li>
     /// </ul>
-    /// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet both of the conditions in the statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet both conditions are not counted towards the rate limit and are not affected by this rule.</p>
+    /// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet the criteria of both of the nested statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet the criteria of both of the nested statements are not counted towards the rate limit and are not affected by this rule.</p>
     /// <p>You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a web ACL and inside a rule group. </p>
     pub fn rate_based_statement(&self) -> std::option::Option<&crate::model::RateBasedStatement> {
         self.rate_based_statement.as_ref()
@@ -2014,11 +2045,10 @@ impl std::fmt::Debug for Statement {
         formatter.finish()
     }
 }
-/// See [`Statement`](crate::model::Statement)
+/// See [`Statement`](crate::model::Statement).
 pub mod statement {
 
-    /// A builder for [`Statement`](crate::model::Statement)
-    #[non_exhaustive]
+    /// A builder for [`Statement`](crate::model::Statement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) byte_match_statement: std::option::Option<crate::model::ByteMatchStatement>,
@@ -2043,12 +2073,12 @@ pub mod statement {
         pub(crate) regex_match_statement: std::option::Option<crate::model::RegexMatchStatement>,
     }
     impl Builder {
-        /// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is refered to as a string match statement.</p>
+        /// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is called a string match statement.</p>
         pub fn byte_match_statement(mut self, input: crate::model::ByteMatchStatement) -> Self {
             self.byte_match_statement = Some(input);
             self
         }
-        /// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is refered to as a string match statement.</p>
+        /// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is called a string match statement.</p>
         pub fn set_byte_match_statement(
             mut self,
             input: std::option::Option<crate::model::ByteMatchStatement>,
@@ -2056,12 +2086,12 @@ pub mod statement {
             self.byte_match_statement = input;
             self
         }
-        /// <p>Attackers sometimes insert malicious SQL code into web requests in an effort to extract data from your database. To allow or block web requests that appear to contain malicious SQL code, create one or more SQL injection match conditions. An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want WAF to inspect. Later in the process, when you create a web ACL, you specify whether to allow or block requests that appear to contain malicious SQL code.</p>
+        /// <p>A rule statement that inspects for malicious SQL code. Attackers insert malicious SQL code into web requests to do things like modify your database or extract data from it. </p>
         pub fn sqli_match_statement(mut self, input: crate::model::SqliMatchStatement) -> Self {
             self.sqli_match_statement = Some(input);
             self
         }
-        /// <p>Attackers sometimes insert malicious SQL code into web requests in an effort to extract data from your database. To allow or block web requests that appear to contain malicious SQL code, create one or more SQL injection match conditions. An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want WAF to inspect. Later in the process, when you create a web ACL, you specify whether to allow or block requests that appear to contain malicious SQL code.</p>
+        /// <p>A rule statement that inspects for malicious SQL code. Attackers insert malicious SQL code into web requests to do things like modify your database or extract data from it. </p>
         pub fn set_sqli_match_statement(
             mut self,
             input: std::option::Option<crate::model::SqliMatchStatement>,
@@ -2069,12 +2099,12 @@ pub mod statement {
             self.sqli_match_statement = input;
             self
         }
-        /// <p>A rule statement that defines a cross-site scripting (XSS) match search for WAF to apply to web requests. XSS attacks are those where the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. The XSS match statement provides the location in requests that you want WAF to search and text transformations to use on the search area before WAF searches for character sequences that are likely to be malicious strings. </p>
+        /// <p>A rule statement that inspects for cross-site scripting (XSS) attacks. In XSS attacks, the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. </p>
         pub fn xss_match_statement(mut self, input: crate::model::XssMatchStatement) -> Self {
             self.xss_match_statement = Some(input);
             self
         }
-        /// <p>A rule statement that defines a cross-site scripting (XSS) match search for WAF to apply to web requests. XSS attacks are those where the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. The XSS match statement provides the location in requests that you want WAF to search and text transformations to use on the search area before WAF searches for character sequences that are likely to be malicious strings. </p>
+        /// <p>A rule statement that inspects for cross-site scripting (XSS) attacks. In XSS attacks, the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. </p>
         pub fn set_xss_match_statement(
             mut self,
             input: std::option::Option<crate::model::XssMatchStatement>,
@@ -2083,7 +2113,7 @@ pub mod statement {
             self
         }
         /// <p>A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). For example, you can use a size constraint statement to look for query strings that are longer than 100 bytes. </p>
-        /// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you can create a size constraint condition and block requests that have a request body greater than 8192 bytes.</p>
+        /// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you could use a size constraint statement to block requests that have a request body greater than 8192 bytes.</p>
         /// <p>If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one character. For example, the URI <code>/logo.jpg</code> is nine characters long.</p>
         pub fn size_constraint_statement(
             mut self,
@@ -2093,7 +2123,7 @@ pub mod statement {
             self
         }
         /// <p>A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). For example, you can use a size constraint statement to look for query strings that are longer than 100 bytes. </p>
-        /// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you can create a size constraint condition and block requests that have a request body greater than 8192 bytes.</p>
+        /// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you could use a size constraint statement to block requests that have a request body greater than 8192 bytes.</p>
         /// <p>If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one character. For example, the URI <code>/logo.jpg</code> is nine characters long.</p>
         pub fn set_size_constraint_statement(
             mut self,
@@ -2177,7 +2207,7 @@ pub mod statement {
         /// <li> <p>An IP match statement with an IP set that specified the address 192.0.2.44.</p> </li>
         /// <li> <p>A string match statement that searches in the User-Agent header for the string BadBot.</p> </li>
         /// </ul>
-        /// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet both of the conditions in the statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet both conditions are not counted towards the rate limit and are not affected by this rule.</p>
+        /// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet the criteria of both of the nested statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet the criteria of both of the nested statements are not counted towards the rate limit and are not affected by this rule.</p>
         /// <p>You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a web ACL and inside a rule group. </p>
         pub fn rate_based_statement(mut self, input: crate::model::RateBasedStatement) -> Self {
             self.rate_based_statement = Some(input);
@@ -2191,7 +2221,7 @@ pub mod statement {
         /// <li> <p>An IP match statement with an IP set that specified the address 192.0.2.44.</p> </li>
         /// <li> <p>A string match statement that searches in the User-Agent header for the string BadBot.</p> </li>
         /// </ul>
-        /// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet both of the conditions in the statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet both conditions are not counted towards the rate limit and are not affected by this rule.</p>
+        /// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet the criteria of both of the nested statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet the criteria of both of the nested statements are not counted towards the rate limit and are not affected by this rule.</p>
         /// <p>You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a web ACL and inside a rule group. </p>
         pub fn set_rate_based_statement(
             mut self,
@@ -2285,7 +2315,7 @@ pub mod statement {
             self.regex_match_statement = input;
             self
         }
-        /// Consumes the builder and constructs a [`Statement`](crate::model::Statement)
+        /// Consumes the builder and constructs a [`Statement`](crate::model::Statement).
         pub fn build(self) -> crate::model::Statement {
             crate::model::Statement {
                 byte_match_statement: self.byte_match_statement,
@@ -2308,7 +2338,7 @@ pub mod statement {
     }
 }
 impl Statement {
-    /// Creates a new builder-style object to manufacture [`Statement`](crate::model::Statement)
+    /// Creates a new builder-style object to manufacture [`Statement`](crate::model::Statement).
     pub fn builder() -> crate::model::statement::Builder {
         crate::model::statement::Builder::default()
     }
@@ -2319,10 +2349,13 @@ impl Statement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegexMatchStatement {
     /// <p>The string representing the regular expression.</p>
+    #[doc(hidden)]
     pub regex_string: std::option::Option<std::string::String>,
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
+    #[doc(hidden)]
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
 }
 impl RegexMatchStatement {
@@ -2330,7 +2363,7 @@ impl RegexMatchStatement {
     pub fn regex_string(&self) -> std::option::Option<&str> {
         self.regex_string.as_deref()
     }
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -2348,11 +2381,10 @@ impl std::fmt::Debug for RegexMatchStatement {
         formatter.finish()
     }
 }
-/// See [`RegexMatchStatement`](crate::model::RegexMatchStatement)
+/// See [`RegexMatchStatement`](crate::model::RegexMatchStatement).
 pub mod regex_match_statement {
 
-    /// A builder for [`RegexMatchStatement`](crate::model::RegexMatchStatement)
-    #[non_exhaustive]
+    /// A builder for [`RegexMatchStatement`](crate::model::RegexMatchStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_string: std::option::Option<std::string::String>,
@@ -2371,12 +2403,12 @@ pub mod regex_match_statement {
             self.regex_string = input;
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -2403,7 +2435,7 @@ pub mod regex_match_statement {
             self.text_transformations = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexMatchStatement`](crate::model::RegexMatchStatement)
+        /// Consumes the builder and constructs a [`RegexMatchStatement`](crate::model::RegexMatchStatement).
         pub fn build(self) -> crate::model::RegexMatchStatement {
             crate::model::RegexMatchStatement {
                 regex_string: self.regex_string,
@@ -2414,7 +2446,7 @@ pub mod regex_match_statement {
     }
 }
 impl RegexMatchStatement {
-    /// Creates a new builder-style object to manufacture [`RegexMatchStatement`](crate::model::RegexMatchStatement)
+    /// Creates a new builder-style object to manufacture [`RegexMatchStatement`](crate::model::RegexMatchStatement).
     pub fn builder() -> crate::model::regex_match_statement::Builder {
         crate::model::regex_match_statement::Builder::default()
     }
@@ -2425,6 +2457,7 @@ impl RegexMatchStatement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TextTransformation {
     /// <p>Sets the relative processing order for multiple transformations that are defined for a rule statement. WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content. The priorities don't need to be consecutive, but they must all be different. </p>
+    #[doc(hidden)]
     pub priority: i32,
     /// <p>You can specify the following transformation types:</p>
     /// <p> <b>BASE64_DECODE</b> - Decode a <code>Base64</code>-encoded string.</p>
@@ -2472,6 +2505,7 @@ pub struct TextTransformation {
     /// <p> <b>URL_DECODE</b> - Decode a URL-encoded value. </p>
     /// <p> <b>URL_DECODE_UNI</b> - Like <code>URL_DECODE</code>, but with support for Microsoft-specific <code>%u</code> encoding. If the code is in the full-width ASCII code range of <code>FF01-FF5E</code>, the higher byte is used to detect and adjust the lower byte. Otherwise, only the lower byte is used and the higher byte is zeroed. </p>
     /// <p> <b>UTF8_TO_UNICODE</b> - Convert all UTF-8 character sequences to Unicode. This helps input normalization, and minimizing false-positives and false-negatives for non-English languages.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TextTransformationType>,
 }
 impl TextTransformation {
@@ -2537,11 +2571,10 @@ impl std::fmt::Debug for TextTransformation {
         formatter.finish()
     }
 }
-/// See [`TextTransformation`](crate::model::TextTransformation)
+/// See [`TextTransformation`](crate::model::TextTransformation).
 pub mod text_transformation {
 
-    /// A builder for [`TextTransformation`](crate::model::TextTransformation)
-    #[non_exhaustive]
+    /// A builder for [`TextTransformation`](crate::model::TextTransformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) priority: std::option::Option<i32>,
@@ -2661,7 +2694,7 @@ pub mod text_transformation {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`TextTransformation`](crate::model::TextTransformation)
+        /// Consumes the builder and constructs a [`TextTransformation`](crate::model::TextTransformation).
         pub fn build(self) -> crate::model::TextTransformation {
             crate::model::TextTransformation {
                 priority: self.priority.unwrap_or_default(),
@@ -2671,7 +2704,7 @@ pub mod text_transformation {
     }
 }
 impl TextTransformation {
-    /// Creates a new builder-style object to manufacture [`TextTransformation`](crate::model::TextTransformation)
+    /// Creates a new builder-style object to manufacture [`TextTransformation`](crate::model::TextTransformation).
     pub fn builder() -> crate::model::text_transformation::Builder {
         crate::model::text_transformation::Builder::default()
     }
@@ -2841,29 +2874,39 @@ pub struct FieldToMatch {
     /// <p>Inspect a single header. Provide the name of the header to inspect, for example, <code>User-Agent</code> or <code>Referer</code>. This setting isn't case sensitive.</p>
     /// <p>Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code> </p>
     /// <p>Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code> setting. </p>
+    #[doc(hidden)]
     pub single_header: std::option::Option<crate::model::SingleHeader>,
     /// <p>Inspect a single query argument. Provide the name of the query argument to inspect, such as <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive. </p>
     /// <p>Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code> </p>
+    #[doc(hidden)]
     pub single_query_argument: std::option::Option<crate::model::SingleQueryArgument>,
     /// <p>Inspect all query arguments. </p>
+    #[doc(hidden)]
     pub all_query_arguments: std::option::Option<crate::model::AllQueryArguments>,
     /// <p>Inspect the request URI path. This is the part of the web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
+    #[doc(hidden)]
     pub uri_path: std::option::Option<crate::model::UriPath>,
     /// <p>Inspect the query string. This is the part of a URL that appears after a <code>?</code> character, if any.</p>
+    #[doc(hidden)]
     pub query_string: std::option::Option<crate::model::QueryString>,
     /// <p>Inspect the request body as plain text. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
     /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>Body</code> object configuration. </p>
+    #[doc(hidden)]
     pub body: std::option::Option<crate::model::Body>,
     /// <p>Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform. </p>
+    #[doc(hidden)]
     pub method: std::option::Option<crate::model::Method>,
     /// <p>Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
     /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration. </p>
+    #[doc(hidden)]
     pub json_body: std::option::Option<crate::model::JsonBody>,
     /// <p>Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code> object, to define the set of headers to and the parts of the headers that WAF inspects. </p>
     /// <p>Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize header content in the <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the underlying host service. </p>
+    #[doc(hidden)]
     pub headers: std::option::Option<crate::model::Headers>,
     /// <p>Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code> object, to define the set of cookies and the parts of the cookies that WAF inspects. </p>
     /// <p>Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize cookie content in the <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the underlying host service. </p>
+    #[doc(hidden)]
     pub cookies: std::option::Option<crate::model::Cookies>,
 }
 impl FieldToMatch {
@@ -2931,11 +2974,10 @@ impl std::fmt::Debug for FieldToMatch {
         formatter.finish()
     }
 }
-/// See [`FieldToMatch`](crate::model::FieldToMatch)
+/// See [`FieldToMatch`](crate::model::FieldToMatch).
 pub mod field_to_match {
 
-    /// A builder for [`FieldToMatch`](crate::model::FieldToMatch)
-    #[non_exhaustive]
+    /// A builder for [`FieldToMatch`](crate::model::FieldToMatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) single_header: std::option::Option<crate::model::SingleHeader>,
@@ -3076,7 +3118,7 @@ pub mod field_to_match {
             self.cookies = input;
             self
         }
-        /// Consumes the builder and constructs a [`FieldToMatch`](crate::model::FieldToMatch)
+        /// Consumes the builder and constructs a [`FieldToMatch`](crate::model::FieldToMatch).
         pub fn build(self) -> crate::model::FieldToMatch {
             crate::model::FieldToMatch {
                 single_header: self.single_header,
@@ -3094,23 +3136,25 @@ pub mod field_to_match {
     }
 }
 impl FieldToMatch {
-    /// Creates a new builder-style object to manufacture [`FieldToMatch`](crate::model::FieldToMatch)
+    /// Creates a new builder-style object to manufacture [`FieldToMatch`](crate::model::FieldToMatch).
     pub fn builder() -> crate::model::field_to_match::Builder {
         crate::model::field_to_match::Builder::default()
     }
 }
 
 /// <p>Inspect the cookies in the web request. You can specify the parts of the cookies to inspect and you can narrow the set of cookies to inspect by including or excluding specific keys.</p>
-/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>This is used to indicate the web request component to inspect, in the <code>FieldToMatch</code> specification. </p>
 /// <p>Example JSON: <code>"Cookies": { "MatchPattern": { "All": {} }, "MatchScope": "KEY", "OversizeHandling": "MATCH" }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cookies {
     /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
     /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
-    /// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+    /// <p>Example JSON: <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+    #[doc(hidden)]
     pub match_pattern: std::option::Option<crate::model::CookieMatchPattern>,
     /// <p>The parts of the cookies to inspect with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+    #[doc(hidden)]
     pub match_scope: std::option::Option<crate::model::MapMatchScope>,
     /// <p>What WAF should do if the cookies of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request cookies when they exceed 8 KB (8192 bytes) or 200 total cookies. The underlying host service forwards a maximum of 200 cookies and at most 8 KB of cookie contents to WAF. </p>
     /// <p>The options for oversize handling are the following:</p>
@@ -3119,12 +3163,13 @@ pub struct Cookies {
     /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
     /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub oversize_handling: std::option::Option<crate::model::OversizeHandling>,
 }
 impl Cookies {
     /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
     /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
-    /// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+    /// <p>Example JSON: <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
     pub fn match_pattern(&self) -> std::option::Option<&crate::model::CookieMatchPattern> {
         self.match_pattern.as_ref()
     }
@@ -3152,11 +3197,10 @@ impl std::fmt::Debug for Cookies {
         formatter.finish()
     }
 }
-/// See [`Cookies`](crate::model::Cookies)
+/// See [`Cookies`](crate::model::Cookies).
 pub mod cookies {
 
-    /// A builder for [`Cookies`](crate::model::Cookies)
-    #[non_exhaustive]
+    /// A builder for [`Cookies`](crate::model::Cookies).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) match_pattern: std::option::Option<crate::model::CookieMatchPattern>,
@@ -3166,14 +3210,14 @@ pub mod cookies {
     impl Builder {
         /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
         /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
-        /// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+        /// <p>Example JSON: <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
         pub fn match_pattern(mut self, input: crate::model::CookieMatchPattern) -> Self {
             self.match_pattern = Some(input);
             self
         }
         /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
         /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
-        /// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+        /// <p>Example JSON: <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
         pub fn set_match_pattern(
             mut self,
             input: std::option::Option<crate::model::CookieMatchPattern>,
@@ -3219,7 +3263,7 @@ pub mod cookies {
             self.oversize_handling = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cookies`](crate::model::Cookies)
+        /// Consumes the builder and constructs a [`Cookies`](crate::model::Cookies).
         pub fn build(self) -> crate::model::Cookies {
             crate::model::Cookies {
                 match_pattern: self.match_pattern,
@@ -3230,7 +3274,7 @@ pub mod cookies {
     }
 }
 impl Cookies {
-    /// Creates a new builder-style object to manufacture [`Cookies`](crate::model::Cookies)
+    /// Creates a new builder-style object to manufacture [`Cookies`](crate::model::Cookies).
     pub fn builder() -> crate::model::cookies::Builder {
         crate::model::cookies::Builder::default()
     }
@@ -3356,15 +3400,18 @@ impl AsRef<str> for MapMatchScope {
 
 /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
 /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
-/// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+/// <p>Example JSON: <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CookieMatchPattern {
     /// <p>Inspect all cookies. </p>
+    #[doc(hidden)]
     pub all: std::option::Option<crate::model::All>,
     /// <p>Inspect only the cookies that have a key that matches one of the strings specified here. </p>
+    #[doc(hidden)]
     pub included_cookies: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Inspect only the cookies whose keys don't match any of the strings specified here. </p>
+    #[doc(hidden)]
     pub excluded_cookies: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CookieMatchPattern {
@@ -3390,11 +3437,10 @@ impl std::fmt::Debug for CookieMatchPattern {
         formatter.finish()
     }
 }
-/// See [`CookieMatchPattern`](crate::model::CookieMatchPattern)
+/// See [`CookieMatchPattern`](crate::model::CookieMatchPattern).
 pub mod cookie_match_pattern {
 
-    /// A builder for [`CookieMatchPattern`](crate::model::CookieMatchPattern)
-    #[non_exhaustive]
+    /// A builder for [`CookieMatchPattern`](crate::model::CookieMatchPattern).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) all: std::option::Option<crate::model::All>,
@@ -3450,7 +3496,7 @@ pub mod cookie_match_pattern {
             self.excluded_cookies = input;
             self
         }
-        /// Consumes the builder and constructs a [`CookieMatchPattern`](crate::model::CookieMatchPattern)
+        /// Consumes the builder and constructs a [`CookieMatchPattern`](crate::model::CookieMatchPattern).
         pub fn build(self) -> crate::model::CookieMatchPattern {
             crate::model::CookieMatchPattern {
                 all: self.all,
@@ -3461,7 +3507,7 @@ pub mod cookie_match_pattern {
     }
 }
 impl CookieMatchPattern {
-    /// Creates a new builder-style object to manufacture [`CookieMatchPattern`](crate::model::CookieMatchPattern)
+    /// Creates a new builder-style object to manufacture [`CookieMatchPattern`](crate::model::CookieMatchPattern).
     pub fn builder() -> crate::model::cookie_match_pattern::Builder {
         crate::model::cookie_match_pattern::Builder::default()
     }
@@ -3479,39 +3525,40 @@ impl std::fmt::Debug for All {
         formatter.finish()
     }
 }
-/// See [`All`](crate::model::All)
+/// See [`All`](crate::model::All).
 pub mod all {
 
-    /// A builder for [`All`](crate::model::All)
-    #[non_exhaustive]
+    /// A builder for [`All`](crate::model::All).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`All`](crate::model::All)
+        /// Consumes the builder and constructs a [`All`](crate::model::All).
         pub fn build(self) -> crate::model::All {
             crate::model::All {}
         }
     }
 }
 impl All {
-    /// Creates a new builder-style object to manufacture [`All`](crate::model::All)
+    /// Creates a new builder-style object to manufacture [`All`](crate::model::All).
     pub fn builder() -> crate::model::all::Builder {
         crate::model::all::Builder::default()
     }
 }
 
-/// <p>Inspect the headers in the web request. You can specify the parts of the headers to inspect and you can narrow the set of headers to inspect by including or excluding specific keys.</p>
-/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
-/// <p>Alternately, you can use the <code>SingleHeader</code> <code>FieldToMatch</code> setting to inspect the value of a single header, identified by its key. </p>
+/// <p>Inspect all headers in the web request. You can specify the parts of the headers to inspect and you can narrow the set of headers to inspect by including or excluding specific keys.</p>
+/// <p>This is used to indicate the web request component to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>If you want to inspect just the value of a single header, use the <code>SingleHeader</code> <code>FieldToMatch</code> setting instead.</p>
 /// <p>Example JSON: <code>"Headers": { "MatchPattern": { "All": {} }, "MatchScope": "KEY", "OversizeHandling": "MATCH" }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Headers {
     /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
     /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
-    /// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+    /// <p>Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+    #[doc(hidden)]
     pub match_pattern: std::option::Option<crate::model::HeaderMatchPattern>,
     /// <p>The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+    #[doc(hidden)]
     pub match_scope: std::option::Option<crate::model::MapMatchScope>,
     /// <p>What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF. </p>
     /// <p>The options for oversize handling are the following:</p>
@@ -3520,12 +3567,13 @@ pub struct Headers {
     /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
     /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub oversize_handling: std::option::Option<crate::model::OversizeHandling>,
 }
 impl Headers {
     /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
     /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
-    /// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+    /// <p>Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
     pub fn match_pattern(&self) -> std::option::Option<&crate::model::HeaderMatchPattern> {
         self.match_pattern.as_ref()
     }
@@ -3553,11 +3601,10 @@ impl std::fmt::Debug for Headers {
         formatter.finish()
     }
 }
-/// See [`Headers`](crate::model::Headers)
+/// See [`Headers`](crate::model::Headers).
 pub mod headers {
 
-    /// A builder for [`Headers`](crate::model::Headers)
-    #[non_exhaustive]
+    /// A builder for [`Headers`](crate::model::Headers).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) match_pattern: std::option::Option<crate::model::HeaderMatchPattern>,
@@ -3567,14 +3614,14 @@ pub mod headers {
     impl Builder {
         /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
         /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
-        /// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+        /// <p>Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
         pub fn match_pattern(mut self, input: crate::model::HeaderMatchPattern) -> Self {
             self.match_pattern = Some(input);
             self
         }
         /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
         /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
-        /// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+        /// <p>Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
         pub fn set_match_pattern(
             mut self,
             input: std::option::Option<crate::model::HeaderMatchPattern>,
@@ -3620,7 +3667,7 @@ pub mod headers {
             self.oversize_handling = input;
             self
         }
-        /// Consumes the builder and constructs a [`Headers`](crate::model::Headers)
+        /// Consumes the builder and constructs a [`Headers`](crate::model::Headers).
         pub fn build(self) -> crate::model::Headers {
             crate::model::Headers {
                 match_pattern: self.match_pattern,
@@ -3631,7 +3678,7 @@ pub mod headers {
     }
 }
 impl Headers {
-    /// Creates a new builder-style object to manufacture [`Headers`](crate::model::Headers)
+    /// Creates a new builder-style object to manufacture [`Headers`](crate::model::Headers).
     pub fn builder() -> crate::model::headers::Builder {
         crate::model::headers::Builder::default()
     }
@@ -3639,15 +3686,18 @@ impl Headers {
 
 /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
 /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
-/// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+/// <p>Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HeaderMatchPattern {
     /// <p>Inspect all headers. </p>
+    #[doc(hidden)]
     pub all: std::option::Option<crate::model::All>,
     /// <p>Inspect only the headers that have a key that matches one of the strings specified here. </p>
+    #[doc(hidden)]
     pub included_headers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Inspect only the headers whose keys don't match any of the strings specified here. </p>
+    #[doc(hidden)]
     pub excluded_headers: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl HeaderMatchPattern {
@@ -3673,11 +3723,10 @@ impl std::fmt::Debug for HeaderMatchPattern {
         formatter.finish()
     }
 }
-/// See [`HeaderMatchPattern`](crate::model::HeaderMatchPattern)
+/// See [`HeaderMatchPattern`](crate::model::HeaderMatchPattern).
 pub mod header_match_pattern {
 
-    /// A builder for [`HeaderMatchPattern`](crate::model::HeaderMatchPattern)
-    #[non_exhaustive]
+    /// A builder for [`HeaderMatchPattern`](crate::model::HeaderMatchPattern).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) all: std::option::Option<crate::model::All>,
@@ -3733,7 +3782,7 @@ pub mod header_match_pattern {
             self.excluded_headers = input;
             self
         }
-        /// Consumes the builder and constructs a [`HeaderMatchPattern`](crate::model::HeaderMatchPattern)
+        /// Consumes the builder and constructs a [`HeaderMatchPattern`](crate::model::HeaderMatchPattern).
         pub fn build(self) -> crate::model::HeaderMatchPattern {
             crate::model::HeaderMatchPattern {
                 all: self.all,
@@ -3744,22 +3793,24 @@ pub mod header_match_pattern {
     }
 }
 impl HeaderMatchPattern {
-    /// Creates a new builder-style object to manufacture [`HeaderMatchPattern`](crate::model::HeaderMatchPattern)
+    /// Creates a new builder-style object to manufacture [`HeaderMatchPattern`](crate::model::HeaderMatchPattern).
     pub fn builder() -> crate::model::header_match_pattern::Builder {
         crate::model::header_match_pattern::Builder::default()
     }
 }
 
 /// <p>Inspect the body of the web request as JSON. The body immediately follows the request headers. </p>
-/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>This is used to indicate the web request component to inspect, in the <code>FieldToMatch</code> specification. </p>
 /// <p>Use the specifications in this object to indicate which parts of the JSON body to inspect using the rule's inspection criteria. WAF inspects only the parts of the JSON that result from the matches that you indicate. </p>
 /// <p>Example JSON: <code>"JsonBody": { "MatchPattern": { "All": {} }, "MatchScope": "ALL" }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JsonBody {
     /// <p>The patterns to look for in the JSON body. WAF inspects the results of these pattern matches against the rule inspection criteria. </p>
+    #[doc(hidden)]
     pub match_pattern: std::option::Option<crate::model::JsonMatchPattern>,
     /// <p>The parts of the JSON to match against using the <code>MatchPattern</code>. If you specify <code>All</code>, WAF matches against keys and values. </p>
+    #[doc(hidden)]
     pub match_scope: std::option::Option<crate::model::JsonMatchScope>,
     /// <p>What WAF should do if it fails to completely parse the JSON body. The options are the following:</p>
     /// <ul>
@@ -3775,6 +3826,7 @@ pub struct JsonBody {
     /// <li> <p>Missing colon: <code>{"key1":"value1","key2""value2"}</code> </p> </li>
     /// <li> <p>Extra colons: <code>{"key1"::"value1","key2""value2"}</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub invalid_fallback_behavior: std::option::Option<crate::model::BodyParsingFallbackBehavior>,
     /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
     /// <p>The options for oversize handling are the following:</p>
@@ -3785,6 +3837,7 @@ pub struct JsonBody {
     /// </ul>
     /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
     /// <p>Default: <code>CONTINUE</code> </p>
+    #[doc(hidden)]
     pub oversize_handling: std::option::Option<crate::model::OversizeHandling>,
 }
 impl JsonBody {
@@ -3838,11 +3891,10 @@ impl std::fmt::Debug for JsonBody {
         formatter.finish()
     }
 }
-/// See [`JsonBody`](crate::model::JsonBody)
+/// See [`JsonBody`](crate::model::JsonBody).
 pub mod json_body {
 
-    /// A builder for [`JsonBody`](crate::model::JsonBody)
-    #[non_exhaustive]
+    /// A builder for [`JsonBody`](crate::model::JsonBody).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) match_pattern: std::option::Option<crate::model::JsonMatchPattern>,
@@ -3949,7 +4001,7 @@ pub mod json_body {
             self.oversize_handling = input;
             self
         }
-        /// Consumes the builder and constructs a [`JsonBody`](crate::model::JsonBody)
+        /// Consumes the builder and constructs a [`JsonBody`](crate::model::JsonBody).
         pub fn build(self) -> crate::model::JsonBody {
             crate::model::JsonBody {
                 match_pattern: self.match_pattern,
@@ -3961,7 +4013,7 @@ pub mod json_body {
     }
 }
 impl JsonBody {
-    /// Creates a new builder-style object to manufacture [`JsonBody`](crate::model::JsonBody)
+    /// Creates a new builder-style object to manufacture [`JsonBody`](crate::model::JsonBody).
     pub fn builder() -> crate::model::json_body::Builder {
         crate::model::json_body::Builder::default()
     }
@@ -4091,12 +4143,14 @@ impl AsRef<str> for JsonMatchScope {
 pub struct JsonMatchPattern {
     /// <p>Match all of the elements. See also <code>MatchScope</code> in <code>JsonBody</code>. </p>
     /// <p>You must specify either this setting or the <code>IncludedPaths</code> setting, but not both.</p>
+    #[doc(hidden)]
     pub all: std::option::Option<crate::model::All>,
     /// <p>Match only the specified include paths. See also <code>MatchScope</code> in <code>JsonBody</code>. </p>
     /// <p>Provide the include paths using JSON Pointer syntax. For example, <code>"IncludedPaths": ["/dogs/0/name", "/dogs/1/name"]</code>. For information about this syntax, see the Internet Engineering Task Force (IETF) documentation <a href="https://tools.ietf.org/html/rfc6901">JavaScript Object Notation (JSON) Pointer</a>. </p>
     /// <p>You must specify either this setting or the <code>All</code> setting, but not both.</p> <note>
     /// <p>Don't use this option to include all paths. Instead, use the <code>All</code> setting. </p>
     /// </note>
+    #[doc(hidden)]
     pub included_paths: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl JsonMatchPattern {
@@ -4122,11 +4176,10 @@ impl std::fmt::Debug for JsonMatchPattern {
         formatter.finish()
     }
 }
-/// See [`JsonMatchPattern`](crate::model::JsonMatchPattern)
+/// See [`JsonMatchPattern`](crate::model::JsonMatchPattern).
 pub mod json_match_pattern {
 
-    /// A builder for [`JsonMatchPattern`](crate::model::JsonMatchPattern)
-    #[non_exhaustive]
+    /// A builder for [`JsonMatchPattern`](crate::model::JsonMatchPattern).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) all: std::option::Option<crate::model::All>,
@@ -4172,7 +4225,7 @@ pub mod json_match_pattern {
             self.included_paths = input;
             self
         }
-        /// Consumes the builder and constructs a [`JsonMatchPattern`](crate::model::JsonMatchPattern)
+        /// Consumes the builder and constructs a [`JsonMatchPattern`](crate::model::JsonMatchPattern).
         pub fn build(self) -> crate::model::JsonMatchPattern {
             crate::model::JsonMatchPattern {
                 all: self.all,
@@ -4182,7 +4235,7 @@ pub mod json_match_pattern {
     }
 }
 impl JsonMatchPattern {
-    /// Creates a new builder-style object to manufacture [`JsonMatchPattern`](crate::model::JsonMatchPattern)
+    /// Creates a new builder-style object to manufacture [`JsonMatchPattern`](crate::model::JsonMatchPattern).
     pub fn builder() -> crate::model::json_match_pattern::Builder {
         crate::model::json_match_pattern::Builder::default()
     }
@@ -4200,29 +4253,28 @@ impl std::fmt::Debug for Method {
         formatter.finish()
     }
 }
-/// See [`Method`](crate::model::Method)
+/// See [`Method`](crate::model::Method).
 pub mod method {
 
-    /// A builder for [`Method`](crate::model::Method)
-    #[non_exhaustive]
+    /// A builder for [`Method`](crate::model::Method).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`Method`](crate::model::Method)
+        /// Consumes the builder and constructs a [`Method`](crate::model::Method).
         pub fn build(self) -> crate::model::Method {
             crate::model::Method {}
         }
     }
 }
 impl Method {
-    /// Creates a new builder-style object to manufacture [`Method`](crate::model::Method)
+    /// Creates a new builder-style object to manufacture [`Method`](crate::model::Method).
     pub fn builder() -> crate::model::method::Builder {
         crate::model::method::Builder::default()
     }
 }
 
 /// <p>Inspect the body of the web request. The body immediately follows the request headers.</p>
-/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>This is used to indicate the web request component to inspect, in the <code>FieldToMatch</code> specification. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Body {
@@ -4235,6 +4287,7 @@ pub struct Body {
     /// </ul>
     /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
     /// <p>Default: <code>CONTINUE</code> </p>
+    #[doc(hidden)]
     pub oversize_handling: std::option::Option<crate::model::OversizeHandling>,
 }
 impl Body {
@@ -4258,11 +4311,10 @@ impl std::fmt::Debug for Body {
         formatter.finish()
     }
 }
-/// See [`Body`](crate::model::Body)
+/// See [`Body`](crate::model::Body).
 pub mod body {
 
-    /// A builder for [`Body`](crate::model::Body)
-    #[non_exhaustive]
+    /// A builder for [`Body`](crate::model::Body).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) oversize_handling: std::option::Option<crate::model::OversizeHandling>,
@@ -4297,7 +4349,7 @@ pub mod body {
             self.oversize_handling = input;
             self
         }
-        /// Consumes the builder and constructs a [`Body`](crate::model::Body)
+        /// Consumes the builder and constructs a [`Body`](crate::model::Body).
         pub fn build(self) -> crate::model::Body {
             crate::model::Body {
                 oversize_handling: self.oversize_handling,
@@ -4306,7 +4358,7 @@ pub mod body {
     }
 }
 impl Body {
-    /// Creates a new builder-style object to manufacture [`Body`](crate::model::Body)
+    /// Creates a new builder-style object to manufacture [`Body`](crate::model::Body).
     pub fn builder() -> crate::model::body::Builder {
         crate::model::body::Builder::default()
     }
@@ -4324,22 +4376,21 @@ impl std::fmt::Debug for QueryString {
         formatter.finish()
     }
 }
-/// See [`QueryString`](crate::model::QueryString)
+/// See [`QueryString`](crate::model::QueryString).
 pub mod query_string {
 
-    /// A builder for [`QueryString`](crate::model::QueryString)
-    #[non_exhaustive]
+    /// A builder for [`QueryString`](crate::model::QueryString).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`QueryString`](crate::model::QueryString)
+        /// Consumes the builder and constructs a [`QueryString`](crate::model::QueryString).
         pub fn build(self) -> crate::model::QueryString {
             crate::model::QueryString {}
         }
     }
 }
 impl QueryString {
-    /// Creates a new builder-style object to manufacture [`QueryString`](crate::model::QueryString)
+    /// Creates a new builder-style object to manufacture [`QueryString`](crate::model::QueryString).
     pub fn builder() -> crate::model::query_string::Builder {
         crate::model::query_string::Builder::default()
     }
@@ -4357,22 +4408,21 @@ impl std::fmt::Debug for UriPath {
         formatter.finish()
     }
 }
-/// See [`UriPath`](crate::model::UriPath)
+/// See [`UriPath`](crate::model::UriPath).
 pub mod uri_path {
 
-    /// A builder for [`UriPath`](crate::model::UriPath)
-    #[non_exhaustive]
+    /// A builder for [`UriPath`](crate::model::UriPath).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UriPath`](crate::model::UriPath)
+        /// Consumes the builder and constructs a [`UriPath`](crate::model::UriPath).
         pub fn build(self) -> crate::model::UriPath {
             crate::model::UriPath {}
         }
     }
 }
 impl UriPath {
-    /// Creates a new builder-style object to manufacture [`UriPath`](crate::model::UriPath)
+    /// Creates a new builder-style object to manufacture [`UriPath`](crate::model::UriPath).
     pub fn builder() -> crate::model::uri_path::Builder {
         crate::model::uri_path::Builder::default()
     }
@@ -4390,34 +4440,34 @@ impl std::fmt::Debug for AllQueryArguments {
         formatter.finish()
     }
 }
-/// See [`AllQueryArguments`](crate::model::AllQueryArguments)
+/// See [`AllQueryArguments`](crate::model::AllQueryArguments).
 pub mod all_query_arguments {
 
-    /// A builder for [`AllQueryArguments`](crate::model::AllQueryArguments)
-    #[non_exhaustive]
+    /// A builder for [`AllQueryArguments`](crate::model::AllQueryArguments).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AllQueryArguments`](crate::model::AllQueryArguments)
+        /// Consumes the builder and constructs a [`AllQueryArguments`](crate::model::AllQueryArguments).
         pub fn build(self) -> crate::model::AllQueryArguments {
             crate::model::AllQueryArguments {}
         }
     }
 }
 impl AllQueryArguments {
-    /// Creates a new builder-style object to manufacture [`AllQueryArguments`](crate::model::AllQueryArguments)
+    /// Creates a new builder-style object to manufacture [`AllQueryArguments`](crate::model::AllQueryArguments).
     pub fn builder() -> crate::model::all_query_arguments::Builder {
         crate::model::all_query_arguments::Builder::default()
     }
 }
 
 /// <p>Inspect one query argument in the web request, identified by name, for example <i>UserName</i> or <i>SalesRegion</i>. The name isn't case sensitive. </p>
-/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>This is used to indicate the web request component to inspect, in the <code>FieldToMatch</code> specification. </p>
 /// <p>Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SingleQueryArgument {
     /// <p>The name of the query argument to inspect.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl SingleQueryArgument {
@@ -4433,11 +4483,10 @@ impl std::fmt::Debug for SingleQueryArgument {
         formatter.finish()
     }
 }
-/// See [`SingleQueryArgument`](crate::model::SingleQueryArgument)
+/// See [`SingleQueryArgument`](crate::model::SingleQueryArgument).
 pub mod single_query_argument {
 
-    /// A builder for [`SingleQueryArgument`](crate::model::SingleQueryArgument)
-    #[non_exhaustive]
+    /// A builder for [`SingleQueryArgument`](crate::model::SingleQueryArgument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4453,14 +4502,14 @@ pub mod single_query_argument {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SingleQueryArgument`](crate::model::SingleQueryArgument)
+        /// Consumes the builder and constructs a [`SingleQueryArgument`](crate::model::SingleQueryArgument).
         pub fn build(self) -> crate::model::SingleQueryArgument {
             crate::model::SingleQueryArgument { name: self.name }
         }
     }
 }
 impl SingleQueryArgument {
-    /// Creates a new builder-style object to manufacture [`SingleQueryArgument`](crate::model::SingleQueryArgument)
+    /// Creates a new builder-style object to manufacture [`SingleQueryArgument`](crate::model::SingleQueryArgument).
     pub fn builder() -> crate::model::single_query_argument::Builder {
         crate::model::single_query_argument::Builder::default()
     }
@@ -4468,12 +4517,13 @@ impl SingleQueryArgument {
 
 /// <p>Inspect one of the headers in the web request, identified by name, for example, <code>User-Agent</code> or <code>Referer</code>. The name isn't case sensitive.</p>
 /// <p>You can filter and inspect all headers with the <code>FieldToMatch</code> setting <code>Headers</code>.</p>
-/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>This is used to indicate the web request component to inspect, in the <code>FieldToMatch</code> specification. </p>
 /// <p>Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SingleHeader {
     /// <p>The name of the query header to inspect.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl SingleHeader {
@@ -4489,11 +4539,10 @@ impl std::fmt::Debug for SingleHeader {
         formatter.finish()
     }
 }
-/// See [`SingleHeader`](crate::model::SingleHeader)
+/// See [`SingleHeader`](crate::model::SingleHeader).
 pub mod single_header {
 
-    /// A builder for [`SingleHeader`](crate::model::SingleHeader)
-    #[non_exhaustive]
+    /// A builder for [`SingleHeader`](crate::model::SingleHeader).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4509,14 +4558,14 @@ pub mod single_header {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SingleHeader`](crate::model::SingleHeader)
+        /// Consumes the builder and constructs a [`SingleHeader`](crate::model::SingleHeader).
         pub fn build(self) -> crate::model::SingleHeader {
             crate::model::SingleHeader { name: self.name }
         }
     }
 }
 impl SingleHeader {
-    /// Creates a new builder-style object to manufacture [`SingleHeader`](crate::model::SingleHeader)
+    /// Creates a new builder-style object to manufacture [`SingleHeader`](crate::model::SingleHeader).
     pub fn builder() -> crate::model::single_header::Builder {
         crate::model::single_header::Builder::default()
     }
@@ -4528,6 +4577,7 @@ impl SingleHeader {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LabelMatchStatement {
     /// <p>Specify whether you want to match using the label name or just the namespace. </p>
+    #[doc(hidden)]
     pub scope: std::option::Option<crate::model::LabelMatchScope>,
     /// <p>The string to match against. The setting you provide for this depends on the match statement's <code>Scope</code> setting: </p>
     /// <ul>
@@ -4535,6 +4585,7 @@ pub struct LabelMatchStatement {
     /// <li> <p>If the <code>Scope</code> indicates <code>NAMESPACE</code>, then this specification can include any number of contiguous namespace strings, and can include the entire label namespace prefix from the rule group or web ACL where the label originates.</p> </li>
     /// </ul>
     /// <p>Labels are case sensitive and components of a label must be separated by colon, for example <code>NS1:NS2:name</code>.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl LabelMatchStatement {
@@ -4560,11 +4611,10 @@ impl std::fmt::Debug for LabelMatchStatement {
         formatter.finish()
     }
 }
-/// See [`LabelMatchStatement`](crate::model::LabelMatchStatement)
+/// See [`LabelMatchStatement`](crate::model::LabelMatchStatement).
 pub mod label_match_statement {
 
-    /// A builder for [`LabelMatchStatement`](crate::model::LabelMatchStatement)
-    #[non_exhaustive]
+    /// A builder for [`LabelMatchStatement`](crate::model::LabelMatchStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scope: std::option::Option<crate::model::LabelMatchScope>,
@@ -4604,7 +4654,7 @@ pub mod label_match_statement {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`LabelMatchStatement`](crate::model::LabelMatchStatement)
+        /// Consumes the builder and constructs a [`LabelMatchStatement`](crate::model::LabelMatchStatement).
         pub fn build(self) -> crate::model::LabelMatchStatement {
             crate::model::LabelMatchStatement {
                 scope: self.scope,
@@ -4614,7 +4664,7 @@ pub mod label_match_statement {
     }
 }
 impl LabelMatchStatement {
-    /// Creates a new builder-style object to manufacture [`LabelMatchStatement`](crate::model::LabelMatchStatement)
+    /// Creates a new builder-style object to manufacture [`LabelMatchStatement`](crate::model::LabelMatchStatement).
     pub fn builder() -> crate::model::label_match_statement::Builder {
         crate::model::label_match_statement::Builder::default()
     }
@@ -4681,18 +4731,24 @@ impl AsRef<str> for LabelMatchScope {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedRuleGroupStatement {
     /// <p>The name of the managed rule group vendor. You use this, along with the rule group name, to identify the rule group.</p>
+    #[doc(hidden)]
     pub vendor_name: std::option::Option<std::string::String>,
     /// <p>The name of the managed rule group. You use this, along with the vendor name, to identify the rule group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The version of the managed rule group to use. If you specify this, the version setting is fixed until you change it. If you don't specify this, WAF uses the vendor's default version, and then keeps the version at the vendor's default when the vendor updates the managed rule group settings. </p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The rules in the referenced rule group whose actions are set to <code>Count</code>. When you exclude a rule, WAF evaluates it exactly as it would if the rule action setting were <code>Count</code>. This is a useful option for testing the rules in a rule group without modifying how they handle your web traffic.</p>
+    #[doc(hidden)]
     pub excluded_rules: std::option::Option<std::vec::Vec<crate::model::ExcludedRule>>,
     /// <p>An optional nested statement that narrows the scope of the web requests that are evaluated by the managed rule group. Requests are only evaluated by the rule group if they match the scope-down statement. You can use any nestable <code>Statement</code> in the scope-down statement, and you can nest statements at any level, the same as you can for a rule statement. </p>
+    #[doc(hidden)]
     pub scope_down_statement: std::option::Option<std::boxed::Box<crate::model::Statement>>,
     /// <p>Additional information that's used by a managed rule group. Most managed rule groups don't require this.</p>
     /// <p>Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to provide information about the sign-in page of your application. </p>
     /// <p>You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group configuration, for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration that you provide depends on the needs of the managed rule group. For the ATP managed rule group, you provide the following individual configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and <code>UsernameField</code>.</p>
+    #[doc(hidden)]
     pub managed_rule_group_configs:
         std::option::Option<std::vec::Vec<crate::model::ManagedRuleGroupConfig>>,
 }
@@ -4741,11 +4797,10 @@ impl std::fmt::Debug for ManagedRuleGroupStatement {
         formatter.finish()
     }
 }
-/// See [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement)
+/// See [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement).
 pub mod managed_rule_group_statement {
 
-    /// A builder for [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement)
-    #[non_exhaustive]
+    /// A builder for [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vendor_name: std::option::Option<std::string::String>,
@@ -4849,7 +4904,7 @@ pub mod managed_rule_group_statement {
             self.managed_rule_group_configs = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement)
+        /// Consumes the builder and constructs a [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement).
         pub fn build(self) -> crate::model::ManagedRuleGroupStatement {
             crate::model::ManagedRuleGroupStatement {
                 vendor_name: self.vendor_name,
@@ -4863,7 +4918,7 @@ pub mod managed_rule_group_statement {
     }
 }
 impl ManagedRuleGroupStatement {
-    /// Creates a new builder-style object to manufacture [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement)
+    /// Creates a new builder-style object to manufacture [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement).
     pub fn builder() -> crate::model::managed_rule_group_statement::Builder {
         crate::model::managed_rule_group_statement::Builder::default()
     }
@@ -4872,16 +4927,21 @@ impl ManagedRuleGroupStatement {
 /// <p>Additional information that's used by a managed rule group. Most managed rule groups don't require this.</p>
 /// <p>Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to provide information about the sign-in page of your application. </p>
 /// <p>You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group configuration, for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration that you provide depends on the needs of the managed rule group. For the ATP managed rule group, you provide the following individual configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and <code>UsernameField</code>.</p>
+/// <p>For example specifications, see the examples section of <code>CreateWebACL</code>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedRuleGroupConfig {
     /// <p>The path of the login endpoint for your application. For example, for the URL <code>https://example.com/web/login</code>, you would provide the path <code>/web/login</code>.</p>
+    #[doc(hidden)]
     pub login_path: std::option::Option<std::string::String>,
     /// <p>The payload type for your login endpoint, either JSON or form encoded.</p>
+    #[doc(hidden)]
     pub payload_type: std::option::Option<crate::model::PayloadType>,
     /// <p>Details about your login page username field. </p>
+    #[doc(hidden)]
     pub username_field: std::option::Option<crate::model::UsernameField>,
     /// <p>Details about your login page password field. </p>
+    #[doc(hidden)]
     pub password_field: std::option::Option<crate::model::PasswordField>,
 }
 impl ManagedRuleGroupConfig {
@@ -4912,11 +4972,10 @@ impl std::fmt::Debug for ManagedRuleGroupConfig {
         formatter.finish()
     }
 }
-/// See [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig)
+/// See [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig).
 pub mod managed_rule_group_config {
 
-    /// A builder for [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig)
-    #[non_exhaustive]
+    /// A builder for [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) login_path: std::option::Option<std::string::String>,
@@ -4974,7 +5033,7 @@ pub mod managed_rule_group_config {
             self.password_field = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig)
+        /// Consumes the builder and constructs a [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig).
         pub fn build(self) -> crate::model::ManagedRuleGroupConfig {
             crate::model::ManagedRuleGroupConfig {
                 login_path: self.login_path,
@@ -4986,7 +5045,7 @@ pub mod managed_rule_group_config {
     }
 }
 impl ManagedRuleGroupConfig {
-    /// Creates a new builder-style object to manufacture [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig)
+    /// Creates a new builder-style object to manufacture [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig).
     pub fn builder() -> crate::model::managed_rule_group_config::Builder {
         crate::model::managed_rule_group_config::Builder::default()
     }
@@ -4997,6 +5056,7 @@ impl ManagedRuleGroupConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PasswordField {
     /// <p>The name of the password field. For example <code>/form/password</code>.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
 }
 impl PasswordField {
@@ -5012,11 +5072,10 @@ impl std::fmt::Debug for PasswordField {
         formatter.finish()
     }
 }
-/// See [`PasswordField`](crate::model::PasswordField)
+/// See [`PasswordField`](crate::model::PasswordField).
 pub mod password_field {
 
-    /// A builder for [`PasswordField`](crate::model::PasswordField)
-    #[non_exhaustive]
+    /// A builder for [`PasswordField`](crate::model::PasswordField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identifier: std::option::Option<std::string::String>,
@@ -5032,7 +5091,7 @@ pub mod password_field {
             self.identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`PasswordField`](crate::model::PasswordField)
+        /// Consumes the builder and constructs a [`PasswordField`](crate::model::PasswordField).
         pub fn build(self) -> crate::model::PasswordField {
             crate::model::PasswordField {
                 identifier: self.identifier,
@@ -5041,7 +5100,7 @@ pub mod password_field {
     }
 }
 impl PasswordField {
-    /// Creates a new builder-style object to manufacture [`PasswordField`](crate::model::PasswordField)
+    /// Creates a new builder-style object to manufacture [`PasswordField`](crate::model::PasswordField).
     pub fn builder() -> crate::model::password_field::Builder {
         crate::model::password_field::Builder::default()
     }
@@ -5052,6 +5111,7 @@ impl PasswordField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UsernameField {
     /// <p>The name of the username field. For example <code>/form/username</code>.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
 }
 impl UsernameField {
@@ -5067,11 +5127,10 @@ impl std::fmt::Debug for UsernameField {
         formatter.finish()
     }
 }
-/// See [`UsernameField`](crate::model::UsernameField)
+/// See [`UsernameField`](crate::model::UsernameField).
 pub mod username_field {
 
-    /// A builder for [`UsernameField`](crate::model::UsernameField)
-    #[non_exhaustive]
+    /// A builder for [`UsernameField`](crate::model::UsernameField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identifier: std::option::Option<std::string::String>,
@@ -5087,7 +5146,7 @@ pub mod username_field {
             self.identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`UsernameField`](crate::model::UsernameField)
+        /// Consumes the builder and constructs a [`UsernameField`](crate::model::UsernameField).
         pub fn build(self) -> crate::model::UsernameField {
             crate::model::UsernameField {
                 identifier: self.identifier,
@@ -5096,7 +5155,7 @@ pub mod username_field {
     }
 }
 impl UsernameField {
-    /// Creates a new builder-style object to manufacture [`UsernameField`](crate::model::UsernameField)
+    /// Creates a new builder-style object to manufacture [`UsernameField`](crate::model::UsernameField).
     pub fn builder() -> crate::model::username_field::Builder {
         crate::model::username_field::Builder::default()
     }
@@ -5162,6 +5221,7 @@ impl AsRef<str> for PayloadType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExcludedRule {
     /// <p>The name of the rule whose action you want to override to <code>Count</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl ExcludedRule {
@@ -5177,11 +5237,10 @@ impl std::fmt::Debug for ExcludedRule {
         formatter.finish()
     }
 }
-/// See [`ExcludedRule`](crate::model::ExcludedRule)
+/// See [`ExcludedRule`](crate::model::ExcludedRule).
 pub mod excluded_rule {
 
-    /// A builder for [`ExcludedRule`](crate::model::ExcludedRule)
-    #[non_exhaustive]
+    /// A builder for [`ExcludedRule`](crate::model::ExcludedRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5197,14 +5256,14 @@ pub mod excluded_rule {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExcludedRule`](crate::model::ExcludedRule)
+        /// Consumes the builder and constructs a [`ExcludedRule`](crate::model::ExcludedRule).
         pub fn build(self) -> crate::model::ExcludedRule {
             crate::model::ExcludedRule { name: self.name }
         }
     }
 }
 impl ExcludedRule {
-    /// Creates a new builder-style object to manufacture [`ExcludedRule`](crate::model::ExcludedRule)
+    /// Creates a new builder-style object to manufacture [`ExcludedRule`](crate::model::ExcludedRule).
     pub fn builder() -> crate::model::excluded_rule::Builder {
         crate::model::excluded_rule::Builder::default()
     }
@@ -5215,6 +5274,7 @@ impl ExcludedRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotStatement {
     /// <p>The statement to negate. You can use any statement that can be nested.</p>
+    #[doc(hidden)]
     pub statement: std::option::Option<std::boxed::Box<crate::model::Statement>>,
 }
 impl NotStatement {
@@ -5230,11 +5290,10 @@ impl std::fmt::Debug for NotStatement {
         formatter.finish()
     }
 }
-/// See [`NotStatement`](crate::model::NotStatement)
+/// See [`NotStatement`](crate::model::NotStatement).
 pub mod not_statement {
 
-    /// A builder for [`NotStatement`](crate::model::NotStatement)
-    #[non_exhaustive]
+    /// A builder for [`NotStatement`](crate::model::NotStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statement: std::option::Option<std::boxed::Box<crate::model::Statement>>,
@@ -5256,7 +5315,7 @@ pub mod not_statement {
             self.statement = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotStatement`](crate::model::NotStatement)
+        /// Consumes the builder and constructs a [`NotStatement`](crate::model::NotStatement).
         pub fn build(self) -> crate::model::NotStatement {
             crate::model::NotStatement {
                 statement: self.statement,
@@ -5265,7 +5324,7 @@ pub mod not_statement {
     }
 }
 impl NotStatement {
-    /// Creates a new builder-style object to manufacture [`NotStatement`](crate::model::NotStatement)
+    /// Creates a new builder-style object to manufacture [`NotStatement`](crate::model::NotStatement).
     pub fn builder() -> crate::model::not_statement::Builder {
         crate::model::not_statement::Builder::default()
     }
@@ -5276,6 +5335,7 @@ impl NotStatement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrStatement {
     /// <p>The statements to combine with OR logic. You can use any statements that can be nested.</p>
+    #[doc(hidden)]
     pub statements: std::option::Option<std::vec::Vec<crate::model::Statement>>,
 }
 impl OrStatement {
@@ -5291,11 +5351,10 @@ impl std::fmt::Debug for OrStatement {
         formatter.finish()
     }
 }
-/// See [`OrStatement`](crate::model::OrStatement)
+/// See [`OrStatement`](crate::model::OrStatement).
 pub mod or_statement {
 
-    /// A builder for [`OrStatement`](crate::model::OrStatement)
-    #[non_exhaustive]
+    /// A builder for [`OrStatement`](crate::model::OrStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statements: std::option::Option<std::vec::Vec<crate::model::Statement>>,
@@ -5320,7 +5379,7 @@ pub mod or_statement {
             self.statements = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrStatement`](crate::model::OrStatement)
+        /// Consumes the builder and constructs a [`OrStatement`](crate::model::OrStatement).
         pub fn build(self) -> crate::model::OrStatement {
             crate::model::OrStatement {
                 statements: self.statements,
@@ -5329,7 +5388,7 @@ pub mod or_statement {
     }
 }
 impl OrStatement {
-    /// Creates a new builder-style object to manufacture [`OrStatement`](crate::model::OrStatement)
+    /// Creates a new builder-style object to manufacture [`OrStatement`](crate::model::OrStatement).
     pub fn builder() -> crate::model::or_statement::Builder {
         crate::model::or_statement::Builder::default()
     }
@@ -5340,6 +5399,7 @@ impl OrStatement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AndStatement {
     /// <p>The statements to combine with AND logic. You can use any statements that can be nested. </p>
+    #[doc(hidden)]
     pub statements: std::option::Option<std::vec::Vec<crate::model::Statement>>,
 }
 impl AndStatement {
@@ -5355,11 +5415,10 @@ impl std::fmt::Debug for AndStatement {
         formatter.finish()
     }
 }
-/// See [`AndStatement`](crate::model::AndStatement)
+/// See [`AndStatement`](crate::model::AndStatement).
 pub mod and_statement {
 
-    /// A builder for [`AndStatement`](crate::model::AndStatement)
-    #[non_exhaustive]
+    /// A builder for [`AndStatement`](crate::model::AndStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statements: std::option::Option<std::vec::Vec<crate::model::Statement>>,
@@ -5384,7 +5443,7 @@ pub mod and_statement {
             self.statements = input;
             self
         }
-        /// Consumes the builder and constructs a [`AndStatement`](crate::model::AndStatement)
+        /// Consumes the builder and constructs a [`AndStatement`](crate::model::AndStatement).
         pub fn build(self) -> crate::model::AndStatement {
             crate::model::AndStatement {
                 statements: self.statements,
@@ -5393,7 +5452,7 @@ pub mod and_statement {
     }
 }
 impl AndStatement {
-    /// Creates a new builder-style object to manufacture [`AndStatement`](crate::model::AndStatement)
+    /// Creates a new builder-style object to manufacture [`AndStatement`](crate::model::AndStatement).
     pub fn builder() -> crate::model::and_statement::Builder {
         crate::model::and_statement::Builder::default()
     }
@@ -5407,25 +5466,29 @@ impl AndStatement {
 /// <li> <p>An IP match statement with an IP set that specified the address 192.0.2.44.</p> </li>
 /// <li> <p>A string match statement that searches in the User-Agent header for the string BadBot.</p> </li>
 /// </ul>
-/// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet both of the conditions in the statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet both conditions are not counted towards the rate limit and are not affected by this rule.</p>
+/// <p>In this rate-based rule, you also define a rate limit. For this example, the rate limit is 1,000. Requests that meet the criteria of both of the nested statements are counted. If the count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not meet the criteria of both of the nested statements are not counted towards the rate limit and are not affected by this rule.</p>
 /// <p>You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a web ACL and inside a rule group. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RateBasedStatement {
     /// <p>The limit on requests per 5-minute period for a single originating IP address. If the statement includes a <code>ScopeDownStatement</code>, this limit is applied only to the requests that match the statement.</p>
+    #[doc(hidden)]
     pub limit: i64,
     /// <p>Setting that indicates how to aggregate the request counts. The options are the following:</p>
     /// <ul>
     /// <li> <p>IP - Aggregate the request counts on the IP address from the web request origin.</p> </li>
     /// <li> <p>FORWARDED_IP - Aggregate the request counts on the first IP address in an HTTP header. If you use this, configure the <code>ForwardedIPConfig</code>, to specify the header to use. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub aggregate_key_type: std::option::Option<crate::model::RateBasedStatementAggregateKeyType>,
     /// <p>An optional nested statement that narrows the scope of the web requests that are evaluated by the rate-based statement. Requests are only tracked by the rate-based statement if they match the scope-down statement. You can use any nestable <code>Statement</code> in the scope-down statement, and you can nest statements at any level, the same as you can for a rule statement. </p>
+    #[doc(hidden)]
     pub scope_down_statement: std::option::Option<std::boxed::Box<crate::model::Statement>>,
     /// <p>The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name. </p> <note>
     /// <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
     /// </note>
     /// <p>This is required if <code>AggregateKeyType</code> is set to <code>FORWARDED_IP</code>.</p>
+    #[doc(hidden)]
     pub forwarded_ip_config: std::option::Option<crate::model::ForwardedIpConfig>,
 }
 impl RateBasedStatement {
@@ -5465,11 +5528,10 @@ impl std::fmt::Debug for RateBasedStatement {
         formatter.finish()
     }
 }
-/// See [`RateBasedStatement`](crate::model::RateBasedStatement)
+/// See [`RateBasedStatement`](crate::model::RateBasedStatement).
 pub mod rate_based_statement {
 
-    /// A builder for [`RateBasedStatement`](crate::model::RateBasedStatement)
-    #[non_exhaustive]
+    /// A builder for [`RateBasedStatement`](crate::model::RateBasedStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) limit: std::option::Option<i64>,
@@ -5549,7 +5611,7 @@ pub mod rate_based_statement {
             self.forwarded_ip_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`RateBasedStatement`](crate::model::RateBasedStatement)
+        /// Consumes the builder and constructs a [`RateBasedStatement`](crate::model::RateBasedStatement).
         pub fn build(self) -> crate::model::RateBasedStatement {
             crate::model::RateBasedStatement {
                 limit: self.limit.unwrap_or_default(),
@@ -5561,7 +5623,7 @@ pub mod rate_based_statement {
     }
 }
 impl RateBasedStatement {
-    /// Creates a new builder-style object to manufacture [`RateBasedStatement`](crate::model::RateBasedStatement)
+    /// Creates a new builder-style object to manufacture [`RateBasedStatement`](crate::model::RateBasedStatement).
     pub fn builder() -> crate::model::rate_based_statement::Builder {
         crate::model::rate_based_statement::Builder::default()
     }
@@ -5578,6 +5640,7 @@ pub struct ForwardedIpConfig {
     /// <p>The name of the HTTP header to use for the IP address. For example, to use the X-Forwarded-For (XFF) header, set this to <code>X-Forwarded-For</code>.</p> <note>
     /// <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
     /// </note>
+    #[doc(hidden)]
     pub header_name: std::option::Option<std::string::String>,
     /// <p>The match status to assign to the web request if the request doesn't have a valid IP address in the specified position.</p> <note>
     /// <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
@@ -5587,6 +5650,7 @@ pub struct ForwardedIpConfig {
     /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
     /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub fallback_behavior: std::option::Option<crate::model::FallbackBehavior>,
 }
 impl ForwardedIpConfig {
@@ -5616,11 +5680,10 @@ impl std::fmt::Debug for ForwardedIpConfig {
         formatter.finish()
     }
 }
-/// See [`ForwardedIpConfig`](crate::model::ForwardedIpConfig)
+/// See [`ForwardedIpConfig`](crate::model::ForwardedIpConfig).
 pub mod forwarded_ip_config {
 
-    /// A builder for [`ForwardedIpConfig`](crate::model::ForwardedIpConfig)
-    #[non_exhaustive]
+    /// A builder for [`ForwardedIpConfig`](crate::model::ForwardedIpConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) header_name: std::option::Option<std::string::String>,
@@ -5668,7 +5731,7 @@ pub mod forwarded_ip_config {
             self.fallback_behavior = input;
             self
         }
-        /// Consumes the builder and constructs a [`ForwardedIpConfig`](crate::model::ForwardedIpConfig)
+        /// Consumes the builder and constructs a [`ForwardedIpConfig`](crate::model::ForwardedIpConfig).
         pub fn build(self) -> crate::model::ForwardedIpConfig {
             crate::model::ForwardedIpConfig {
                 header_name: self.header_name,
@@ -5678,7 +5741,7 @@ pub mod forwarded_ip_config {
     }
 }
 impl ForwardedIpConfig {
-    /// Creates a new builder-style object to manufacture [`ForwardedIpConfig`](crate::model::ForwardedIpConfig)
+    /// Creates a new builder-style object to manufacture [`ForwardedIpConfig`](crate::model::ForwardedIpConfig).
     pub fn builder() -> crate::model::forwarded_ip_config::Builder {
         crate::model::forwarded_ip_config::Builder::default()
     }
@@ -5800,10 +5863,13 @@ impl AsRef<str> for RateBasedStatementAggregateKeyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegexPatternSetReferenceStatement {
     /// <p>The Amazon Resource Name (ARN) of the <code>RegexPatternSet</code> that this statement references.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
+    #[doc(hidden)]
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
 }
 impl RegexPatternSetReferenceStatement {
@@ -5811,7 +5877,7 @@ impl RegexPatternSetReferenceStatement {
     pub fn arn(&self) -> std::option::Option<&str> {
         self.arn.as_deref()
     }
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -5829,11 +5895,10 @@ impl std::fmt::Debug for RegexPatternSetReferenceStatement {
         formatter.finish()
     }
 }
-/// See [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement)
+/// See [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement).
 pub mod regex_pattern_set_reference_statement {
 
-    /// A builder for [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement)
-    #[non_exhaustive]
+    /// A builder for [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -5852,12 +5917,12 @@ pub mod regex_pattern_set_reference_statement {
             self.arn = input;
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -5884,7 +5949,7 @@ pub mod regex_pattern_set_reference_statement {
             self.text_transformations = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement)
+        /// Consumes the builder and constructs a [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement).
         pub fn build(self) -> crate::model::RegexPatternSetReferenceStatement {
             crate::model::RegexPatternSetReferenceStatement {
                 arn: self.arn,
@@ -5895,7 +5960,7 @@ pub mod regex_pattern_set_reference_statement {
     }
 }
 impl RegexPatternSetReferenceStatement {
-    /// Creates a new builder-style object to manufacture [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement)
+    /// Creates a new builder-style object to manufacture [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement).
     pub fn builder() -> crate::model::regex_pattern_set_reference_statement::Builder {
         crate::model::regex_pattern_set_reference_statement::Builder::default()
     }
@@ -5907,10 +5972,12 @@ impl RegexPatternSetReferenceStatement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpSetReferenceStatement {
     /// <p>The Amazon Resource Name (ARN) of the <code>IPSet</code> that this statement references.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name. </p> <note>
     /// <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
     /// </note>
+    #[doc(hidden)]
     pub ip_set_forwarded_ip_config: std::option::Option<crate::model::IpSetForwardedIpConfig>,
 }
 impl IpSetReferenceStatement {
@@ -5938,11 +6005,10 @@ impl std::fmt::Debug for IpSetReferenceStatement {
         formatter.finish()
     }
 }
-/// See [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement)
+/// See [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement).
 pub mod ip_set_reference_statement {
 
-    /// A builder for [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement)
-    #[non_exhaustive]
+    /// A builder for [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -5980,7 +6046,7 @@ pub mod ip_set_reference_statement {
             self.ip_set_forwarded_ip_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement)
+        /// Consumes the builder and constructs a [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement).
         pub fn build(self) -> crate::model::IpSetReferenceStatement {
             crate::model::IpSetReferenceStatement {
                 arn: self.arn,
@@ -5990,7 +6056,7 @@ pub mod ip_set_reference_statement {
     }
 }
 impl IpSetReferenceStatement {
-    /// Creates a new builder-style object to manufacture [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement)
+    /// Creates a new builder-style object to manufacture [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement).
     pub fn builder() -> crate::model::ip_set_reference_statement::Builder {
         crate::model::ip_set_reference_statement::Builder::default()
     }
@@ -6006,6 +6072,7 @@ pub struct IpSetForwardedIpConfig {
     /// <p>The name of the HTTP header to use for the IP address. For example, to use the X-Forwarded-For (XFF) header, set this to <code>X-Forwarded-For</code>.</p> <note>
     /// <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
     /// </note>
+    #[doc(hidden)]
     pub header_name: std::option::Option<std::string::String>,
     /// <p>The match status to assign to the web request if the request doesn't have a valid IP address in the specified position.</p> <note>
     /// <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
@@ -6015,6 +6082,7 @@ pub struct IpSetForwardedIpConfig {
     /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
     /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub fallback_behavior: std::option::Option<crate::model::FallbackBehavior>,
     /// <p>The position in the header to search for the IP address. The header can contain IP addresses of the original client and also of proxies. For example, the header value could be <code>10.1.1.1, 127.0.0.0, 10.10.10.10</code> where the first IP address identifies the original client and the rest identify proxies that the request went through. </p>
     /// <p>The options for this setting are the following: </p>
@@ -6023,6 +6091,7 @@ pub struct IpSetForwardedIpConfig {
     /// <li> <p>LAST - Inspect the last IP address in the list of IP addresses in the header.</p> </li>
     /// <li> <p>ANY - Inspect all IP addresses in the header for a match. If the header contains more than 10 IP addresses, WAF inspects the last 10.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub position: std::option::Option<crate::model::ForwardedIpPosition>,
 }
 impl IpSetForwardedIpConfig {
@@ -6063,11 +6132,10 @@ impl std::fmt::Debug for IpSetForwardedIpConfig {
         formatter.finish()
     }
 }
-/// See [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig)
+/// See [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig).
 pub mod ip_set_forwarded_ip_config {
 
-    /// A builder for [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig)
-    #[non_exhaustive]
+    /// A builder for [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) header_name: std::option::Option<std::string::String>,
@@ -6141,7 +6209,7 @@ pub mod ip_set_forwarded_ip_config {
             self.position = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig)
+        /// Consumes the builder and constructs a [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig).
         pub fn build(self) -> crate::model::IpSetForwardedIpConfig {
             crate::model::IpSetForwardedIpConfig {
                 header_name: self.header_name,
@@ -6152,7 +6220,7 @@ pub mod ip_set_forwarded_ip_config {
     }
 }
 impl IpSetForwardedIpConfig {
-    /// Creates a new builder-style object to manufacture [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig)
+    /// Creates a new builder-style object to manufacture [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig).
     pub fn builder() -> crate::model::ip_set_forwarded_ip_config::Builder {
         crate::model::ip_set_forwarded_ip_config::Builder::default()
     }
@@ -6223,8 +6291,10 @@ impl AsRef<str> for ForwardedIpPosition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroupReferenceStatement {
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The rules in the referenced rule group whose actions are set to <code>Count</code>. When you exclude a rule, WAF evaluates it exactly as it would if the rule action setting were <code>Count</code>. This is a useful option for testing the rules in a rule group without modifying how they handle your web traffic.</p>
+    #[doc(hidden)]
     pub excluded_rules: std::option::Option<std::vec::Vec<crate::model::ExcludedRule>>,
 }
 impl RuleGroupReferenceStatement {
@@ -6245,11 +6315,10 @@ impl std::fmt::Debug for RuleGroupReferenceStatement {
         formatter.finish()
     }
 }
-/// See [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement)
+/// See [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement).
 pub mod rule_group_reference_statement {
 
-    /// A builder for [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6285,7 +6354,7 @@ pub mod rule_group_reference_statement {
             self.excluded_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement)
+        /// Consumes the builder and constructs a [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement).
         pub fn build(self) -> crate::model::RuleGroupReferenceStatement {
             crate::model::RuleGroupReferenceStatement {
                 arn: self.arn,
@@ -6295,7 +6364,7 @@ pub mod rule_group_reference_statement {
     }
 }
 impl RuleGroupReferenceStatement {
-    /// Creates a new builder-style object to manufacture [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement)
+    /// Creates a new builder-style object to manufacture [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement).
     pub fn builder() -> crate::model::rule_group_reference_statement::Builder {
         crate::model::rule_group_reference_statement::Builder::default()
     }
@@ -6306,10 +6375,12 @@ impl RuleGroupReferenceStatement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeoMatchStatement {
     /// <p>An array of two-character country codes, for example, <code>[ "US", "CN" ]</code>, from the alpha-2 country ISO codes of the ISO 3166 international standard. </p>
+    #[doc(hidden)]
     pub country_codes: std::option::Option<std::vec::Vec<crate::model::CountryCode>>,
     /// <p>The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name. </p> <note>
     /// <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
     /// </note>
+    #[doc(hidden)]
     pub forwarded_ip_config: std::option::Option<crate::model::ForwardedIpConfig>,
 }
 impl GeoMatchStatement {
@@ -6332,11 +6403,10 @@ impl std::fmt::Debug for GeoMatchStatement {
         formatter.finish()
     }
 }
-/// See [`GeoMatchStatement`](crate::model::GeoMatchStatement)
+/// See [`GeoMatchStatement`](crate::model::GeoMatchStatement).
 pub mod geo_match_statement {
 
-    /// A builder for [`GeoMatchStatement`](crate::model::GeoMatchStatement)
-    #[non_exhaustive]
+    /// A builder for [`GeoMatchStatement`](crate::model::GeoMatchStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) country_codes: std::option::Option<std::vec::Vec<crate::model::CountryCode>>,
@@ -6379,7 +6449,7 @@ pub mod geo_match_statement {
             self.forwarded_ip_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeoMatchStatement`](crate::model::GeoMatchStatement)
+        /// Consumes the builder and constructs a [`GeoMatchStatement`](crate::model::GeoMatchStatement).
         pub fn build(self) -> crate::model::GeoMatchStatement {
             crate::model::GeoMatchStatement {
                 country_codes: self.country_codes,
@@ -6389,7 +6459,7 @@ pub mod geo_match_statement {
     }
 }
 impl GeoMatchStatement {
-    /// Creates a new builder-style object to manufacture [`GeoMatchStatement`](crate::model::GeoMatchStatement)
+    /// Creates a new builder-style object to manufacture [`GeoMatchStatement`](crate::model::GeoMatchStatement).
     pub fn builder() -> crate::model::geo_match_statement::Builder {
         crate::model::geo_match_statement::Builder::default()
     }
@@ -7462,22 +7532,26 @@ impl AsRef<str> for CountryCode {
 }
 
 /// <p>A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). For example, you can use a size constraint statement to look for query strings that are longer than 100 bytes. </p>
-/// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you can create a size constraint condition and block requests that have a request body greater than 8192 bytes.</p>
+/// <p>If you configure WAF to inspect the request body, WAF inspects only the first 8192 bytes (8 KB). If the request body for your web requests never exceeds 8192 bytes, you could use a size constraint statement to block requests that have a request body greater than 8192 bytes.</p>
 /// <p>If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one character. For example, the URI <code>/logo.jpg</code> is nine characters long.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SizeConstraintStatement {
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>The operator to use to compare the request part to the size setting. </p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>The size, in byte, to compare to the request part, after any transformations.</p>
+    #[doc(hidden)]
     pub size: i64,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
+    #[doc(hidden)]
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
 }
 impl SizeConstraintStatement {
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -7504,11 +7578,10 @@ impl std::fmt::Debug for SizeConstraintStatement {
         formatter.finish()
     }
 }
-/// See [`SizeConstraintStatement`](crate::model::SizeConstraintStatement)
+/// See [`SizeConstraintStatement`](crate::model::SizeConstraintStatement).
 pub mod size_constraint_statement {
 
-    /// A builder for [`SizeConstraintStatement`](crate::model::SizeConstraintStatement)
-    #[non_exhaustive]
+    /// A builder for [`SizeConstraintStatement`](crate::model::SizeConstraintStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_to_match: std::option::Option<crate::model::FieldToMatch>,
@@ -7518,12 +7591,12 @@ pub mod size_constraint_statement {
             std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
     }
     impl Builder {
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -7573,7 +7646,7 @@ pub mod size_constraint_statement {
             self.text_transformations = input;
             self
         }
-        /// Consumes the builder and constructs a [`SizeConstraintStatement`](crate::model::SizeConstraintStatement)
+        /// Consumes the builder and constructs a [`SizeConstraintStatement`](crate::model::SizeConstraintStatement).
         pub fn build(self) -> crate::model::SizeConstraintStatement {
             crate::model::SizeConstraintStatement {
                 field_to_match: self.field_to_match,
@@ -7585,7 +7658,7 @@ pub mod size_constraint_statement {
     }
 }
 impl SizeConstraintStatement {
-    /// Creates a new builder-style object to manufacture [`SizeConstraintStatement`](crate::model::SizeConstraintStatement)
+    /// Creates a new builder-style object to manufacture [`SizeConstraintStatement`](crate::model::SizeConstraintStatement).
     pub fn builder() -> crate::model::size_constraint_statement::Builder {
         crate::model::size_constraint_statement::Builder::default()
     }
@@ -7662,17 +7735,19 @@ impl AsRef<str> for ComparisonOperator {
     }
 }
 
-/// <p>A rule statement that defines a cross-site scripting (XSS) match search for WAF to apply to web requests. XSS attacks are those where the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. The XSS match statement provides the location in requests that you want WAF to search and text transformations to use on the search area before WAF searches for character sequences that are likely to be malicious strings. </p>
+/// <p>A rule statement that inspects for cross-site scripting (XSS) attacks. In XSS attacks, the attacker uses vulnerabilities in a benign website as a vehicle to inject malicious client-site scripts into other legitimate web browsers. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct XssMatchStatement {
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
+    #[doc(hidden)]
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
 }
 impl XssMatchStatement {
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -7689,11 +7764,10 @@ impl std::fmt::Debug for XssMatchStatement {
         formatter.finish()
     }
 }
-/// See [`XssMatchStatement`](crate::model::XssMatchStatement)
+/// See [`XssMatchStatement`](crate::model::XssMatchStatement).
 pub mod xss_match_statement {
 
-    /// A builder for [`XssMatchStatement`](crate::model::XssMatchStatement)
-    #[non_exhaustive]
+    /// A builder for [`XssMatchStatement`](crate::model::XssMatchStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_to_match: std::option::Option<crate::model::FieldToMatch>,
@@ -7701,12 +7775,12 @@ pub mod xss_match_statement {
             std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
     }
     impl Builder {
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -7733,7 +7807,7 @@ pub mod xss_match_statement {
             self.text_transformations = input;
             self
         }
-        /// Consumes the builder and constructs a [`XssMatchStatement`](crate::model::XssMatchStatement)
+        /// Consumes the builder and constructs a [`XssMatchStatement`](crate::model::XssMatchStatement).
         pub fn build(self) -> crate::model::XssMatchStatement {
             crate::model::XssMatchStatement {
                 field_to_match: self.field_to_match,
@@ -7743,23 +7817,31 @@ pub mod xss_match_statement {
     }
 }
 impl XssMatchStatement {
-    /// Creates a new builder-style object to manufacture [`XssMatchStatement`](crate::model::XssMatchStatement)
+    /// Creates a new builder-style object to manufacture [`XssMatchStatement`](crate::model::XssMatchStatement).
     pub fn builder() -> crate::model::xss_match_statement::Builder {
         crate::model::xss_match_statement::Builder::default()
     }
 }
 
-/// <p>Attackers sometimes insert malicious SQL code into web requests in an effort to extract data from your database. To allow or block web requests that appear to contain malicious SQL code, create one or more SQL injection match conditions. An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want WAF to inspect. Later in the process, when you create a web ACL, you specify whether to allow or block requests that appear to contain malicious SQL code.</p>
+/// <p>A rule statement that inspects for malicious SQL code. Attackers insert malicious SQL code into web requests to do things like modify your database or extract data from it. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqliMatchStatement {
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
+    #[doc(hidden)]
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
+    /// <p>The sensitivity that you want WAF to use to inspect for SQL injection attacks. </p>
+    /// <p> <code>HIGH</code> detects more attacks, but might generate more false positives, especially if your web requests frequently contain unusual strings. For information about identifying and mitigating false positives, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing.html">Testing and tuning</a> in the <i>WAF Developer Guide</i>.</p>
+    /// <p> <code>LOW</code> is generally a better choice for resources that already have other protections against SQL injection attacks or that have a low tolerance for false positives. </p>
+    /// <p>Default: <code>LOW</code> </p>
+    #[doc(hidden)]
+    pub sensitivity_level: std::option::Option<crate::model::SensitivityLevel>,
 }
 impl SqliMatchStatement {
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -7767,33 +7849,41 @@ impl SqliMatchStatement {
     pub fn text_transformations(&self) -> std::option::Option<&[crate::model::TextTransformation]> {
         self.text_transformations.as_deref()
     }
+    /// <p>The sensitivity that you want WAF to use to inspect for SQL injection attacks. </p>
+    /// <p> <code>HIGH</code> detects more attacks, but might generate more false positives, especially if your web requests frequently contain unusual strings. For information about identifying and mitigating false positives, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing.html">Testing and tuning</a> in the <i>WAF Developer Guide</i>.</p>
+    /// <p> <code>LOW</code> is generally a better choice for resources that already have other protections against SQL injection attacks or that have a low tolerance for false positives. </p>
+    /// <p>Default: <code>LOW</code> </p>
+    pub fn sensitivity_level(&self) -> std::option::Option<&crate::model::SensitivityLevel> {
+        self.sensitivity_level.as_ref()
+    }
 }
 impl std::fmt::Debug for SqliMatchStatement {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("SqliMatchStatement");
         formatter.field("field_to_match", &self.field_to_match);
         formatter.field("text_transformations", &self.text_transformations);
+        formatter.field("sensitivity_level", &self.sensitivity_level);
         formatter.finish()
     }
 }
-/// See [`SqliMatchStatement`](crate::model::SqliMatchStatement)
+/// See [`SqliMatchStatement`](crate::model::SqliMatchStatement).
 pub mod sqli_match_statement {
 
-    /// A builder for [`SqliMatchStatement`](crate::model::SqliMatchStatement)
-    #[non_exhaustive]
+    /// A builder for [`SqliMatchStatement`](crate::model::SqliMatchStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_to_match: std::option::Option<crate::model::FieldToMatch>,
         pub(crate) text_transformations:
             std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
+        pub(crate) sensitivity_level: std::option::Option<crate::model::SensitivityLevel>,
     }
     impl Builder {
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -7820,23 +7910,98 @@ pub mod sqli_match_statement {
             self.text_transformations = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqliMatchStatement`](crate::model::SqliMatchStatement)
+        /// <p>The sensitivity that you want WAF to use to inspect for SQL injection attacks. </p>
+        /// <p> <code>HIGH</code> detects more attacks, but might generate more false positives, especially if your web requests frequently contain unusual strings. For information about identifying and mitigating false positives, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing.html">Testing and tuning</a> in the <i>WAF Developer Guide</i>.</p>
+        /// <p> <code>LOW</code> is generally a better choice for resources that already have other protections against SQL injection attacks or that have a low tolerance for false positives. </p>
+        /// <p>Default: <code>LOW</code> </p>
+        pub fn sensitivity_level(mut self, input: crate::model::SensitivityLevel) -> Self {
+            self.sensitivity_level = Some(input);
+            self
+        }
+        /// <p>The sensitivity that you want WAF to use to inspect for SQL injection attacks. </p>
+        /// <p> <code>HIGH</code> detects more attacks, but might generate more false positives, especially if your web requests frequently contain unusual strings. For information about identifying and mitigating false positives, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-testing.html">Testing and tuning</a> in the <i>WAF Developer Guide</i>.</p>
+        /// <p> <code>LOW</code> is generally a better choice for resources that already have other protections against SQL injection attacks or that have a low tolerance for false positives. </p>
+        /// <p>Default: <code>LOW</code> </p>
+        pub fn set_sensitivity_level(
+            mut self,
+            input: std::option::Option<crate::model::SensitivityLevel>,
+        ) -> Self {
+            self.sensitivity_level = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SqliMatchStatement`](crate::model::SqliMatchStatement).
         pub fn build(self) -> crate::model::SqliMatchStatement {
             crate::model::SqliMatchStatement {
                 field_to_match: self.field_to_match,
                 text_transformations: self.text_transformations,
+                sensitivity_level: self.sensitivity_level,
             }
         }
     }
 }
 impl SqliMatchStatement {
-    /// Creates a new builder-style object to manufacture [`SqliMatchStatement`](crate::model::SqliMatchStatement)
+    /// Creates a new builder-style object to manufacture [`SqliMatchStatement`](crate::model::SqliMatchStatement).
     pub fn builder() -> crate::model::sqli_match_statement::Builder {
         crate::model::sqli_match_statement::Builder::default()
     }
 }
 
-/// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is refered to as a string match statement.</p>
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum SensitivityLevel {
+    #[allow(missing_docs)] // documentation missing in model
+    High,
+    #[allow(missing_docs)] // documentation missing in model
+    Low,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for SensitivityLevel {
+    fn from(s: &str) -> Self {
+        match s {
+            "HIGH" => SensitivityLevel::High,
+            "LOW" => SensitivityLevel::Low,
+            other => SensitivityLevel::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for SensitivityLevel {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(SensitivityLevel::from(s))
+    }
+}
+impl SensitivityLevel {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            SensitivityLevel::High => "HIGH",
+            SensitivityLevel::Low => "LOW",
+            SensitivityLevel::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["HIGH", "LOW"]
+    }
+}
+impl AsRef<str> for SensitivityLevel {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+/// <p>A rule statement that defines a string match search for WAF to apply to web requests. The byte match statement provides the bytes to search for, the location in requests that you want WAF to search, and other settings. The bytes to search for are typically a string that corresponds with ASCII characters. In the WAF console and the developer guide, this is called a string match statement.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ByteMatchStatement {
@@ -7852,10 +8017,13 @@ pub struct ByteMatchStatement {
     /// <p>For example, suppose the value of <code>Type</code> is <code>HEADER</code> and the value of <code>Data</code> is <code>User-Agent</code>. If you want to search the <code>User-Agent</code> header for the value <code>BadBot</code>, you base64-encode <code>BadBot</code> using MIME base64-encoding and include the resulting value, <code>QmFkQm90</code>, in the value of <code>SearchString</code>.</p>
     /// <p> <b>If you're using the CLI or one of the Amazon Web Services SDKs</b> </p>
     /// <p>The value that you want WAF to search for. The SDK automatically base64 encodes the value.</p>
+    #[doc(hidden)]
     pub search_string: std::option::Option<aws_smithy_types::Blob>,
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
+    #[doc(hidden)]
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
     /// <p>The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
     /// <p> <b>CONTAINS</b> </p>
@@ -7872,6 +8040,7 @@ pub struct ByteMatchStatement {
     /// <p>The value of <code>SearchString</code> must appear at the beginning of the specified part of the web request.</p>
     /// <p> <b>ENDS_WITH</b> </p>
     /// <p>The value of <code>SearchString</code> must appear at the end of the specified part of the web request.</p>
+    #[doc(hidden)]
     pub positional_constraint: std::option::Option<crate::model::PositionalConstraint>,
 }
 impl ByteMatchStatement {
@@ -7890,7 +8059,7 @@ impl ByteMatchStatement {
     pub fn search_string(&self) -> std::option::Option<&aws_smithy_types::Blob> {
         self.search_string.as_ref()
     }
-    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -7929,11 +8098,10 @@ impl std::fmt::Debug for ByteMatchStatement {
         formatter.finish()
     }
 }
-/// See [`ByteMatchStatement`](crate::model::ByteMatchStatement)
+/// See [`ByteMatchStatement`](crate::model::ByteMatchStatement).
 pub mod byte_match_statement {
 
-    /// A builder for [`ByteMatchStatement`](crate::model::ByteMatchStatement)
-    #[non_exhaustive]
+    /// A builder for [`ByteMatchStatement`](crate::model::ByteMatchStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) search_string: std::option::Option<aws_smithy_types::Blob>,
@@ -7978,12 +8146,12 @@ pub mod byte_match_statement {
             self.search_string = input;
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -8051,7 +8219,7 @@ pub mod byte_match_statement {
             self.positional_constraint = input;
             self
         }
-        /// Consumes the builder and constructs a [`ByteMatchStatement`](crate::model::ByteMatchStatement)
+        /// Consumes the builder and constructs a [`ByteMatchStatement`](crate::model::ByteMatchStatement).
         pub fn build(self) -> crate::model::ByteMatchStatement {
             crate::model::ByteMatchStatement {
                 search_string: self.search_string,
@@ -8063,7 +8231,7 @@ pub mod byte_match_statement {
     }
 }
 impl ByteMatchStatement {
-    /// Creates a new builder-style object to manufacture [`ByteMatchStatement`](crate::model::ByteMatchStatement)
+    /// Creates a new builder-style object to manufacture [`ByteMatchStatement`](crate::model::ByteMatchStatement).
     pub fn builder() -> crate::model::byte_match_statement::Builder {
         crate::model::byte_match_statement::Builder::default()
     }
@@ -8147,8 +8315,10 @@ impl AsRef<str> for PositionalConstraint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefaultAction {
     /// <p>Specifies that WAF should block requests by default. </p>
+    #[doc(hidden)]
     pub block: std::option::Option<crate::model::BlockAction>,
     /// <p>Specifies that WAF should allow requests by default.</p>
+    #[doc(hidden)]
     pub allow: std::option::Option<crate::model::AllowAction>,
 }
 impl DefaultAction {
@@ -8169,11 +8339,10 @@ impl std::fmt::Debug for DefaultAction {
         formatter.finish()
     }
 }
-/// See [`DefaultAction`](crate::model::DefaultAction)
+/// See [`DefaultAction`](crate::model::DefaultAction).
 pub mod default_action {
 
-    /// A builder for [`DefaultAction`](crate::model::DefaultAction)
-    #[non_exhaustive]
+    /// A builder for [`DefaultAction`](crate::model::DefaultAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block: std::option::Option<crate::model::BlockAction>,
@@ -8200,7 +8369,7 @@ pub mod default_action {
             self.allow = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultAction`](crate::model::DefaultAction)
+        /// Consumes the builder and constructs a [`DefaultAction`](crate::model::DefaultAction).
         pub fn build(self) -> crate::model::DefaultAction {
             crate::model::DefaultAction {
                 block: self.block,
@@ -8210,7 +8379,7 @@ pub mod default_action {
     }
 }
 impl DefaultAction {
-    /// Creates a new builder-style object to manufacture [`DefaultAction`](crate::model::DefaultAction)
+    /// Creates a new builder-style object to manufacture [`DefaultAction`](crate::model::DefaultAction).
     pub fn builder() -> crate::model::default_action::Builder {
         crate::model::default_action::Builder::default()
     }
@@ -8276,6 +8445,7 @@ impl AsRef<str> for Scope {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Regex {
     /// <p>The string representing the regular expression.</p>
+    #[doc(hidden)]
     pub regex_string: std::option::Option<std::string::String>,
 }
 impl Regex {
@@ -8291,11 +8461,10 @@ impl std::fmt::Debug for Regex {
         formatter.finish()
     }
 }
-/// See [`Regex`](crate::model::Regex)
+/// See [`Regex`](crate::model::Regex).
 pub mod regex {
 
-    /// A builder for [`Regex`](crate::model::Regex)
-    #[non_exhaustive]
+    /// A builder for [`Regex`](crate::model::Regex).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_string: std::option::Option<std::string::String>,
@@ -8311,7 +8480,7 @@ pub mod regex {
             self.regex_string = input;
             self
         }
-        /// Consumes the builder and constructs a [`Regex`](crate::model::Regex)
+        /// Consumes the builder and constructs a [`Regex`](crate::model::Regex).
         pub fn build(self) -> crate::model::Regex {
             crate::model::Regex {
                 regex_string: self.regex_string,
@@ -8320,7 +8489,7 @@ pub mod regex {
     }
 }
 impl Regex {
-    /// Creates a new builder-style object to manufacture [`Regex`](crate::model::Regex)
+    /// Creates a new builder-style object to manufacture [`Regex`](crate::model::Regex).
     pub fn builder() -> crate::model::regex::Builder {
         crate::model::regex::Builder::default()
     }
@@ -8332,8 +8501,10 @@ impl Regex {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>Part of the key:value pair that defines a tag. You can use a tag key to describe a category of information, such as "customer." Tag keys are case-sensitive.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Part of the key:value pair that defines a tag. You can use a tag value to describe a specific value within a category, such as "companyA" or "companyB." Tag values are case-sensitive.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -8354,11 +8525,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -8385,7 +8555,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -8395,7 +8565,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -8409,8 +8579,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VersionToPublish {
     /// <p>The Amazon Resource Name (ARN) of the vendor's rule group that's used in the published managed rule group version. </p>
+    #[doc(hidden)]
     pub associated_rule_group_arn: std::option::Option<std::string::String>,
     /// <p>The amount of time the vendor expects this version of the managed rule group to last, in days. </p>
+    #[doc(hidden)]
     pub forecasted_lifetime: std::option::Option<i32>,
 }
 impl VersionToPublish {
@@ -8431,11 +8603,10 @@ impl std::fmt::Debug for VersionToPublish {
         formatter.finish()
     }
 }
-/// See [`VersionToPublish`](crate::model::VersionToPublish)
+/// See [`VersionToPublish`](crate::model::VersionToPublish).
 pub mod version_to_publish {
 
-    /// A builder for [`VersionToPublish`](crate::model::VersionToPublish)
-    #[non_exhaustive]
+    /// A builder for [`VersionToPublish`](crate::model::VersionToPublish).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) associated_rule_group_arn: std::option::Option<std::string::String>,
@@ -8465,7 +8636,7 @@ pub mod version_to_publish {
             self.forecasted_lifetime = input;
             self
         }
-        /// Consumes the builder and constructs a [`VersionToPublish`](crate::model::VersionToPublish)
+        /// Consumes the builder and constructs a [`VersionToPublish`](crate::model::VersionToPublish).
         pub fn build(self) -> crate::model::VersionToPublish {
             crate::model::VersionToPublish {
                 associated_rule_group_arn: self.associated_rule_group_arn,
@@ -8475,7 +8646,7 @@ pub mod version_to_publish {
     }
 }
 impl VersionToPublish {
-    /// Creates a new builder-style object to manufacture [`VersionToPublish`](crate::model::VersionToPublish)
+    /// Creates a new builder-style object to manufacture [`VersionToPublish`](crate::model::VersionToPublish).
     pub fn builder() -> crate::model::version_to_publish::Builder {
         crate::model::version_to_publish::Builder::default()
     }
@@ -8495,18 +8666,23 @@ impl VersionToPublish {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the web ACL that you want to associate with <code>LogDestinationConfigs</code>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The logging destination configuration that you want to associate with the web ACL.</p> <note>
     /// <p>You can associate one logging destination to a web ACL.</p>
     /// </note>
+    #[doc(hidden)]
     pub log_destination_configs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The parts of the request that you want to keep out of the logs. For example, if you redact the <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>. </p> <note>
     /// <p>You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>, <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub redacted_fields: std::option::Option<std::vec::Vec<crate::model::FieldToMatch>>,
     /// <p>Indicates whether the logging configuration was created by Firewall Manager, as part of an WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration. </p>
+    #[doc(hidden)]
     pub managed_by_firewall_manager: bool,
     /// <p>Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. </p>
+    #[doc(hidden)]
     pub logging_filter: std::option::Option<crate::model::LoggingFilter>,
 }
 impl LoggingConfiguration {
@@ -8549,11 +8725,10 @@ impl std::fmt::Debug for LoggingConfiguration {
         formatter.finish()
     }
 }
-/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration).
 pub mod logging_configuration {
 
-    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -8642,7 +8817,7 @@ pub mod logging_configuration {
             self.logging_filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration).
         pub fn build(self) -> crate::model::LoggingConfiguration {
             crate::model::LoggingConfiguration {
                 resource_arn: self.resource_arn,
@@ -8655,7 +8830,7 @@ pub mod logging_configuration {
     }
 }
 impl LoggingConfiguration {
-    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     pub fn builder() -> crate::model::logging_configuration::Builder {
         crate::model::logging_configuration::Builder::default()
     }
@@ -8667,8 +8842,10 @@ impl LoggingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingFilter {
     /// <p>The filters that you want to apply to the logs. </p>
+    #[doc(hidden)]
     pub filters: std::option::Option<std::vec::Vec<crate::model::Filter>>,
     /// <p>Default handling for logs that don't match any of the specified filtering conditions. </p>
+    #[doc(hidden)]
     pub default_behavior: std::option::Option<crate::model::FilterBehavior>,
 }
 impl LoggingFilter {
@@ -8689,11 +8866,10 @@ impl std::fmt::Debug for LoggingFilter {
         formatter.finish()
     }
 }
-/// See [`LoggingFilter`](crate::model::LoggingFilter)
+/// See [`LoggingFilter`](crate::model::LoggingFilter).
 pub mod logging_filter {
 
-    /// A builder for [`LoggingFilter`](crate::model::LoggingFilter)
-    #[non_exhaustive]
+    /// A builder for [`LoggingFilter`](crate::model::LoggingFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filters: std::option::Option<std::vec::Vec<crate::model::Filter>>,
@@ -8732,7 +8908,7 @@ pub mod logging_filter {
             self.default_behavior = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingFilter`](crate::model::LoggingFilter)
+        /// Consumes the builder and constructs a [`LoggingFilter`](crate::model::LoggingFilter).
         pub fn build(self) -> crate::model::LoggingFilter {
             crate::model::LoggingFilter {
                 filters: self.filters,
@@ -8742,7 +8918,7 @@ pub mod logging_filter {
     }
 }
 impl LoggingFilter {
-    /// Creates a new builder-style object to manufacture [`LoggingFilter`](crate::model::LoggingFilter)
+    /// Creates a new builder-style object to manufacture [`LoggingFilter`](crate::model::LoggingFilter).
     pub fn builder() -> crate::model::logging_filter::Builder {
         crate::model::logging_filter::Builder::default()
     }
@@ -8808,10 +8984,13 @@ impl AsRef<str> for FilterBehavior {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>How to handle logs that satisfy the filter's conditions and requirement. </p>
+    #[doc(hidden)]
     pub behavior: std::option::Option<crate::model::FilterBehavior>,
     /// <p>Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.</p>
+    #[doc(hidden)]
     pub requirement: std::option::Option<crate::model::FilterRequirement>,
     /// <p>Match conditions for the filter.</p>
+    #[doc(hidden)]
     pub conditions: std::option::Option<std::vec::Vec<crate::model::Condition>>,
 }
 impl Filter {
@@ -8837,11 +9016,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) behavior: std::option::Option<crate::model::FilterBehavior>,
@@ -8894,7 +9072,7 @@ pub mod filter {
             self.conditions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 behavior: self.behavior,
@@ -8905,7 +9083,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -8915,17 +9093,19 @@ impl Filter {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Condition {
-    /// <p>A single action condition.</p>
+    /// <p>A single action condition. This is the action setting that a log record must contain in order to meet the condition.</p>
+    #[doc(hidden)]
     pub action_condition: std::option::Option<crate::model::ActionCondition>,
-    /// <p>A single label name condition.</p>
+    /// <p>A single label name condition. This is the fully qualified label name that a log record must contain in order to meet the condition. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. </p>
+    #[doc(hidden)]
     pub label_name_condition: std::option::Option<crate::model::LabelNameCondition>,
 }
 impl Condition {
-    /// <p>A single action condition.</p>
+    /// <p>A single action condition. This is the action setting that a log record must contain in order to meet the condition.</p>
     pub fn action_condition(&self) -> std::option::Option<&crate::model::ActionCondition> {
         self.action_condition.as_ref()
     }
-    /// <p>A single label name condition.</p>
+    /// <p>A single label name condition. This is the fully qualified label name that a log record must contain in order to meet the condition. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. </p>
     pub fn label_name_condition(&self) -> std::option::Option<&crate::model::LabelNameCondition> {
         self.label_name_condition.as_ref()
     }
@@ -8938,23 +9118,22 @@ impl std::fmt::Debug for Condition {
         formatter.finish()
     }
 }
-/// See [`Condition`](crate::model::Condition)
+/// See [`Condition`](crate::model::Condition).
 pub mod condition {
 
-    /// A builder for [`Condition`](crate::model::Condition)
-    #[non_exhaustive]
+    /// A builder for [`Condition`](crate::model::Condition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_condition: std::option::Option<crate::model::ActionCondition>,
         pub(crate) label_name_condition: std::option::Option<crate::model::LabelNameCondition>,
     }
     impl Builder {
-        /// <p>A single action condition.</p>
+        /// <p>A single action condition. This is the action setting that a log record must contain in order to meet the condition.</p>
         pub fn action_condition(mut self, input: crate::model::ActionCondition) -> Self {
             self.action_condition = Some(input);
             self
         }
-        /// <p>A single action condition.</p>
+        /// <p>A single action condition. This is the action setting that a log record must contain in order to meet the condition.</p>
         pub fn set_action_condition(
             mut self,
             input: std::option::Option<crate::model::ActionCondition>,
@@ -8962,12 +9141,12 @@ pub mod condition {
             self.action_condition = input;
             self
         }
-        /// <p>A single label name condition.</p>
+        /// <p>A single label name condition. This is the fully qualified label name that a log record must contain in order to meet the condition. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. </p>
         pub fn label_name_condition(mut self, input: crate::model::LabelNameCondition) -> Self {
             self.label_name_condition = Some(input);
             self
         }
-        /// <p>A single label name condition.</p>
+        /// <p>A single label name condition. This is the fully qualified label name that a log record must contain in order to meet the condition. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. </p>
         pub fn set_label_name_condition(
             mut self,
             input: std::option::Option<crate::model::LabelNameCondition>,
@@ -8975,7 +9154,7 @@ pub mod condition {
             self.label_name_condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`Condition`](crate::model::Condition)
+        /// Consumes the builder and constructs a [`Condition`](crate::model::Condition).
         pub fn build(self) -> crate::model::Condition {
             crate::model::Condition {
                 action_condition: self.action_condition,
@@ -8985,7 +9164,7 @@ pub mod condition {
     }
 }
 impl Condition {
-    /// Creates a new builder-style object to manufacture [`Condition`](crate::model::Condition)
+    /// Creates a new builder-style object to manufacture [`Condition`](crate::model::Condition).
     pub fn builder() -> crate::model::condition::Builder {
         crate::model::condition::Builder::default()
     }
@@ -8996,6 +9175,7 @@ impl Condition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LabelNameCondition {
     /// <p>The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. </p>
+    #[doc(hidden)]
     pub label_name: std::option::Option<std::string::String>,
 }
 impl LabelNameCondition {
@@ -9011,11 +9191,10 @@ impl std::fmt::Debug for LabelNameCondition {
         formatter.finish()
     }
 }
-/// See [`LabelNameCondition`](crate::model::LabelNameCondition)
+/// See [`LabelNameCondition`](crate::model::LabelNameCondition).
 pub mod label_name_condition {
 
-    /// A builder for [`LabelNameCondition`](crate::model::LabelNameCondition)
-    #[non_exhaustive]
+    /// A builder for [`LabelNameCondition`](crate::model::LabelNameCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) label_name: std::option::Option<std::string::String>,
@@ -9031,7 +9210,7 @@ pub mod label_name_condition {
             self.label_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LabelNameCondition`](crate::model::LabelNameCondition)
+        /// Consumes the builder and constructs a [`LabelNameCondition`](crate::model::LabelNameCondition).
         pub fn build(self) -> crate::model::LabelNameCondition {
             crate::model::LabelNameCondition {
                 label_name: self.label_name,
@@ -9040,7 +9219,7 @@ pub mod label_name_condition {
     }
 }
 impl LabelNameCondition {
-    /// Creates a new builder-style object to manufacture [`LabelNameCondition`](crate::model::LabelNameCondition)
+    /// Creates a new builder-style object to manufacture [`LabelNameCondition`](crate::model::LabelNameCondition).
     pub fn builder() -> crate::model::label_name_condition::Builder {
         crate::model::label_name_condition::Builder::default()
     }
@@ -9051,6 +9230,7 @@ impl LabelNameCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActionCondition {
     /// <p>The action setting that a log record must contain in order to meet the condition. </p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ActionValue>,
 }
 impl ActionCondition {
@@ -9066,11 +9246,10 @@ impl std::fmt::Debug for ActionCondition {
         formatter.finish()
     }
 }
-/// See [`ActionCondition`](crate::model::ActionCondition)
+/// See [`ActionCondition`](crate::model::ActionCondition).
 pub mod action_condition {
 
-    /// A builder for [`ActionCondition`](crate::model::ActionCondition)
-    #[non_exhaustive]
+    /// A builder for [`ActionCondition`](crate::model::ActionCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ActionValue>,
@@ -9086,7 +9265,7 @@ pub mod action_condition {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActionCondition`](crate::model::ActionCondition)
+        /// Consumes the builder and constructs a [`ActionCondition`](crate::model::ActionCondition).
         pub fn build(self) -> crate::model::ActionCondition {
             crate::model::ActionCondition {
                 action: self.action,
@@ -9095,7 +9274,7 @@ pub mod action_condition {
     }
 }
 impl ActionCondition {
-    /// Creates a new builder-style object to manufacture [`ActionCondition`](crate::model::ActionCondition)
+    /// Creates a new builder-style object to manufacture [`ActionCondition`](crate::model::ActionCondition).
     pub fn builder() -> crate::model::action_condition::Builder {
         crate::model::action_condition::Builder::default()
     }
@@ -9228,14 +9407,19 @@ impl AsRef<str> for FilterRequirement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WebAclSummary {
     /// <p>The name of the web ACL. You cannot change the name of a web ACL after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the web ACL. This ID is returned in the responses to create and list commands. You provide it to operations like update and delete.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A description of the web ACL that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl WebAclSummary {
@@ -9271,11 +9455,10 @@ impl std::fmt::Debug for WebAclSummary {
         formatter.finish()
     }
 }
-/// See [`WebAclSummary`](crate::model::WebAclSummary)
+/// See [`WebAclSummary`](crate::model::WebAclSummary).
 pub mod web_acl_summary {
 
-    /// A builder for [`WebAclSummary`](crate::model::WebAclSummary)
-    #[non_exhaustive]
+    /// A builder for [`WebAclSummary`](crate::model::WebAclSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -9335,7 +9518,7 @@ pub mod web_acl_summary {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebAclSummary`](crate::model::WebAclSummary)
+        /// Consumes the builder and constructs a [`WebAclSummary`](crate::model::WebAclSummary).
         pub fn build(self) -> crate::model::WebAclSummary {
             crate::model::WebAclSummary {
                 name: self.name,
@@ -9348,7 +9531,7 @@ pub mod web_acl_summary {
     }
 }
 impl WebAclSummary {
-    /// Creates a new builder-style object to manufacture [`WebAclSummary`](crate::model::WebAclSummary)
+    /// Creates a new builder-style object to manufacture [`WebAclSummary`](crate::model::WebAclSummary).
     pub fn builder() -> crate::model::web_acl_summary::Builder {
         crate::model::web_acl_summary::Builder::default()
     }
@@ -9360,8 +9543,10 @@ impl WebAclSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagInfoForResource {
     /// <p>The Amazon Resource Name (ARN) of the resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The array of <code>Tag</code> objects defined for the resource. </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl TagInfoForResource {
@@ -9382,11 +9567,10 @@ impl std::fmt::Debug for TagInfoForResource {
         formatter.finish()
     }
 }
-/// See [`TagInfoForResource`](crate::model::TagInfoForResource)
+/// See [`TagInfoForResource`](crate::model::TagInfoForResource).
 pub mod tag_info_for_resource {
 
-    /// A builder for [`TagInfoForResource`](crate::model::TagInfoForResource)
-    #[non_exhaustive]
+    /// A builder for [`TagInfoForResource`](crate::model::TagInfoForResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -9422,7 +9606,7 @@ pub mod tag_info_for_resource {
             self.tag_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagInfoForResource`](crate::model::TagInfoForResource)
+        /// Consumes the builder and constructs a [`TagInfoForResource`](crate::model::TagInfoForResource).
         pub fn build(self) -> crate::model::TagInfoForResource {
             crate::model::TagInfoForResource {
                 resource_arn: self.resource_arn,
@@ -9432,7 +9616,7 @@ pub mod tag_info_for_resource {
     }
 }
 impl TagInfoForResource {
-    /// Creates a new builder-style object to manufacture [`TagInfoForResource`](crate::model::TagInfoForResource)
+    /// Creates a new builder-style object to manufacture [`TagInfoForResource`](crate::model::TagInfoForResource).
     pub fn builder() -> crate::model::tag_info_for_resource::Builder {
         crate::model::tag_info_for_resource::Builder::default()
     }
@@ -9443,14 +9627,19 @@ impl TagInfoForResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroupSummary {
     /// <p>The name of the data type instance. You cannot change the name after you create the instance.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the rule group. This ID is returned in the responses to create and list commands. You provide it to operations like update and delete.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A description of the rule group that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl RuleGroupSummary {
@@ -9486,11 +9675,10 @@ impl std::fmt::Debug for RuleGroupSummary {
         formatter.finish()
     }
 }
-/// See [`RuleGroupSummary`](crate::model::RuleGroupSummary)
+/// See [`RuleGroupSummary`](crate::model::RuleGroupSummary).
 pub mod rule_group_summary {
 
-    /// A builder for [`RuleGroupSummary`](crate::model::RuleGroupSummary)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupSummary`](crate::model::RuleGroupSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -9550,7 +9738,7 @@ pub mod rule_group_summary {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupSummary`](crate::model::RuleGroupSummary)
+        /// Consumes the builder and constructs a [`RuleGroupSummary`](crate::model::RuleGroupSummary).
         pub fn build(self) -> crate::model::RuleGroupSummary {
             crate::model::RuleGroupSummary {
                 name: self.name,
@@ -9563,7 +9751,7 @@ pub mod rule_group_summary {
     }
 }
 impl RuleGroupSummary {
-    /// Creates a new builder-style object to manufacture [`RuleGroupSummary`](crate::model::RuleGroupSummary)
+    /// Creates a new builder-style object to manufacture [`RuleGroupSummary`](crate::model::RuleGroupSummary).
     pub fn builder() -> crate::model::rule_group_summary::Builder {
         crate::model::rule_group_summary::Builder::default()
     }
@@ -9587,6 +9775,8 @@ pub enum ResourceType {
     ApplicationLoadBalancer,
     #[allow(missing_docs)] // documentation missing in model
     Appsync,
+    #[allow(missing_docs)] // documentation missing in model
+    CognitioUserPool,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
 }
@@ -9596,6 +9786,7 @@ impl std::convert::From<&str> for ResourceType {
             "API_GATEWAY" => ResourceType::ApiGateway,
             "APPLICATION_LOAD_BALANCER" => ResourceType::ApplicationLoadBalancer,
             "APPSYNC" => ResourceType::Appsync,
+            "COGNITO_USER_POOL" => ResourceType::CognitioUserPool,
             other => ResourceType::Unknown(other.to_owned()),
         }
     }
@@ -9614,12 +9805,18 @@ impl ResourceType {
             ResourceType::ApiGateway => "API_GATEWAY",
             ResourceType::ApplicationLoadBalancer => "APPLICATION_LOAD_BALANCER",
             ResourceType::Appsync => "APPSYNC",
+            ResourceType::CognitioUserPool => "COGNITO_USER_POOL",
             ResourceType::Unknown(s) => s.as_ref(),
         }
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["API_GATEWAY", "APPLICATION_LOAD_BALANCER", "APPSYNC"]
+        &[
+            "API_GATEWAY",
+            "APPLICATION_LOAD_BALANCER",
+            "APPSYNC",
+            "COGNITO_USER_POOL",
+        ]
     }
 }
 impl AsRef<str> for ResourceType {
@@ -9633,14 +9830,19 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegexPatternSetSummary {
     /// <p>The name of the data type instance. You cannot change the name after you create the instance.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the set. This ID is returned in the responses to create and list commands. You provide it to operations like update and delete.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A description of the set that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl RegexPatternSetSummary {
@@ -9676,11 +9878,10 @@ impl std::fmt::Debug for RegexPatternSetSummary {
         formatter.finish()
     }
 }
-/// See [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
+/// See [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary).
 pub mod regex_pattern_set_summary {
 
-    /// A builder for [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -9740,7 +9941,7 @@ pub mod regex_pattern_set_summary {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
+        /// Consumes the builder and constructs a [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary).
         pub fn build(self) -> crate::model::RegexPatternSetSummary {
             crate::model::RegexPatternSetSummary {
                 name: self.name,
@@ -9753,7 +9954,7 @@ pub mod regex_pattern_set_summary {
     }
 }
 impl RegexPatternSetSummary {
-    /// Creates a new builder-style object to manufacture [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
+    /// Creates a new builder-style object to manufacture [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary).
     pub fn builder() -> crate::model::regex_pattern_set_summary::Builder {
         crate::model::regex_pattern_set_summary::Builder::default()
     }
@@ -9764,8 +9965,10 @@ impl RegexPatternSetSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReleaseSummary {
     /// <p>The release version. </p>
+    #[doc(hidden)]
     pub release_version: std::option::Option<std::string::String>,
     /// <p>The timestamp of the release. </p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ReleaseSummary {
@@ -9786,11 +9989,10 @@ impl std::fmt::Debug for ReleaseSummary {
         formatter.finish()
     }
 }
-/// See [`ReleaseSummary`](crate::model::ReleaseSummary)
+/// See [`ReleaseSummary`](crate::model::ReleaseSummary).
 pub mod release_summary {
 
-    /// A builder for [`ReleaseSummary`](crate::model::ReleaseSummary)
-    #[non_exhaustive]
+    /// A builder for [`ReleaseSummary`](crate::model::ReleaseSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) release_version: std::option::Option<std::string::String>,
@@ -9823,7 +10025,7 @@ pub mod release_summary {
             self.timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReleaseSummary`](crate::model::ReleaseSummary)
+        /// Consumes the builder and constructs a [`ReleaseSummary`](crate::model::ReleaseSummary).
         pub fn build(self) -> crate::model::ReleaseSummary {
             crate::model::ReleaseSummary {
                 release_version: self.release_version,
@@ -9833,7 +10035,7 @@ pub mod release_summary {
     }
 }
 impl ReleaseSummary {
-    /// Creates a new builder-style object to manufacture [`ReleaseSummary`](crate::model::ReleaseSummary)
+    /// Creates a new builder-style object to manufacture [`ReleaseSummary`](crate::model::ReleaseSummary).
     pub fn builder() -> crate::model::release_summary::Builder {
         crate::model::release_summary::Builder::default()
     }
@@ -9903,14 +10105,19 @@ impl AsRef<str> for Platform {
 pub struct ManagedRuleSetSummary {
     /// <p>The name of the managed rule set. You use this, along with the rule set ID, to identify the rule set.</p>
     /// <p>This name is assigned to the corresponding managed rule group, which your customers can access and use. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the managed rule set. The ID is returned in the responses to commands like <code>list</code>. You provide it to operations like <code>get</code> and <code>update</code>.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A description of the set that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The label namespace prefix for the managed rule groups that are offered to customers from this managed rule set. All labels that are added by rules in the managed rule group have this prefix. </p>
     /// <ul>
@@ -9921,6 +10128,7 @@ pub struct ManagedRuleSetSummary {
     /// </vendor></code>:</p> </li>
     /// <li> <p>When a rule with a label matches a web request, WAF adds the fully qualified label to the request. A fully qualified label is made up of the label namespace from the rule group or web ACL where the rule is defined and the label from the rule, separated by a colon: </p> <p> <code><label namespace>:<label from rule></label></label></code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub label_namespace: std::option::Option<std::string::String>,
 }
 impl ManagedRuleSetSummary {
@@ -9970,11 +10178,10 @@ impl std::fmt::Debug for ManagedRuleSetSummary {
         formatter.finish()
     }
 }
-/// See [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary)
+/// See [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary).
 pub mod managed_rule_set_summary {
 
-    /// A builder for [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10066,7 +10273,7 @@ pub mod managed_rule_set_summary {
             self.label_namespace = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary)
+        /// Consumes the builder and constructs a [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary).
         pub fn build(self) -> crate::model::ManagedRuleSetSummary {
             crate::model::ManagedRuleSetSummary {
                 name: self.name,
@@ -10080,7 +10287,7 @@ pub mod managed_rule_set_summary {
     }
 }
 impl ManagedRuleSetSummary {
-    /// Creates a new builder-style object to manufacture [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary)
+    /// Creates a new builder-style object to manufacture [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary).
     pub fn builder() -> crate::model::managed_rule_set_summary::Builder {
         crate::model::managed_rule_set_summary::Builder::default()
     }
@@ -10091,14 +10298,19 @@ impl ManagedRuleSetSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpSetSummary {
     /// <p>The name of the IP set. You cannot change the name of an <code>IPSet</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the set. This ID is returned in the responses to create and list commands. You provide it to operations like update and delete.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A description of the IP set that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl IpSetSummary {
@@ -10134,11 +10346,10 @@ impl std::fmt::Debug for IpSetSummary {
         formatter.finish()
     }
 }
-/// See [`IpSetSummary`](crate::model::IpSetSummary)
+/// See [`IpSetSummary`](crate::model::IpSetSummary).
 pub mod ip_set_summary {
 
-    /// A builder for [`IpSetSummary`](crate::model::IpSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`IpSetSummary`](crate::model::IpSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10198,7 +10409,7 @@ pub mod ip_set_summary {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSetSummary`](crate::model::IpSetSummary)
+        /// Consumes the builder and constructs a [`IpSetSummary`](crate::model::IpSetSummary).
         pub fn build(self) -> crate::model::IpSetSummary {
             crate::model::IpSetSummary {
                 name: self.name,
@@ -10211,7 +10422,7 @@ pub mod ip_set_summary {
     }
 }
 impl IpSetSummary {
-    /// Creates a new builder-style object to manufacture [`IpSetSummary`](crate::model::IpSetSummary)
+    /// Creates a new builder-style object to manufacture [`IpSetSummary`](crate::model::IpSetSummary).
     pub fn builder() -> crate::model::ip_set_summary::Builder {
         crate::model::ip_set_summary::Builder::default()
     }
@@ -10222,8 +10433,10 @@ impl IpSetSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedRuleGroupVersion {
     /// <p>The version name. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The date and time that the managed rule group owner updated the rule group version information. </p>
+    #[doc(hidden)]
     pub last_update_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ManagedRuleGroupVersion {
@@ -10244,11 +10457,10 @@ impl std::fmt::Debug for ManagedRuleGroupVersion {
         formatter.finish()
     }
 }
-/// See [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion)
+/// See [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion).
 pub mod managed_rule_group_version {
 
-    /// A builder for [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion)
-    #[non_exhaustive]
+    /// A builder for [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10278,7 +10490,7 @@ pub mod managed_rule_group_version {
             self.last_update_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion)
+        /// Consumes the builder and constructs a [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion).
         pub fn build(self) -> crate::model::ManagedRuleGroupVersion {
             crate::model::ManagedRuleGroupVersion {
                 name: self.name,
@@ -10288,7 +10500,7 @@ pub mod managed_rule_group_version {
     }
 }
 impl ManagedRuleGroupVersion {
-    /// Creates a new builder-style object to manufacture [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion)
+    /// Creates a new builder-style object to manufacture [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion).
     pub fn builder() -> crate::model::managed_rule_group_version::Builder {
         crate::model::managed_rule_group_version::Builder::default()
     }
@@ -10299,12 +10511,16 @@ impl ManagedRuleGroupVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedRuleGroupSummary {
     /// <p>The name of the managed rule group vendor. You use this, along with the rule group name, to identify the rule group.</p>
+    #[doc(hidden)]
     pub vendor_name: std::option::Option<std::string::String>,
     /// <p>The name of the managed rule group. You use this, along with the vendor name, to identify the rule group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by calling <code>ListAvailableManagedRuleGroupVersions</code>. </p>
+    #[doc(hidden)]
     pub versioning_supported: bool,
     /// <p>The description of the managed rule group, provided by Amazon Web Services Managed Rules or the Amazon Web Services Marketplace seller who manages it.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl ManagedRuleGroupSummary {
@@ -10335,11 +10551,10 @@ impl std::fmt::Debug for ManagedRuleGroupSummary {
         formatter.finish()
     }
 }
-/// See [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary)
+/// See [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary).
 pub mod managed_rule_group_summary {
 
-    /// A builder for [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary)
-    #[non_exhaustive]
+    /// A builder for [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vendor_name: std::option::Option<std::string::String>,
@@ -10388,7 +10603,7 @@ pub mod managed_rule_group_summary {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary)
+        /// Consumes the builder and constructs a [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary).
         pub fn build(self) -> crate::model::ManagedRuleGroupSummary {
             crate::model::ManagedRuleGroupSummary {
                 vendor_name: self.vendor_name,
@@ -10400,42 +10615,53 @@ pub mod managed_rule_group_summary {
     }
 }
 impl ManagedRuleGroupSummary {
-    /// Creates a new builder-style object to manufacture [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary)
+    /// Creates a new builder-style object to manufacture [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary).
     pub fn builder() -> crate::model::managed_rule_group_summary::Builder {
         crate::model::managed_rule_group_summary::Builder::default()
     }
 }
 
-/// <p> A web ACL defines a collection of rules to use to inspect and control web requests. Each rule has an action defined (allow, block, or count) for requests that match the statement of the rule. In the web ACL, you assign a default action to take (allow, block) for any request that does not match any of the rules. The rules in a web ACL can be a combination of the types <code>Rule</code>, <code>RuleGroup</code>, and managed rule group. You can associate a web ACL with one or more Amazon Web Services resources to protect. The resources can be an Amazon CloudFront distribution, an Amazon API Gateway REST API, an Application Load Balancer, or an AppSync GraphQL API. </p>
+/// <p> A web ACL defines a collection of rules to use to inspect and control web requests. Each rule has an action defined (allow, block, or count) for requests that match the statement of the rule. In the web ACL, you assign a default action to take (allow, block) for any request that does not match any of the rules. The rules in a web ACL can be a combination of the types <code>Rule</code>, <code>RuleGroup</code>, and managed rule group. You can associate a web ACL with one or more Amazon Web Services resources to protect. The resources can be an Amazon CloudFront distribution, an Amazon API Gateway REST API, an Application Load Balancer, an AppSync GraphQL API, or an Amazon Cognito user pool. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WebAcl {
     /// <p>The name of the web ACL. You cannot change the name of a web ACL after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the <code>WebACL</code>. This ID is returned in the responses to create and list commands. You use this ID to do things like get, update, and delete a <code>WebACL</code>.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the web ACL that you want to associate with the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The action to perform if none of the <code>Rules</code> contained in the <code>WebACL</code> match. </p>
+    #[doc(hidden)]
     pub default_action: std::option::Option<crate::model::DefaultAction>,
     /// <p>A description of the web ACL that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The <code>Rule</code> statements used to identify the web requests that you want to allow, block, or count. Each rule includes one top-level statement that WAF uses to identify matching web requests, and parameters that govern how WAF handles them. </p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::Rule>>,
     /// <p>Defines and enables Amazon CloudWatch metrics and web request sample collection. </p>
+    #[doc(hidden)]
     pub visibility_config: std::option::Option<crate::model::VisibilityConfig>,
     /// <p>The web ACL capacity units (WCUs) currently being used by this web ACL. </p>
     /// <p>WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group. The WCU limit for web ACLs is 1,500. </p>
+    #[doc(hidden)]
     pub capacity: i64,
     /// <p>The first set of rules for WAF to process in the web ACL. This is defined in an Firewall Manager WAF policy and contains only rule group references. You can't alter these. Any rules and rule groups that you define for the web ACL are prioritized after these. </p>
     /// <p>In the Firewall Manager WAF policy, the Firewall Manager administrator can define a set of rule groups to run first in the web ACL and a set of rule groups to run last. Within each set, the administrator prioritizes the rule groups, to determine their relative processing order.</p>
+    #[doc(hidden)]
     pub pre_process_firewall_manager_rule_groups:
         std::option::Option<std::vec::Vec<crate::model::FirewallManagerRuleGroup>>,
     /// <p>The last set of rules for WAF to process in the web ACL. This is defined in an Firewall Manager WAF policy and contains only rule group references. You can't alter these. Any rules and rule groups that you define for the web ACL are prioritized before these. </p>
     /// <p>In the Firewall Manager WAF policy, the Firewall Manager administrator can define a set of rule groups to run first in the web ACL and a set of rule groups to run last. Within each set, the administrator prioritizes the rule groups, to determine their relative processing order.</p>
+    #[doc(hidden)]
     pub post_process_firewall_manager_rule_groups:
         std::option::Option<std::vec::Vec<crate::model::FirewallManagerRuleGroup>>,
     /// <p>Indicates whether this web ACL is managed by Firewall Manager. If true, then only Firewall Manager can delete the web ACL or any Firewall Manager rule groups in the web ACL. </p>
+    #[doc(hidden)]
     pub managed_by_firewall_manager: bool,
     /// <p>The label namespace prefix for this web ACL. All labels added by rules in this web ACL have this prefix. </p>
     /// <ul>
@@ -10448,14 +10674,17 @@ pub struct WebAcl {
     /// </account></code> </p> </li>
     /// <li> <p>When a rule with a label matches a web request, WAF adds the fully qualified label to the request. A fully qualified label is made up of the label namespace from the rule group or web ACL where the rule is defined and the label from the rule, separated by a colon: </p> <p> <code><label namespace>:<label from rule></label></label></code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub label_namespace: std::option::Option<std::string::String>,
     /// <p>A map of custom response keys and content bodies. When you create a rule with a block action, you can send a custom response to the web request. You define these for the web ACL, and then use them in the rules and default actions that you define in the web ACL. </p>
     /// <p>For information about customizing web requests and responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web requests and responses in WAF</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
     /// <p>For information about the limits on count and size for custom request and response settings, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub custom_response_bodies: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::CustomResponseBody>,
     >,
     /// <p>Specifies how WAF should handle <code>CAPTCHA</code> evaluations for rules that don't have their own <code>CaptchaConfig</code> settings. If you don't specify this, WAF uses its default settings for <code>CaptchaConfig</code>. </p>
+    #[doc(hidden)]
     pub captcha_config: std::option::Option<crate::model::CaptchaConfig>,
 }
 impl WebAcl {
@@ -10568,11 +10797,10 @@ impl std::fmt::Debug for WebAcl {
         formatter.finish()
     }
 }
-/// See [`WebAcl`](crate::model::WebAcl)
+/// See [`WebAcl`](crate::model::WebAcl).
 pub mod web_acl {
 
-    /// A builder for [`WebAcl`](crate::model::WebAcl)
-    #[non_exhaustive]
+    /// A builder for [`WebAcl`](crate::model::WebAcl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10829,7 +11057,7 @@ pub mod web_acl {
             self.captcha_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebAcl`](crate::model::WebAcl)
+        /// Consumes the builder and constructs a [`WebAcl`](crate::model::WebAcl).
         pub fn build(self) -> crate::model::WebAcl {
             crate::model::WebAcl {
                 name: self.name,
@@ -10853,7 +11081,7 @@ pub mod web_acl {
     }
 }
 impl WebAcl {
-    /// Creates a new builder-style object to manufacture [`WebAcl`](crate::model::WebAcl)
+    /// Creates a new builder-style object to manufacture [`WebAcl`](crate::model::WebAcl).
     pub fn builder() -> crate::model::web_acl::Builder {
         crate::model::web_acl::Builder::default()
     }
@@ -10864,17 +11092,22 @@ impl WebAcl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirewallManagerRuleGroup {
     /// <p>The name of the rule group. You cannot change the name of a rule group after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>If you define more than one rule group in the first or last Firewall Manager rule groups, WAF evaluates each request against the rule groups in order, starting from the lowest priority setting. The priorities don't need to be consecutive, but they must all be different.</p>
+    #[doc(hidden)]
     pub priority: i32,
     /// <p>The processing guidance for an Firewall Manager rule. This is like a regular rule <code>Statement</code>, but it can only contain a rule group reference.</p>
+    #[doc(hidden)]
     pub firewall_manager_statement: std::option::Option<crate::model::FirewallManagerStatement>,
     /// <p>The action to use in the place of the action that results from the rule group evaluation. Set the override action to none to leave the result of the rule group alone. Set it to count to override the result to count only. </p>
     /// <p>You can only use this for rule statements that reference a rule group, like <code>RuleGroupReferenceStatement</code> and <code>ManagedRuleGroupStatement</code>. </p> <note>
     /// <p>This option is usually set to none. It does not affect how the rules in the rule group are evaluated. If you want the rules in the rule group to only count matches, do not use this and instead exclude those rules in your rule group reference statement settings. </p>
     /// </note>
+    #[doc(hidden)]
     pub override_action: std::option::Option<crate::model::OverrideAction>,
     /// <p>Defines and enables Amazon CloudWatch metrics and web request sample collection. </p>
+    #[doc(hidden)]
     pub visibility_config: std::option::Option<crate::model::VisibilityConfig>,
 }
 impl FirewallManagerRuleGroup {
@@ -10918,11 +11151,10 @@ impl std::fmt::Debug for FirewallManagerRuleGroup {
         formatter.finish()
     }
 }
-/// See [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup)
+/// See [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup).
 pub mod firewall_manager_rule_group {
 
-    /// A builder for [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup)
-    #[non_exhaustive]
+    /// A builder for [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -11001,7 +11233,7 @@ pub mod firewall_manager_rule_group {
             self.visibility_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup)
+        /// Consumes the builder and constructs a [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup).
         pub fn build(self) -> crate::model::FirewallManagerRuleGroup {
             crate::model::FirewallManagerRuleGroup {
                 name: self.name,
@@ -11014,7 +11246,7 @@ pub mod firewall_manager_rule_group {
     }
 }
 impl FirewallManagerRuleGroup {
-    /// Creates a new builder-style object to manufacture [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup)
+    /// Creates a new builder-style object to manufacture [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup).
     pub fn builder() -> crate::model::firewall_manager_rule_group::Builder {
         crate::model::firewall_manager_rule_group::Builder::default()
     }
@@ -11026,9 +11258,11 @@ impl FirewallManagerRuleGroup {
 pub struct FirewallManagerStatement {
     /// <p>A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the vendor name and the name of the rule group in this statement. You can retrieve the required names by calling <code>ListAvailableManagedRuleGroups</code>.</p>
     /// <p>You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.</p>
+    #[doc(hidden)]
     pub managed_rule_group_statement: std::option::Option<crate::model::ManagedRuleGroupStatement>,
     /// <p>A rule statement used to run the rules that are defined in a <code>RuleGroup</code>. To use this, create a rule group with your rules, then provide the ARN of the rule group in this statement.</p>
     /// <p>You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the top level inside a web ACL. </p>
+    #[doc(hidden)]
     pub rule_group_reference_statement:
         std::option::Option<crate::model::RuleGroupReferenceStatement>,
 }
@@ -11062,11 +11296,10 @@ impl std::fmt::Debug for FirewallManagerStatement {
         formatter.finish()
     }
 }
-/// See [`FirewallManagerStatement`](crate::model::FirewallManagerStatement)
+/// See [`FirewallManagerStatement`](crate::model::FirewallManagerStatement).
 pub mod firewall_manager_statement {
 
-    /// A builder for [`FirewallManagerStatement`](crate::model::FirewallManagerStatement)
-    #[non_exhaustive]
+    /// A builder for [`FirewallManagerStatement`](crate::model::FirewallManagerStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) managed_rule_group_statement:
@@ -11111,7 +11344,7 @@ pub mod firewall_manager_statement {
             self.rule_group_reference_statement = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirewallManagerStatement`](crate::model::FirewallManagerStatement)
+        /// Consumes the builder and constructs a [`FirewallManagerStatement`](crate::model::FirewallManagerStatement).
         pub fn build(self) -> crate::model::FirewallManagerStatement {
             crate::model::FirewallManagerStatement {
                 managed_rule_group_statement: self.managed_rule_group_statement,
@@ -11121,7 +11354,7 @@ pub mod firewall_manager_statement {
     }
 }
 impl FirewallManagerStatement {
-    /// Creates a new builder-style object to manufacture [`FirewallManagerStatement`](crate::model::FirewallManagerStatement)
+    /// Creates a new builder-style object to manufacture [`FirewallManagerStatement`](crate::model::FirewallManagerStatement).
     pub fn builder() -> crate::model::firewall_manager_statement::Builder {
         crate::model::firewall_manager_statement::Builder::default()
     }
@@ -11134,8 +11367,10 @@ impl FirewallManagerStatement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeWindow {
     /// <p>The beginning of the time range from which you want <code>GetSampledRequests</code> to return a sample of the requests that your Amazon Web Services resource received. You must specify the times in Coordinated Universal Time (UTC) format. UTC format includes the special designator, <code>Z</code>. For example, <code>"2016-09-27T14:50Z"</code>. You can specify any time range in the previous three hours.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end of the time range from which you want <code>GetSampledRequests</code> to return a sample of the requests that your Amazon Web Services resource received. You must specify the times in Coordinated Universal Time (UTC) format. UTC format includes the special designator, <code>Z</code>. For example, <code>"2016-09-27T14:50Z"</code>. You can specify any time range in the previous three hours.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TimeWindow {
@@ -11156,11 +11391,10 @@ impl std::fmt::Debug for TimeWindow {
         formatter.finish()
     }
 }
-/// See [`TimeWindow`](crate::model::TimeWindow)
+/// See [`TimeWindow`](crate::model::TimeWindow).
 pub mod time_window {
 
-    /// A builder for [`TimeWindow`](crate::model::TimeWindow)
-    #[non_exhaustive]
+    /// A builder for [`TimeWindow`](crate::model::TimeWindow).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -11193,7 +11427,7 @@ pub mod time_window {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeWindow`](crate::model::TimeWindow)
+        /// Consumes the builder and constructs a [`TimeWindow`](crate::model::TimeWindow).
         pub fn build(self) -> crate::model::TimeWindow {
             crate::model::TimeWindow {
                 start_time: self.start_time,
@@ -11203,7 +11437,7 @@ pub mod time_window {
     }
 }
 impl TimeWindow {
-    /// Creates a new builder-style object to manufacture [`TimeWindow`](crate::model::TimeWindow)
+    /// Creates a new builder-style object to manufacture [`TimeWindow`](crate::model::TimeWindow).
     pub fn builder() -> crate::model::time_window::Builder {
         crate::model::time_window::Builder::default()
     }
@@ -11214,12 +11448,16 @@ impl TimeWindow {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SampledHttpRequest {
     /// <p>A complex type that contains detailed information about the request.</p>
+    #[doc(hidden)]
     pub request: std::option::Option<crate::model::HttpRequest>,
     /// <p>A value that indicates how one result in the response relates proportionally to other results in the response. For example, a result that has a weight of <code>2</code> represents roughly twice as many web requests as a result that has a weight of <code>1</code>.</p>
+    #[doc(hidden)]
     pub weight: i64,
     /// <p>The time at which WAF received the request from your Amazon Web Services resource, in Unix time format (in seconds).</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The action for the <code>Rule</code> that the request matched: <code>Allow</code>, <code>Block</code>, or <code>Count</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::string::String>,
     /// <p>The name of the <code>Rule</code> that the request matched. For managed rule groups, the format for this name is <code>
     /// <vendor name>
@@ -11233,15 +11471,20 @@ pub struct SampledHttpRequest {
     /// #
     /// <rule name></rule>
     /// </rule></code>. If the rule is not in a rule group, this field is absent. </p>
+    #[doc(hidden)]
     pub rule_name_within_rule_group: std::option::Option<std::string::String>,
     /// <p>Custom request headers inserted by WAF into the request, according to the custom request configuration for the matching rule action.</p>
+    #[doc(hidden)]
     pub request_headers_inserted: std::option::Option<std::vec::Vec<crate::model::HttpHeader>>,
     /// <p>The response code that was sent for the request.</p>
+    #[doc(hidden)]
     pub response_code_sent: std::option::Option<i32>,
     /// <p>Labels applied to the web request by matching rules. WAF applies fully qualified labels to matching web requests. A fully qualified label is the concatenation of a label namespace and a rule label. The rule's rule group or web ACL defines the label namespace. </p>
     /// <p>For example, <code>awswaf:111122223333:myRuleGroup:testRules:testNS1:testNS2:labelNameA</code> or <code>awswaf:managed:aws:managed-rule-set:header:encoding:utf8</code>. </p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<crate::model::Label>>,
     /// <p>The <code>CAPTCHA</code> response for the request.</p>
+    #[doc(hidden)]
     pub captcha_response: std::option::Option<crate::model::CaptchaResponse>,
 }
 impl SampledHttpRequest {
@@ -11312,11 +11555,10 @@ impl std::fmt::Debug for SampledHttpRequest {
         formatter.finish()
     }
 }
-/// See [`SampledHttpRequest`](crate::model::SampledHttpRequest)
+/// See [`SampledHttpRequest`](crate::model::SampledHttpRequest).
 pub mod sampled_http_request {
 
-    /// A builder for [`SampledHttpRequest`](crate::model::SampledHttpRequest)
-    #[non_exhaustive]
+    /// A builder for [`SampledHttpRequest`](crate::model::SampledHttpRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request: std::option::Option<crate::model::HttpRequest>,
@@ -11478,7 +11720,7 @@ pub mod sampled_http_request {
             self.captcha_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`SampledHttpRequest`](crate::model::SampledHttpRequest)
+        /// Consumes the builder and constructs a [`SampledHttpRequest`](crate::model::SampledHttpRequest).
         pub fn build(self) -> crate::model::SampledHttpRequest {
             crate::model::SampledHttpRequest {
                 request: self.request,
@@ -11495,7 +11737,7 @@ pub mod sampled_http_request {
     }
 }
 impl SampledHttpRequest {
-    /// Creates a new builder-style object to manufacture [`SampledHttpRequest`](crate::model::SampledHttpRequest)
+    /// Creates a new builder-style object to manufacture [`SampledHttpRequest`](crate::model::SampledHttpRequest).
     pub fn builder() -> crate::model::sampled_http_request::Builder {
         crate::model::sampled_http_request::Builder::default()
     }
@@ -11506,10 +11748,13 @@ impl SampledHttpRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaptchaResponse {
     /// <p>The HTTP response code indicating the status of the <code>CAPTCHA</code> token in the web request. If the token is missing, invalid, or expired, this code is <code>405 Method Not Allowed</code>.</p>
+    #[doc(hidden)]
     pub response_code: std::option::Option<i32>,
     /// <p>The time that the <code>CAPTCHA</code> puzzle was solved for the supplied token. </p>
+    #[doc(hidden)]
     pub solve_timestamp: std::option::Option<i64>,
     /// <p>The reason for failure, populated when the evaluation of the token fails.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<crate::model::FailureReason>,
 }
 impl CaptchaResponse {
@@ -11535,11 +11780,10 @@ impl std::fmt::Debug for CaptchaResponse {
         formatter.finish()
     }
 }
-/// See [`CaptchaResponse`](crate::model::CaptchaResponse)
+/// See [`CaptchaResponse`](crate::model::CaptchaResponse).
 pub mod captcha_response {
 
-    /// A builder for [`CaptchaResponse`](crate::model::CaptchaResponse)
-    #[non_exhaustive]
+    /// A builder for [`CaptchaResponse`](crate::model::CaptchaResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) response_code: std::option::Option<i32>,
@@ -11580,7 +11824,7 @@ pub mod captcha_response {
             self.failure_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptchaResponse`](crate::model::CaptchaResponse)
+        /// Consumes the builder and constructs a [`CaptchaResponse`](crate::model::CaptchaResponse).
         pub fn build(self) -> crate::model::CaptchaResponse {
             crate::model::CaptchaResponse {
                 response_code: self.response_code,
@@ -11591,7 +11835,7 @@ pub mod captcha_response {
     }
 }
 impl CaptchaResponse {
-    /// Creates a new builder-style object to manufacture [`CaptchaResponse`](crate::model::CaptchaResponse)
+    /// Creates a new builder-style object to manufacture [`CaptchaResponse`](crate::model::CaptchaResponse).
     pub fn builder() -> crate::model::captcha_response::Builder {
         crate::model::captcha_response::Builder::default()
     }
@@ -11657,8 +11901,10 @@ impl AsRef<str> for FailureReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpHeader {
     /// <p>The name of the HTTP header.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the HTTP header.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl HttpHeader {
@@ -11679,11 +11925,10 @@ impl std::fmt::Debug for HttpHeader {
         formatter.finish()
     }
 }
-/// See [`HttpHeader`](crate::model::HttpHeader)
+/// See [`HttpHeader`](crate::model::HttpHeader).
 pub mod http_header {
 
-    /// A builder for [`HttpHeader`](crate::model::HttpHeader)
-    #[non_exhaustive]
+    /// A builder for [`HttpHeader`](crate::model::HttpHeader).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -11710,7 +11955,7 @@ pub mod http_header {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpHeader`](crate::model::HttpHeader)
+        /// Consumes the builder and constructs a [`HttpHeader`](crate::model::HttpHeader).
         pub fn build(self) -> crate::model::HttpHeader {
             crate::model::HttpHeader {
                 name: self.name,
@@ -11720,7 +11965,7 @@ pub mod http_header {
     }
 }
 impl HttpHeader {
-    /// Creates a new builder-style object to manufacture [`HttpHeader`](crate::model::HttpHeader)
+    /// Creates a new builder-style object to manufacture [`HttpHeader`](crate::model::HttpHeader).
     pub fn builder() -> crate::model::http_header::Builder {
         crate::model::http_header::Builder::default()
     }
@@ -11735,16 +11980,22 @@ pub struct HttpRequest {
     /// <li> <p> <code>c-ip</code>, if the viewer did not use an HTTP proxy or a load balancer to send the request</p> </li>
     /// <li> <p> <code>x-forwarded-for</code>, if the viewer did use an HTTP proxy or a load balancer to send the request</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub client_ip: std::option::Option<std::string::String>,
     /// <p>The two-letter country code for the country that the request originated from. For a current list of country codes, see the Wikipedia entry <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<std::string::String>,
     /// <p>The URI path of the request, which identifies the resource, for example, <code>/images/daily-ad.jpg</code>.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The HTTP method specified in the sampled web request. </p>
+    #[doc(hidden)]
     pub method: std::option::Option<std::string::String>,
     /// <p>The HTTP version specified in the sampled web request, for example, <code>HTTP/1.1</code>.</p>
+    #[doc(hidden)]
     pub http_version: std::option::Option<std::string::String>,
     /// <p>A complex type that contains the name and value for each header in the sampled web request.</p>
+    #[doc(hidden)]
     pub headers: std::option::Option<std::vec::Vec<crate::model::HttpHeader>>,
 }
 impl HttpRequest {
@@ -11789,11 +12040,10 @@ impl std::fmt::Debug for HttpRequest {
         formatter.finish()
     }
 }
-/// See [`HttpRequest`](crate::model::HttpRequest)
+/// See [`HttpRequest`](crate::model::HttpRequest).
 pub mod http_request {
 
-    /// A builder for [`HttpRequest`](crate::model::HttpRequest)
-    #[non_exhaustive]
+    /// A builder for [`HttpRequest`](crate::model::HttpRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_ip: std::option::Option<std::string::String>,
@@ -11881,7 +12131,7 @@ pub mod http_request {
             self.headers = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpRequest`](crate::model::HttpRequest)
+        /// Consumes the builder and constructs a [`HttpRequest`](crate::model::HttpRequest).
         pub fn build(self) -> crate::model::HttpRequest {
             crate::model::HttpRequest {
                 client_ip: self.client_ip,
@@ -11895,7 +12145,7 @@ pub mod http_request {
     }
 }
 impl HttpRequest {
-    /// Creates a new builder-style object to manufacture [`HttpRequest`](crate::model::HttpRequest)
+    /// Creates a new builder-style object to manufacture [`HttpRequest`](crate::model::HttpRequest).
     pub fn builder() -> crate::model::http_request::Builder {
         crate::model::http_request::Builder::default()
     }
@@ -11906,20 +12156,27 @@ impl HttpRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroup {
     /// <p>The name of the rule group. You cannot change the name of a rule group after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the rule group. This ID is returned in the responses to create and list commands. You provide it to operations like update and delete.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The web ACL capacity units (WCUs) required for this rule group.</p>
     /// <p>When you create your own rule group, you define this, and you cannot change it after creation. When you add or modify the rules in a rule group, WAF enforces this limit. You can check the capacity for a set of rules using <code>CheckCapacity</code>.</p>
     /// <p>WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group. The WCU limit for web ACLs is 1,500. </p>
+    #[doc(hidden)]
     pub capacity: i64,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A description of the rule group that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The <code>Rule</code> statements used to identify the web requests that you want to allow, block, or count. Each rule includes one top-level statement that WAF uses to identify matching web requests, and parameters that govern how WAF handles them. </p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::Rule>>,
     /// <p>Defines and enables Amazon CloudWatch metrics and web request sample collection. </p>
+    #[doc(hidden)]
     pub visibility_config: std::option::Option<crate::model::VisibilityConfig>,
     /// <p>The label namespace prefix for this rule group. All labels added by rules in this rule group have this prefix. </p>
     /// <ul>
@@ -11932,16 +12189,20 @@ pub struct RuleGroup {
     /// </account></code> </p> </li>
     /// <li> <p>When a rule with a label matches a web request, WAF adds the fully qualified label to the request. A fully qualified label is made up of the label namespace from the rule group or web ACL where the rule is defined and the label from the rule, separated by a colon: </p> <p> <code><label namespace>:<label from rule></label></label></code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub label_namespace: std::option::Option<std::string::String>,
     /// <p>A map of custom response keys and content bodies. When you create a rule with a block action, you can send a custom response to the web request. You define these for the rule group, and then use them in the rules that you define in the rule group. </p>
     /// <p>For information about customizing web requests and responses, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web requests and responses in WAF</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
     /// <p>For information about the limits on count and size for custom request and response settings, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub custom_response_bodies: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::CustomResponseBody>,
     >,
     /// <p>The labels that one or more rules in this rule group add to matching web requests. These labels are defined in the <code>RuleLabels</code> for a <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub available_labels: std::option::Option<std::vec::Vec<crate::model::LabelSummary>>,
     /// <p>The labels that one or more rules in this rule group match against in label match statements. These labels are defined in a <code>LabelMatchStatement</code> specification, in the <code>Statement</code> definition of a rule. </p>
+    #[doc(hidden)]
     pub consumed_labels: std::option::Option<std::vec::Vec<crate::model::LabelSummary>>,
 }
 impl RuleGroup {
@@ -12025,11 +12286,10 @@ impl std::fmt::Debug for RuleGroup {
         formatter.finish()
     }
 }
-/// See [`RuleGroup`](crate::model::RuleGroup)
+/// See [`RuleGroup`](crate::model::RuleGroup).
 pub mod rule_group {
 
-    /// A builder for [`RuleGroup`](crate::model::RuleGroup)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroup`](crate::model::RuleGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12233,7 +12493,7 @@ pub mod rule_group {
             self.consumed_labels = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroup`](crate::model::RuleGroup)
+        /// Consumes the builder and constructs a [`RuleGroup`](crate::model::RuleGroup).
         pub fn build(self) -> crate::model::RuleGroup {
             crate::model::RuleGroup {
                 name: self.name,
@@ -12252,7 +12512,7 @@ pub mod rule_group {
     }
 }
 impl RuleGroup {
-    /// Creates a new builder-style object to manufacture [`RuleGroup`](crate::model::RuleGroup)
+    /// Creates a new builder-style object to manufacture [`RuleGroup`](crate::model::RuleGroup).
     pub fn builder() -> crate::model::rule_group::Builder {
         crate::model::rule_group::Builder::default()
     }
@@ -12267,6 +12527,7 @@ impl RuleGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LabelSummary {
     /// <p>An individual label specification.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl LabelSummary {
@@ -12282,11 +12543,10 @@ impl std::fmt::Debug for LabelSummary {
         formatter.finish()
     }
 }
-/// See [`LabelSummary`](crate::model::LabelSummary)
+/// See [`LabelSummary`](crate::model::LabelSummary).
 pub mod label_summary {
 
-    /// A builder for [`LabelSummary`](crate::model::LabelSummary)
-    #[non_exhaustive]
+    /// A builder for [`LabelSummary`](crate::model::LabelSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12302,14 +12562,14 @@ pub mod label_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LabelSummary`](crate::model::LabelSummary)
+        /// Consumes the builder and constructs a [`LabelSummary`](crate::model::LabelSummary).
         pub fn build(self) -> crate::model::LabelSummary {
             crate::model::LabelSummary { name: self.name }
         }
     }
 }
 impl LabelSummary {
-    /// Creates a new builder-style object to manufacture [`LabelSummary`](crate::model::LabelSummary)
+    /// Creates a new builder-style object to manufacture [`LabelSummary`](crate::model::LabelSummary).
     pub fn builder() -> crate::model::label_summary::Builder {
         crate::model::label_summary::Builder::default()
     }
@@ -12321,14 +12581,19 @@ impl LabelSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegexPatternSet {
     /// <p>The name of the set. You cannot change the name after you create the set.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the set. This ID is returned in the responses to create and list commands. You provide it to operations like update and delete.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A description of the set that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The regular expression patterns in the set.</p>
+    #[doc(hidden)]
     pub regular_expression_list: std::option::Option<std::vec::Vec<crate::model::Regex>>,
 }
 impl RegexPatternSet {
@@ -12364,11 +12629,10 @@ impl std::fmt::Debug for RegexPatternSet {
         formatter.finish()
     }
 }
-/// See [`RegexPatternSet`](crate::model::RegexPatternSet)
+/// See [`RegexPatternSet`](crate::model::RegexPatternSet).
 pub mod regex_pattern_set {
 
-    /// A builder for [`RegexPatternSet`](crate::model::RegexPatternSet)
-    #[non_exhaustive]
+    /// A builder for [`RegexPatternSet`](crate::model::RegexPatternSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12437,7 +12701,7 @@ pub mod regex_pattern_set {
             self.regular_expression_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexPatternSet`](crate::model::RegexPatternSet)
+        /// Consumes the builder and constructs a [`RegexPatternSet`](crate::model::RegexPatternSet).
         pub fn build(self) -> crate::model::RegexPatternSet {
             crate::model::RegexPatternSet {
                 name: self.name,
@@ -12450,7 +12714,7 @@ pub mod regex_pattern_set {
     }
 }
 impl RegexPatternSet {
-    /// Creates a new builder-style object to manufacture [`RegexPatternSet`](crate::model::RegexPatternSet)
+    /// Creates a new builder-style object to manufacture [`RegexPatternSet`](crate::model::RegexPatternSet).
     pub fn builder() -> crate::model::regex_pattern_set::Builder {
         crate::model::regex_pattern_set::Builder::default()
     }
@@ -12461,8 +12725,10 @@ impl RegexPatternSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RateBasedStatementManagedKeysIpSet {
     /// <p>The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>. </p>
+    #[doc(hidden)]
     pub ip_address_version: std::option::Option<crate::model::IpAddressVersion>,
     /// <p>The IP addresses that are currently blocked.</p>
+    #[doc(hidden)]
     pub addresses: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RateBasedStatementManagedKeysIpSet {
@@ -12483,11 +12749,10 @@ impl std::fmt::Debug for RateBasedStatementManagedKeysIpSet {
         formatter.finish()
     }
 }
-/// See [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet)
+/// See [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet).
 pub mod rate_based_statement_managed_keys_ip_set {
 
-    /// A builder for [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet)
-    #[non_exhaustive]
+    /// A builder for [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_address_version: std::option::Option<crate::model::IpAddressVersion>,
@@ -12526,7 +12791,7 @@ pub mod rate_based_statement_managed_keys_ip_set {
             self.addresses = input;
             self
         }
-        /// Consumes the builder and constructs a [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet)
+        /// Consumes the builder and constructs a [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet).
         pub fn build(self) -> crate::model::RateBasedStatementManagedKeysIpSet {
             crate::model::RateBasedStatementManagedKeysIpSet {
                 ip_address_version: self.ip_address_version,
@@ -12536,7 +12801,7 @@ pub mod rate_based_statement_managed_keys_ip_set {
     }
 }
 impl RateBasedStatementManagedKeysIpSet {
-    /// Creates a new builder-style object to manufacture [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet)
+    /// Creates a new builder-style object to manufacture [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet).
     pub fn builder() -> crate::model::rate_based_statement_managed_keys_ip_set::Builder {
         crate::model::rate_based_statement_managed_keys_ip_set::Builder::default()
     }
@@ -12603,12 +12868,16 @@ impl AsRef<str> for IpAddressVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MobileSdkRelease {
     /// <p>The release version. </p>
+    #[doc(hidden)]
     pub release_version: std::option::Option<std::string::String>,
     /// <p>The timestamp of the release. </p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Notes describing the release.</p>
+    #[doc(hidden)]
     pub release_notes: std::option::Option<std::string::String>,
     /// <p>Tags that are associated with the release. </p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl MobileSdkRelease {
@@ -12639,11 +12908,10 @@ impl std::fmt::Debug for MobileSdkRelease {
         formatter.finish()
     }
 }
-/// See [`MobileSdkRelease`](crate::model::MobileSdkRelease)
+/// See [`MobileSdkRelease`](crate::model::MobileSdkRelease).
 pub mod mobile_sdk_release {
 
-    /// A builder for [`MobileSdkRelease`](crate::model::MobileSdkRelease)
-    #[non_exhaustive]
+    /// A builder for [`MobileSdkRelease`](crate::model::MobileSdkRelease).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) release_version: std::option::Option<std::string::String>,
@@ -12710,7 +12978,7 @@ pub mod mobile_sdk_release {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`MobileSdkRelease`](crate::model::MobileSdkRelease)
+        /// Consumes the builder and constructs a [`MobileSdkRelease`](crate::model::MobileSdkRelease).
         pub fn build(self) -> crate::model::MobileSdkRelease {
             crate::model::MobileSdkRelease {
                 release_version: self.release_version,
@@ -12722,7 +12990,7 @@ pub mod mobile_sdk_release {
     }
 }
 impl MobileSdkRelease {
-    /// Creates a new builder-style object to manufacture [`MobileSdkRelease`](crate::model::MobileSdkRelease)
+    /// Creates a new builder-style object to manufacture [`MobileSdkRelease`](crate::model::MobileSdkRelease).
     pub fn builder() -> crate::model::mobile_sdk_release::Builder {
         crate::model::mobile_sdk_release::Builder::default()
     }
@@ -12737,18 +13005,24 @@ impl MobileSdkRelease {
 pub struct ManagedRuleSet {
     /// <p>The name of the managed rule set. You use this, along with the rule set ID, to identify the rule set.</p>
     /// <p>This name is assigned to the corresponding managed rule group, which your customers can access and use. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the managed rule set. The ID is returned in the responses to commands like <code>list</code>. You provide it to operations like <code>get</code> and <code>update</code>.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A description of the set that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The versions of this managed rule set that are available for use by customers. </p>
+    #[doc(hidden)]
     pub published_versions: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ManagedRuleSetVersion>,
     >,
     /// <p>The version that you would like your customers to use.</p>
+    #[doc(hidden)]
     pub recommended_version: std::option::Option<std::string::String>,
     /// <p>The label namespace prefix for the managed rule groups that are offered to customers from this managed rule set. All labels that are added by rules in the managed rule group have this prefix. </p>
     /// <ul>
@@ -12759,6 +13033,7 @@ pub struct ManagedRuleSet {
     /// </vendor></code>:</p> </li>
     /// <li> <p>When a rule with a label matches a web request, WAF adds the fully qualified label to the request. A fully qualified label is made up of the label namespace from the rule group or web ACL where the rule is defined and the label from the rule, separated by a colon: </p> <p> <code><label namespace>:<label from rule></label></label></code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub label_namespace: std::option::Option<std::string::String>,
 }
 impl ManagedRuleSet {
@@ -12817,11 +13092,10 @@ impl std::fmt::Debug for ManagedRuleSet {
         formatter.finish()
     }
 }
-/// See [`ManagedRuleSet`](crate::model::ManagedRuleSet)
+/// See [`ManagedRuleSet`](crate::model::ManagedRuleSet).
 pub mod managed_rule_set {
 
-    /// A builder for [`ManagedRuleSet`](crate::model::ManagedRuleSet)
-    #[non_exhaustive]
+    /// A builder for [`ManagedRuleSet`](crate::model::ManagedRuleSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12944,7 +13218,7 @@ pub mod managed_rule_set {
             self.label_namespace = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedRuleSet`](crate::model::ManagedRuleSet)
+        /// Consumes the builder and constructs a [`ManagedRuleSet`](crate::model::ManagedRuleSet).
         pub fn build(self) -> crate::model::ManagedRuleSet {
             crate::model::ManagedRuleSet {
                 name: self.name,
@@ -12959,7 +13233,7 @@ pub mod managed_rule_set {
     }
 }
 impl ManagedRuleSet {
-    /// Creates a new builder-style object to manufacture [`ManagedRuleSet`](crate::model::ManagedRuleSet)
+    /// Creates a new builder-style object to manufacture [`ManagedRuleSet`](crate::model::ManagedRuleSet).
     pub fn builder() -> crate::model::managed_rule_set::Builder {
         crate::model::managed_rule_set::Builder::default()
     }
@@ -12973,20 +13247,26 @@ impl ManagedRuleSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedRuleSetVersion {
     /// <p>The Amazon Resource Name (ARN) of the vendor rule group that's used to define the published version of your managed rule group. </p>
+    #[doc(hidden)]
     pub associated_rule_group_arn: std::option::Option<std::string::String>,
     /// <p>The web ACL capacity units (WCUs) required for this rule group.</p>
     /// <p>WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group. The WCU limit for web ACLs is 1,500. </p>
+    #[doc(hidden)]
     pub capacity: i64,
     /// <p>The amount of time you expect this version of your managed rule group to last, in days. </p>
+    #[doc(hidden)]
     pub forecasted_lifetime: std::option::Option<i32>,
     /// <p>The time that you first published this version. </p>
     /// <p>Times are in Coordinated Universal Time (UTC) format. UTC format includes the special designator, Z. For example, "2016-09-27T14:50Z". </p>
+    #[doc(hidden)]
     pub publish_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last time that you updated this version. </p>
     /// <p>Times are in Coordinated Universal Time (UTC) format. UTC format includes the special designator, Z. For example, "2016-09-27T14:50Z". </p>
+    #[doc(hidden)]
     pub last_update_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that this version is set to expire.</p>
     /// <p>Times are in Coordinated Universal Time (UTC) format. UTC format includes the special designator, Z. For example, "2016-09-27T14:50Z". </p>
+    #[doc(hidden)]
     pub expiry_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ManagedRuleSetVersion {
@@ -13031,11 +13311,10 @@ impl std::fmt::Debug for ManagedRuleSetVersion {
         formatter.finish()
     }
 }
-/// See [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion)
+/// See [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion).
 pub mod managed_rule_set_version {
 
-    /// A builder for [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion)
-    #[non_exhaustive]
+    /// A builder for [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) associated_rule_group_arn: std::option::Option<std::string::String>,
@@ -13126,7 +13405,7 @@ pub mod managed_rule_set_version {
             self.expiry_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion)
+        /// Consumes the builder and constructs a [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion).
         pub fn build(self) -> crate::model::ManagedRuleSetVersion {
             crate::model::ManagedRuleSetVersion {
                 associated_rule_group_arn: self.associated_rule_group_arn,
@@ -13140,7 +13419,7 @@ pub mod managed_rule_set_version {
     }
 }
 impl ManagedRuleSetVersion {
-    /// Creates a new builder-style object to manufacture [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion)
+    /// Creates a new builder-style object to manufacture [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion).
     pub fn builder() -> crate::model::managed_rule_set_version::Builder {
         crate::model::managed_rule_set_version::Builder::default()
     }
@@ -13152,14 +13431,19 @@ impl ManagedRuleSetVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpSet {
     /// <p>The name of the IP set. You cannot change the name of an <code>IPSet</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the set. This ID is returned in the responses to create and list commands. You provide it to operations like update and delete.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A description of the IP set that helps with identification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>. </p>
+    #[doc(hidden)]
     pub ip_address_version: std::option::Option<crate::model::IpAddressVersion>,
     /// <p>Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0. </p>
     /// <p>Example address strings: </p>
@@ -13177,6 +13461,7 @@ pub struct IpSet {
     /// <li> <p>Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code> </p> </li>
     /// <li> <p>INVALID specification: <code>"Addresses": [""]</code> INVALID </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub addresses: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl IpSet {
@@ -13232,11 +13517,10 @@ impl std::fmt::Debug for IpSet {
         formatter.finish()
     }
 }
-/// See [`IpSet`](crate::model::IpSet)
+/// See [`IpSet`](crate::model::IpSet).
 pub mod ip_set {
 
-    /// A builder for [`IpSet`](crate::model::IpSet)
-    #[non_exhaustive]
+    /// A builder for [`IpSet`](crate::model::IpSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -13349,7 +13633,7 @@ pub mod ip_set {
             self.addresses = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSet`](crate::model::IpSet)
+        /// Consumes the builder and constructs a [`IpSet`](crate::model::IpSet).
         pub fn build(self) -> crate::model::IpSet {
             crate::model::IpSet {
                 name: self.name,
@@ -13363,7 +13647,7 @@ pub mod ip_set {
     }
 }
 impl IpSet {
-    /// Creates a new builder-style object to manufacture [`IpSet`](crate::model::IpSet)
+    /// Creates a new builder-style object to manufacture [`IpSet`](crate::model::IpSet).
     pub fn builder() -> crate::model::ip_set::Builder {
         crate::model::ip_set::Builder::default()
     }
@@ -13374,8 +13658,10 @@ impl IpSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleSummary {
     /// <p>The name of the rule. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The action that WAF should take on a web request when it matches a rule's statement. Settings at the web ACL level can override the rule action setting. </p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::RuleAction>,
 }
 impl RuleSummary {
@@ -13396,11 +13682,10 @@ impl std::fmt::Debug for RuleSummary {
         formatter.finish()
     }
 }
-/// See [`RuleSummary`](crate::model::RuleSummary)
+/// See [`RuleSummary`](crate::model::RuleSummary).
 pub mod rule_summary {
 
-    /// A builder for [`RuleSummary`](crate::model::RuleSummary)
-    #[non_exhaustive]
+    /// A builder for [`RuleSummary`](crate::model::RuleSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -13427,7 +13712,7 @@ pub mod rule_summary {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleSummary`](crate::model::RuleSummary)
+        /// Consumes the builder and constructs a [`RuleSummary`](crate::model::RuleSummary).
         pub fn build(self) -> crate::model::RuleSummary {
             crate::model::RuleSummary {
                 name: self.name,
@@ -13437,7 +13722,7 @@ pub mod rule_summary {
     }
 }
 impl RuleSummary {
-    /// Creates a new builder-style object to manufacture [`RuleSummary`](crate::model::RuleSummary)
+    /// Creates a new builder-style object to manufacture [`RuleSummary`](crate::model::RuleSummary).
     pub fn builder() -> crate::model::rule_summary::Builder {
         crate::model::rule_summary::Builder::default()
     }

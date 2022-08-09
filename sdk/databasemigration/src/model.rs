@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Connection {
     /// <p>The ARN of the replication instance.</p>
+    #[doc(hidden)]
     pub replication_instance_arn: std::option::Option<std::string::String>,
     /// <p>The ARN string that uniquely identifies the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_arn: std::option::Option<std::string::String>,
     /// <p>The connection status. This parameter can return one of the following values:</p>
     /// <ul>
@@ -15,12 +17,16 @@ pub struct Connection {
     /// <li> <p> <code>"failed"</code> </p> </li>
     /// <li> <p> <code>"deleting"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The error message when the connection last failed.</p>
+    #[doc(hidden)]
     pub last_failure_message: std::option::Option<std::string::String>,
     /// <p>The identifier of the endpoint. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens. They can't end with a hyphen or contain two consecutive hyphens.</p>
+    #[doc(hidden)]
     pub endpoint_identifier: std::option::Option<std::string::String>,
     /// <p>The replication instance identifier. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub replication_instance_identifier: std::option::Option<std::string::String>,
 }
 impl Connection {
@@ -70,11 +76,10 @@ impl std::fmt::Debug for Connection {
         formatter.finish()
     }
 }
-/// See [`Connection`](crate::model::Connection)
+/// See [`Connection`](crate::model::Connection).
 pub mod connection {
 
-    /// A builder for [`Connection`](crate::model::Connection)
-    #[non_exhaustive]
+    /// A builder for [`Connection`](crate::model::Connection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_instance_arn: std::option::Option<std::string::String>,
@@ -172,7 +177,7 @@ pub mod connection {
             self.replication_instance_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`Connection`](crate::model::Connection)
+        /// Consumes the builder and constructs a [`Connection`](crate::model::Connection).
         pub fn build(self) -> crate::model::Connection {
             crate::model::Connection {
                 replication_instance_arn: self.replication_instance_arn,
@@ -186,7 +191,7 @@ pub mod connection {
     }
 }
 impl Connection {
-    /// Creates a new builder-style object to manufacture [`Connection`](crate::model::Connection)
+    /// Creates a new builder-style object to manufacture [`Connection`](crate::model::Connection).
     pub fn builder() -> crate::model::connection::Builder {
         crate::model::connection::Builder::default()
     }
@@ -203,18 +208,25 @@ pub struct ReplicationTask {
     /// <li> <p>First character must be a letter.</p> </li>
     /// <li> <p>Cannot end with a hyphen or contain two consecutive hyphens.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub replication_task_identifier: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that uniquely identifies the endpoint.</p>
+    #[doc(hidden)]
     pub source_endpoint_arn: std::option::Option<std::string::String>,
     /// <p>The ARN that uniquely identifies the endpoint.</p>
+    #[doc(hidden)]
     pub target_endpoint_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the replication instance.</p>
+    #[doc(hidden)]
     pub replication_instance_arn: std::option::Option<std::string::String>,
     /// <p>The type of migration.</p>
+    #[doc(hidden)]
     pub migration_type: std::option::Option<crate::model::MigrationTypeValue>,
     /// <p>Table mappings specified in the task.</p>
+    #[doc(hidden)]
     pub table_mappings: std::option::Option<std::string::String>,
     /// <p>The settings for the replication task.</p>
+    #[doc(hidden)]
     pub replication_task_settings: std::option::Option<std::string::String>,
     /// <p>The status of the replication task. This response parameter can return one of the following values:</p>
     /// <ul>
@@ -233,40 +245,62 @@ pub struct ReplicationTask {
     /// <p> <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTaskAssessmentRun.html"> <code>StartReplicationTaskAssessmentRun</code> </a> is an improved premigration task assessment operation. The <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTaskAssessment.html"> <code>StartReplicationTaskAssessment</code> </a> operation assesses data type compatibility only between the source and target database of a given migration task. In contrast, <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTaskAssessmentRun.html"> <code>StartReplicationTaskAssessmentRun</code> </a> enables you to specify a variety of premigration task assessments in addition to data type compatibility. These assessments include ones for the validity of primary key definitions and likely issues with database migration performance, among others.</p>
     /// </note> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The last error (failure) message generated for the replication task.</p>
+    #[doc(hidden)]
     pub last_failure_message: std::option::Option<std::string::String>,
     /// <p>The reason the replication task was stopped. This response parameter can return one of the following values:</p>
     /// <ul>
-    /// <li> <p> <code>"STOP_REASON_FULL_LOAD_COMPLETED"</code> – Full-load migration completed.</p> </li>
-    /// <li> <p> <code>"STOP_REASON_CACHED_CHANGES_APPLIED"</code> – Change data capture (CDC) load completed.</p> </li>
-    /// <li> <p> <code>"STOP_REASON_CACHED_CHANGES_NOT_APPLIED"</code> – In a full-load and CDC migration, the full load stopped as specified before starting the CDC migration.</p> </li>
-    /// <li> <p> <code>"STOP_REASON_SERVER_TIME"</code> – The migration stopped at the specified server time.</p> </li>
+    /// <li> <p> <code>"Stop Reason NORMAL"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason RECOVERABLE_ERROR"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason FATAL_ERROR"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason FULL_LOAD_ONLY_FINISHED"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AFTER_FULL_LOAD"</code> – Full load completed, with cached changes not applied</p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AFTER_CACHED_EVENTS"</code> – Full load completed, with cached changes applied</p> </li>
+    /// <li> <p> <code>"Stop Reason EXPRESS_LICENSE_LIMITS_REACHED"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AFTER_DDL_APPLY"</code> – User-defined stop task after DDL applied</p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_DUE_TO_LOW_MEMORY"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_DUE_TO_LOW_DISK"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AT_SERVER_TIME"</code> – User-defined server time for stopping task</p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AT_COMMIT_TIME"</code> – User-defined commit time for stopping task</p> </li>
+    /// <li> <p> <code>"Stop Reason RECONFIGURATION_RESTART"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason RECYCLE_TASK"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub stop_reason: std::option::Option<std::string::String>,
     /// <p>The date the replication task was created.</p>
+    #[doc(hidden)]
     pub replication_task_creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the replication task is scheduled to start.</p>
+    #[doc(hidden)]
     pub replication_task_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates when you want a change data capture (CDC) operation to start. Use either <code>CdcStartPosition</code> or <code>CdcStartTime</code> to specify when you want the CDC operation to start. Specifying both values results in an error.</p>
     /// <p>The value can be in date, checkpoint, or LSN/SCN format.</p>
     /// <p>Date Example: --cdc-start-position “2018-03-08T12:12:12”</p>
     /// <p>Checkpoint Example: --cdc-start-position "checkpoint:V1#27#mysql-bin-changelog.157832:1975:-1:2002:677883278264080:mysql-bin-changelog.157832:1876#0#0#*#0#93"</p>
     /// <p>LSN Example: --cdc-start-position “mysql-bin-changelog.000024:373”</p>
+    #[doc(hidden)]
     pub cdc_start_position: std::option::Option<std::string::String>,
     /// <p>Indicates when you want a change data capture (CDC) operation to stop. The value can be either server time or commit time.</p>
     /// <p>Server time example: --cdc-stop-position “server_time:2018-02-09T12:12:12”</p>
     /// <p>Commit time example: --cdc-stop-position “commit_time: 2018-02-09T12:12:12 “</p>
+    #[doc(hidden)]
     pub cdc_stop_position: std::option::Option<std::string::String>,
     /// <p>Indicates the last checkpoint that occurred during a change data capture (CDC) operation. You can provide this value to the <code>CdcStartPosition</code> parameter to start a CDC operation that begins at that checkpoint.</p>
+    #[doc(hidden)]
     pub recovery_checkpoint: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the replication task.</p>
+    #[doc(hidden)]
     pub replication_task_arn: std::option::Option<std::string::String>,
     /// <p>The statistics for the task, including elapsed time, tables loaded, and table errors.</p>
+    #[doc(hidden)]
     pub replication_task_stats: std::option::Option<crate::model::ReplicationTaskStats>,
     /// <p>Supplemental information that the task requires to migrate the data for certain source and target endpoints. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.TaskData.html">Specifying Supplemental Data for Task Settings</a> in the <i>Database Migration Service User Guide.</i> </p>
+    #[doc(hidden)]
     pub task_data: std::option::Option<std::string::String>,
     /// <p>The ARN of the replication instance to which this task is moved in response to running the <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_MoveReplicationTask.html"> <code>MoveReplicationTask</code> </a> operation. Otherwise, this response parameter isn't a member of the <code>ReplicationTask</code> object.</p>
+    #[doc(hidden)]
     pub target_replication_instance_arn: std::option::Option<std::string::String>,
 }
 impl ReplicationTask {
@@ -330,10 +364,20 @@ impl ReplicationTask {
     }
     /// <p>The reason the replication task was stopped. This response parameter can return one of the following values:</p>
     /// <ul>
-    /// <li> <p> <code>"STOP_REASON_FULL_LOAD_COMPLETED"</code> – Full-load migration completed.</p> </li>
-    /// <li> <p> <code>"STOP_REASON_CACHED_CHANGES_APPLIED"</code> – Change data capture (CDC) load completed.</p> </li>
-    /// <li> <p> <code>"STOP_REASON_CACHED_CHANGES_NOT_APPLIED"</code> – In a full-load and CDC migration, the full load stopped as specified before starting the CDC migration.</p> </li>
-    /// <li> <p> <code>"STOP_REASON_SERVER_TIME"</code> – The migration stopped at the specified server time.</p> </li>
+    /// <li> <p> <code>"Stop Reason NORMAL"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason RECOVERABLE_ERROR"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason FATAL_ERROR"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason FULL_LOAD_ONLY_FINISHED"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AFTER_FULL_LOAD"</code> – Full load completed, with cached changes not applied</p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AFTER_CACHED_EVENTS"</code> – Full load completed, with cached changes applied</p> </li>
+    /// <li> <p> <code>"Stop Reason EXPRESS_LICENSE_LIMITS_REACHED"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AFTER_DDL_APPLY"</code> – User-defined stop task after DDL applied</p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_DUE_TO_LOW_MEMORY"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_DUE_TO_LOW_DISK"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AT_SERVER_TIME"</code> – User-defined server time for stopping task</p> </li>
+    /// <li> <p> <code>"Stop Reason STOPPED_AT_COMMIT_TIME"</code> – User-defined commit time for stopping task</p> </li>
+    /// <li> <p> <code>"Stop Reason RECONFIGURATION_RESTART"</code> </p> </li>
+    /// <li> <p> <code>"Stop Reason RECYCLE_TASK"</code> </p> </li>
     /// </ul>
     pub fn stop_reason(&self) -> std::option::Option<&str> {
         self.stop_reason.as_deref()
@@ -422,11 +466,10 @@ impl std::fmt::Debug for ReplicationTask {
         formatter.finish()
     }
 }
-/// See [`ReplicationTask`](crate::model::ReplicationTask)
+/// See [`ReplicationTask`](crate::model::ReplicationTask).
 pub mod replication_task {
 
-    /// A builder for [`ReplicationTask`](crate::model::ReplicationTask)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationTask`](crate::model::ReplicationTask).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_identifier: std::option::Option<std::string::String>,
@@ -613,10 +656,20 @@ pub mod replication_task {
         }
         /// <p>The reason the replication task was stopped. This response parameter can return one of the following values:</p>
         /// <ul>
-        /// <li> <p> <code>"STOP_REASON_FULL_LOAD_COMPLETED"</code> – Full-load migration completed.</p> </li>
-        /// <li> <p> <code>"STOP_REASON_CACHED_CHANGES_APPLIED"</code> – Change data capture (CDC) load completed.</p> </li>
-        /// <li> <p> <code>"STOP_REASON_CACHED_CHANGES_NOT_APPLIED"</code> – In a full-load and CDC migration, the full load stopped as specified before starting the CDC migration.</p> </li>
-        /// <li> <p> <code>"STOP_REASON_SERVER_TIME"</code> – The migration stopped at the specified server time.</p> </li>
+        /// <li> <p> <code>"Stop Reason NORMAL"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason RECOVERABLE_ERROR"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason FATAL_ERROR"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason FULL_LOAD_ONLY_FINISHED"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AFTER_FULL_LOAD"</code> – Full load completed, with cached changes not applied</p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AFTER_CACHED_EVENTS"</code> – Full load completed, with cached changes applied</p> </li>
+        /// <li> <p> <code>"Stop Reason EXPRESS_LICENSE_LIMITS_REACHED"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AFTER_DDL_APPLY"</code> – User-defined stop task after DDL applied</p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_DUE_TO_LOW_MEMORY"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_DUE_TO_LOW_DISK"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AT_SERVER_TIME"</code> – User-defined server time for stopping task</p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AT_COMMIT_TIME"</code> – User-defined commit time for stopping task</p> </li>
+        /// <li> <p> <code>"Stop Reason RECONFIGURATION_RESTART"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason RECYCLE_TASK"</code> </p> </li>
         /// </ul>
         pub fn stop_reason(mut self, input: impl Into<std::string::String>) -> Self {
             self.stop_reason = Some(input.into());
@@ -624,10 +677,20 @@ pub mod replication_task {
         }
         /// <p>The reason the replication task was stopped. This response parameter can return one of the following values:</p>
         /// <ul>
-        /// <li> <p> <code>"STOP_REASON_FULL_LOAD_COMPLETED"</code> – Full-load migration completed.</p> </li>
-        /// <li> <p> <code>"STOP_REASON_CACHED_CHANGES_APPLIED"</code> – Change data capture (CDC) load completed.</p> </li>
-        /// <li> <p> <code>"STOP_REASON_CACHED_CHANGES_NOT_APPLIED"</code> – In a full-load and CDC migration, the full load stopped as specified before starting the CDC migration.</p> </li>
-        /// <li> <p> <code>"STOP_REASON_SERVER_TIME"</code> – The migration stopped at the specified server time.</p> </li>
+        /// <li> <p> <code>"Stop Reason NORMAL"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason RECOVERABLE_ERROR"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason FATAL_ERROR"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason FULL_LOAD_ONLY_FINISHED"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AFTER_FULL_LOAD"</code> – Full load completed, with cached changes not applied</p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AFTER_CACHED_EVENTS"</code> – Full load completed, with cached changes applied</p> </li>
+        /// <li> <p> <code>"Stop Reason EXPRESS_LICENSE_LIMITS_REACHED"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AFTER_DDL_APPLY"</code> – User-defined stop task after DDL applied</p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_DUE_TO_LOW_MEMORY"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_DUE_TO_LOW_DISK"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AT_SERVER_TIME"</code> – User-defined server time for stopping task</p> </li>
+        /// <li> <p> <code>"Stop Reason STOPPED_AT_COMMIT_TIME"</code> – User-defined commit time for stopping task</p> </li>
+        /// <li> <p> <code>"Stop Reason RECONFIGURATION_RESTART"</code> </p> </li>
+        /// <li> <p> <code>"Stop Reason RECYCLE_TASK"</code> </p> </li>
         /// </ul>
         pub fn set_stop_reason(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.stop_reason = input;
@@ -762,7 +825,7 @@ pub mod replication_task {
             self.target_replication_instance_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationTask`](crate::model::ReplicationTask)
+        /// Consumes the builder and constructs a [`ReplicationTask`](crate::model::ReplicationTask).
         pub fn build(self) -> crate::model::ReplicationTask {
             crate::model::ReplicationTask {
                 replication_task_identifier: self.replication_task_identifier,
@@ -789,7 +852,7 @@ pub mod replication_task {
     }
 }
 impl ReplicationTask {
-    /// Creates a new builder-style object to manufacture [`ReplicationTask`](crate::model::ReplicationTask)
+    /// Creates a new builder-style object to manufacture [`ReplicationTask`](crate::model::ReplicationTask).
     pub fn builder() -> crate::model::replication_task::Builder {
         crate::model::replication_task::Builder::default()
     }
@@ -800,26 +863,37 @@ impl ReplicationTask {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationTaskStats {
     /// <p>The percent complete for the full load migration task.</p>
+    #[doc(hidden)]
     pub full_load_progress_percent: i32,
     /// <p>The elapsed time of the task, in milliseconds.</p>
+    #[doc(hidden)]
     pub elapsed_time_millis: i64,
     /// <p>The number of tables loaded for this task.</p>
+    #[doc(hidden)]
     pub tables_loaded: i32,
     /// <p>The number of tables currently loading for this task.</p>
+    #[doc(hidden)]
     pub tables_loading: i32,
     /// <p>The number of tables queued for this task.</p>
+    #[doc(hidden)]
     pub tables_queued: i32,
     /// <p>The number of errors that have occurred during this task.</p>
+    #[doc(hidden)]
     pub tables_errored: i32,
     /// <p>The date the replication task was started either with a fresh start or a target reload.</p>
+    #[doc(hidden)]
     pub fresh_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the replication task was started either with a fresh start or a resume. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html#DMS-StartReplicationTask-request-StartReplicationTaskType">StartReplicationTaskType</a>.</p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the replication task was stopped.</p>
+    #[doc(hidden)]
     pub stop_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the replication task full load was started.</p>
+    #[doc(hidden)]
     pub full_load_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the replication task full load was completed.</p>
+    #[doc(hidden)]
     pub full_load_finish_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ReplicationTaskStats {
@@ -888,11 +962,10 @@ impl std::fmt::Debug for ReplicationTaskStats {
         formatter.finish()
     }
 }
-/// See [`ReplicationTaskStats`](crate::model::ReplicationTaskStats)
+/// See [`ReplicationTaskStats`](crate::model::ReplicationTaskStats).
 pub mod replication_task_stats {
 
-    /// A builder for [`ReplicationTaskStats`](crate::model::ReplicationTaskStats)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationTaskStats`](crate::model::ReplicationTaskStats).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) full_load_progress_percent: std::option::Option<i32>,
@@ -1033,7 +1106,7 @@ pub mod replication_task_stats {
             self.full_load_finish_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationTaskStats`](crate::model::ReplicationTaskStats)
+        /// Consumes the builder and constructs a [`ReplicationTaskStats`](crate::model::ReplicationTaskStats).
         pub fn build(self) -> crate::model::ReplicationTaskStats {
             crate::model::ReplicationTaskStats {
                 full_load_progress_percent: self.full_load_progress_percent.unwrap_or_default(),
@@ -1052,7 +1125,7 @@ pub mod replication_task_stats {
     }
 }
 impl ReplicationTaskStats {
-    /// Creates a new builder-style object to manufacture [`ReplicationTaskStats`](crate::model::ReplicationTaskStats)
+    /// Creates a new builder-style object to manufacture [`ReplicationTaskStats`](crate::model::ReplicationTaskStats).
     pub fn builder() -> crate::model::replication_task_stats::Builder {
         crate::model::replication_task_stats::Builder::default()
     }
@@ -1123,8 +1196,10 @@ impl AsRef<str> for MigrationTypeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationTaskAssessmentRun {
     /// <p>Amazon Resource Name (ARN) of this assessment run.</p>
+    #[doc(hidden)]
     pub replication_task_assessment_run_arn: std::option::Option<std::string::String>,
     /// <p>ARN of the migration task associated with this premigration assessment run.</p>
+    #[doc(hidden)]
     pub replication_task_arn: std::option::Option<std::string::String>,
     /// <p>Assessment run status. </p>
     /// <p>This status can have one of the following values:</p>
@@ -1140,26 +1215,36 @@ pub struct ReplicationTaskAssessmentRun {
     /// <li> <p> <code>"running"</code> – Individual assessments are being run.</p> </li>
     /// <li> <p> <code>"starting"</code> – The assessment run is starting, but resources are not yet being provisioned for individual assessments.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Date on which the assessment run was created using the <code>StartReplicationTaskAssessmentRun</code> operation.</p>
+    #[doc(hidden)]
     pub replication_task_assessment_run_creation_date:
         std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indication of the completion progress for the individual assessments specified to run.</p>
+    #[doc(hidden)]
     pub assessment_progress:
         std::option::Option<crate::model::ReplicationTaskAssessmentRunProgress>,
     /// <p>Last message generated by an individual assessment failure.</p>
+    #[doc(hidden)]
     pub last_failure_message: std::option::Option<std::string::String>,
     /// <p>ARN of the service role used to start the assessment run using the <code>StartReplicationTaskAssessmentRun</code> operation. The role must allow the <code>iam:PassRole</code> action.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p>Amazon S3 bucket where DMS stores the results of this assessment run.</p>
+    #[doc(hidden)]
     pub result_location_bucket: std::option::Option<std::string::String>,
     /// <p>Folder in an Amazon S3 bucket where DMS stores the results of this assessment run.</p>
+    #[doc(hidden)]
     pub result_location_folder: std::option::Option<std::string::String>,
     /// <p>Encryption mode used to encrypt the assessment run results.</p>
+    #[doc(hidden)]
     pub result_encryption_mode: std::option::Option<std::string::String>,
     /// <p>ARN of the KMS encryption key used to encrypt the assessment run results.</p>
+    #[doc(hidden)]
     pub result_kms_key_arn: std::option::Option<std::string::String>,
     /// <p>Unique name of the assessment run.</p>
+    #[doc(hidden)]
     pub assessment_run_name: std::option::Option<std::string::String>,
 }
 impl ReplicationTaskAssessmentRun {
@@ -1253,11 +1338,10 @@ impl std::fmt::Debug for ReplicationTaskAssessmentRun {
         formatter.finish()
     }
 }
-/// See [`ReplicationTaskAssessmentRun`](crate::model::ReplicationTaskAssessmentRun)
+/// See [`ReplicationTaskAssessmentRun`](crate::model::ReplicationTaskAssessmentRun).
 pub mod replication_task_assessment_run {
 
-    /// A builder for [`ReplicationTaskAssessmentRun`](crate::model::ReplicationTaskAssessmentRun)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationTaskAssessmentRun`](crate::model::ReplicationTaskAssessmentRun).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_assessment_run_arn: std::option::Option<std::string::String>,
@@ -1464,7 +1548,7 @@ pub mod replication_task_assessment_run {
             self.assessment_run_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationTaskAssessmentRun`](crate::model::ReplicationTaskAssessmentRun)
+        /// Consumes the builder and constructs a [`ReplicationTaskAssessmentRun`](crate::model::ReplicationTaskAssessmentRun).
         pub fn build(self) -> crate::model::ReplicationTaskAssessmentRun {
             crate::model::ReplicationTaskAssessmentRun {
                 replication_task_assessment_run_arn: self.replication_task_assessment_run_arn,
@@ -1485,7 +1569,7 @@ pub mod replication_task_assessment_run {
     }
 }
 impl ReplicationTaskAssessmentRun {
-    /// Creates a new builder-style object to manufacture [`ReplicationTaskAssessmentRun`](crate::model::ReplicationTaskAssessmentRun)
+    /// Creates a new builder-style object to manufacture [`ReplicationTaskAssessmentRun`](crate::model::ReplicationTaskAssessmentRun).
     pub fn builder() -> crate::model::replication_task_assessment_run::Builder {
         crate::model::replication_task_assessment_run::Builder::default()
     }
@@ -1496,8 +1580,10 @@ impl ReplicationTaskAssessmentRun {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationTaskAssessmentRunProgress {
     /// <p>The number of individual assessments that are specified to run.</p>
+    #[doc(hidden)]
     pub individual_assessment_count: i32,
     /// <p>The number of individual assessments that have completed, successfully or not.</p>
+    #[doc(hidden)]
     pub individual_assessment_completed_count: i32,
 }
 impl ReplicationTaskAssessmentRunProgress {
@@ -1524,11 +1610,10 @@ impl std::fmt::Debug for ReplicationTaskAssessmentRunProgress {
         formatter.finish()
     }
 }
-/// See [`ReplicationTaskAssessmentRunProgress`](crate::model::ReplicationTaskAssessmentRunProgress)
+/// See [`ReplicationTaskAssessmentRunProgress`](crate::model::ReplicationTaskAssessmentRunProgress).
 pub mod replication_task_assessment_run_progress {
 
-    /// A builder for [`ReplicationTaskAssessmentRunProgress`](crate::model::ReplicationTaskAssessmentRunProgress)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationTaskAssessmentRunProgress`](crate::model::ReplicationTaskAssessmentRunProgress).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) individual_assessment_count: std::option::Option<i32>,
@@ -1558,7 +1643,7 @@ pub mod replication_task_assessment_run_progress {
             self.individual_assessment_completed_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationTaskAssessmentRunProgress`](crate::model::ReplicationTaskAssessmentRunProgress)
+        /// Consumes the builder and constructs a [`ReplicationTaskAssessmentRunProgress`](crate::model::ReplicationTaskAssessmentRunProgress).
         pub fn build(self) -> crate::model::ReplicationTaskAssessmentRunProgress {
             crate::model::ReplicationTaskAssessmentRunProgress {
                 individual_assessment_count: self.individual_assessment_count.unwrap_or_default(),
@@ -1570,7 +1655,7 @@ pub mod replication_task_assessment_run_progress {
     }
 }
 impl ReplicationTaskAssessmentRunProgress {
-    /// Creates a new builder-style object to manufacture [`ReplicationTaskAssessmentRunProgress`](crate::model::ReplicationTaskAssessmentRunProgress)
+    /// Creates a new builder-style object to manufacture [`ReplicationTaskAssessmentRunProgress`](crate::model::ReplicationTaskAssessmentRunProgress).
     pub fn builder() -> crate::model::replication_task_assessment_run_progress::Builder {
         crate::model::replication_task_assessment_run_progress::Builder::default()
     }
@@ -1695,8 +1780,10 @@ impl AsRef<str> for ReloadOptionValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableToReload {
     /// <p>The schema name of the table to be reloaded.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>The table name of the table to be reloaded.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
 }
 impl TableToReload {
@@ -1717,11 +1804,10 @@ impl std::fmt::Debug for TableToReload {
         formatter.finish()
     }
 }
-/// See [`TableToReload`](crate::model::TableToReload)
+/// See [`TableToReload`](crate::model::TableToReload).
 pub mod table_to_reload {
 
-    /// A builder for [`TableToReload`](crate::model::TableToReload)
-    #[non_exhaustive]
+    /// A builder for [`TableToReload`](crate::model::TableToReload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_name: std::option::Option<std::string::String>,
@@ -1748,7 +1834,7 @@ pub mod table_to_reload {
             self.table_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableToReload`](crate::model::TableToReload)
+        /// Consumes the builder and constructs a [`TableToReload`](crate::model::TableToReload).
         pub fn build(self) -> crate::model::TableToReload {
             crate::model::TableToReload {
                 schema_name: self.schema_name,
@@ -1758,7 +1844,7 @@ pub mod table_to_reload {
     }
 }
 impl TableToReload {
-    /// Creates a new builder-style object to manufacture [`TableToReload`](crate::model::TableToReload)
+    /// Creates a new builder-style object to manufacture [`TableToReload`](crate::model::TableToReload).
     pub fn builder() -> crate::model::table_to_reload::Builder {
         crate::model::table_to_reload::Builder::default()
     }
@@ -1769,14 +1855,19 @@ impl TableToReload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RefreshSchemasStatus {
     /// <p>The Amazon Resource Name (ARN) string that uniquely identifies the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the replication instance.</p>
+    #[doc(hidden)]
     pub replication_instance_arn: std::option::Option<std::string::String>,
     /// <p>The status of the schema.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RefreshSchemasStatusTypeValue>,
     /// <p>The date the schema was last refreshed.</p>
+    #[doc(hidden)]
     pub last_refresh_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last failure message for the schema.</p>
+    #[doc(hidden)]
     pub last_failure_message: std::option::Option<std::string::String>,
 }
 impl RefreshSchemasStatus {
@@ -1812,11 +1903,10 @@ impl std::fmt::Debug for RefreshSchemasStatus {
         formatter.finish()
     }
 }
-/// See [`RefreshSchemasStatus`](crate::model::RefreshSchemasStatus)
+/// See [`RefreshSchemasStatus`](crate::model::RefreshSchemasStatus).
 pub mod refresh_schemas_status {
 
-    /// A builder for [`RefreshSchemasStatus`](crate::model::RefreshSchemasStatus)
-    #[non_exhaustive]
+    /// A builder for [`RefreshSchemasStatus`](crate::model::RefreshSchemasStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint_arn: std::option::Option<std::string::String>,
@@ -1888,7 +1978,7 @@ pub mod refresh_schemas_status {
             self.last_failure_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`RefreshSchemasStatus`](crate::model::RefreshSchemasStatus)
+        /// Consumes the builder and constructs a [`RefreshSchemasStatus`](crate::model::RefreshSchemasStatus).
         pub fn build(self) -> crate::model::RefreshSchemasStatus {
             crate::model::RefreshSchemasStatus {
                 endpoint_arn: self.endpoint_arn,
@@ -1901,7 +1991,7 @@ pub mod refresh_schemas_status {
     }
 }
 impl RefreshSchemasStatus {
-    /// Creates a new builder-style object to manufacture [`RefreshSchemasStatus`](crate::model::RefreshSchemasStatus)
+    /// Creates a new builder-style object to manufacture [`RefreshSchemasStatus`](crate::model::RefreshSchemasStatus).
     pub fn builder() -> crate::model::refresh_schemas_status::Builder {
         crate::model::refresh_schemas_status::Builder::default()
     }
@@ -1978,9 +2068,11 @@ pub struct ReplicationInstance {
     /// <li> <p>Cannot end with a hyphen or contain two consecutive hyphens.</p> </li>
     /// </ul>
     /// <p>Example: <code>myrepinstance</code> </p>
+    #[doc(hidden)]
     pub replication_instance_identifier: std::option::Option<std::string::String>,
     /// <p>The compute and memory capacity of the replication instance as defined for the specified replication instance class. It is a required parameter, although a default value is pre-selected in the DMS console.</p>
     /// <p>For more information on the settings and capacities for the available replication instance classes, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.html#CHAP_ReplicationInstance.InDepth"> Selecting the right DMS replication instance for your migration</a>. </p>
+    #[doc(hidden)]
     pub replication_instance_class: std::option::Option<std::string::String>,
     /// <p>The status of the replication instance. The possible return values include:</p>
     /// <ul>
@@ -1998,54 +2090,77 @@ pub struct ReplicationInstance {
     /// <li> <p> <code>"incompatible-network"</code> </p> </li>
     /// <li> <p> <code>"maintenance"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub replication_instance_status: std::option::Option<std::string::String>,
     /// <p>The amount of storage (in gigabytes) that is allocated for the replication instance.</p>
+    #[doc(hidden)]
     pub allocated_storage: i32,
     /// <p>The time the replication instance was created.</p>
+    #[doc(hidden)]
     pub instance_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The VPC security group for the instance.</p>
+    #[doc(hidden)]
     pub vpc_security_groups:
         std::option::Option<std::vec::Vec<crate::model::VpcSecurityGroupMembership>>,
     /// <p>The Availability Zone for the instance.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The subnet group for the replication instance.</p>
+    #[doc(hidden)]
     pub replication_subnet_group: std::option::Option<crate::model::ReplicationSubnetGroup>,
     /// <p>The maintenance window times for the replication instance. Any pending upgrades to the replication instance are performed during this time.</p>
+    #[doc(hidden)]
     pub preferred_maintenance_window: std::option::Option<std::string::String>,
     /// <p>The pending modification values.</p>
+    #[doc(hidden)]
     pub pending_modified_values:
         std::option::Option<crate::model::ReplicationPendingModifiedValues>,
     /// <p> Specifies whether the replication instance is a Multi-AZ deployment. You can't set the <code>AvailabilityZone</code> parameter if the Multi-AZ parameter is set to <code>true</code>. </p>
+    #[doc(hidden)]
     pub multi_az: bool,
     /// <p>The engine version number of the replication instance.</p>
     /// <p>If an engine version number is not specified when a replication instance is created, the default is the latest engine version available.</p>
     /// <p>When modifying a major engine version of an instance, also set <code>AllowMajorVersionUpgrade</code> to <code>true</code>.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>Boolean value indicating if minor version upgrades will be automatically applied to the instance.</p>
+    #[doc(hidden)]
     pub auto_minor_version_upgrade: bool,
     /// <p>An KMS key identifier that is used to encrypt the data on the replication instance.</p>
     /// <p>If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.</p>
     /// <p>KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has a different default encryption key for each Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the replication instance.</p>
+    #[doc(hidden)]
     pub replication_instance_arn: std::option::Option<std::string::String>,
     /// <p>The public IP address of the replication instance.</p>
+    #[deprecated]
+    #[doc(hidden)]
     pub replication_instance_public_ip_address: std::option::Option<std::string::String>,
     /// <p>The private IP address of the replication instance.</p>
+    #[deprecated]
+    #[doc(hidden)]
     pub replication_instance_private_ip_address: std::option::Option<std::string::String>,
     /// <p>One or more public IP addresses for the replication instance.</p>
+    #[doc(hidden)]
     pub replication_instance_public_ip_addresses:
         std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>One or more private IP addresses for the replication instance.</p>
+    #[doc(hidden)]
     pub replication_instance_private_ip_addresses:
         std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> Specifies the accessibility options for the replication instance. A value of <code>true</code> represents an instance with a public IP address. A value of <code>false</code> represents an instance with a private IP address. The default value is <code>true</code>. </p>
+    #[doc(hidden)]
     pub publicly_accessible: bool,
     /// <p>The Availability Zone of the standby replication instance in a Multi-AZ deployment.</p>
+    #[doc(hidden)]
     pub secondary_availability_zone: std::option::Option<std::string::String>,
     /// <p> The expiration date of the free replication instance that is part of the Free DMS program. </p>
+    #[doc(hidden)]
     pub free_until: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The DNS name servers supported for the replication instance to access your on-premise source or target database.</p>
+    #[doc(hidden)]
     pub dns_name_servers: std::option::Option<std::string::String>,
 }
 impl ReplicationInstance {
@@ -2143,10 +2258,12 @@ impl ReplicationInstance {
         self.replication_instance_arn.as_deref()
     }
     /// <p>The public IP address of the replication instance.</p>
+    #[deprecated]
     pub fn replication_instance_public_ip_address(&self) -> std::option::Option<&str> {
         self.replication_instance_public_ip_address.as_deref()
     }
     /// <p>The private IP address of the replication instance.</p>
+    #[deprecated]
     pub fn replication_instance_private_ip_address(&self) -> std::option::Option<&str> {
         self.replication_instance_private_ip_address.as_deref()
     }
@@ -2238,11 +2355,10 @@ impl std::fmt::Debug for ReplicationInstance {
         formatter.finish()
     }
 }
-/// See [`ReplicationInstance`](crate::model::ReplicationInstance)
+/// See [`ReplicationInstance`](crate::model::ReplicationInstance).
 pub mod replication_instance {
 
-    /// A builder for [`ReplicationInstance`](crate::model::ReplicationInstance)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationInstance`](crate::model::ReplicationInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_instance_identifier: std::option::Option<std::string::String>,
@@ -2538,6 +2654,7 @@ pub mod replication_instance {
             self
         }
         /// <p>The public IP address of the replication instance.</p>
+        #[deprecated]
         pub fn replication_instance_public_ip_address(
             mut self,
             input: impl Into<std::string::String>,
@@ -2546,6 +2663,7 @@ pub mod replication_instance {
             self
         }
         /// <p>The public IP address of the replication instance.</p>
+        #[deprecated]
         pub fn set_replication_instance_public_ip_address(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -2554,6 +2672,7 @@ pub mod replication_instance {
             self
         }
         /// <p>The private IP address of the replication instance.</p>
+        #[deprecated]
         pub fn replication_instance_private_ip_address(
             mut self,
             input: impl Into<std::string::String>,
@@ -2562,6 +2681,7 @@ pub mod replication_instance {
             self
         }
         /// <p>The private IP address of the replication instance.</p>
+        #[deprecated]
         pub fn set_replication_instance_private_ip_address(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -2669,7 +2789,7 @@ pub mod replication_instance {
             self.dns_name_servers = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationInstance`](crate::model::ReplicationInstance)
+        /// Consumes the builder and constructs a [`ReplicationInstance`](crate::model::ReplicationInstance).
         pub fn build(self) -> crate::model::ReplicationInstance {
             crate::model::ReplicationInstance {
                 replication_instance_identifier: self.replication_instance_identifier,
@@ -2703,7 +2823,7 @@ pub mod replication_instance {
     }
 }
 impl ReplicationInstance {
-    /// Creates a new builder-style object to manufacture [`ReplicationInstance`](crate::model::ReplicationInstance)
+    /// Creates a new builder-style object to manufacture [`ReplicationInstance`](crate::model::ReplicationInstance).
     pub fn builder() -> crate::model::replication_instance::Builder {
         crate::model::replication_instance::Builder::default()
     }
@@ -2715,12 +2835,16 @@ impl ReplicationInstance {
 pub struct ReplicationPendingModifiedValues {
     /// <p>The compute and memory capacity of the replication instance as defined for the specified replication instance class.</p>
     /// <p>For more information on the settings and capacities for the available replication instance classes, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.html#CHAP_ReplicationInstance.InDepth"> Selecting the right DMS replication instance for your migration</a>. </p>
+    #[doc(hidden)]
     pub replication_instance_class: std::option::Option<std::string::String>,
     /// <p>The amount of storage (in gigabytes) that is allocated for the replication instance.</p>
+    #[doc(hidden)]
     pub allocated_storage: std::option::Option<i32>,
     /// <p> Specifies whether the replication instance is a Multi-AZ deployment. You can't set the <code>AvailabilityZone</code> parameter if the Multi-AZ parameter is set to <code>true</code>. </p>
+    #[doc(hidden)]
     pub multi_az: std::option::Option<bool>,
     /// <p>The engine version number of the replication instance.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
 }
 impl ReplicationPendingModifiedValues {
@@ -2755,11 +2879,10 @@ impl std::fmt::Debug for ReplicationPendingModifiedValues {
         formatter.finish()
     }
 }
-/// See [`ReplicationPendingModifiedValues`](crate::model::ReplicationPendingModifiedValues)
+/// See [`ReplicationPendingModifiedValues`](crate::model::ReplicationPendingModifiedValues).
 pub mod replication_pending_modified_values {
 
-    /// A builder for [`ReplicationPendingModifiedValues`](crate::model::ReplicationPendingModifiedValues)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationPendingModifiedValues`](crate::model::ReplicationPendingModifiedValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_instance_class: std::option::Option<std::string::String>,
@@ -2816,7 +2939,7 @@ pub mod replication_pending_modified_values {
             self.engine_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationPendingModifiedValues`](crate::model::ReplicationPendingModifiedValues)
+        /// Consumes the builder and constructs a [`ReplicationPendingModifiedValues`](crate::model::ReplicationPendingModifiedValues).
         pub fn build(self) -> crate::model::ReplicationPendingModifiedValues {
             crate::model::ReplicationPendingModifiedValues {
                 replication_instance_class: self.replication_instance_class,
@@ -2828,7 +2951,7 @@ pub mod replication_pending_modified_values {
     }
 }
 impl ReplicationPendingModifiedValues {
-    /// Creates a new builder-style object to manufacture [`ReplicationPendingModifiedValues`](crate::model::ReplicationPendingModifiedValues)
+    /// Creates a new builder-style object to manufacture [`ReplicationPendingModifiedValues`](crate::model::ReplicationPendingModifiedValues).
     pub fn builder() -> crate::model::replication_pending_modified_values::Builder {
         crate::model::replication_pending_modified_values::Builder::default()
     }
@@ -2839,14 +2962,19 @@ impl ReplicationPendingModifiedValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationSubnetGroup {
     /// <p>The identifier of the replication instance subnet group.</p>
+    #[doc(hidden)]
     pub replication_subnet_group_identifier: std::option::Option<std::string::String>,
     /// <p>A description for the replication subnet group.</p>
+    #[doc(hidden)]
     pub replication_subnet_group_description: std::option::Option<std::string::String>,
     /// <p>The ID of the VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The status of the subnet group.</p>
+    #[doc(hidden)]
     pub subnet_group_status: std::option::Option<std::string::String>,
     /// <p>The subnets that are in the subnet group.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<crate::model::Subnet>>,
 }
 impl ReplicationSubnetGroup {
@@ -2888,11 +3016,10 @@ impl std::fmt::Debug for ReplicationSubnetGroup {
         formatter.finish()
     }
 }
-/// See [`ReplicationSubnetGroup`](crate::model::ReplicationSubnetGroup)
+/// See [`ReplicationSubnetGroup`](crate::model::ReplicationSubnetGroup).
 pub mod replication_subnet_group {
 
-    /// A builder for [`ReplicationSubnetGroup`](crate::model::ReplicationSubnetGroup)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationSubnetGroup`](crate::model::ReplicationSubnetGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_subnet_group_identifier: std::option::Option<std::string::String>,
@@ -2976,7 +3103,7 @@ pub mod replication_subnet_group {
             self.subnets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationSubnetGroup`](crate::model::ReplicationSubnetGroup)
+        /// Consumes the builder and constructs a [`ReplicationSubnetGroup`](crate::model::ReplicationSubnetGroup).
         pub fn build(self) -> crate::model::ReplicationSubnetGroup {
             crate::model::ReplicationSubnetGroup {
                 replication_subnet_group_identifier: self.replication_subnet_group_identifier,
@@ -2989,7 +3116,7 @@ pub mod replication_subnet_group {
     }
 }
 impl ReplicationSubnetGroup {
-    /// Creates a new builder-style object to manufacture [`ReplicationSubnetGroup`](crate::model::ReplicationSubnetGroup)
+    /// Creates a new builder-style object to manufacture [`ReplicationSubnetGroup`](crate::model::ReplicationSubnetGroup).
     pub fn builder() -> crate::model::replication_subnet_group::Builder {
         crate::model::replication_subnet_group::Builder::default()
     }
@@ -3000,10 +3127,13 @@ impl ReplicationSubnetGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subnet {
     /// <p>The subnet identifier.</p>
+    #[doc(hidden)]
     pub subnet_identifier: std::option::Option<std::string::String>,
     /// <p>The Availability Zone of the subnet.</p>
+    #[doc(hidden)]
     pub subnet_availability_zone: std::option::Option<crate::model::AvailabilityZone>,
     /// <p>The status of the subnet.</p>
+    #[doc(hidden)]
     pub subnet_status: std::option::Option<std::string::String>,
 }
 impl Subnet {
@@ -3029,11 +3159,10 @@ impl std::fmt::Debug for Subnet {
         formatter.finish()
     }
 }
-/// See [`Subnet`](crate::model::Subnet)
+/// See [`Subnet`](crate::model::Subnet).
 pub mod subnet {
 
-    /// A builder for [`Subnet`](crate::model::Subnet)
-    #[non_exhaustive]
+    /// A builder for [`Subnet`](crate::model::Subnet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_identifier: std::option::Option<std::string::String>,
@@ -3080,7 +3209,7 @@ pub mod subnet {
             self.subnet_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subnet`](crate::model::Subnet)
+        /// Consumes the builder and constructs a [`Subnet`](crate::model::Subnet).
         pub fn build(self) -> crate::model::Subnet {
             crate::model::Subnet {
                 subnet_identifier: self.subnet_identifier,
@@ -3091,7 +3220,7 @@ pub mod subnet {
     }
 }
 impl Subnet {
-    /// Creates a new builder-style object to manufacture [`Subnet`](crate::model::Subnet)
+    /// Creates a new builder-style object to manufacture [`Subnet`](crate::model::Subnet).
     pub fn builder() -> crate::model::subnet::Builder {
         crate::model::subnet::Builder::default()
     }
@@ -3102,6 +3231,7 @@ impl Subnet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailabilityZone {
     /// <p>The name of the Availability Zone.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl AvailabilityZone {
@@ -3117,11 +3247,10 @@ impl std::fmt::Debug for AvailabilityZone {
         formatter.finish()
     }
 }
-/// See [`AvailabilityZone`](crate::model::AvailabilityZone)
+/// See [`AvailabilityZone`](crate::model::AvailabilityZone).
 pub mod availability_zone {
 
-    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone)
-    #[non_exhaustive]
+    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3137,14 +3266,14 @@ pub mod availability_zone {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone)
+        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone).
         pub fn build(self) -> crate::model::AvailabilityZone {
             crate::model::AvailabilityZone { name: self.name }
         }
     }
 }
 impl AvailabilityZone {
-    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone)
+    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone).
     pub fn builder() -> crate::model::availability_zone::Builder {
         crate::model::availability_zone::Builder::default()
     }
@@ -3155,8 +3284,10 @@ impl AvailabilityZone {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcSecurityGroupMembership {
     /// <p>The VPC security group ID.</p>
+    #[doc(hidden)]
     pub vpc_security_group_id: std::option::Option<std::string::String>,
     /// <p>The status of the VPC security group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl VpcSecurityGroupMembership {
@@ -3177,11 +3308,10 @@ impl std::fmt::Debug for VpcSecurityGroupMembership {
         formatter.finish()
     }
 }
-/// See [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+/// See [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
 pub mod vpc_security_group_membership {
 
-    /// A builder for [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
-    #[non_exhaustive]
+    /// A builder for [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_security_group_id: std::option::Option<std::string::String>,
@@ -3211,7 +3341,7 @@ pub mod vpc_security_group_membership {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+        /// Consumes the builder and constructs a [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
         pub fn build(self) -> crate::model::VpcSecurityGroupMembership {
             crate::model::VpcSecurityGroupMembership {
                 vpc_security_group_id: self.vpc_security_group_id,
@@ -3221,7 +3351,7 @@ pub mod vpc_security_group_membership {
     }
 }
 impl VpcSecurityGroupMembership {
-    /// Creates a new builder-style object to manufacture [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+    /// Creates a new builder-style object to manufacture [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
     pub fn builder() -> crate::model::vpc_security_group_membership::Builder {
         crate::model::vpc_security_group_membership::Builder::default()
     }
@@ -3232,26 +3362,35 @@ impl VpcSecurityGroupMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventSubscription {
     /// <p>The Amazon Web Services customer account associated with the DMS event notification subscription.</p>
+    #[doc(hidden)]
     pub customer_aws_id: std::option::Option<std::string::String>,
     /// <p>The DMS event notification subscription Id.</p>
+    #[doc(hidden)]
     pub cust_subscription_id: std::option::Option<std::string::String>,
     /// <p>The topic ARN of the DMS event notification subscription.</p>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>The status of the DMS event notification subscription.</p>
     /// <p>Constraints:</p>
     /// <p>Can be one of the following: creating | modifying | deleting | active | no-permission | topic-not-exist</p>
     /// <p>The status "no-permission" indicates that DMS no longer has permission to post to the SNS topic. The status "topic-not-exist" indicates that the topic was deleted after the subscription was created.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The time the DMS event notification subscription was created.</p>
+    #[doc(hidden)]
     pub subscription_creation_time: std::option::Option<std::string::String>,
     /// <p> The type of DMS resource that generates events. </p>
     /// <p>Valid values: replication-instance | replication-server | security-group | replication-task</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<std::string::String>,
     /// <p>A list of source Ids for the event subscription.</p>
+    #[doc(hidden)]
     pub source_ids_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A lists of event categories.</p>
+    #[doc(hidden)]
     pub event_categories_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Boolean value that indicates if the event subscription is enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl EventSubscription {
@@ -3314,11 +3453,10 @@ impl std::fmt::Debug for EventSubscription {
         formatter.finish()
     }
 }
-/// See [`EventSubscription`](crate::model::EventSubscription)
+/// See [`EventSubscription`](crate::model::EventSubscription).
 pub mod event_subscription {
 
-    /// A builder for [`EventSubscription`](crate::model::EventSubscription)
-    #[non_exhaustive]
+    /// A builder for [`EventSubscription`](crate::model::EventSubscription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) customer_aws_id: std::option::Option<std::string::String>,
@@ -3460,7 +3598,7 @@ pub mod event_subscription {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventSubscription`](crate::model::EventSubscription)
+        /// Consumes the builder and constructs a [`EventSubscription`](crate::model::EventSubscription).
         pub fn build(self) -> crate::model::EventSubscription {
             crate::model::EventSubscription {
                 customer_aws_id: self.customer_aws_id,
@@ -3477,7 +3615,7 @@ pub mod event_subscription {
     }
 }
 impl EventSubscription {
-    /// Creates a new builder-style object to manufacture [`EventSubscription`](crate::model::EventSubscription)
+    /// Creates a new builder-style object to manufacture [`EventSubscription`](crate::model::EventSubscription).
     pub fn builder() -> crate::model::event_subscription::Builder {
         crate::model::event_subscription::Builder::default()
     }
@@ -3493,77 +3631,112 @@ impl EventSubscription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Endpoint {
     /// <p>The database endpoint identifier. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens. They can't end with a hyphen or contain two consecutive hyphens.</p>
+    #[doc(hidden)]
     pub endpoint_identifier: std::option::Option<std::string::String>,
     /// <p>The type of endpoint. Valid values are <code>source</code> and <code>target</code>.</p>
+    #[doc(hidden)]
     pub endpoint_type: std::option::Option<crate::model::ReplicationEndpointTypeValue>,
     /// <p>The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.</p>
+    #[doc(hidden)]
     pub engine_name: std::option::Option<std::string::String>,
     /// <p>The expanded name for the engine name. For example, if the <code>EngineName</code> parameter is "aurora," this value would be "Amazon Aurora MySQL."</p>
+    #[doc(hidden)]
     pub engine_display_name: std::option::Option<std::string::String>,
     /// <p>The user name used to connect to the endpoint.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The name of the server at the endpoint.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>The port value used to access the endpoint.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>The name of the database at the endpoint.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>Additional connection attributes used to connect to the endpoint.</p>
+    #[doc(hidden)]
     pub extra_connection_attributes: std::option::Option<std::string::String>,
     /// <p>The status of the endpoint.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>An KMS key identifier that is used to encrypt the connection parameters for the endpoint.</p>
     /// <p>If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.</p>
     /// <p>KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has a different default encryption key for each Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) string that uniquely identifies the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) used for SSL connection to the endpoint.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The SSL mode used to connect to the endpoint. The default value is <code>none</code>.</p>
+    #[doc(hidden)]
     pub ssl_mode: std::option::Option<crate::model::DmsSslModeValue>,
     /// <p>The Amazon Resource Name (ARN) used by the service to access the IAM role. The role must allow the <code>iam:PassRole</code> action.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The external table definition.</p>
+    #[doc(hidden)]
     pub external_table_definition: std::option::Option<std::string::String>,
     /// <p> Value returned by a call to CreateEndpoint that can be used for cross-account validation. Use it on a subsequent call to CreateEndpoint to create the endpoint with a cross-account. </p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>The settings for the DynamoDB target endpoint. For more information, see the <code>DynamoDBSettings</code> structure.</p>
+    #[doc(hidden)]
     pub dynamo_db_settings: std::option::Option<crate::model::DynamoDbSettings>,
     /// <p>The settings for the S3 target endpoint. For more information, see the <code>S3Settings</code> structure.</p>
+    #[doc(hidden)]
     pub s3_settings: std::option::Option<crate::model::S3Settings>,
     /// <p>The settings for the DMS Transfer type source. For more information, see the DmsTransferSettings structure. </p>
+    #[doc(hidden)]
     pub dms_transfer_settings: std::option::Option<crate::model::DmsTransferSettings>,
     /// <p>The settings for the MongoDB source endpoint. For more information, see the <code>MongoDbSettings</code> structure.</p>
+    #[doc(hidden)]
     pub mongo_db_settings: std::option::Option<crate::model::MongoDbSettings>,
     /// <p>The settings for the Amazon Kinesis target endpoint. For more information, see the <code>KinesisSettings</code> structure.</p>
+    #[doc(hidden)]
     pub kinesis_settings: std::option::Option<crate::model::KinesisSettings>,
     /// <p>The settings for the Apache Kafka target endpoint. For more information, see the <code>KafkaSettings</code> structure.</p>
+    #[doc(hidden)]
     pub kafka_settings: std::option::Option<crate::model::KafkaSettings>,
     /// <p>The settings for the OpenSearch source endpoint. For more information, see the <code>ElasticsearchSettings</code> structure.</p>
+    #[doc(hidden)]
     pub elasticsearch_settings: std::option::Option<crate::model::ElasticsearchSettings>,
     /// <p>The settings for the Amazon Neptune target endpoint. For more information, see the <code>NeptuneSettings</code> structure.</p>
+    #[doc(hidden)]
     pub neptune_settings: std::option::Option<crate::model::NeptuneSettings>,
     /// <p>Settings for the Amazon Redshift endpoint.</p>
+    #[doc(hidden)]
     pub redshift_settings: std::option::Option<crate::model::RedshiftSettings>,
     /// <p>The settings for the PostgreSQL source and target endpoint. For more information, see the <code>PostgreSQLSettings</code> structure.</p>
+    #[doc(hidden)]
     pub postgre_sql_settings: std::option::Option<crate::model::PostgreSqlSettings>,
     /// <p>The settings for the MySQL source and target endpoint. For more information, see the <code>MySQLSettings</code> structure.</p>
+    #[doc(hidden)]
     pub my_sql_settings: std::option::Option<crate::model::MySqlSettings>,
     /// <p>The settings for the Oracle source and target endpoint. For more information, see the <code>OracleSettings</code> structure.</p>
+    #[doc(hidden)]
     pub oracle_settings: std::option::Option<crate::model::OracleSettings>,
     /// <p>The settings for the SAP ASE source and target endpoint. For more information, see the <code>SybaseSettings</code> structure.</p>
+    #[doc(hidden)]
     pub sybase_settings: std::option::Option<crate::model::SybaseSettings>,
     /// <p>The settings for the Microsoft SQL Server source and target endpoint. For more information, see the <code>MicrosoftSQLServerSettings</code> structure.</p>
+    #[doc(hidden)]
     pub microsoft_sql_server_settings:
         std::option::Option<crate::model::MicrosoftSqlServerSettings>,
     /// <p>The settings for the IBM Db2 LUW source endpoint. For more information, see the <code>IBMDb2Settings</code> structure. </p>
+    #[doc(hidden)]
     pub ibm_db2_settings: std::option::Option<crate::model::IbmDb2Settings>,
     /// <p>Provides information that defines a DocumentDB endpoint.</p>
+    #[doc(hidden)]
     pub doc_db_settings: std::option::Option<crate::model::DocDbSettings>,
     /// <p>The settings for the Redis target endpoint. For more information, see the <code>RedisSettings</code> structure.</p>
+    #[doc(hidden)]
     pub redis_settings: std::option::Option<crate::model::RedisSettings>,
     /// <p>Settings in JSON format for the source GCP MySQL endpoint.</p>
+    #[doc(hidden)]
     pub gcp_my_sql_settings: std::option::Option<crate::model::GcpMySqlSettings>,
 }
 impl Endpoint {
@@ -3763,11 +3936,10 @@ impl std::fmt::Debug for Endpoint {
         formatter.finish()
     }
 }
-/// See [`Endpoint`](crate::model::Endpoint)
+/// See [`Endpoint`](crate::model::Endpoint).
 pub mod endpoint {
 
-    /// A builder for [`Endpoint`](crate::model::Endpoint)
-    #[non_exhaustive]
+    /// A builder for [`Endpoint`](crate::model::Endpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint_identifier: std::option::Option<std::string::String>,
@@ -4252,7 +4424,7 @@ pub mod endpoint {
             self.gcp_my_sql_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint)
+        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint).
         pub fn build(self) -> crate::model::Endpoint {
             crate::model::Endpoint {
                 endpoint_identifier: self.endpoint_identifier,
@@ -4295,7 +4467,7 @@ pub mod endpoint {
     }
 }
 impl Endpoint {
-    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint)
+    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint).
     pub fn builder() -> crate::model::endpoint::Builder {
         crate::model::endpoint::Builder::default()
     }
@@ -4307,41 +4479,55 @@ impl Endpoint {
 pub struct GcpMySqlSettings {
     /// <p>Specifies a script to run immediately after DMS connects to the endpoint. The migration task continues running regardless if the SQL statement succeeds or fails.</p>
     /// <p>For this parameter, provide the code of the script itself, not the name of a file containing the script. </p>
+    #[doc(hidden)]
     pub after_connect_script: std::option::Option<std::string::String>,
     /// <p>Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an Always On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for transaction backups, set this attribute to <code>false</code>. </p>
+    #[doc(hidden)]
     pub clean_source_metadata_on_mismatch: std::option::Option<bool>,
     /// <p>Database name for the endpoint. For a MySQL source or target endpoint, don't explicitly specify the database using the <code>DatabaseName</code> request parameter on either the <code>CreateEndpoint</code> or <code>ModifyEndpoint</code> API call. Specifying <code>DatabaseName</code> when you create or modify a MySQL endpoint replicates all the task tables to this single database. For MySQL endpoints, you specify the database only when you specify the schema in the table-mapping rules of the DMS task. </p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>Specifies how often to check the binary log for new changes/events when the database is idle. The default is five seconds.</p>
     /// <p>Example: <code>eventsPollInterval=5;</code> </p>
     /// <p>In the example, DMS checks for changes in the binary logs every five seconds. </p>
+    #[doc(hidden)]
     pub events_poll_interval: std::option::Option<i32>,
     /// <p>Specifies where to migrate source tables on the target, either to a single database or multiple databases.</p>
     /// <p>Example: <code>targetDbType=MULTIPLE_DATABASES</code> </p>
+    #[doc(hidden)]
     pub target_db_type: std::option::Option<crate::model::TargetDbType>,
     /// <p>Specifies the maximum size (in KB) of any .csv file used to transfer data to a MySQL-compatible database.</p>
     /// <p>Example: <code>maxFileSize=512</code> </p>
+    #[doc(hidden)]
     pub max_file_size: std::option::Option<i32>,
     /// <p>Improves performance when loading data into the MySQL-compatible target database. Specifies how many threads to use to load the data into the MySQL-compatible target database. Setting a large number of threads can have an adverse effect on database performance, because a separate connection is required for each thread. The default is one.</p>
     /// <p>Example: <code>parallelLoadThreads=1</code> </p>
+    #[doc(hidden)]
     pub parallel_load_threads: std::option::Option<i32>,
     /// <p>Endpoint connection password.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Endpoint TCP port.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Specifies the time zone for the source MySQL database.</p>
     /// <p>Example: <code>serverTimezone=US/Pacific;</code> </p>
     /// <p>Note: Do not enclose time zones in single quotes.</p>
+    #[doc(hidden)]
     pub server_timezone: std::option::Option<std::string::String>,
     /// <p>Endpoint connection user name.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret.</code> The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the MySQL endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the Database Migration Service User Guide. </p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the MySQL endpoint connection details. </p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
 }
 impl GcpMySqlSettings {
@@ -4438,11 +4624,10 @@ impl std::fmt::Debug for GcpMySqlSettings {
         formatter.finish()
     }
 }
-/// See [`GcpMySqlSettings`](crate::model::GcpMySqlSettings)
+/// See [`GcpMySqlSettings`](crate::model::GcpMySqlSettings).
 pub mod gcp_my_sql_settings {
 
-    /// A builder for [`GcpMySqlSettings`](crate::model::GcpMySqlSettings)
-    #[non_exhaustive]
+    /// A builder for [`GcpMySqlSettings`](crate::model::GcpMySqlSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) after_connect_script: std::option::Option<std::string::String>,
@@ -4645,7 +4830,7 @@ pub mod gcp_my_sql_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GcpMySqlSettings`](crate::model::GcpMySqlSettings)
+        /// Consumes the builder and constructs a [`GcpMySqlSettings`](crate::model::GcpMySqlSettings).
         pub fn build(self) -> crate::model::GcpMySqlSettings {
             crate::model::GcpMySqlSettings {
                 after_connect_script: self.after_connect_script,
@@ -4667,7 +4852,7 @@ pub mod gcp_my_sql_settings {
     }
 }
 impl GcpMySqlSettings {
-    /// Creates a new builder-style object to manufacture [`GcpMySqlSettings`](crate::model::GcpMySqlSettings)
+    /// Creates a new builder-style object to manufacture [`GcpMySqlSettings`](crate::model::GcpMySqlSettings).
     pub fn builder() -> crate::model::gcp_my_sql_settings::Builder {
         crate::model::gcp_my_sql_settings::Builder::default()
     }
@@ -4733,19 +4918,26 @@ impl AsRef<str> for TargetDbType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedisSettings {
     /// <p>Fully qualified domain name of the endpoint.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Transmission Control Protocol (TCP) port for the endpoint.</p>
+    #[doc(hidden)]
     pub port: i32,
     /// <p>The connection to a Redis target endpoint using Transport Layer Security (TLS). Valid values include <code>plaintext</code> and <code>ssl-encryption</code>. The default is <code>ssl-encryption</code>. The <code>ssl-encryption</code> option makes an encrypted connection. Optionally, you can identify an Amazon Resource Name (ARN) for an SSL certificate authority (CA) using the <code>SslCaCertificateArn </code>setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.</p>
     /// <p>The <code>plaintext</code> option doesn't provide Transport Layer Security (TLS) encryption for traffic between endpoint and database.</p>
+    #[doc(hidden)]
     pub ssl_security_protocol: std::option::Option<crate::model::SslSecurityProtocolValue>,
     /// <p>The type of authentication to perform when connecting to a Redis target. Options include <code>none</code>, <code>auth-token</code>, and <code>auth-role</code>. The <code>auth-token</code> option requires an <code>AuthPassword</code> value to be provided. The <code>auth-role</code> option requires <code>AuthUserName</code> and <code>AuthPassword</code> values to be provided.</p>
+    #[doc(hidden)]
     pub auth_type: std::option::Option<crate::model::RedisAuthTypeValue>,
     /// <p>The user name provided with the <code>auth-role</code> option of the <code>AuthType</code> setting for a Redis target endpoint.</p>
+    #[doc(hidden)]
     pub auth_user_name: std::option::Option<std::string::String>,
     /// <p>The password provided with the <code>auth-role</code> and <code>auth-token</code> options of the <code>AuthType</code> setting for a Redis target endpoint.</p>
+    #[doc(hidden)]
     pub auth_password: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the certificate authority (CA) that DMS uses to connect to your Redis target endpoint.</p>
+    #[doc(hidden)]
     pub ssl_ca_certificate_arn: std::option::Option<std::string::String>,
 }
 impl RedisSettings {
@@ -4794,11 +4986,10 @@ impl std::fmt::Debug for RedisSettings {
         formatter.finish()
     }
 }
-/// See [`RedisSettings`](crate::model::RedisSettings)
+/// See [`RedisSettings`](crate::model::RedisSettings).
 pub mod redis_settings {
 
-    /// A builder for [`RedisSettings`](crate::model::RedisSettings)
-    #[non_exhaustive]
+    /// A builder for [`RedisSettings`](crate::model::RedisSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_name: std::option::Option<std::string::String>,
@@ -4901,7 +5092,7 @@ pub mod redis_settings {
             self.ssl_ca_certificate_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedisSettings`](crate::model::RedisSettings)
+        /// Consumes the builder and constructs a [`RedisSettings`](crate::model::RedisSettings).
         pub fn build(self) -> crate::model::RedisSettings {
             crate::model::RedisSettings {
                 server_name: self.server_name,
@@ -4916,7 +5107,7 @@ pub mod redis_settings {
     }
 }
 impl RedisSettings {
-    /// Creates a new builder-style object to manufacture [`RedisSettings`](crate::model::RedisSettings)
+    /// Creates a new builder-style object to manufacture [`RedisSettings`](crate::model::RedisSettings).
     pub fn builder() -> crate::model::redis_settings::Builder {
         crate::model::redis_settings::Builder::default()
     }
@@ -5041,31 +5232,42 @@ impl AsRef<str> for SslSecurityProtocolValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocDbSettings {
     /// <p>The user name you use to access the DocumentDB source endpoint. </p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p> The password for the user account you use to access the DocumentDB source endpoint. </p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p> The name of the server on the DocumentDB source endpoint. </p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p> The port value for the DocumentDB source endpoint. </p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p> The database name on the DocumentDB source endpoint. </p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p> Specifies either document or table mode. </p>
     /// <p>Default value is <code>"none"</code>. Specify <code>"none"</code> to use document mode. Specify <code>"one"</code> to use table mode.</p>
+    #[doc(hidden)]
     pub nesting_level: std::option::Option<crate::model::NestingLevelValue>,
     /// <p> Specifies the document ID. Use this setting when <code>NestingLevel</code> is set to <code>"none"</code>. </p>
     /// <p>Default value is <code>"false"</code>. </p>
+    #[doc(hidden)]
     pub extract_doc_id: std::option::Option<bool>,
     /// <p> Indicates the number of documents to preview to determine the document organization. Use this setting when <code>NestingLevel</code> is set to <code>"one"</code>. </p>
     /// <p>Must be a positive value greater than <code>0</code>. Default value is <code>1000</code>.</p>
+    #[doc(hidden)]
     pub docs_to_investigate: std::option::Option<i32>,
     /// <p>The KMS key identifier that is used to encrypt the content on the replication instance. If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has a different default encryption key for each Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the DocumentDB endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the DocumentDB endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
 }
 impl DocDbSettings {
@@ -5139,11 +5341,10 @@ impl std::fmt::Debug for DocDbSettings {
         formatter.finish()
     }
 }
-/// See [`DocDbSettings`](crate::model::DocDbSettings)
+/// See [`DocDbSettings`](crate::model::DocDbSettings).
 pub mod doc_db_settings {
 
-    /// A builder for [`DocDbSettings`](crate::model::DocDbSettings)
-    #[non_exhaustive]
+    /// A builder for [`DocDbSettings`](crate::model::DocDbSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -5294,7 +5495,7 @@ pub mod doc_db_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocDbSettings`](crate::model::DocDbSettings)
+        /// Consumes the builder and constructs a [`DocDbSettings`](crate::model::DocDbSettings).
         pub fn build(self) -> crate::model::DocDbSettings {
             crate::model::DocDbSettings {
                 username: self.username,
@@ -5313,7 +5514,7 @@ pub mod doc_db_settings {
     }
 }
 impl DocDbSettings {
-    /// Creates a new builder-style object to manufacture [`DocDbSettings`](crate::model::DocDbSettings)
+    /// Creates a new builder-style object to manufacture [`DocDbSettings`](crate::model::DocDbSettings).
     pub fn builder() -> crate::model::doc_db_settings::Builder {
         crate::model::doc_db_settings::Builder::default()
     }
@@ -5379,26 +5580,36 @@ impl AsRef<str> for NestingLevelValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IbmDb2Settings {
     /// <p>Database name for the endpoint.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>Endpoint connection password.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>Endpoint TCP port. The default value is 50000.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Fully qualified domain name of the endpoint.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Enables ongoing replication (CDC) as a BOOLEAN value. The default is true.</p>
+    #[doc(hidden)]
     pub set_data_capture_changes: std::option::Option<bool>,
     /// <p>For ongoing replication (CDC), use CurrentLSN to specify a log sequence number (LSN) where you want the replication to start.</p>
+    #[doc(hidden)]
     pub current_lsn: std::option::Option<std::string::String>,
     /// <p>Maximum number of bytes per read, as a NUMBER value. The default is 64 KB.</p>
+    #[doc(hidden)]
     pub max_k_bytes_per_read: std::option::Option<i32>,
     /// <p>Endpoint connection user name.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the Db2 LUW endpoint. </p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the Db2 LUW endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
 }
 impl IbmDb2Settings {
@@ -5464,11 +5675,10 @@ impl std::fmt::Debug for IbmDb2Settings {
         formatter.finish()
     }
 }
-/// See [`IbmDb2Settings`](crate::model::IbmDb2Settings)
+/// See [`IbmDb2Settings`](crate::model::IbmDb2Settings).
 pub mod ibm_db2_settings {
 
-    /// A builder for [`IbmDb2Settings`](crate::model::IbmDb2Settings)
-    #[non_exhaustive]
+    /// A builder for [`IbmDb2Settings`](crate::model::IbmDb2Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_name: std::option::Option<std::string::String>,
@@ -5599,7 +5809,7 @@ pub mod ibm_db2_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`IbmDb2Settings`](crate::model::IbmDb2Settings)
+        /// Consumes the builder and constructs a [`IbmDb2Settings`](crate::model::IbmDb2Settings).
         pub fn build(self) -> crate::model::IbmDb2Settings {
             crate::model::IbmDb2Settings {
                 database_name: self.database_name,
@@ -5617,7 +5827,7 @@ pub mod ibm_db2_settings {
     }
 }
 impl IbmDb2Settings {
-    /// Creates a new builder-style object to manufacture [`IbmDb2Settings`](crate::model::IbmDb2Settings)
+    /// Creates a new builder-style object to manufacture [`IbmDb2Settings`](crate::model::IbmDb2Settings).
     pub fn builder() -> crate::model::ibm_db2_settings::Builder {
         crate::model::ibm_db2_settings::Builder::default()
     }
@@ -5628,37 +5838,54 @@ impl IbmDb2Settings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MicrosoftSqlServerSettings {
     /// <p>Endpoint TCP port.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>The maximum size of the packets (in bytes) used to transfer data using BCP.</p>
+    #[doc(hidden)]
     pub bcp_packet_size: std::option::Option<i32>,
     /// <p>Database name for the endpoint.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>Specifies a file group for the DMS internal tables. When the replication task starts, all the internal DMS control tables (awsdms_ apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.</p>
+    #[doc(hidden)]
     pub control_tables_file_group: std::option::Option<std::string::String>,
     /// <p>Endpoint connection password.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>Cleans and recreates table metadata information on the replication instance when a mismatch occurs. An example is a situation where running an alter DDL statement on a table might result in different information about the table cached in the replication instance.</p>
+    #[doc(hidden)]
     pub query_single_always_on_node: std::option::Option<bool>,
     /// <p>When this attribute is set to <code>Y</code>, DMS only reads changes from transaction log backups and doesn't read from the active transaction log file during ongoing replication. Setting this parameter to <code>Y</code> enables you to control active transaction log file growth during full load and ongoing replication tasks. However, it can add some source latency to ongoing replication.</p>
+    #[doc(hidden)]
     pub read_backup_only: std::option::Option<bool>,
     /// <p>Use this attribute to minimize the need to access the backup log and enable DMS to prevent truncation using one of the following two methods.</p>
     /// <p> <i>Start transactions in the database:</i> This is the default method. When this method is used, DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a transaction is open, changes that appear after the transaction started aren't truncated. If you need Microsoft Replication to be enabled in your database, then you must choose this method.</p>
     /// <p> <i>Exclusively use sp_repldone within a single task</i>: When this method is used, DMS reads the changes and then uses sp_repldone to mark the TLOG transactions as ready for truncation. Although this method doesn't involve any transactional activities, it can only be used when Microsoft Replication isn't running. Also, when using this method, only one DMS task can access the database at any given time. Therefore, if you need to run parallel DMS tasks against the same database, use the default method.</p>
+    #[doc(hidden)]
     pub safeguard_policy: std::option::Option<crate::model::SafeguardPolicy>,
     /// <p>Fully qualified domain name of the endpoint.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Endpoint connection user name.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>Use this to attribute to transfer data for full-load operations using BCP. When the target table contains an identity column that does not exist in the source table, you must disable the use BCP for loading table option.</p>
+    #[doc(hidden)]
     pub use_bcp_full_load: std::option::Option<bool>,
     /// <p>When this attribute is set to <code>Y</code>, DMS processes third-party transaction log backups if they are created in native format.</p>
+    #[doc(hidden)]
     pub use_third_party_backup_device: std::option::Option<bool>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the SQL Server endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the SQL Server endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
+    /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+    #[doc(hidden)]
+    pub trim_space_in_char: std::option::Option<bool>,
 }
 impl MicrosoftSqlServerSettings {
     /// <p>Endpoint TCP port.</p>
@@ -5721,6 +5948,10 @@ impl MicrosoftSqlServerSettings {
     pub fn secrets_manager_secret_id(&self) -> std::option::Option<&str> {
         self.secrets_manager_secret_id.as_deref()
     }
+    /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+    pub fn trim_space_in_char(&self) -> std::option::Option<bool> {
+        self.trim_space_in_char
+    }
 }
 impl std::fmt::Debug for MicrosoftSqlServerSettings {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -5748,14 +5979,14 @@ impl std::fmt::Debug for MicrosoftSqlServerSettings {
             &self.secrets_manager_access_role_arn,
         );
         formatter.field("secrets_manager_secret_id", &self.secrets_manager_secret_id);
+        formatter.field("trim_space_in_char", &self.trim_space_in_char);
         formatter.finish()
     }
 }
-/// See [`MicrosoftSqlServerSettings`](crate::model::MicrosoftSqlServerSettings)
+/// See [`MicrosoftSqlServerSettings`](crate::model::MicrosoftSqlServerSettings).
 pub mod microsoft_sql_server_settings {
 
-    /// A builder for [`MicrosoftSqlServerSettings`](crate::model::MicrosoftSqlServerSettings)
-    #[non_exhaustive]
+    /// A builder for [`MicrosoftSqlServerSettings`](crate::model::MicrosoftSqlServerSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) port: std::option::Option<i32>,
@@ -5772,6 +6003,7 @@ pub mod microsoft_sql_server_settings {
         pub(crate) use_third_party_backup_device: std::option::Option<bool>,
         pub(crate) secrets_manager_access_role_arn: std::option::Option<std::string::String>,
         pub(crate) secrets_manager_secret_id: std::option::Option<std::string::String>,
+        pub(crate) trim_space_in_char: std::option::Option<bool>,
     }
     impl Builder {
         /// <p>Endpoint TCP port.</p>
@@ -5943,7 +6175,17 @@ pub mod microsoft_sql_server_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MicrosoftSqlServerSettings`](crate::model::MicrosoftSqlServerSettings)
+        /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+        pub fn trim_space_in_char(mut self, input: bool) -> Self {
+            self.trim_space_in_char = Some(input);
+            self
+        }
+        /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+        pub fn set_trim_space_in_char(mut self, input: std::option::Option<bool>) -> Self {
+            self.trim_space_in_char = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`MicrosoftSqlServerSettings`](crate::model::MicrosoftSqlServerSettings).
         pub fn build(self) -> crate::model::MicrosoftSqlServerSettings {
             crate::model::MicrosoftSqlServerSettings {
                 port: self.port,
@@ -5960,12 +6202,13 @@ pub mod microsoft_sql_server_settings {
                 use_third_party_backup_device: self.use_third_party_backup_device,
                 secrets_manager_access_role_arn: self.secrets_manager_access_role_arn,
                 secrets_manager_secret_id: self.secrets_manager_secret_id,
+                trim_space_in_char: self.trim_space_in_char,
             }
         }
     }
 }
 impl MicrosoftSqlServerSettings {
-    /// Creates a new builder-style object to manufacture [`MicrosoftSqlServerSettings`](crate::model::MicrosoftSqlServerSettings)
+    /// Creates a new builder-style object to manufacture [`MicrosoftSqlServerSettings`](crate::model::MicrosoftSqlServerSettings).
     pub fn builder() -> crate::model::microsoft_sql_server_settings::Builder {
         crate::model::microsoft_sql_server_settings::Builder::default()
     }
@@ -6043,20 +6286,27 @@ impl AsRef<str> for SafeguardPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SybaseSettings {
     /// <p>Database name for the endpoint.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>Endpoint connection password.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>Endpoint TCP port. The default is 5000.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Fully qualified domain name of the endpoint.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Endpoint connection user name.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the SAP ASE endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the SAP SAE endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
 }
 impl SybaseSettings {
@@ -6107,11 +6357,10 @@ impl std::fmt::Debug for SybaseSettings {
         formatter.finish()
     }
 }
-/// See [`SybaseSettings`](crate::model::SybaseSettings)
+/// See [`SybaseSettings`](crate::model::SybaseSettings).
 pub mod sybase_settings {
 
-    /// A builder for [`SybaseSettings`](crate::model::SybaseSettings)
-    #[non_exhaustive]
+    /// A builder for [`SybaseSettings`](crate::model::SybaseSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_name: std::option::Option<std::string::String>,
@@ -6209,7 +6458,7 @@ pub mod sybase_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SybaseSettings`](crate::model::SybaseSettings)
+        /// Consumes the builder and constructs a [`SybaseSettings`](crate::model::SybaseSettings).
         pub fn build(self) -> crate::model::SybaseSettings {
             crate::model::SybaseSettings {
                 database_name: self.database_name,
@@ -6224,7 +6473,7 @@ pub mod sybase_settings {
     }
 }
 impl SybaseSettings {
-    /// Creates a new builder-style object to manufacture [`SybaseSettings`](crate::model::SybaseSettings)
+    /// Creates a new builder-style object to manufacture [`SybaseSettings`](crate::model::SybaseSettings).
     pub fn builder() -> crate::model::sybase_settings::Builder {
         crate::model::sybase_settings::Builder::default()
     }
@@ -6236,11 +6485,14 @@ impl SybaseSettings {
 pub struct OracleSettings {
     /// <p>Set this attribute to set up table-level supplemental logging for the Oracle database. This attribute enables PRIMARY KEY supplemental logging on all tables selected for a migration task.</p>
     /// <p>If you use this option, you still need to enable database-level supplemental logging.</p>
+    #[doc(hidden)]
     pub add_supplemental_logging: std::option::Option<bool>,
     /// <p>Specifies the ID of the destination for the archived redo logs. This value should be the same as a number in the dest_id column of the v$archived_log view. If you work with an additional redo log destination, use the <code>AdditionalArchivedLogDestId</code> option to specify the additional destination ID. Doing this improves performance by ensuring that the correct logs are accessed from the outset.</p>
+    #[doc(hidden)]
     pub archived_log_dest_id: std::option::Option<i32>,
     /// <p>Set this attribute with <code>ArchivedLogDestId</code> in a primary/ standby setup. This attribute is useful in the case of a switchover. In this case, DMS needs to know which destination to get archive redo logs from to read changes. This need arises because the previous primary instance is now a standby instance after switchover.</p>
     /// <p>Although DMS supports the use of the Oracle <code>RESETLOGS</code> option to open the database, never use <code>RESETLOGS</code> unless necessary. For additional information about <code>RESETLOGS</code>, see <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/rman-data-repair-concepts.html#GUID-1805CCF7-4AF2-482D-B65A-998192F89C2B">RMAN Data Repair Concepts</a> in the <i>Oracle Database Backup and Recovery User's Guide</i>.</p>
+    #[doc(hidden)]
     pub additional_archived_log_dest_id: std::option::Option<i32>,
     /// <p>Specifies the IDs of one more destinations for one or more archived redo logs. These IDs are the values of the <code>dest_id</code> column in the <code>v$archived_log</code> view. Use this setting with the <code>archivedLogDestId</code> extra connection attribute in a primary-to-single setup or a primary-to-multiple-standby setup. </p>
     /// <p>This setting is useful in a switchover when you use an Oracle Data Guard database as a source. In this case, DMS needs information about what destination to get archive redo logs from to read changes. DMS needs this because after the switchover the previous primary is a standby instance. For example, in a primary-to-single standby setup you might apply the following settings. </p>
@@ -6248,88 +6500,128 @@ pub struct OracleSettings {
     /// <p>In a primary-to-multiple-standby setup, you might apply the following settings.</p>
     /// <p> <code>archivedLogDestId=1; ExtraArchivedLogDestIds=[2,3,4]</code> </p>
     /// <p>Although DMS supports the use of the Oracle <code>RESETLOGS</code> option to open the database, never use <code>RESETLOGS</code> unless it's necessary. For more information about <code>RESETLOGS</code>, see <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/rman-data-repair-concepts.html#GUID-1805CCF7-4AF2-482D-B65A-998192F89C2B"> RMAN Data Repair Concepts</a> in the <i>Oracle Database Backup and Recovery User's Guide</i>.</p>
+    #[doc(hidden)]
     pub extra_archived_log_dest_ids: std::option::Option<std::vec::Vec<i32>>,
     /// <p>Set this attribute to <code>true</code> to enable replication of Oracle tables containing columns that are nested tables or defined types.</p>
+    #[doc(hidden)]
     pub allow_select_nested_tables: std::option::Option<bool>,
     /// <p>Set this attribute to change the number of threads that DMS configures to perform a change data capture (CDC) load using Oracle Automatic Storage Management (ASM). You can specify an integer value between 2 (the default) and 8 (the maximum). Use this attribute together with the <code>readAheadBlocks</code> attribute.</p>
+    #[doc(hidden)]
     pub parallel_asm_read_threads: std::option::Option<i32>,
     /// <p>Set this attribute to change the number of read-ahead blocks that DMS configures to perform a change data capture (CDC) load using Oracle Automatic Storage Management (ASM). You can specify an integer value between 1000 (the default) and 200,000 (the maximum).</p>
+    #[doc(hidden)]
     pub read_ahead_blocks: std::option::Option<i32>,
     /// <p>Set this attribute to <code>false</code> in order to use the Binary Reader to capture change data for an Amazon RDS for Oracle as the source. This tells the DMS instance to not access redo logs through any specified path prefix replacement using direct file access.</p>
+    #[doc(hidden)]
     pub access_alternate_directly: std::option::Option<bool>,
     /// <p>Set this attribute to <code>true</code> in order to use the Binary Reader to capture change data for an Amazon RDS for Oracle as the source. This tells the DMS instance to use any specified prefix replacement to access all online redo logs.</p>
+    #[doc(hidden)]
     pub use_alternate_folder_for_online: std::option::Option<bool>,
     /// <p>Set this string attribute to the required value in order to use the Binary Reader to capture change data for an Amazon RDS for Oracle as the source. This value specifies the default Oracle root used to access the redo logs.</p>
+    #[doc(hidden)]
     pub oracle_path_prefix: std::option::Option<std::string::String>,
     /// <p>Set this string attribute to the required value in order to use the Binary Reader to capture change data for an Amazon RDS for Oracle as the source. This value specifies the path prefix used to replace the default Oracle root to access the redo logs.</p>
+    #[doc(hidden)]
     pub use_path_prefix: std::option::Option<std::string::String>,
     /// <p>Set this attribute to true in order to use the Binary Reader to capture change data for an Amazon RDS for Oracle as the source. This setting tells DMS instance to replace the default Oracle root with the specified <code>usePathPrefix</code> setting to access the redo logs.</p>
+    #[doc(hidden)]
     pub replace_path_prefix: std::option::Option<bool>,
     /// <p>Set this attribute to enable homogenous tablespace replication and create existing tables or indexes under the same tablespace on the target.</p>
+    #[doc(hidden)]
     pub enable_homogenous_tablespace: std::option::Option<bool>,
     /// <p>When set to <code>true</code>, this attribute helps to increase the commit rate on the Oracle target database by writing directly to tables and not writing a trail to database logs.</p>
+    #[doc(hidden)]
     pub direct_path_no_log: std::option::Option<bool>,
     /// <p>When this field is set to <code>Y</code>, DMS only accesses the archived redo logs. If the archived redo logs are stored on Oracle ASM only, the DMS user account needs to be granted ASM privileges.</p>
+    #[doc(hidden)]
     pub archived_logs_only: std::option::Option<bool>,
     /// <p>For an Oracle source endpoint, your Oracle Automatic Storage Management (ASM) password. You can set this value from the <code> <i>asm_user_password</i> </code> value. You set this value as part of the comma-separated value that you set to the <code>Password</code> request parameter when you create the endpoint to access transaction logs using Binary Reader. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC.Configuration">Configuration for change data capture (CDC) on an Oracle source database</a>.</p>
+    #[doc(hidden)]
     pub asm_password: std::option::Option<std::string::String>,
     /// <p>For an Oracle source endpoint, your ASM server address. You can set this value from the <code>asm_server</code> value. You set <code>asm_server</code> as part of the extra connection attribute string to access an Oracle server with Binary Reader that uses ASM. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC.Configuration">Configuration for change data capture (CDC) on an Oracle source database</a>.</p>
+    #[doc(hidden)]
     pub asm_server: std::option::Option<std::string::String>,
     /// <p>For an Oracle source endpoint, your ASM user name. You can set this value from the <code>asm_user</code> value. You set <code>asm_user</code> as part of the extra connection attribute string to access an Oracle server with Binary Reader that uses ASM. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC.Configuration">Configuration for change data capture (CDC) on an Oracle source database</a>.</p>
+    #[doc(hidden)]
     pub asm_user: std::option::Option<std::string::String>,
     /// <p>Specifies whether the length of a character column is in bytes or in characters. To indicate that the character column length is in characters, set this attribute to <code>CHAR</code>. Otherwise, the character column length is in bytes.</p>
     /// <p>Example: <code>charLengthSemantics=CHAR;</code> </p>
+    #[doc(hidden)]
     pub char_length_semantics: std::option::Option<crate::model::CharLengthSemantics>,
     /// <p>Database name for the endpoint.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>When set to <code>true</code>, this attribute specifies a parallel load when <code>useDirectPathFullLoad</code> is set to <code>Y</code>. This attribute also only applies when you use the DMS parallel load feature. Note that the target table cannot have any constraints or indexes.</p>
+    #[doc(hidden)]
     pub direct_path_parallel_load: std::option::Option<bool>,
     /// <p>When set to <code>true</code>, this attribute causes a task to fail if the actual size of an LOB column is greater than the specified <code>LobMaxSize</code>.</p>
     /// <p>If a task is set to limited LOB mode and this option is set to <code>true</code>, the task fails instead of truncating the LOB data.</p>
+    #[doc(hidden)]
     pub fail_tasks_on_lob_truncation: std::option::Option<bool>,
     /// <p>Specifies the number scale. You can select a scale up to 38, or you can select FLOAT. By default, the NUMBER data type is converted to precision 38, scale 10.</p>
     /// <p>Example: <code>numberDataTypeScale=12</code> </p>
+    #[doc(hidden)]
     pub number_datatype_scale: std::option::Option<i32>,
     /// <p>Endpoint connection password.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>Endpoint TCP port.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>When set to <code>true</code>, this attribute supports tablespace replication.</p>
+    #[doc(hidden)]
     pub read_table_space_name: std::option::Option<bool>,
     /// <p>Specifies the number of seconds that the system waits before resending a query.</p>
     /// <p>Example: <code>retryInterval=6;</code> </p>
+    #[doc(hidden)]
     pub retry_interval: std::option::Option<i32>,
     /// <p>For an Oracle source endpoint, the transparent data encryption (TDE) password required by AWM DMS to access Oracle redo logs encrypted by TDE using Binary Reader. It is also the <code> <i>TDE_Password</i> </code> part of the comma-separated value you set to the <code>Password</code> request parameter when you create the endpoint. The <code>SecurityDbEncryptian</code> setting is related to this <code>SecurityDbEncryptionName</code> setting. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.Encryption"> Supported encryption methods for using Oracle as a source for DMS </a> in the <i>Database Migration Service User Guide</i>. </p>
+    #[doc(hidden)]
     pub security_db_encryption: std::option::Option<std::string::String>,
     /// <p>For an Oracle source endpoint, the name of a key used for the transparent data encryption (TDE) of the columns and tablespaces in an Oracle source database that is encrypted using TDE. The key value is the value of the <code>SecurityDbEncryption</code> setting. For more information on setting the key name value of <code>SecurityDbEncryptionName</code>, see the information and example for setting the <code>securityDbEncryptionName</code> extra connection attribute in <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.Encryption"> Supported encryption methods for using Oracle as a source for DMS </a> in the <i>Database Migration Service User Guide</i>.</p>
+    #[doc(hidden)]
     pub security_db_encryption_name: std::option::Option<std::string::String>,
     /// <p>Fully qualified domain name of the endpoint.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Use this attribute to convert <code>SDO_GEOMETRY</code> to <code>GEOJSON</code> format. By default, DMS calls the <code>SDO2GEOJSON</code> custom function if present and accessible. Or you can create your own custom function that mimics the operation of <code>SDOGEOJSON</code> and set <code>SpatialDataOptionToGeoJsonFunctionName</code> to call it instead. </p>
+    #[doc(hidden)]
     pub spatial_data_option_to_geo_json_function_name: std::option::Option<std::string::String>,
     /// <p>Use this attribute to specify a time in minutes for the delay in standby sync. If the source is an Oracle Active Data Guard standby database, use this attribute to specify the time lag between primary and standby databases.</p>
     /// <p>In DMS, you can create an Oracle CDC task that uses an Active Data Guard standby instance as a source for replicating ongoing changes. Doing this eliminates the need to connect to an active database that might be in production.</p>
+    #[doc(hidden)]
     pub standby_delay_time: std::option::Option<i32>,
     /// <p>Endpoint connection user name.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>Set this attribute to Y to capture change data using the Binary Reader utility. Set <code>UseLogminerReader</code> to N to set this attribute to Y. To use Binary Reader with Amazon RDS for Oracle as the source, you set additional attributes. For more information about using this setting with Oracle Automatic Storage Management (ASM), see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC"> Using Oracle LogMiner or DMS Binary Reader for CDC</a>.</p>
+    #[doc(hidden)]
     pub use_b_file: std::option::Option<bool>,
     /// <p>Set this attribute to Y to have DMS use a direct path full load. Specify this value to use the direct path protocol in the Oracle Call Interface (OCI). By using this OCI protocol, you can bulk-load Oracle target tables during a full load.</p>
+    #[doc(hidden)]
     pub use_direct_path_full_load: std::option::Option<bool>,
     /// <p>Set this attribute to Y to capture change data using the Oracle LogMiner utility (the default). Set this attribute to N if you want to access the redo logs as a binary file. When you set <code>UseLogminerReader</code> to N, also set <code>UseBfile</code> to Y. For more information on this setting and using Oracle ASM, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC"> Using Oracle LogMiner or DMS Binary Reader for CDC</a> in the <i>DMS User Guide</i>.</p>
+    #[doc(hidden)]
     pub use_logminer_reader: std::option::Option<bool>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the Oracle endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the Oracle endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
     /// <p>Required only if your Oracle endpoint uses Advanced Storage Manager (ASM). The full ARN of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the <code>SecretsManagerOracleAsmSecret</code>. This <code>SecretsManagerOracleAsmSecret</code> has the secret value that allows access to the Oracle ASM of the endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerOracleAsmSecretId</code>. Or you can specify clear-text values for <code>AsmUserName</code>, <code>AsmPassword</code>, and <code>AsmServerName</code>. You can't specify both. For more information on creating this <code>SecretsManagerOracleAsmSecret</code> and the <code>SecretsManagerOracleAsmAccessRoleArn</code> and <code>SecretsManagerOracleAsmSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_oracle_asm_access_role_arn: std::option::Option<std::string::String>,
     /// <p>Required only if your Oracle endpoint uses Advanced Storage Manager (ASM). The full ARN, partial ARN, or friendly name of the <code>SecretsManagerOracleAsmSecret</code> that contains the Oracle ASM connection details for the Oracle endpoint.</p>
+    #[doc(hidden)]
     pub secrets_manager_oracle_asm_secret_id: std::option::Option<std::string::String>,
+    /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+    #[doc(hidden)]
+    pub trim_space_in_char: std::option::Option<bool>,
 }
 impl OracleSettings {
     /// <p>Set this attribute to set up table-level supplemental logging for the Oracle database. This attribute enables PRIMARY KEY supplemental logging on all tables selected for a migration task.</p>
@@ -6509,6 +6801,10 @@ impl OracleSettings {
     pub fn secrets_manager_oracle_asm_secret_id(&self) -> std::option::Option<&str> {
         self.secrets_manager_oracle_asm_secret_id.as_deref()
     }
+    /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+    pub fn trim_space_in_char(&self) -> std::option::Option<bool> {
+        self.trim_space_in_char
+    }
 }
 impl std::fmt::Debug for OracleSettings {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -6586,14 +6882,14 @@ impl std::fmt::Debug for OracleSettings {
             "secrets_manager_oracle_asm_secret_id",
             &self.secrets_manager_oracle_asm_secret_id,
         );
+        formatter.field("trim_space_in_char", &self.trim_space_in_char);
         formatter.finish()
     }
 }
-/// See [`OracleSettings`](crate::model::OracleSettings)
+/// See [`OracleSettings`](crate::model::OracleSettings).
 pub mod oracle_settings {
 
-    /// A builder for [`OracleSettings`](crate::model::OracleSettings)
-    #[non_exhaustive]
+    /// A builder for [`OracleSettings`](crate::model::OracleSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) add_supplemental_logging: std::option::Option<bool>,
@@ -6638,6 +6934,7 @@ pub mod oracle_settings {
         pub(crate) secrets_manager_oracle_asm_access_role_arn:
             std::option::Option<std::string::String>,
         pub(crate) secrets_manager_oracle_asm_secret_id: std::option::Option<std::string::String>,
+        pub(crate) trim_space_in_char: std::option::Option<bool>,
     }
     impl Builder {
         /// <p>Set this attribute to set up table-level supplemental logging for the Oracle database. This attribute enables PRIMARY KEY supplemental logging on all tables selected for a migration task.</p>
@@ -7141,7 +7438,17 @@ pub mod oracle_settings {
             self.secrets_manager_oracle_asm_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`OracleSettings`](crate::model::OracleSettings)
+        /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+        pub fn trim_space_in_char(mut self, input: bool) -> Self {
+            self.trim_space_in_char = Some(input);
+            self
+        }
+        /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+        pub fn set_trim_space_in_char(mut self, input: std::option::Option<bool>) -> Self {
+            self.trim_space_in_char = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`OracleSettings`](crate::model::OracleSettings).
         pub fn build(self) -> crate::model::OracleSettings {
             crate::model::OracleSettings {
                 add_supplemental_logging: self.add_supplemental_logging,
@@ -7186,12 +7493,13 @@ pub mod oracle_settings {
                 secrets_manager_oracle_asm_access_role_arn: self
                     .secrets_manager_oracle_asm_access_role_arn,
                 secrets_manager_oracle_asm_secret_id: self.secrets_manager_oracle_asm_secret_id,
+                trim_space_in_char: self.trim_space_in_char,
             }
         }
     }
 }
 impl OracleSettings {
-    /// Creates a new builder-style object to manufacture [`OracleSettings`](crate::model::OracleSettings)
+    /// Creates a new builder-style object to manufacture [`OracleSettings`](crate::model::OracleSettings).
     pub fn builder() -> crate::model::oracle_settings::Builder {
         crate::model::oracle_settings::Builder::default()
     }
@@ -7262,41 +7570,55 @@ impl AsRef<str> for CharLengthSemantics {
 pub struct MySqlSettings {
     /// <p>Specifies a script to run immediately after DMS connects to the endpoint. The migration task continues running regardless if the SQL statement succeeds or fails.</p>
     /// <p>For this parameter, provide the code of the script itself, not the name of a file containing the script.</p>
+    #[doc(hidden)]
     pub after_connect_script: std::option::Option<std::string::String>,
     /// <p>Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an Always On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for transaction backups, set this attribute to <code>false</code>.</p>
+    #[doc(hidden)]
     pub clean_source_metadata_on_mismatch: std::option::Option<bool>,
     /// <p>Database name for the endpoint. For a MySQL source or target endpoint, don't explicitly specify the database using the <code>DatabaseName</code> request parameter on either the <code>CreateEndpoint</code> or <code>ModifyEndpoint</code> API call. Specifying <code>DatabaseName</code> when you create or modify a MySQL endpoint replicates all the task tables to this single database. For MySQL endpoints, you specify the database only when you specify the schema in the table-mapping rules of the DMS task.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>Specifies how often to check the binary log for new changes/events when the database is idle. The default is five seconds.</p>
     /// <p>Example: <code>eventsPollInterval=5;</code> </p>
     /// <p>In the example, DMS checks for changes in the binary logs every five seconds.</p>
+    #[doc(hidden)]
     pub events_poll_interval: std::option::Option<i32>,
     /// <p>Specifies where to migrate source tables on the target, either to a single database or multiple databases. If you specify <code>SPECIFIC_DATABASE</code>, specify the database name using the <code>DatabaseName</code> parameter of the <code>Endpoint</code> object.</p>
     /// <p>Example: <code>targetDbType=MULTIPLE_DATABASES</code> </p>
+    #[doc(hidden)]
     pub target_db_type: std::option::Option<crate::model::TargetDbType>,
     /// <p>Specifies the maximum size (in KB) of any .csv file used to transfer data to a MySQL-compatible database.</p>
     /// <p>Example: <code>maxFileSize=512</code> </p>
+    #[doc(hidden)]
     pub max_file_size: std::option::Option<i32>,
     /// <p>Improves performance when loading data into the MySQL-compatible target database. Specifies how many threads to use to load the data into the MySQL-compatible target database. Setting a large number of threads can have an adverse effect on database performance, because a separate connection is required for each thread. The default is one.</p>
     /// <p>Example: <code>parallelLoadThreads=1</code> </p>
+    #[doc(hidden)]
     pub parallel_load_threads: std::option::Option<i32>,
     /// <p>Endpoint connection password.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>Endpoint TCP port.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Fully qualified domain name of the endpoint.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Specifies the time zone for the source MySQL database.</p>
     /// <p>Example: <code>serverTimezone=US/Pacific;</code> </p>
     /// <p>Note: Do not enclose time zones in single quotes.</p>
+    #[doc(hidden)]
     pub server_timezone: std::option::Option<std::string::String>,
     /// <p>Endpoint connection user name.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the MySQL endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the MySQL endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
 }
 impl MySqlSettings {
@@ -7393,11 +7715,10 @@ impl std::fmt::Debug for MySqlSettings {
         formatter.finish()
     }
 }
-/// See [`MySqlSettings`](crate::model::MySqlSettings)
+/// See [`MySqlSettings`](crate::model::MySqlSettings).
 pub mod my_sql_settings {
 
-    /// A builder for [`MySqlSettings`](crate::model::MySqlSettings)
-    #[non_exhaustive]
+    /// A builder for [`MySqlSettings`](crate::model::MySqlSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) after_connect_script: std::option::Option<std::string::String>,
@@ -7600,7 +7921,7 @@ pub mod my_sql_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MySqlSettings`](crate::model::MySqlSettings)
+        /// Consumes the builder and constructs a [`MySqlSettings`](crate::model::MySqlSettings).
         pub fn build(self) -> crate::model::MySqlSettings {
             crate::model::MySqlSettings {
                 after_connect_script: self.after_connect_script,
@@ -7622,7 +7943,7 @@ pub mod my_sql_settings {
     }
 }
 impl MySqlSettings {
-    /// Creates a new builder-style object to manufacture [`MySqlSettings`](crate::model::MySqlSettings)
+    /// Creates a new builder-style object to manufacture [`MySqlSettings`](crate::model::MySqlSettings).
     pub fn builder() -> crate::model::my_sql_settings::Builder {
         crate::model::my_sql_settings::Builder::default()
     }
@@ -7634,50 +7955,71 @@ impl MySqlSettings {
 pub struct PostgreSqlSettings {
     /// <p>For use with change data capture (CDC) only, this attribute has DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.</p>
     /// <p>Example: <code>afterConnectScript=SET session_replication_role='replica'</code> </p>
+    #[doc(hidden)]
     pub after_connect_script: std::option::Option<std::string::String>,
     /// <p>To capture DDL events, DMS creates various artifacts in the PostgreSQL database when the task starts. You can later remove these artifacts.</p>
     /// <p>If this value is set to <code>N</code>, you don't have to create tables or triggers on the source database.</p>
+    #[doc(hidden)]
     pub capture_ddls: std::option::Option<bool>,
     /// <p>Specifies the maximum size (in KB) of any .csv file used to transfer data to PostgreSQL.</p>
     /// <p>Example: <code>maxFileSize=512</code> </p>
+    #[doc(hidden)]
     pub max_file_size: std::option::Option<i32>,
     /// <p>Database name for the endpoint.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The schema in which the operational DDL database artifacts are created.</p>
     /// <p>Example: <code>ddlArtifactsSchema=xyzddlschema;</code> </p>
+    #[doc(hidden)]
     pub ddl_artifacts_schema: std::option::Option<std::string::String>,
     /// <p>Sets the client statement timeout for the PostgreSQL instance, in seconds. The default value is 60 seconds.</p>
     /// <p>Example: <code>executeTimeout=100;</code> </p>
+    #[doc(hidden)]
     pub execute_timeout: std::option::Option<i32>,
     /// <p>When set to <code>true</code>, this value causes a task to fail if the actual size of a LOB column is greater than the specified <code>LobMaxSize</code>.</p>
     /// <p>If task is set to Limited LOB mode and this option is set to true, the task fails instead of truncating the LOB data.</p>
+    #[doc(hidden)]
     pub fail_tasks_on_lob_truncation: std::option::Option<bool>,
     /// <p>The write-ahead log (WAL) heartbeat feature mimics a dummy transaction. By doing this, it prevents idle logical replication slots from holding onto old WAL logs, which can result in storage full situations on the source. This heartbeat keeps <code>restart_lsn</code> moving and prevents storage full scenarios.</p>
+    #[doc(hidden)]
     pub heartbeat_enable: std::option::Option<bool>,
     /// <p>Sets the schema in which the heartbeat artifacts are created.</p>
+    #[doc(hidden)]
     pub heartbeat_schema: std::option::Option<std::string::String>,
     /// <p>Sets the WAL heartbeat frequency (in minutes).</p>
+    #[doc(hidden)]
     pub heartbeat_frequency: std::option::Option<i32>,
     /// <p>Endpoint connection password.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>Endpoint TCP port. The default is 5432.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Fully qualified domain name of the endpoint.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Endpoint connection user name.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>Sets the name of a previously created logical replication slot for a change data capture (CDC) load of the PostgreSQL source instance. </p>
     /// <p>When used with the <code>CdcStartPosition</code> request parameter for the DMS API , this attribute also makes it possible to use native CDC start points. DMS verifies that the specified logical replication slot exists before starting the CDC load task. It also verifies that the task was created with a valid setting of <code>CdcStartPosition</code>. If the specified slot doesn't exist or the task doesn't have a valid <code>CdcStartPosition</code> setting, DMS raises an error.</p>
     /// <p>For more information about setting the <code>CdcStartPosition</code> request parameter, see <a href="dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native">Determining a CDC native start point</a> in the <i>Database Migration Service User Guide</i>. For more information about using <code>CdcStartPosition</code>, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html">CreateReplicationTask</a>, <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html">StartReplicationTask</a>, and <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html">ModifyReplicationTask</a>.</p>
+    #[doc(hidden)]
     pub slot_name: std::option::Option<std::string::String>,
     /// <p>Specifies the plugin to use to create a replication slot.</p>
+    #[doc(hidden)]
     pub plugin_name: std::option::Option<crate::model::PluginNameValue>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the PostgreSQL endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the PostgreSQL endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
+    /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+    #[doc(hidden)]
+    pub trim_space_in_char: std::option::Option<bool>,
 }
 impl PostgreSqlSettings {
     /// <p>For use with change data capture (CDC) only, this attribute has DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.</p>
@@ -7762,6 +8104,10 @@ impl PostgreSqlSettings {
     pub fn secrets_manager_secret_id(&self) -> std::option::Option<&str> {
         self.secrets_manager_secret_id.as_deref()
     }
+    /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+    pub fn trim_space_in_char(&self) -> std::option::Option<bool> {
+        self.trim_space_in_char
+    }
 }
 impl std::fmt::Debug for PostgreSqlSettings {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -7790,14 +8136,14 @@ impl std::fmt::Debug for PostgreSqlSettings {
             &self.secrets_manager_access_role_arn,
         );
         formatter.field("secrets_manager_secret_id", &self.secrets_manager_secret_id);
+        formatter.field("trim_space_in_char", &self.trim_space_in_char);
         formatter.finish()
     }
 }
-/// See [`PostgreSqlSettings`](crate::model::PostgreSqlSettings)
+/// See [`PostgreSqlSettings`](crate::model::PostgreSqlSettings).
 pub mod postgre_sql_settings {
 
-    /// A builder for [`PostgreSqlSettings`](crate::model::PostgreSqlSettings)
-    #[non_exhaustive]
+    /// A builder for [`PostgreSqlSettings`](crate::model::PostgreSqlSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) after_connect_script: std::option::Option<std::string::String>,
@@ -7818,6 +8164,7 @@ pub mod postgre_sql_settings {
         pub(crate) plugin_name: std::option::Option<crate::model::PluginNameValue>,
         pub(crate) secrets_manager_access_role_arn: std::option::Option<std::string::String>,
         pub(crate) secrets_manager_secret_id: std::option::Option<std::string::String>,
+        pub(crate) trim_space_in_char: std::option::Option<bool>,
     }
     impl Builder {
         /// <p>For use with change data capture (CDC) only, this attribute has DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.</p>
@@ -8047,7 +8394,17 @@ pub mod postgre_sql_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PostgreSqlSettings`](crate::model::PostgreSqlSettings)
+        /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+        pub fn trim_space_in_char(mut self, input: bool) -> Self {
+            self.trim_space_in_char = Some(input);
+            self
+        }
+        /// <p>Use the <code>TrimSpaceInChar</code> source endpoint setting to trim data on CHAR and NCHAR data types during migration. The default value is <code>true</code>.</p>
+        pub fn set_trim_space_in_char(mut self, input: std::option::Option<bool>) -> Self {
+            self.trim_space_in_char = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`PostgreSqlSettings`](crate::model::PostgreSqlSettings).
         pub fn build(self) -> crate::model::PostgreSqlSettings {
             crate::model::PostgreSqlSettings {
                 after_connect_script: self.after_connect_script,
@@ -8068,12 +8425,13 @@ pub mod postgre_sql_settings {
                 plugin_name: self.plugin_name,
                 secrets_manager_access_role_arn: self.secrets_manager_access_role_arn,
                 secrets_manager_secret_id: self.secrets_manager_secret_id,
+                trim_space_in_char: self.trim_space_in_char,
             }
         }
     }
 }
 impl PostgreSqlSettings {
-    /// Creates a new builder-style object to manufacture [`PostgreSqlSettings`](crate::model::PostgreSqlSettings)
+    /// Creates a new builder-style object to manufacture [`PostgreSqlSettings`](crate::model::PostgreSqlSettings).
     pub fn builder() -> crate::model::postgre_sql_settings::Builder {
         crate::model::postgre_sql_settings::Builder::default()
     }
@@ -8144,75 +8502,105 @@ impl AsRef<str> for PluginNameValue {
 pub struct RedshiftSettings {
     /// <p>A value that indicates to allow any date format, including invalid formats such as 00/00/00 00:00:00, to be loaded without generating an error. You can choose <code>true</code> or <code>false</code> (the default).</p>
     /// <p>This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT specification, Amazon Redshift inserts a NULL value into that field. </p>
+    #[doc(hidden)]
     pub accept_any_date: std::option::Option<bool>,
     /// <p>Code to run after connecting. This parameter should contain the code itself, not the name of a file containing the code.</p>
+    #[doc(hidden)]
     pub after_connect_script: std::option::Option<std::string::String>,
     /// <p>An S3 folder where the comma-separated-value (.csv) files are stored before being uploaded to the target Redshift cluster. </p>
     /// <p>For full load mode, DMS converts source records into .csv files and loads them to the <i>BucketFolder/TableID</i> path. DMS uses the Redshift <code>COPY</code> command to upload the .csv files to the target table. The files are deleted once the <code>COPY</code> operation has finished. For more information, see <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html">COPY</a> in the <i>Amazon Redshift Database Developer Guide</i>.</p>
     /// <p>For change-data-capture (CDC) mode, DMS creates a <i>NetChanges</i> table, and loads the .csv files to this <i>BucketFolder/NetChangesTableID</i> path.</p>
+    #[doc(hidden)]
     pub bucket_folder: std::option::Option<std::string::String>,
     /// <p>The name of the intermediate S3 bucket used to store .csv files before uploading data to Redshift.</p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p>If Amazon Redshift is configured to support case sensitive schema names, set <code>CaseSensitiveNames</code> to <code>true</code>. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub case_sensitive_names: std::option::Option<bool>,
     /// <p>If you set <code>CompUpdate</code> to <code>true</code> Amazon Redshift applies automatic compression if the table is empty. This applies even if the table columns already have encodings other than <code>RAW</code>. If you set <code>CompUpdate</code> to <code>false</code>, automatic compression is disabled and existing column encodings aren't changed. The default is <code>true</code>.</p>
+    #[doc(hidden)]
     pub comp_update: std::option::Option<bool>,
     /// <p>A value that sets the amount of time to wait (in milliseconds) before timing out, beginning from when you initially establish a connection.</p>
+    #[doc(hidden)]
     pub connection_timeout: std::option::Option<i32>,
     /// <p>The name of the Amazon Redshift data warehouse (service) that you are working with.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The date format that you are using. Valid values are <code>auto</code> (case-sensitive), your date format string enclosed in quotes, or NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using <code>auto</code> recognizes most strings, even some that aren't supported when you use a date format string. </p>
     /// <p>If your date and time values use formats different from each other, set this to <code>auto</code>. </p>
+    #[doc(hidden)]
     pub date_format: std::option::Option<std::string::String>,
     /// <p>A value that specifies whether DMS should migrate empty CHAR and VARCHAR fields as NULL. A value of <code>true</code> sets empty CHAR and VARCHAR fields to null. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub empty_as_null: std::option::Option<bool>,
     /// <p>The type of server-side encryption that you want to use for your data. This encryption type is part of the endpoint settings or the extra connections attributes for Amazon S3. You can choose either <code>SSE_S3</code> (the default) or <code>SSE_KMS</code>. </p> <note>
     /// <p>For the <code>ModifyEndpoint</code> operation, you can change the existing value of the <code>EncryptionMode</code> parameter from <code>SSE_KMS</code> to <code>SSE_S3</code>. But you can’t change the existing value from <code>SSE_S3</code> to <code>SSE_KMS</code>.</p>
     /// </note>
     /// <p>To use <code>SSE_S3</code>, create an Identity and Access Management (IAM) role with a policy that allows <code>"arn:aws:s3:::*"</code> to use the following actions: <code>"s3:PutObject", "s3:ListBucket"</code> </p>
+    #[doc(hidden)]
     pub encryption_mode: std::option::Option<crate::model::EncryptionModeValue>,
     /// <p>This setting is only valid for a full-load migration task. Set <code>ExplicitIds</code> to <code>true</code> to have tables with <code>IDENTITY</code> columns override their auto-generated values with explicit values loaded from the source data files used to populate the tables. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub explicit_ids: std::option::Option<bool>,
     /// <p>The number of threads used to upload a single file. This parameter accepts a value from 1 through 64. It defaults to 10.</p>
     /// <p>The number of parallel streams used to upload a single .csv file to an S3 bucket using S3 Multipart Upload. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html">Multipart upload overview</a>. </p>
     /// <p> <code>FileTransferUploadStreams</code> accepts a value from 1 through 64. It defaults to 10.</p>
+    #[doc(hidden)]
     pub file_transfer_upload_streams: std::option::Option<i32>,
     /// <p>The amount of time to wait (in milliseconds) before timing out of operations performed by DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE, and UPDATE.</p>
+    #[doc(hidden)]
     pub load_timeout: std::option::Option<i32>,
     /// <p>The maximum size (in KB) of any .csv file used to load data on an S3 bucket and transfer data to Amazon Redshift. It defaults to 1048576KB (1 GB).</p>
+    #[doc(hidden)]
     pub max_file_size: std::option::Option<i32>,
     /// <p>The password for the user named in the <code>username</code> property.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>The port number for Amazon Redshift. The default value is 5439.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>A value that specifies to remove surrounding quotation marks from strings in the incoming data. All characters within the quotation marks, including delimiters, are retained. Choose <code>true</code> to remove quotation marks. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub remove_quotes: std::option::Option<bool>,
     /// <p>A list of characters that you want to replace. Use with <code>ReplaceChars</code>.</p>
+    #[doc(hidden)]
     pub replace_invalid_chars: std::option::Option<std::string::String>,
     /// <p>A value that specifies to replaces the invalid characters specified in <code>ReplaceInvalidChars</code>, substituting the specified characters instead. The default is <code>"?"</code>.</p>
+    #[doc(hidden)]
     pub replace_chars: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Redshift cluster you are using.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role that has access to the Amazon Redshift service. The role must allow the <code>iam:PassRole</code> action.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The KMS key ID. If you are using <code>SSE_KMS</code> for the <code>EncryptionMode</code>, provide this key ID. The key that you use needs an attached policy that enables IAM user permissions and allows use of the key.</p>
+    #[doc(hidden)]
     pub server_side_encryption_kms_key_id: std::option::Option<std::string::String>,
     /// <p>The time format that you want to use. Valid values are <code>auto</code> (case-sensitive), <code>'timeformat_string'</code>, <code>'epochsecs'</code>, or <code>'epochmillisecs'</code>. It defaults to 10. Using <code>auto</code> recognizes most strings, even some that aren't supported when you use a time format string. </p>
     /// <p>If your date and time values use formats different from each other, set this parameter to <code>auto</code>. </p>
+    #[doc(hidden)]
     pub time_format: std::option::Option<std::string::String>,
     /// <p>A value that specifies to remove the trailing white space characters from a VARCHAR string. This parameter applies only to columns with a VARCHAR data type. Choose <code>true</code> to remove unneeded white space. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub trim_blanks: std::option::Option<bool>,
     /// <p>A value that specifies to truncate data in columns to the appropriate number of characters, so that the data fits in the column. This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a size of 4 MB or less. Choose <code>true</code> to truncate data. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub truncate_columns: std::option::Option<bool>,
     /// <p>An Amazon Redshift user name for a registered user.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The size (in KB) of the in-memory file write buffer used when generating .csv files on the local disk at the DMS replication instance. The default value is 1000 (buffer size is 1000KB).</p>
+    #[doc(hidden)]
     pub write_buffer_size: std::option::Option<i32>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the Amazon Redshift endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the Amazon Redshift endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
 }
 impl RedshiftSettings {
@@ -8394,11 +8782,10 @@ impl std::fmt::Debug for RedshiftSettings {
         formatter.finish()
     }
 }
-/// See [`RedshiftSettings`](crate::model::RedshiftSettings)
+/// See [`RedshiftSettings`](crate::model::RedshiftSettings).
 pub mod redshift_settings {
 
-    /// A builder for [`RedshiftSettings`](crate::model::RedshiftSettings)
-    #[non_exhaustive]
+    /// A builder for [`RedshiftSettings`](crate::model::RedshiftSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accept_any_date: std::option::Option<bool>,
@@ -8793,7 +9180,7 @@ pub mod redshift_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedshiftSettings`](crate::model::RedshiftSettings)
+        /// Consumes the builder and constructs a [`RedshiftSettings`](crate::model::RedshiftSettings).
         pub fn build(self) -> crate::model::RedshiftSettings {
             crate::model::RedshiftSettings {
                 accept_any_date: self.accept_any_date,
@@ -8831,7 +9218,7 @@ pub mod redshift_settings {
     }
 }
 impl RedshiftSettings {
-    /// Creates a new builder-style object to manufacture [`RedshiftSettings`](crate::model::RedshiftSettings)
+    /// Creates a new builder-style object to manufacture [`RedshiftSettings`](crate::model::RedshiftSettings).
     pub fn builder() -> crate::model::redshift_settings::Builder {
         crate::model::redshift_settings::Builder::default()
     }
@@ -8897,18 +9284,25 @@ impl AsRef<str> for EncryptionModeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NeptuneSettings {
     /// <p>The Amazon Resource Name (ARN) of the service role that you created for the Neptune target endpoint. The role must allow the <code>iam:PassRole</code> action. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole">Creating an IAM Service Role for Accessing Amazon Neptune as a Target</a> in the <i>Database Migration Service User Guide. </i> </p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket where DMS can temporarily store migrated graph data in .csv files before bulk-loading it to the Neptune target database. DMS maps the SQL source data to graph data before storing it in these .csv files.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>A folder path where you want DMS to store migrated graph data in the S3 bucket specified by <code>S3BucketName</code> </p>
+    #[doc(hidden)]
     pub s3_bucket_folder: std::option::Option<std::string::String>,
     /// <p>The number of milliseconds for DMS to wait to retry a bulk-load of migrated graph data to the Neptune target database before raising an error. The default is 250.</p>
+    #[doc(hidden)]
     pub error_retry_duration: std::option::Option<i32>,
     /// <p>The maximum size in kilobytes of migrated graph data stored in a .csv file before DMS bulk-loads the data to the Neptune target database. The default is 1,048,576 KB. If the bulk load is successful, DMS clears the bucket, ready to store the next batch of migrated graph data.</p>
+    #[doc(hidden)]
     pub max_file_size: std::option::Option<i32>,
     /// <p>The number of times for DMS to retry a bulk load of migrated graph data to the Neptune target database before raising an error. The default is 5.</p>
+    #[doc(hidden)]
     pub max_retry_count: std::option::Option<i32>,
     /// <p>If you want Identity and Access Management (IAM) authorization enabled for this endpoint, set this parameter to <code>true</code>. Then attach the appropriate IAM policy document to your service role specified by <code>ServiceAccessRoleArn</code>. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub iam_auth_enabled: std::option::Option<bool>,
 }
 impl NeptuneSettings {
@@ -8954,11 +9348,10 @@ impl std::fmt::Debug for NeptuneSettings {
         formatter.finish()
     }
 }
-/// See [`NeptuneSettings`](crate::model::NeptuneSettings)
+/// See [`NeptuneSettings`](crate::model::NeptuneSettings).
 pub mod neptune_settings {
 
-    /// A builder for [`NeptuneSettings`](crate::model::NeptuneSettings)
-    #[non_exhaustive]
+    /// A builder for [`NeptuneSettings`](crate::model::NeptuneSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_access_role_arn: std::option::Option<std::string::String>,
@@ -9049,7 +9442,7 @@ pub mod neptune_settings {
             self.iam_auth_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`NeptuneSettings`](crate::model::NeptuneSettings)
+        /// Consumes the builder and constructs a [`NeptuneSettings`](crate::model::NeptuneSettings).
         pub fn build(self) -> crate::model::NeptuneSettings {
             crate::model::NeptuneSettings {
                 service_access_role_arn: self.service_access_role_arn,
@@ -9064,7 +9457,7 @@ pub mod neptune_settings {
     }
 }
 impl NeptuneSettings {
-    /// Creates a new builder-style object to manufacture [`NeptuneSettings`](crate::model::NeptuneSettings)
+    /// Creates a new builder-style object to manufacture [`NeptuneSettings`](crate::model::NeptuneSettings).
     pub fn builder() -> crate::model::neptune_settings::Builder {
         crate::model::neptune_settings::Builder::default()
     }
@@ -9075,14 +9468,21 @@ impl NeptuneSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticsearchSettings {
     /// <p>The Amazon Resource Name (ARN) used by the service to access the IAM role. The role must allow the <code>iam:PassRole</code> action.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The endpoint for the OpenSearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.</p>
+    #[doc(hidden)]
     pub endpoint_uri: std::option::Option<std::string::String>,
     /// <p>The maximum percentage of records that can fail to be written before a full load operation stops.</p>
     /// <p>To avoid early failure, this counter is only effective after 1000 records are transferred. OpenSearch also has the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer of all records fail in the last 10 minutes, the full load operation stops. </p>
+    #[doc(hidden)]
     pub full_load_error_percentage: std::option::Option<i32>,
     /// <p>The maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster.</p>
+    #[doc(hidden)]
     pub error_retry_duration: std::option::Option<i32>,
+    /// <p>Set this option to <code>true</code> for DMS to migrate documentation using the documentation type <code>_doc</code>. OpenSearch and an Elasticsearch cluster only support the _doc documentation type in versions 7. x and later. The default value is <code>false</code>.</p>
+    #[doc(hidden)]
+    pub use_new_mapping_type: std::option::Option<bool>,
 }
 impl ElasticsearchSettings {
     /// <p>The Amazon Resource Name (ARN) used by the service to access the IAM role. The role must allow the <code>iam:PassRole</code> action.</p>
@@ -9102,6 +9502,10 @@ impl ElasticsearchSettings {
     pub fn error_retry_duration(&self) -> std::option::Option<i32> {
         self.error_retry_duration
     }
+    /// <p>Set this option to <code>true</code> for DMS to migrate documentation using the documentation type <code>_doc</code>. OpenSearch and an Elasticsearch cluster only support the _doc documentation type in versions 7. x and later. The default value is <code>false</code>.</p>
+    pub fn use_new_mapping_type(&self) -> std::option::Option<bool> {
+        self.use_new_mapping_type
+    }
 }
 impl std::fmt::Debug for ElasticsearchSettings {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -9113,20 +9517,21 @@ impl std::fmt::Debug for ElasticsearchSettings {
             &self.full_load_error_percentage,
         );
         formatter.field("error_retry_duration", &self.error_retry_duration);
+        formatter.field("use_new_mapping_type", &self.use_new_mapping_type);
         formatter.finish()
     }
 }
-/// See [`ElasticsearchSettings`](crate::model::ElasticsearchSettings)
+/// See [`ElasticsearchSettings`](crate::model::ElasticsearchSettings).
 pub mod elasticsearch_settings {
 
-    /// A builder for [`ElasticsearchSettings`](crate::model::ElasticsearchSettings)
-    #[non_exhaustive]
+    /// A builder for [`ElasticsearchSettings`](crate::model::ElasticsearchSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_access_role_arn: std::option::Option<std::string::String>,
         pub(crate) endpoint_uri: std::option::Option<std::string::String>,
         pub(crate) full_load_error_percentage: std::option::Option<i32>,
         pub(crate) error_retry_duration: std::option::Option<i32>,
+        pub(crate) use_new_mapping_type: std::option::Option<bool>,
     }
     impl Builder {
         /// <p>The Amazon Resource Name (ARN) used by the service to access the IAM role. The role must allow the <code>iam:PassRole</code> action.</p>
@@ -9174,19 +9579,30 @@ pub mod elasticsearch_settings {
             self.error_retry_duration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticsearchSettings`](crate::model::ElasticsearchSettings)
+        /// <p>Set this option to <code>true</code> for DMS to migrate documentation using the documentation type <code>_doc</code>. OpenSearch and an Elasticsearch cluster only support the _doc documentation type in versions 7. x and later. The default value is <code>false</code>.</p>
+        pub fn use_new_mapping_type(mut self, input: bool) -> Self {
+            self.use_new_mapping_type = Some(input);
+            self
+        }
+        /// <p>Set this option to <code>true</code> for DMS to migrate documentation using the documentation type <code>_doc</code>. OpenSearch and an Elasticsearch cluster only support the _doc documentation type in versions 7. x and later. The default value is <code>false</code>.</p>
+        pub fn set_use_new_mapping_type(mut self, input: std::option::Option<bool>) -> Self {
+            self.use_new_mapping_type = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ElasticsearchSettings`](crate::model::ElasticsearchSettings).
         pub fn build(self) -> crate::model::ElasticsearchSettings {
             crate::model::ElasticsearchSettings {
                 service_access_role_arn: self.service_access_role_arn,
                 endpoint_uri: self.endpoint_uri,
                 full_load_error_percentage: self.full_load_error_percentage,
                 error_retry_duration: self.error_retry_duration,
+                use_new_mapping_type: self.use_new_mapping_type,
             }
         }
     }
 }
 impl ElasticsearchSettings {
-    /// Creates a new builder-style object to manufacture [`ElasticsearchSettings`](crate::model::ElasticsearchSettings)
+    /// Creates a new builder-style object to manufacture [`ElasticsearchSettings`](crate::model::ElasticsearchSettings).
     pub fn builder() -> crate::model::elasticsearch_settings::Builder {
         crate::model::elasticsearch_settings::Builder::default()
     }
@@ -9197,40 +9613,58 @@ impl ElasticsearchSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaSettings {
     /// <p>A comma-separated list of one or more broker locations in your Kafka cluster that host your Kafka instance. Specify each broker location in the form <code> <i>broker-hostname-or-ip</i>:<i>port</i> </code>. For example, <code>"ec2-12-345-678-901.compute-1.amazonaws.com:2345"</code>. For more information and examples of specifying a list of broker locations, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kafka.html">Using Apache Kafka as a target for Database Migration Service</a> in the <i>Database Migration Service User Guide</i>. </p>
+    #[doc(hidden)]
     pub broker: std::option::Option<std::string::String>,
     /// <p>The topic to which you migrate the data. If you don't specify a topic, DMS specifies <code>"kafka-default-topic"</code> as the migration topic.</p>
+    #[doc(hidden)]
     pub topic: std::option::Option<std::string::String>,
     /// <p>The output format for the records created on the endpoint. The message format is <code>JSON</code> (default) or <code>JSON_UNFORMATTED</code> (a single line with no tab).</p>
+    #[doc(hidden)]
     pub message_format: std::option::Option<crate::model::MessageFormatValue>,
     /// <p>Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for <code>transaction_id</code>, previous <code>transaction_id</code>, and <code>transaction_record_id</code> (the record offset within a transaction). The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_transaction_details: std::option::Option<bool>,
     /// <p>Shows the partition value within the Kafka message output unless the partition type is <code>schema-table-type</code>. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_partition_value: std::option::Option<bool>,
     /// <p>Prefixes schema and table names to partition values, when the partition type is <code>primary-key-type</code>. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub partition_include_schema_table: std::option::Option<bool>,
     /// <p>Includes any data definition language (DDL) operations that change the table in the control data, such as <code>rename-table</code>, <code>drop-table</code>, <code>add-column</code>, <code>drop-column</code>, and <code>rename-column</code>. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_table_alter_operations: std::option::Option<bool>,
     /// <p>Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_control_details: std::option::Option<bool>,
     /// <p>The maximum size in bytes for records created on the endpoint The default is 1,000,000.</p>
+    #[doc(hidden)]
     pub message_max_bytes: std::option::Option<i32>,
     /// <p>Include NULL and empty columns for records migrated to the endpoint. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_null_and_empty: std::option::Option<bool>,
     /// <p>Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include <code>ssl-encryption</code>, <code>ssl-authentication</code>, and <code>sasl-ssl</code>. <code>sasl-ssl</code> requires <code>SaslUsername</code> and <code>SaslPassword</code>.</p>
+    #[doc(hidden)]
     pub security_protocol: std::option::Option<crate::model::KafkaSecurityProtocol>,
     /// <p>The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.</p>
+    #[doc(hidden)]
     pub ssl_client_certificate_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.</p>
+    #[doc(hidden)]
     pub ssl_client_key_arn: std::option::Option<std::string::String>,
     /// <p> The password for the client private key used to securely connect to a Kafka target endpoint.</p>
+    #[doc(hidden)]
     pub ssl_client_key_password: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that DMS uses to securely connect to your Kafka target endpoint.</p>
+    #[doc(hidden)]
     pub ssl_ca_certificate_arn: std::option::Option<std::string::String>,
     /// <p> The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.</p>
+    #[doc(hidden)]
     pub sasl_username: std::option::Option<std::string::String>,
     /// <p>The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.</p>
+    #[doc(hidden)]
     pub sasl_password: std::option::Option<std::string::String>,
     /// <p>Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.</p>
+    #[doc(hidden)]
     pub no_hex_prefix: std::option::Option<bool>,
 }
 impl KafkaSettings {
@@ -9346,11 +9780,10 @@ impl std::fmt::Debug for KafkaSettings {
         formatter.finish()
     }
 }
-/// See [`KafkaSettings`](crate::model::KafkaSettings)
+/// See [`KafkaSettings`](crate::model::KafkaSettings).
 pub mod kafka_settings {
 
-    /// A builder for [`KafkaSettings`](crate::model::KafkaSettings)
-    #[non_exhaustive]
+    /// A builder for [`KafkaSettings`](crate::model::KafkaSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) broker: std::option::Option<std::string::String>,
@@ -9583,7 +10016,7 @@ pub mod kafka_settings {
             self.no_hex_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaSettings`](crate::model::KafkaSettings)
+        /// Consumes the builder and constructs a [`KafkaSettings`](crate::model::KafkaSettings).
         pub fn build(self) -> crate::model::KafkaSettings {
             crate::model::KafkaSettings {
                 broker: self.broker,
@@ -9609,7 +10042,7 @@ pub mod kafka_settings {
     }
 }
 impl KafkaSettings {
-    /// Creates a new builder-style object to manufacture [`KafkaSettings`](crate::model::KafkaSettings)
+    /// Creates a new builder-style object to manufacture [`KafkaSettings`](crate::model::KafkaSettings).
     pub fn builder() -> crate::model::kafka_settings::Builder {
         crate::model::kafka_settings::Builder::default()
     }
@@ -9743,24 +10176,34 @@ impl AsRef<str> for MessageFormatValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisSettings {
     /// <p>The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams endpoint.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
     /// <p>The output format for the records created on the endpoint. The message format is <code>JSON</code> (default) or <code>JSON_UNFORMATTED</code> (a single line with no tab).</p>
+    #[doc(hidden)]
     pub message_format: std::option::Option<crate::model::MessageFormatValue>,
     /// <p>The Amazon Resource Name (ARN) for the IAM role that DMS uses to write to the Kinesis data stream. The role must allow the <code>iam:PassRole</code> action.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p>Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for <code>transaction_id</code>, previous <code>transaction_id</code>, and <code>transaction_record_id</code> (the record offset within a transaction). The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_transaction_details: std::option::Option<bool>,
     /// <p>Shows the partition value within the Kinesis message output, unless the partition type is <code>schema-table-type</code>. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_partition_value: std::option::Option<bool>,
     /// <p>Prefixes schema and table names to partition values, when the partition type is <code>primary-key-type</code>. Doing this increases data distribution among Kinesis shards. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same shard, which causes throttling. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub partition_include_schema_table: std::option::Option<bool>,
     /// <p>Includes any data definition language (DDL) operations that change the table in the control data, such as <code>rename-table</code>, <code>drop-table</code>, <code>add-column</code>, <code>drop-column</code>, and <code>rename-column</code>. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_table_alter_operations: std::option::Option<bool>,
     /// <p>Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_control_details: std::option::Option<bool>,
     /// <p>Include NULL and empty columns for records migrated to the endpoint. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub include_null_and_empty: std::option::Option<bool>,
     /// <p>Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to an Amazon Kinesis target. Use the <code>NoHexPrefix</code> endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.</p>
+    #[doc(hidden)]
     pub no_hex_prefix: std::option::Option<bool>,
 }
 impl KinesisSettings {
@@ -9830,11 +10273,10 @@ impl std::fmt::Debug for KinesisSettings {
         formatter.finish()
     }
 }
-/// See [`KinesisSettings`](crate::model::KinesisSettings)
+/// See [`KinesisSettings`](crate::model::KinesisSettings).
 pub mod kinesis_settings {
 
-    /// A builder for [`KinesisSettings`](crate::model::KinesisSettings)
-    #[non_exhaustive]
+    /// A builder for [`KinesisSettings`](crate::model::KinesisSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_arn: std::option::Option<std::string::String>,
@@ -9961,7 +10403,7 @@ pub mod kinesis_settings {
             self.no_hex_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisSettings`](crate::model::KinesisSettings)
+        /// Consumes the builder and constructs a [`KinesisSettings`](crate::model::KinesisSettings).
         pub fn build(self) -> crate::model::KinesisSettings {
             crate::model::KinesisSettings {
                 stream_arn: self.stream_arn,
@@ -9979,7 +10421,7 @@ pub mod kinesis_settings {
     }
 }
 impl KinesisSettings {
-    /// Creates a new builder-style object to manufacture [`KinesisSettings`](crate::model::KinesisSettings)
+    /// Creates a new builder-style object to manufacture [`KinesisSettings`](crate::model::KinesisSettings).
     pub fn builder() -> crate::model::kinesis_settings::Builder {
         crate::model::kinesis_settings::Builder::default()
     }
@@ -9990,40 +10432,54 @@ impl KinesisSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MongoDbSettings {
     /// <p>The user name you use to access the MongoDB source endpoint. </p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p> The password for the user account you use to access the MongoDB source endpoint. </p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p> The name of the server on the MongoDB source endpoint. </p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p> The port value for the MongoDB source endpoint. </p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p> The database name on the MongoDB source endpoint. </p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p> The authentication type you use to access the MongoDB source endpoint.</p>
     /// <p>When when set to <code>"no"</code>, user name and password parameters are not used and can be empty. </p>
+    #[doc(hidden)]
     pub auth_type: std::option::Option<crate::model::AuthTypeValue>,
     /// <p> The authentication mechanism you use to access the MongoDB source endpoint.</p>
     /// <p>For the default value, in MongoDB version 2.x, <code>"default"</code> is <code>"mongodb_cr"</code>. For MongoDB version 3.x or later, <code>"default"</code> is <code>"scram_sha_1"</code>. This setting isn't used when <code>AuthType</code> is set to <code>"no"</code>.</p>
+    #[doc(hidden)]
     pub auth_mechanism: std::option::Option<crate::model::AuthMechanismValue>,
     /// <p> Specifies either document or table mode. </p>
     /// <p>Default value is <code>"none"</code>. Specify <code>"none"</code> to use document mode. Specify <code>"one"</code> to use table mode.</p>
+    #[doc(hidden)]
     pub nesting_level: std::option::Option<crate::model::NestingLevelValue>,
     /// <p> Specifies the document ID. Use this setting when <code>NestingLevel</code> is set to <code>"none"</code>. </p>
     /// <p>Default value is <code>"false"</code>. </p>
+    #[doc(hidden)]
     pub extract_doc_id: std::option::Option<std::string::String>,
     /// <p> Indicates the number of documents to preview to determine the document organization. Use this setting when <code>NestingLevel</code> is set to <code>"one"</code>. </p>
     /// <p>Must be a positive value greater than <code>0</code>. Default value is <code>1000</code>.</p>
+    #[doc(hidden)]
     pub docs_to_investigate: std::option::Option<std::string::String>,
     /// <p> The MongoDB database name. This setting isn't used when <code>AuthType</code> is set to <code>"no"</code>. </p>
     /// <p>The default is <code>"admin"</code>.</p>
+    #[doc(hidden)]
     pub auth_source: std::option::Option<std::string::String>,
     /// <p>The KMS key identifier that is used to encrypt the content on the replication instance. If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has a different default encryption key for each Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The full Amazon Resource Name (ARN) of the IAM role that specifies DMS as the trusted entity and grants the required permissions to access the value in <code>SecretsManagerSecret</code>. The role must allow the <code>iam:PassRole</code> action. <code>SecretsManagerSecret</code> has the value of the Amazon Web Services Secrets Manager secret that allows access to the MongoDB endpoint.</p> <note>
     /// <p>You can specify one of two sets of values for these permissions. You can specify the values for this setting and <code>SecretsManagerSecretId</code>. Or you can specify clear-text values for <code>UserName</code>, <code>Password</code>, <code>ServerName</code>, and <code>Port</code>. You can't specify both. For more information on creating this <code>SecretsManagerSecret</code> and the <code>SecretsManagerAccessRoleArn</code> and <code>SecretsManagerSecretId</code> required to access it, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager">Using secrets to access Database Migration Service resources</a> in the <i>Database Migration Service User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub secrets_manager_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The full ARN, partial ARN, or friendly name of the <code>SecretsManagerSecret</code> that contains the MongoDB endpoint connection details.</p>
+    #[doc(hidden)]
     pub secrets_manager_secret_id: std::option::Option<std::string::String>,
 }
 impl MongoDbSettings {
@@ -10115,11 +10571,10 @@ impl std::fmt::Debug for MongoDbSettings {
         formatter.finish()
     }
 }
-/// See [`MongoDbSettings`](crate::model::MongoDbSettings)
+/// See [`MongoDbSettings`](crate::model::MongoDbSettings).
 pub mod mongo_db_settings {
 
-    /// A builder for [`MongoDbSettings`](crate::model::MongoDbSettings)
-    #[non_exhaustive]
+    /// A builder for [`MongoDbSettings`](crate::model::MongoDbSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -10321,7 +10776,7 @@ pub mod mongo_db_settings {
             self.secrets_manager_secret_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MongoDbSettings`](crate::model::MongoDbSettings)
+        /// Consumes the builder and constructs a [`MongoDbSettings`](crate::model::MongoDbSettings).
         pub fn build(self) -> crate::model::MongoDbSettings {
             crate::model::MongoDbSettings {
                 username: self.username,
@@ -10343,7 +10798,7 @@ pub mod mongo_db_settings {
     }
 }
 impl MongoDbSettings {
-    /// Creates a new builder-style object to manufacture [`MongoDbSettings`](crate::model::MongoDbSettings)
+    /// Creates a new builder-style object to manufacture [`MongoDbSettings`](crate::model::MongoDbSettings).
     pub fn builder() -> crate::model::mongo_db_settings::Builder {
         crate::model::mongo_db_settings::Builder::default()
     }
@@ -10468,8 +10923,10 @@ impl AsRef<str> for AuthTypeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DmsTransferSettings {
     /// <p>The Amazon Resource Name (ARN) used by the service access IAM role. The role must allow the <code>iam:PassRole</code> action.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p> The name of the S3 bucket to use. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
 }
 impl DmsTransferSettings {
@@ -10490,11 +10947,10 @@ impl std::fmt::Debug for DmsTransferSettings {
         formatter.finish()
     }
 }
-/// See [`DmsTransferSettings`](crate::model::DmsTransferSettings)
+/// See [`DmsTransferSettings`](crate::model::DmsTransferSettings).
 pub mod dms_transfer_settings {
 
-    /// A builder for [`DmsTransferSettings`](crate::model::DmsTransferSettings)
-    #[non_exhaustive]
+    /// A builder for [`DmsTransferSettings`](crate::model::DmsTransferSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_access_role_arn: std::option::Option<std::string::String>,
@@ -10524,7 +10980,7 @@ pub mod dms_transfer_settings {
             self.bucket_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DmsTransferSettings`](crate::model::DmsTransferSettings)
+        /// Consumes the builder and constructs a [`DmsTransferSettings`](crate::model::DmsTransferSettings).
         pub fn build(self) -> crate::model::DmsTransferSettings {
             crate::model::DmsTransferSettings {
                 service_access_role_arn: self.service_access_role_arn,
@@ -10534,7 +10990,7 @@ pub mod dms_transfer_settings {
     }
 }
 impl DmsTransferSettings {
-    /// Creates a new builder-style object to manufacture [`DmsTransferSettings`](crate::model::DmsTransferSettings)
+    /// Creates a new builder-style object to manufacture [`DmsTransferSettings`](crate::model::DmsTransferSettings).
     pub fn builder() -> crate::model::dms_transfer_settings::Builder {
         crate::model::dms_transfer_settings::Builder::default()
     }
@@ -10545,18 +11001,25 @@ impl DmsTransferSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Settings {
     /// <p> The Amazon Resource Name (ARN) used by the service to access the IAM role. The role must allow the <code>iam:PassRole</code> action. It is a required parameter that enables DMS to write and read objects from an S3 bucket.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p> Specifies how tables are defined in the S3 source files only. </p>
+    #[doc(hidden)]
     pub external_table_definition: std::option::Option<std::string::String>,
     /// <p> The delimiter used to separate rows in the .csv file for both source and target. The default is a carriage return (<code>\n</code>). </p>
+    #[doc(hidden)]
     pub csv_row_delimiter: std::option::Option<std::string::String>,
     /// <p> The delimiter used to separate columns in the .csv file for both source and target. The default is a comma. </p>
+    #[doc(hidden)]
     pub csv_delimiter: std::option::Option<std::string::String>,
     /// <p> An optional parameter to set a folder name in the S3 bucket. If provided, tables are created in the path <code> <i>bucketFolder</i>/<i>schema_name</i>/<i>table_name</i>/</code>. If this parameter isn't specified, then the path used is <code> <i>schema_name</i>/<i>table_name</i>/</code>. </p>
+    #[doc(hidden)]
     pub bucket_folder: std::option::Option<std::string::String>,
     /// <p> The name of the S3 bucket. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p>An optional parameter to use GZIP to compress the target files. Set to GZIP to compress the target files. Either set this parameter to NONE (the default) or don't use it to leave the files uncompressed. This parameter applies to both .csv and .parquet file formats. </p>
+    #[doc(hidden)]
     pub compression_type: std::option::Option<crate::model::CompressionTypeValue>,
     /// <p>The type of server-side encryption that you want to use for your data. This encryption type is part of the endpoint settings or the extra connections attributes for Amazon S3. You can choose either <code>SSE_S3</code> (the default) or <code>SSE_KMS</code>. </p> <note>
     /// <p>For the <code>ModifyEndpoint</code> operation, you can change the existing value of the <code>EncryptionMode</code> parameter from <code>SSE_KMS</code> to <code>SSE_S3</code>. But you can’t change the existing value from <code>SSE_S3</code> to <code>SSE_KMS</code>.</p>
@@ -10575,15 +11038,18 @@ pub struct S3Settings {
     /// <li> <p> <code>s3:PutBucketPolicy</code> </p> </li>
     /// <li> <p> <code>s3:DeleteBucketPolicy</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub encryption_mode: std::option::Option<crate::model::EncryptionModeValue>,
     /// <p>If you are using <code>SSE_KMS</code> for the <code>EncryptionMode</code>, provide the KMS key ID. The key that you use needs an attached policy that enables Identity and Access Management (IAM) user permissions and allows use of the key.</p>
     /// <p>Here is a CLI example: <code>aws dms create-endpoint --endpoint-identifier <i>value</i> --endpoint-type target --engine-name s3 --s3-settings ServiceAccessRoleArn=<i>value</i>,BucketFolder=<i>value</i>,BucketName=<i>value</i>,EncryptionMode=SSE_KMS,ServerSideEncryptionKmsKeyId=<i>value</i> </code> </p>
+    #[doc(hidden)]
     pub server_side_encryption_kms_key_id: std::option::Option<std::string::String>,
     /// <p>The format of the data that you want to use for output. You can choose one of the following: </p>
     /// <ul>
     /// <li> <p> <code>csv</code> : This is a row-based file format with comma-separated values (.csv). </p> </li>
     /// <li> <p> <code>parquet</code> : Apache Parquet (.parquet) is a columnar storage file format that features efficient compression and provides faster query response. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub data_format: std::option::Option<crate::model::DataFormatValue>,
     /// <p>The type of encoding you are using: </p>
     /// <ul>
@@ -10591,17 +11057,23 @@ pub struct S3Settings {
     /// <li> <p> <code>PLAIN</code> doesn't use encoding at all. Values are stored as they are.</p> </li>
     /// <li> <p> <code>PLAIN_DICTIONARY</code> builds a dictionary of the values encountered in a given column. The dictionary is stored in a dictionary page for each column chunk.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub encoding_type: std::option::Option<crate::model::EncodingTypeValue>,
     /// <p>The maximum size of an encoded dictionary page of a column. If the dictionary page exceeds this, this column is stored using an encoding type of <code>PLAIN</code>. This parameter defaults to 1024 * 1024 bytes (1 MiB), the maximum size of a dictionary page before it reverts to <code>PLAIN</code> encoding. This size is used for .parquet file format only. </p>
+    #[doc(hidden)]
     pub dict_page_size_limit: std::option::Option<i32>,
     /// <p>The number of rows in a row group. A smaller row group size provides faster reads. But as the number of row groups grows, the slower writes become. This parameter defaults to 10,000 rows. This number is used for .parquet file format only. </p>
     /// <p>If you choose a value larger than the maximum, <code>RowGroupLength</code> is set to the max row group length in bytes (64 * 1024 * 1024). </p>
+    #[doc(hidden)]
     pub row_group_length: std::option::Option<i32>,
     /// <p>The size of one data page in bytes. This parameter defaults to 1024 * 1024 bytes (1 MiB). This number is used for .parquet file format only. </p>
+    #[doc(hidden)]
     pub data_page_size: std::option::Option<i32>,
     /// <p>The version of the Apache Parquet format that you want to use: <code>parquet_1_0</code> (the default) or <code>parquet_2_0</code>.</p>
+    #[doc(hidden)]
     pub parquet_version: std::option::Option<crate::model::ParquetVersionValue>,
     /// <p>A value that enables statistics for Parquet pages and row groups. Choose <code>true</code> to enable statistics, <code>false</code> to disable. Statistics include <code>NULL</code>, <code>DISTINCT</code>, <code>MAX</code>, and <code>MIN</code> values. This parameter defaults to <code>true</code>. This value is used for .parquet file format only.</p>
+    #[doc(hidden)]
     pub enable_statistics: std::option::Option<bool>,
     /// <p>A value that enables a full load to write INSERT operations to the comma-separated value (.csv) output files only to indicate how the rows were added to the source database.</p> <note>
     /// <p>DMS supports the <code>IncludeOpForFullLoad</code> parameter in versions 3.1.4 and later.</p>
@@ -10609,12 +11081,14 @@ pub struct S3Settings {
     /// <p>For full load, records can only be inserted. By default (the <code>false</code> setting), no information is recorded in these output files for a full load to indicate that the rows were inserted at the source database. If <code>IncludeOpForFullLoad</code> is set to <code>true</code> or <code>y</code>, the INSERT is recorded as an I annotation in the first field of the .csv file. This allows the format of your target records from a full load to be consistent with the target records from a CDC load.</p> <note>
     /// <p>This setting works together with the <code>CdcInsertsOnly</code> and the <code>CdcInsertsAndUpdates</code> parameters for output to .csv files only. For more information about how these settings work together, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.Configuring.InsertOps">Indicating Source DB Operations in Migrated S3 Data</a> in the <i>Database Migration Service User Guide.</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub include_op_for_full_load: std::option::Option<bool>,
     /// <p>A value that enables a change data capture (CDC) load to write only INSERT operations to .csv or columnar storage (.parquet) output files. By default (the <code>false</code> setting), the first field in a .csv or .parquet record contains the letter I (INSERT), U (UPDATE), or D (DELETE). These values indicate whether the row was inserted, updated, or deleted at the source database for a CDC load to the target.</p>
     /// <p>If <code>CdcInsertsOnly</code> is set to <code>true</code> or <code>y</code>, only INSERTs from the source database are migrated to the .csv or .parquet file. For .csv format only, how these INSERTs are recorded depends on the value of <code>IncludeOpForFullLoad</code>. If <code>IncludeOpForFullLoad</code> is set to <code>true</code>, the first field of every CDC record is set to I to indicate the INSERT operation at the source. If <code>IncludeOpForFullLoad</code> is set to <code>false</code>, every CDC record is written without a first field to indicate the INSERT operation at the source. For more information about how these settings work together, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.Configuring.InsertOps">Indicating Source DB Operations in Migrated S3 Data</a> in the <i>Database Migration Service User Guide.</i>.</p> <note>
     /// <p>DMS supports the interaction described preceding between the <code>CdcInsertsOnly</code> and <code>IncludeOpForFullLoad</code> parameters in versions 3.1.4 and later. </p>
     /// <p> <code>CdcInsertsOnly</code> and <code>CdcInsertsAndUpdates</code> can't both be set to <code>true</code> for the same endpoint. Set either <code>CdcInsertsOnly</code> or <code>CdcInsertsAndUpdates</code> to <code>true</code> for the same endpoint, but not both.</p>
     /// </note>
+    #[doc(hidden)]
     pub cdc_inserts_only: std::option::Option<bool>,
     /// <p>A value that when nonblank causes DMS to add a column with timestamp information to the endpoint data for an Amazon S3 target.</p> <note>
     /// <p>DMS supports the <code>TimestampColumnName</code> parameter in versions 3.1.4 and later.</p>
@@ -10624,6 +11098,7 @@ pub struct S3Settings {
     /// <p>For a change data capture (CDC) load, each row of the timestamp column contains the timestamp for the commit of that row in the source database.</p>
     /// <p>The string format for this timestamp column value is <code>yyyy-MM-dd HH:mm:ss.SSSSSS</code>. By default, the precision of this value is in microseconds. For a CDC load, the rounding of the precision depends on the commit timestamp supported by DMS for the source database.</p>
     /// <p>When the <code>AddColumnName</code> parameter is set to <code>true</code>, DMS also includes a name for the timestamp column that you set with <code>TimestampColumnName</code>.</p>
+    #[doc(hidden)]
     pub timestamp_column_name: std::option::Option<std::string::String>,
     /// <p>A value that specifies the precision of any <code>TIMESTAMP</code> column values that are written to an Amazon S3 object file in .parquet format.</p> <note>
     /// <p>DMS supports the <code>ParquetTimestampInMillisecond</code> parameter in versions 3.1.4 and later.</p>
@@ -10633,30 +11108,38 @@ pub struct S3Settings {
     /// <p>DMS writes any <code>TIMESTAMP</code> column values written to an S3 file in .csv format with microsecond precision.</p>
     /// <p>Setting <code>ParquetTimestampInMillisecond</code> has no effect on the string format of the timestamp column value that is inserted by setting the <code>TimestampColumnName</code> parameter.</p>
     /// </note>
+    #[doc(hidden)]
     pub parquet_timestamp_in_millisecond: std::option::Option<bool>,
     /// <p>A value that enables a change data capture (CDC) load to write INSERT and UPDATE operations to .csv or .parquet (columnar storage) output files. The default setting is <code>false</code>, but when <code>CdcInsertsAndUpdates</code> is set to <code>true</code> or <code>y</code>, only INSERTs and UPDATEs from the source database are migrated to the .csv or .parquet file. </p>
     /// <p>For .csv file format only, how these INSERTs and UPDATEs are recorded depends on the value of the <code>IncludeOpForFullLoad</code> parameter. If <code>IncludeOpForFullLoad</code> is set to <code>true</code>, the first field of every CDC record is set to either <code>I</code> or <code>U</code> to indicate INSERT and UPDATE operations at the source. But if <code>IncludeOpForFullLoad</code> is set to <code>false</code>, CDC records are written without an indication of INSERT or UPDATE operations at the source. For more information about how these settings work together, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.Configuring.InsertOps">Indicating Source DB Operations in Migrated S3 Data</a> in the <i>Database Migration Service User Guide.</i>.</p> <note>
     /// <p>DMS supports the use of the <code>CdcInsertsAndUpdates</code> parameter in versions 3.3.1 and later.</p>
     /// <p> <code>CdcInsertsOnly</code> and <code>CdcInsertsAndUpdates</code> can't both be set to <code>true</code> for the same endpoint. Set either <code>CdcInsertsOnly</code> or <code>CdcInsertsAndUpdates</code> to <code>true</code> for the same endpoint, but not both.</p>
     /// </note>
+    #[doc(hidden)]
     pub cdc_inserts_and_updates: std::option::Option<bool>,
     /// <p>When set to <code>true</code>, this parameter partitions S3 bucket folders based on transaction commit dates. The default value is <code>false</code>. For more information about date-based folder partitioning, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.DatePartitioning">Using date-based folder partitioning</a>.</p>
+    #[doc(hidden)]
     pub date_partition_enabled: std::option::Option<bool>,
     /// <p>Identifies the sequence of the date format to use during folder partitioning. The default value is <code>YYYYMMDD</code>. Use this parameter when <code>DatePartitionedEnabled</code> is set to <code>true</code>.</p>
+    #[doc(hidden)]
     pub date_partition_sequence: std::option::Option<crate::model::DatePartitionSequenceValue>,
     /// <p>Specifies a date separating delimiter to use during folder partitioning. The default value is <code>SLASH</code>. Use this parameter when <code>DatePartitionedEnabled</code> is set to <code>true</code>.</p>
+    #[doc(hidden)]
     pub date_partition_delimiter: std::option::Option<crate::model::DatePartitionDelimiterValue>,
     /// <p>This setting applies if the S3 output files during a change data capture (CDC) load are written in .csv format. If set to <code>true</code> for columns not included in the supplemental log, DMS uses the value specified by <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_S3Settings.html#DMS-Type-S3Settings-CsvNoSupValue"> <code>CsvNoSupValue</code> </a>. If not set or set to <code>false</code>, DMS uses the null value for these columns.</p> <note>
     /// <p>This setting is supported in DMS versions 3.4.1 and later.</p>
     /// </note>
+    #[doc(hidden)]
     pub use_csv_no_sup_value: std::option::Option<bool>,
     /// <p>This setting only applies if your Amazon S3 output files during a change data capture (CDC) load are written in .csv format. If <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_S3Settings.html#DMS-Type-S3Settings-UseCsvNoSupValue"> <code>UseCsvNoSupValue</code> </a> is set to true, specify a string value that you want DMS to use for all columns not included in the supplemental log. If you do not specify a string value, DMS uses the null value for these columns regardless of the <code>UseCsvNoSupValue</code> setting.</p> <note>
     /// <p>This setting is supported in DMS versions 3.4.1 and later.</p>
     /// </note>
+    #[doc(hidden)]
     pub csv_no_sup_value: std::option::Option<std::string::String>,
     /// <p>If set to <code>true</code>, DMS saves the transaction order for a change data capture (CDC) load on the Amazon S3 target specified by <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_S3Settings.html#DMS-Type-S3Settings-CdcPath"> <code>CdcPath</code> </a>. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.EndpointSettings.CdcPath">Capturing data changes (CDC) including transaction order on the S3 target</a>.</p> <note>
     /// <p>This setting is supported in DMS versions 3.4.2 and later.</p>
     /// </note>
+    #[doc(hidden)]
     pub preserve_transactions: std::option::Option<bool>,
     /// <p>Specifies the folder path of CDC files. For an S3 source, this setting is required if a task captures change data; otherwise, it's optional. If <code>CdcPath</code> is set, DMS reads CDC files from this path and replicates the data changes to the target endpoint. For an S3 target if you set <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_S3Settings.html#DMS-Type-S3Settings-PreserveTransactions"> <code>PreserveTransactions</code> </a> to <code>true</code>, DMS verifies that you have set this parameter to a folder path on your S3 target where DMS can save the transaction order for the CDC load. DMS creates this CDC folder path in either your S3 target working directory or the S3 target location specified by <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_S3Settings.html#DMS-Type-S3Settings-BucketFolder"> <code>BucketFolder</code> </a> and <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_S3Settings.html#DMS-Type-S3Settings-BucketName"> <code>BucketName</code> </a>.</p>
     /// <p>For example, if you specify <code>CdcPath</code> as <code>MyChangedData</code>, and you specify <code>BucketName</code> as <code>MyTargetBucket</code> but do not specify <code>BucketFolder</code>, DMS creates the CDC folder path following: <code>MyTargetBucket/MyChangedData</code>.</p>
@@ -10664,40 +11147,59 @@ pub struct S3Settings {
     /// <p>For more information on CDC including transaction order on an S3 target, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.EndpointSettings.CdcPath">Capturing data changes (CDC) including transaction order on the S3 target</a>.</p> <note>
     /// <p>This setting is supported in DMS versions 3.4.2 and later.</p>
     /// </note>
+    #[doc(hidden)]
     pub cdc_path: std::option::Option<std::string::String>,
     /// <p>When set to true, this parameter uses the task start time as the timestamp column value instead of the time data is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads, each row of the timestamp column contains the transaction commit time.</p>
     /// <p>When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load timestamp in the timestamp column increments with the time data arrives at the target. </p>
+    #[doc(hidden)]
     pub use_task_start_time_for_full_load_timestamp: std::option::Option<bool>,
     /// <p>A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3 bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the <i>Amazon S3 Developer Guide.</i> </p>
     /// <p>The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE, AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.</p>
+    #[doc(hidden)]
     pub canned_acl_for_objects: std::option::Option<crate::model::CannedAclForObjectsValue>,
     /// <p>An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column name information to the .csv output file.</p>
     /// <p>The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>, <code>y</code>, and <code>n</code>.</p>
+    #[doc(hidden)]
     pub add_column_name: std::option::Option<bool>,
     /// <p>Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3.</p>
     /// <p>When <code>CdcMaxBatchInterval</code> and <code>CdcMinFileSize</code> are both specified, the file write is triggered by whichever parameter condition is met first within an DMS CloudFormation template.</p>
     /// <p>The default value is 60 seconds.</p>
+    #[doc(hidden)]
     pub cdc_max_batch_interval: std::option::Option<i32>,
     /// <p>Minimum file size, defined in megabytes, to reach for a file output to Amazon S3.</p>
     /// <p>When <code>CdcMinFileSize</code> and <code>CdcMaxBatchInterval</code> are both specified, the file write is triggered by whichever parameter condition is met first within an DMS CloudFormation template.</p>
     /// <p>The default value is 32 MB.</p>
+    #[doc(hidden)]
     pub cdc_min_file_size: std::option::Option<i32>,
     /// <p>An optional parameter that specifies how DMS treats null values. While handling the null value, you can use this parameter to pass a user-defined string as null when writing to the target. For example, when target columns are not nullable, you can use this option to differentiate between the empty string value and the null value. So, if you set this parameter value to the empty string ("" or ''), DMS treats the empty string as the null value instead of <code>NULL</code>.</p>
     /// <p>The default value is <code>NULL</code>. Valid values include any valid string.</p>
+    #[doc(hidden)]
     pub csv_null_value: std::option::Option<std::string::String>,
     /// <p>When this value is set to 1, DMS ignores the first row header in a .csv file. A value of 1 turns on the feature; a value of 0 turns off the feature.</p>
     /// <p>The default is 0.</p>
+    #[doc(hidden)]
     pub ignore_header_rows: std::option::Option<i32>,
     /// <p>A value that specifies the maximum size (in KB) of any .csv file to be created while migrating to an S3 target during full load.</p>
     /// <p>The default value is 1,048,576 KB (1 GB). Valid values include 1 to 1,048,576.</p>
+    #[doc(hidden)]
     pub max_file_size: std::option::Option<i32>,
     /// <p>For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double quotation mark has to be followed by an ending double quotation mark. This formatting complies with RFC 4180. When this value is set to <code>false</code> or <code>n</code>, string literals are copied to the target as is. In this case, a delimiter (row or column) signals the end of the field. Thus, you can't use a delimiter as part of the string, because it signals the end of the value.</p>
     /// <p>For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to Amazon S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code> using Amazon S3 as a target, if the data has quotation marks or newline characters in it, DMS encloses the entire column with an additional pair of double quotation marks ("). Every quotation mark within the data is repeated twice.</p>
     /// <p>The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>, <code>y</code>, and <code>n</code>.</p>
+    #[doc(hidden)]
     pub rfc4180: std::option::Option<bool>,
     /// <p>When creating an S3 target endpoint, set <code>DatePartitionTimezone</code> to convert the current UTC time into a specified time zone. The conversion occurs when a date partition folder is created and a CDC filename is generated. The time zone format is Area/Location. Use this parameter when <code>DatePartitionedEnabled</code> is set to <code>true</code>, as shown in the following example.</p>
     /// <p> <code>s3-settings='{"DatePartitionEnabled": true, "DatePartitionSequence": "YYYYMMDDHH", "DatePartitionDelimiter": "SLASH", "DatePartitionTimezone":"<i>Asia/Seoul</i>", "BucketName": "dms-nattarat-test"}'</code> </p>
+    #[doc(hidden)]
     pub date_partition_timezone: std::option::Option<std::string::String>,
+    /// <p>Use the S3 target endpoint setting <code>AddTrailingPaddingCharacter</code> to add padding on string data. The default value is <code>false</code>.</p>
+    #[doc(hidden)]
+    pub add_trailing_padding_character: std::option::Option<bool>,
+    /// <p>To specify a bucket owner and prevent sniping, you can use the <code>ExpectedBucketOwner</code> endpoint setting. </p>
+    /// <p>Example: <code>--s3-settings='{"ExpectedBucketOwner": "<i>AWS_Account_ID</i>"}'</code> </p>
+    /// <p>When you make a request to test a connection or perform a migration, S3 checks the account ID of the bucket owner against the specified parameter.</p>
+    #[doc(hidden)]
+    pub expected_bucket_owner: std::option::Option<std::string::String>,
 }
 impl S3Settings {
     /// <p> The Amazon Resource Name (ARN) used by the service to access the IAM role. The role must allow the <code>iam:PassRole</code> action. It is a required parameter that enables DMS to write and read objects from an S3 bucket.</p>
@@ -10936,6 +11438,16 @@ impl S3Settings {
     pub fn date_partition_timezone(&self) -> std::option::Option<&str> {
         self.date_partition_timezone.as_deref()
     }
+    /// <p>Use the S3 target endpoint setting <code>AddTrailingPaddingCharacter</code> to add padding on string data. The default value is <code>false</code>.</p>
+    pub fn add_trailing_padding_character(&self) -> std::option::Option<bool> {
+        self.add_trailing_padding_character
+    }
+    /// <p>To specify a bucket owner and prevent sniping, you can use the <code>ExpectedBucketOwner</code> endpoint setting. </p>
+    /// <p>Example: <code>--s3-settings='{"ExpectedBucketOwner": "<i>AWS_Account_ID</i>"}'</code> </p>
+    /// <p>When you make a request to test a connection or perform a migration, S3 checks the account ID of the bucket owner against the specified parameter.</p>
+    pub fn expected_bucket_owner(&self) -> std::option::Option<&str> {
+        self.expected_bucket_owner.as_deref()
+    }
 }
 impl std::fmt::Debug for S3Settings {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -10987,14 +11499,18 @@ impl std::fmt::Debug for S3Settings {
         formatter.field("max_file_size", &self.max_file_size);
         formatter.field("rfc4180", &self.rfc4180);
         formatter.field("date_partition_timezone", &self.date_partition_timezone);
+        formatter.field(
+            "add_trailing_padding_character",
+            &self.add_trailing_padding_character,
+        );
+        formatter.field("expected_bucket_owner", &self.expected_bucket_owner);
         formatter.finish()
     }
 }
-/// See [`S3Settings`](crate::model::S3Settings)
+/// See [`S3Settings`](crate::model::S3Settings).
 pub mod s3_settings {
 
-    /// A builder for [`S3Settings`](crate::model::S3Settings)
-    #[non_exhaustive]
+    /// A builder for [`S3Settings`](crate::model::S3Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_access_role_arn: std::option::Option<std::string::String>,
@@ -11038,6 +11554,8 @@ pub mod s3_settings {
         pub(crate) max_file_size: std::option::Option<i32>,
         pub(crate) rfc4180: std::option::Option<bool>,
         pub(crate) date_partition_timezone: std::option::Option<std::string::String>,
+        pub(crate) add_trailing_padding_character: std::option::Option<bool>,
+        pub(crate) expected_bucket_owner: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p> The Amazon Resource Name (ARN) used by the service to access the IAM role. The role must allow the <code>iam:PassRole</code> action. It is a required parameter that enables DMS to write and read objects from an S3 bucket.</p>
@@ -11648,7 +12166,37 @@ pub mod s3_settings {
             self.date_partition_timezone = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Settings`](crate::model::S3Settings)
+        /// <p>Use the S3 target endpoint setting <code>AddTrailingPaddingCharacter</code> to add padding on string data. The default value is <code>false</code>.</p>
+        pub fn add_trailing_padding_character(mut self, input: bool) -> Self {
+            self.add_trailing_padding_character = Some(input);
+            self
+        }
+        /// <p>Use the S3 target endpoint setting <code>AddTrailingPaddingCharacter</code> to add padding on string data. The default value is <code>false</code>.</p>
+        pub fn set_add_trailing_padding_character(
+            mut self,
+            input: std::option::Option<bool>,
+        ) -> Self {
+            self.add_trailing_padding_character = input;
+            self
+        }
+        /// <p>To specify a bucket owner and prevent sniping, you can use the <code>ExpectedBucketOwner</code> endpoint setting. </p>
+        /// <p>Example: <code>--s3-settings='{"ExpectedBucketOwner": "<i>AWS_Account_ID</i>"}'</code> </p>
+        /// <p>When you make a request to test a connection or perform a migration, S3 checks the account ID of the bucket owner against the specified parameter.</p>
+        pub fn expected_bucket_owner(mut self, input: impl Into<std::string::String>) -> Self {
+            self.expected_bucket_owner = Some(input.into());
+            self
+        }
+        /// <p>To specify a bucket owner and prevent sniping, you can use the <code>ExpectedBucketOwner</code> endpoint setting. </p>
+        /// <p>Example: <code>--s3-settings='{"ExpectedBucketOwner": "<i>AWS_Account_ID</i>"}'</code> </p>
+        /// <p>When you make a request to test a connection or perform a migration, S3 checks the account ID of the bucket owner against the specified parameter.</p>
+        pub fn set_expected_bucket_owner(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.expected_bucket_owner = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`S3Settings`](crate::model::S3Settings).
         pub fn build(self) -> crate::model::S3Settings {
             crate::model::S3Settings {
                 service_access_role_arn: self.service_access_role_arn,
@@ -11690,12 +12238,14 @@ pub mod s3_settings {
                 max_file_size: self.max_file_size,
                 rfc4180: self.rfc4180,
                 date_partition_timezone: self.date_partition_timezone,
+                add_trailing_padding_character: self.add_trailing_padding_character,
+                expected_bucket_owner: self.expected_bucket_owner,
             }
         }
     }
 }
 impl S3Settings {
-    /// Creates a new builder-style object to manufacture [`S3Settings`](crate::model::S3Settings)
+    /// Creates a new builder-style object to manufacture [`S3Settings`](crate::model::S3Settings).
     pub fn builder() -> crate::model::s3_settings::Builder {
         crate::model::s3_settings::Builder::default()
     }
@@ -12148,6 +12698,7 @@ impl AsRef<str> for CompressionTypeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DynamoDbSettings {
     /// <p> The Amazon Resource Name (ARN) used by the service to access the IAM role. The role must allow the <code>iam:PassRole</code> action.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
 }
 impl DynamoDbSettings {
@@ -12163,11 +12714,10 @@ impl std::fmt::Debug for DynamoDbSettings {
         formatter.finish()
     }
 }
-/// See [`DynamoDbSettings`](crate::model::DynamoDbSettings)
+/// See [`DynamoDbSettings`](crate::model::DynamoDbSettings).
 pub mod dynamo_db_settings {
 
-    /// A builder for [`DynamoDbSettings`](crate::model::DynamoDbSettings)
-    #[non_exhaustive]
+    /// A builder for [`DynamoDbSettings`](crate::model::DynamoDbSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_access_role_arn: std::option::Option<std::string::String>,
@@ -12186,7 +12736,7 @@ pub mod dynamo_db_settings {
             self.service_access_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DynamoDbSettings`](crate::model::DynamoDbSettings)
+        /// Consumes the builder and constructs a [`DynamoDbSettings`](crate::model::DynamoDbSettings).
         pub fn build(self) -> crate::model::DynamoDbSettings {
             crate::model::DynamoDbSettings {
                 service_access_role_arn: self.service_access_role_arn,
@@ -12195,7 +12745,7 @@ pub mod dynamo_db_settings {
     }
 }
 impl DynamoDbSettings {
-    /// Creates a new builder-style object to manufacture [`DynamoDbSettings`](crate::model::DynamoDbSettings)
+    /// Creates a new builder-style object to manufacture [`DynamoDbSettings`](crate::model::DynamoDbSettings).
     pub fn builder() -> crate::model::dynamo_db_settings::Builder {
         crate::model::dynamo_db_settings::Builder::default()
     }
@@ -12329,10 +12879,13 @@ impl AsRef<str> for ReplicationEndpointTypeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>A key is the required name of the tag. The string value can be 1-128 Unicode characters in length and can't be prefixed with "aws:" or "dms:". The string can only contain only the set of Unicode letters, digits, white-space, '_', '.', '/', '=', '+', '-' (Java regular expressions: "^([\\p{L}\\p{Z}\\p{N}_.:/=+\\-]*)$").</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>A value is the optional value of the tag. The string value can be 1-256 Unicode characters in length and can't be prefixed with "aws:" or "dms:". The string can only contain only the set of Unicode letters, digits, white-space, '_', '.', '/', '=', '+', '-' (Java regular expressions: "^([\\p{L}\\p{Z}\\p{N}_.:/=+\\-]*)$").</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) string that uniquely identifies the resource for which the tag is created.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -12358,11 +12911,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -12400,7 +12952,7 @@ pub mod tag {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -12411,7 +12963,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -12422,24 +12974,34 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Certificate {
     /// <p>A customer-assigned name for the certificate. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens. They can't end with a hyphen or contain two consecutive hyphens.</p>
+    #[doc(hidden)]
     pub certificate_identifier: std::option::Option<std::string::String>,
     /// <p>The date that the certificate was created.</p>
+    #[doc(hidden)]
     pub certificate_creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The contents of a <code>.pem</code> file, which contains an X.509 certificate.</p>
+    #[doc(hidden)]
     pub certificate_pem: std::option::Option<std::string::String>,
     /// <p>The location of an imported Oracle Wallet certificate for use with SSL. Example: <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code> </p>
+    #[doc(hidden)]
     pub certificate_wallet: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The Amazon Resource Name (ARN) for the certificate.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The owner of the certificate.</p>
+    #[doc(hidden)]
     pub certificate_owner: std::option::Option<std::string::String>,
     /// <p>The beginning date that the certificate is valid.</p>
+    #[doc(hidden)]
     pub valid_from_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The final date that the certificate is valid.</p>
+    #[doc(hidden)]
     pub valid_to_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The signing algorithm for the certificate.</p>
+    #[doc(hidden)]
     pub signing_algorithm: std::option::Option<std::string::String>,
     /// <p>The key length of the cryptographic algorithm being used.</p>
+    #[doc(hidden)]
     pub key_length: std::option::Option<i32>,
 }
 impl Certificate {
@@ -12500,11 +13062,10 @@ impl std::fmt::Debug for Certificate {
         formatter.finish()
     }
 }
-/// See [`Certificate`](crate::model::Certificate)
+/// See [`Certificate`](crate::model::Certificate).
 pub mod certificate {
 
-    /// A builder for [`Certificate`](crate::model::Certificate)
-    #[non_exhaustive]
+    /// A builder for [`Certificate`](crate::model::Certificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_identifier: std::option::Option<std::string::String>,
@@ -12646,7 +13207,7 @@ pub mod certificate {
             self.key_length = input;
             self
         }
-        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate)
+        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate).
         pub fn build(self) -> crate::model::Certificate {
             crate::model::Certificate {
                 certificate_identifier: self.certificate_identifier,
@@ -12664,7 +13225,7 @@ pub mod certificate {
     }
 }
 impl Certificate {
-    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate)
+    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate).
     pub fn builder() -> crate::model::certificate::Builder {
         crate::model::certificate::Builder::default()
     }
@@ -12675,39 +13236,56 @@ impl Certificate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableStatistics {
     /// <p>The schema name.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>The name of the table.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The number of insert actions performed on a table.</p>
+    #[doc(hidden)]
     pub inserts: i64,
     /// <p>The number of delete actions performed on a table.</p>
+    #[doc(hidden)]
     pub deletes: i64,
     /// <p>The number of update actions performed on a table.</p>
+    #[doc(hidden)]
     pub updates: i64,
     /// <p>The data definition language (DDL) used to build and modify the structure of your tables.</p>
+    #[doc(hidden)]
     pub ddls: i64,
     /// <p>The number of rows added during the full load operation.</p>
+    #[doc(hidden)]
     pub full_load_rows: i64,
     /// <p>The number of rows that failed conditional checks during the full load operation (valid only for migrations where DynamoDB is the target).</p>
+    #[doc(hidden)]
     pub full_load_condtnl_chk_failed_rows: i64,
     /// <p>The number of rows that failed to load during the full load operation (valid only for migrations where DynamoDB is the target).</p>
+    #[doc(hidden)]
     pub full_load_error_rows: i64,
     /// <p>The time when the full load operation started.</p>
+    #[doc(hidden)]
     pub full_load_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the full load operation completed.</p>
+    #[doc(hidden)]
     pub full_load_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A value that indicates if the table was reloaded (<code>true</code>) or loaded as part of a new full load operation (<code>false</code>).</p>
+    #[doc(hidden)]
     pub full_load_reloaded: std::option::Option<bool>,
     /// <p>The last time a table was updated.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The state of the tables described.</p>
-    /// <p>Valid states: Table does not exist | Before load | Full load | Table completed | Table cancelled | Table error | Table all | Table updates | Table is being reloaded</p>
+    /// <p>Valid states: Table does not exist | Before load | Full load | Table completed | Table cancelled | Table error | Table is being reloaded</p>
+    #[doc(hidden)]
     pub table_state: std::option::Option<std::string::String>,
     /// <p>The number of records that have yet to be validated.</p>
+    #[doc(hidden)]
     pub validation_pending_records: i64,
     /// <p>The number of records that failed validation.</p>
+    #[doc(hidden)]
     pub validation_failed_records: i64,
     /// <p>The number of records that couldn't be validated.</p>
+    #[doc(hidden)]
     pub validation_suspended_records: i64,
     /// <p>The validation state of the table.</p>
     /// <p>This parameter can have the following values:</p>
@@ -12724,8 +13302,10 @@ pub struct TableStatistics {
     /// <li> <p>Preparing table – Preparing the table enabled in the migration task for validation.</p> </li>
     /// <li> <p>Pending revalidation – All rows in the table are pending validation after the table was updated.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub validation_state: std::option::Option<std::string::String>,
     /// <p>Additional details about the state of validation.</p>
+    #[doc(hidden)]
     pub validation_state_details: std::option::Option<std::string::String>,
 }
 impl TableStatistics {
@@ -12782,7 +13362,7 @@ impl TableStatistics {
         self.last_update_time.as_ref()
     }
     /// <p>The state of the tables described.</p>
-    /// <p>Valid states: Table does not exist | Before load | Full load | Table completed | Table cancelled | Table error | Table all | Table updates | Table is being reloaded</p>
+    /// <p>Valid states: Table does not exist | Before load | Full load | Table completed | Table cancelled | Table error | Table is being reloaded</p>
     pub fn table_state(&self) -> std::option::Option<&str> {
         self.table_state.as_deref()
     }
@@ -12855,11 +13435,10 @@ impl std::fmt::Debug for TableStatistics {
         formatter.finish()
     }
 }
-/// See [`TableStatistics`](crate::model::TableStatistics)
+/// See [`TableStatistics`](crate::model::TableStatistics).
 pub mod table_statistics {
 
-    /// A builder for [`TableStatistics`](crate::model::TableStatistics)
-    #[non_exhaustive]
+    /// A builder for [`TableStatistics`](crate::model::TableStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_name: std::option::Option<std::string::String>,
@@ -13026,13 +13605,13 @@ pub mod table_statistics {
             self
         }
         /// <p>The state of the tables described.</p>
-        /// <p>Valid states: Table does not exist | Before load | Full load | Table completed | Table cancelled | Table error | Table all | Table updates | Table is being reloaded</p>
+        /// <p>Valid states: Table does not exist | Before load | Full load | Table completed | Table cancelled | Table error | Table is being reloaded</p>
         pub fn table_state(mut self, input: impl Into<std::string::String>) -> Self {
             self.table_state = Some(input.into());
             self
         }
         /// <p>The state of the tables described.</p>
-        /// <p>Valid states: Table does not exist | Before load | Full load | Table completed | Table cancelled | Table error | Table all | Table updates | Table is being reloaded</p>
+        /// <p>Valid states: Table does not exist | Before load | Full load | Table completed | Table cancelled | Table error | Table is being reloaded</p>
         pub fn set_table_state(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.table_state = input;
             self
@@ -13121,7 +13700,7 @@ pub mod table_statistics {
             self.validation_state_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableStatistics`](crate::model::TableStatistics)
+        /// Consumes the builder and constructs a [`TableStatistics`](crate::model::TableStatistics).
         pub fn build(self) -> crate::model::TableStatistics {
             crate::model::TableStatistics {
                 schema_name: self.schema_name,
@@ -13150,7 +13729,7 @@ pub mod table_statistics {
     }
 }
 impl TableStatistics {
-    /// Creates a new builder-style object to manufacture [`TableStatistics`](crate::model::TableStatistics)
+    /// Creates a new builder-style object to manufacture [`TableStatistics`](crate::model::TableStatistics).
     pub fn builder() -> crate::model::table_statistics::Builder {
         crate::model::table_statistics::Builder::default()
     }
@@ -13161,8 +13740,10 @@ impl TableStatistics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>The name of the filter as specified for a <code>Describe*</code> or similar operation.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The filter value, which can specify one or more values used to narrow the returned results.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -13183,11 +13764,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -13223,7 +13803,7 @@ pub mod filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -13233,7 +13813,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -13244,10 +13824,13 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationTaskIndividualAssessment {
     /// <p>Amazon Resource Name (ARN) of this individual assessment.</p>
+    #[doc(hidden)]
     pub replication_task_individual_assessment_arn: std::option::Option<std::string::String>,
     /// <p>ARN of the premigration assessment run that is created to run this individual assessment.</p>
+    #[doc(hidden)]
     pub replication_task_assessment_run_arn: std::option::Option<std::string::String>,
     /// <p>Name of this individual assessment.</p>
+    #[doc(hidden)]
     pub individual_assessment_name: std::option::Option<std::string::String>,
     /// <p>Individual assessment status.</p>
     /// <p>This status can have one of the following values:</p>
@@ -13259,8 +13842,10 @@ pub struct ReplicationTaskIndividualAssessment {
     /// <li> <p> <code>"pending"</code> </p> </li>
     /// <li> <p> <code>"running"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Date when this individual assessment was started as part of running the <code>StartReplicationTaskAssessmentRun</code> operation.</p>
+    #[doc(hidden)]
     pub replication_task_individual_assessment_start_date:
         std::option::Option<aws_smithy_types::DateTime>,
 }
@@ -13321,11 +13906,10 @@ impl std::fmt::Debug for ReplicationTaskIndividualAssessment {
         formatter.finish()
     }
 }
-/// See [`ReplicationTaskIndividualAssessment`](crate::model::ReplicationTaskIndividualAssessment)
+/// See [`ReplicationTaskIndividualAssessment`](crate::model::ReplicationTaskIndividualAssessment).
 pub mod replication_task_individual_assessment {
 
-    /// A builder for [`ReplicationTaskIndividualAssessment`](crate::model::ReplicationTaskIndividualAssessment)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationTaskIndividualAssessment`](crate::model::ReplicationTaskIndividualAssessment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_individual_assessment_arn:
@@ -13426,7 +14010,7 @@ pub mod replication_task_individual_assessment {
             self.replication_task_individual_assessment_start_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationTaskIndividualAssessment`](crate::model::ReplicationTaskIndividualAssessment)
+        /// Consumes the builder and constructs a [`ReplicationTaskIndividualAssessment`](crate::model::ReplicationTaskIndividualAssessment).
         pub fn build(self) -> crate::model::ReplicationTaskIndividualAssessment {
             crate::model::ReplicationTaskIndividualAssessment {
                 replication_task_individual_assessment_arn: self
@@ -13441,7 +14025,7 @@ pub mod replication_task_individual_assessment {
     }
 }
 impl ReplicationTaskIndividualAssessment {
-    /// Creates a new builder-style object to manufacture [`ReplicationTaskIndividualAssessment`](crate::model::ReplicationTaskIndividualAssessment)
+    /// Creates a new builder-style object to manufacture [`ReplicationTaskIndividualAssessment`](crate::model::ReplicationTaskIndividualAssessment).
     pub fn builder() -> crate::model::replication_task_individual_assessment::Builder {
         crate::model::replication_task_individual_assessment::Builder::default()
     }
@@ -13452,20 +14036,27 @@ impl ReplicationTaskIndividualAssessment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationTaskAssessmentResult {
     /// <p> The replication task identifier of the task on which the task assessment was run. </p>
+    #[doc(hidden)]
     pub replication_task_identifier: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the replication task. </p>
+    #[doc(hidden)]
     pub replication_task_arn: std::option::Option<std::string::String>,
     /// <p>The date the task assessment was completed. </p>
+    #[doc(hidden)]
     pub replication_task_last_assessment_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The status of the task assessment. </p>
+    #[doc(hidden)]
     pub assessment_status: std::option::Option<std::string::String>,
     /// <p> The file containing the results of the task assessment. </p>
+    #[doc(hidden)]
     pub assessment_results_file: std::option::Option<std::string::String>,
     /// <p> The task assessment results in JSON format. </p>
     /// <p>The response object only contains this field if you provide <code>DescribeReplicationTaskAssessmentResultsMessage$ReplicationTaskArn</code> in the request.</p>
+    #[doc(hidden)]
     pub assessment_results: std::option::Option<std::string::String>,
     /// <p> The URL of the S3 object containing the task assessment results. </p>
     /// <p>The response object only contains this field if you provide <code>DescribeReplicationTaskAssessmentResultsMessage$ReplicationTaskArn</code> in the request.</p>
+    #[doc(hidden)]
     pub s3_object_url: std::option::Option<std::string::String>,
 }
 impl ReplicationTaskAssessmentResult {
@@ -13521,11 +14112,10 @@ impl std::fmt::Debug for ReplicationTaskAssessmentResult {
         formatter.finish()
     }
 }
-/// See [`ReplicationTaskAssessmentResult`](crate::model::ReplicationTaskAssessmentResult)
+/// See [`ReplicationTaskAssessmentResult`](crate::model::ReplicationTaskAssessmentResult).
 pub mod replication_task_assessment_result {
 
-    /// A builder for [`ReplicationTaskAssessmentResult`](crate::model::ReplicationTaskAssessmentResult)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationTaskAssessmentResult`](crate::model::ReplicationTaskAssessmentResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_identifier: std::option::Option<std::string::String>,
@@ -13639,7 +14229,7 @@ pub mod replication_task_assessment_result {
             self.s3_object_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationTaskAssessmentResult`](crate::model::ReplicationTaskAssessmentResult)
+        /// Consumes the builder and constructs a [`ReplicationTaskAssessmentResult`](crate::model::ReplicationTaskAssessmentResult).
         pub fn build(self) -> crate::model::ReplicationTaskAssessmentResult {
             crate::model::ReplicationTaskAssessmentResult {
                 replication_task_identifier: self.replication_task_identifier,
@@ -13654,7 +14244,7 @@ pub mod replication_task_assessment_result {
     }
 }
 impl ReplicationTaskAssessmentResult {
-    /// Creates a new builder-style object to manufacture [`ReplicationTaskAssessmentResult`](crate::model::ReplicationTaskAssessmentResult)
+    /// Creates a new builder-style object to manufacture [`ReplicationTaskAssessmentResult`](crate::model::ReplicationTaskAssessmentResult).
     pub fn builder() -> crate::model::replication_task_assessment_result::Builder {
         crate::model::replication_task_assessment_result::Builder::default()
     }
@@ -13665,10 +14255,13 @@ impl ReplicationTaskAssessmentResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationInstanceTaskLog {
     /// <p>The name of the replication task.</p>
+    #[doc(hidden)]
     pub replication_task_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the replication task.</p>
+    #[doc(hidden)]
     pub replication_task_arn: std::option::Option<std::string::String>,
     /// <p>The size, in bytes, of the replication task log.</p>
+    #[doc(hidden)]
     pub replication_instance_task_log_size: i64,
 }
 impl ReplicationInstanceTaskLog {
@@ -13697,11 +14290,10 @@ impl std::fmt::Debug for ReplicationInstanceTaskLog {
         formatter.finish()
     }
 }
-/// See [`ReplicationInstanceTaskLog`](crate::model::ReplicationInstanceTaskLog)
+/// See [`ReplicationInstanceTaskLog`](crate::model::ReplicationInstanceTaskLog).
 pub mod replication_instance_task_log {
 
-    /// A builder for [`ReplicationInstanceTaskLog`](crate::model::ReplicationInstanceTaskLog)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationInstanceTaskLog`](crate::model::ReplicationInstanceTaskLog).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_name: std::option::Option<std::string::String>,
@@ -13748,7 +14340,7 @@ pub mod replication_instance_task_log {
             self.replication_instance_task_log_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationInstanceTaskLog`](crate::model::ReplicationInstanceTaskLog)
+        /// Consumes the builder and constructs a [`ReplicationInstanceTaskLog`](crate::model::ReplicationInstanceTaskLog).
         pub fn build(self) -> crate::model::ReplicationInstanceTaskLog {
             crate::model::ReplicationInstanceTaskLog {
                 replication_task_name: self.replication_task_name,
@@ -13761,7 +14353,7 @@ pub mod replication_instance_task_log {
     }
 }
 impl ReplicationInstanceTaskLog {
-    /// Creates a new builder-style object to manufacture [`ReplicationInstanceTaskLog`](crate::model::ReplicationInstanceTaskLog)
+    /// Creates a new builder-style object to manufacture [`ReplicationInstanceTaskLog`](crate::model::ReplicationInstanceTaskLog).
     pub fn builder() -> crate::model::replication_instance_task_log::Builder {
         crate::model::replication_instance_task_log::Builder::default()
     }
@@ -13772,8 +14364,10 @@ impl ReplicationInstanceTaskLog {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourcePendingMaintenanceActions {
     /// <p>The Amazon Resource Name (ARN) of the DMS resource that the pending maintenance action applies to. For information about creating an ARN, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.AWS.ARN.html"> Constructing an Amazon Resource Name (ARN) for DMS</a> in the DMS documentation.</p>
+    #[doc(hidden)]
     pub resource_identifier: std::option::Option<std::string::String>,
     /// <p>Detailed information about the pending maintenance action.</p>
+    #[doc(hidden)]
     pub pending_maintenance_action_details:
         std::option::Option<std::vec::Vec<crate::model::PendingMaintenanceAction>>,
 }
@@ -13800,11 +14394,10 @@ impl std::fmt::Debug for ResourcePendingMaintenanceActions {
         formatter.finish()
     }
 }
-/// See [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions)
+/// See [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions).
 pub mod resource_pending_maintenance_actions {
 
-    /// A builder for [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions)
-    #[non_exhaustive]
+    /// A builder for [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_identifier: std::option::Option<std::string::String>,
@@ -13847,7 +14440,7 @@ pub mod resource_pending_maintenance_actions {
             self.pending_maintenance_action_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions)
+        /// Consumes the builder and constructs a [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions).
         pub fn build(self) -> crate::model::ResourcePendingMaintenanceActions {
             crate::model::ResourcePendingMaintenanceActions {
                 resource_identifier: self.resource_identifier,
@@ -13857,7 +14450,7 @@ pub mod resource_pending_maintenance_actions {
     }
 }
 impl ResourcePendingMaintenanceActions {
-    /// Creates a new builder-style object to manufacture [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions)
+    /// Creates a new builder-style object to manufacture [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions).
     pub fn builder() -> crate::model::resource_pending_maintenance_actions::Builder {
         crate::model::resource_pending_maintenance_actions::Builder::default()
     }
@@ -13868,16 +14461,22 @@ impl ResourcePendingMaintenanceActions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingMaintenanceAction {
     /// <p>The type of pending maintenance action that is available for the resource.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::string::String>,
     /// <p>The date of the maintenance window when the action is to be applied. The maintenance action is applied to the resource during its first maintenance window after this date. If this date is specified, any <code>next-maintenance</code> opt-in requests are ignored.</p>
+    #[doc(hidden)]
     pub auto_applied_after_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the maintenance action will be automatically applied. The maintenance action is applied to the resource on this date regardless of the maintenance window for the resource. If this date is specified, any <code>immediate</code> opt-in requests are ignored.</p>
+    #[doc(hidden)]
     pub forced_apply_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of opt-in request that has been received for the resource.</p>
+    #[doc(hidden)]
     pub opt_in_status: std::option::Option<std::string::String>,
     /// <p>The effective date when the pending maintenance action will be applied to the resource. This date takes into account opt-in requests received from the <code>ApplyPendingMaintenanceAction</code> API operation, and also the <code>AutoAppliedAfterDate</code> and <code>ForcedApplyDate</code> parameter values. This value is blank if an opt-in request has not been received and nothing has been specified for <code>AutoAppliedAfterDate</code> or <code>ForcedApplyDate</code>.</p>
+    #[doc(hidden)]
     pub current_apply_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A description providing more detail about the maintenance action.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl PendingMaintenanceAction {
@@ -13918,11 +14517,10 @@ impl std::fmt::Debug for PendingMaintenanceAction {
         formatter.finish()
     }
 }
-/// See [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+/// See [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
 pub mod pending_maintenance_action {
 
-    /// A builder for [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
-    #[non_exhaustive]
+    /// A builder for [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<std::string::String>,
@@ -14005,7 +14603,7 @@ pub mod pending_maintenance_action {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+        /// Consumes the builder and constructs a [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
         pub fn build(self) -> crate::model::PendingMaintenanceAction {
             crate::model::PendingMaintenanceAction {
                 action: self.action,
@@ -14019,7 +14617,7 @@ pub mod pending_maintenance_action {
     }
 }
 impl PendingMaintenanceAction {
-    /// Creates a new builder-style object to manufacture [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+    /// Creates a new builder-style object to manufacture [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
     pub fn builder() -> crate::model::pending_maintenance_action::Builder {
         crate::model::pending_maintenance_action::Builder::default()
     }
@@ -14030,25 +14628,34 @@ impl PendingMaintenanceAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrderableReplicationInstance {
     /// <p>The version of the replication engine.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The compute and memory capacity of the replication instance as defined for the specified replication instance class. For example to specify the instance class dms.c4.large, set this parameter to <code>"dms.c4.large"</code>.</p>
     /// <p>For more information on the settings and capacities for the available replication instance classes, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.html#CHAP_ReplicationInstance.InDepth"> Selecting the right DMS replication instance for your migration</a>. </p>
+    #[doc(hidden)]
     pub replication_instance_class: std::option::Option<std::string::String>,
     /// <p>The type of storage used by the replication instance.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<std::string::String>,
     /// <p>The minimum amount of storage (in gigabytes) that can be allocated for the replication instance.</p>
+    #[doc(hidden)]
     pub min_allocated_storage: i32,
     /// <p>The minimum amount of storage (in gigabytes) that can be allocated for the replication instance.</p>
+    #[doc(hidden)]
     pub max_allocated_storage: i32,
     /// <p>The default amount of storage (in gigabytes) that is allocated for the replication instance.</p>
+    #[doc(hidden)]
     pub default_allocated_storage: i32,
     /// <p>The amount of storage (in gigabytes) that is allocated for the replication instance.</p>
+    #[doc(hidden)]
     pub included_allocated_storage: i32,
     /// <p>List of Availability Zones for this replication instance.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The value returned when the specified <code>EngineVersion</code> of the replication instance is in Beta or test mode. This indicates some features might not work as expected.</p> <note>
     /// <p>DMS supports the <code>ReleaseStatus</code> parameter in versions 3.1.4 and later.</p>
     /// </note>
+    #[doc(hidden)]
     pub release_status: std::option::Option<crate::model::ReleaseStatusValues>,
 }
 impl OrderableReplicationInstance {
@@ -14113,11 +14720,10 @@ impl std::fmt::Debug for OrderableReplicationInstance {
         formatter.finish()
     }
 }
-/// See [`OrderableReplicationInstance`](crate::model::OrderableReplicationInstance)
+/// See [`OrderableReplicationInstance`](crate::model::OrderableReplicationInstance).
 pub mod orderable_replication_instance {
 
-    /// A builder for [`OrderableReplicationInstance`](crate::model::OrderableReplicationInstance)
-    #[non_exhaustive]
+    /// A builder for [`OrderableReplicationInstance`](crate::model::OrderableReplicationInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine_version: std::option::Option<std::string::String>,
@@ -14245,7 +14851,7 @@ pub mod orderable_replication_instance {
             self.release_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrderableReplicationInstance`](crate::model::OrderableReplicationInstance)
+        /// Consumes the builder and constructs a [`OrderableReplicationInstance`](crate::model::OrderableReplicationInstance).
         pub fn build(self) -> crate::model::OrderableReplicationInstance {
             crate::model::OrderableReplicationInstance {
                 engine_version: self.engine_version,
@@ -14262,7 +14868,7 @@ pub mod orderable_replication_instance {
     }
 }
 impl OrderableReplicationInstance {
-    /// Creates a new builder-style object to manufacture [`OrderableReplicationInstance`](crate::model::OrderableReplicationInstance)
+    /// Creates a new builder-style object to manufacture [`OrderableReplicationInstance`](crate::model::OrderableReplicationInstance).
     pub fn builder() -> crate::model::orderable_replication_instance::Builder {
         crate::model::orderable_replication_instance::Builder::default()
     }
@@ -14324,22 +14930,31 @@ impl AsRef<str> for ReleaseStatusValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchemaResponse {
     /// <p>The number of lines of code in a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub code_line_count: std::option::Option<i64>,
     /// <p>The size level of the code in a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub code_size: std::option::Option<i64>,
     /// <p>The complexity level of the code in a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub complexity: std::option::Option<std::string::String>,
     /// <p>The database server for a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub server: std::option::Option<crate::model::ServerShortInfoResponse>,
     /// <p>The database for a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub database_instance: std::option::Option<crate::model::DatabaseShortInfoResponse>,
     /// <p>The ID of a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub schema_id: std::option::Option<std::string::String>,
     /// <p>The name of a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>Describes a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub original_schema: std::option::Option<crate::model::SchemaShortInfoResponse>,
     /// <p>The similarity value for a schema in a Fleet Advisor collector inventory. A higher similarity value indicates that a schema is likely to be a duplicate.</p>
+    #[doc(hidden)]
     pub similarity: std::option::Option<f64>,
 }
 impl SchemaResponse {
@@ -14397,11 +15012,10 @@ impl std::fmt::Debug for SchemaResponse {
         formatter.finish()
     }
 }
-/// See [`SchemaResponse`](crate::model::SchemaResponse)
+/// See [`SchemaResponse`](crate::model::SchemaResponse).
 pub mod schema_response {
 
-    /// A builder for [`SchemaResponse`](crate::model::SchemaResponse)
-    #[non_exhaustive]
+    /// A builder for [`SchemaResponse`](crate::model::SchemaResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_line_count: std::option::Option<i64>,
@@ -14514,7 +15128,7 @@ pub mod schema_response {
             self.similarity = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchemaResponse`](crate::model::SchemaResponse)
+        /// Consumes the builder and constructs a [`SchemaResponse`](crate::model::SchemaResponse).
         pub fn build(self) -> crate::model::SchemaResponse {
             crate::model::SchemaResponse {
                 code_line_count: self.code_line_count,
@@ -14531,7 +15145,7 @@ pub mod schema_response {
     }
 }
 impl SchemaResponse {
-    /// Creates a new builder-style object to manufacture [`SchemaResponse`](crate::model::SchemaResponse)
+    /// Creates a new builder-style object to manufacture [`SchemaResponse`](crate::model::SchemaResponse).
     pub fn builder() -> crate::model::schema_response::Builder {
         crate::model::schema_response::Builder::default()
     }
@@ -14542,14 +15156,19 @@ impl SchemaResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchemaShortInfoResponse {
     /// <p>The ID of a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub schema_id: std::option::Option<std::string::String>,
     /// <p>The name of a schema in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>The ID of a database in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub database_id: std::option::Option<std::string::String>,
     /// <p>The name of a database in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The IP address of a database in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub database_ip_address: std::option::Option<std::string::String>,
 }
 impl SchemaShortInfoResponse {
@@ -14585,11 +15204,10 @@ impl std::fmt::Debug for SchemaShortInfoResponse {
         formatter.finish()
     }
 }
-/// See [`SchemaShortInfoResponse`](crate::model::SchemaShortInfoResponse)
+/// See [`SchemaShortInfoResponse`](crate::model::SchemaShortInfoResponse).
 pub mod schema_short_info_response {
 
-    /// A builder for [`SchemaShortInfoResponse`](crate::model::SchemaShortInfoResponse)
-    #[non_exhaustive]
+    /// A builder for [`SchemaShortInfoResponse`](crate::model::SchemaShortInfoResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_id: std::option::Option<std::string::String>,
@@ -14655,7 +15273,7 @@ pub mod schema_short_info_response {
             self.database_ip_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchemaShortInfoResponse`](crate::model::SchemaShortInfoResponse)
+        /// Consumes the builder and constructs a [`SchemaShortInfoResponse`](crate::model::SchemaShortInfoResponse).
         pub fn build(self) -> crate::model::SchemaShortInfoResponse {
             crate::model::SchemaShortInfoResponse {
                 schema_id: self.schema_id,
@@ -14668,7 +15286,7 @@ pub mod schema_short_info_response {
     }
 }
 impl SchemaShortInfoResponse {
-    /// Creates a new builder-style object to manufacture [`SchemaShortInfoResponse`](crate::model::SchemaShortInfoResponse)
+    /// Creates a new builder-style object to manufacture [`SchemaShortInfoResponse`](crate::model::SchemaShortInfoResponse).
     pub fn builder() -> crate::model::schema_short_info_response::Builder {
         crate::model::schema_short_info_response::Builder::default()
     }
@@ -14679,12 +15297,16 @@ impl SchemaShortInfoResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatabaseShortInfoResponse {
     /// <p>The ID of a database in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub database_id: std::option::Option<std::string::String>,
     /// <p>The name of a database in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The IP address of a database in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub database_ip_address: std::option::Option<std::string::String>,
     /// <p>The database engine of a database in a Fleet Advisor collector inventory, for example <code>PostgreSQL</code>.</p>
+    #[doc(hidden)]
     pub database_engine: std::option::Option<std::string::String>,
 }
 impl DatabaseShortInfoResponse {
@@ -14715,11 +15337,10 @@ impl std::fmt::Debug for DatabaseShortInfoResponse {
         formatter.finish()
     }
 }
-/// See [`DatabaseShortInfoResponse`](crate::model::DatabaseShortInfoResponse)
+/// See [`DatabaseShortInfoResponse`](crate::model::DatabaseShortInfoResponse).
 pub mod database_short_info_response {
 
-    /// A builder for [`DatabaseShortInfoResponse`](crate::model::DatabaseShortInfoResponse)
-    #[non_exhaustive]
+    /// A builder for [`DatabaseShortInfoResponse`](crate::model::DatabaseShortInfoResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_id: std::option::Option<std::string::String>,
@@ -14777,7 +15398,7 @@ pub mod database_short_info_response {
             self.database_engine = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatabaseShortInfoResponse`](crate::model::DatabaseShortInfoResponse)
+        /// Consumes the builder and constructs a [`DatabaseShortInfoResponse`](crate::model::DatabaseShortInfoResponse).
         pub fn build(self) -> crate::model::DatabaseShortInfoResponse {
             crate::model::DatabaseShortInfoResponse {
                 database_id: self.database_id,
@@ -14789,7 +15410,7 @@ pub mod database_short_info_response {
     }
 }
 impl DatabaseShortInfoResponse {
-    /// Creates a new builder-style object to manufacture [`DatabaseShortInfoResponse`](crate::model::DatabaseShortInfoResponse)
+    /// Creates a new builder-style object to manufacture [`DatabaseShortInfoResponse`](crate::model::DatabaseShortInfoResponse).
     pub fn builder() -> crate::model::database_short_info_response::Builder {
         crate::model::database_short_info_response::Builder::default()
     }
@@ -14800,10 +15421,13 @@ impl DatabaseShortInfoResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerShortInfoResponse {
     /// <p>The ID of a server in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub server_id: std::option::Option<std::string::String>,
     /// <p>The IP address of a server in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The name address of a server in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
 }
 impl ServerShortInfoResponse {
@@ -14829,11 +15453,10 @@ impl std::fmt::Debug for ServerShortInfoResponse {
         formatter.finish()
     }
 }
-/// See [`ServerShortInfoResponse`](crate::model::ServerShortInfoResponse)
+/// See [`ServerShortInfoResponse`](crate::model::ServerShortInfoResponse).
 pub mod server_short_info_response {
 
-    /// A builder for [`ServerShortInfoResponse`](crate::model::ServerShortInfoResponse)
-    #[non_exhaustive]
+    /// A builder for [`ServerShortInfoResponse`](crate::model::ServerShortInfoResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_id: std::option::Option<std::string::String>,
@@ -14871,7 +15494,7 @@ pub mod server_short_info_response {
             self.server_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerShortInfoResponse`](crate::model::ServerShortInfoResponse)
+        /// Consumes the builder and constructs a [`ServerShortInfoResponse`](crate::model::ServerShortInfoResponse).
         pub fn build(self) -> crate::model::ServerShortInfoResponse {
             crate::model::ServerShortInfoResponse {
                 server_id: self.server_id,
@@ -14882,7 +15505,7 @@ pub mod server_short_info_response {
     }
 }
 impl ServerShortInfoResponse {
-    /// Creates a new builder-style object to manufacture [`ServerShortInfoResponse`](crate::model::ServerShortInfoResponse)
+    /// Creates a new builder-style object to manufacture [`ServerShortInfoResponse`](crate::model::ServerShortInfoResponse).
     pub fn builder() -> crate::model::server_short_info_response::Builder {
         crate::model::server_short_info_response::Builder::default()
     }
@@ -14893,6 +15516,7 @@ impl ServerShortInfoResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FleetAdvisorSchemaObjectResponse {
     /// <p>The ID of a schema object in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub schema_id: std::option::Option<std::string::String>,
     /// <p>The type of the schema object, as reported by the database engine. Examples include the following:</p>
     /// <ul>
@@ -14901,12 +15525,16 @@ pub struct FleetAdvisorSchemaObjectResponse {
     /// <li> <p> <code>SYSTEM_TABLE</code> </p> </li>
     /// <li> <p> <code>QUEUE</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub object_type: std::option::Option<std::string::String>,
     /// <p>The number of objects in a schema object in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub number_of_objects: std::option::Option<i64>,
     /// <p>The number of lines of code in a schema object in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub code_line_count: std::option::Option<i64>,
     /// <p>The size level of the code in a schema object in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub code_size: std::option::Option<i64>,
 }
 impl FleetAdvisorSchemaObjectResponse {
@@ -14948,11 +15576,10 @@ impl std::fmt::Debug for FleetAdvisorSchemaObjectResponse {
         formatter.finish()
     }
 }
-/// See [`FleetAdvisorSchemaObjectResponse`](crate::model::FleetAdvisorSchemaObjectResponse)
+/// See [`FleetAdvisorSchemaObjectResponse`](crate::model::FleetAdvisorSchemaObjectResponse).
 pub mod fleet_advisor_schema_object_response {
 
-    /// A builder for [`FleetAdvisorSchemaObjectResponse`](crate::model::FleetAdvisorSchemaObjectResponse)
-    #[non_exhaustive]
+    /// A builder for [`FleetAdvisorSchemaObjectResponse`](crate::model::FleetAdvisorSchemaObjectResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_id: std::option::Option<std::string::String>,
@@ -15024,7 +15651,7 @@ pub mod fleet_advisor_schema_object_response {
             self.code_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`FleetAdvisorSchemaObjectResponse`](crate::model::FleetAdvisorSchemaObjectResponse)
+        /// Consumes the builder and constructs a [`FleetAdvisorSchemaObjectResponse`](crate::model::FleetAdvisorSchemaObjectResponse).
         pub fn build(self) -> crate::model::FleetAdvisorSchemaObjectResponse {
             crate::model::FleetAdvisorSchemaObjectResponse {
                 schema_id: self.schema_id,
@@ -15037,7 +15664,7 @@ pub mod fleet_advisor_schema_object_response {
     }
 }
 impl FleetAdvisorSchemaObjectResponse {
-    /// Creates a new builder-style object to manufacture [`FleetAdvisorSchemaObjectResponse`](crate::model::FleetAdvisorSchemaObjectResponse)
+    /// Creates a new builder-style object to manufacture [`FleetAdvisorSchemaObjectResponse`](crate::model::FleetAdvisorSchemaObjectResponse).
     pub fn builder() -> crate::model::fleet_advisor_schema_object_response::Builder {
         crate::model::fleet_advisor_schema_object_response::Builder::default()
     }
@@ -15048,8 +15675,10 @@ impl FleetAdvisorSchemaObjectResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FleetAdvisorLsaAnalysisResponse {
     /// <p>The ID of an LSA analysis run by a Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub lsa_analysis_id: std::option::Option<std::string::String>,
     /// <p>The status of an LSA analysis run by a Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl FleetAdvisorLsaAnalysisResponse {
@@ -15070,11 +15699,10 @@ impl std::fmt::Debug for FleetAdvisorLsaAnalysisResponse {
         formatter.finish()
     }
 }
-/// See [`FleetAdvisorLsaAnalysisResponse`](crate::model::FleetAdvisorLsaAnalysisResponse)
+/// See [`FleetAdvisorLsaAnalysisResponse`](crate::model::FleetAdvisorLsaAnalysisResponse).
 pub mod fleet_advisor_lsa_analysis_response {
 
-    /// A builder for [`FleetAdvisorLsaAnalysisResponse`](crate::model::FleetAdvisorLsaAnalysisResponse)
-    #[non_exhaustive]
+    /// A builder for [`FleetAdvisorLsaAnalysisResponse`](crate::model::FleetAdvisorLsaAnalysisResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lsa_analysis_id: std::option::Option<std::string::String>,
@@ -15104,7 +15732,7 @@ pub mod fleet_advisor_lsa_analysis_response {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`FleetAdvisorLsaAnalysisResponse`](crate::model::FleetAdvisorLsaAnalysisResponse)
+        /// Consumes the builder and constructs a [`FleetAdvisorLsaAnalysisResponse`](crate::model::FleetAdvisorLsaAnalysisResponse).
         pub fn build(self) -> crate::model::FleetAdvisorLsaAnalysisResponse {
             crate::model::FleetAdvisorLsaAnalysisResponse {
                 lsa_analysis_id: self.lsa_analysis_id,
@@ -15114,7 +15742,7 @@ pub mod fleet_advisor_lsa_analysis_response {
     }
 }
 impl FleetAdvisorLsaAnalysisResponse {
-    /// Creates a new builder-style object to manufacture [`FleetAdvisorLsaAnalysisResponse`](crate::model::FleetAdvisorLsaAnalysisResponse)
+    /// Creates a new builder-style object to manufacture [`FleetAdvisorLsaAnalysisResponse`](crate::model::FleetAdvisorLsaAnalysisResponse).
     pub fn builder() -> crate::model::fleet_advisor_lsa_analysis_response::Builder {
         crate::model::fleet_advisor_lsa_analysis_response::Builder::default()
     }
@@ -15125,19 +15753,26 @@ impl FleetAdvisorLsaAnalysisResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatabaseResponse {
     /// <p>The ID of a database in a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub database_id: std::option::Option<std::string::String>,
     /// <p>The name of a database in a Fleet Advisor collector inventory. </p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The IP address of a database in a Fleet Advisor collector inventory. </p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The number of schemas in a Fleet Advisor collector inventory database. </p>
+    #[doc(hidden)]
     pub number_of_schemas: std::option::Option<i64>,
     /// <p>The server name of a database in a Fleet Advisor collector inventory. </p>
+    #[doc(hidden)]
     pub server: std::option::Option<crate::model::ServerShortInfoResponse>,
     /// <p>The software details of a database in a Fleet Advisor collector inventory, such as database engine and version.</p>
+    #[doc(hidden)]
     pub software_details:
         std::option::Option<crate::model::DatabaseInstanceSoftwareDetailsResponse>,
     /// <p>A list of collectors associated with the database.</p>
+    #[doc(hidden)]
     pub collectors: std::option::Option<std::vec::Vec<crate::model::CollectorShortInfoResponse>>,
 }
 impl DatabaseResponse {
@@ -15185,11 +15820,10 @@ impl std::fmt::Debug for DatabaseResponse {
         formatter.finish()
     }
 }
-/// See [`DatabaseResponse`](crate::model::DatabaseResponse)
+/// See [`DatabaseResponse`](crate::model::DatabaseResponse).
 pub mod database_response {
 
-    /// A builder for [`DatabaseResponse`](crate::model::DatabaseResponse)
-    #[non_exhaustive]
+    /// A builder for [`DatabaseResponse`](crate::model::DatabaseResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_id: std::option::Option<std::string::String>,
@@ -15294,7 +15928,7 @@ pub mod database_response {
             self.collectors = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatabaseResponse`](crate::model::DatabaseResponse)
+        /// Consumes the builder and constructs a [`DatabaseResponse`](crate::model::DatabaseResponse).
         pub fn build(self) -> crate::model::DatabaseResponse {
             crate::model::DatabaseResponse {
                 database_id: self.database_id,
@@ -15309,7 +15943,7 @@ pub mod database_response {
     }
 }
 impl DatabaseResponse {
-    /// Creates a new builder-style object to manufacture [`DatabaseResponse`](crate::model::DatabaseResponse)
+    /// Creates a new builder-style object to manufacture [`DatabaseResponse`](crate::model::DatabaseResponse).
     pub fn builder() -> crate::model::database_response::Builder {
         crate::model::database_response::Builder::default()
     }
@@ -15320,8 +15954,10 @@ impl DatabaseResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CollectorShortInfoResponse {
     /// <p>The reference ID of the Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub collector_referenced_id: std::option::Option<std::string::String>,
     /// <p>The name of the Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub collector_name: std::option::Option<std::string::String>,
 }
 impl CollectorShortInfoResponse {
@@ -15342,11 +15978,10 @@ impl std::fmt::Debug for CollectorShortInfoResponse {
         formatter.finish()
     }
 }
-/// See [`CollectorShortInfoResponse`](crate::model::CollectorShortInfoResponse)
+/// See [`CollectorShortInfoResponse`](crate::model::CollectorShortInfoResponse).
 pub mod collector_short_info_response {
 
-    /// A builder for [`CollectorShortInfoResponse`](crate::model::CollectorShortInfoResponse)
-    #[non_exhaustive]
+    /// A builder for [`CollectorShortInfoResponse`](crate::model::CollectorShortInfoResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collector_referenced_id: std::option::Option<std::string::String>,
@@ -15379,7 +16014,7 @@ pub mod collector_short_info_response {
             self.collector_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CollectorShortInfoResponse`](crate::model::CollectorShortInfoResponse)
+        /// Consumes the builder and constructs a [`CollectorShortInfoResponse`](crate::model::CollectorShortInfoResponse).
         pub fn build(self) -> crate::model::CollectorShortInfoResponse {
             crate::model::CollectorShortInfoResponse {
                 collector_referenced_id: self.collector_referenced_id,
@@ -15389,7 +16024,7 @@ pub mod collector_short_info_response {
     }
 }
 impl CollectorShortInfoResponse {
-    /// Creates a new builder-style object to manufacture [`CollectorShortInfoResponse`](crate::model::CollectorShortInfoResponse)
+    /// Creates a new builder-style object to manufacture [`CollectorShortInfoResponse`](crate::model::CollectorShortInfoResponse).
     pub fn builder() -> crate::model::collector_short_info_response::Builder {
         crate::model::collector_short_info_response::Builder::default()
     }
@@ -15400,18 +16035,25 @@ impl CollectorShortInfoResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatabaseInstanceSoftwareDetailsResponse {
     /// <p>The database engine of a database in a Fleet Advisor collector inventory, for example <code>Microsoft SQL Server</code>.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The database engine version of a database in a Fleet Advisor collector inventory, for example <code>2019</code>.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The database engine edition of a database in a Fleet Advisor collector inventory, for example <code>Express</code>.</p>
+    #[doc(hidden)]
     pub engine_edition: std::option::Option<std::string::String>,
     /// <p>The service pack level of the database.</p>
+    #[doc(hidden)]
     pub service_pack: std::option::Option<std::string::String>,
     /// <p>The support level of the database, for example <code>Mainstream support</code>.</p>
+    #[doc(hidden)]
     pub support_level: std::option::Option<std::string::String>,
     /// <p>The operating system architecture of the database.</p>
+    #[doc(hidden)]
     pub os_architecture: std::option::Option<i32>,
     /// <p>Information about the database engine software, for example <code>Mainstream support ends on November 14th, 2024</code>.</p>
+    #[doc(hidden)]
     pub tooltip: std::option::Option<std::string::String>,
 }
 impl DatabaseInstanceSoftwareDetailsResponse {
@@ -15457,11 +16099,10 @@ impl std::fmt::Debug for DatabaseInstanceSoftwareDetailsResponse {
         formatter.finish()
     }
 }
-/// See [`DatabaseInstanceSoftwareDetailsResponse`](crate::model::DatabaseInstanceSoftwareDetailsResponse)
+/// See [`DatabaseInstanceSoftwareDetailsResponse`](crate::model::DatabaseInstanceSoftwareDetailsResponse).
 pub mod database_instance_software_details_response {
 
-    /// A builder for [`DatabaseInstanceSoftwareDetailsResponse`](crate::model::DatabaseInstanceSoftwareDetailsResponse)
-    #[non_exhaustive]
+    /// A builder for [`DatabaseInstanceSoftwareDetailsResponse`](crate::model::DatabaseInstanceSoftwareDetailsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<std::string::String>,
@@ -15552,7 +16193,7 @@ pub mod database_instance_software_details_response {
             self.tooltip = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatabaseInstanceSoftwareDetailsResponse`](crate::model::DatabaseInstanceSoftwareDetailsResponse)
+        /// Consumes the builder and constructs a [`DatabaseInstanceSoftwareDetailsResponse`](crate::model::DatabaseInstanceSoftwareDetailsResponse).
         pub fn build(self) -> crate::model::DatabaseInstanceSoftwareDetailsResponse {
             crate::model::DatabaseInstanceSoftwareDetailsResponse {
                 engine: self.engine,
@@ -15567,7 +16208,7 @@ pub mod database_instance_software_details_response {
     }
 }
 impl DatabaseInstanceSoftwareDetailsResponse {
-    /// Creates a new builder-style object to manufacture [`DatabaseInstanceSoftwareDetailsResponse`](crate::model::DatabaseInstanceSoftwareDetailsResponse)
+    /// Creates a new builder-style object to manufacture [`DatabaseInstanceSoftwareDetailsResponse`](crate::model::DatabaseInstanceSoftwareDetailsResponse).
     pub fn builder() -> crate::model::database_instance_software_details_response::Builder {
         crate::model::database_instance_software_details_response::Builder::default()
     }
@@ -15578,30 +16219,43 @@ impl DatabaseInstanceSoftwareDetailsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CollectorResponse {
     /// <p>The reference ID of the Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub collector_referenced_id: std::option::Option<std::string::String>,
     /// <p>The name of the Fleet Advisor collector .</p>
+    #[doc(hidden)]
     pub collector_name: std::option::Option<std::string::String>,
     /// <p>The version of your Fleet Advisor collector, in semantic versioning format, for example <code>1.0.2</code> </p>
+    #[doc(hidden)]
     pub collector_version: std::option::Option<std::string::String>,
     /// <p>Whether the collector version is up to date.</p>
+    #[doc(hidden)]
     pub version_status: std::option::Option<crate::model::VersionStatus>,
     /// <p>A summary description of the Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket that the Fleet Advisor collector uses to store inventory metadata.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The IAM role that grants permissions to access the specified Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p>Describes the last Fleet Advisor collector health check.</p>
+    #[doc(hidden)]
     pub collector_health_check: std::option::Option<crate::model::CollectorHealthCheck>,
     /// <p>The timestamp of the last time the collector received data, in the following format: <code>2022-01-24T19:04:02.596113Z</code> </p>
+    #[doc(hidden)]
     pub last_data_received: std::option::Option<std::string::String>,
     /// <p>The timestamp when DMS registered the collector, in the following format: <code>2022-01-24T19:04:02.596113Z</code> </p>
+    #[doc(hidden)]
     pub registered_date: std::option::Option<std::string::String>,
     /// <p>The timestamp when you created the collector, in the following format: <code>2022-01-24T19:04:02.596113Z</code> </p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<std::string::String>,
     /// <p>The timestamp when DMS last modified the collector, in the following format: <code>2022-01-24T19:04:02.596113Z</code> </p>
+    #[doc(hidden)]
     pub modified_date: std::option::Option<std::string::String>,
     /// <p>Describes a Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub inventory_data: std::option::Option<crate::model::InventoryData>,
 }
 impl CollectorResponse {
@@ -15679,11 +16333,10 @@ impl std::fmt::Debug for CollectorResponse {
         formatter.finish()
     }
 }
-/// See [`CollectorResponse`](crate::model::CollectorResponse)
+/// See [`CollectorResponse`](crate::model::CollectorResponse).
 pub mod collector_response {
 
-    /// A builder for [`CollectorResponse`](crate::model::CollectorResponse)
-    #[non_exhaustive]
+    /// A builder for [`CollectorResponse`](crate::model::CollectorResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collector_referenced_id: std::option::Option<std::string::String>,
@@ -15864,7 +16517,7 @@ pub mod collector_response {
             self.inventory_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`CollectorResponse`](crate::model::CollectorResponse)
+        /// Consumes the builder and constructs a [`CollectorResponse`](crate::model::CollectorResponse).
         pub fn build(self) -> crate::model::CollectorResponse {
             crate::model::CollectorResponse {
                 collector_referenced_id: self.collector_referenced_id,
@@ -15885,7 +16538,7 @@ pub mod collector_response {
     }
 }
 impl CollectorResponse {
-    /// Creates a new builder-style object to manufacture [`CollectorResponse`](crate::model::CollectorResponse)
+    /// Creates a new builder-style object to manufacture [`CollectorResponse`](crate::model::CollectorResponse).
     pub fn builder() -> crate::model::collector_response::Builder {
         crate::model::collector_response::Builder::default()
     }
@@ -15896,8 +16549,10 @@ impl CollectorResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InventoryData {
     /// <p>The number of databases in the Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub number_of_databases: std::option::Option<i32>,
     /// <p>The number of schemas in the Fleet Advisor collector inventory.</p>
+    #[doc(hidden)]
     pub number_of_schemas: std::option::Option<i32>,
 }
 impl InventoryData {
@@ -15918,11 +16573,10 @@ impl std::fmt::Debug for InventoryData {
         formatter.finish()
     }
 }
-/// See [`InventoryData`](crate::model::InventoryData)
+/// See [`InventoryData`](crate::model::InventoryData).
 pub mod inventory_data {
 
-    /// A builder for [`InventoryData`](crate::model::InventoryData)
-    #[non_exhaustive]
+    /// A builder for [`InventoryData`](crate::model::InventoryData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) number_of_databases: std::option::Option<i32>,
@@ -15949,7 +16603,7 @@ pub mod inventory_data {
             self.number_of_schemas = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventoryData`](crate::model::InventoryData)
+        /// Consumes the builder and constructs a [`InventoryData`](crate::model::InventoryData).
         pub fn build(self) -> crate::model::InventoryData {
             crate::model::InventoryData {
                 number_of_databases: self.number_of_databases,
@@ -15959,7 +16613,7 @@ pub mod inventory_data {
     }
 }
 impl InventoryData {
-    /// Creates a new builder-style object to manufacture [`InventoryData`](crate::model::InventoryData)
+    /// Creates a new builder-style object to manufacture [`InventoryData`](crate::model::InventoryData).
     pub fn builder() -> crate::model::inventory_data::Builder {
         crate::model::inventory_data::Builder::default()
     }
@@ -15970,12 +16624,16 @@ impl InventoryData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CollectorHealthCheck {
     /// <p>The status of the Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub collector_status: std::option::Option<crate::model::CollectorStatus>,
     /// <p>Whether the local collector can access its Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub local_collector_s3_access: std::option::Option<bool>,
     /// <p>Whether the web collector can access its Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub web_collector_s3_access: std::option::Option<bool>,
     /// <p>Whether the role that you provided when creating the Fleet Advisor collector has sufficient permissions to access the Fleet Advisor web collector.</p>
+    #[doc(hidden)]
     pub web_collector_granted_role_based_access: std::option::Option<bool>,
 }
 impl CollectorHealthCheck {
@@ -16009,11 +16667,10 @@ impl std::fmt::Debug for CollectorHealthCheck {
         formatter.finish()
     }
 }
-/// See [`CollectorHealthCheck`](crate::model::CollectorHealthCheck)
+/// See [`CollectorHealthCheck`](crate::model::CollectorHealthCheck).
 pub mod collector_health_check {
 
-    /// A builder for [`CollectorHealthCheck`](crate::model::CollectorHealthCheck)
-    #[non_exhaustive]
+    /// A builder for [`CollectorHealthCheck`](crate::model::CollectorHealthCheck).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collector_status: std::option::Option<crate::model::CollectorStatus>,
@@ -16068,7 +16725,7 @@ pub mod collector_health_check {
             self.web_collector_granted_role_based_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`CollectorHealthCheck`](crate::model::CollectorHealthCheck)
+        /// Consumes the builder and constructs a [`CollectorHealthCheck`](crate::model::CollectorHealthCheck).
         pub fn build(self) -> crate::model::CollectorHealthCheck {
             crate::model::CollectorHealthCheck {
                 collector_status: self.collector_status,
@@ -16081,7 +16738,7 @@ pub mod collector_health_check {
     }
 }
 impl CollectorHealthCheck {
-    /// Creates a new builder-style object to manufacture [`CollectorHealthCheck`](crate::model::CollectorHealthCheck)
+    /// Creates a new builder-style object to manufacture [`CollectorHealthCheck`](crate::model::CollectorHealthCheck).
     pub fn builder() -> crate::model::collector_health_check::Builder {
         crate::model::collector_health_check::Builder::default()
     }
@@ -16206,15 +16863,20 @@ impl AsRef<str> for VersionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p> The identifier of an event source.</p>
+    #[doc(hidden)]
     pub source_identifier: std::option::Option<std::string::String>,
     /// <p> The type of DMS resource that generates events. </p>
     /// <p>Valid values: replication-instance | endpoint | replication-task</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::SourceType>,
     /// <p>The event message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The event categories available for the specified source type.</p>
+    #[doc(hidden)]
     pub event_categories: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date of the event.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Event {
@@ -16251,11 +16913,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_identifier: std::option::Option<std::string::String>,
@@ -16332,7 +16993,7 @@ pub mod event {
             self.date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 source_identifier: self.source_identifier,
@@ -16345,7 +17006,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -16408,8 +17069,10 @@ impl AsRef<str> for SourceType {
 pub struct EventCategoryGroup {
     /// <p> The type of DMS resource that generates events. </p>
     /// <p>Valid values: replication-instance | replication-server | security-group | replication-task</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<std::string::String>,
     /// <p> A list of event categories from a source type that you've chosen.</p>
+    #[doc(hidden)]
     pub event_categories: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl EventCategoryGroup {
@@ -16431,11 +17094,10 @@ impl std::fmt::Debug for EventCategoryGroup {
         formatter.finish()
     }
 }
-/// See [`EventCategoryGroup`](crate::model::EventCategoryGroup)
+/// See [`EventCategoryGroup`](crate::model::EventCategoryGroup).
 pub mod event_category_group {
 
-    /// A builder for [`EventCategoryGroup`](crate::model::EventCategoryGroup)
-    #[non_exhaustive]
+    /// A builder for [`EventCategoryGroup`](crate::model::EventCategoryGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_type: std::option::Option<std::string::String>,
@@ -16473,7 +17135,7 @@ pub mod event_category_group {
             self.event_categories = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventCategoryGroup`](crate::model::EventCategoryGroup)
+        /// Consumes the builder and constructs a [`EventCategoryGroup`](crate::model::EventCategoryGroup).
         pub fn build(self) -> crate::model::EventCategoryGroup {
             crate::model::EventCategoryGroup {
                 source_type: self.source_type,
@@ -16483,7 +17145,7 @@ pub mod event_category_group {
     }
 }
 impl EventCategoryGroup {
-    /// Creates a new builder-style object to manufacture [`EventCategoryGroup`](crate::model::EventCategoryGroup)
+    /// Creates a new builder-style object to manufacture [`EventCategoryGroup`](crate::model::EventCategoryGroup).
     pub fn builder() -> crate::model::event_category_group::Builder {
         crate::model::event_category_group::Builder::default()
     }
@@ -16494,14 +17156,19 @@ impl EventCategoryGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SupportedEndpointType {
     /// <p>The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.</p>
+    #[doc(hidden)]
     pub engine_name: std::option::Option<std::string::String>,
     /// <p>Indicates if change data capture (CDC) is supported.</p>
+    #[doc(hidden)]
     pub supports_cdc: bool,
     /// <p>The type of endpoint. Valid values are <code>source</code> and <code>target</code>.</p>
+    #[doc(hidden)]
     pub endpoint_type: std::option::Option<crate::model::ReplicationEndpointTypeValue>,
     /// <p>The earliest DMS engine version that supports this endpoint engine. Note that endpoint engines released with DMS versions earlier than 3.1.1 do not return a value for this parameter.</p>
+    #[doc(hidden)]
     pub replication_instance_engine_minimum_version: std::option::Option<std::string::String>,
     /// <p>The expanded name for the engine name. For example, if the <code>EngineName</code> parameter is "aurora," this value would be "Amazon Aurora MySQL."</p>
+    #[doc(hidden)]
     pub engine_display_name: std::option::Option<std::string::String>,
 }
 impl SupportedEndpointType {
@@ -16542,11 +17209,10 @@ impl std::fmt::Debug for SupportedEndpointType {
         formatter.finish()
     }
 }
-/// See [`SupportedEndpointType`](crate::model::SupportedEndpointType)
+/// See [`SupportedEndpointType`](crate::model::SupportedEndpointType).
 pub mod supported_endpoint_type {
 
-    /// A builder for [`SupportedEndpointType`](crate::model::SupportedEndpointType)
-    #[non_exhaustive]
+    /// A builder for [`SupportedEndpointType`](crate::model::SupportedEndpointType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine_name: std::option::Option<std::string::String>,
@@ -16619,7 +17285,7 @@ pub mod supported_endpoint_type {
             self.engine_display_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SupportedEndpointType`](crate::model::SupportedEndpointType)
+        /// Consumes the builder and constructs a [`SupportedEndpointType`](crate::model::SupportedEndpointType).
         pub fn build(self) -> crate::model::SupportedEndpointType {
             crate::model::SupportedEndpointType {
                 engine_name: self.engine_name,
@@ -16633,7 +17299,7 @@ pub mod supported_endpoint_type {
     }
 }
 impl SupportedEndpointType {
-    /// Creates a new builder-style object to manufacture [`SupportedEndpointType`](crate::model::SupportedEndpointType)
+    /// Creates a new builder-style object to manufacture [`SupportedEndpointType`](crate::model::SupportedEndpointType).
     pub fn builder() -> crate::model::supported_endpoint_type::Builder {
         crate::model::supported_endpoint_type::Builder::default()
     }
@@ -16644,22 +17310,31 @@ impl SupportedEndpointType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointSetting {
     /// <p>The name that you want to give the endpoint settings.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of endpoint. Valid values are <code>source</code> and <code>target</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EndpointSettingTypeValue>,
     /// <p>Enumerated values to use for this endpoint.</p>
+    #[doc(hidden)]
     pub enum_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that marks this endpoint setting as sensitive.</p>
+    #[doc(hidden)]
     pub sensitive: std::option::Option<bool>,
     /// <p>The unit of measure for this endpoint setting.</p>
+    #[doc(hidden)]
     pub units: std::option::Option<std::string::String>,
     /// <p>The relevance or validity of an endpoint setting for an engine name and its endpoint type.</p>
+    #[doc(hidden)]
     pub applicability: std::option::Option<std::string::String>,
     /// <p>The minimum value of an endpoint setting that is of type <code>int</code>.</p>
+    #[doc(hidden)]
     pub int_value_min: std::option::Option<i32>,
     /// <p>The maximum value of an endpoint setting that is of type <code>int</code>.</p>
+    #[doc(hidden)]
     pub int_value_max: std::option::Option<i32>,
     /// <p>The default value of the endpoint setting if no value is specified using <code>CreateEndpoint</code> or <code>ModifyEndpoint</code>.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
 }
 impl EndpointSetting {
@@ -16715,11 +17390,10 @@ impl std::fmt::Debug for EndpointSetting {
         formatter.finish()
     }
 }
-/// See [`EndpointSetting`](crate::model::EndpointSetting)
+/// See [`EndpointSetting`](crate::model::EndpointSetting).
 pub mod endpoint_setting {
 
-    /// A builder for [`EndpointSetting`](crate::model::EndpointSetting)
-    #[non_exhaustive]
+    /// A builder for [`EndpointSetting`](crate::model::EndpointSetting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -16841,7 +17515,7 @@ pub mod endpoint_setting {
             self.default_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointSetting`](crate::model::EndpointSetting)
+        /// Consumes the builder and constructs a [`EndpointSetting`](crate::model::EndpointSetting).
         pub fn build(self) -> crate::model::EndpointSetting {
             crate::model::EndpointSetting {
                 name: self.name,
@@ -16858,7 +17532,7 @@ pub mod endpoint_setting {
     }
 }
 impl EndpointSetting {
-    /// Creates a new builder-style object to manufacture [`EndpointSetting`](crate::model::EndpointSetting)
+    /// Creates a new builder-style object to manufacture [`EndpointSetting`](crate::model::EndpointSetting).
     pub fn builder() -> crate::model::endpoint_setting::Builder {
         crate::model::endpoint_setting::Builder::default()
     }
@@ -16932,10 +17606,13 @@ impl AsRef<str> for EndpointSettingTypeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountQuota {
     /// <p>The name of the DMS quota for this Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub account_quota_name: std::option::Option<std::string::String>,
     /// <p>The amount currently used toward the quota maximum.</p>
+    #[doc(hidden)]
     pub used: i64,
     /// <p>The maximum allowed value for the quota.</p>
+    #[doc(hidden)]
     pub max: i64,
 }
 impl AccountQuota {
@@ -16961,11 +17638,10 @@ impl std::fmt::Debug for AccountQuota {
         formatter.finish()
     }
 }
-/// See [`AccountQuota`](crate::model::AccountQuota)
+/// See [`AccountQuota`](crate::model::AccountQuota).
 pub mod account_quota {
 
-    /// A builder for [`AccountQuota`](crate::model::AccountQuota)
-    #[non_exhaustive]
+    /// A builder for [`AccountQuota`](crate::model::AccountQuota).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_quota_name: std::option::Option<std::string::String>,
@@ -17006,7 +17682,7 @@ pub mod account_quota {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountQuota`](crate::model::AccountQuota)
+        /// Consumes the builder and constructs a [`AccountQuota`](crate::model::AccountQuota).
         pub fn build(self) -> crate::model::AccountQuota {
             crate::model::AccountQuota {
                 account_quota_name: self.account_quota_name,
@@ -17017,7 +17693,7 @@ pub mod account_quota {
     }
 }
 impl AccountQuota {
-    /// Creates a new builder-style object to manufacture [`AccountQuota`](crate::model::AccountQuota)
+    /// Creates a new builder-style object to manufacture [`AccountQuota`](crate::model::AccountQuota).
     pub fn builder() -> crate::model::account_quota::Builder {
         crate::model::account_quota::Builder::default()
     }
