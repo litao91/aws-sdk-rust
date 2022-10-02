@@ -138,10 +138,6 @@ pub mod get_personalized_ranking_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetPersonalizedRankingInputOperationOutputAlias = crate::operation::GetPersonalizedRanking;
-#[doc(hidden)]
-pub type GetPersonalizedRankingInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetPersonalizedRankingInput {
     /// Consumes the builder and constructs an Operation<[`GetPersonalizedRanking`](crate::operation::GetPersonalizedRanking)>
     #[allow(unused_mut)]
@@ -153,7 +149,7 @@ impl GetPersonalizedRankingInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetPersonalizedRanking,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -217,10 +213,17 @@ impl GetPersonalizedRankingInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -236,7 +239,7 @@ impl GetPersonalizedRankingInput {
             "GetPersonalizedRanking",
             "personalizeruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetPersonalizedRankingInput`](crate::input::GetPersonalizedRankingInput).
@@ -263,6 +266,7 @@ pub mod get_recommendations_input {
             std::collections::HashMap<std::string::String, std::string::String>,
         >,
         pub(crate) recommender_arn: std::option::Option<std::string::String>,
+        pub(crate) promotions: std::option::Option<std::vec::Vec<crate::model::Promotion>>,
     }
     impl Builder {
         /// <p>The Amazon Resource Name (ARN) of the campaign to use for getting recommendations.</p>
@@ -352,7 +356,7 @@ pub mod get_recommendations_input {
         ///
         /// <p>The values to use when filtering recommendations. For each placeholder parameter in your filter expression, provide the parameter name (in matching case) as a key and the filter value(s) as the corresponding value. Separate multiple values for one parameter with a comma. </p>
         /// <p>For filter expressions that use an <code>INCLUDE</code> element to include items, you must provide values for all parameters that are defined in the expression. For filters with expressions that use an <code>EXCLUDE</code> element to exclude items, you can omit the <code>filter-values</code>.In this case, Amazon Personalize doesn't use that portion of the expression to filter recommendations.</p>
-        /// <p>For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering Recommendations</a>.</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering recommendations and user segments</a>.</p>
         pub fn filter_values(
             mut self,
             k: impl Into<std::string::String>,
@@ -365,7 +369,7 @@ pub mod get_recommendations_input {
         }
         /// <p>The values to use when filtering recommendations. For each placeholder parameter in your filter expression, provide the parameter name (in matching case) as a key and the filter value(s) as the corresponding value. Separate multiple values for one parameter with a comma. </p>
         /// <p>For filter expressions that use an <code>INCLUDE</code> element to include items, you must provide values for all parameters that are defined in the expression. For filters with expressions that use an <code>EXCLUDE</code> element to exclude items, you can omit the <code>filter-values</code>.In this case, Amazon Personalize doesn't use that portion of the expression to filter recommendations.</p>
-        /// <p>For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering Recommendations</a>.</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering recommendations and user segments</a>.</p>
         pub fn set_filter_values(
             mut self,
             input: std::option::Option<
@@ -388,6 +392,25 @@ pub mod get_recommendations_input {
             self.recommender_arn = input;
             self
         }
+        /// Appends an item to `promotions`.
+        ///
+        /// To override the contents of this collection use [`set_promotions`](Self::set_promotions).
+        ///
+        /// <p>The promotions to apply to the recommendation request. A promotion defines additional business rules that apply to a configurable subset of recommended items.</p>
+        pub fn promotions(mut self, input: crate::model::Promotion) -> Self {
+            let mut v = self.promotions.unwrap_or_default();
+            v.push(input);
+            self.promotions = Some(v);
+            self
+        }
+        /// <p>The promotions to apply to the recommendation request. A promotion defines additional business rules that apply to a configurable subset of recommended items.</p>
+        pub fn set_promotions(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::Promotion>>,
+        ) -> Self {
+            self.promotions = input;
+            self
+        }
         /// Consumes the builder and constructs a [`GetRecommendationsInput`](crate::input::GetRecommendationsInput).
         pub fn build(
             self,
@@ -402,14 +425,11 @@ pub mod get_recommendations_input {
                 filter_arn: self.filter_arn,
                 filter_values: self.filter_values,
                 recommender_arn: self.recommender_arn,
+                promotions: self.promotions,
             })
         }
     }
 }
-#[doc(hidden)]
-pub type GetRecommendationsInputOperationOutputAlias = crate::operation::GetRecommendations;
-#[doc(hidden)]
-pub type GetRecommendationsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetRecommendationsInput {
     /// Consumes the builder and constructs an Operation<[`GetRecommendations`](crate::operation::GetRecommendations)>
     #[allow(unused_mut)]
@@ -421,7 +441,7 @@ impl GetRecommendationsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetRecommendations,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -483,10 +503,17 @@ impl GetRecommendationsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -502,7 +529,7 @@ impl GetRecommendationsInput {
             "GetRecommendations",
             "personalizeruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetRecommendationsInput`](crate::input::GetRecommendationsInput).
@@ -539,13 +566,16 @@ pub struct GetRecommendationsInput {
     pub filter_arn: std::option::Option<std::string::String>,
     /// <p>The values to use when filtering recommendations. For each placeholder parameter in your filter expression, provide the parameter name (in matching case) as a key and the filter value(s) as the corresponding value. Separate multiple values for one parameter with a comma. </p>
     /// <p>For filter expressions that use an <code>INCLUDE</code> element to include items, you must provide values for all parameters that are defined in the expression. For filters with expressions that use an <code>EXCLUDE</code> element to exclude items, you can omit the <code>filter-values</code>.In this case, Amazon Personalize doesn't use that portion of the expression to filter recommendations.</p>
-    /// <p>For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering Recommendations</a>.</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering recommendations and user segments</a>.</p>
     #[doc(hidden)]
     pub filter_values:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender ARN if you created a Domain dataset group with a recommender for a domain use case.</p>
     #[doc(hidden)]
     pub recommender_arn: std::option::Option<std::string::String>,
+    /// <p>The promotions to apply to the recommendation request. A promotion defines additional business rules that apply to a configurable subset of recommended items.</p>
+    #[doc(hidden)]
+    pub promotions: std::option::Option<std::vec::Vec<crate::model::Promotion>>,
 }
 impl GetRecommendationsInput {
     /// <p>The Amazon Resource Name (ARN) of the campaign to use for getting recommendations.</p>
@@ -580,7 +610,7 @@ impl GetRecommendationsInput {
     }
     /// <p>The values to use when filtering recommendations. For each placeholder parameter in your filter expression, provide the parameter name (in matching case) as a key and the filter value(s) as the corresponding value. Separate multiple values for one parameter with a comma. </p>
     /// <p>For filter expressions that use an <code>INCLUDE</code> element to include items, you must provide values for all parameters that are defined in the expression. For filters with expressions that use an <code>EXCLUDE</code> element to exclude items, you can omit the <code>filter-values</code>.In this case, Amazon Personalize doesn't use that portion of the expression to filter recommendations.</p>
-    /// <p>For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering Recommendations</a>.</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering recommendations and user segments</a>.</p>
     pub fn filter_values(
         &self,
     ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
@@ -590,6 +620,10 @@ impl GetRecommendationsInput {
     /// <p>The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender ARN if you created a Domain dataset group with a recommender for a domain use case.</p>
     pub fn recommender_arn(&self) -> std::option::Option<&str> {
         self.recommender_arn.as_deref()
+    }
+    /// <p>The promotions to apply to the recommendation request. A promotion defines additional business rules that apply to a configurable subset of recommended items.</p>
+    pub fn promotions(&self) -> std::option::Option<&[crate::model::Promotion]> {
+        self.promotions.as_deref()
     }
 }
 impl std::fmt::Debug for GetRecommendationsInput {
@@ -603,6 +637,7 @@ impl std::fmt::Debug for GetRecommendationsInput {
         formatter.field("filter_arn", &self.filter_arn);
         formatter.field("filter_values", &self.filter_values);
         formatter.field("recommender_arn", &self.recommender_arn);
+        formatter.field("promotions", &self.promotions);
         formatter.finish()
     }
 }

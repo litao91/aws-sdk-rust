@@ -52,10 +52,6 @@ pub mod associate_accounts_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateAccountsInputOperationOutputAlias = crate::operation::AssociateAccounts;
-#[doc(hidden)]
-pub type AssociateAccountsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateAccountsInput {
     /// Consumes the builder and constructs an Operation<[`AssociateAccounts`](crate::operation::AssociateAccounts)>
     #[allow(unused_mut)]
@@ -67,7 +63,7 @@ impl AssociateAccountsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateAccounts,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -129,10 +125,17 @@ impl AssociateAccountsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -148,7 +151,7 @@ impl AssociateAccountsInput {
             "AssociateAccounts",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateAccountsInput`](crate::input::AssociateAccountsInput).
@@ -208,10 +211,6 @@ pub mod associate_pricing_rules_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociatePricingRulesInputOperationOutputAlias = crate::operation::AssociatePricingRules;
-#[doc(hidden)]
-pub type AssociatePricingRulesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociatePricingRulesInput {
     /// Consumes the builder and constructs an Operation<[`AssociatePricingRules`](crate::operation::AssociatePricingRules)>
     #[allow(unused_mut)]
@@ -223,7 +222,7 @@ impl AssociatePricingRulesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociatePricingRules,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -287,10 +286,17 @@ impl AssociatePricingRulesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -306,7 +312,7 @@ impl AssociatePricingRulesInput {
             "AssociatePricingRules",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociatePricingRulesInput`](crate::input::AssociatePricingRulesInput).
@@ -387,12 +393,6 @@ pub mod batch_associate_resources_to_custom_line_item_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchAssociateResourcesToCustomLineItemInputOperationOutputAlias =
-    crate::operation::BatchAssociateResourcesToCustomLineItem;
-#[doc(hidden)]
-pub type BatchAssociateResourcesToCustomLineItemInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl BatchAssociateResourcesToCustomLineItemInput {
     /// Consumes the builder and constructs an Operation<[`BatchAssociateResourcesToCustomLineItem`](crate::operation::BatchAssociateResourcesToCustomLineItem)>
     #[allow(unused_mut)]
@@ -404,7 +404,7 @@ impl BatchAssociateResourcesToCustomLineItemInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchAssociateResourcesToCustomLineItem,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -466,10 +466,17 @@ impl BatchAssociateResourcesToCustomLineItemInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -485,7 +492,7 @@ impl BatchAssociateResourcesToCustomLineItemInput {
             "BatchAssociateResourcesToCustomLineItem",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchAssociateResourcesToCustomLineItemInput`](crate::input::BatchAssociateResourcesToCustomLineItemInput).
@@ -568,12 +575,6 @@ pub mod batch_disassociate_resources_from_custom_line_item_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchDisassociateResourcesFromCustomLineItemInputOperationOutputAlias =
-    crate::operation::BatchDisassociateResourcesFromCustomLineItem;
-#[doc(hidden)]
-pub type BatchDisassociateResourcesFromCustomLineItemInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl BatchDisassociateResourcesFromCustomLineItemInput {
     /// Consumes the builder and constructs an Operation<[`BatchDisassociateResourcesFromCustomLineItem`](crate::operation::BatchDisassociateResourcesFromCustomLineItem)>
     #[allow(unused_mut)]
@@ -585,7 +586,7 @@ impl BatchDisassociateResourcesFromCustomLineItemInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchDisassociateResourcesFromCustomLineItem,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -650,10 +651,17 @@ impl BatchDisassociateResourcesFromCustomLineItemInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -669,7 +677,7 @@ impl BatchDisassociateResourcesFromCustomLineItemInput {
             "BatchDisassociateResourcesFromCustomLineItem",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchDisassociateResourcesFromCustomLineItemInput`](crate::input::BatchDisassociateResourcesFromCustomLineItemInput).
@@ -810,10 +818,6 @@ pub mod create_billing_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateBillingGroupInputOperationOutputAlias = crate::operation::CreateBillingGroup;
-#[doc(hidden)]
-pub type CreateBillingGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateBillingGroupInput {
     /// Consumes the builder and constructs an Operation<[`CreateBillingGroup`](crate::operation::CreateBillingGroup)>
     #[allow(unused_mut)]
@@ -825,7 +829,7 @@ impl CreateBillingGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateBillingGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -891,10 +895,17 @@ impl CreateBillingGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -910,7 +921,7 @@ impl CreateBillingGroupInput {
             "CreateBillingGroup",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateBillingGroupInput`](crate::input::CreateBillingGroupInput).
@@ -1051,10 +1062,6 @@ pub mod create_custom_line_item_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateCustomLineItemInputOperationOutputAlias = crate::operation::CreateCustomLineItem;
-#[doc(hidden)]
-pub type CreateCustomLineItemInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateCustomLineItemInput {
     /// Consumes the builder and constructs an Operation<[`CreateCustomLineItem`](crate::operation::CreateCustomLineItem)>
     #[allow(unused_mut)]
@@ -1066,7 +1073,7 @@ impl CreateCustomLineItemInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateCustomLineItem,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1135,10 +1142,17 @@ impl CreateCustomLineItemInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1154,7 +1168,7 @@ impl CreateCustomLineItemInput {
             "CreateCustomLineItem",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateCustomLineItemInput`](crate::input::CreateCustomLineItemInput).
@@ -1267,10 +1281,6 @@ pub mod create_pricing_plan_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreatePricingPlanInputOperationOutputAlias = crate::operation::CreatePricingPlan;
-#[doc(hidden)]
-pub type CreatePricingPlanInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreatePricingPlanInput {
     /// Consumes the builder and constructs an Operation<[`CreatePricingPlan`](crate::operation::CreatePricingPlan)>
     #[allow(unused_mut)]
@@ -1282,7 +1292,7 @@ impl CreatePricingPlanInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreatePricingPlan,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1348,10 +1358,17 @@ impl CreatePricingPlanInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1367,7 +1384,7 @@ impl CreatePricingPlanInput {
             "CreatePricingPlan",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreatePricingPlanInput`](crate::input::CreatePricingPlanInput).
@@ -1513,10 +1530,6 @@ pub mod create_pricing_rule_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreatePricingRuleInputOperationOutputAlias = crate::operation::CreatePricingRule;
-#[doc(hidden)]
-pub type CreatePricingRuleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreatePricingRuleInput {
     /// Consumes the builder and constructs an Operation<[`CreatePricingRule`](crate::operation::CreatePricingRule)>
     #[allow(unused_mut)]
@@ -1528,7 +1541,7 @@ impl CreatePricingRuleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreatePricingRule,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1594,10 +1607,17 @@ impl CreatePricingRuleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1613,7 +1633,7 @@ impl CreatePricingRuleInput {
             "CreatePricingRule",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreatePricingRuleInput`](crate::input::CreatePricingRuleInput).
@@ -1650,10 +1670,6 @@ pub mod delete_billing_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteBillingGroupInputOperationOutputAlias = crate::operation::DeleteBillingGroup;
-#[doc(hidden)]
-pub type DeleteBillingGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteBillingGroupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteBillingGroup`](crate::operation::DeleteBillingGroup)>
     #[allow(unused_mut)]
@@ -1665,7 +1681,7 @@ impl DeleteBillingGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteBillingGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1727,10 +1743,17 @@ impl DeleteBillingGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1746,7 +1769,7 @@ impl DeleteBillingGroupInput {
             "DeleteBillingGroup",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteBillingGroupInput`](crate::input::DeleteBillingGroupInput).
@@ -1804,10 +1827,6 @@ pub mod delete_custom_line_item_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteCustomLineItemInputOperationOutputAlias = crate::operation::DeleteCustomLineItem;
-#[doc(hidden)]
-pub type DeleteCustomLineItemInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteCustomLineItemInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCustomLineItem`](crate::operation::DeleteCustomLineItem)>
     #[allow(unused_mut)]
@@ -1819,7 +1838,7 @@ impl DeleteCustomLineItemInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCustomLineItem,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1883,10 +1902,17 @@ impl DeleteCustomLineItemInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1902,7 +1928,7 @@ impl DeleteCustomLineItemInput {
             "DeleteCustomLineItem",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteCustomLineItemInput`](crate::input::DeleteCustomLineItemInput).
@@ -1939,10 +1965,6 @@ pub mod delete_pricing_plan_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeletePricingPlanInputOperationOutputAlias = crate::operation::DeletePricingPlan;
-#[doc(hidden)]
-pub type DeletePricingPlanInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeletePricingPlanInput {
     /// Consumes the builder and constructs an Operation<[`DeletePricingPlan`](crate::operation::DeletePricingPlan)>
     #[allow(unused_mut)]
@@ -1954,7 +1976,7 @@ impl DeletePricingPlanInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeletePricingPlan,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2016,10 +2038,17 @@ impl DeletePricingPlanInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2035,7 +2064,7 @@ impl DeletePricingPlanInput {
             "DeletePricingPlan",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeletePricingPlanInput`](crate::input::DeletePricingPlanInput).
@@ -2072,10 +2101,6 @@ pub mod delete_pricing_rule_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeletePricingRuleInputOperationOutputAlias = crate::operation::DeletePricingRule;
-#[doc(hidden)]
-pub type DeletePricingRuleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeletePricingRuleInput {
     /// Consumes the builder and constructs an Operation<[`DeletePricingRule`](crate::operation::DeletePricingRule)>
     #[allow(unused_mut)]
@@ -2087,7 +2112,7 @@ impl DeletePricingRuleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeletePricingRule,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2149,10 +2174,17 @@ impl DeletePricingRuleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2168,7 +2200,7 @@ impl DeletePricingRuleInput {
             "DeletePricingRule",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeletePricingRuleInput`](crate::input::DeletePricingRuleInput).
@@ -2228,10 +2260,6 @@ pub mod disassociate_accounts_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisassociateAccountsInputOperationOutputAlias = crate::operation::DisassociateAccounts;
-#[doc(hidden)]
-pub type DisassociateAccountsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DisassociateAccountsInput {
     /// Consumes the builder and constructs an Operation<[`DisassociateAccounts`](crate::operation::DisassociateAccounts)>
     #[allow(unused_mut)]
@@ -2243,7 +2271,7 @@ impl DisassociateAccountsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisassociateAccounts,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2305,10 +2333,17 @@ impl DisassociateAccountsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2324,7 +2359,7 @@ impl DisassociateAccountsInput {
             "DisassociateAccounts",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisassociateAccountsInput`](crate::input::DisassociateAccountsInput).
@@ -2386,11 +2421,6 @@ pub mod disassociate_pricing_rules_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisassociatePricingRulesInputOperationOutputAlias =
-    crate::operation::DisassociatePricingRules;
-#[doc(hidden)]
-pub type DisassociatePricingRulesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DisassociatePricingRulesInput {
     /// Consumes the builder and constructs an Operation<[`DisassociatePricingRules`](crate::operation::DisassociatePricingRules)>
     #[allow(unused_mut)]
@@ -2402,7 +2432,7 @@ impl DisassociatePricingRulesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisassociatePricingRules,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2466,10 +2496,17 @@ impl DisassociatePricingRulesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2485,7 +2522,7 @@ impl DisassociatePricingRulesInput {
             "DisassociatePricingRules",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisassociatePricingRulesInput`](crate::input::DisassociatePricingRulesInput).
@@ -2562,11 +2599,6 @@ pub mod list_account_associations_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAccountAssociationsInputOperationOutputAlias =
-    crate::operation::ListAccountAssociations;
-#[doc(hidden)]
-pub type ListAccountAssociationsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAccountAssociationsInput {
     /// Consumes the builder and constructs an Operation<[`ListAccountAssociations`](crate::operation::ListAccountAssociations)>
     #[allow(unused_mut)]
@@ -2578,7 +2610,7 @@ impl ListAccountAssociationsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAccountAssociations,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2642,10 +2674,17 @@ impl ListAccountAssociationsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2661,7 +2700,7 @@ impl ListAccountAssociationsInput {
             "ListAccountAssociations",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAccountAssociationsInput`](crate::input::ListAccountAssociationsInput).
@@ -2744,11 +2783,6 @@ pub mod list_billing_group_cost_reports_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBillingGroupCostReportsInputOperationOutputAlias =
-    crate::operation::ListBillingGroupCostReports;
-#[doc(hidden)]
-pub type ListBillingGroupCostReportsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBillingGroupCostReportsInput {
     /// Consumes the builder and constructs an Operation<[`ListBillingGroupCostReports`](crate::operation::ListBillingGroupCostReports)>
     #[allow(unused_mut)]
@@ -2760,7 +2794,7 @@ impl ListBillingGroupCostReportsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBillingGroupCostReports,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2822,10 +2856,17 @@ impl ListBillingGroupCostReportsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2841,7 +2882,7 @@ impl ListBillingGroupCostReportsInput {
             "ListBillingGroupCostReports",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBillingGroupCostReportsInput`](crate::input::ListBillingGroupCostReportsInput).
@@ -2922,10 +2963,6 @@ pub mod list_billing_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBillingGroupsInputOperationOutputAlias = crate::operation::ListBillingGroups;
-#[doc(hidden)]
-pub type ListBillingGroupsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBillingGroupsInput {
     /// Consumes the builder and constructs an Operation<[`ListBillingGroups`](crate::operation::ListBillingGroups)>
     #[allow(unused_mut)]
@@ -2937,7 +2974,7 @@ impl ListBillingGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBillingGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2999,10 +3036,17 @@ impl ListBillingGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3018,7 +3062,7 @@ impl ListBillingGroupsInput {
             "ListBillingGroups",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBillingGroupsInput`](crate::input::ListBillingGroupsInput).
@@ -3099,10 +3143,6 @@ pub mod list_custom_line_items_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListCustomLineItemsInputOperationOutputAlias = crate::operation::ListCustomLineItems;
-#[doc(hidden)]
-pub type ListCustomLineItemsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListCustomLineItemsInput {
     /// Consumes the builder and constructs an Operation<[`ListCustomLineItems`](crate::operation::ListCustomLineItems)>
     #[allow(unused_mut)]
@@ -3114,7 +3154,7 @@ impl ListCustomLineItemsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListCustomLineItems,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3178,10 +3218,17 @@ impl ListCustomLineItemsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3197,7 +3244,7 @@ impl ListCustomLineItemsInput {
             "ListCustomLineItems",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListCustomLineItemsInput`](crate::input::ListCustomLineItemsInput).
@@ -3278,10 +3325,6 @@ pub mod list_pricing_plans_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListPricingPlansInputOperationOutputAlias = crate::operation::ListPricingPlans;
-#[doc(hidden)]
-pub type ListPricingPlansInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListPricingPlansInput {
     /// Consumes the builder and constructs an Operation<[`ListPricingPlans`](crate::operation::ListPricingPlans)>
     #[allow(unused_mut)]
@@ -3293,7 +3336,7 @@ impl ListPricingPlansInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListPricingPlans,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3355,10 +3398,17 @@ impl ListPricingPlansInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3374,7 +3424,7 @@ impl ListPricingPlansInput {
             "ListPricingPlans",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListPricingPlansInput`](crate::input::ListPricingPlansInput).
@@ -3459,12 +3509,6 @@ pub mod list_pricing_plans_associated_with_pricing_rule_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListPricingPlansAssociatedWithPricingRuleInputOperationOutputAlias =
-    crate::operation::ListPricingPlansAssociatedWithPricingRule;
-#[doc(hidden)]
-pub type ListPricingPlansAssociatedWithPricingRuleInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListPricingPlansAssociatedWithPricingRuleInput {
     /// Consumes the builder and constructs an Operation<[`ListPricingPlansAssociatedWithPricingRule`](crate::operation::ListPricingPlansAssociatedWithPricingRule)>
     #[allow(unused_mut)]
@@ -3476,7 +3520,7 @@ impl ListPricingPlansAssociatedWithPricingRuleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListPricingPlansAssociatedWithPricingRule,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3538,10 +3582,17 @@ impl ListPricingPlansAssociatedWithPricingRuleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3557,7 +3608,7 @@ impl ListPricingPlansAssociatedWithPricingRuleInput {
             "ListPricingPlansAssociatedWithPricingRule",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListPricingPlansAssociatedWithPricingRuleInput`](crate::input::ListPricingPlansAssociatedWithPricingRuleInput).
@@ -3639,10 +3690,6 @@ pub mod list_pricing_rules_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListPricingRulesInputOperationOutputAlias = crate::operation::ListPricingRules;
-#[doc(hidden)]
-pub type ListPricingRulesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListPricingRulesInput {
     /// Consumes the builder and constructs an Operation<[`ListPricingRules`](crate::operation::ListPricingRules)>
     #[allow(unused_mut)]
@@ -3654,7 +3701,7 @@ impl ListPricingRulesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListPricingRules,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3716,10 +3763,17 @@ impl ListPricingRulesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3735,7 +3789,7 @@ impl ListPricingRulesInput {
             "ListPricingRules",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListPricingRulesInput`](crate::input::ListPricingRulesInput).
@@ -3818,12 +3872,6 @@ pub mod list_pricing_rules_associated_to_pricing_plan_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListPricingRulesAssociatedToPricingPlanInputOperationOutputAlias =
-    crate::operation::ListPricingRulesAssociatedToPricingPlan;
-#[doc(hidden)]
-pub type ListPricingRulesAssociatedToPricingPlanInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListPricingRulesAssociatedToPricingPlanInput {
     /// Consumes the builder and constructs an Operation<[`ListPricingRulesAssociatedToPricingPlan`](crate::operation::ListPricingRulesAssociatedToPricingPlan)>
     #[allow(unused_mut)]
@@ -3835,7 +3883,7 @@ impl ListPricingRulesAssociatedToPricingPlanInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListPricingRulesAssociatedToPricingPlan,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3897,10 +3945,17 @@ impl ListPricingRulesAssociatedToPricingPlanInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3916,7 +3971,7 @@ impl ListPricingRulesAssociatedToPricingPlanInput {
             "ListPricingRulesAssociatedToPricingPlan",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListPricingRulesAssociatedToPricingPlanInput`](crate::input::ListPricingRulesAssociatedToPricingPlanInput).
@@ -4015,12 +4070,6 @@ pub mod list_resources_associated_to_custom_line_item_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListResourcesAssociatedToCustomLineItemInputOperationOutputAlias =
-    crate::operation::ListResourcesAssociatedToCustomLineItem;
-#[doc(hidden)]
-pub type ListResourcesAssociatedToCustomLineItemInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListResourcesAssociatedToCustomLineItemInput {
     /// Consumes the builder and constructs an Operation<[`ListResourcesAssociatedToCustomLineItem`](crate::operation::ListResourcesAssociatedToCustomLineItem)>
     #[allow(unused_mut)]
@@ -4032,7 +4081,7 @@ impl ListResourcesAssociatedToCustomLineItemInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListResourcesAssociatedToCustomLineItem,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4094,10 +4143,17 @@ impl ListResourcesAssociatedToCustomLineItemInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4113,7 +4169,7 @@ impl ListResourcesAssociatedToCustomLineItemInput {
             "ListResourcesAssociatedToCustomLineItem",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListResourcesAssociatedToCustomLineItemInput`](crate::input::ListResourcesAssociatedToCustomLineItemInput).
@@ -4152,10 +4208,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -4167,7 +4219,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4230,10 +4282,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4249,7 +4308,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -4317,10 +4376,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -4332,7 +4387,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4409,10 +4464,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4428,7 +4490,7 @@ impl TagResourceInput {
             "TagResource",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -4488,10 +4550,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -4503,7 +4561,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4579,10 +4637,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4598,7 +4663,7 @@ impl UntagResourceInput {
             "UntagResource",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -4694,10 +4759,6 @@ pub mod update_billing_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateBillingGroupInputOperationOutputAlias = crate::operation::UpdateBillingGroup;
-#[doc(hidden)]
-pub type UpdateBillingGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateBillingGroupInput {
     /// Consumes the builder and constructs an Operation<[`UpdateBillingGroup`](crate::operation::UpdateBillingGroup)>
     #[allow(unused_mut)]
@@ -4709,7 +4770,7 @@ impl UpdateBillingGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateBillingGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4771,10 +4832,17 @@ impl UpdateBillingGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4790,7 +4858,7 @@ impl UpdateBillingGroupInput {
             "UpdateBillingGroup",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateBillingGroupInput`](crate::input::UpdateBillingGroupInput).
@@ -4891,10 +4959,6 @@ pub mod update_custom_line_item_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateCustomLineItemInputOperationOutputAlias = crate::operation::UpdateCustomLineItem;
-#[doc(hidden)]
-pub type UpdateCustomLineItemInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateCustomLineItemInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCustomLineItem`](crate::operation::UpdateCustomLineItem)>
     #[allow(unused_mut)]
@@ -4906,7 +4970,7 @@ impl UpdateCustomLineItemInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCustomLineItem,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4970,10 +5034,17 @@ impl UpdateCustomLineItemInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4989,7 +5060,7 @@ impl UpdateCustomLineItemInput {
             "UpdateCustomLineItem",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateCustomLineItemInput`](crate::input::UpdateCustomLineItemInput).
@@ -5052,10 +5123,6 @@ pub mod update_pricing_plan_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdatePricingPlanInputOperationOutputAlias = crate::operation::UpdatePricingPlan;
-#[doc(hidden)]
-pub type UpdatePricingPlanInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdatePricingPlanInput {
     /// Consumes the builder and constructs an Operation<[`UpdatePricingPlan`](crate::operation::UpdatePricingPlan)>
     #[allow(unused_mut)]
@@ -5067,7 +5134,7 @@ impl UpdatePricingPlanInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdatePricingPlan,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5129,10 +5196,17 @@ impl UpdatePricingPlanInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5148,7 +5222,7 @@ impl UpdatePricingPlanInput {
             "UpdatePricingPlan",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdatePricingPlanInput`](crate::input::UpdatePricingPlanInput).
@@ -5238,10 +5312,6 @@ pub mod update_pricing_rule_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdatePricingRuleInputOperationOutputAlias = crate::operation::UpdatePricingRule;
-#[doc(hidden)]
-pub type UpdatePricingRuleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdatePricingRuleInput {
     /// Consumes the builder and constructs an Operation<[`UpdatePricingRule`](crate::operation::UpdatePricingRule)>
     #[allow(unused_mut)]
@@ -5253,7 +5323,7 @@ impl UpdatePricingRuleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdatePricingRule,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5315,10 +5385,17 @@ impl UpdatePricingRuleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5334,7 +5411,7 @@ impl UpdatePricingRuleInput {
             "UpdatePricingRule",
             "billingconductor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdatePricingRuleInput`](crate::input::UpdatePricingRuleInput).

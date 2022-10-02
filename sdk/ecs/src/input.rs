@@ -91,10 +91,6 @@ pub mod create_capacity_provider_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateCapacityProviderInputOperationOutputAlias = crate::operation::CreateCapacityProvider;
-#[doc(hidden)]
-pub type CreateCapacityProviderInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateCapacityProviderInput {
     /// Consumes the builder and constructs an Operation<[`CreateCapacityProvider`](crate::operation::CreateCapacityProvider)>
     #[allow(unused_mut)]
@@ -106,7 +102,7 @@ impl CreateCapacityProviderInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateCapacityProvider,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -175,10 +171,17 @@ impl CreateCapacityProviderInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -194,7 +197,7 @@ impl CreateCapacityProviderInput {
             "CreateCapacityProvider",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateCapacityProviderInput`](crate::input::CreateCapacityProviderInput).
@@ -364,10 +367,6 @@ pub mod create_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateClusterInputOperationOutputAlias = crate::operation::CreateCluster;
-#[doc(hidden)]
-pub type CreateClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateClusterInput {
     /// Consumes the builder and constructs an Operation<[`CreateCluster`](crate::operation::CreateCluster)>
     #[allow(unused_mut)]
@@ -379,7 +378,7 @@ impl CreateClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -446,10 +445,17 @@ impl CreateClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -465,7 +471,7 @@ impl CreateClusterInput {
             "CreateCluster",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateClusterInput`](crate::input::CreateClusterInput).
@@ -928,10 +934,6 @@ pub mod create_service_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateServiceInputOperationOutputAlias = crate::operation::CreateService;
-#[doc(hidden)]
-pub type CreateServiceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateServiceInput {
     /// Consumes the builder and constructs an Operation<[`CreateService`](crate::operation::CreateService)>
     #[allow(unused_mut)]
@@ -943,7 +945,7 @@ impl CreateServiceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateService,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1010,10 +1012,17 @@ impl CreateServiceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1029,7 +1038,7 @@ impl CreateServiceInput {
             "CreateService",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateServiceInput`](crate::input::CreateServiceInput).
@@ -1297,10 +1306,6 @@ pub mod create_task_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateTaskSetInputOperationOutputAlias = crate::operation::CreateTaskSet;
-#[doc(hidden)]
-pub type CreateTaskSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateTaskSetInput {
     /// Consumes the builder and constructs an Operation<[`CreateTaskSet`](crate::operation::CreateTaskSet)>
     #[allow(unused_mut)]
@@ -1312,7 +1317,7 @@ impl CreateTaskSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateTaskSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1379,10 +1384,17 @@ impl CreateTaskSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1398,7 +1410,7 @@ impl CreateTaskSetInput {
             "CreateTaskSet",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateTaskSetInput`](crate::input::CreateTaskSetInput).
@@ -1452,10 +1464,6 @@ pub mod delete_account_setting_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteAccountSettingInputOperationOutputAlias = crate::operation::DeleteAccountSetting;
-#[doc(hidden)]
-pub type DeleteAccountSettingInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteAccountSettingInput {
     /// Consumes the builder and constructs an Operation<[`DeleteAccountSetting`](crate::operation::DeleteAccountSetting)>
     #[allow(unused_mut)]
@@ -1467,7 +1475,7 @@ impl DeleteAccountSettingInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteAccountSetting,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1536,10 +1544,17 @@ impl DeleteAccountSettingInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1555,7 +1570,7 @@ impl DeleteAccountSettingInput {
             "DeleteAccountSetting",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteAccountSettingInput`](crate::input::DeleteAccountSettingInput).
@@ -1615,10 +1630,6 @@ pub mod delete_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteAttributesInputOperationOutputAlias = crate::operation::DeleteAttributes;
-#[doc(hidden)]
-pub type DeleteAttributesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteAttributesInput {
     /// Consumes the builder and constructs an Operation<[`DeleteAttributes`](crate::operation::DeleteAttributes)>
     #[allow(unused_mut)]
@@ -1630,7 +1641,7 @@ impl DeleteAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1697,10 +1708,17 @@ impl DeleteAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1716,7 +1734,7 @@ impl DeleteAttributesInput {
             "DeleteAttributes",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteAttributesInput`](crate::input::DeleteAttributesInput).
@@ -1758,10 +1776,6 @@ pub mod delete_capacity_provider_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteCapacityProviderInputOperationOutputAlias = crate::operation::DeleteCapacityProvider;
-#[doc(hidden)]
-pub type DeleteCapacityProviderInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteCapacityProviderInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCapacityProvider`](crate::operation::DeleteCapacityProvider)>
     #[allow(unused_mut)]
@@ -1773,7 +1787,7 @@ impl DeleteCapacityProviderInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCapacityProvider,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1842,10 +1856,17 @@ impl DeleteCapacityProviderInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1861,7 +1882,7 @@ impl DeleteCapacityProviderInput {
             "DeleteCapacityProvider",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteCapacityProviderInput`](crate::input::DeleteCapacityProviderInput).
@@ -1900,10 +1921,6 @@ pub mod delete_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteClusterInputOperationOutputAlias = crate::operation::DeleteCluster;
-#[doc(hidden)]
-pub type DeleteClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteClusterInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCluster`](crate::operation::DeleteCluster)>
     #[allow(unused_mut)]
@@ -1915,7 +1932,7 @@ impl DeleteClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1982,10 +1999,17 @@ impl DeleteClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2001,7 +2025,7 @@ impl DeleteClusterInput {
             "DeleteCluster",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteClusterInput`](crate::input::DeleteClusterInput).
@@ -2064,10 +2088,6 @@ pub mod delete_service_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteServiceInputOperationOutputAlias = crate::operation::DeleteService;
-#[doc(hidden)]
-pub type DeleteServiceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteServiceInput {
     /// Consumes the builder and constructs an Operation<[`DeleteService`](crate::operation::DeleteService)>
     #[allow(unused_mut)]
@@ -2079,7 +2099,7 @@ impl DeleteServiceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteService,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2146,10 +2166,17 @@ impl DeleteServiceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2165,7 +2192,7 @@ impl DeleteServiceInput {
             "DeleteService",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteServiceInput`](crate::input::DeleteServiceInput).
@@ -2240,10 +2267,6 @@ pub mod delete_task_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteTaskSetInputOperationOutputAlias = crate::operation::DeleteTaskSet;
-#[doc(hidden)]
-pub type DeleteTaskSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteTaskSetInput {
     /// Consumes the builder and constructs an Operation<[`DeleteTaskSet`](crate::operation::DeleteTaskSet)>
     #[allow(unused_mut)]
@@ -2255,7 +2278,7 @@ impl DeleteTaskSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteTaskSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2322,10 +2345,17 @@ impl DeleteTaskSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2341,7 +2371,7 @@ impl DeleteTaskSetInput {
             "DeleteTaskSet",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteTaskSetInput`](crate::input::DeleteTaskSetInput).
@@ -2411,11 +2441,6 @@ pub mod deregister_container_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeregisterContainerInstanceInputOperationOutputAlias =
-    crate::operation::DeregisterContainerInstance;
-#[doc(hidden)]
-pub type DeregisterContainerInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeregisterContainerInstanceInput {
     /// Consumes the builder and constructs an Operation<[`DeregisterContainerInstance`](crate::operation::DeregisterContainerInstance)>
     #[allow(unused_mut)]
@@ -2427,7 +2452,7 @@ impl DeregisterContainerInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeregisterContainerInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2493,10 +2518,17 @@ impl DeregisterContainerInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2512,7 +2544,7 @@ impl DeregisterContainerInstanceInput {
             "DeregisterContainerInstance",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeregisterContainerInstanceInput`](crate::input::DeregisterContainerInstanceInput).
@@ -2556,11 +2588,6 @@ pub mod deregister_task_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeregisterTaskDefinitionInputOperationOutputAlias =
-    crate::operation::DeregisterTaskDefinition;
-#[doc(hidden)]
-pub type DeregisterTaskDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeregisterTaskDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`DeregisterTaskDefinition`](crate::operation::DeregisterTaskDefinition)>
     #[allow(unused_mut)]
@@ -2572,7 +2599,7 @@ impl DeregisterTaskDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeregisterTaskDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2641,10 +2668,17 @@ impl DeregisterTaskDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2660,7 +2694,7 @@ impl DeregisterTaskDefinitionInput {
             "DeregisterTaskDefinition",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeregisterTaskDefinitionInput`](crate::input::DeregisterTaskDefinitionInput).
@@ -2759,11 +2793,6 @@ pub mod describe_capacity_providers_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCapacityProvidersInputOperationOutputAlias =
-    crate::operation::DescribeCapacityProviders;
-#[doc(hidden)]
-pub type DescribeCapacityProvidersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCapacityProvidersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCapacityProviders`](crate::operation::DescribeCapacityProviders)>
     #[allow(unused_mut)]
@@ -2775,7 +2804,7 @@ impl DescribeCapacityProvidersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCapacityProviders,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2844,10 +2873,17 @@ impl DescribeCapacityProvidersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2863,7 +2899,7 @@ impl DescribeCapacityProvidersInput {
             "DescribeCapacityProviders",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCapacityProvidersInput`](crate::input::DescribeCapacityProvidersInput).
@@ -2942,10 +2978,6 @@ pub mod describe_clusters_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeClustersInputOperationOutputAlias = crate::operation::DescribeClusters;
-#[doc(hidden)]
-pub type DescribeClustersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeClustersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeClusters`](crate::operation::DescribeClusters)>
     #[allow(unused_mut)]
@@ -2957,7 +2989,7 @@ impl DescribeClustersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeClusters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3024,10 +3056,17 @@ impl DescribeClustersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3043,7 +3082,7 @@ impl DescribeClustersInput {
             "DescribeClusters",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeClustersInput`](crate::input::DescribeClustersInput).
@@ -3127,11 +3166,6 @@ pub mod describe_container_instances_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeContainerInstancesInputOperationOutputAlias =
-    crate::operation::DescribeContainerInstances;
-#[doc(hidden)]
-pub type DescribeContainerInstancesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeContainerInstancesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeContainerInstances`](crate::operation::DescribeContainerInstances)>
     #[allow(unused_mut)]
@@ -3143,7 +3177,7 @@ impl DescribeContainerInstancesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeContainerInstances,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3212,10 +3246,17 @@ impl DescribeContainerInstancesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3231,7 +3272,7 @@ impl DescribeContainerInstancesInput {
             "DescribeContainerInstances",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeContainerInstancesInput`](crate::input::DescribeContainerInstancesInput).
@@ -3312,10 +3353,6 @@ pub mod describe_services_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeServicesInputOperationOutputAlias = crate::operation::DescribeServices;
-#[doc(hidden)]
-pub type DescribeServicesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeServicesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeServices`](crate::operation::DescribeServices)>
     #[allow(unused_mut)]
@@ -3327,7 +3364,7 @@ impl DescribeServicesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeServices,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3394,10 +3431,17 @@ impl DescribeServicesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3413,7 +3457,7 @@ impl DescribeServicesInput {
             "DescribeServices",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeServicesInput`](crate::input::DescribeServicesInput).
@@ -3476,10 +3520,6 @@ pub mod describe_task_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeTaskDefinitionInputOperationOutputAlias = crate::operation::DescribeTaskDefinition;
-#[doc(hidden)]
-pub type DescribeTaskDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeTaskDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`DescribeTaskDefinition`](crate::operation::DescribeTaskDefinition)>
     #[allow(unused_mut)]
@@ -3491,7 +3531,7 @@ impl DescribeTaskDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeTaskDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3560,10 +3600,17 @@ impl DescribeTaskDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3579,7 +3626,7 @@ impl DescribeTaskDefinitionInput {
             "DescribeTaskDefinition",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeTaskDefinitionInput`](crate::input::DescribeTaskDefinitionInput).
@@ -3660,10 +3707,6 @@ pub mod describe_tasks_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeTasksInputOperationOutputAlias = crate::operation::DescribeTasks;
-#[doc(hidden)]
-pub type DescribeTasksInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeTasksInput {
     /// Consumes the builder and constructs an Operation<[`DescribeTasks`](crate::operation::DescribeTasks)>
     #[allow(unused_mut)]
@@ -3675,7 +3718,7 @@ impl DescribeTasksInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeTasks,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3742,10 +3785,17 @@ impl DescribeTasksInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3761,7 +3811,7 @@ impl DescribeTasksInput {
             "DescribeTasks",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeTasksInput`](crate::input::DescribeTasksInput).
@@ -3854,10 +3904,6 @@ pub mod describe_task_sets_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeTaskSetsInputOperationOutputAlias = crate::operation::DescribeTaskSets;
-#[doc(hidden)]
-pub type DescribeTaskSetsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeTaskSetsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeTaskSets`](crate::operation::DescribeTaskSets)>
     #[allow(unused_mut)]
@@ -3869,7 +3915,7 @@ impl DescribeTaskSetsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeTaskSets,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3936,10 +3982,17 @@ impl DescribeTaskSetsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3955,7 +4008,7 @@ impl DescribeTaskSetsInput {
             "DescribeTaskSets",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeTaskSetsInput`](crate::input::DescribeTaskSetsInput).
@@ -4009,10 +4062,6 @@ pub mod discover_poll_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DiscoverPollEndpointInputOperationOutputAlias = crate::operation::DiscoverPollEndpoint;
-#[doc(hidden)]
-pub type DiscoverPollEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DiscoverPollEndpointInput {
     /// Consumes the builder and constructs an Operation<[`DiscoverPollEndpoint`](crate::operation::DiscoverPollEndpoint)>
     #[allow(unused_mut)]
@@ -4024,7 +4073,7 @@ impl DiscoverPollEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DiscoverPollEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4093,10 +4142,17 @@ impl DiscoverPollEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4112,7 +4168,7 @@ impl DiscoverPollEndpointInput {
             "DiscoverPollEndpoint",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DiscoverPollEndpointInput`](crate::input::DiscoverPollEndpointInput).
@@ -4199,10 +4255,6 @@ pub mod execute_command_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ExecuteCommandInputOperationOutputAlias = crate::operation::ExecuteCommand;
-#[doc(hidden)]
-pub type ExecuteCommandInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ExecuteCommandInput {
     /// Consumes the builder and constructs an Operation<[`ExecuteCommand`](crate::operation::ExecuteCommand)>
     #[allow(unused_mut)]
@@ -4214,7 +4266,7 @@ impl ExecuteCommandInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ExecuteCommand,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4281,10 +4333,17 @@ impl ExecuteCommandInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4300,7 +4359,7 @@ impl ExecuteCommandInput {
             "ExecuteCommand",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ExecuteCommandInput`](crate::input::ExecuteCommandInput).
@@ -4410,10 +4469,6 @@ pub mod list_account_settings_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAccountSettingsInputOperationOutputAlias = crate::operation::ListAccountSettings;
-#[doc(hidden)]
-pub type ListAccountSettingsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAccountSettingsInput {
     /// Consumes the builder and constructs an Operation<[`ListAccountSettings`](crate::operation::ListAccountSettings)>
     #[allow(unused_mut)]
@@ -4425,7 +4480,7 @@ impl ListAccountSettingsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAccountSettings,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4492,10 +4547,17 @@ impl ListAccountSettingsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4511,7 +4573,7 @@ impl ListAccountSettingsInput {
             "ListAccountSettings",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAccountSettingsInput`](crate::input::ListAccountSettingsInput).
@@ -4623,10 +4685,6 @@ pub mod list_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAttributesInputOperationOutputAlias = crate::operation::ListAttributes;
-#[doc(hidden)]
-pub type ListAttributesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAttributesInput {
     /// Consumes the builder and constructs an Operation<[`ListAttributes`](crate::operation::ListAttributes)>
     #[allow(unused_mut)]
@@ -4638,7 +4696,7 @@ impl ListAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4705,10 +4763,17 @@ impl ListAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4724,7 +4789,7 @@ impl ListAttributesInput {
             "ListAttributes",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAttributesInput`](crate::input::ListAttributesInput).
@@ -4779,10 +4844,6 @@ pub mod list_clusters_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListClustersInputOperationOutputAlias = crate::operation::ListClusters;
-#[doc(hidden)]
-pub type ListClustersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListClustersInput {
     /// Consumes the builder and constructs an Operation<[`ListClusters`](crate::operation::ListClusters)>
     #[allow(unused_mut)]
@@ -4794,7 +4855,7 @@ impl ListClustersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListClusters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4861,10 +4922,17 @@ impl ListClustersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4880,7 +4948,7 @@ impl ListClustersInput {
             "ListClusters",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListClustersInput`](crate::input::ListClustersInput).
@@ -4974,10 +5042,6 @@ pub mod list_container_instances_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListContainerInstancesInputOperationOutputAlias = crate::operation::ListContainerInstances;
-#[doc(hidden)]
-pub type ListContainerInstancesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListContainerInstancesInput {
     /// Consumes the builder and constructs an Operation<[`ListContainerInstances`](crate::operation::ListContainerInstances)>
     #[allow(unused_mut)]
@@ -4989,7 +5053,7 @@ impl ListContainerInstancesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListContainerInstances,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5058,10 +5122,17 @@ impl ListContainerInstancesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5077,7 +5148,7 @@ impl ListContainerInstancesInput {
             "ListContainerInstances",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListContainerInstancesInput`](crate::input::ListContainerInstancesInput).
@@ -5174,10 +5245,6 @@ pub mod list_services_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListServicesInputOperationOutputAlias = crate::operation::ListServices;
-#[doc(hidden)]
-pub type ListServicesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListServicesInput {
     /// Consumes the builder and constructs an Operation<[`ListServices`](crate::operation::ListServices)>
     #[allow(unused_mut)]
@@ -5189,7 +5256,7 @@ impl ListServicesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListServices,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5256,10 +5323,17 @@ impl ListServicesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5275,7 +5349,7 @@ impl ListServicesInput {
             "ListServices",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListServicesInput`](crate::input::ListServicesInput).
@@ -5314,10 +5388,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -5329,7 +5399,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5398,10 +5468,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5417,7 +5494,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -5504,11 +5581,6 @@ pub mod list_task_definition_families_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTaskDefinitionFamiliesInputOperationOutputAlias =
-    crate::operation::ListTaskDefinitionFamilies;
-#[doc(hidden)]
-pub type ListTaskDefinitionFamiliesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTaskDefinitionFamiliesInput {
     /// Consumes the builder and constructs an Operation<[`ListTaskDefinitionFamilies`](crate::operation::ListTaskDefinitionFamilies)>
     #[allow(unused_mut)]
@@ -5520,7 +5592,7 @@ impl ListTaskDefinitionFamiliesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTaskDefinitionFamilies,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5586,10 +5658,17 @@ impl ListTaskDefinitionFamiliesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5605,7 +5684,7 @@ impl ListTaskDefinitionFamiliesInput {
             "ListTaskDefinitionFamilies",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTaskDefinitionFamiliesInput`](crate::input::ListTaskDefinitionFamiliesInput).
@@ -5702,10 +5781,6 @@ pub mod list_task_definitions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTaskDefinitionsInputOperationOutputAlias = crate::operation::ListTaskDefinitions;
-#[doc(hidden)]
-pub type ListTaskDefinitionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTaskDefinitionsInput {
     /// Consumes the builder and constructs an Operation<[`ListTaskDefinitions`](crate::operation::ListTaskDefinitions)>
     #[allow(unused_mut)]
@@ -5717,7 +5792,7 @@ impl ListTaskDefinitionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTaskDefinitions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5784,10 +5859,17 @@ impl ListTaskDefinitionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5803,7 +5885,7 @@ impl ListTaskDefinitionsInput {
             "ListTaskDefinitions",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTaskDefinitionsInput`](crate::input::ListTaskDefinitionsInput).
@@ -5954,10 +6036,6 @@ pub mod list_tasks_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTasksInputOperationOutputAlias = crate::operation::ListTasks;
-#[doc(hidden)]
-pub type ListTasksInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTasksInput {
     /// Consumes the builder and constructs an Operation<[`ListTasks`](crate::operation::ListTasks)>
     #[allow(unused_mut)]
@@ -5969,7 +6047,7 @@ impl ListTasksInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTasks,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6036,10 +6114,17 @@ impl ListTasksInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6053,7 +6138,7 @@ impl ListTasksInput {
                     "ListTasks",
                     "ecs",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTasksInput`](crate::input::ListTasksInput).
@@ -6123,10 +6208,6 @@ pub mod put_account_setting_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutAccountSettingInputOperationOutputAlias = crate::operation::PutAccountSetting;
-#[doc(hidden)]
-pub type PutAccountSettingInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutAccountSettingInput {
     /// Consumes the builder and constructs an Operation<[`PutAccountSetting`](crate::operation::PutAccountSetting)>
     #[allow(unused_mut)]
@@ -6138,7 +6219,7 @@ impl PutAccountSettingInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutAccountSetting,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6205,10 +6286,17 @@ impl PutAccountSettingInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6224,7 +6312,7 @@ impl PutAccountSettingInput {
             "PutAccountSetting",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutAccountSettingInput`](crate::input::PutAccountSettingInput).
@@ -6277,11 +6365,6 @@ pub mod put_account_setting_default_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutAccountSettingDefaultInputOperationOutputAlias =
-    crate::operation::PutAccountSettingDefault;
-#[doc(hidden)]
-pub type PutAccountSettingDefaultInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutAccountSettingDefaultInput {
     /// Consumes the builder and constructs an Operation<[`PutAccountSettingDefault`](crate::operation::PutAccountSettingDefault)>
     #[allow(unused_mut)]
@@ -6293,7 +6376,7 @@ impl PutAccountSettingDefaultInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutAccountSettingDefault,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6362,10 +6445,17 @@ impl PutAccountSettingDefaultInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6381,7 +6471,7 @@ impl PutAccountSettingDefaultInput {
             "PutAccountSettingDefault",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutAccountSettingDefaultInput`](crate::input::PutAccountSettingDefaultInput).
@@ -6441,10 +6531,6 @@ pub mod put_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutAttributesInputOperationOutputAlias = crate::operation::PutAttributes;
-#[doc(hidden)]
-pub type PutAttributesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutAttributesInput {
     /// Consumes the builder and constructs an Operation<[`PutAttributes`](crate::operation::PutAttributes)>
     #[allow(unused_mut)]
@@ -6456,7 +6542,7 @@ impl PutAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6523,10 +6609,17 @@ impl PutAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6542,7 +6635,7 @@ impl PutAttributesInput {
             "PutAttributes",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutAttributesInput`](crate::input::PutAttributesInput).
@@ -6641,11 +6734,6 @@ pub mod put_cluster_capacity_providers_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutClusterCapacityProvidersInputOperationOutputAlias =
-    crate::operation::PutClusterCapacityProviders;
-#[doc(hidden)]
-pub type PutClusterCapacityProvidersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutClusterCapacityProvidersInput {
     /// Consumes the builder and constructs an Operation<[`PutClusterCapacityProviders`](crate::operation::PutClusterCapacityProviders)>
     #[allow(unused_mut)]
@@ -6657,7 +6745,7 @@ impl PutClusterCapacityProvidersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutClusterCapacityProviders,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6723,10 +6811,17 @@ impl PutClusterCapacityProvidersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6742,7 +6837,7 @@ impl PutClusterCapacityProvidersInput {
             "PutClusterCapacityProviders",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutClusterCapacityProvidersInput`](crate::input::PutClusterCapacityProvidersInput).
@@ -6951,11 +7046,6 @@ pub mod register_container_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RegisterContainerInstanceInputOperationOutputAlias =
-    crate::operation::RegisterContainerInstance;
-#[doc(hidden)]
-pub type RegisterContainerInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RegisterContainerInstanceInput {
     /// Consumes the builder and constructs an Operation<[`RegisterContainerInstance`](crate::operation::RegisterContainerInstance)>
     #[allow(unused_mut)]
@@ -6967,7 +7057,7 @@ impl RegisterContainerInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RegisterContainerInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7036,10 +7126,17 @@ impl RegisterContainerInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7055,7 +7152,7 @@ impl RegisterContainerInstanceInput {
             "RegisterContainerInstance",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RegisterContainerInstanceInput`](crate::input::RegisterContainerInstanceInput).
@@ -7489,10 +7586,6 @@ pub mod register_task_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RegisterTaskDefinitionInputOperationOutputAlias = crate::operation::RegisterTaskDefinition;
-#[doc(hidden)]
-pub type RegisterTaskDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RegisterTaskDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`RegisterTaskDefinition`](crate::operation::RegisterTaskDefinition)>
     #[allow(unused_mut)]
@@ -7504,7 +7597,7 @@ impl RegisterTaskDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RegisterTaskDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7573,10 +7666,17 @@ impl RegisterTaskDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7592,7 +7692,7 @@ impl RegisterTaskDefinitionInput {
             "RegisterTaskDefinition",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RegisterTaskDefinitionInput`](crate::input::RegisterTaskDefinitionInput).
@@ -7942,10 +8042,6 @@ pub mod run_task_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RunTaskInputOperationOutputAlias = crate::operation::RunTask;
-#[doc(hidden)]
-pub type RunTaskInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RunTaskInput {
     /// Consumes the builder and constructs an Operation<[`RunTask`](crate::operation::RunTask)>
     #[allow(unused_mut)]
@@ -7957,7 +8053,7 @@ impl RunTaskInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RunTask,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8024,10 +8120,17 @@ impl RunTaskInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8038,7 +8141,7 @@ impl RunTaskInput {
         let op =
             aws_smithy_http::operation::Operation::new(request, crate::operation::RunTask::new())
                 .with_metadata(aws_smithy_http::operation::Metadata::new("RunTask", "ecs"));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RunTaskInput`](crate::input::RunTaskInput).
@@ -8264,10 +8367,6 @@ pub mod start_task_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartTaskInputOperationOutputAlias = crate::operation::StartTask;
-#[doc(hidden)]
-pub type StartTaskInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartTaskInput {
     /// Consumes the builder and constructs an Operation<[`StartTask`](crate::operation::StartTask)>
     #[allow(unused_mut)]
@@ -8279,7 +8378,7 @@ impl StartTaskInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartTask,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8346,10 +8445,17 @@ impl StartTaskInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8363,7 +8469,7 @@ impl StartTaskInput {
                     "StartTask",
                     "ecs",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartTaskInput`](crate::input::StartTaskInput).
@@ -8425,10 +8531,6 @@ pub mod stop_task_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopTaskInputOperationOutputAlias = crate::operation::StopTask;
-#[doc(hidden)]
-pub type StopTaskInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopTaskInput {
     /// Consumes the builder and constructs an Operation<[`StopTask`](crate::operation::StopTask)>
     #[allow(unused_mut)]
@@ -8440,7 +8542,7 @@ impl StopTaskInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopTask,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8507,10 +8609,17 @@ impl StopTaskInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8521,7 +8630,7 @@ impl StopTaskInput {
         let op =
             aws_smithy_http::operation::Operation::new(request, crate::operation::StopTask::new())
                 .with_metadata(aws_smithy_http::operation::Metadata::new("StopTask", "ecs"));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopTaskInput`](crate::input::StopTaskInput).
@@ -8584,12 +8693,6 @@ pub mod submit_attachment_state_changes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SubmitAttachmentStateChangesInputOperationOutputAlias =
-    crate::operation::SubmitAttachmentStateChanges;
-#[doc(hidden)]
-pub type SubmitAttachmentStateChangesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl SubmitAttachmentStateChangesInput {
     /// Consumes the builder and constructs an Operation<[`SubmitAttachmentStateChanges`](crate::operation::SubmitAttachmentStateChanges)>
     #[allow(unused_mut)]
@@ -8601,7 +8704,7 @@ impl SubmitAttachmentStateChangesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SubmitAttachmentStateChanges,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8667,10 +8770,17 @@ impl SubmitAttachmentStateChangesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8686,7 +8796,7 @@ impl SubmitAttachmentStateChangesInput {
             "SubmitAttachmentStateChanges",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SubmitAttachmentStateChangesInput`](crate::input::SubmitAttachmentStateChangesInput).
@@ -8824,11 +8934,6 @@ pub mod submit_container_state_change_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SubmitContainerStateChangeInputOperationOutputAlias =
-    crate::operation::SubmitContainerStateChange;
-#[doc(hidden)]
-pub type SubmitContainerStateChangeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SubmitContainerStateChangeInput {
     /// Consumes the builder and constructs an Operation<[`SubmitContainerStateChange`](crate::operation::SubmitContainerStateChange)>
     #[allow(unused_mut)]
@@ -8840,7 +8945,7 @@ impl SubmitContainerStateChangeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SubmitContainerStateChange,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8906,10 +9011,17 @@ impl SubmitContainerStateChangeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8925,7 +9037,7 @@ impl SubmitContainerStateChangeInput {
             "SubmitContainerStateChange",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SubmitContainerStateChangeInput`](crate::input::SubmitContainerStateChangeInput).
@@ -9111,10 +9223,6 @@ pub mod submit_task_state_change_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SubmitTaskStateChangeInputOperationOutputAlias = crate::operation::SubmitTaskStateChange;
-#[doc(hidden)]
-pub type SubmitTaskStateChangeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SubmitTaskStateChangeInput {
     /// Consumes the builder and constructs an Operation<[`SubmitTaskStateChange`](crate::operation::SubmitTaskStateChange)>
     #[allow(unused_mut)]
@@ -9126,7 +9234,7 @@ impl SubmitTaskStateChangeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SubmitTaskStateChange,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9195,10 +9303,17 @@ impl SubmitTaskStateChangeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9214,7 +9329,7 @@ impl SubmitTaskStateChangeInput {
             "SubmitTaskStateChange",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SubmitTaskStateChangeInput`](crate::input::SubmitTaskStateChangeInput).
@@ -9294,10 +9409,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -9309,7 +9420,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9376,10 +9487,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9395,7 +9513,7 @@ impl TagResourceInput {
             "TagResource",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -9455,10 +9573,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -9470,7 +9584,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9537,10 +9651,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9556,7 +9677,7 @@ impl UntagResourceInput {
             "UntagResource",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -9614,10 +9735,6 @@ pub mod update_capacity_provider_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateCapacityProviderInputOperationOutputAlias = crate::operation::UpdateCapacityProvider;
-#[doc(hidden)]
-pub type UpdateCapacityProviderInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateCapacityProviderInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCapacityProvider`](crate::operation::UpdateCapacityProvider)>
     #[allow(unused_mut)]
@@ -9629,7 +9746,7 @@ impl UpdateCapacityProviderInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCapacityProvider,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9698,10 +9815,17 @@ impl UpdateCapacityProviderInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9717,7 +9841,7 @@ impl UpdateCapacityProviderInput {
             "UpdateCapacityProvider",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateCapacityProviderInput`](crate::input::UpdateCapacityProviderInput).
@@ -9792,10 +9916,6 @@ pub mod update_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateClusterInputOperationOutputAlias = crate::operation::UpdateCluster;
-#[doc(hidden)]
-pub type UpdateClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateClusterInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCluster`](crate::operation::UpdateCluster)>
     #[allow(unused_mut)]
@@ -9807,7 +9927,7 @@ impl UpdateClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9874,10 +9994,17 @@ impl UpdateClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9893,7 +10020,7 @@ impl UpdateClusterInput {
             "UpdateCluster",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateClusterInput`](crate::input::UpdateClusterInput).
@@ -9953,10 +10080,6 @@ pub mod update_cluster_settings_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateClusterSettingsInputOperationOutputAlias = crate::operation::UpdateClusterSettings;
-#[doc(hidden)]
-pub type UpdateClusterSettingsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateClusterSettingsInput {
     /// Consumes the builder and constructs an Operation<[`UpdateClusterSettings`](crate::operation::UpdateClusterSettings)>
     #[allow(unused_mut)]
@@ -9968,7 +10091,7 @@ impl UpdateClusterSettingsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateClusterSettings,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10037,10 +10160,17 @@ impl UpdateClusterSettingsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10056,7 +10186,7 @@ impl UpdateClusterSettingsInput {
             "UpdateClusterSettings",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateClusterSettingsInput`](crate::input::UpdateClusterSettingsInput).
@@ -10110,10 +10240,6 @@ pub mod update_container_agent_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateContainerAgentInputOperationOutputAlias = crate::operation::UpdateContainerAgent;
-#[doc(hidden)]
-pub type UpdateContainerAgentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateContainerAgentInput {
     /// Consumes the builder and constructs an Operation<[`UpdateContainerAgent`](crate::operation::UpdateContainerAgent)>
     #[allow(unused_mut)]
@@ -10125,7 +10251,7 @@ impl UpdateContainerAgentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateContainerAgent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10194,10 +10320,17 @@ impl UpdateContainerAgentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10213,7 +10346,7 @@ impl UpdateContainerAgentInput {
             "UpdateContainerAgent",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateContainerAgentInput`](crate::input::UpdateContainerAgentInput).
@@ -10290,12 +10423,6 @@ pub mod update_container_instances_state_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateContainerInstancesStateInputOperationOutputAlias =
-    crate::operation::UpdateContainerInstancesState;
-#[doc(hidden)]
-pub type UpdateContainerInstancesStateInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateContainerInstancesStateInput {
     /// Consumes the builder and constructs an Operation<[`UpdateContainerInstancesState`](crate::operation::UpdateContainerInstancesState)>
     #[allow(unused_mut)]
@@ -10307,7 +10434,7 @@ impl UpdateContainerInstancesStateInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateContainerInstancesState,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10373,10 +10500,17 @@ impl UpdateContainerInstancesStateInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10392,7 +10526,7 @@ impl UpdateContainerInstancesStateInput {
             "UpdateContainerInstancesState",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateContainerInstancesStateInput`](crate::input::UpdateContainerInstancesStateInput).
@@ -10733,10 +10867,6 @@ pub mod update_service_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateServiceInputOperationOutputAlias = crate::operation::UpdateService;
-#[doc(hidden)]
-pub type UpdateServiceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateServiceInput {
     /// Consumes the builder and constructs an Operation<[`UpdateService`](crate::operation::UpdateService)>
     #[allow(unused_mut)]
@@ -10748,7 +10878,7 @@ impl UpdateServiceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateService,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10815,10 +10945,17 @@ impl UpdateServiceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10834,7 +10971,7 @@ impl UpdateServiceInput {
             "UpdateService",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateServiceInput`](crate::input::UpdateServiceInput).
@@ -10902,11 +11039,6 @@ pub mod update_service_primary_task_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateServicePrimaryTaskSetInputOperationOutputAlias =
-    crate::operation::UpdateServicePrimaryTaskSet;
-#[doc(hidden)]
-pub type UpdateServicePrimaryTaskSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateServicePrimaryTaskSetInput {
     /// Consumes the builder and constructs an Operation<[`UpdateServicePrimaryTaskSet`](crate::operation::UpdateServicePrimaryTaskSet)>
     #[allow(unused_mut)]
@@ -10918,7 +11050,7 @@ impl UpdateServicePrimaryTaskSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateServicePrimaryTaskSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10984,10 +11116,17 @@ impl UpdateServicePrimaryTaskSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11003,7 +11142,7 @@ impl UpdateServicePrimaryTaskSetInput {
             "UpdateServicePrimaryTaskSet",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateServicePrimaryTaskSetInput`](crate::input::UpdateServicePrimaryTaskSetInput).
@@ -11078,10 +11217,6 @@ pub mod update_task_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateTaskSetInputOperationOutputAlias = crate::operation::UpdateTaskSet;
-#[doc(hidden)]
-pub type UpdateTaskSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateTaskSetInput {
     /// Consumes the builder and constructs an Operation<[`UpdateTaskSet`](crate::operation::UpdateTaskSet)>
     #[allow(unused_mut)]
@@ -11093,7 +11228,7 @@ impl UpdateTaskSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateTaskSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11160,10 +11295,17 @@ impl UpdateTaskSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11179,7 +11321,7 @@ impl UpdateTaskSetInput {
             "UpdateTaskSet",
             "ecs",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateTaskSetInput`](crate::input::UpdateTaskSetInput).

@@ -134,10 +134,6 @@ pub mod batch_execute_statement_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchExecuteStatementInputOperationOutputAlias = crate::operation::BatchExecuteStatement;
-#[doc(hidden)]
-pub type BatchExecuteStatementInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchExecuteStatementInput {
     /// Consumes the builder and constructs an Operation<[`BatchExecuteStatement`](crate::operation::BatchExecuteStatement)>
     #[allow(unused_mut)]
@@ -149,7 +145,7 @@ impl BatchExecuteStatementInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchExecuteStatement,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -213,10 +209,17 @@ impl BatchExecuteStatementInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -232,7 +235,7 @@ impl BatchExecuteStatementInput {
             "BatchExecuteStatement",
             "rdsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchExecuteStatementInput`](crate::input::BatchExecuteStatementInput).
@@ -307,10 +310,6 @@ pub mod begin_transaction_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BeginTransactionInputOperationOutputAlias = crate::operation::BeginTransaction;
-#[doc(hidden)]
-pub type BeginTransactionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BeginTransactionInput {
     /// Consumes the builder and constructs an Operation<[`BeginTransaction`](crate::operation::BeginTransaction)>
     #[allow(unused_mut)]
@@ -322,7 +321,7 @@ impl BeginTransactionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BeginTransaction,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -384,10 +383,17 @@ impl BeginTransactionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -403,7 +409,7 @@ impl BeginTransactionInput {
             "BeginTransaction",
             "rdsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BeginTransactionInput`](crate::input::BeginTransactionInput).
@@ -469,10 +475,6 @@ pub mod commit_transaction_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CommitTransactionInputOperationOutputAlias = crate::operation::CommitTransaction;
-#[doc(hidden)]
-pub type CommitTransactionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CommitTransactionInput {
     /// Consumes the builder and constructs an Operation<[`CommitTransaction`](crate::operation::CommitTransaction)>
     #[allow(unused_mut)]
@@ -484,7 +486,7 @@ impl CommitTransactionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CommitTransaction,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -546,10 +548,17 @@ impl CommitTransactionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -565,7 +574,7 @@ impl CommitTransactionInput {
             "CommitTransaction",
             "rdsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CommitTransactionInput`](crate::input::CommitTransactionInput).
@@ -664,10 +673,6 @@ pub mod execute_sql_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ExecuteSqlInputOperationOutputAlias = crate::operation::ExecuteSql;
-#[doc(hidden)]
-pub type ExecuteSqlInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ExecuteSqlInput {
     /// Consumes the builder and constructs an Operation<[`ExecuteSql`](crate::operation::ExecuteSql)>
     #[allow(unused_mut)]
@@ -679,7 +684,7 @@ impl ExecuteSqlInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ExecuteSql,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -741,10 +746,17 @@ impl ExecuteSqlInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -760,7 +772,7 @@ impl ExecuteSqlInput {
             "ExecuteSql",
             "rdsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ExecuteSqlInput`](crate::input::ExecuteSqlInput).
@@ -955,10 +967,6 @@ pub mod execute_statement_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ExecuteStatementInputOperationOutputAlias = crate::operation::ExecuteStatement;
-#[doc(hidden)]
-pub type ExecuteStatementInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ExecuteStatementInput {
     /// Consumes the builder and constructs an Operation<[`ExecuteStatement`](crate::operation::ExecuteStatement)>
     #[allow(unused_mut)]
@@ -970,7 +978,7 @@ impl ExecuteStatementInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ExecuteStatement,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1032,10 +1040,17 @@ impl ExecuteStatementInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1051,7 +1066,7 @@ impl ExecuteStatementInput {
             "ExecuteStatement",
             "rdsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ExecuteStatementInput`](crate::input::ExecuteStatementInput).
@@ -1117,10 +1132,6 @@ pub mod rollback_transaction_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RollbackTransactionInputOperationOutputAlias = crate::operation::RollbackTransaction;
-#[doc(hidden)]
-pub type RollbackTransactionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RollbackTransactionInput {
     /// Consumes the builder and constructs an Operation<[`RollbackTransaction`](crate::operation::RollbackTransaction)>
     #[allow(unused_mut)]
@@ -1132,7 +1143,7 @@ impl RollbackTransactionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RollbackTransaction,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1194,10 +1205,17 @@ impl RollbackTransactionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1213,7 +1231,7 @@ impl RollbackTransactionInput {
             "RollbackTransaction",
             "rdsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RollbackTransactionInput`](crate::input::RollbackTransactionInput).

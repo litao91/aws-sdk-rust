@@ -4353,6 +4353,65 @@ pub fn deser_operation_crate_operation_search_available_phone_numbers(
     Ok(builder)
 }
 
+pub fn deser_operation_crate_operation_search_security_profiles(
+    value: &[u8],
+    mut builder: crate::output::search_security_profiles_output::Builder,
+) -> Result<
+    crate::output::search_security_profiles_output::Builder,
+    aws_smithy_json::deserialize::Error,
+> {
+    let mut tokens_owned =
+        aws_smithy_json::deserialize::json_token_iter(crate::json_deser::or_empty_doc(value))
+            .peekable();
+    let tokens = &mut tokens_owned;
+    aws_smithy_json::deserialize::token::expect_start_object(tokens.next())?;
+    loop {
+        match tokens.next().transpose()? {
+            Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+            Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                match key.to_unescaped()?.as_ref() {
+                    "ApproximateTotalCount" => {
+                        builder = builder.set_approximate_total_count(
+                            aws_smithy_json::deserialize::token::expect_number_or_null(
+                                tokens.next(),
+                            )?
+                            .map(|v| v.try_into())
+                            .transpose()?,
+                        );
+                    }
+                    "NextToken" => {
+                        builder = builder.set_next_token(
+                            aws_smithy_json::deserialize::token::expect_string_or_null(
+                                tokens.next(),
+                            )?
+                            .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                            .transpose()?,
+                        );
+                    }
+                    "SecurityProfiles" => {
+                        builder = builder.set_security_profiles(
+                            crate::json_deser::deser_list_com_amazonaws_connect_security_profiles_search_summary_list(tokens)?
+                        );
+                    }
+                    _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                }
+            }
+            other => {
+                return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                    "expected object key or end object, found: {:?}",
+                    other
+                )))
+            }
+        }
+    }
+    if tokens.next().is_some() {
+        return Err(aws_smithy_json::deserialize::Error::custom(
+            "found more JSON tokens after completing parsing",
+        ));
+    }
+    Ok(builder)
+}
+
 pub fn deser_operation_crate_operation_search_users(
     value: &[u8],
     mut builder: crate::output::search_users_output::Builder,
@@ -4372,7 +4431,8 @@ pub fn deser_operation_crate_operation_search_users(
                             aws_smithy_json::deserialize::token::expect_number_or_null(
                                 tokens.next(),
                             )?
-                            .map(|v| v.to_i64()),
+                            .map(|v| v.try_into())
+                            .transpose()?,
                         );
                     }
                     "NextToken" => {
@@ -5175,7 +5235,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "State" => {
@@ -6159,7 +6220,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Status" => {
@@ -8418,6 +8480,46 @@ where
 }
 
 #[allow(clippy::type_complexity, non_snake_case)]
+pub fn deser_list_com_amazonaws_connect_security_profiles_search_summary_list<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<std::vec::Vec<crate::model::SecurityProfileSearchSummary>>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartArray { .. }) => {
+            let mut items = Vec::new();
+            loop {
+                match tokens.peek() {
+                    Some(Ok(aws_smithy_json::deserialize::Token::EndArray { .. })) => {
+                        tokens.next().transpose().unwrap();
+                        break;
+                    }
+                    _ => {
+                        let value =
+                            crate::json_deser::deser_structure_crate_model_security_profile_search_summary(tokens)?
+                        ;
+                        if let Some(value) = value {
+                            items.push(value);
+                        }
+                    }
+                }
+            }
+            Ok(Some(items))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start array or null",
+        )),
+    }
+}
+
+#[allow(clippy::type_complexity, non_snake_case)]
 pub fn deser_list_com_amazonaws_connect_user_search_summary_list<'a, I>(
     tokens: &mut std::iter::Peekable<I>,
 ) -> Result<
@@ -8904,7 +9006,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "EncryptionConfig" => {
@@ -9360,7 +9463,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DeskPhoneNumber" => {
@@ -11230,7 +11334,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Delay" => {
@@ -11238,7 +11343,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Channel" => {
@@ -11832,6 +11938,95 @@ where
     }
 }
 
+pub fn deser_structure_crate_model_security_profile_search_summary<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<Option<crate::model::SecurityProfileSearchSummary>, aws_smithy_json::deserialize::Error>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::SecurityProfileSearchSummary::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "Id" => {
+                                builder = builder.set_id(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "OrganizationResourceId" => {
+                                builder = builder.set_organization_resource_id(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "Arn" => {
+                                builder = builder.set_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "SecurityProfileName" => {
+                                builder = builder.set_security_profile_name(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "Description" => {
+                                builder = builder.set_description(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "Tags" => {
+                                builder = builder.set_tags(
+                                    crate::json_deser::deser_map_com_amazonaws_connect_tag_map(
+                                        tokens,
+                                    )?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
 pub fn deser_structure_crate_model_user_search_summary<'a, I>(
     tokens: &mut std::iter::Peekable<I>,
 ) -> Result<Option<crate::model::UserSearchSummary>, aws_smithy_json::deserialize::Error>
@@ -12361,7 +12556,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -12732,7 +12928,8 @@ where
                         let value = aws_smithy_json::deserialize::token::expect_number_or_null(
                             tokens.next(),
                         )?
-                        .map(|v| v.to_i32());
+                        .map(|v| v.try_into())
+                        .transpose()?;
                         if let Some(value) = value {
                             map.insert(key, value);
                         }
@@ -13564,7 +13761,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Minutes" => {
@@ -13572,7 +13770,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -13679,7 +13878,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -13890,7 +14089,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -14090,7 +14289,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,

@@ -41,12 +41,6 @@ pub mod accept_inbound_cross_cluster_search_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AcceptInboundCrossClusterSearchConnectionInputOperationOutputAlias =
-    crate::operation::AcceptInboundCrossClusterSearchConnection;
-#[doc(hidden)]
-pub type AcceptInboundCrossClusterSearchConnectionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AcceptInboundCrossClusterSearchConnectionInput {
     /// Consumes the builder and constructs an Operation<[`AcceptInboundCrossClusterSearchConnection`](crate::operation::AcceptInboundCrossClusterSearchConnection)>
     #[allow(unused_mut)]
@@ -58,7 +52,7 @@ impl AcceptInboundCrossClusterSearchConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AcceptInboundCrossClusterSearchConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -126,10 +120,17 @@ impl AcceptInboundCrossClusterSearchConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -145,7 +146,7 @@ impl AcceptInboundCrossClusterSearchConnectionInput {
             "AcceptInboundCrossClusterSearchConnection",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AcceptInboundCrossClusterSearchConnectionInput`](crate::input::AcceptInboundCrossClusterSearchConnectionInput).
@@ -205,10 +206,6 @@ pub mod add_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddTagsInputOperationOutputAlias = crate::operation::AddTags;
-#[doc(hidden)]
-pub type AddTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AddTagsInput {
     /// Consumes the builder and constructs an Operation<[`AddTags`](crate::operation::AddTags)>
     #[allow(unused_mut)]
@@ -220,7 +217,7 @@ impl AddTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -282,10 +279,17 @@ impl AddTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -299,7 +303,7 @@ impl AddTagsInput {
                     "AddTags",
                     "elasticsearchservice",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddTagsInput`](crate::input::AddTagsInput).
@@ -350,10 +354,6 @@ pub mod associate_package_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociatePackageInputOperationOutputAlias = crate::operation::AssociatePackage;
-#[doc(hidden)]
-pub type AssociatePackageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociatePackageInput {
     /// Consumes the builder and constructs an Operation<[`AssociatePackage`](crate::operation::AssociatePackage)>
     #[allow(unused_mut)]
@@ -365,7 +365,7 @@ impl AssociatePackageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociatePackage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -447,10 +447,17 @@ impl AssociatePackageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -466,7 +473,7 @@ impl AssociatePackageInput {
             "AssociatePackage",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociatePackageInput`](crate::input::AssociatePackageInput).
@@ -509,12 +516,6 @@ pub mod cancel_elasticsearch_service_software_update_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CancelElasticsearchServiceSoftwareUpdateInputOperationOutputAlias =
-    crate::operation::CancelElasticsearchServiceSoftwareUpdate;
-#[doc(hidden)]
-pub type CancelElasticsearchServiceSoftwareUpdateInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CancelElasticsearchServiceSoftwareUpdateInput {
     /// Consumes the builder and constructs an Operation<[`CancelElasticsearchServiceSoftwareUpdate`](crate::operation::CancelElasticsearchServiceSoftwareUpdate)>
     #[allow(unused_mut)]
@@ -526,7 +527,7 @@ impl CancelElasticsearchServiceSoftwareUpdateInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CancelElasticsearchServiceSoftwareUpdate,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -588,10 +589,17 @@ impl CancelElasticsearchServiceSoftwareUpdateInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -607,7 +615,7 @@ impl CancelElasticsearchServiceSoftwareUpdateInput {
             "CancelElasticsearchServiceSoftwareUpdate",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CancelElasticsearchServiceSoftwareUpdateInput`](crate::input::CancelElasticsearchServiceSoftwareUpdateInput).
@@ -927,11 +935,6 @@ pub mod create_elasticsearch_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateElasticsearchDomainInputOperationOutputAlias =
-    crate::operation::CreateElasticsearchDomain;
-#[doc(hidden)]
-pub type CreateElasticsearchDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateElasticsearchDomainInput {
     /// Consumes the builder and constructs an Operation<[`CreateElasticsearchDomain`](crate::operation::CreateElasticsearchDomain)>
     #[allow(unused_mut)]
@@ -943,7 +946,7 @@ impl CreateElasticsearchDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateElasticsearchDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1007,10 +1010,17 @@ impl CreateElasticsearchDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1026,7 +1036,7 @@ impl CreateElasticsearchDomainInput {
             "CreateElasticsearchDomain",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateElasticsearchDomainInput`](crate::input::CreateElasticsearchDomainInput).
@@ -1102,12 +1112,6 @@ pub mod create_outbound_cross_cluster_search_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateOutboundCrossClusterSearchConnectionInputOperationOutputAlias =
-    crate::operation::CreateOutboundCrossClusterSearchConnection;
-#[doc(hidden)]
-pub type CreateOutboundCrossClusterSearchConnectionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateOutboundCrossClusterSearchConnectionInput {
     /// Consumes the builder and constructs an Operation<[`CreateOutboundCrossClusterSearchConnection`](crate::operation::CreateOutboundCrossClusterSearchConnection)>
     #[allow(unused_mut)]
@@ -1119,7 +1123,7 @@ impl CreateOutboundCrossClusterSearchConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateOutboundCrossClusterSearchConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1181,10 +1185,17 @@ impl CreateOutboundCrossClusterSearchConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1200,7 +1211,7 @@ impl CreateOutboundCrossClusterSearchConnectionInput {
             "CreateOutboundCrossClusterSearchConnection",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateOutboundCrossClusterSearchConnectionInput`](crate::input::CreateOutboundCrossClusterSearchConnectionInput).
@@ -1285,10 +1296,6 @@ pub mod create_package_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreatePackageInputOperationOutputAlias = crate::operation::CreatePackage;
-#[doc(hidden)]
-pub type CreatePackageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreatePackageInput {
     /// Consumes the builder and constructs an Operation<[`CreatePackage`](crate::operation::CreatePackage)>
     #[allow(unused_mut)]
@@ -1300,7 +1307,7 @@ impl CreatePackageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreatePackage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1362,10 +1369,17 @@ impl CreatePackageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1381,7 +1395,7 @@ impl CreatePackageInput {
             "CreatePackage",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreatePackageInput`](crate::input::CreatePackageInput).
@@ -1422,11 +1436,6 @@ pub mod delete_elasticsearch_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteElasticsearchDomainInputOperationOutputAlias =
-    crate::operation::DeleteElasticsearchDomain;
-#[doc(hidden)]
-pub type DeleteElasticsearchDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteElasticsearchDomainInput {
     /// Consumes the builder and constructs an Operation<[`DeleteElasticsearchDomain`](crate::operation::DeleteElasticsearchDomain)>
     #[allow(unused_mut)]
@@ -1438,7 +1447,7 @@ impl DeleteElasticsearchDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteElasticsearchDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1505,10 +1514,17 @@ impl DeleteElasticsearchDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1524,7 +1540,7 @@ impl DeleteElasticsearchDomainInput {
             "DeleteElasticsearchDomain",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteElasticsearchDomainInput`](crate::input::DeleteElasticsearchDomainInput).
@@ -1551,12 +1567,6 @@ pub mod delete_elasticsearch_service_role_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteElasticsearchServiceRoleInputOperationOutputAlias =
-    crate::operation::DeleteElasticsearchServiceRole;
-#[doc(hidden)]
-pub type DeleteElasticsearchServiceRoleInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteElasticsearchServiceRoleInput {
     /// Consumes the builder and constructs an Operation<[`DeleteElasticsearchServiceRole`](crate::operation::DeleteElasticsearchServiceRole)>
     #[allow(unused_mut)]
@@ -1568,7 +1578,7 @@ impl DeleteElasticsearchServiceRoleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteElasticsearchServiceRole,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1616,10 +1626,17 @@ impl DeleteElasticsearchServiceRoleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1635,7 +1652,7 @@ impl DeleteElasticsearchServiceRoleInput {
             "DeleteElasticsearchServiceRole",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteElasticsearchServiceRoleInput`](crate::input::DeleteElasticsearchServiceRoleInput).
@@ -1684,12 +1701,6 @@ pub mod delete_inbound_cross_cluster_search_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteInboundCrossClusterSearchConnectionInputOperationOutputAlias =
-    crate::operation::DeleteInboundCrossClusterSearchConnection;
-#[doc(hidden)]
-pub type DeleteInboundCrossClusterSearchConnectionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteInboundCrossClusterSearchConnectionInput {
     /// Consumes the builder and constructs an Operation<[`DeleteInboundCrossClusterSearchConnection`](crate::operation::DeleteInboundCrossClusterSearchConnection)>
     #[allow(unused_mut)]
@@ -1701,7 +1712,7 @@ impl DeleteInboundCrossClusterSearchConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteInboundCrossClusterSearchConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1769,10 +1780,17 @@ impl DeleteInboundCrossClusterSearchConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1788,7 +1806,7 @@ impl DeleteInboundCrossClusterSearchConnectionInput {
             "DeleteInboundCrossClusterSearchConnection",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteInboundCrossClusterSearchConnectionInput`](crate::input::DeleteInboundCrossClusterSearchConnectionInput).
@@ -1838,12 +1856,6 @@ pub mod delete_outbound_cross_cluster_search_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteOutboundCrossClusterSearchConnectionInputOperationOutputAlias =
-    crate::operation::DeleteOutboundCrossClusterSearchConnection;
-#[doc(hidden)]
-pub type DeleteOutboundCrossClusterSearchConnectionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteOutboundCrossClusterSearchConnectionInput {
     /// Consumes the builder and constructs an Operation<[`DeleteOutboundCrossClusterSearchConnection`](crate::operation::DeleteOutboundCrossClusterSearchConnection)>
     #[allow(unused_mut)]
@@ -1855,7 +1867,7 @@ impl DeleteOutboundCrossClusterSearchConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteOutboundCrossClusterSearchConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1923,10 +1935,17 @@ impl DeleteOutboundCrossClusterSearchConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1942,7 +1961,7 @@ impl DeleteOutboundCrossClusterSearchConnectionInput {
             "DeleteOutboundCrossClusterSearchConnection",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteOutboundCrossClusterSearchConnectionInput`](crate::input::DeleteOutboundCrossClusterSearchConnectionInput).
@@ -1982,10 +2001,6 @@ pub mod delete_package_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeletePackageInputOperationOutputAlias = crate::operation::DeletePackage;
-#[doc(hidden)]
-pub type DeletePackageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeletePackageInput {
     /// Consumes the builder and constructs an Operation<[`DeletePackage`](crate::operation::DeletePackage)>
     #[allow(unused_mut)]
@@ -1997,7 +2012,7 @@ impl DeletePackageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeletePackage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2064,10 +2079,17 @@ impl DeletePackageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2083,7 +2105,7 @@ impl DeletePackageInput {
             "DeletePackage",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeletePackageInput`](crate::input::DeletePackageInput).
@@ -2148,11 +2170,6 @@ pub mod describe_domain_auto_tunes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDomainAutoTunesInputOperationOutputAlias =
-    crate::operation::DescribeDomainAutoTunes;
-#[doc(hidden)]
-pub type DescribeDomainAutoTunesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDomainAutoTunesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDomainAutoTunes`](crate::operation::DescribeDomainAutoTunes)>
     #[allow(unused_mut)]
@@ -2164,7 +2181,7 @@ impl DescribeDomainAutoTunesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDomainAutoTunes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2247,10 +2264,17 @@ impl DescribeDomainAutoTunesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2266,7 +2290,7 @@ impl DescribeDomainAutoTunesInput {
             "DescribeDomainAutoTunes",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDomainAutoTunesInput`](crate::input::DescribeDomainAutoTunesInput).
@@ -2319,12 +2343,6 @@ pub mod describe_domain_change_progress_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDomainChangeProgressInputOperationOutputAlias =
-    crate::operation::DescribeDomainChangeProgress;
-#[doc(hidden)]
-pub type DescribeDomainChangeProgressInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDomainChangeProgressInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDomainChangeProgress`](crate::operation::DescribeDomainChangeProgress)>
     #[allow(unused_mut)]
@@ -2336,7 +2354,7 @@ impl DescribeDomainChangeProgressInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDomainChangeProgress,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2414,10 +2432,17 @@ impl DescribeDomainChangeProgressInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2433,7 +2458,7 @@ impl DescribeDomainChangeProgressInput {
             "DescribeDomainChangeProgress",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDomainChangeProgressInput`](crate::input::DescribeDomainChangeProgressInput).
@@ -2474,11 +2499,6 @@ pub mod describe_elasticsearch_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeElasticsearchDomainInputOperationOutputAlias =
-    crate::operation::DescribeElasticsearchDomain;
-#[doc(hidden)]
-pub type DescribeElasticsearchDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeElasticsearchDomainInput {
     /// Consumes the builder and constructs an Operation<[`DescribeElasticsearchDomain`](crate::operation::DescribeElasticsearchDomain)>
     #[allow(unused_mut)]
@@ -2490,7 +2510,7 @@ impl DescribeElasticsearchDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeElasticsearchDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2557,10 +2577,17 @@ impl DescribeElasticsearchDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2576,7 +2603,7 @@ impl DescribeElasticsearchDomainInput {
             "DescribeElasticsearchDomain",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeElasticsearchDomainInput`](crate::input::DescribeElasticsearchDomainInput).
@@ -2617,12 +2644,6 @@ pub mod describe_elasticsearch_domain_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeElasticsearchDomainConfigInputOperationOutputAlias =
-    crate::operation::DescribeElasticsearchDomainConfig;
-#[doc(hidden)]
-pub type DescribeElasticsearchDomainConfigInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeElasticsearchDomainConfigInput {
     /// Consumes the builder and constructs an Operation<[`DescribeElasticsearchDomainConfig`](crate::operation::DescribeElasticsearchDomainConfig)>
     #[allow(unused_mut)]
@@ -2634,7 +2655,7 @@ impl DescribeElasticsearchDomainConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeElasticsearchDomainConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2701,10 +2722,17 @@ impl DescribeElasticsearchDomainConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2720,7 +2748,7 @@ impl DescribeElasticsearchDomainConfigInput {
             "DescribeElasticsearchDomainConfig",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeElasticsearchDomainConfigInput`](crate::input::DescribeElasticsearchDomainConfigInput).
@@ -2770,12 +2798,6 @@ pub mod describe_elasticsearch_domains_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeElasticsearchDomainsInputOperationOutputAlias =
-    crate::operation::DescribeElasticsearchDomains;
-#[doc(hidden)]
-pub type DescribeElasticsearchDomainsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeElasticsearchDomainsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeElasticsearchDomains`](crate::operation::DescribeElasticsearchDomains)>
     #[allow(unused_mut)]
@@ -2787,7 +2809,7 @@ impl DescribeElasticsearchDomainsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeElasticsearchDomains,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2848,10 +2870,17 @@ impl DescribeElasticsearchDomainsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2867,7 +2896,7 @@ impl DescribeElasticsearchDomainsInput {
             "DescribeElasticsearchDomains",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeElasticsearchDomainsInput`](crate::input::DescribeElasticsearchDomainsInput).
@@ -2938,12 +2967,6 @@ pub mod describe_elasticsearch_instance_type_limits_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeElasticsearchInstanceTypeLimitsInputOperationOutputAlias =
-    crate::operation::DescribeElasticsearchInstanceTypeLimits;
-#[doc(hidden)]
-pub type DescribeElasticsearchInstanceTypeLimitsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeElasticsearchInstanceTypeLimitsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeElasticsearchInstanceTypeLimits`](crate::operation::DescribeElasticsearchInstanceTypeLimits)>
     #[allow(unused_mut)]
@@ -2955,7 +2978,7 @@ impl DescribeElasticsearchInstanceTypeLimitsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeElasticsearchInstanceTypeLimits,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3048,10 +3071,17 @@ impl DescribeElasticsearchInstanceTypeLimitsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3067,7 +3097,7 @@ impl DescribeElasticsearchInstanceTypeLimitsInput {
             "DescribeElasticsearchInstanceTypeLimits",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeElasticsearchInstanceTypeLimitsInput`](crate::input::DescribeElasticsearchInstanceTypeLimitsInput).
@@ -3159,12 +3189,6 @@ pub mod describe_inbound_cross_cluster_search_connections_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeInboundCrossClusterSearchConnectionsInputOperationOutputAlias =
-    crate::operation::DescribeInboundCrossClusterSearchConnections;
-#[doc(hidden)]
-pub type DescribeInboundCrossClusterSearchConnectionsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeInboundCrossClusterSearchConnectionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeInboundCrossClusterSearchConnections`](crate::operation::DescribeInboundCrossClusterSearchConnections)>
     #[allow(unused_mut)]
@@ -3176,7 +3200,7 @@ impl DescribeInboundCrossClusterSearchConnectionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeInboundCrossClusterSearchConnections,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3238,10 +3262,17 @@ impl DescribeInboundCrossClusterSearchConnectionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3257,7 +3288,7 @@ impl DescribeInboundCrossClusterSearchConnectionsInput {
             "DescribeInboundCrossClusterSearchConnections",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeInboundCrossClusterSearchConnectionsInput`](crate::input::DescribeInboundCrossClusterSearchConnectionsInput).
@@ -3350,12 +3381,6 @@ pub mod describe_outbound_cross_cluster_search_connections_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeOutboundCrossClusterSearchConnectionsInputOperationOutputAlias =
-    crate::operation::DescribeOutboundCrossClusterSearchConnections;
-#[doc(hidden)]
-pub type DescribeOutboundCrossClusterSearchConnectionsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeOutboundCrossClusterSearchConnectionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeOutboundCrossClusterSearchConnections`](crate::operation::DescribeOutboundCrossClusterSearchConnections)>
     #[allow(unused_mut)]
@@ -3367,7 +3392,7 @@ impl DescribeOutboundCrossClusterSearchConnectionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeOutboundCrossClusterSearchConnections,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3429,10 +3454,17 @@ impl DescribeOutboundCrossClusterSearchConnectionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3448,7 +3480,7 @@ impl DescribeOutboundCrossClusterSearchConnectionsInput {
             "DescribeOutboundCrossClusterSearchConnections",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeOutboundCrossClusterSearchConnectionsInput`](crate::input::DescribeOutboundCrossClusterSearchConnectionsInput).
@@ -3522,10 +3554,6 @@ pub mod describe_packages_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribePackagesInputOperationOutputAlias = crate::operation::DescribePackages;
-#[doc(hidden)]
-pub type DescribePackagesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribePackagesInput {
     /// Consumes the builder and constructs an Operation<[`DescribePackages`](crate::operation::DescribePackages)>
     #[allow(unused_mut)]
@@ -3537,7 +3565,7 @@ impl DescribePackagesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribePackages,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3599,10 +3627,17 @@ impl DescribePackagesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3618,7 +3653,7 @@ impl DescribePackagesInput {
             "DescribePackages",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribePackagesInput`](crate::input::DescribePackagesInput).
@@ -3693,12 +3728,6 @@ pub mod describe_reserved_elasticsearch_instance_offerings_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeReservedElasticsearchInstanceOfferingsInputOperationOutputAlias =
-    crate::operation::DescribeReservedElasticsearchInstanceOfferings;
-#[doc(hidden)]
-pub type DescribeReservedElasticsearchInstanceOfferingsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeReservedElasticsearchInstanceOfferingsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeReservedElasticsearchInstanceOfferings`](crate::operation::DescribeReservedElasticsearchInstanceOfferings)>
     #[allow(unused_mut)]
@@ -3710,7 +3739,7 @@ impl DescribeReservedElasticsearchInstanceOfferingsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeReservedElasticsearchInstanceOfferings,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3779,10 +3808,17 @@ impl DescribeReservedElasticsearchInstanceOfferingsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3798,7 +3834,7 @@ impl DescribeReservedElasticsearchInstanceOfferingsInput {
             "DescribeReservedElasticsearchInstanceOfferings",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeReservedElasticsearchInstanceOfferingsInput`](crate::input::DescribeReservedElasticsearchInstanceOfferingsInput).
@@ -3870,12 +3906,6 @@ pub mod describe_reserved_elasticsearch_instances_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeReservedElasticsearchInstancesInputOperationOutputAlias =
-    crate::operation::DescribeReservedElasticsearchInstances;
-#[doc(hidden)]
-pub type DescribeReservedElasticsearchInstancesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeReservedElasticsearchInstancesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeReservedElasticsearchInstances`](crate::operation::DescribeReservedElasticsearchInstances)>
     #[allow(unused_mut)]
@@ -3887,7 +3917,7 @@ impl DescribeReservedElasticsearchInstancesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeReservedElasticsearchInstances,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3959,10 +3989,17 @@ impl DescribeReservedElasticsearchInstancesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3978,7 +4015,7 @@ impl DescribeReservedElasticsearchInstancesInput {
             "DescribeReservedElasticsearchInstances",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeReservedElasticsearchInstancesInput`](crate::input::DescribeReservedElasticsearchInstancesInput).
@@ -4029,10 +4066,6 @@ pub mod dissociate_package_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DissociatePackageInputOperationOutputAlias = crate::operation::DissociatePackage;
-#[doc(hidden)]
-pub type DissociatePackageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DissociatePackageInput {
     /// Consumes the builder and constructs an Operation<[`DissociatePackage`](crate::operation::DissociatePackage)>
     #[allow(unused_mut)]
@@ -4044,7 +4077,7 @@ impl DissociatePackageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DissociatePackage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4126,10 +4159,17 @@ impl DissociatePackageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4145,7 +4185,7 @@ impl DissociatePackageInput {
             "DissociatePackage",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DissociatePackageInput`](crate::input::DissociatePackageInput).
@@ -4186,12 +4226,6 @@ pub mod get_compatible_elasticsearch_versions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetCompatibleElasticsearchVersionsInputOperationOutputAlias =
-    crate::operation::GetCompatibleElasticsearchVersions;
-#[doc(hidden)]
-pub type GetCompatibleElasticsearchVersionsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl GetCompatibleElasticsearchVersionsInput {
     /// Consumes the builder and constructs an Operation<[`GetCompatibleElasticsearchVersions`](crate::operation::GetCompatibleElasticsearchVersions)>
     #[allow(unused_mut)]
@@ -4203,7 +4237,7 @@ impl GetCompatibleElasticsearchVersionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetCompatibleElasticsearchVersions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4263,10 +4297,17 @@ impl GetCompatibleElasticsearchVersionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4282,7 +4323,7 @@ impl GetCompatibleElasticsearchVersionsInput {
             "GetCompatibleElasticsearchVersions",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetCompatibleElasticsearchVersionsInput`](crate::input::GetCompatibleElasticsearchVersionsInput).
@@ -4347,11 +4388,6 @@ pub mod get_package_version_history_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetPackageVersionHistoryInputOperationOutputAlias =
-    crate::operation::GetPackageVersionHistory;
-#[doc(hidden)]
-pub type GetPackageVersionHistoryInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetPackageVersionHistoryInput {
     /// Consumes the builder and constructs an Operation<[`GetPackageVersionHistory`](crate::operation::GetPackageVersionHistory)>
     #[allow(unused_mut)]
@@ -4363,7 +4399,7 @@ impl GetPackageVersionHistoryInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetPackageVersionHistory,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4447,10 +4483,17 @@ impl GetPackageVersionHistoryInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4466,7 +4509,7 @@ impl GetPackageVersionHistoryInput {
             "GetPackageVersionHistory",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetPackageVersionHistoryInput`](crate::input::GetPackageVersionHistoryInput).
@@ -4529,10 +4572,6 @@ pub mod get_upgrade_history_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetUpgradeHistoryInputOperationOutputAlias = crate::operation::GetUpgradeHistory;
-#[doc(hidden)]
-pub type GetUpgradeHistoryInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetUpgradeHistoryInput {
     /// Consumes the builder and constructs an Operation<[`GetUpgradeHistory`](crate::operation::GetUpgradeHistory)>
     #[allow(unused_mut)]
@@ -4544,7 +4583,7 @@ impl GetUpgradeHistoryInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetUpgradeHistory,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4628,10 +4667,17 @@ impl GetUpgradeHistoryInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4647,7 +4693,7 @@ impl GetUpgradeHistoryInput {
             "GetUpgradeHistory",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetUpgradeHistoryInput`](crate::input::GetUpgradeHistoryInput).
@@ -4686,10 +4732,6 @@ pub mod get_upgrade_status_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetUpgradeStatusInputOperationOutputAlias = crate::operation::GetUpgradeStatus;
-#[doc(hidden)]
-pub type GetUpgradeStatusInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetUpgradeStatusInput {
     /// Consumes the builder and constructs an Operation<[`GetUpgradeStatus`](crate::operation::GetUpgradeStatus)>
     #[allow(unused_mut)]
@@ -4701,7 +4743,7 @@ impl GetUpgradeStatusInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetUpgradeStatus,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4768,10 +4810,17 @@ impl GetUpgradeStatusInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4787,7 +4836,7 @@ impl GetUpgradeStatusInput {
             "GetUpgradeStatus",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetUpgradeStatusInput`](crate::input::GetUpgradeStatusInput).
@@ -4829,10 +4878,6 @@ pub mod list_domain_names_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListDomainNamesInputOperationOutputAlias = crate::operation::ListDomainNames;
-#[doc(hidden)]
-pub type ListDomainNamesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListDomainNamesInput {
     /// Consumes the builder and constructs an Operation<[`ListDomainNames`](crate::operation::ListDomainNames)>
     #[allow(unused_mut)]
@@ -4844,7 +4889,7 @@ impl ListDomainNamesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListDomainNames,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4903,10 +4948,17 @@ impl ListDomainNamesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4922,7 +4974,7 @@ impl ListDomainNamesInput {
             "ListDomainNames",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListDomainNamesInput`](crate::input::ListDomainNamesInput).
@@ -4985,10 +5037,6 @@ pub mod list_domains_for_package_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListDomainsForPackageInputOperationOutputAlias = crate::operation::ListDomainsForPackage;
-#[doc(hidden)]
-pub type ListDomainsForPackageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListDomainsForPackageInput {
     /// Consumes the builder and constructs an Operation<[`ListDomainsForPackage`](crate::operation::ListDomainsForPackage)>
     #[allow(unused_mut)]
@@ -5000,7 +5048,7 @@ impl ListDomainsForPackageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListDomainsForPackage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5084,10 +5132,17 @@ impl ListDomainsForPackageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5103,7 +5158,7 @@ impl ListDomainsForPackageInput {
             "ListDomainsForPackage",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListDomainsForPackageInput`](crate::input::ListDomainsForPackageInput).
@@ -5183,12 +5238,6 @@ pub mod list_elasticsearch_instance_types_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListElasticsearchInstanceTypesInputOperationOutputAlias =
-    crate::operation::ListElasticsearchInstanceTypes;
-#[doc(hidden)]
-pub type ListElasticsearchInstanceTypesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListElasticsearchInstanceTypesInput {
     /// Consumes the builder and constructs an Operation<[`ListElasticsearchInstanceTypes`](crate::operation::ListElasticsearchInstanceTypes)>
     #[allow(unused_mut)]
@@ -5200,7 +5249,7 @@ impl ListElasticsearchInstanceTypesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListElasticsearchInstanceTypes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5287,10 +5336,17 @@ impl ListElasticsearchInstanceTypesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5306,7 +5362,7 @@ impl ListElasticsearchInstanceTypesInput {
             "ListElasticsearchInstanceTypes",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListElasticsearchInstanceTypesInput`](crate::input::ListElasticsearchInstanceTypesInput).
@@ -5359,11 +5415,6 @@ pub mod list_elasticsearch_versions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListElasticsearchVersionsInputOperationOutputAlias =
-    crate::operation::ListElasticsearchVersions;
-#[doc(hidden)]
-pub type ListElasticsearchVersionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListElasticsearchVersionsInput {
     /// Consumes the builder and constructs an Operation<[`ListElasticsearchVersions`](crate::operation::ListElasticsearchVersions)>
     #[allow(unused_mut)]
@@ -5375,7 +5426,7 @@ impl ListElasticsearchVersionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListElasticsearchVersions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5440,10 +5491,17 @@ impl ListElasticsearchVersionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5459,7 +5517,7 @@ impl ListElasticsearchVersionsInput {
             "ListElasticsearchVersions",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListElasticsearchVersionsInput`](crate::input::ListElasticsearchVersionsInput).
@@ -5522,10 +5580,6 @@ pub mod list_packages_for_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListPackagesForDomainInputOperationOutputAlias = crate::operation::ListPackagesForDomain;
-#[doc(hidden)]
-pub type ListPackagesForDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListPackagesForDomainInput {
     /// Consumes the builder and constructs an Operation<[`ListPackagesForDomain`](crate::operation::ListPackagesForDomain)>
     #[allow(unused_mut)]
@@ -5537,7 +5591,7 @@ impl ListPackagesForDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListPackagesForDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5621,10 +5675,17 @@ impl ListPackagesForDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5640,7 +5701,7 @@ impl ListPackagesForDomainInput {
             "ListPackagesForDomain",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListPackagesForDomainInput`](crate::input::ListPackagesForDomainInput).
@@ -5676,10 +5737,6 @@ pub mod list_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsInputOperationOutputAlias = crate::operation::ListTags;
-#[doc(hidden)]
-pub type ListTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsInput {
     /// Consumes the builder and constructs an Operation<[`ListTags`](crate::operation::ListTags)>
     #[allow(unused_mut)]
@@ -5691,7 +5748,7 @@ impl ListTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5750,10 +5807,17 @@ impl ListTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5767,7 +5831,7 @@ impl ListTagsInput {
                     "ListTags",
                     "elasticsearchservice",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsInput`](crate::input::ListTagsInput).
@@ -5845,12 +5909,6 @@ pub mod purchase_reserved_elasticsearch_instance_offering_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PurchaseReservedElasticsearchInstanceOfferingInputOperationOutputAlias =
-    crate::operation::PurchaseReservedElasticsearchInstanceOffering;
-#[doc(hidden)]
-pub type PurchaseReservedElasticsearchInstanceOfferingInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl PurchaseReservedElasticsearchInstanceOfferingInput {
     /// Consumes the builder and constructs an Operation<[`PurchaseReservedElasticsearchInstanceOffering`](crate::operation::PurchaseReservedElasticsearchInstanceOffering)>
     #[allow(unused_mut)]
@@ -5862,7 +5920,7 @@ impl PurchaseReservedElasticsearchInstanceOfferingInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PurchaseReservedElasticsearchInstanceOffering,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5924,10 +5982,17 @@ impl PurchaseReservedElasticsearchInstanceOfferingInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5943,7 +6008,7 @@ impl PurchaseReservedElasticsearchInstanceOfferingInput {
             "PurchaseReservedElasticsearchInstanceOffering",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PurchaseReservedElasticsearchInstanceOfferingInput`](crate::input::PurchaseReservedElasticsearchInstanceOfferingInput).
@@ -5993,12 +6058,6 @@ pub mod reject_inbound_cross_cluster_search_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RejectInboundCrossClusterSearchConnectionInputOperationOutputAlias =
-    crate::operation::RejectInboundCrossClusterSearchConnection;
-#[doc(hidden)]
-pub type RejectInboundCrossClusterSearchConnectionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RejectInboundCrossClusterSearchConnectionInput {
     /// Consumes the builder and constructs an Operation<[`RejectInboundCrossClusterSearchConnection`](crate::operation::RejectInboundCrossClusterSearchConnection)>
     #[allow(unused_mut)]
@@ -6010,7 +6069,7 @@ impl RejectInboundCrossClusterSearchConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RejectInboundCrossClusterSearchConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6078,10 +6137,17 @@ impl RejectInboundCrossClusterSearchConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6097,7 +6163,7 @@ impl RejectInboundCrossClusterSearchConnectionInput {
             "RejectInboundCrossClusterSearchConnection",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RejectInboundCrossClusterSearchConnectionInput`](crate::input::RejectInboundCrossClusterSearchConnectionInput).
@@ -6157,10 +6223,6 @@ pub mod remove_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveTagsInputOperationOutputAlias = crate::operation::RemoveTags;
-#[doc(hidden)]
-pub type RemoveTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveTagsInput {
     /// Consumes the builder and constructs an Operation<[`RemoveTags`](crate::operation::RemoveTags)>
     #[allow(unused_mut)]
@@ -6172,7 +6234,7 @@ impl RemoveTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6234,10 +6296,17 @@ impl RemoveTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6253,7 +6322,7 @@ impl RemoveTagsInput {
             "RemoveTags",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveTagsInput`](crate::input::RemoveTagsInput).
@@ -6294,12 +6363,6 @@ pub mod start_elasticsearch_service_software_update_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartElasticsearchServiceSoftwareUpdateInputOperationOutputAlias =
-    crate::operation::StartElasticsearchServiceSoftwareUpdate;
-#[doc(hidden)]
-pub type StartElasticsearchServiceSoftwareUpdateInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl StartElasticsearchServiceSoftwareUpdateInput {
     /// Consumes the builder and constructs an Operation<[`StartElasticsearchServiceSoftwareUpdate`](crate::operation::StartElasticsearchServiceSoftwareUpdate)>
     #[allow(unused_mut)]
@@ -6311,7 +6374,7 @@ impl StartElasticsearchServiceSoftwareUpdateInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartElasticsearchServiceSoftwareUpdate,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6373,10 +6436,17 @@ impl StartElasticsearchServiceSoftwareUpdateInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6392,7 +6462,7 @@ impl StartElasticsearchServiceSoftwareUpdateInput {
             "StartElasticsearchServiceSoftwareUpdate",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartElasticsearchServiceSoftwareUpdateInput`](crate::input::StartElasticsearchServiceSoftwareUpdateInput).
@@ -6688,12 +6758,6 @@ pub mod update_elasticsearch_domain_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateElasticsearchDomainConfigInputOperationOutputAlias =
-    crate::operation::UpdateElasticsearchDomainConfig;
-#[doc(hidden)]
-pub type UpdateElasticsearchDomainConfigInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateElasticsearchDomainConfigInput {
     /// Consumes the builder and constructs an Operation<[`UpdateElasticsearchDomainConfig`](crate::operation::UpdateElasticsearchDomainConfig)>
     #[allow(unused_mut)]
@@ -6705,7 +6769,7 @@ impl UpdateElasticsearchDomainConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateElasticsearchDomainConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6785,10 +6849,17 @@ impl UpdateElasticsearchDomainConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6804,7 +6875,7 @@ impl UpdateElasticsearchDomainConfigInput {
             "UpdateElasticsearchDomainConfig",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateElasticsearchDomainConfigInput`](crate::input::UpdateElasticsearchDomainConfigInput).
@@ -6888,10 +6959,6 @@ pub mod update_package_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdatePackageInputOperationOutputAlias = crate::operation::UpdatePackage;
-#[doc(hidden)]
-pub type UpdatePackageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdatePackageInput {
     /// Consumes the builder and constructs an Operation<[`UpdatePackage`](crate::operation::UpdatePackage)>
     #[allow(unused_mut)]
@@ -6903,7 +6970,7 @@ impl UpdatePackageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdatePackage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6965,10 +7032,17 @@ impl UpdatePackageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6984,7 +7058,7 @@ impl UpdatePackageInput {
             "UpdatePackage",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdatePackageInput`](crate::input::UpdatePackageInput).
@@ -7052,11 +7126,6 @@ pub mod upgrade_elasticsearch_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpgradeElasticsearchDomainInputOperationOutputAlias =
-    crate::operation::UpgradeElasticsearchDomain;
-#[doc(hidden)]
-pub type UpgradeElasticsearchDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpgradeElasticsearchDomainInput {
     /// Consumes the builder and constructs an Operation<[`UpgradeElasticsearchDomain`](crate::operation::UpgradeElasticsearchDomain)>
     #[allow(unused_mut)]
@@ -7068,7 +7137,7 @@ impl UpgradeElasticsearchDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpgradeElasticsearchDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7132,10 +7201,17 @@ impl UpgradeElasticsearchDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7151,7 +7227,7 @@ impl UpgradeElasticsearchDomainInput {
             "UpgradeElasticsearchDomain",
             "elasticsearchservice",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpgradeElasticsearchDomainInput`](crate::input::UpgradeElasticsearchDomainInput).

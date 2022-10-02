@@ -75,10 +75,6 @@ pub mod create_scaling_plan_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateScalingPlanInputOperationOutputAlias = crate::operation::CreateScalingPlan;
-#[doc(hidden)]
-pub type CreateScalingPlanInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateScalingPlanInput {
     /// Consumes the builder and constructs an Operation<[`CreateScalingPlan`](crate::operation::CreateScalingPlan)>
     #[allow(unused_mut)]
@@ -90,7 +86,7 @@ impl CreateScalingPlanInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateScalingPlan,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -157,10 +153,17 @@ impl CreateScalingPlanInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -176,7 +179,7 @@ impl CreateScalingPlanInput {
             "CreateScalingPlan",
             "autoscalingplans",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateScalingPlanInput`](crate::input::CreateScalingPlanInput).
@@ -230,10 +233,6 @@ pub mod delete_scaling_plan_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteScalingPlanInputOperationOutputAlias = crate::operation::DeleteScalingPlan;
-#[doc(hidden)]
-pub type DeleteScalingPlanInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteScalingPlanInput {
     /// Consumes the builder and constructs an Operation<[`DeleteScalingPlan`](crate::operation::DeleteScalingPlan)>
     #[allow(unused_mut)]
@@ -245,7 +244,7 @@ impl DeleteScalingPlanInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteScalingPlan,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -312,10 +311,17 @@ impl DeleteScalingPlanInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -331,7 +337,7 @@ impl DeleteScalingPlanInput {
             "DeleteScalingPlan",
             "autoscalingplans",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteScalingPlanInput`](crate::input::DeleteScalingPlanInput).
@@ -411,12 +417,6 @@ pub mod describe_scaling_plan_resources_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeScalingPlanResourcesInputOperationOutputAlias =
-    crate::operation::DescribeScalingPlanResources;
-#[doc(hidden)]
-pub type DescribeScalingPlanResourcesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeScalingPlanResourcesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeScalingPlanResources`](crate::operation::DescribeScalingPlanResources)>
     #[allow(unused_mut)]
@@ -428,7 +428,7 @@ impl DescribeScalingPlanResourcesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeScalingPlanResources,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -494,10 +494,17 @@ impl DescribeScalingPlanResourcesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -513,7 +520,7 @@ impl DescribeScalingPlanResourcesInput {
             "DescribeScalingPlanResources",
             "autoscalingplans",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeScalingPlanResourcesInput`](crate::input::DescribeScalingPlanResourcesInput).
@@ -623,10 +630,6 @@ pub mod describe_scaling_plans_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeScalingPlansInputOperationOutputAlias = crate::operation::DescribeScalingPlans;
-#[doc(hidden)]
-pub type DescribeScalingPlansInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeScalingPlansInput {
     /// Consumes the builder and constructs an Operation<[`DescribeScalingPlans`](crate::operation::DescribeScalingPlans)>
     #[allow(unused_mut)]
@@ -638,7 +641,7 @@ impl DescribeScalingPlansInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeScalingPlans,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -707,10 +710,17 @@ impl DescribeScalingPlansInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -726,7 +736,7 @@ impl DescribeScalingPlansInput {
             "DescribeScalingPlans",
             "autoscalingplans",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeScalingPlansInput`](crate::input::DescribeScalingPlansInput).
@@ -883,12 +893,6 @@ pub mod get_scaling_plan_resource_forecast_data_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetScalingPlanResourceForecastDataInputOperationOutputAlias =
-    crate::operation::GetScalingPlanResourceForecastData;
-#[doc(hidden)]
-pub type GetScalingPlanResourceForecastDataInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl GetScalingPlanResourceForecastDataInput {
     /// Consumes the builder and constructs an Operation<[`GetScalingPlanResourceForecastData`](crate::operation::GetScalingPlanResourceForecastData)>
     #[allow(unused_mut)]
@@ -900,7 +904,7 @@ impl GetScalingPlanResourceForecastDataInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetScalingPlanResourceForecastData,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -966,10 +970,17 @@ impl GetScalingPlanResourceForecastDataInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -985,7 +996,7 @@ impl GetScalingPlanResourceForecastDataInput {
             "GetScalingPlanResourceForecastData",
             "autoscalingplans",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetScalingPlanResourceForecastDataInput`](crate::input::GetScalingPlanResourceForecastDataInput).
@@ -1080,10 +1091,6 @@ pub mod update_scaling_plan_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateScalingPlanInputOperationOutputAlias = crate::operation::UpdateScalingPlan;
-#[doc(hidden)]
-pub type UpdateScalingPlanInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateScalingPlanInput {
     /// Consumes the builder and constructs an Operation<[`UpdateScalingPlan`](crate::operation::UpdateScalingPlan)>
     #[allow(unused_mut)]
@@ -1095,7 +1102,7 @@ impl UpdateScalingPlanInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateScalingPlan,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1162,10 +1169,17 @@ impl UpdateScalingPlanInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1181,7 +1195,7 @@ impl UpdateScalingPlanInput {
             "UpdateScalingPlan",
             "autoscalingplans",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateScalingPlanInput`](crate::input::UpdateScalingPlanInput).

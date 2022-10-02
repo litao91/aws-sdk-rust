@@ -1,4 +1,112 @@
 <!-- Do not manually edit this file. Use the `changelogger` tool. -->
+September 21st, 2022
+====================
+**Breaking Changes:**
+- ⚠ ([smithy-rs#1603](https://github.com/awslabs/smithy-rs/issues/1603), [aws-sdk-rust#586](https://github.com/awslabs/aws-sdk-rust/issues/586)) `aws_config::RetryConfig` no longer implements `Default`, and its `new` function has been replaced with `standard`.
+- ⚠ ([smithy-rs#1603](https://github.com/awslabs/smithy-rs/issues/1603), [aws-sdk-rust#586](https://github.com/awslabs/aws-sdk-rust/issues/586)) Direct configuration of `aws_config::SdkConfig` now defaults to retries being disabled.
+    If you're using `aws_config::load_from_env()` or `aws_config::from_env()` to configure
+    the SDK, then you are NOT affected by this change. If you use `SdkConfig::builder()` to
+    configure the SDK, then you ARE affected by this change and should set the retry config
+    on that builder.
+- ⚠ ([smithy-rs#1603](https://github.com/awslabs/smithy-rs/issues/1603), [aws-sdk-rust#586](https://github.com/awslabs/aws-sdk-rust/issues/586)) Client creation now panics if retries or timeouts are enabled without an async sleep
+    implementation set on the SDK config.
+    If you're using the Tokio runtime and have the `rt-tokio` feature enabled (which is enabled by default),
+    then you shouldn't notice this change at all.
+    Otherwise, if using something other than Tokio as the async runtime, the `AsyncSleep` trait must be implemented,
+    and that implementation given to the config builder via the `sleep_impl` method. Alternatively, retry can be
+    explicitly turned off by setting the retry config to `RetryConfig::disabled()`, which will result in successful
+    client creation without an async sleep implementation.
+- ⚠ ([smithy-rs#1715](https://github.com/awslabs/smithy-rs/issues/1715), [smithy-rs#1717](https://github.com/awslabs/smithy-rs/issues/1717)) `ClassifyResponse` was renamed to `ClassifyRetry` and is no longer implemented for the unit type.
+- ⚠ ([smithy-rs#1715](https://github.com/awslabs/smithy-rs/issues/1715), [smithy-rs#1717](https://github.com/awslabs/smithy-rs/issues/1717)) The `with_retry_policy` and `retry_policy` functions on `aws_smithy_http::operation::Operation` have been
+    renamed to `with_retry_classifier` and `retry_classifier` respectively. Public member `retry_policy` on
+    `aws_smithy_http::operation::Parts` has been renamed to `retry_classifier`.
+
+**New this release:**
+- 🎉 ([smithy-rs#1647](https://github.com/awslabs/smithy-rs/issues/1647), [smithy-rs#1112](https://github.com/awslabs/smithy-rs/issues/1112)) Implemented customizable operations per [RFC-0017](https://awslabs.github.io/smithy-rs/design/rfcs/rfc0017_customizable_client_operations.html).
+
+    Before this change, modifying operations before sending them required using lower-level APIs:
+
+    ```rust
+    let input = SomeOperationInput::builder().some_value(5).build()?;
+
+    let operation = {
+        let op = input.make_operation(&service_config).await?;
+        let (request, response) = op.into_request_response();
+
+        let request = request.augment(|req, _props| {
+            req.headers_mut().insert(
+                HeaderName::from_static("x-some-header"),
+                HeaderValue::from_static("some-value")
+            );
+            Result::<_, Infallible>::Ok(req)
+        })?;
+
+        Operation::from_parts(request, response)
+    };
+
+    let response = smithy_client.call(operation).await?;
+    ```
+
+    Now, users may easily modify operations before sending with the `customize` method:
+
+    ```rust
+    let response = client.some_operation()
+        .some_value(5)
+        .customize()
+        .await?
+        .mutate_request(|mut req| {
+            req.headers_mut().insert(
+                HeaderName::from_static("x-some-header"),
+                HeaderValue::from_static("some-value")
+            );
+        })
+        .send()
+        .await?;
+    ```
+- 🐛 ([smithy-rs#966](https://github.com/awslabs/smithy-rs/issues/966), [smithy-rs#1718](https://github.com/awslabs/smithy-rs/issues/1718)) The AWS STS SDK now automatically retries `IDPCommunicationError` when calling `AssumeRoleWithWebIdentity`
+- 🐛 ([aws-sdk-rust#303](https://github.com/awslabs/aws-sdk-rust/issues/303), [smithy-rs#1717](https://github.com/awslabs/smithy-rs/issues/1717)) The `SdkError::ResponseError`, typically caused by a connection terminating before the full response is received, is now treated as a transient failure and retried.
+
+
+August 31st, 2022
+=================
+**Breaking Changes:**
+- ⚠ ([smithy-rs#1641](https://github.com/awslabs/smithy-rs/issues/1641)) Refactor endpoint resolution internals to use `aws_smithy_types::Endpoint` internally. The public internal
+    functions `aws_endpoint::set_endpoint_resolver` and `aws_endpoint::get_endpoint_resolver` were removed.
+- 🐛⚠ ([smithy-rs#1274](https://github.com/awslabs/smithy-rs/issues/1274)) Lossy converters into integer types for `aws_smithy_types::Number` have been
+    removed. Lossy converters into floating point types for
+    `aws_smithy_types::Number` have been suffixed with `_lossy`. If you were
+    directly using the integer lossy converters, we recommend you use the safe
+    converters.
+    _Before:_
+    ```rust
+    fn f1(n: aws_smithy_types::Number) {
+        let foo: f32 = n.to_f32(); // Lossy conversion!
+        let bar: u32 = n.to_u32(); // Lossy conversion!
+    }
+    ```
+    _After:_
+    ```rust
+    fn f1(n: aws_smithy_types::Number) {
+        use std::convert::TryInto; // Unnecessary import if you're using Rust 2021 edition.
+        let foo: f32 = n.try_into().expect("lossy conversion detected"); // Or handle the error instead of panicking.
+        // You can still do lossy conversions, but only into floating point types.
+        let foo: f32 = n.to_f32_lossy();
+        // To lossily convert into integer types, use an `as` cast directly.
+        let bar: u32 = n as u32; // Lossy conversion!
+    }
+    ```
+- ⚠ ([smithy-rs#1669](https://github.com/awslabs/smithy-rs/issues/1669)) Bump [MSRV](https://github.com/awslabs/aws-sdk-rust#supported-rust-versions-msrv) from 1.58.1 to 1.61.0 per our policy.
+
+**New this release:**
+- 🎉 ([smithy-rs#1598](https://github.com/awslabs/smithy-rs/issues/1598)) Service configs are now generated with new accessors for:
+    - `Config::retry_config()` - Returns a reference to the inner retry configuration.
+    - `Config::timeout_config()` - Returns a reference to the inner timeout configuration.
+    - `Config::sleep_impl()` - Returns a clone of the inner async sleep implementation.
+
+    Previously, these were only accessible through `SdkConfig`.
+- 🐛🎉 ([aws-sdk-rust#609](https://github.com/awslabs/aws-sdk-rust/issues/609)) The AWS S3 `GetObjectAttributes` operation will no longer fail with an XML error.
+
+
 August 8th, 2022
 ================
 **Breaking Changes:**

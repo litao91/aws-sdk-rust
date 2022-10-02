@@ -69,12 +69,6 @@ pub mod list_realtime_contact_analysis_segments_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListRealtimeContactAnalysisSegmentsInputOperationOutputAlias =
-    crate::operation::ListRealtimeContactAnalysisSegments;
-#[doc(hidden)]
-pub type ListRealtimeContactAnalysisSegmentsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListRealtimeContactAnalysisSegmentsInput {
     /// Consumes the builder and constructs an Operation<[`ListRealtimeContactAnalysisSegments`](crate::operation::ListRealtimeContactAnalysisSegments)>
     #[allow(unused_mut)]
@@ -86,7 +80,7 @@ impl ListRealtimeContactAnalysisSegmentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListRealtimeContactAnalysisSegments,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -148,10 +142,17 @@ impl ListRealtimeContactAnalysisSegmentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -167,7 +168,7 @@ impl ListRealtimeContactAnalysisSegmentsInput {
             "ListRealtimeContactAnalysisSegments",
             "connectcontactlens",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListRealtimeContactAnalysisSegmentsInput`](crate::input::ListRealtimeContactAnalysisSegmentsInput).

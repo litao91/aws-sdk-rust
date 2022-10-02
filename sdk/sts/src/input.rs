@@ -241,10 +241,6 @@ pub mod assume_role_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssumeRoleInputOperationOutputAlias = crate::operation::AssumeRole;
-#[doc(hidden)]
-pub type AssumeRoleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssumeRoleInput {
     /// Consumes the builder and constructs an Operation<[`AssumeRole`](crate::operation::AssumeRole)>
     #[allow(unused_mut)]
@@ -256,7 +252,7 @@ impl AssumeRoleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssumeRole,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -318,10 +314,17 @@ impl AssumeRoleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -337,7 +340,7 @@ impl AssumeRoleInput {
             "AssumeRole",
             "sts",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssumeRoleInput`](crate::input::AssumeRoleInput).
@@ -476,10 +479,6 @@ pub mod assume_role_with_saml_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssumeRoleWithSamlInputOperationOutputAlias = crate::operation::AssumeRoleWithSAML;
-#[doc(hidden)]
-pub type AssumeRoleWithSamlInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssumeRoleWithSamlInput {
     /// Consumes the builder and constructs an Operation<[`AssumeRoleWithSAML`](crate::operation::AssumeRoleWithSAML)>
     #[allow(unused_mut)]
@@ -491,7 +490,7 @@ impl AssumeRoleWithSamlInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssumeRoleWithSAML,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -554,10 +553,17 @@ impl AssumeRoleWithSamlInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -573,7 +579,7 @@ impl AssumeRoleWithSamlInput {
             "AssumeRoleWithSAML",
             "sts",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssumeRoleWithSamlInput`](crate::input::AssumeRoleWithSamlInput).
@@ -730,11 +736,6 @@ pub mod assume_role_with_web_identity_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssumeRoleWithWebIdentityInputOperationOutputAlias =
-    crate::operation::AssumeRoleWithWebIdentity;
-#[doc(hidden)]
-pub type AssumeRoleWithWebIdentityInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssumeRoleWithWebIdentityInput {
     /// Consumes the builder and constructs an Operation<[`AssumeRoleWithWebIdentity`](crate::operation::AssumeRoleWithWebIdentity)>
     #[allow(unused_mut)]
@@ -746,7 +747,7 @@ impl AssumeRoleWithWebIdentityInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssumeRoleWithWebIdentity,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -808,10 +809,17 @@ impl AssumeRoleWithWebIdentityInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -827,7 +835,7 @@ impl AssumeRoleWithWebIdentityInput {
             "AssumeRoleWithWebIdentity",
             "sts",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssumeRoleWithWebIdentityInput`](crate::input::AssumeRoleWithWebIdentityInput).
@@ -871,11 +879,6 @@ pub mod decode_authorization_message_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DecodeAuthorizationMessageInputOperationOutputAlias =
-    crate::operation::DecodeAuthorizationMessage;
-#[doc(hidden)]
-pub type DecodeAuthorizationMessageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DecodeAuthorizationMessageInput {
     /// Consumes the builder and constructs an Operation<[`DecodeAuthorizationMessage`](crate::operation::DecodeAuthorizationMessage)>
     #[allow(unused_mut)]
@@ -887,7 +890,7 @@ impl DecodeAuthorizationMessageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DecodeAuthorizationMessage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -951,10 +954,17 @@ impl DecodeAuthorizationMessageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -970,7 +980,7 @@ impl DecodeAuthorizationMessageInput {
             "DecodeAuthorizationMessage",
             "sts",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DecodeAuthorizationMessageInput`](crate::input::DecodeAuthorizationMessageInput).
@@ -1014,10 +1024,6 @@ pub mod get_access_key_info_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetAccessKeyInfoInputOperationOutputAlias = crate::operation::GetAccessKeyInfo;
-#[doc(hidden)]
-pub type GetAccessKeyInfoInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetAccessKeyInfoInput {
     /// Consumes the builder and constructs an Operation<[`GetAccessKeyInfo`](crate::operation::GetAccessKeyInfo)>
     #[allow(unused_mut)]
@@ -1029,7 +1035,7 @@ impl GetAccessKeyInfoInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetAccessKeyInfo,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1091,10 +1097,17 @@ impl GetAccessKeyInfoInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1110,7 +1123,7 @@ impl GetAccessKeyInfoInput {
             "GetAccessKeyInfo",
             "sts",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetAccessKeyInfoInput`](crate::input::GetAccessKeyInfoInput).
@@ -1135,10 +1148,6 @@ pub mod get_caller_identity_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetCallerIdentityInputOperationOutputAlias = crate::operation::GetCallerIdentity;
-#[doc(hidden)]
-pub type GetCallerIdentityInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetCallerIdentityInput {
     /// Consumes the builder and constructs an Operation<[`GetCallerIdentity`](crate::operation::GetCallerIdentity)>
     #[allow(unused_mut)]
@@ -1150,7 +1159,7 @@ impl GetCallerIdentityInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetCallerIdentity,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1205,10 +1214,17 @@ impl GetCallerIdentityInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1224,7 +1240,7 @@ impl GetCallerIdentityInput {
             "GetCallerIdentity",
             "sts",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetCallerIdentityInput`](crate::input::GetCallerIdentityInput).
@@ -1368,10 +1384,6 @@ pub mod get_federation_token_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetFederationTokenInputOperationOutputAlias = crate::operation::GetFederationToken;
-#[doc(hidden)]
-pub type GetFederationTokenInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetFederationTokenInput {
     /// Consumes the builder and constructs an Operation<[`GetFederationToken`](crate::operation::GetFederationToken)>
     #[allow(unused_mut)]
@@ -1383,7 +1395,7 @@ impl GetFederationTokenInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetFederationToken,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1445,10 +1457,17 @@ impl GetFederationTokenInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1464,7 +1483,7 @@ impl GetFederationTokenInput {
             "GetFederationToken",
             "sts",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetFederationTokenInput`](crate::input::GetFederationTokenInput).
@@ -1534,10 +1553,6 @@ pub mod get_session_token_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetSessionTokenInputOperationOutputAlias = crate::operation::GetSessionToken;
-#[doc(hidden)]
-pub type GetSessionTokenInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetSessionTokenInput {
     /// Consumes the builder and constructs an Operation<[`GetSessionToken`](crate::operation::GetSessionToken)>
     #[allow(unused_mut)]
@@ -1549,7 +1564,7 @@ impl GetSessionTokenInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetSessionToken,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1611,10 +1626,17 @@ impl GetSessionTokenInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1630,7 +1652,7 @@ impl GetSessionTokenInput {
             "GetSessionToken",
             "sts",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetSessionTokenInput`](crate::input::GetSessionTokenInput).

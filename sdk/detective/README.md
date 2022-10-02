@@ -47,8 +47,8 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.47.0"
-aws-sdk-detective = "0.17.0"
+aws-config = "0.49.0"
+aws-sdk-detective = "0.19.0"
 tokio = { version = "1", features = ["full"] }
 ```
 

@@ -196,10 +196,6 @@ pub mod generate_data_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GenerateDataSetInputOperationOutputAlias = crate::operation::GenerateDataSet;
-#[doc(hidden)]
-pub type GenerateDataSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GenerateDataSetInput {
     /// Consumes the builder and constructs an Operation<[`GenerateDataSet`](crate::operation::GenerateDataSet)>
     #[allow(unused_mut)]
@@ -211,7 +207,7 @@ impl GenerateDataSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GenerateDataSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -278,10 +274,17 @@ impl GenerateDataSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -297,7 +300,7 @@ impl GenerateDataSetInput {
             "GenerateDataSet",
             "marketplacecommerceanalytics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GenerateDataSetInput`](crate::input::GenerateDataSetInput).
@@ -455,10 +458,6 @@ pub mod start_support_data_export_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartSupportDataExportInputOperationOutputAlias = crate::operation::StartSupportDataExport;
-#[doc(hidden)]
-pub type StartSupportDataExportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartSupportDataExportInput {
     /// Consumes the builder and constructs an Operation<[`StartSupportDataExport`](crate::operation::StartSupportDataExport)>
     #[allow(unused_mut)]
@@ -470,7 +469,7 @@ impl StartSupportDataExportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartSupportDataExport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -539,10 +538,17 @@ impl StartSupportDataExportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -558,7 +564,7 @@ impl StartSupportDataExportInput {
             "StartSupportDataExport",
             "marketplacecommerceanalytics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartSupportDataExportInput`](crate::input::StartSupportDataExportInput).

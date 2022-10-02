@@ -121,10 +121,6 @@ pub mod create_gateway_route_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateGatewayRouteInputOperationOutputAlias = crate::operation::CreateGatewayRoute;
-#[doc(hidden)]
-pub type CreateGatewayRouteInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateGatewayRouteInput {
     /// Consumes the builder and constructs an Operation<[`CreateGatewayRoute`](crate::operation::CreateGatewayRoute)>
     #[allow(unused_mut)]
@@ -136,7 +132,7 @@ impl CreateGatewayRouteInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateGatewayRoute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -240,10 +236,17 @@ impl CreateGatewayRouteInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -259,7 +262,7 @@ impl CreateGatewayRouteInput {
             "CreateGatewayRoute",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateGatewayRouteInput`](crate::input::CreateGatewayRouteInput).
@@ -342,10 +345,6 @@ pub mod create_mesh_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateMeshInputOperationOutputAlias = crate::operation::CreateMesh;
-#[doc(hidden)]
-pub type CreateMeshInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateMeshInput {
     /// Consumes the builder and constructs an Operation<[`CreateMesh`](crate::operation::CreateMesh)>
     #[allow(unused_mut)]
@@ -357,7 +356,7 @@ impl CreateMeshInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateMesh,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -422,10 +421,17 @@ impl CreateMeshInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -441,7 +447,7 @@ impl CreateMeshInput {
             "CreateMesh",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateMeshInput`](crate::input::CreateMeshInput).
@@ -564,10 +570,6 @@ pub mod create_route_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateRouteInputOperationOutputAlias = crate::operation::CreateRoute;
-#[doc(hidden)]
-pub type CreateRouteInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateRouteInput {
     /// Consumes the builder and constructs an Operation<[`CreateRoute`](crate::operation::CreateRoute)>
     #[allow(unused_mut)]
@@ -579,7 +581,7 @@ impl CreateRouteInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateRoute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -689,10 +691,17 @@ impl CreateRouteInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -708,7 +717,7 @@ impl CreateRouteInput {
             "CreateRoute",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateRouteInput`](crate::input::CreateRouteInput).
@@ -822,10 +831,6 @@ pub mod create_virtual_gateway_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateVirtualGatewayInputOperationOutputAlias = crate::operation::CreateVirtualGateway;
-#[doc(hidden)]
-pub type CreateVirtualGatewayInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateVirtualGatewayInput {
     /// Consumes the builder and constructs an Operation<[`CreateVirtualGateway`](crate::operation::CreateVirtualGateway)>
     #[allow(unused_mut)]
@@ -837,7 +842,7 @@ impl CreateVirtualGatewayInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateVirtualGateway,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -934,10 +939,17 @@ impl CreateVirtualGatewayInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -953,7 +965,7 @@ impl CreateVirtualGatewayInput {
             "CreateVirtualGateway",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateVirtualGatewayInput`](crate::input::CreateVirtualGatewayInput).
@@ -1067,10 +1079,6 @@ pub mod create_virtual_node_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateVirtualNodeInputOperationOutputAlias = crate::operation::CreateVirtualNode;
-#[doc(hidden)]
-pub type CreateVirtualNodeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateVirtualNodeInput {
     /// Consumes the builder and constructs an Operation<[`CreateVirtualNode`](crate::operation::CreateVirtualNode)>
     #[allow(unused_mut)]
@@ -1082,7 +1090,7 @@ impl CreateVirtualNodeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateVirtualNode,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1177,10 +1185,17 @@ impl CreateVirtualNodeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1196,7 +1211,7 @@ impl CreateVirtualNodeInput {
             "CreateVirtualNode",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateVirtualNodeInput`](crate::input::CreateVirtualNodeInput).
@@ -1310,10 +1325,6 @@ pub mod create_virtual_router_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateVirtualRouterInputOperationOutputAlias = crate::operation::CreateVirtualRouter;
-#[doc(hidden)]
-pub type CreateVirtualRouterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateVirtualRouterInput {
     /// Consumes the builder and constructs an Operation<[`CreateVirtualRouter`](crate::operation::CreateVirtualRouter)>
     #[allow(unused_mut)]
@@ -1325,7 +1336,7 @@ impl CreateVirtualRouterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateVirtualRouter,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1420,10 +1431,17 @@ impl CreateVirtualRouterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1439,7 +1457,7 @@ impl CreateVirtualRouterInput {
             "CreateVirtualRouter",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateVirtualRouterInput`](crate::input::CreateVirtualRouterInput).
@@ -1553,10 +1571,6 @@ pub mod create_virtual_service_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateVirtualServiceInputOperationOutputAlias = crate::operation::CreateVirtualService;
-#[doc(hidden)]
-pub type CreateVirtualServiceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateVirtualServiceInput {
     /// Consumes the builder and constructs an Operation<[`CreateVirtualService`](crate::operation::CreateVirtualService)>
     #[allow(unused_mut)]
@@ -1568,7 +1582,7 @@ impl CreateVirtualServiceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateVirtualService,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1665,10 +1679,17 @@ impl CreateVirtualServiceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1684,7 +1705,7 @@ impl CreateVirtualServiceInput {
             "CreateVirtualService",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateVirtualServiceInput`](crate::input::CreateVirtualServiceInput).
@@ -1765,10 +1786,6 @@ pub mod delete_gateway_route_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteGatewayRouteInputOperationOutputAlias = crate::operation::DeleteGatewayRoute;
-#[doc(hidden)]
-pub type DeleteGatewayRouteInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteGatewayRouteInput {
     /// Consumes the builder and constructs an Operation<[`DeleteGatewayRoute`](crate::operation::DeleteGatewayRoute)>
     #[allow(unused_mut)]
@@ -1780,7 +1797,7 @@ impl DeleteGatewayRouteInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteGatewayRoute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1881,10 +1898,17 @@ impl DeleteGatewayRouteInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1900,7 +1924,7 @@ impl DeleteGatewayRouteInput {
             "DeleteGatewayRoute",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteGatewayRouteInput`](crate::input::DeleteGatewayRouteInput).
@@ -1938,10 +1962,6 @@ pub mod delete_mesh_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteMeshInputOperationOutputAlias = crate::operation::DeleteMesh;
-#[doc(hidden)]
-pub type DeleteMeshInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteMeshInput {
     /// Consumes the builder and constructs an Operation<[`DeleteMesh`](crate::operation::DeleteMesh)>
     #[allow(unused_mut)]
@@ -1953,7 +1973,7 @@ impl DeleteMeshInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteMesh,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2016,10 +2036,17 @@ impl DeleteMeshInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2035,7 +2062,7 @@ impl DeleteMeshInput {
             "DeleteMesh",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteMeshInput`](crate::input::DeleteMeshInput).
@@ -2113,10 +2140,6 @@ pub mod delete_route_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteRouteInputOperationOutputAlias = crate::operation::DeleteRoute;
-#[doc(hidden)]
-pub type DeleteRouteInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteRouteInput {
     /// Consumes the builder and constructs an Operation<[`DeleteRoute`](crate::operation::DeleteRoute)>
     #[allow(unused_mut)]
@@ -2128,7 +2151,7 @@ impl DeleteRouteInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteRoute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2229,10 +2252,17 @@ impl DeleteRouteInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2248,7 +2278,7 @@ impl DeleteRouteInput {
             "DeleteRoute",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteRouteInput`](crate::input::DeleteRouteInput).
@@ -2314,10 +2344,6 @@ pub mod delete_virtual_gateway_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteVirtualGatewayInputOperationOutputAlias = crate::operation::DeleteVirtualGateway;
-#[doc(hidden)]
-pub type DeleteVirtualGatewayInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteVirtualGatewayInput {
     /// Consumes the builder and constructs an Operation<[`DeleteVirtualGateway`](crate::operation::DeleteVirtualGateway)>
     #[allow(unused_mut)]
@@ -2329,7 +2355,7 @@ impl DeleteVirtualGatewayInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteVirtualGateway,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2422,10 +2448,17 @@ impl DeleteVirtualGatewayInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2441,7 +2474,7 @@ impl DeleteVirtualGatewayInput {
             "DeleteVirtualGateway",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteVirtualGatewayInput`](crate::input::DeleteVirtualGatewayInput).
@@ -2507,10 +2540,6 @@ pub mod delete_virtual_node_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteVirtualNodeInputOperationOutputAlias = crate::operation::DeleteVirtualNode;
-#[doc(hidden)]
-pub type DeleteVirtualNodeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteVirtualNodeInput {
     /// Consumes the builder and constructs an Operation<[`DeleteVirtualNode`](crate::operation::DeleteVirtualNode)>
     #[allow(unused_mut)]
@@ -2522,7 +2551,7 @@ impl DeleteVirtualNodeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteVirtualNode,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2615,10 +2644,17 @@ impl DeleteVirtualNodeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2634,7 +2670,7 @@ impl DeleteVirtualNodeInput {
             "DeleteVirtualNode",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteVirtualNodeInput`](crate::input::DeleteVirtualNodeInput).
@@ -2700,10 +2736,6 @@ pub mod delete_virtual_router_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteVirtualRouterInputOperationOutputAlias = crate::operation::DeleteVirtualRouter;
-#[doc(hidden)]
-pub type DeleteVirtualRouterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteVirtualRouterInput {
     /// Consumes the builder and constructs an Operation<[`DeleteVirtualRouter`](crate::operation::DeleteVirtualRouter)>
     #[allow(unused_mut)]
@@ -2715,7 +2747,7 @@ impl DeleteVirtualRouterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteVirtualRouter,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2808,10 +2840,17 @@ impl DeleteVirtualRouterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2827,7 +2866,7 @@ impl DeleteVirtualRouterInput {
             "DeleteVirtualRouter",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteVirtualRouterInput`](crate::input::DeleteVirtualRouterInput).
@@ -2893,10 +2932,6 @@ pub mod delete_virtual_service_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteVirtualServiceInputOperationOutputAlias = crate::operation::DeleteVirtualService;
-#[doc(hidden)]
-pub type DeleteVirtualServiceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteVirtualServiceInput {
     /// Consumes the builder and constructs an Operation<[`DeleteVirtualService`](crate::operation::DeleteVirtualService)>
     #[allow(unused_mut)]
@@ -2908,7 +2943,7 @@ impl DeleteVirtualServiceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteVirtualService,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3001,10 +3036,17 @@ impl DeleteVirtualServiceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3020,7 +3062,7 @@ impl DeleteVirtualServiceInput {
             "DeleteVirtualService",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteVirtualServiceInput`](crate::input::DeleteVirtualServiceInput).
@@ -3101,10 +3143,6 @@ pub mod describe_gateway_route_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeGatewayRouteInputOperationOutputAlias = crate::operation::DescribeGatewayRoute;
-#[doc(hidden)]
-pub type DescribeGatewayRouteInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeGatewayRouteInput {
     /// Consumes the builder and constructs an Operation<[`DescribeGatewayRoute`](crate::operation::DescribeGatewayRoute)>
     #[allow(unused_mut)]
@@ -3116,7 +3154,7 @@ impl DescribeGatewayRouteInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeGatewayRoute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3217,10 +3255,17 @@ impl DescribeGatewayRouteInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3236,7 +3281,7 @@ impl DescribeGatewayRouteInput {
             "DescribeGatewayRoute",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeGatewayRouteInput`](crate::input::DescribeGatewayRouteInput).
@@ -3287,10 +3332,6 @@ pub mod describe_mesh_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeMeshInputOperationOutputAlias = crate::operation::DescribeMesh;
-#[doc(hidden)]
-pub type DescribeMeshInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeMeshInput {
     /// Consumes the builder and constructs an Operation<[`DescribeMesh`](crate::operation::DescribeMesh)>
     #[allow(unused_mut)]
@@ -3302,7 +3343,7 @@ impl DescribeMeshInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeMesh,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3376,10 +3417,17 @@ impl DescribeMeshInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3395,7 +3443,7 @@ impl DescribeMeshInput {
             "DescribeMesh",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeMeshInput`](crate::input::DescribeMeshInput).
@@ -3473,10 +3521,6 @@ pub mod describe_route_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeRouteInputOperationOutputAlias = crate::operation::DescribeRoute;
-#[doc(hidden)]
-pub type DescribeRouteInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeRouteInput {
     /// Consumes the builder and constructs an Operation<[`DescribeRoute`](crate::operation::DescribeRoute)>
     #[allow(unused_mut)]
@@ -3488,7 +3532,7 @@ impl DescribeRouteInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeRoute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3589,10 +3633,17 @@ impl DescribeRouteInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3608,7 +3659,7 @@ impl DescribeRouteInput {
             "DescribeRoute",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeRouteInput`](crate::input::DescribeRouteInput).
@@ -3674,10 +3725,6 @@ pub mod describe_virtual_gateway_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeVirtualGatewayInputOperationOutputAlias = crate::operation::DescribeVirtualGateway;
-#[doc(hidden)]
-pub type DescribeVirtualGatewayInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeVirtualGatewayInput {
     /// Consumes the builder and constructs an Operation<[`DescribeVirtualGateway`](crate::operation::DescribeVirtualGateway)>
     #[allow(unused_mut)]
@@ -3689,7 +3736,7 @@ impl DescribeVirtualGatewayInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeVirtualGateway,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3782,10 +3829,17 @@ impl DescribeVirtualGatewayInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3801,7 +3855,7 @@ impl DescribeVirtualGatewayInput {
             "DescribeVirtualGateway",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeVirtualGatewayInput`](crate::input::DescribeVirtualGatewayInput).
@@ -3867,10 +3921,6 @@ pub mod describe_virtual_node_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeVirtualNodeInputOperationOutputAlias = crate::operation::DescribeVirtualNode;
-#[doc(hidden)]
-pub type DescribeVirtualNodeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeVirtualNodeInput {
     /// Consumes the builder and constructs an Operation<[`DescribeVirtualNode`](crate::operation::DescribeVirtualNode)>
     #[allow(unused_mut)]
@@ -3882,7 +3932,7 @@ impl DescribeVirtualNodeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeVirtualNode,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3975,10 +4025,17 @@ impl DescribeVirtualNodeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3994,7 +4051,7 @@ impl DescribeVirtualNodeInput {
             "DescribeVirtualNode",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeVirtualNodeInput`](crate::input::DescribeVirtualNodeInput).
@@ -4060,10 +4117,6 @@ pub mod describe_virtual_router_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeVirtualRouterInputOperationOutputAlias = crate::operation::DescribeVirtualRouter;
-#[doc(hidden)]
-pub type DescribeVirtualRouterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeVirtualRouterInput {
     /// Consumes the builder and constructs an Operation<[`DescribeVirtualRouter`](crate::operation::DescribeVirtualRouter)>
     #[allow(unused_mut)]
@@ -4075,7 +4128,7 @@ impl DescribeVirtualRouterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeVirtualRouter,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4168,10 +4221,17 @@ impl DescribeVirtualRouterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4187,7 +4247,7 @@ impl DescribeVirtualRouterInput {
             "DescribeVirtualRouter",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeVirtualRouterInput`](crate::input::DescribeVirtualRouterInput).
@@ -4253,10 +4313,6 @@ pub mod describe_virtual_service_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeVirtualServiceInputOperationOutputAlias = crate::operation::DescribeVirtualService;
-#[doc(hidden)]
-pub type DescribeVirtualServiceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeVirtualServiceInput {
     /// Consumes the builder and constructs an Operation<[`DescribeVirtualService`](crate::operation::DescribeVirtualService)>
     #[allow(unused_mut)]
@@ -4268,7 +4324,7 @@ impl DescribeVirtualServiceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeVirtualService,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4361,10 +4417,17 @@ impl DescribeVirtualServiceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4380,7 +4443,7 @@ impl DescribeVirtualServiceInput {
             "DescribeVirtualService",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeVirtualServiceInput`](crate::input::DescribeVirtualServiceInput).
@@ -4470,10 +4533,6 @@ pub mod list_gateway_routes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListGatewayRoutesInputOperationOutputAlias = crate::operation::ListGatewayRoutes;
-#[doc(hidden)]
-pub type ListGatewayRoutesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListGatewayRoutesInput {
     /// Consumes the builder and constructs an Operation<[`ListGatewayRoutes`](crate::operation::ListGatewayRoutes)>
     #[allow(unused_mut)]
@@ -4485,7 +4544,7 @@ impl ListGatewayRoutesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListGatewayRoutes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4581,10 +4640,17 @@ impl ListGatewayRoutesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4600,7 +4666,7 @@ impl ListGatewayRoutesInput {
             "ListGatewayRoutes",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListGatewayRoutesInput`](crate::input::ListGatewayRoutesInput).
@@ -4654,10 +4720,6 @@ pub mod list_meshes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListMeshesInputOperationOutputAlias = crate::operation::ListMeshes;
-#[doc(hidden)]
-pub type ListMeshesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListMeshesInput {
     /// Consumes the builder and constructs an Operation<[`ListMeshes`](crate::operation::ListMeshes)>
     #[allow(unused_mut)]
@@ -4669,7 +4731,7 @@ impl ListMeshesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListMeshes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4734,10 +4796,17 @@ impl ListMeshesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4753,7 +4822,7 @@ impl ListMeshesInput {
             "ListMeshes",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListMeshesInput`](crate::input::ListMeshesInput).
@@ -4842,10 +4911,6 @@ pub mod list_routes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListRoutesInputOperationOutputAlias = crate::operation::ListRoutes;
-#[doc(hidden)]
-pub type ListRoutesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListRoutesInput {
     /// Consumes the builder and constructs an Operation<[`ListRoutes`](crate::operation::ListRoutes)>
     #[allow(unused_mut)]
@@ -4857,7 +4922,7 @@ impl ListRoutesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListRoutes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4959,10 +5024,17 @@ impl ListRoutesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4978,7 +5050,7 @@ impl ListRoutesInput {
             "ListRoutes",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListRoutesInput`](crate::input::ListRoutesInput).
@@ -5041,10 +5113,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -5056,7 +5124,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5127,10 +5195,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5146,7 +5221,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -5221,10 +5296,6 @@ pub mod list_virtual_gateways_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListVirtualGatewaysInputOperationOutputAlias = crate::operation::ListVirtualGateways;
-#[doc(hidden)]
-pub type ListVirtualGatewaysInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListVirtualGatewaysInput {
     /// Consumes the builder and constructs an Operation<[`ListVirtualGateways`](crate::operation::ListVirtualGateways)>
     #[allow(unused_mut)]
@@ -5236,7 +5307,7 @@ impl ListVirtualGatewaysInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListVirtualGateways,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5323,10 +5394,17 @@ impl ListVirtualGatewaysInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5342,7 +5420,7 @@ impl ListVirtualGatewaysInput {
             "ListVirtualGateways",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListVirtualGatewaysInput`](crate::input::ListVirtualGatewaysInput).
@@ -5417,10 +5495,6 @@ pub mod list_virtual_nodes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListVirtualNodesInputOperationOutputAlias = crate::operation::ListVirtualNodes;
-#[doc(hidden)]
-pub type ListVirtualNodesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListVirtualNodesInput {
     /// Consumes the builder and constructs an Operation<[`ListVirtualNodes`](crate::operation::ListVirtualNodes)>
     #[allow(unused_mut)]
@@ -5432,7 +5506,7 @@ impl ListVirtualNodesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListVirtualNodes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5519,10 +5593,17 @@ impl ListVirtualNodesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5538,7 +5619,7 @@ impl ListVirtualNodesInput {
             "ListVirtualNodes",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListVirtualNodesInput`](crate::input::ListVirtualNodesInput).
@@ -5613,10 +5694,6 @@ pub mod list_virtual_routers_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListVirtualRoutersInputOperationOutputAlias = crate::operation::ListVirtualRouters;
-#[doc(hidden)]
-pub type ListVirtualRoutersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListVirtualRoutersInput {
     /// Consumes the builder and constructs an Operation<[`ListVirtualRouters`](crate::operation::ListVirtualRouters)>
     #[allow(unused_mut)]
@@ -5628,7 +5705,7 @@ impl ListVirtualRoutersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListVirtualRouters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5715,10 +5792,17 @@ impl ListVirtualRoutersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5734,7 +5818,7 @@ impl ListVirtualRoutersInput {
             "ListVirtualRouters",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListVirtualRoutersInput`](crate::input::ListVirtualRoutersInput).
@@ -5809,10 +5893,6 @@ pub mod list_virtual_services_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListVirtualServicesInputOperationOutputAlias = crate::operation::ListVirtualServices;
-#[doc(hidden)]
-pub type ListVirtualServicesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListVirtualServicesInput {
     /// Consumes the builder and constructs an Operation<[`ListVirtualServices`](crate::operation::ListVirtualServices)>
     #[allow(unused_mut)]
@@ -5824,7 +5904,7 @@ impl ListVirtualServicesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListVirtualServices,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5911,10 +5991,17 @@ impl ListVirtualServicesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5930,7 +6017,7 @@ impl ListVirtualServicesInput {
             "ListVirtualServices",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListVirtualServicesInput`](crate::input::ListVirtualServicesInput).
@@ -5990,10 +6077,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -6005,7 +6088,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6081,10 +6164,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6100,7 +6190,7 @@ impl TagResourceInput {
             "TagResource",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -6160,10 +6250,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -6175,7 +6261,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6251,10 +6337,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6270,7 +6363,7 @@ impl UntagResourceInput {
             "UntagResource",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -6378,10 +6471,6 @@ pub mod update_gateway_route_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateGatewayRouteInputOperationOutputAlias = crate::operation::UpdateGatewayRoute;
-#[doc(hidden)]
-pub type UpdateGatewayRouteInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateGatewayRouteInput {
     /// Consumes the builder and constructs an Operation<[`UpdateGatewayRoute`](crate::operation::UpdateGatewayRoute)>
     #[allow(unused_mut)]
@@ -6393,7 +6482,7 @@ impl UpdateGatewayRouteInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateGatewayRoute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6511,10 +6600,17 @@ impl UpdateGatewayRouteInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6530,7 +6626,7 @@ impl UpdateGatewayRouteInput {
             "UpdateGatewayRoute",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateGatewayRouteInput`](crate::input::UpdateGatewayRouteInput).
@@ -6592,10 +6688,6 @@ pub mod update_mesh_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateMeshInputOperationOutputAlias = crate::operation::UpdateMesh;
-#[doc(hidden)]
-pub type UpdateMeshInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateMeshInput {
     /// Consumes the builder and constructs an Operation<[`UpdateMesh`](crate::operation::UpdateMesh)>
     #[allow(unused_mut)]
@@ -6607,7 +6699,7 @@ impl UpdateMeshInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateMesh,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6687,10 +6779,17 @@ impl UpdateMeshInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6706,7 +6805,7 @@ impl UpdateMeshInput {
             "UpdateMesh",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateMeshInput`](crate::input::UpdateMeshInput).
@@ -6808,10 +6907,6 @@ pub mod update_route_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateRouteInputOperationOutputAlias = crate::operation::UpdateRoute;
-#[doc(hidden)]
-pub type UpdateRouteInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateRouteInput {
     /// Consumes the builder and constructs an Operation<[`UpdateRoute`](crate::operation::UpdateRoute)>
     #[allow(unused_mut)]
@@ -6823,7 +6918,7 @@ impl UpdateRouteInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateRoute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6941,10 +7036,17 @@ impl UpdateRouteInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6960,7 +7062,7 @@ impl UpdateRouteInput {
             "UpdateRoute",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateRouteInput`](crate::input::UpdateRouteInput).
@@ -7053,10 +7155,6 @@ pub mod update_virtual_gateway_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateVirtualGatewayInputOperationOutputAlias = crate::operation::UpdateVirtualGateway;
-#[doc(hidden)]
-pub type UpdateVirtualGatewayInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateVirtualGatewayInput {
     /// Consumes the builder and constructs an Operation<[`UpdateVirtualGateway`](crate::operation::UpdateVirtualGateway)>
     #[allow(unused_mut)]
@@ -7068,7 +7166,7 @@ impl UpdateVirtualGatewayInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateVirtualGateway,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7180,10 +7278,17 @@ impl UpdateVirtualGatewayInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7199,7 +7304,7 @@ impl UpdateVirtualGatewayInput {
             "UpdateVirtualGateway",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateVirtualGatewayInput`](crate::input::UpdateVirtualGatewayInput).
@@ -7292,10 +7397,6 @@ pub mod update_virtual_node_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateVirtualNodeInputOperationOutputAlias = crate::operation::UpdateVirtualNode;
-#[doc(hidden)]
-pub type UpdateVirtualNodeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateVirtualNodeInput {
     /// Consumes the builder and constructs an Operation<[`UpdateVirtualNode`](crate::operation::UpdateVirtualNode)>
     #[allow(unused_mut)]
@@ -7307,7 +7408,7 @@ impl UpdateVirtualNodeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateVirtualNode,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7417,10 +7518,17 @@ impl UpdateVirtualNodeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7436,7 +7544,7 @@ impl UpdateVirtualNodeInput {
             "UpdateVirtualNode",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateVirtualNodeInput`](crate::input::UpdateVirtualNodeInput).
@@ -7529,10 +7637,6 @@ pub mod update_virtual_router_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateVirtualRouterInputOperationOutputAlias = crate::operation::UpdateVirtualRouter;
-#[doc(hidden)]
-pub type UpdateVirtualRouterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateVirtualRouterInput {
     /// Consumes the builder and constructs an Operation<[`UpdateVirtualRouter`](crate::operation::UpdateVirtualRouter)>
     #[allow(unused_mut)]
@@ -7544,7 +7648,7 @@ impl UpdateVirtualRouterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateVirtualRouter,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7654,10 +7758,17 @@ impl UpdateVirtualRouterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7673,7 +7784,7 @@ impl UpdateVirtualRouterInput {
             "UpdateVirtualRouter",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateVirtualRouterInput`](crate::input::UpdateVirtualRouterInput).
@@ -7766,10 +7877,6 @@ pub mod update_virtual_service_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateVirtualServiceInputOperationOutputAlias = crate::operation::UpdateVirtualService;
-#[doc(hidden)]
-pub type UpdateVirtualServiceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateVirtualServiceInput {
     /// Consumes the builder and constructs an Operation<[`UpdateVirtualService`](crate::operation::UpdateVirtualService)>
     #[allow(unused_mut)]
@@ -7781,7 +7888,7 @@ impl UpdateVirtualServiceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateVirtualService,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7893,10 +8000,17 @@ impl UpdateVirtualServiceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7912,7 +8026,7 @@ impl UpdateVirtualServiceInput {
             "UpdateVirtualService",
             "appmesh",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateVirtualServiceInput`](crate::input::UpdateVirtualServiceInput).

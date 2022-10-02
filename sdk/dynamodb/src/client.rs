@@ -290,6 +290,16 @@ impl Client {
     pub fn describe_global_table_settings(&self) -> fluent_builders::DescribeGlobalTableSettings {
         fluent_builders::DescribeGlobalTableSettings::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`DescribeImport`](crate::client::fluent_builders::DescribeImport) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`import_arn(impl Into<String>)`](crate::client::fluent_builders::DescribeImport::import_arn) / [`set_import_arn(Option<String>)`](crate::client::fluent_builders::DescribeImport::set_import_arn): <p> The Amazon Resource Name (ARN) associated with the table you're importing to. </p>
+    /// - On success, responds with [`DescribeImportOutput`](crate::output::DescribeImportOutput) with field(s):
+    ///   - [`import_table_description(Option<ImportTableDescription>)`](crate::output::DescribeImportOutput::import_table_description): <p> Represents the properties of the table created for the import, and parameters of the import. The import parameters include import status, how many items were processed, and how many errors were encountered. </p>
+    /// - On failure, responds with [`SdkError<DescribeImportError>`](crate::error::DescribeImportError)
+    pub fn describe_import(&self) -> fluent_builders::DescribeImport {
+        fluent_builders::DescribeImport::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`DescribeKinesisStreamingDestination`](crate::client::fluent_builders::DescribeKinesisStreamingDestination) operation.
     ///
     /// - The fluent builder is configurable:
@@ -414,7 +424,7 @@ impl Client {
     /// - The fluent builder is configurable:
     ///   - [`table_arn(impl Into<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::table_arn) / [`set_table_arn(Option<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::set_table_arn): <p>The Amazon Resource Name (ARN) associated with the table to export.</p>
     ///   - [`export_time(DateTime)`](crate::client::fluent_builders::ExportTableToPointInTime::export_time) / [`set_export_time(Option<DateTime>)`](crate::client::fluent_builders::ExportTableToPointInTime::set_export_time): <p>Time in the past from which to export table data, counted in seconds from the start of the Unix epoch. The table export will be a snapshot of the table's state at this point in time.</p>
-    ///   - [`client_token(impl Into<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::client_token) / [`set_client_token(Option<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::set_client_token): <p>Providing a <code>ClientToken</code> makes the call to <code>ExportTableToPointInTimeInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p>  <p>A client token is valid for 8 hours after the first request that uses it is completed. After 8 hours, any request with the same client token is treated as a new request. Do not resubmit the same request with the same client token for more than 8 hours, or the result might not be idempotent.</p>  <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.</p>
+    ///   - [`client_token(impl Into<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::client_token) / [`set_client_token(Option<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::set_client_token): <p>Providing a <code>ClientToken</code> makes the call to <code>ExportTableToPointInTimeInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p>  <p>A client token is valid for 8 hours after the first request that uses it is completed. After 8 hours, any request with the same client token is treated as a new request. Do not resubmit the same request with the same client token for more than 8 hours, or the result might not be idempotent.</p>  <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>ImportConflictException</code>.</p>
     ///   - [`s3_bucket(impl Into<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::s3_bucket) / [`set_s3_bucket(Option<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::set_s3_bucket): <p>The name of the Amazon S3 bucket to export the snapshot to.</p>
     ///   - [`s3_bucket_owner(impl Into<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::s3_bucket_owner) / [`set_s3_bucket_owner(Option<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::set_s3_bucket_owner): <p>The ID of the Amazon Web Services account that owns the bucket the export will be stored in.</p>
     ///   - [`s3_prefix(impl Into<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::s3_prefix) / [`set_s3_prefix(Option<String>)`](crate::client::fluent_builders::ExportTableToPointInTime::set_s3_prefix): <p>The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.</p>
@@ -443,6 +453,21 @@ impl Client {
     /// - On failure, responds with [`SdkError<GetItemError>`](crate::error::GetItemError)
     pub fn get_item(&self) -> fluent_builders::GetItem {
         fluent_builders::GetItem::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`ImportTable`](crate::client::fluent_builders::ImportTable) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`client_token(impl Into<String>)`](crate::client::fluent_builders::ImportTable::client_token) / [`set_client_token(Option<String>)`](crate::client::fluent_builders::ImportTable::set_client_token): <p>Providing a <code>ClientToken</code> makes the call to <code>ImportTableInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p>  <p>A client token is valid for 8 hours after the first request that uses it is completed. After 8 hours, any request with the same client token is treated as a new request. Do not resubmit the same request with the same client token for more than 8 hours, or the result might not be idempotent.</p>  <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.</p>
+    ///   - [`s3_bucket_source(S3BucketSource)`](crate::client::fluent_builders::ImportTable::s3_bucket_source) / [`set_s3_bucket_source(Option<S3BucketSource>)`](crate::client::fluent_builders::ImportTable::set_s3_bucket_source): <p> The S3 bucket that provides the source for the import. </p>
+    ///   - [`input_format(InputFormat)`](crate::client::fluent_builders::ImportTable::input_format) / [`set_input_format(Option<InputFormat>)`](crate::client::fluent_builders::ImportTable::set_input_format): <p> The format of the source data. Valid values for <code>ImportFormat</code> are <code>CSV</code>, <code>DYNAMODB_JSON</code> or <code>ION</code>. </p>
+    ///   - [`input_format_options(InputFormatOptions)`](crate::client::fluent_builders::ImportTable::input_format_options) / [`set_input_format_options(Option<InputFormatOptions>)`](crate::client::fluent_builders::ImportTable::set_input_format_options): <p> Additional properties that specify how the input is formatted, </p>
+    ///   - [`input_compression_type(InputCompressionType)`](crate::client::fluent_builders::ImportTable::input_compression_type) / [`set_input_compression_type(Option<InputCompressionType>)`](crate::client::fluent_builders::ImportTable::set_input_compression_type): <p> Type of compression to be used on the input coming from the imported table. </p>
+    ///   - [`table_creation_parameters(TableCreationParameters)`](crate::client::fluent_builders::ImportTable::table_creation_parameters) / [`set_table_creation_parameters(Option<TableCreationParameters>)`](crate::client::fluent_builders::ImportTable::set_table_creation_parameters): <p>Parameters for the table to import the data into. </p>
+    /// - On success, responds with [`ImportTableOutput`](crate::output::ImportTableOutput) with field(s):
+    ///   - [`import_table_description(Option<ImportTableDescription>)`](crate::output::ImportTableOutput::import_table_description): <p> Represents the properties of the table created for the import, and parameters of the import. The import parameters include import status, how many items were processed, and how many errors were encountered. </p>
+    /// - On failure, responds with [`SdkError<ImportTableError>`](crate::error::ImportTableError)
+    pub fn import_table(&self) -> fluent_builders::ImportTable {
+        fluent_builders::ImportTable::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`ListBackups`](crate::client::fluent_builders::ListBackups) operation.
     ///
@@ -500,6 +525,20 @@ impl Client {
     /// - On failure, responds with [`SdkError<ListGlobalTablesError>`](crate::error::ListGlobalTablesError)
     pub fn list_global_tables(&self) -> fluent_builders::ListGlobalTables {
         fluent_builders::ListGlobalTables::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`ListImports`](crate::client::fluent_builders::ListImports) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListImports::into_paginator).
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`table_arn(impl Into<String>)`](crate::client::fluent_builders::ListImports::table_arn) / [`set_table_arn(Option<String>)`](crate::client::fluent_builders::ListImports::set_table_arn): <p> The Amazon Resource Name (ARN) associated with the table that was imported to. </p>
+    ///   - [`page_size(i32)`](crate::client::fluent_builders::ListImports::page_size) / [`set_page_size(Option<i32>)`](crate::client::fluent_builders::ListImports::set_page_size): <p> The number of <code>ImportSummary </code>objects returned in a single page. </p>
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::ListImports::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::ListImports::set_next_token): <p> An optional string that, if supplied, must be copied from the output of a previous call to <code>ListImports</code>. When provided in this manner, the API fetches the next page of results. </p>
+    /// - On success, responds with [`ListImportsOutput`](crate::output::ListImportsOutput) with field(s):
+    ///   - [`import_summary_list(Option<Vec<ImportSummary>>)`](crate::output::ListImportsOutput::import_summary_list): <p> A list of <code>ImportSummary</code> objects. </p>
+    ///   - [`next_token(Option<String>)`](crate::output::ListImportsOutput::next_token): <p> If this value is returned, there are additional results to be displayed. To retrieve them, call <code>ListImports</code> again, with <code>NextToken</code> set to this value. </p>
+    /// - On failure, responds with [`SdkError<ListImportsError>`](crate::error::ListImportsError)
+    pub fn list_imports(&self) -> fluent_builders::ListImports {
+        fluent_builders::ListImports::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`ListTables`](crate::client::fluent_builders::ListTables) operation.
     /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListTables::into_paginator).
@@ -839,6 +878,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::BatchExecuteStatement,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::BatchExecuteStatementError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -935,6 +998,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::BatchGetItem,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::BatchGetItemError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1097,6 +1184,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::BatchWriteItem,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::BatchWriteItemError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -1240,6 +1351,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::CreateBackup,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::CreateBackupError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -1325,6 +1460,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::CreateGlobalTable,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::CreateGlobalTableError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -1399,6 +1558,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::CreateTable,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::CreateTableError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1733,6 +1916,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteBackup,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteBackupError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -1787,6 +1994,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteItem,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteItemError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2107,6 +2338,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteTable,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteTableError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2159,6 +2414,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeBackup,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeBackupError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2217,6 +2496,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeContinuousBackups,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeContinuousBackupsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2268,6 +2571,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeContributorInsights,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeContributorInsightsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2333,6 +2660,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeEndpoints,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeEndpointsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2374,6 +2725,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeExport,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeExportError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2429,6 +2804,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeGlobalTable,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeGlobalTableError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2489,6 +2888,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeGlobalTableSettings,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeGlobalTableSettingsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2528,6 +2951,83 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `DescribeImport`.
+    ///
+    /// <p> Represents the properties of the import. </p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct DescribeImport {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::describe_import_input::Builder,
+    }
+    impl DescribeImport {
+        /// Creates a new `DescribeImport`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeImport,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeImportError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::DescribeImportOutput,
+            aws_smithy_http::result::SdkError<crate::error::DescribeImportError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p> The Amazon Resource Name (ARN) associated with the table you're importing to. </p>
+        pub fn import_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.import_arn(input.into());
+            self
+        }
+        /// <p> The Amazon Resource Name (ARN) associated with the table you're importing to. </p>
+        pub fn set_import_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_import_arn(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `DescribeKinesisStreamingDestination`.
     ///
     /// <p>Returns information about the status of Kinesis streaming.</p>
@@ -2543,6 +3043,32 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeKinesisStreamingDestination,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<
+                crate::error::DescribeKinesisStreamingDestinationError,
+            >,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2621,6 +3147,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeLimits,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeLimitsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2664,6 +3214,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeTable,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeTableError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2721,6 +3295,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeTableReplicaAutoScaling,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeTableReplicaAutoScalingError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2774,6 +3372,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeTimeToLive,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeTimeToLiveError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2825,6 +3447,32 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DisableKinesisStreamingDestination,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<
+                crate::error::DisableKinesisStreamingDestinationError,
+            >,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2892,6 +3540,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::EnableKinesisStreamingDestination,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::EnableKinesisStreamingDestinationError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2955,6 +3627,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ExecuteStatement,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ExecuteStatementError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3085,6 +3781,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ExecuteTransaction,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ExecuteTransactionError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -3174,6 +3894,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ExportTableToPointInTime,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ExportTableToPointInTimeError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -3224,14 +3968,14 @@ pub mod fluent_builders {
         }
         /// <p>Providing a <code>ClientToken</code> makes the call to <code>ExportTableToPointInTimeInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p>
         /// <p>A client token is valid for 8 hours after the first request that uses it is completed. After 8 hours, any request with the same client token is treated as a new request. Do not resubmit the same request with the same client token for more than 8 hours, or the result might not be idempotent.</p>
-        /// <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.</p>
+        /// <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>ImportConflictException</code>.</p>
         pub fn client_token(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.client_token(input.into());
             self
         }
         /// <p>Providing a <code>ClientToken</code> makes the call to <code>ExportTableToPointInTimeInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p>
         /// <p>A client token is valid for 8 hours after the first request that uses it is completed. After 8 hours, any request with the same client token is treated as a new request. Do not resubmit the same request with the same client token for more than 8 hours, or the result might not be idempotent.</p>
-        /// <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.</p>
+        /// <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>ImportConflictException</code>.</p>
         pub fn set_client_token(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_client_token(input);
             self
@@ -3333,6 +4077,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::GetItem,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::GetItemError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3529,6 +4297,155 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `ImportTable`.
+    ///
+    /// <p> Imports table data from an S3 bucket. </p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct ImportTable {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::import_table_input::Builder,
+    }
+    impl ImportTable {
+        /// Creates a new `ImportTable`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ImportTable,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ImportTableError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::ImportTableOutput,
+            aws_smithy_http::result::SdkError<crate::error::ImportTableError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>Providing a <code>ClientToken</code> makes the call to <code>ImportTableInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p>
+        /// <p>A client token is valid for 8 hours after the first request that uses it is completed. After 8 hours, any request with the same client token is treated as a new request. Do not resubmit the same request with the same client token for more than 8 hours, or the result might not be idempotent.</p>
+        /// <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.</p>
+        pub fn client_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.client_token(input.into());
+            self
+        }
+        /// <p>Providing a <code>ClientToken</code> makes the call to <code>ImportTableInput</code> idempotent, meaning that multiple identical calls have the same effect as one single call.</p>
+        /// <p>A client token is valid for 8 hours after the first request that uses it is completed. After 8 hours, any request with the same client token is treated as a new request. Do not resubmit the same request with the same client token for more than 8 hours, or the result might not be idempotent.</p>
+        /// <p>If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.</p>
+        pub fn set_client_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_client_token(input);
+            self
+        }
+        /// <p> The S3 bucket that provides the source for the import. </p>
+        pub fn s3_bucket_source(mut self, input: crate::model::S3BucketSource) -> Self {
+            self.inner = self.inner.s3_bucket_source(input);
+            self
+        }
+        /// <p> The S3 bucket that provides the source for the import. </p>
+        pub fn set_s3_bucket_source(
+            mut self,
+            input: std::option::Option<crate::model::S3BucketSource>,
+        ) -> Self {
+            self.inner = self.inner.set_s3_bucket_source(input);
+            self
+        }
+        /// <p> The format of the source data. Valid values for <code>ImportFormat</code> are <code>CSV</code>, <code>DYNAMODB_JSON</code> or <code>ION</code>. </p>
+        pub fn input_format(mut self, input: crate::model::InputFormat) -> Self {
+            self.inner = self.inner.input_format(input);
+            self
+        }
+        /// <p> The format of the source data. Valid values for <code>ImportFormat</code> are <code>CSV</code>, <code>DYNAMODB_JSON</code> or <code>ION</code>. </p>
+        pub fn set_input_format(
+            mut self,
+            input: std::option::Option<crate::model::InputFormat>,
+        ) -> Self {
+            self.inner = self.inner.set_input_format(input);
+            self
+        }
+        /// <p> Additional properties that specify how the input is formatted, </p>
+        pub fn input_format_options(mut self, input: crate::model::InputFormatOptions) -> Self {
+            self.inner = self.inner.input_format_options(input);
+            self
+        }
+        /// <p> Additional properties that specify how the input is formatted, </p>
+        pub fn set_input_format_options(
+            mut self,
+            input: std::option::Option<crate::model::InputFormatOptions>,
+        ) -> Self {
+            self.inner = self.inner.set_input_format_options(input);
+            self
+        }
+        /// <p> Type of compression to be used on the input coming from the imported table. </p>
+        pub fn input_compression_type(mut self, input: crate::model::InputCompressionType) -> Self {
+            self.inner = self.inner.input_compression_type(input);
+            self
+        }
+        /// <p> Type of compression to be used on the input coming from the imported table. </p>
+        pub fn set_input_compression_type(
+            mut self,
+            input: std::option::Option<crate::model::InputCompressionType>,
+        ) -> Self {
+            self.inner = self.inner.set_input_compression_type(input);
+            self
+        }
+        /// <p>Parameters for the table to import the data into. </p>
+        pub fn table_creation_parameters(
+            mut self,
+            input: crate::model::TableCreationParameters,
+        ) -> Self {
+            self.inner = self.inner.table_creation_parameters(input);
+            self
+        }
+        /// <p>Parameters for the table to import the data into. </p>
+        pub fn set_table_creation_parameters(
+            mut self,
+            input: std::option::Option<crate::model::TableCreationParameters>,
+        ) -> Self {
+            self.inner = self.inner.set_table_creation_parameters(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `ListBackups`.
     ///
     /// <p>List backups associated with an Amazon Web Services account. To list backups for a given table, specify <code>TableName</code>. <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of items in a page. You can also specify a maximum number of entries to be returned in a page.</p>
@@ -3546,6 +4463,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListBackups,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListBackupsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3675,6 +4616,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListContributorInsights,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListContributorInsightsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -3752,6 +4717,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListExports,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListExportsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3835,6 +4824,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListGlobalTables,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListGlobalTablesError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -3899,6 +4912,109 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `ListImports`.
+    ///
+    /// <p> Lists completed imports within the past 90 days. </p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct ListImports {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::list_imports_input::Builder,
+    }
+    impl ListImports {
+        /// Creates a new `ListImports`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListImports,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListImportsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::ListImportsOutput,
+            aws_smithy_http::result::SdkError<crate::error::ListImportsError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::ListImportsPaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(self) -> crate::paginator::ListImportsPaginator {
+            crate::paginator::ListImportsPaginator::new(self.handle, self.inner)
+        }
+        /// <p> The Amazon Resource Name (ARN) associated with the table that was imported to. </p>
+        pub fn table_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.table_arn(input.into());
+            self
+        }
+        /// <p> The Amazon Resource Name (ARN) associated with the table that was imported to. </p>
+        pub fn set_table_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_table_arn(input);
+            self
+        }
+        /// <p> The number of <code>ImportSummary </code>objects returned in a single page. </p>
+        pub fn page_size(mut self, input: i32) -> Self {
+            self.inner = self.inner.page_size(input);
+            self
+        }
+        /// <p> The number of <code>ImportSummary </code>objects returned in a single page. </p>
+        pub fn set_page_size(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_page_size(input);
+            self
+        }
+        /// <p> An optional string that, if supplied, must be copied from the output of a previous call to <code>ListImports</code>. When provided in this manner, the API fetches the next page of results. </p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p> An optional string that, if supplied, must be copied from the output of a previous call to <code>ListImports</code>. When provided in this manner, the API fetches the next page of results. </p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `ListTables`.
     ///
     /// <p>Returns an array of table names associated with the current account and endpoint. The output from <code>ListTables</code> is paginated, with each page returning a maximum of 100 table names.</p>
@@ -3914,6 +5030,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListTables,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListTablesError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3989,6 +5129,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListTagsOfResource,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListTagsOfResourceError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -4056,6 +5220,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::PutItem,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::PutItemError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -4389,6 +5577,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::Query,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::QueryError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -4866,6 +6078,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::RestoreTableFromBackup,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::RestoreTableFromBackupError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -5032,6 +6268,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::RestoreTableToPointInTime,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::RestoreTableToPointInTimeError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -5223,6 +6483,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::Scan,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ScanError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -5629,6 +6913,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::TagResource,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::TagResourceError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -5704,6 +7012,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::TransactGetItems,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::TransactGetItemsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -5796,6 +7128,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::TransactWriteItems,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::TransactWriteItemsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -5920,6 +7276,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UntagResource,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UntagResourceError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -5992,6 +7372,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateContinuousBackups,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateContinuousBackupsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -6059,6 +7463,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateContributorInsights,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateContributorInsightsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -6148,6 +7576,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateGlobalTable,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateGlobalTableError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -6219,6 +7671,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateGlobalTableSettings,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateGlobalTableSettingsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -6380,6 +7856,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateItem,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateItemError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -6790,6 +8290,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateTable,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateTableError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -6997,6 +8521,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateTableReplicaAutoScaling,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateTableReplicaAutoScalingError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -7117,6 +8665,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateTimeToLive,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateTimeToLiveError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -7178,9 +8750,11 @@ impl Client {
         C: aws_smithy_client::bounds::SmithyConnector<Error = E> + Send + 'static,
         E: Into<aws_smithy_http::result::ConnectorError>,
     {
-        let retry_config = conf.retry_config.as_ref().cloned().unwrap_or_default();
-        let timeout_config = conf.timeout_config.as_ref().cloned().unwrap_or_default();
-        let sleep_impl = conf.sleep_impl.clone();
+        let retry_config = conf
+            .retry_config()
+            .cloned()
+            .unwrap_or_else(aws_smithy_types::retry::RetryConfig::disabled);
+        let timeout_config = conf.timeout_config().cloned().unwrap_or_default();
         let mut builder = aws_smithy_client::Builder::new()
             .connector(aws_smithy_client::erase::DynConnector::new(conn))
             .middleware(aws_smithy_client::erase::DynMiddleware::new(
@@ -7188,7 +8762,7 @@ impl Client {
             ));
         builder.set_retry_config(retry_config.into());
         builder.set_timeout_config(timeout_config);
-        if let Some(sleep_impl) = sleep_impl {
+        if let Some(sleep_impl) = conf.sleep_impl() {
             builder.set_sleep_impl(Some(sleep_impl));
         }
         let client = builder.build();
@@ -7206,9 +8780,16 @@ impl Client {
     /// Creates a new client from the service [`Config`](crate::Config).
     #[cfg(any(feature = "rustls", feature = "native-tls"))]
     pub fn from_conf(conf: crate::Config) -> Self {
-        let retry_config = conf.retry_config.as_ref().cloned().unwrap_or_default();
-        let timeout_config = conf.timeout_config.as_ref().cloned().unwrap_or_default();
-        let sleep_impl = conf.sleep_impl.clone();
+        let retry_config = conf
+            .retry_config()
+            .cloned()
+            .unwrap_or_else(aws_smithy_types::retry::RetryConfig::disabled);
+        let timeout_config = conf.timeout_config().cloned().unwrap_or_default();
+        let sleep_impl = conf.sleep_impl();
+        if (retry_config.has_retry() || timeout_config.has_timeouts()) && sleep_impl.is_none() {
+            panic!("An async sleep implementation is required for retries or timeouts to work. \
+                                    Set the `sleep_impl` on the Config passed into this function to fix this panic.");
+        }
         let mut builder = aws_smithy_client::Builder::dyn_https().middleware(
             aws_smithy_client::erase::DynMiddleware::new(
                 crate::middleware::DefaultMiddleware::new(),

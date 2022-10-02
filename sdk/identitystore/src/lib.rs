@@ -9,9 +9,18 @@
 #![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>The identity store service used by Amazon Web Services Single Sign On provides a single place to retrieve all of
+//! <p>The Identity Store service used by Amazon Web Services Single Sign On provides a single place to retrieve all of
 //! your identities (users and groups). For more information, see the <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">Amazon Web Services SSO User
 //! Guide</a>.</p>
+//!
+//! <note>
+//! <p>Although Amazon Web Services Single Sign-On was renamed, the <code>sso</code> and
+//! <code>identitystore</code> API namespaces will continue to retain their original name for
+//! backward compatibility purposes. For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed">Amazon Web Services SSO rename</a>.</p>
+//! </note>
+//!
+//! <p>This reference guide describes the identity store operations that you can call
+//! programatically and includes detailed information on data types and errors.</p>
 //!
 //! # Crate Organization
 //!
@@ -36,6 +45,8 @@ mod aws_endpoint;
 pub mod client;
 /// Configuration for the service.
 pub mod config;
+/// Wrap operations in a special type allowing for the modification of operations and the requests inside before sending them
+pub mod customizable_operation;
 /// Errors that can occur when calling the service.
 pub mod error;
 mod error_meta;
@@ -64,10 +75,12 @@ pub static PKG_VERSION: &str = env!("CARGO_PKG_VERSION");
 pub mod types {
     pub use aws_smithy_http::result::SdkError;
 }
+pub use aws_smithy_async::rt::sleep::AsyncSleep;
+pub use aws_smithy_types::retry::RetryConfig;
+pub use aws_smithy_types::timeout::Config as TimeoutConfig;
 static API_METADATA: aws_http::user_agent::ApiMetadata =
     aws_http::user_agent::ApiMetadata::new("identitystore", PKG_VERSION);
 pub use aws_smithy_http::endpoint::Endpoint;
-pub use aws_smithy_types::retry::RetryConfig;
 pub use aws_types::app_name::AppName;
 pub use aws_types::region::Region;
 pub use aws_types::Credentials;

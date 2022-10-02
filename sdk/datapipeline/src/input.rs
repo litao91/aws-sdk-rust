@@ -68,10 +68,6 @@ pub mod activate_pipeline_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ActivatePipelineInputOperationOutputAlias = crate::operation::ActivatePipeline;
-#[doc(hidden)]
-pub type ActivatePipelineInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ActivatePipelineInput {
     /// Consumes the builder and constructs an Operation<[`ActivatePipeline`](crate::operation::ActivatePipeline)>
     #[allow(unused_mut)]
@@ -83,7 +79,7 @@ impl ActivatePipelineInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ActivatePipeline,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -150,10 +146,17 @@ impl ActivatePipelineInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -169,7 +172,7 @@ impl ActivatePipelineInput {
             "ActivatePipeline",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ActivatePipelineInput`](crate::input::ActivatePipelineInput).
@@ -228,10 +231,6 @@ pub mod add_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddTagsInputOperationOutputAlias = crate::operation::AddTags;
-#[doc(hidden)]
-pub type AddTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AddTagsInput {
     /// Consumes the builder and constructs an Operation<[`AddTags`](crate::operation::AddTags)>
     #[allow(unused_mut)]
@@ -243,7 +242,7 @@ impl AddTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -310,10 +309,17 @@ impl AddTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -327,7 +333,7 @@ impl AddTagsInput {
                     "AddTags",
                     "datapipeline",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddTagsInput`](crate::input::AddTagsInput).
@@ -411,10 +417,6 @@ pub mod create_pipeline_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreatePipelineInputOperationOutputAlias = crate::operation::CreatePipeline;
-#[doc(hidden)]
-pub type CreatePipelineInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreatePipelineInput {
     /// Consumes the builder and constructs an Operation<[`CreatePipeline`](crate::operation::CreatePipeline)>
     #[allow(unused_mut)]
@@ -426,7 +428,7 @@ impl CreatePipelineInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreatePipeline,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -493,10 +495,17 @@ impl CreatePipelineInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -512,7 +521,7 @@ impl CreatePipelineInput {
             "CreatePipeline",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreatePipelineInput`](crate::input::CreatePipelineInput).
@@ -563,10 +572,6 @@ pub mod deactivate_pipeline_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeactivatePipelineInputOperationOutputAlias = crate::operation::DeactivatePipeline;
-#[doc(hidden)]
-pub type DeactivatePipelineInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeactivatePipelineInput {
     /// Consumes the builder and constructs an Operation<[`DeactivatePipeline`](crate::operation::DeactivatePipeline)>
     #[allow(unused_mut)]
@@ -578,7 +583,7 @@ impl DeactivatePipelineInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeactivatePipeline,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -645,10 +650,17 @@ impl DeactivatePipelineInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -664,7 +676,7 @@ impl DeactivatePipelineInput {
             "DeactivatePipeline",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeactivatePipelineInput`](crate::input::DeactivatePipelineInput).
@@ -703,10 +715,6 @@ pub mod delete_pipeline_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeletePipelineInputOperationOutputAlias = crate::operation::DeletePipeline;
-#[doc(hidden)]
-pub type DeletePipelineInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeletePipelineInput {
     /// Consumes the builder and constructs an Operation<[`DeletePipeline`](crate::operation::DeletePipeline)>
     #[allow(unused_mut)]
@@ -718,7 +726,7 @@ impl DeletePipelineInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeletePipeline,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -785,10 +793,17 @@ impl DeletePipelineInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -804,7 +819,7 @@ impl DeletePipelineInput {
             "DeletePipeline",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeletePipelineInput`](crate::input::DeletePipelineInput).
@@ -888,10 +903,6 @@ pub mod describe_objects_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeObjectsInputOperationOutputAlias = crate::operation::DescribeObjects;
-#[doc(hidden)]
-pub type DescribeObjectsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeObjectsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeObjects`](crate::operation::DescribeObjects)>
     #[allow(unused_mut)]
@@ -903,7 +914,7 @@ impl DescribeObjectsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeObjects,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -970,10 +981,17 @@ impl DescribeObjectsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -989,7 +1007,7 @@ impl DescribeObjectsInput {
             "DescribeObjects",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeObjectsInput`](crate::input::DescribeObjectsInput).
@@ -1037,10 +1055,6 @@ pub mod describe_pipelines_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribePipelinesInputOperationOutputAlias = crate::operation::DescribePipelines;
-#[doc(hidden)]
-pub type DescribePipelinesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribePipelinesInput {
     /// Consumes the builder and constructs an Operation<[`DescribePipelines`](crate::operation::DescribePipelines)>
     #[allow(unused_mut)]
@@ -1052,7 +1066,7 @@ impl DescribePipelinesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribePipelines,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1119,10 +1133,17 @@ impl DescribePipelinesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1138,7 +1159,7 @@ impl DescribePipelinesInput {
             "DescribePipelines",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribePipelinesInput`](crate::input::DescribePipelinesInput).
@@ -1201,10 +1222,6 @@ pub mod evaluate_expression_input {
         }
     }
 }
-#[doc(hidden)]
-pub type EvaluateExpressionInputOperationOutputAlias = crate::operation::EvaluateExpression;
-#[doc(hidden)]
-pub type EvaluateExpressionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl EvaluateExpressionInput {
     /// Consumes the builder and constructs an Operation<[`EvaluateExpression`](crate::operation::EvaluateExpression)>
     #[allow(unused_mut)]
@@ -1216,7 +1233,7 @@ impl EvaluateExpressionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::EvaluateExpression,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1283,10 +1300,17 @@ impl EvaluateExpressionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1302,7 +1326,7 @@ impl EvaluateExpressionInput {
             "EvaluateExpression",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`EvaluateExpressionInput`](crate::input::EvaluateExpressionInput).
@@ -1353,10 +1377,6 @@ pub mod get_pipeline_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetPipelineDefinitionInputOperationOutputAlias = crate::operation::GetPipelineDefinition;
-#[doc(hidden)]
-pub type GetPipelineDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetPipelineDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`GetPipelineDefinition`](crate::operation::GetPipelineDefinition)>
     #[allow(unused_mut)]
@@ -1368,7 +1388,7 @@ impl GetPipelineDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetPipelineDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1437,10 +1457,17 @@ impl GetPipelineDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1456,7 +1483,7 @@ impl GetPipelineDefinitionInput {
             "GetPipelineDefinition",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetPipelineDefinitionInput`](crate::input::GetPipelineDefinitionInput).
@@ -1495,10 +1522,6 @@ pub mod list_pipelines_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListPipelinesInputOperationOutputAlias = crate::operation::ListPipelines;
-#[doc(hidden)]
-pub type ListPipelinesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListPipelinesInput {
     /// Consumes the builder and constructs an Operation<[`ListPipelines`](crate::operation::ListPipelines)>
     #[allow(unused_mut)]
@@ -1510,7 +1533,7 @@ impl ListPipelinesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListPipelines,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1577,10 +1600,17 @@ impl ListPipelinesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1596,7 +1626,7 @@ impl ListPipelinesInput {
             "ListPipelines",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListPipelinesInput`](crate::input::ListPipelinesInput).
@@ -1662,10 +1692,6 @@ pub mod poll_for_task_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PollForTaskInputOperationOutputAlias = crate::operation::PollForTask;
-#[doc(hidden)]
-pub type PollForTaskInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PollForTaskInput {
     /// Consumes the builder and constructs an Operation<[`PollForTask`](crate::operation::PollForTask)>
     #[allow(unused_mut)]
@@ -1677,7 +1703,7 @@ impl PollForTaskInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PollForTask,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1744,10 +1770,17 @@ impl PollForTaskInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1763,7 +1796,7 @@ impl PollForTaskInput {
             "PollForTask",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PollForTaskInput`](crate::input::PollForTaskInput).
@@ -1868,10 +1901,6 @@ pub mod put_pipeline_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutPipelineDefinitionInputOperationOutputAlias = crate::operation::PutPipelineDefinition;
-#[doc(hidden)]
-pub type PutPipelineDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutPipelineDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`PutPipelineDefinition`](crate::operation::PutPipelineDefinition)>
     #[allow(unused_mut)]
@@ -1883,7 +1912,7 @@ impl PutPipelineDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutPipelineDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1952,10 +1981,17 @@ impl PutPipelineDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1971,7 +2007,7 @@ impl PutPipelineDefinitionInput {
             "PutPipelineDefinition",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutPipelineDefinitionInput`](crate::input::PutPipelineDefinitionInput).
@@ -2058,10 +2094,6 @@ pub mod query_objects_input {
         }
     }
 }
-#[doc(hidden)]
-pub type QueryObjectsInputOperationOutputAlias = crate::operation::QueryObjects;
-#[doc(hidden)]
-pub type QueryObjectsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl QueryObjectsInput {
     /// Consumes the builder and constructs an Operation<[`QueryObjects`](crate::operation::QueryObjects)>
     #[allow(unused_mut)]
@@ -2073,7 +2105,7 @@ impl QueryObjectsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::QueryObjects,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2140,10 +2172,17 @@ impl QueryObjectsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2159,7 +2198,7 @@ impl QueryObjectsInput {
             "QueryObjects",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`QueryObjectsInput`](crate::input::QueryObjectsInput).
@@ -2218,10 +2257,6 @@ pub mod remove_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveTagsInputOperationOutputAlias = crate::operation::RemoveTags;
-#[doc(hidden)]
-pub type RemoveTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveTagsInput {
     /// Consumes the builder and constructs an Operation<[`RemoveTags`](crate::operation::RemoveTags)>
     #[allow(unused_mut)]
@@ -2233,7 +2268,7 @@ impl RemoveTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2300,10 +2335,17 @@ impl RemoveTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2319,7 +2361,7 @@ impl RemoveTagsInput {
             "RemoveTags",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveTagsInput`](crate::input::RemoveTagsInput).
@@ -2379,10 +2421,6 @@ pub mod report_task_progress_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ReportTaskProgressInputOperationOutputAlias = crate::operation::ReportTaskProgress;
-#[doc(hidden)]
-pub type ReportTaskProgressInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ReportTaskProgressInput {
     /// Consumes the builder and constructs an Operation<[`ReportTaskProgress`](crate::operation::ReportTaskProgress)>
     #[allow(unused_mut)]
@@ -2394,7 +2432,7 @@ impl ReportTaskProgressInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ReportTaskProgress,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2461,10 +2499,17 @@ impl ReportTaskProgressInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2480,7 +2525,7 @@ impl ReportTaskProgressInput {
             "ReportTaskProgress",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ReportTaskProgressInput`](crate::input::ReportTaskProgressInput).
@@ -2548,11 +2593,6 @@ pub mod report_task_runner_heartbeat_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ReportTaskRunnerHeartbeatInputOperationOutputAlias =
-    crate::operation::ReportTaskRunnerHeartbeat;
-#[doc(hidden)]
-pub type ReportTaskRunnerHeartbeatInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ReportTaskRunnerHeartbeatInput {
     /// Consumes the builder and constructs an Operation<[`ReportTaskRunnerHeartbeat`](crate::operation::ReportTaskRunnerHeartbeat)>
     #[allow(unused_mut)]
@@ -2564,7 +2604,7 @@ impl ReportTaskRunnerHeartbeatInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ReportTaskRunnerHeartbeat,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2633,10 +2673,17 @@ impl ReportTaskRunnerHeartbeatInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2652,7 +2699,7 @@ impl ReportTaskRunnerHeartbeatInput {
             "ReportTaskRunnerHeartbeat",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ReportTaskRunnerHeartbeatInput`](crate::input::ReportTaskRunnerHeartbeatInput).
@@ -2723,10 +2770,6 @@ pub mod set_status_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetStatusInputOperationOutputAlias = crate::operation::SetStatus;
-#[doc(hidden)]
-pub type SetStatusInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SetStatusInput {
     /// Consumes the builder and constructs an Operation<[`SetStatus`](crate::operation::SetStatus)>
     #[allow(unused_mut)]
@@ -2738,7 +2781,7 @@ impl SetStatusInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetStatus,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2805,10 +2848,17 @@ impl SetStatusInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2822,7 +2872,7 @@ impl SetStatusInput {
                     "SetStatus",
                     "datapipeline",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetStatusInput`](crate::input::SetStatusInput).
@@ -2918,10 +2968,6 @@ pub mod set_task_status_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetTaskStatusInputOperationOutputAlias = crate::operation::SetTaskStatus;
-#[doc(hidden)]
-pub type SetTaskStatusInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SetTaskStatusInput {
     /// Consumes the builder and constructs an Operation<[`SetTaskStatus`](crate::operation::SetTaskStatus)>
     #[allow(unused_mut)]
@@ -2933,7 +2979,7 @@ impl SetTaskStatusInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetTaskStatus,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3000,10 +3046,17 @@ impl SetTaskStatusInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3019,7 +3072,7 @@ impl SetTaskStatusInput {
             "SetTaskStatus",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetTaskStatusInput`](crate::input::SetTaskStatusInput).
@@ -3126,11 +3179,6 @@ pub mod validate_pipeline_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ValidatePipelineDefinitionInputOperationOutputAlias =
-    crate::operation::ValidatePipelineDefinition;
-#[doc(hidden)]
-pub type ValidatePipelineDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ValidatePipelineDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`ValidatePipelineDefinition`](crate::operation::ValidatePipelineDefinition)>
     #[allow(unused_mut)]
@@ -3142,7 +3190,7 @@ impl ValidatePipelineDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ValidatePipelineDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3211,10 +3259,17 @@ impl ValidatePipelineDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3230,7 +3285,7 @@ impl ValidatePipelineDefinitionInput {
             "ValidatePipelineDefinition",
             "datapipeline",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ValidatePipelineDefinitionInput`](crate::input::ValidatePipelineDefinitionInput).

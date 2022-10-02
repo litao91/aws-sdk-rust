@@ -9,10 +9,8 @@
 #![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>The Amazon Chime SDK media pipeline APIs in this section allow software developers to create Amazon Chime SDK media pipelines
-//! and capture audio, video, events, and data messages from Amazon Chime SDK meetings. For more information about media pipleines, see
-//! <a href="https://docs.aws.amazon.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html">Amzon Chime SDK media pipelines</a>.
-//! </p>
+//! <p>The Amazon Chime SDK media pipeline APIs in this section allow software developers to
+//! create Amazon Chime SDK media pipelines that capture, concatenate, or stream your Amazon Chime SDK meetings. For more information about media pipleines, see <a href="http://amazonaws.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html">Amazon Chime SDK media pipelines</a>. </p>
 //!
 //! # Crate Organization
 //!
@@ -37,6 +35,8 @@ mod aws_endpoint;
 pub mod client;
 /// Configuration for the service.
 pub mod config;
+/// Wrap operations in a special type allowing for the modification of operations and the requests inside before sending them
+pub mod customizable_operation;
 /// Errors that can occur when calling the service.
 pub mod error;
 mod error_meta;
@@ -67,10 +67,12 @@ pub mod types {
     pub use aws_smithy_http::result::SdkError;
     pub use aws_smithy_types::DateTime;
 }
+pub use aws_smithy_async::rt::sleep::AsyncSleep;
+pub use aws_smithy_types::retry::RetryConfig;
+pub use aws_smithy_types::timeout::Config as TimeoutConfig;
 static API_METADATA: aws_http::user_agent::ApiMetadata =
     aws_http::user_agent::ApiMetadata::new("chimesdkmediapipelines", PKG_VERSION);
 pub use aws_smithy_http::endpoint::Endpoint;
-pub use aws_smithy_types::retry::RetryConfig;
 pub use aws_types::app_name::AppName;
 pub use aws_types::region::Region;
 pub use aws_types::Credentials;

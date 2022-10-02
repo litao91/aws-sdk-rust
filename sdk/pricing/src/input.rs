@@ -72,10 +72,6 @@ pub mod describe_services_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeServicesInputOperationOutputAlias = crate::operation::DescribeServices;
-#[doc(hidden)]
-pub type DescribeServicesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeServicesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeServices`](crate::operation::DescribeServices)>
     #[allow(unused_mut)]
@@ -87,7 +83,7 @@ impl DescribeServicesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeServices,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -154,10 +150,17 @@ impl DescribeServicesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -173,7 +176,7 @@ impl DescribeServicesInput {
             "DescribeServices",
             "pricing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeServicesInput`](crate::input::DescribeServicesInput).
@@ -251,10 +254,6 @@ pub mod get_attribute_values_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetAttributeValuesInputOperationOutputAlias = crate::operation::GetAttributeValues;
-#[doc(hidden)]
-pub type GetAttributeValuesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetAttributeValuesInput {
     /// Consumes the builder and constructs an Operation<[`GetAttributeValues`](crate::operation::GetAttributeValues)>
     #[allow(unused_mut)]
@@ -266,7 +265,7 @@ impl GetAttributeValuesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetAttributeValues,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -333,10 +332,17 @@ impl GetAttributeValuesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -352,7 +358,7 @@ impl GetAttributeValuesInput {
             "GetAttributeValues",
             "pricing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetAttributeValuesInput`](crate::input::GetAttributeValuesInput).
@@ -453,10 +459,6 @@ pub mod get_products_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetProductsInputOperationOutputAlias = crate::operation::GetProducts;
-#[doc(hidden)]
-pub type GetProductsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetProductsInput {
     /// Consumes the builder and constructs an Operation<[`GetProducts`](crate::operation::GetProducts)>
     #[allow(unused_mut)]
@@ -468,7 +470,7 @@ impl GetProductsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetProducts,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -535,10 +537,17 @@ impl GetProductsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -554,7 +563,7 @@ impl GetProductsInput {
             "GetProducts",
             "pricing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetProductsInput`](crate::input::GetProductsInput).

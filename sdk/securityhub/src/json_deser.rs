@@ -363,7 +363,8 @@ pub fn deser_operation_crate_operation_batch_import_findings(
                             aws_smithy_json::deserialize::token::expect_number_or_null(
                                 tokens.next(),
                             )?
-                            .map(|v| v.to_i32()),
+                            .map(|v| v.try_into())
+                            .transpose()?,
                         );
                     }
                     "FailedFindings" => {
@@ -376,7 +377,8 @@ pub fn deser_operation_crate_operation_batch_import_findings(
                             aws_smithy_json::deserialize::token::expect_number_or_null(
                                 tokens.next(),
                             )?
-                            .map(|v| v.to_i32()),
+                            .map(|v| v.try_into())
+                            .transpose()?,
                         );
                     }
                     _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -1625,7 +1627,8 @@ pub fn deser_operation_crate_operation_get_invitations_count(
                             aws_smithy_json::deserialize::token::expect_number_or_null(
                                 tokens.next(),
                             )?
-                            .map(|v| v.to_i32()),
+                            .map(|v| v.try_into())
+                            .transpose()?,
                         );
                     }
                     _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -3796,7 +3799,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Criticality" => {
@@ -3804,7 +3808,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Title" => {
@@ -4587,7 +4592,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "Label" => {
@@ -4607,7 +4612,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Original" => {
@@ -4833,7 +4839,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SourceDomain" => {
@@ -4877,7 +4884,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DestinationDomain" => {
@@ -4990,7 +4998,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ParentPid" => {
@@ -4998,7 +5007,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "LaunchedAt" => {
@@ -5427,7 +5437,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MissingCount" => {
@@ -5435,7 +5446,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "FailedCount" => {
@@ -5443,7 +5455,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "InstalledOtherCount" => {
@@ -5451,7 +5464,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "InstalledRejectedCount" => {
@@ -5459,7 +5473,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "InstalledPendingReboot" => {
@@ -5467,7 +5482,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "OperationStartTime" => {
@@ -5614,7 +5630,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Criticality" => {
@@ -5622,7 +5639,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RelatedFindings" => {
@@ -5691,7 +5709,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -6382,7 +6401,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "End" => {
@@ -6390,7 +6410,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -6522,7 +6543,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "FilePaths" => {
@@ -6891,6 +6913,21 @@ where
                             "ReferenceUrls" => {
                                 builder = builder.set_reference_urls(
                                     crate::json_deser::deser_list_com_amazonaws_securityhub_string_list(tokens)?
+                                );
+                            }
+                            "FixAvailable" => {
+                                builder = builder.set_fix_available(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| {
+                                        s.to_unescaped().map(|u| {
+                                            crate::model::VulnerabilityFixAvailable::from(
+                                                u.as_ref(),
+                                            )
+                                        })
+                                    })
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -8048,6 +8085,21 @@ where
                                     crate::json_deser::deser_structure_crate_model_aws_ecs_task_details(tokens)?
                                 );
                             }
+                            "AwsBackupBackupVault" => {
+                                builder = builder.set_aws_backup_backup_vault(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_backup_vault_details(tokens)?
+                                );
+                            }
+                            "AwsBackupBackupPlan" => {
+                                builder = builder.set_aws_backup_backup_plan(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_backup_plan_details(tokens)?
+                                );
+                            }
+                            "AwsBackupRecoveryPoint" => {
+                                builder = builder.set_aws_backup_recovery_point(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_recovery_point_details(tokens)?
+                                );
+                            }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
                         }
                     }
@@ -8368,7 +8420,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PortName" => {
@@ -8422,7 +8475,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PortName" => {
@@ -8681,7 +8735,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "Lte" => {
@@ -8689,7 +8743,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "Eq" => {
@@ -8697,7 +8751,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -9075,7 +9129,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "AdditionalOccurrences" => {
@@ -9168,7 +9223,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CreatedTime" => {
@@ -9790,7 +9846,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SnapshotId" => {
@@ -10111,7 +10168,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CidrBlock" => {
@@ -11310,7 +11368,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CreateDate" => {
@@ -11361,7 +11420,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PolicyId" => {
@@ -11728,7 +11788,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "KeySchema" => {
@@ -11807,7 +11868,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "TableStatus" => {
@@ -12072,7 +12134,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ApiKeySource" => {
@@ -12563,7 +12626,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "AvailabilityZone" => {
@@ -12765,7 +12829,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MasterUsername" => {
@@ -12800,7 +12865,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PendingActions" => {
@@ -13207,7 +13273,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Path" => {
@@ -13270,7 +13337,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "KeyId" => {
@@ -13441,7 +13508,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RevisionId" => {
@@ -13476,7 +13544,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "TracingConfig" => {
@@ -13540,7 +13609,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CompatibleRuntimes" => {
@@ -13640,7 +13710,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DbiResourceId" => {
@@ -13783,7 +13854,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PreferredBackupWindow" => {
@@ -13800,7 +13872,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DbSecurityGroups" => {
@@ -13890,7 +13963,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "OptionGroupMemberships" => {
@@ -13947,7 +14021,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MonitoringRoleArn" => {
@@ -13964,7 +14039,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Timezone" => {
@@ -13997,7 +14073,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "EnabledCloudWatchLogsExports" => {
@@ -14020,7 +14097,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -14197,7 +14275,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "KmsMasterKeyId" => {
@@ -14374,7 +14453,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Status" => {
@@ -14391,7 +14471,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "AvailabilityZone" => {
@@ -14462,7 +14543,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "OptionGroupName" => {
@@ -14479,7 +14561,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SourceRegion" => {
@@ -14629,7 +14712,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Status" => {
@@ -14646,7 +14730,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "VpcId" => {
@@ -14708,7 +14793,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "StorageEncrypted" => {
@@ -14794,7 +14880,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "AvailabilityZones" => {
@@ -14807,7 +14894,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DatabaseName" => {
@@ -14881,7 +14969,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MasterUsername" => {
@@ -15120,7 +15209,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CapacityProviders" => {
@@ -15157,7 +15247,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RunningTasksCount" => {
@@ -15165,7 +15256,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Status" => {
@@ -15660,7 +15752,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "EnableEcsManagedTags" => {
@@ -15682,7 +15775,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "LaunchType" => {
@@ -16576,7 +16670,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RuleId" => {
@@ -16665,7 +16760,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RuleId" => {
@@ -17121,7 +17217,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Description" => {
@@ -17331,7 +17428,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RetentionPeriodHours" => {
@@ -17339,7 +17437,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -17479,7 +17578,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -17713,7 +17813,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -17815,7 +17916,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Dimensions" => {
@@ -17837,7 +17939,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ExtendedStatistic" => {
@@ -17882,7 +17985,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Statistic" => {
@@ -17899,7 +18003,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "ThresholdMetricId" => {
@@ -18485,6 +18589,347 @@ where
     }
 }
 
+pub fn deser_structure_crate_model_aws_backup_backup_vault_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<Option<crate::model::AwsBackupBackupVaultDetails>, aws_smithy_json::deserialize::Error>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupBackupVaultDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "BackupVaultArn" => {
+                                builder = builder.set_backup_vault_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "BackupVaultName" => {
+                                builder = builder.set_backup_vault_name(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "EncryptionKeyArn" => {
+                                builder = builder.set_encryption_key_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "Notifications" => {
+                                builder = builder.set_notifications(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_backup_vault_notifications_details(tokens)?
+                                );
+                            }
+                            "AccessPolicy" => {
+                                builder = builder.set_access_policy(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_backup_plan_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<Option<crate::model::AwsBackupBackupPlanDetails>, aws_smithy_json::deserialize::Error>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupBackupPlanDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "BackupPlan" => {
+                                builder = builder.set_backup_plan(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_backup_plan_backup_plan_details(tokens)?
+                                );
+                            }
+                            "BackupPlanArn" => {
+                                builder = builder.set_backup_plan_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "BackupPlanId" => {
+                                builder = builder.set_backup_plan_id(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "VersionId" => {
+                                builder = builder.set_version_id(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_recovery_point_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<Option<crate::model::AwsBackupRecoveryPointDetails>, aws_smithy_json::deserialize::Error>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupRecoveryPointDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "BackupSizeInBytes" => {
+                                builder = builder.set_backup_size_in_bytes(
+                                    aws_smithy_json::deserialize::token::expect_number_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
+                                );
+                            }
+                            "BackupVaultArn" => {
+                                builder = builder.set_backup_vault_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "BackupVaultName" => {
+                                builder = builder.set_backup_vault_name(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "CalculatedLifecycle" => {
+                                builder = builder.set_calculated_lifecycle(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_recovery_point_calculated_lifecycle_details(tokens)?
+                                );
+                            }
+                            "CompletionDate" => {
+                                builder = builder.set_completion_date(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "CreatedBy" => {
+                                builder = builder.set_created_by(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_recovery_point_created_by_details(tokens)?
+                                );
+                            }
+                            "CreationDate" => {
+                                builder = builder.set_creation_date(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "EncryptionKeyArn" => {
+                                builder = builder.set_encryption_key_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "IamRoleArn" => {
+                                builder = builder.set_iam_role_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "IsEncrypted" => {
+                                builder = builder.set_is_encrypted(
+                                    aws_smithy_json::deserialize::token::expect_bool_or_null(
+                                        tokens.next(),
+                                    )?,
+                                );
+                            }
+                            "LastRestoreTime" => {
+                                builder = builder.set_last_restore_time(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "Lifecycle" => {
+                                builder = builder.set_lifecycle(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_recovery_point_lifecycle_details(tokens)?
+                                );
+                            }
+                            "RecoveryPointArn" => {
+                                builder = builder.set_recovery_point_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "ResourceArn" => {
+                                builder = builder.set_resource_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "ResourceType" => {
+                                builder = builder.set_resource_type(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "SourceBackupVaultArn" => {
+                                builder = builder.set_source_backup_vault_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "Status" => {
+                                builder = builder.set_status(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "StatusMessage" => {
+                                builder = builder.set_status_message(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "StorageClass" => {
+                                builder = builder.set_storage_class(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
 pub fn deser_structure_crate_model_software_package<'a, I>(
     tokens: &mut std::iter::Peekable<I>,
 ) -> Result<Option<crate::model::SoftwarePackage>, aws_smithy_json::deserialize::Error>
@@ -18566,6 +19011,24 @@ where
                                     .transpose()?,
                                 );
                             }
+                            "FixedInVersion" => {
+                                builder = builder.set_fixed_in_version(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "Remediation" => {
+                                builder = builder.set_remediation(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
                         }
                     }
@@ -18617,7 +19080,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "BaseVector" => {
@@ -18685,7 +19148,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "AsnOrg" => {
@@ -18858,7 +19322,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "Lat" => {
@@ -18866,7 +19330,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -18963,7 +19427,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Unit" => {
@@ -19157,7 +19622,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -19507,7 +19973,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "InsecureSsl" => {
@@ -20081,7 +20548,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "HttpTokens" => {
@@ -20172,7 +20640,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "InstanceId" => {
@@ -20999,7 +21468,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DedicatedMasterEnabled" => {
@@ -21023,7 +21493,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "InstanceType" => {
@@ -21733,7 +22204,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -22025,7 +22497,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ThrottlingRateLimit" => {
@@ -22033,7 +22506,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -22150,7 +22623,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "AllowMethods" => {
@@ -22444,7 +22918,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ReadCapacityUnits" => {
@@ -22452,7 +22927,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "WriteCapacityUnits" => {
@@ -22460,7 +22936,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -22785,7 +23262,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "DeploymentId" => {
@@ -23357,7 +23834,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RetentionPeriod" => {
@@ -23365,7 +23843,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SnapshotCopyGrantName" => {
@@ -23529,7 +24008,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -23681,7 +24161,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ClusterIdentifier" => {
@@ -23759,7 +24240,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PubliclyAccessible" => {
@@ -23868,7 +24350,7 @@ where
                                         aws_smithy_json::deserialize::token::expect_number_or_null(
                                             tokens.next(),
                                         )?
-                                        .map(|v| v.to_f64()),
+                                        .map(|v| v.to_f64_lossy()),
                                     );
                             }
                             "ElapsedTimeInSeconds" => {
@@ -23876,7 +24358,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "EstimatedTimeToCompletionInSeconds" => {
@@ -23884,7 +24367,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ProgressInMegaBytes" => {
@@ -23892,7 +24376,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SnapshotSizeInMegaBytes" => {
@@ -23900,7 +24385,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Status" => {
@@ -24129,7 +24615,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Interval" => {
@@ -24137,7 +24624,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Target" => {
@@ -24154,7 +24642,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "UnhealthyThreshold" => {
@@ -24162,7 +24651,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -24941,7 +25431,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "HostedZoneId" => {
@@ -25171,7 +25662,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MasterUserPassword" => {
@@ -25188,7 +25680,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "BackupRetentionPeriod" => {
@@ -25196,7 +25689,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MultiAZ" => {
@@ -25229,7 +25723,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DbInstanceIdentifier" => {
@@ -26163,7 +26658,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MinimumHealthyPercent" => {
@@ -26171,7 +26667,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -26579,7 +27076,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "HttpTokens" => {
@@ -26991,7 +27489,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "WarmEnabled" => {
@@ -27006,7 +27505,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DedicatedMasterEnabled" => {
@@ -27026,7 +27526,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "InstanceType" => {
@@ -28626,6 +29127,312 @@ where
     }
 }
 
+pub fn deser_structure_crate_model_aws_backup_backup_vault_notifications_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<crate::model::AwsBackupBackupVaultNotificationsDetails>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupBackupVaultNotificationsDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "BackupVaultEvents" => {
+                                builder = builder.set_backup_vault_events(
+                                    crate::json_deser::deser_list_com_amazonaws_securityhub_non_empty_string_list(tokens)?
+                                );
+                            }
+                            "SnsTopicArn" => {
+                                builder = builder.set_sns_topic_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_backup_plan_backup_plan_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<crate::model::AwsBackupBackupPlanBackupPlanDetails>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupBackupPlanBackupPlanDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "BackupPlanName" => {
+                                builder = builder.set_backup_plan_name(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "AdvancedBackupSettings" => {
+                                builder = builder.set_advanced_backup_settings(
+                                    crate::json_deser::deser_list_com_amazonaws_securityhub_aws_backup_backup_plan_advanced_backup_settings_list(tokens)?
+                                );
+                            }
+                            "BackupPlanRule" => {
+                                builder = builder.set_backup_plan_rule(
+                                    crate::json_deser::deser_list_com_amazonaws_securityhub_aws_backup_backup_plan_rule_list(tokens)?
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_recovery_point_calculated_lifecycle_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<crate::model::AwsBackupRecoveryPointCalculatedLifecycleDetails>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder =
+                crate::model::AwsBackupRecoveryPointCalculatedLifecycleDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "DeleteAt" => {
+                                builder = builder.set_delete_at(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "MoveToColdStorageAt" => {
+                                builder = builder.set_move_to_cold_storage_at(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_recovery_point_created_by_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<crate::model::AwsBackupRecoveryPointCreatedByDetails>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupRecoveryPointCreatedByDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "BackupPlanArn" => {
+                                builder = builder.set_backup_plan_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "BackupPlanId" => {
+                                builder = builder.set_backup_plan_id(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "BackupPlanVersion" => {
+                                builder = builder.set_backup_plan_version(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "BackupRuleId" => {
+                                builder = builder.set_backup_rule_id(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_recovery_point_lifecycle_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<crate::model::AwsBackupRecoveryPointLifecycleDetails>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupRecoveryPointLifecycleDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "DeleteAfterDays" => {
+                                builder = builder.set_delete_after_days(
+                                    aws_smithy_json::deserialize::token::expect_number_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
+                                );
+                            }
+                            "MoveToColdStorageAfterDays" => {
+                                builder = builder.set_move_to_cold_storage_after_days(
+                                    aws_smithy_json::deserialize::token::expect_number_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
 #[allow(clippy::type_complexity, non_snake_case)]
 pub fn deser_list_com_amazonaws_securityhub_adjustment_list<'a, I>(
     tokens: &mut std::iter::Peekable<I>,
@@ -28745,7 +29552,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -28832,7 +29640,8 @@ where I: Iterator<Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smi
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "OnDemandPercentageAboveBaseCapacity" => {
@@ -28840,7 +29649,8 @@ where I: Iterator<Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smi
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SpotAllocationStrategy" => {
@@ -28857,7 +29667,8 @@ where I: Iterator<Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smi
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SpotMaxPrice" => {
@@ -29723,7 +30534,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ToPort" => {
@@ -29731,7 +30543,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "UserIdGroupPairs" => {
@@ -30114,7 +30927,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -30411,7 +31225,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -31133,7 +31948,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "IndexStatus" => {
@@ -31150,7 +31966,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "KeySchema" => {
@@ -31439,7 +32256,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ThrottlingRateLimit" => {
@@ -31447,7 +32265,7 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_f64()),
+                                    .map(|v| v.to_f64_lossy()),
                                 );
                             }
                             "CachingEnabled" => {
@@ -31462,7 +32280,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CacheDataEncrypted" => {
@@ -31557,7 +32376,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CompliantHighCount" => {
@@ -31565,7 +32385,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CompliantMediumCount" => {
@@ -31573,7 +32394,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ExecutionType" => {
@@ -31590,7 +32412,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CompliantInformationalCount" => {
@@ -31598,7 +32421,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "NonCompliantInformationalCount" => {
@@ -31606,7 +32430,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CompliantUnspecifiedCount" => {
@@ -31614,7 +32439,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "NonCompliantLowCount" => {
@@ -31622,7 +32448,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "NonCompliantHighCount" => {
@@ -31630,7 +32457,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CompliantLowCount" => {
@@ -31638,7 +32466,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ComplianceType" => {
@@ -31673,7 +32502,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "NonCompliantUnspecifiedCount" => {
@@ -31681,7 +32511,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PatchGroup" => {
@@ -32301,7 +33132,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PolicyNames" => {
@@ -32447,7 +33279,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Enabled" => {
@@ -32527,7 +33360,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -32575,7 +33409,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -33033,7 +33868,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -33671,7 +34507,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RuleId" => {
@@ -33854,7 +34691,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DbInstanceIdentifier" => {
@@ -34050,7 +34888,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CapacityProvider" => {
@@ -34067,7 +34906,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -34176,7 +35016,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "DependsOn" => {
@@ -34293,7 +35134,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MemoryReservation" => {
@@ -34301,7 +35143,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "MountPoints" => {
@@ -34364,7 +35207,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "StopTimeout" => {
@@ -34372,7 +35216,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SystemControls" => {
@@ -34737,7 +35582,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CapacityProvider" => {
@@ -34754,7 +35600,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -34867,7 +35714,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "LoadBalancerName" => {
@@ -35122,7 +35970,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Port" => {
@@ -35130,7 +35979,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RegistryArn" => {
@@ -35262,7 +36112,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "CertificateArn" => {
@@ -35458,7 +36309,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -36609,7 +37461,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RuleId" => {
@@ -36750,7 +37603,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RuleId" => {
@@ -36880,7 +37734,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RuleId" => {
@@ -36967,6 +37822,89 @@ where
         }
         _ => Err(aws_smithy_json::deserialize::Error::custom(
             "expected start object or null",
+        )),
+    }
+}
+
+#[allow(clippy::type_complexity, non_snake_case)]
+pub fn deser_list_com_amazonaws_securityhub_aws_backup_backup_plan_advanced_backup_settings_list<
+    'a,
+    I,
+>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<std::vec::Vec<crate::model::AwsBackupBackupPlanAdvancedBackupSettingsDetails>>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartArray { .. }) => {
+            let mut items = Vec::new();
+            loop {
+                match tokens.peek() {
+                    Some(Ok(aws_smithy_json::deserialize::Token::EndArray { .. })) => {
+                        tokens.next().transpose().unwrap();
+                        break;
+                    }
+                    _ => {
+                        let value =
+                            crate::json_deser::deser_structure_crate_model_aws_backup_backup_plan_advanced_backup_settings_details(tokens)?
+                        ;
+                        if let Some(value) = value {
+                            items.push(value);
+                        }
+                    }
+                }
+            }
+            Ok(Some(items))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start array or null",
+        )),
+    }
+}
+
+#[allow(clippy::type_complexity, non_snake_case)]
+pub fn deser_list_com_amazonaws_securityhub_aws_backup_backup_plan_rule_list<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<std::vec::Vec<crate::model::AwsBackupBackupPlanRuleDetails>>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartArray { .. }) => {
+            let mut items = Vec::new();
+            loop {
+                match tokens.peek() {
+                    Some(Ok(aws_smithy_json::deserialize::Token::EndArray { .. })) => {
+                        tokens.next().transpose().unwrap();
+                        break;
+                    }
+                    _ => {
+                        let value =
+                            crate::json_deser::deser_structure_crate_model_aws_backup_backup_plan_rule_details(tokens)?
+                        ;
+                        if let Some(value) = value {
+                            items.push(value);
+                        }
+                    }
+                }
+            }
+            Ok(Some(items))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start array or null",
         )),
     }
 }
@@ -37092,7 +38030,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Arn" => {
@@ -37652,7 +38591,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Type" => {
@@ -37660,7 +38600,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -37705,7 +38646,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "To" => {
@@ -37713,7 +38655,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -37824,7 +38767,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ExpiredObjectDeleteMarker" => {
@@ -37853,7 +38797,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "NoncurrentVersionTransitions" => {
@@ -38142,7 +39087,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -38298,7 +39244,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "InstanceProtocol" => {
@@ -38315,7 +39262,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Protocol" => {
@@ -38494,7 +39442,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PolicyName" => {
@@ -39107,7 +40056,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Retries" => {
@@ -39115,7 +40065,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "StartPeriod" => {
@@ -39123,7 +40074,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Timeout" => {
@@ -39131,7 +40083,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -39198,7 +40151,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SharedMemorySize" => {
@@ -39206,7 +40160,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Swappiness" => {
@@ -39214,7 +40169,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Tmpfs" => {
@@ -39864,7 +40820,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -39977,7 +40934,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "SnapshotId" => {
@@ -39994,7 +40952,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "VolumeType" => {
@@ -40052,7 +41011,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "IkeVersions" => {
@@ -40089,7 +41049,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Phase2DhGroupNumbers" => {
@@ -40112,7 +41073,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "PreSharedKey" => {
@@ -40129,7 +41091,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RekeyMarginTimeSeconds" => {
@@ -40137,7 +41100,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ReplayWindowSize" => {
@@ -40145,7 +41109,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "TunnelInsideCidr" => {
@@ -40359,7 +41324,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ResourceArn" => {
@@ -40968,6 +41934,169 @@ where
     }
 }
 
+pub fn deser_structure_crate_model_aws_backup_backup_plan_advanced_backup_settings_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<crate::model::AwsBackupBackupPlanAdvancedBackupSettingsDetails>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder =
+                crate::model::AwsBackupBackupPlanAdvancedBackupSettingsDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "BackupOptions" => {
+                                builder = builder.set_backup_options(
+                                    crate::json_deser::deser_map_com_amazonaws_securityhub_field_map(tokens)?
+                                );
+                            }
+                            "ResourceType" => {
+                                builder = builder.set_resource_type(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_backup_plan_rule_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<Option<crate::model::AwsBackupBackupPlanRuleDetails>, aws_smithy_json::deserialize::Error>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupBackupPlanRuleDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "TargetBackupVault" => {
+                                builder = builder.set_target_backup_vault(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "StartWindowMinutes" => {
+                                builder = builder.set_start_window_minutes(
+                                    aws_smithy_json::deserialize::token::expect_number_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
+                                );
+                            }
+                            "ScheduleExpression" => {
+                                builder = builder.set_schedule_expression(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "RuleName" => {
+                                builder = builder.set_rule_name(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "RuleId" => {
+                                builder = builder.set_rule_id(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "EnableContinuousBackup" => {
+                                builder = builder.set_enable_continuous_backup(
+                                    aws_smithy_json::deserialize::token::expect_bool_or_null(
+                                        tokens.next(),
+                                    )?,
+                                );
+                            }
+                            "CompletionWindowMinutes" => {
+                                builder = builder.set_completion_window_minutes(
+                                    aws_smithy_json::deserialize::token::expect_number_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
+                                );
+                            }
+                            "CopyActions" => {
+                                builder = builder.set_copy_actions(
+                                    crate::json_deser::deser_list_com_amazonaws_securityhub_aws_backup_backup_plan_rule_copy_actions_list(tokens)?
+                                );
+                            }
+                            "Lifecycle" => {
+                                builder = builder.set_lifecycle(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_backup_plan_lifecycle_details(tokens)?
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
 pub fn deser_structure_crate_model_sensitive_data_detections<'a, I>(
     tokens: &mut std::iter::Peekable<I>,
 ) -> Result<Option<crate::model::SensitiveDataDetections>, aws_smithy_json::deserialize::Error>
@@ -40991,7 +42120,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Type" => {
@@ -41224,7 +42354,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "HttpsPort" => {
@@ -41232,7 +42363,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "OriginKeepaliveTimeout" => {
@@ -41240,7 +42372,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "OriginProtocolPolicy" => {
@@ -41257,7 +42390,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "OriginSslProtocols" => {
@@ -41638,7 +42772,8 @@ where I: Iterator<Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smi
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -42852,7 +43987,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "HostPort" => {
@@ -42860,7 +43996,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Protocol" => {
@@ -43103,7 +44240,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Name" => {
@@ -43120,7 +44258,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -43287,7 +44426,8 @@ where
                         let value = aws_smithy_json::deserialize::token::expect_number_or_null(
                             tokens.next(),
                         )?
-                        .map(|v| v.to_i32());
+                        .map(|v| v.try_into())
+                        .transpose()?;
                         if let Some(value) = value {
                             items.push(value);
                         }
@@ -43487,6 +44627,104 @@ where
 }
 
 #[allow(clippy::type_complexity, non_snake_case)]
+pub fn deser_list_com_amazonaws_securityhub_aws_backup_backup_plan_rule_copy_actions_list<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<std::vec::Vec<crate::model::AwsBackupBackupPlanRuleCopyActionsDetails>>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartArray { .. }) => {
+            let mut items = Vec::new();
+            loop {
+                match tokens.peek() {
+                    Some(Ok(aws_smithy_json::deserialize::Token::EndArray { .. })) => {
+                        tokens.next().transpose().unwrap();
+                        break;
+                    }
+                    _ => {
+                        let value =
+                            crate::json_deser::deser_structure_crate_model_aws_backup_backup_plan_rule_copy_actions_details(tokens)?
+                        ;
+                        if let Some(value) = value {
+                            items.push(value);
+                        }
+                    }
+                }
+            }
+            Ok(Some(items))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start array or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_backup_plan_lifecycle_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<crate::model::AwsBackupBackupPlanLifecycleDetails>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupBackupPlanLifecycleDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "DeleteAfterDays" => {
+                                builder = builder.set_delete_after_days(
+                                    aws_smithy_json::deserialize::token::expect_number_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
+                                );
+                            }
+                            "MoveToColdStorageAfterDays" => {
+                                builder = builder.set_move_to_cold_storage_after_days(
+                                    aws_smithy_json::deserialize::token::expect_number_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+#[allow(clippy::type_complexity, non_snake_case)]
 pub fn deser_list_com_amazonaws_securityhub_ranges<'a, I>(
     tokens: &mut std::iter::Peekable<I>,
 ) -> Result<Option<std::vec::Vec<crate::model::Range>>, aws_smithy_json::deserialize::Error>
@@ -43657,7 +44895,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -43714,7 +44953,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -43822,7 +45062,8 @@ where I: Iterator<Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smi
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "StorageClass" => {
@@ -43890,7 +45131,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "StorageClass" => {
@@ -44074,7 +45316,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -44417,12 +45660,67 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "RuleDefinition" => {
                                 builder = builder.set_rule_definition(
                                     crate::json_deser::deser_structure_crate_model_rule_group_source_stateless_rule_definition(tokens)?
+                                );
+                            }
+                            _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
+                        }
+                    }
+                    other => {
+                        return Err(aws_smithy_json::deserialize::Error::custom(format!(
+                            "expected object key or end object, found: {:?}",
+                            other
+                        )))
+                    }
+                }
+            }
+            Ok(Some(builder.build()))
+        }
+        _ => Err(aws_smithy_json::deserialize::Error::custom(
+            "expected start object or null",
+        )),
+    }
+}
+
+pub fn deser_structure_crate_model_aws_backup_backup_plan_rule_copy_actions_details<'a, I>(
+    tokens: &mut std::iter::Peekable<I>,
+) -> Result<
+    Option<crate::model::AwsBackupBackupPlanRuleCopyActionsDetails>,
+    aws_smithy_json::deserialize::Error,
+>
+where
+    I: Iterator<
+        Item = Result<aws_smithy_json::deserialize::Token<'a>, aws_smithy_json::deserialize::Error>,
+    >,
+{
+    match tokens.next().transpose()? {
+        Some(aws_smithy_json::deserialize::Token::ValueNull { .. }) => Ok(None),
+        Some(aws_smithy_json::deserialize::Token::StartObject { .. }) => {
+            #[allow(unused_mut)]
+            let mut builder = crate::model::AwsBackupBackupPlanRuleCopyActionsDetails::builder();
+            loop {
+                match tokens.next().transpose()? {
+                    Some(aws_smithy_json::deserialize::Token::EndObject { .. }) => break,
+                    Some(aws_smithy_json::deserialize::Token::ObjectKey { key, .. }) => {
+                        match key.to_unescaped()?.as_ref() {
+                            "DestinationBackupVaultArn" => {
+                                builder = builder.set_destination_backup_vault_arn(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                                    .transpose()?,
+                                );
+                            }
+                            "Lifecycle" => {
+                                builder = builder.set_lifecycle(
+                                    crate::json_deser::deser_structure_crate_model_aws_backup_backup_plan_lifecycle_details(tokens)?
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -44467,7 +45765,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "End" => {
@@ -44475,7 +45774,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "StartColumn" => {
@@ -44483,7 +45783,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -44528,7 +45829,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "LineRange" => {
@@ -44592,7 +45894,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -44637,7 +45940,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "Row" => {
@@ -44645,7 +45949,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i64()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ColumnName" => {
@@ -44711,7 +46016,8 @@ where
                         let value = aws_smithy_json::deserialize::token::expect_number_or_null(
                             tokens.next(),
                         )?
-                        .map(|v| v.to_i32());
+                        .map(|v| v.try_into())
+                        .transpose()?;
                         if let Some(value) = value {
                             items.push(value);
                         }
@@ -45473,7 +46779,8 @@ where
                         let value = aws_smithy_json::deserialize::token::expect_number_or_null(
                             tokens.next(),
                         )?
-                        .map(|v| v.to_i32());
+                        .map(|v| v.try_into())
+                        .transpose()?;
                         if let Some(value) = value {
                             items.push(value);
                         }
@@ -45648,7 +46955,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ToPort" => {
@@ -45656,7 +46964,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -45761,7 +47070,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             "ToPort" => {
@@ -45769,7 +47079,8 @@ where
                                     aws_smithy_json::deserialize::token::expect_number_or_null(
                                         tokens.next(),
                                     )?
-                                    .map(|v| v.to_i32()),
+                                    .map(|v| v.try_into())
+                                    .transpose()?,
                                 );
                             }
                             _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,

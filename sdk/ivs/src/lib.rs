@@ -88,7 +88,9 @@
 //! resource. A tag comprises a <i>key</i> and a <i>value</i>, both
 //! set by you. For example, you might set a tag as <code>topic:nature</code> to label a
 //! particular video category. See <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a> for
-//! more information, including restrictions that apply to tags.</p>
+//! more information, including restrictions that apply to tags and "Tag naming limits and
+//! requirements"; Amazon IVS has no service-specific constraints beyond what is documented
+//! there.</p>
 //! <p>Tags can help you identify and organize your Amazon Web Services resources. For example,
 //! you can use the same tag for different resources to indicate that they are related. You can
 //! also use tags to manage access (see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html"> Access Tags</a>). </p>
@@ -108,9 +110,11 @@
 //! </li>
 //! <li>
 //! <p>
-//! <i>Authorization</i> is about granting permissions. You need to be
-//! authorized to view <a href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html">Amazon IVS private channels</a>.
-//! (Private channels are channels that are enabled for "playback authorization.")</p>
+//! <i>Authorization</i> is about granting permissions. Your IAM roles need
+//! to have permissions for Amazon IVS API requests. In addition, authorization is needed to
+//! view <a href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html">Amazon
+//! IVS private channels</a>. (Private channels are channels that are enabled for
+//! "playback authorization.")</p>
 //! </li>
 //! </ul>
 //! <p>
@@ -137,6 +141,13 @@
 //! </li>
 //! </ul>
 //! <p>
+//! <b>Amazon Resource Names (ARNs)</b>
+//! </p>
+//! <p>ARNs uniquely identify AWS resources. An ARN is required when you need to specify a
+//! resource unambiguously across all of AWS, such as in IAM policies and API calls. For more
+//! information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names</a> in the <i>AWS General
+//! Reference</i>.</p>
+//! <p>
 //! <b>Channel Endpoints</b>
 //! </p>
 //! <ul>
@@ -148,7 +159,7 @@
 //! <li>
 //! <p>
 //! <a>GetChannel</a> — Gets the channel configuration for the specified
-//! channel ARN (Amazon Resource Name).</p>
+//! channel ARN.</p>
 //! </li>
 //! <li>
 //! <p>
@@ -345,6 +356,8 @@ mod aws_endpoint;
 pub mod client;
 /// Configuration for the service.
 pub mod config;
+/// Wrap operations in a special type allowing for the modification of operations and the requests inside before sending them
+pub mod customizable_operation;
 /// Errors that can occur when calling the service.
 pub mod error;
 mod error_meta;
@@ -374,10 +387,12 @@ pub mod types {
     pub use aws_smithy_http::result::SdkError;
     pub use aws_smithy_types::DateTime;
 }
+pub use aws_smithy_async::rt::sleep::AsyncSleep;
+pub use aws_smithy_types::retry::RetryConfig;
+pub use aws_smithy_types::timeout::Config as TimeoutConfig;
 static API_METADATA: aws_http::user_agent::ApiMetadata =
     aws_http::user_agent::ApiMetadata::new("ivs", PKG_VERSION);
 pub use aws_smithy_http::endpoint::Endpoint;
-pub use aws_smithy_types::retry::RetryConfig;
 pub use aws_types::app_name::AppName;
 pub use aws_types::region::Region;
 pub use aws_types::Credentials;

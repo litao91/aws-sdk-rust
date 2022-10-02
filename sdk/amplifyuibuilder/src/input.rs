@@ -73,10 +73,6 @@ pub mod create_component_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateComponentInputOperationOutputAlias = crate::operation::CreateComponent;
-#[doc(hidden)]
-pub type CreateComponentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateComponentInput {
     /// Consumes the builder and constructs an Operation<[`CreateComponent`](crate::operation::CreateComponent)>
     #[allow(unused_mut)]
@@ -88,7 +84,7 @@ impl CreateComponentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateComponent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -200,10 +196,17 @@ impl CreateComponentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -219,7 +222,7 @@ impl CreateComponentInput {
             "CreateComponent",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateComponentInput`](crate::input::CreateComponentInput).
@@ -300,10 +303,6 @@ pub mod create_theme_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateThemeInputOperationOutputAlias = crate::operation::CreateTheme;
-#[doc(hidden)]
-pub type CreateThemeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateThemeInput {
     /// Consumes the builder and constructs an Operation<[`CreateTheme`](crate::operation::CreateTheme)>
     #[allow(unused_mut)]
@@ -315,7 +314,7 @@ impl CreateThemeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateTheme,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -425,10 +424,17 @@ impl CreateThemeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -444,7 +450,7 @@ impl CreateThemeInput {
             "CreateTheme",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateThemeInput`](crate::input::CreateThemeInput).
@@ -510,10 +516,6 @@ pub mod delete_component_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteComponentInputOperationOutputAlias = crate::operation::DeleteComponent;
-#[doc(hidden)]
-pub type DeleteComponentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteComponentInput {
     /// Consumes the builder and constructs an Operation<[`DeleteComponent`](crate::operation::DeleteComponent)>
     #[allow(unused_mut)]
@@ -525,7 +527,7 @@ impl DeleteComponentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteComponent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -622,10 +624,17 @@ impl DeleteComponentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -641,7 +650,7 @@ impl DeleteComponentInput {
             "DeleteComponent",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteComponentInput`](crate::input::DeleteComponentInput).
@@ -707,10 +716,6 @@ pub mod delete_theme_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteThemeInputOperationOutputAlias = crate::operation::DeleteTheme;
-#[doc(hidden)]
-pub type DeleteThemeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteThemeInput {
     /// Consumes the builder and constructs an Operation<[`DeleteTheme`](crate::operation::DeleteTheme)>
     #[allow(unused_mut)]
@@ -722,7 +727,7 @@ impl DeleteThemeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteTheme,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -819,10 +824,17 @@ impl DeleteThemeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -838,7 +850,7 @@ impl DeleteThemeInput {
             "DeleteTheme",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteThemeInput`](crate::input::DeleteThemeInput).
@@ -895,10 +907,6 @@ pub mod exchange_code_for_token_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ExchangeCodeForTokenInputOperationOutputAlias = crate::operation::ExchangeCodeForToken;
-#[doc(hidden)]
-pub type ExchangeCodeForTokenInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ExchangeCodeForTokenInput {
     /// Consumes the builder and constructs an Operation<[`ExchangeCodeForToken`](crate::operation::ExchangeCodeForToken)>
     #[allow(unused_mut)]
@@ -910,7 +918,7 @@ impl ExchangeCodeForTokenInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ExchangeCodeForToken,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -987,10 +995,17 @@ impl ExchangeCodeForTokenInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1006,7 +1021,7 @@ impl ExchangeCodeForTokenInput {
             "ExchangeCodeForToken",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ExchangeCodeForTokenInput`](crate::input::ExchangeCodeForTokenInput).
@@ -1072,10 +1087,6 @@ pub mod export_components_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ExportComponentsInputOperationOutputAlias = crate::operation::ExportComponents;
-#[doc(hidden)]
-pub type ExportComponentsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ExportComponentsInput {
     /// Consumes the builder and constructs an Operation<[`ExportComponents`](crate::operation::ExportComponents)>
     #[allow(unused_mut)]
@@ -1087,7 +1098,7 @@ impl ExportComponentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ExportComponents,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1180,10 +1191,17 @@ impl ExportComponentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1199,7 +1217,7 @@ impl ExportComponentsInput {
             "ExportComponents",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ExportComponentsInput`](crate::input::ExportComponentsInput).
@@ -1265,10 +1283,6 @@ pub mod export_themes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ExportThemesInputOperationOutputAlias = crate::operation::ExportThemes;
-#[doc(hidden)]
-pub type ExportThemesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ExportThemesInput {
     /// Consumes the builder and constructs an Operation<[`ExportThemes`](crate::operation::ExportThemes)>
     #[allow(unused_mut)]
@@ -1280,7 +1294,7 @@ impl ExportThemesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ExportThemes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1373,10 +1387,17 @@ impl ExportThemesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1392,7 +1413,7 @@ impl ExportThemesInput {
             "ExportThemes",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ExportThemesInput`](crate::input::ExportThemesInput).
@@ -1458,10 +1479,6 @@ pub mod get_component_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetComponentInputOperationOutputAlias = crate::operation::GetComponent;
-#[doc(hidden)]
-pub type GetComponentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetComponentInput {
     /// Consumes the builder and constructs an Operation<[`GetComponent`](crate::operation::GetComponent)>
     #[allow(unused_mut)]
@@ -1473,7 +1490,7 @@ impl GetComponentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetComponent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1570,10 +1587,17 @@ impl GetComponentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1589,7 +1613,7 @@ impl GetComponentInput {
             "GetComponent",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetComponentInput`](crate::input::GetComponentInput).
@@ -1654,10 +1678,6 @@ pub mod get_theme_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetThemeInputOperationOutputAlias = crate::operation::GetTheme;
-#[doc(hidden)]
-pub type GetThemeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetThemeInput {
     /// Consumes the builder and constructs an Operation<[`GetTheme`](crate::operation::GetTheme)>
     #[allow(unused_mut)]
@@ -1669,7 +1689,7 @@ impl GetThemeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetTheme,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1766,10 +1786,17 @@ impl GetThemeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1783,7 +1810,7 @@ impl GetThemeInput {
                     "GetTheme",
                     "amplifyuibuilder",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetThemeInput`](crate::input::GetThemeInput).
@@ -1861,10 +1888,6 @@ pub mod list_components_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListComponentsInputOperationOutputAlias = crate::operation::ListComponents;
-#[doc(hidden)]
-pub type ListComponentsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListComponentsInput {
     /// Consumes the builder and constructs an Operation<[`ListComponents`](crate::operation::ListComponents)>
     #[allow(unused_mut)]
@@ -1876,7 +1899,7 @@ impl ListComponentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListComponents,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1975,10 +1998,17 @@ impl ListComponentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1994,7 +2024,7 @@ impl ListComponentsInput {
             "ListComponents",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListComponentsInput`](crate::input::ListComponentsInput).
@@ -2071,10 +2101,6 @@ pub mod list_themes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListThemesInputOperationOutputAlias = crate::operation::ListThemes;
-#[doc(hidden)]
-pub type ListThemesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListThemesInput {
     /// Consumes the builder and constructs an Operation<[`ListThemes`](crate::operation::ListThemes)>
     #[allow(unused_mut)]
@@ -2086,7 +2112,7 @@ impl ListThemesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListThemes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2185,10 +2211,17 @@ impl ListThemesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2204,7 +2237,7 @@ impl ListThemesInput {
             "ListThemes",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListThemesInput`](crate::input::ListThemesInput).
@@ -2261,10 +2294,6 @@ pub mod refresh_token_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RefreshTokenInputOperationOutputAlias = crate::operation::RefreshToken;
-#[doc(hidden)]
-pub type RefreshTokenInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RefreshTokenInput {
     /// Consumes the builder and constructs an Operation<[`RefreshToken`](crate::operation::RefreshToken)>
     #[allow(unused_mut)]
@@ -2276,7 +2305,7 @@ impl RefreshTokenInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RefreshToken,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2353,10 +2382,17 @@ impl RefreshTokenInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2372,7 +2408,7 @@ impl RefreshTokenInput {
             "RefreshToken",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RefreshTokenInput`](crate::input::RefreshTokenInput).
@@ -2465,10 +2501,6 @@ pub mod update_component_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateComponentInputOperationOutputAlias = crate::operation::UpdateComponent;
-#[doc(hidden)]
-pub type UpdateComponentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateComponentInput {
     /// Consumes the builder and constructs an Operation<[`UpdateComponent`](crate::operation::UpdateComponent)>
     #[allow(unused_mut)]
@@ -2480,7 +2512,7 @@ impl UpdateComponentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateComponent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2610,10 +2642,17 @@ impl UpdateComponentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2629,7 +2668,7 @@ impl UpdateComponentInput {
             "UpdateComponent",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateComponentInput`](crate::input::UpdateComponentInput).
@@ -2722,10 +2761,6 @@ pub mod update_theme_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateThemeInputOperationOutputAlias = crate::operation::UpdateTheme;
-#[doc(hidden)]
-pub type UpdateThemeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateThemeInput {
     /// Consumes the builder and constructs an Operation<[`UpdateTheme`](crate::operation::UpdateTheme)>
     #[allow(unused_mut)]
@@ -2737,7 +2772,7 @@ impl UpdateThemeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateTheme,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2865,10 +2900,17 @@ impl UpdateThemeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2884,7 +2926,7 @@ impl UpdateThemeInput {
             "UpdateTheme",
             "amplifyuibuilder",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateThemeInput`](crate::input::UpdateThemeInput).

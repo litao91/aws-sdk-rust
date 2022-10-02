@@ -62,12 +62,6 @@ pub mod send_serial_console_ssh_public_key_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SendSerialConsoleSshPublicKeyInputOperationOutputAlias =
-    crate::operation::SendSerialConsoleSSHPublicKey;
-#[doc(hidden)]
-pub type SendSerialConsoleSshPublicKeyInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl SendSerialConsoleSshPublicKeyInput {
     /// Consumes the builder and constructs an Operation<[`SendSerialConsoleSSHPublicKey`](crate::operation::SendSerialConsoleSSHPublicKey)>
     #[allow(unused_mut)]
@@ -79,7 +73,7 @@ impl SendSerialConsoleSshPublicKeyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SendSerialConsoleSSHPublicKey,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -145,10 +139,17 @@ impl SendSerialConsoleSshPublicKeyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -164,7 +165,7 @@ impl SendSerialConsoleSshPublicKeyInput {
             "SendSerialConsoleSSHPublicKey",
             "ec2instanceconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SendSerialConsoleSshPublicKeyInput`](crate::input::SendSerialConsoleSshPublicKeyInput).
@@ -248,10 +249,6 @@ pub mod send_ssh_public_key_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SendSshPublicKeyInputOperationOutputAlias = crate::operation::SendSSHPublicKey;
-#[doc(hidden)]
-pub type SendSshPublicKeyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SendSshPublicKeyInput {
     /// Consumes the builder and constructs an Operation<[`SendSSHPublicKey`](crate::operation::SendSSHPublicKey)>
     #[allow(unused_mut)]
@@ -263,7 +260,7 @@ impl SendSshPublicKeyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SendSSHPublicKey,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -330,10 +327,17 @@ impl SendSshPublicKeyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -349,7 +353,7 @@ impl SendSshPublicKeyInput {
             "SendSSHPublicKey",
             "ec2instanceconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SendSshPublicKeyInput`](crate::input::SendSshPublicKeyInput).

@@ -70,10 +70,6 @@ pub mod associate_user_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateUserInputOperationOutputAlias = crate::operation::AssociateUser;
-#[doc(hidden)]
-pub type AssociateUserInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateUserInput {
     /// Consumes the builder and constructs an Operation<[`AssociateUser`](crate::operation::AssociateUser)>
     #[allow(unused_mut)]
@@ -85,7 +81,7 @@ impl AssociateUserInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateUser,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -147,10 +143,17 @@ impl AssociateUserInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -166,7 +169,7 @@ impl AssociateUserInput {
             "AssociateUser",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateUserInput`](crate::input::AssociateUserInput).
@@ -222,11 +225,6 @@ pub mod deregister_identity_provider_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeregisterIdentityProviderInputOperationOutputAlias =
-    crate::operation::DeregisterIdentityProvider;
-#[doc(hidden)]
-pub type DeregisterIdentityProviderInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeregisterIdentityProviderInput {
     /// Consumes the builder and constructs an Operation<[`DeregisterIdentityProvider`](crate::operation::DeregisterIdentityProvider)>
     #[allow(unused_mut)]
@@ -238,7 +236,7 @@ impl DeregisterIdentityProviderInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeregisterIdentityProvider,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -303,10 +301,17 @@ impl DeregisterIdentityProviderInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -322,7 +327,7 @@ impl DeregisterIdentityProviderInput {
             "DeregisterIdentityProvider",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeregisterIdentityProviderInput`](crate::input::DeregisterIdentityProviderInput).
@@ -400,10 +405,6 @@ pub mod disassociate_user_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisassociateUserInputOperationOutputAlias = crate::operation::DisassociateUser;
-#[doc(hidden)]
-pub type DisassociateUserInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DisassociateUserInput {
     /// Consumes the builder and constructs an Operation<[`DisassociateUser`](crate::operation::DisassociateUser)>
     #[allow(unused_mut)]
@@ -415,7 +416,7 @@ impl DisassociateUserInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisassociateUser,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -477,10 +478,17 @@ impl DisassociateUserInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -496,7 +504,7 @@ impl DisassociateUserInput {
             "DisassociateUser",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisassociateUserInput`](crate::input::DisassociateUserInput).
@@ -547,10 +555,6 @@ pub mod list_identity_providers_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListIdentityProvidersInputOperationOutputAlias = crate::operation::ListIdentityProviders;
-#[doc(hidden)]
-pub type ListIdentityProvidersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListIdentityProvidersInput {
     /// Consumes the builder and constructs an Operation<[`ListIdentityProviders`](crate::operation::ListIdentityProviders)>
     #[allow(unused_mut)]
@@ -562,7 +566,7 @@ impl ListIdentityProvidersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListIdentityProviders,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -627,10 +631,17 @@ impl ListIdentityProvidersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -646,7 +657,7 @@ impl ListIdentityProvidersInput {
             "ListIdentityProviders",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListIdentityProvidersInput`](crate::input::ListIdentityProvidersInput).
@@ -718,10 +729,6 @@ pub mod list_instances_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListInstancesInputOperationOutputAlias = crate::operation::ListInstances;
-#[doc(hidden)]
-pub type ListInstancesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListInstancesInput {
     /// Consumes the builder and constructs an Operation<[`ListInstances`](crate::operation::ListInstances)>
     #[allow(unused_mut)]
@@ -733,7 +740,7 @@ impl ListInstancesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListInstances,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -795,10 +802,17 @@ impl ListInstancesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -814,7 +828,7 @@ impl ListInstancesInput {
             "ListInstances",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListInstancesInput`](crate::input::ListInstancesInput).
@@ -915,11 +929,6 @@ pub mod list_product_subscriptions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListProductSubscriptionsInputOperationOutputAlias =
-    crate::operation::ListProductSubscriptions;
-#[doc(hidden)]
-pub type ListProductSubscriptionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListProductSubscriptionsInput {
     /// Consumes the builder and constructs an Operation<[`ListProductSubscriptions`](crate::operation::ListProductSubscriptions)>
     #[allow(unused_mut)]
@@ -931,7 +940,7 @@ impl ListProductSubscriptionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListProductSubscriptions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -996,10 +1005,17 @@ impl ListProductSubscriptionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1015,7 +1031,7 @@ impl ListProductSubscriptionsInput {
             "ListProductSubscriptions",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListProductSubscriptionsInput`](crate::input::ListProductSubscriptionsInput).
@@ -1114,10 +1130,6 @@ pub mod list_user_associations_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListUserAssociationsInputOperationOutputAlias = crate::operation::ListUserAssociations;
-#[doc(hidden)]
-pub type ListUserAssociationsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListUserAssociationsInput {
     /// Consumes the builder and constructs an Operation<[`ListUserAssociations`](crate::operation::ListUserAssociations)>
     #[allow(unused_mut)]
@@ -1129,7 +1141,7 @@ impl ListUserAssociationsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListUserAssociations,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1193,10 +1205,17 @@ impl ListUserAssociationsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1212,7 +1231,7 @@ impl ListUserAssociationsInput {
             "ListUserAssociations",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListUserAssociationsInput`](crate::input::ListUserAssociationsInput).
@@ -1268,11 +1287,6 @@ pub mod register_identity_provider_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RegisterIdentityProviderInputOperationOutputAlias =
-    crate::operation::RegisterIdentityProvider;
-#[doc(hidden)]
-pub type RegisterIdentityProviderInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RegisterIdentityProviderInput {
     /// Consumes the builder and constructs an Operation<[`RegisterIdentityProvider`](crate::operation::RegisterIdentityProvider)>
     #[allow(unused_mut)]
@@ -1284,7 +1298,7 @@ impl RegisterIdentityProviderInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RegisterIdentityProvider,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1349,10 +1363,17 @@ impl RegisterIdentityProviderInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1368,7 +1389,7 @@ impl RegisterIdentityProviderInput {
             "RegisterIdentityProvider",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RegisterIdentityProviderInput`](crate::input::RegisterIdentityProviderInput).
@@ -1448,11 +1469,6 @@ pub mod start_product_subscription_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartProductSubscriptionInputOperationOutputAlias =
-    crate::operation::StartProductSubscription;
-#[doc(hidden)]
-pub type StartProductSubscriptionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartProductSubscriptionInput {
     /// Consumes the builder and constructs an Operation<[`StartProductSubscription`](crate::operation::StartProductSubscription)>
     #[allow(unused_mut)]
@@ -1464,7 +1480,7 @@ impl StartProductSubscriptionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartProductSubscription,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1529,10 +1545,17 @@ impl StartProductSubscriptionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1548,7 +1571,7 @@ impl StartProductSubscriptionInput {
             "StartProductSubscription",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartProductSubscriptionInput`](crate::input::StartProductSubscriptionInput).
@@ -1628,11 +1651,6 @@ pub mod stop_product_subscription_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopProductSubscriptionInputOperationOutputAlias =
-    crate::operation::StopProductSubscription;
-#[doc(hidden)]
-pub type StopProductSubscriptionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopProductSubscriptionInput {
     /// Consumes the builder and constructs an Operation<[`StopProductSubscription`](crate::operation::StopProductSubscription)>
     #[allow(unused_mut)]
@@ -1644,7 +1662,7 @@ impl StopProductSubscriptionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopProductSubscription,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1708,10 +1726,17 @@ impl StopProductSubscriptionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1727,7 +1752,7 @@ impl StopProductSubscriptionInput {
             "StopProductSubscription",
             "licensemanagerusersubscriptions",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopProductSubscriptionInput`](crate::input::StopProductSubscriptionInput).

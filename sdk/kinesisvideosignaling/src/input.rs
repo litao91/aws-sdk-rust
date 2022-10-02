@@ -67,10 +67,6 @@ pub mod get_ice_server_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetIceServerConfigInputOperationOutputAlias = crate::operation::GetIceServerConfig;
-#[doc(hidden)]
-pub type GetIceServerConfigInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetIceServerConfigInput {
     /// Consumes the builder and constructs an Operation<[`GetIceServerConfig`](crate::operation::GetIceServerConfig)>
     #[allow(unused_mut)]
@@ -82,7 +78,7 @@ impl GetIceServerConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetIceServerConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -144,10 +140,17 @@ impl GetIceServerConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -163,7 +166,7 @@ impl GetIceServerConfigInput {
             "GetIceServerConfig",
             "kinesisvideosignaling",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetIceServerConfigInput`](crate::input::GetIceServerConfigInput).
@@ -232,10 +235,6 @@ pub mod send_alexa_offer_to_master_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SendAlexaOfferToMasterInputOperationOutputAlias = crate::operation::SendAlexaOfferToMaster;
-#[doc(hidden)]
-pub type SendAlexaOfferToMasterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SendAlexaOfferToMasterInput {
     /// Consumes the builder and constructs an Operation<[`SendAlexaOfferToMaster`](crate::operation::SendAlexaOfferToMaster)>
     #[allow(unused_mut)]
@@ -247,7 +246,7 @@ impl SendAlexaOfferToMasterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SendAlexaOfferToMaster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -312,10 +311,17 @@ impl SendAlexaOfferToMasterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -331,7 +337,7 @@ impl SendAlexaOfferToMasterInput {
             "SendAlexaOfferToMaster",
             "kinesisvideosignaling",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SendAlexaOfferToMasterInput`](crate::input::SendAlexaOfferToMasterInput).

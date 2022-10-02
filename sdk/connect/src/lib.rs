@@ -20,7 +20,7 @@
 //! <p>You can connect programmatically to an Amazon Web Services service by using an endpoint. For
 //! a list of Amazon Connect endpoints, see <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect Endpoints</a>.</p>
 //! <note>
-//! <p>Working with contact flows? Check out the <a href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.</p>
+//! <p>Working with flows? Check out the <a href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.</p>
 //! </note>
 //!
 //! # Crate Organization
@@ -46,6 +46,8 @@ mod aws_endpoint;
 pub mod client;
 /// Configuration for the service.
 pub mod config;
+/// Wrap operations in a special type allowing for the modification of operations and the requests inside before sending them
+pub mod customizable_operation;
 /// Errors that can occur when calling the service.
 pub mod error;
 mod error_meta;
@@ -76,10 +78,12 @@ pub mod types {
     pub use aws_smithy_http::result::SdkError;
     pub use aws_smithy_types::DateTime;
 }
+pub use aws_smithy_async::rt::sleep::AsyncSleep;
+pub use aws_smithy_types::retry::RetryConfig;
+pub use aws_smithy_types::timeout::Config as TimeoutConfig;
 static API_METADATA: aws_http::user_agent::ApiMetadata =
     aws_http::user_agent::ApiMetadata::new("connect", PKG_VERSION);
 pub use aws_smithy_http::endpoint::Endpoint;
-pub use aws_smithy_types::retry::RetryConfig;
 pub use aws_types::app_name::AppName;
 pub use aws_types::region::Region;
 pub use aws_types::Credentials;

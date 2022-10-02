@@ -46,10 +46,6 @@ pub mod get_deployments_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetDeploymentsInputOperationOutputAlias = crate::operation::GetDeployments;
-#[doc(hidden)]
-pub type GetDeploymentsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetDeploymentsInput {
     /// Consumes the builder and constructs an Operation<[`GetDeployments`](crate::operation::GetDeployments)>
     #[allow(unused_mut)]
@@ -61,7 +57,7 @@ impl GetDeploymentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetDeployments,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -123,10 +119,17 @@ impl GetDeploymentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -142,7 +145,7 @@ impl GetDeploymentsInput {
             "GetDeployments",
             "sagemakeredge",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetDeploymentsInput`](crate::input::GetDeploymentsInput).
@@ -196,10 +199,6 @@ pub mod get_device_registration_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetDeviceRegistrationInputOperationOutputAlias = crate::operation::GetDeviceRegistration;
-#[doc(hidden)]
-pub type GetDeviceRegistrationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetDeviceRegistrationInput {
     /// Consumes the builder and constructs an Operation<[`GetDeviceRegistration`](crate::operation::GetDeviceRegistration)>
     #[allow(unused_mut)]
@@ -211,7 +210,7 @@ impl GetDeviceRegistrationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetDeviceRegistration,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -275,10 +274,17 @@ impl GetDeviceRegistrationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -294,7 +300,7 @@ impl GetDeviceRegistrationInput {
             "GetDeviceRegistration",
             "sagemakeredge",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetDeviceRegistrationInput`](crate::input::GetDeviceRegistrationInput).
@@ -420,10 +426,6 @@ pub mod send_heartbeat_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SendHeartbeatInputOperationOutputAlias = crate::operation::SendHeartbeat;
-#[doc(hidden)]
-pub type SendHeartbeatInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SendHeartbeatInput {
     /// Consumes the builder and constructs an Operation<[`SendHeartbeat`](crate::operation::SendHeartbeat)>
     #[allow(unused_mut)]
@@ -435,7 +437,7 @@ impl SendHeartbeatInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SendHeartbeat,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -497,10 +499,17 @@ impl SendHeartbeatInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -516,7 +525,7 @@ impl SendHeartbeatInput {
             "SendHeartbeat",
             "sagemakeredge",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SendHeartbeatInput`](crate::input::SendHeartbeatInput).

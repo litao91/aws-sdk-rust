@@ -55,10 +55,6 @@ pub mod build_bot_locale_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BuildBotLocaleInputOperationOutputAlias = crate::operation::BuildBotLocale;
-#[doc(hidden)]
-pub type BuildBotLocaleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BuildBotLocaleInput {
     /// Consumes the builder and constructs an Operation<[`BuildBotLocale`](crate::operation::BuildBotLocale)>
     #[allow(unused_mut)]
@@ -70,7 +66,7 @@ impl BuildBotLocaleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BuildBotLocale,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -167,10 +163,17 @@ impl BuildBotLocaleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -186,7 +189,7 @@ impl BuildBotLocaleInput {
             "BuildBotLocale",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BuildBotLocaleInput`](crate::input::BuildBotLocaleInput).
@@ -337,10 +340,6 @@ pub mod create_bot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateBotInputOperationOutputAlias = crate::operation::CreateBot;
-#[doc(hidden)]
-pub type CreateBotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateBotInput {
     /// Consumes the builder and constructs an Operation<[`CreateBot`](crate::operation::CreateBot)>
     #[allow(unused_mut)]
@@ -352,7 +351,7 @@ impl CreateBotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateBot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -414,10 +413,17 @@ impl CreateBotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -431,7 +437,7 @@ impl CreateBotInput {
                     "CreateBot",
                     "lexmodelsv2",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateBotInput`](crate::input::CreateBotInput).
@@ -608,10 +614,6 @@ pub mod create_bot_alias_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateBotAliasInputOperationOutputAlias = crate::operation::CreateBotAlias;
-#[doc(hidden)]
-pub type CreateBotAliasInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateBotAliasInput {
     /// Consumes the builder and constructs an Operation<[`CreateBotAlias`](crate::operation::CreateBotAlias)>
     #[allow(unused_mut)]
@@ -623,7 +625,7 @@ impl CreateBotAliasInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateBotAlias,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -700,10 +702,17 @@ impl CreateBotAliasInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -719,7 +728,7 @@ impl CreateBotAliasInput {
             "CreateBotAlias",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateBotAliasInput`](crate::input::CreateBotAliasInput).
@@ -838,10 +847,6 @@ pub mod create_bot_locale_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateBotLocaleInputOperationOutputAlias = crate::operation::CreateBotLocale;
-#[doc(hidden)]
-pub type CreateBotLocaleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateBotLocaleInput {
     /// Consumes the builder and constructs an Operation<[`CreateBotLocale`](crate::operation::CreateBotLocale)>
     #[allow(unused_mut)]
@@ -853,7 +858,7 @@ impl CreateBotLocaleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateBotLocale,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -949,10 +954,17 @@ impl CreateBotLocaleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -968,7 +980,7 @@ impl CreateBotLocaleInput {
             "CreateBotLocale",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateBotLocaleInput`](crate::input::CreateBotLocaleInput).
@@ -1051,10 +1063,6 @@ pub mod create_bot_version_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateBotVersionInputOperationOutputAlias = crate::operation::CreateBotVersion;
-#[doc(hidden)]
-pub type CreateBotVersionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateBotVersionInput {
     /// Consumes the builder and constructs an Operation<[`CreateBotVersion`](crate::operation::CreateBotVersion)>
     #[allow(unused_mut)]
@@ -1066,7 +1074,7 @@ impl CreateBotVersionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateBotVersion,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1143,10 +1151,17 @@ impl CreateBotVersionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1162,7 +1177,7 @@ impl CreateBotVersionInput {
             "CreateBotVersion",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateBotVersionInput`](crate::input::CreateBotVersionInput).
@@ -1238,10 +1253,6 @@ pub mod create_export_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateExportInputOperationOutputAlias = crate::operation::CreateExport;
-#[doc(hidden)]
-pub type CreateExportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateExportInput {
     /// Consumes the builder and constructs an Operation<[`CreateExport`](crate::operation::CreateExport)>
     #[allow(unused_mut)]
@@ -1253,7 +1264,7 @@ impl CreateExportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateExport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1315,10 +1326,17 @@ impl CreateExportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1334,7 +1352,7 @@ impl CreateExportInput {
             "CreateExport",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateExportInput`](crate::input::CreateExportInput).
@@ -1366,6 +1384,8 @@ pub mod create_intent_input {
         pub(crate) bot_id: std::option::Option<std::string::String>,
         pub(crate) bot_version: std::option::Option<std::string::String>,
         pub(crate) locale_id: std::option::Option<std::string::String>,
+        pub(crate) initial_response_setting:
+            std::option::Option<crate::model::InitialResponseSetting>,
     }
     impl Builder {
         /// <p>The name of the intent. Intent names must be unique in the locale that contains the intent and cannot match the name of any built-in intent.</p>
@@ -1577,6 +1597,22 @@ pub mod create_intent_input {
             self.locale_id = input;
             self
         }
+        /// <p>Configuration settings for the response that is sent to the user at the beginning of a conversation, before eliciting slot values.</p>
+        pub fn initial_response_setting(
+            mut self,
+            input: crate::model::InitialResponseSetting,
+        ) -> Self {
+            self.initial_response_setting = Some(input);
+            self
+        }
+        /// <p>Configuration settings for the response that is sent to the user at the beginning of a conversation, before eliciting slot values.</p>
+        pub fn set_initial_response_setting(
+            mut self,
+            input: std::option::Option<crate::model::InitialResponseSetting>,
+        ) -> Self {
+            self.initial_response_setting = input;
+            self
+        }
         /// Consumes the builder and constructs a [`CreateIntentInput`](crate::input::CreateIntentInput).
         pub fn build(
             self,
@@ -1597,14 +1633,11 @@ pub mod create_intent_input {
                 bot_id: self.bot_id,
                 bot_version: self.bot_version,
                 locale_id: self.locale_id,
+                initial_response_setting: self.initial_response_setting,
             })
         }
     }
 }
-#[doc(hidden)]
-pub type CreateIntentInputOperationOutputAlias = crate::operation::CreateIntent;
-#[doc(hidden)]
-pub type CreateIntentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateIntentInput {
     /// Consumes the builder and constructs an Operation<[`CreateIntent`](crate::operation::CreateIntent)>
     #[allow(unused_mut)]
@@ -1616,7 +1649,7 @@ impl CreateIntentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateIntent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1727,10 +1760,17 @@ impl CreateIntentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1746,7 +1786,7 @@ impl CreateIntentInput {
             "CreateIntent",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateIntentInput`](crate::input::CreateIntentInput).
@@ -1799,10 +1839,6 @@ pub mod create_resource_policy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateResourcePolicyInputOperationOutputAlias = crate::operation::CreateResourcePolicy;
-#[doc(hidden)]
-pub type CreateResourcePolicyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateResourcePolicyInput {
     /// Consumes the builder and constructs an Operation<[`CreateResourcePolicy`](crate::operation::CreateResourcePolicy)>
     #[allow(unused_mut)]
@@ -1814,7 +1850,7 @@ impl CreateResourcePolicyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateResourcePolicy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1893,10 +1929,17 @@ impl CreateResourcePolicyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1912,7 +1955,7 @@ impl CreateResourcePolicyInput {
             "CreateResourcePolicy",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateResourcePolicyInput`](crate::input::CreateResourcePolicyInput).
@@ -2073,12 +2116,6 @@ pub mod create_resource_policy_statement_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateResourcePolicyStatementInputOperationOutputAlias =
-    crate::operation::CreateResourcePolicyStatement;
-#[doc(hidden)]
-pub type CreateResourcePolicyStatementInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateResourcePolicyStatementInput {
     /// Consumes the builder and constructs an Operation<[`CreateResourcePolicyStatement`](crate::operation::CreateResourcePolicyStatement)>
     #[allow(unused_mut)]
@@ -2090,7 +2127,7 @@ impl CreateResourcePolicyStatementInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateResourcePolicyStatement,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2184,10 +2221,17 @@ impl CreateResourcePolicyStatementInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2203,7 +2247,7 @@ impl CreateResourcePolicyStatementInput {
             "CreateResourcePolicyStatement",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateResourcePolicyStatementInput`](crate::input::CreateResourcePolicyStatementInput).
@@ -2370,10 +2414,6 @@ pub mod create_slot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateSlotInputOperationOutputAlias = crate::operation::CreateSlot;
-#[doc(hidden)]
-pub type CreateSlotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateSlotInput {
     /// Consumes the builder and constructs an Operation<[`CreateSlot`](crate::operation::CreateSlot)>
     #[allow(unused_mut)]
@@ -2385,7 +2425,7 @@ impl CreateSlotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateSlot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2503,10 +2543,17 @@ impl CreateSlotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2522,7 +2569,7 @@ impl CreateSlotInput {
             "CreateSlot",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateSlotInput`](crate::input::CreateSlotInput).
@@ -2699,10 +2746,6 @@ pub mod create_slot_type_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateSlotTypeInputOperationOutputAlias = crate::operation::CreateSlotType;
-#[doc(hidden)]
-pub type CreateSlotTypeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateSlotTypeInput {
     /// Consumes the builder and constructs an Operation<[`CreateSlotType`](crate::operation::CreateSlotType)>
     #[allow(unused_mut)]
@@ -2714,7 +2757,7 @@ impl CreateSlotTypeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateSlotType,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2825,10 +2868,17 @@ impl CreateSlotTypeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2844,7 +2894,7 @@ impl CreateSlotTypeInput {
             "CreateSlotType",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateSlotTypeInput`](crate::input::CreateSlotTypeInput).
@@ -2869,10 +2919,6 @@ pub mod create_upload_url_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateUploadUrlInputOperationOutputAlias = crate::operation::CreateUploadUrl;
-#[doc(hidden)]
-pub type CreateUploadUrlInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateUploadUrlInput {
     /// Consumes the builder and constructs an Operation<[`CreateUploadUrl`](crate::operation::CreateUploadUrl)>
     #[allow(unused_mut)]
@@ -2884,7 +2930,7 @@ impl CreateUploadUrlInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateUploadUrl,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2932,10 +2978,17 @@ impl CreateUploadUrlInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2951,7 +3004,7 @@ impl CreateUploadUrlInput {
             "CreateUploadUrl",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateUploadUrlInput`](crate::input::CreateUploadUrlInput).
@@ -3001,10 +3054,6 @@ pub mod delete_bot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteBotInputOperationOutputAlias = crate::operation::DeleteBot;
-#[doc(hidden)]
-pub type DeleteBotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteBotInput {
     /// Consumes the builder and constructs an Operation<[`DeleteBot`](crate::operation::DeleteBot)>
     #[allow(unused_mut)]
@@ -3016,7 +3065,7 @@ impl DeleteBotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteBot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3095,10 +3144,17 @@ impl DeleteBotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3112,7 +3168,7 @@ impl DeleteBotInput {
                     "DeleteBot",
                     "lexmodelsv2",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteBotInput`](crate::input::DeleteBotInput).
@@ -3175,10 +3231,6 @@ pub mod delete_bot_alias_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteBotAliasInputOperationOutputAlias = crate::operation::DeleteBotAlias;
-#[doc(hidden)]
-pub type DeleteBotAliasInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteBotAliasInput {
     /// Consumes the builder and constructs an Operation<[`DeleteBotAlias`](crate::operation::DeleteBotAlias)>
     #[allow(unused_mut)]
@@ -3190,7 +3242,7 @@ impl DeleteBotAliasInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteBotAlias,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3289,10 +3341,17 @@ impl DeleteBotAliasInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3308,7 +3367,7 @@ impl DeleteBotAliasInput {
             "DeleteBotAlias",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteBotAliasInput`](crate::input::DeleteBotAliasInput).
@@ -3371,10 +3430,6 @@ pub mod delete_bot_locale_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteBotLocaleInputOperationOutputAlias = crate::operation::DeleteBotLocale;
-#[doc(hidden)]
-pub type DeleteBotLocaleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteBotLocaleInput {
     /// Consumes the builder and constructs an Operation<[`DeleteBotLocale`](crate::operation::DeleteBotLocale)>
     #[allow(unused_mut)]
@@ -3386,7 +3441,7 @@ impl DeleteBotLocaleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteBotLocale,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3483,10 +3538,17 @@ impl DeleteBotLocaleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3502,7 +3564,7 @@ impl DeleteBotLocaleInput {
             "DeleteBotLocale",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteBotLocaleInput`](crate::input::DeleteBotLocaleInput).
@@ -3565,10 +3627,6 @@ pub mod delete_bot_version_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteBotVersionInputOperationOutputAlias = crate::operation::DeleteBotVersion;
-#[doc(hidden)]
-pub type DeleteBotVersionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteBotVersionInput {
     /// Consumes the builder and constructs an Operation<[`DeleteBotVersion`](crate::operation::DeleteBotVersion)>
     #[allow(unused_mut)]
@@ -3580,7 +3638,7 @@ impl DeleteBotVersionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteBotVersion,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3679,10 +3737,17 @@ impl DeleteBotVersionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3698,7 +3763,7 @@ impl DeleteBotVersionInput {
             "DeleteBotVersion",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteBotVersionInput`](crate::input::DeleteBotVersionInput).
@@ -3761,10 +3826,6 @@ pub mod delete_custom_vocabulary_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteCustomVocabularyInputOperationOutputAlias = crate::operation::DeleteCustomVocabulary;
-#[doc(hidden)]
-pub type DeleteCustomVocabularyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteCustomVocabularyInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCustomVocabulary`](crate::operation::DeleteCustomVocabulary)>
     #[allow(unused_mut)]
@@ -3776,7 +3837,7 @@ impl DeleteCustomVocabularyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCustomVocabulary,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3873,10 +3934,17 @@ impl DeleteCustomVocabularyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3892,7 +3960,7 @@ impl DeleteCustomVocabularyInput {
             "DeleteCustomVocabulary",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteCustomVocabularyInput`](crate::input::DeleteCustomVocabularyInput).
@@ -3931,10 +3999,6 @@ pub mod delete_export_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteExportInputOperationOutputAlias = crate::operation::DeleteExport;
-#[doc(hidden)]
-pub type DeleteExportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteExportInput {
     /// Consumes the builder and constructs an Operation<[`DeleteExport`](crate::operation::DeleteExport)>
     #[allow(unused_mut)]
@@ -3946,7 +4010,7 @@ impl DeleteExportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteExport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4009,10 +4073,17 @@ impl DeleteExportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4028,7 +4099,7 @@ impl DeleteExportInput {
             "DeleteExport",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteExportInput`](crate::input::DeleteExportInput).
@@ -4067,10 +4138,6 @@ pub mod delete_import_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteImportInputOperationOutputAlias = crate::operation::DeleteImport;
-#[doc(hidden)]
-pub type DeleteImportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteImportInput {
     /// Consumes the builder and constructs an Operation<[`DeleteImport`](crate::operation::DeleteImport)>
     #[allow(unused_mut)]
@@ -4082,7 +4149,7 @@ impl DeleteImportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteImport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4145,10 +4212,17 @@ impl DeleteImportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4164,7 +4238,7 @@ impl DeleteImportInput {
             "DeleteImport",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteImportInput`](crate::input::DeleteImportInput).
@@ -4239,10 +4313,6 @@ pub mod delete_intent_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteIntentInputOperationOutputAlias = crate::operation::DeleteIntent;
-#[doc(hidden)]
-pub type DeleteIntentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteIntentInput {
     /// Consumes the builder and constructs an Operation<[`DeleteIntent`](crate::operation::DeleteIntent)>
     #[allow(unused_mut)]
@@ -4254,7 +4324,7 @@ impl DeleteIntentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteIntent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4358,10 +4428,17 @@ impl DeleteIntentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4377,7 +4454,7 @@ impl DeleteIntentInput {
             "DeleteIntent",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteIntentInput`](crate::input::DeleteIntentInput).
@@ -4433,10 +4510,6 @@ pub mod delete_resource_policy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteResourcePolicyInputOperationOutputAlias = crate::operation::DeleteResourcePolicy;
-#[doc(hidden)]
-pub type DeleteResourcePolicyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteResourcePolicyInput {
     /// Consumes the builder and constructs an Operation<[`DeleteResourcePolicy`](crate::operation::DeleteResourcePolicy)>
     #[allow(unused_mut)]
@@ -4448,7 +4521,7 @@ impl DeleteResourcePolicyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteResourcePolicy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4525,10 +4598,17 @@ impl DeleteResourcePolicyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4544,7 +4624,7 @@ impl DeleteResourcePolicyInput {
             "DeleteResourcePolicy",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyInput`](crate::input::DeleteResourcePolicyInput).
@@ -4614,12 +4694,6 @@ pub mod delete_resource_policy_statement_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteResourcePolicyStatementInputOperationOutputAlias =
-    crate::operation::DeleteResourcePolicyStatement;
-#[doc(hidden)]
-pub type DeleteResourcePolicyStatementInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteResourcePolicyStatementInput {
     /// Consumes the builder and constructs an Operation<[`DeleteResourcePolicyStatement`](crate::operation::DeleteResourcePolicyStatement)>
     #[allow(unused_mut)]
@@ -4631,7 +4705,7 @@ impl DeleteResourcePolicyStatementInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteResourcePolicyStatement,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4727,10 +4801,17 @@ impl DeleteResourcePolicyStatementInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4746,7 +4827,7 @@ impl DeleteResourcePolicyStatementInput {
             "DeleteResourcePolicyStatement",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyStatementInput`](crate::input::DeleteResourcePolicyStatementInput).
@@ -4832,10 +4913,6 @@ pub mod delete_slot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteSlotInputOperationOutputAlias = crate::operation::DeleteSlot;
-#[doc(hidden)]
-pub type DeleteSlotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteSlotInput {
     /// Consumes the builder and constructs an Operation<[`DeleteSlot`](crate::operation::DeleteSlot)>
     #[allow(unused_mut)]
@@ -4847,7 +4924,7 @@ impl DeleteSlotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteSlot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4965,10 +5042,17 @@ impl DeleteSlotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4984,7 +5068,7 @@ impl DeleteSlotInput {
             "DeleteSlot",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteSlotInput`](crate::input::DeleteSlotInput).
@@ -5071,10 +5155,6 @@ pub mod delete_slot_type_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteSlotTypeInputOperationOutputAlias = crate::operation::DeleteSlotType;
-#[doc(hidden)]
-pub type DeleteSlotTypeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteSlotTypeInput {
     /// Consumes the builder and constructs an Operation<[`DeleteSlotType`](crate::operation::DeleteSlotType)>
     #[allow(unused_mut)]
@@ -5086,7 +5166,7 @@ impl DeleteSlotTypeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteSlotType,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5207,10 +5287,17 @@ impl DeleteSlotTypeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5226,7 +5313,7 @@ impl DeleteSlotTypeInput {
             "DeleteSlotType",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteSlotTypeInput`](crate::input::DeleteSlotTypeInput).
@@ -5289,10 +5376,6 @@ pub mod delete_utterances_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteUtterancesInputOperationOutputAlias = crate::operation::DeleteUtterances;
-#[doc(hidden)]
-pub type DeleteUtterancesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteUtterancesInput {
     /// Consumes the builder and constructs an Operation<[`DeleteUtterances`](crate::operation::DeleteUtterances)>
     #[allow(unused_mut)]
@@ -5304,7 +5387,7 @@ impl DeleteUtterancesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteUtterances,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5381,10 +5464,17 @@ impl DeleteUtterancesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5400,7 +5490,7 @@ impl DeleteUtterancesInput {
             "DeleteUtterances",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteUtterancesInput`](crate::input::DeleteUtterancesInput).
@@ -5439,10 +5529,6 @@ pub mod describe_bot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeBotInputOperationOutputAlias = crate::operation::DescribeBot;
-#[doc(hidden)]
-pub type DescribeBotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeBotInput {
     /// Consumes the builder and constructs an Operation<[`DescribeBot`](crate::operation::DescribeBot)>
     #[allow(unused_mut)]
@@ -5454,7 +5540,7 @@ impl DescribeBotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeBot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5516,10 +5602,17 @@ impl DescribeBotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5535,7 +5628,7 @@ impl DescribeBotInput {
             "DescribeBot",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeBotInput`](crate::input::DescribeBotInput).
@@ -5586,10 +5679,6 @@ pub mod describe_bot_alias_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeBotAliasInputOperationOutputAlias = crate::operation::DescribeBotAlias;
-#[doc(hidden)]
-pub type DescribeBotAliasInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeBotAliasInput {
     /// Consumes the builder and constructs an Operation<[`DescribeBotAlias`](crate::operation::DescribeBotAlias)>
     #[allow(unused_mut)]
@@ -5601,7 +5690,7 @@ impl DescribeBotAliasInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeBotAlias,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5683,10 +5772,17 @@ impl DescribeBotAliasInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5702,7 +5798,7 @@ impl DescribeBotAliasInput {
             "DescribeBotAlias",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeBotAliasInput`](crate::input::DescribeBotAliasInput).
@@ -5765,10 +5861,6 @@ pub mod describe_bot_locale_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeBotLocaleInputOperationOutputAlias = crate::operation::DescribeBotLocale;
-#[doc(hidden)]
-pub type DescribeBotLocaleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeBotLocaleInput {
     /// Consumes the builder and constructs an Operation<[`DescribeBotLocale`](crate::operation::DescribeBotLocale)>
     #[allow(unused_mut)]
@@ -5780,7 +5872,7 @@ impl DescribeBotLocaleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeBotLocale,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5877,10 +5969,17 @@ impl DescribeBotLocaleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5896,7 +5995,7 @@ impl DescribeBotLocaleInput {
             "DescribeBotLocale",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeBotLocaleInput`](crate::input::DescribeBotLocaleInput).
@@ -5976,11 +6075,6 @@ pub mod describe_bot_recommendation_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeBotRecommendationInputOperationOutputAlias =
-    crate::operation::DescribeBotRecommendation;
-#[doc(hidden)]
-pub type DescribeBotRecommendationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeBotRecommendationInput {
     /// Consumes the builder and constructs an Operation<[`DescribeBotRecommendation`](crate::operation::DescribeBotRecommendation)>
     #[allow(unused_mut)]
@@ -5992,7 +6086,7 @@ impl DescribeBotRecommendationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeBotRecommendation,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6096,10 +6190,17 @@ impl DescribeBotRecommendationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6115,7 +6216,7 @@ impl DescribeBotRecommendationInput {
             "DescribeBotRecommendation",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeBotRecommendationInput`](crate::input::DescribeBotRecommendationInput).
@@ -6166,10 +6267,6 @@ pub mod describe_bot_version_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeBotVersionInputOperationOutputAlias = crate::operation::DescribeBotVersion;
-#[doc(hidden)]
-pub type DescribeBotVersionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeBotVersionInput {
     /// Consumes the builder and constructs an Operation<[`DescribeBotVersion`](crate::operation::DescribeBotVersion)>
     #[allow(unused_mut)]
@@ -6181,7 +6278,7 @@ impl DescribeBotVersionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeBotVersion,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6263,10 +6360,17 @@ impl DescribeBotVersionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6282,7 +6386,7 @@ impl DescribeBotVersionInput {
             "DescribeBotVersion",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeBotVersionInput`](crate::input::DescribeBotVersionInput).
@@ -6347,12 +6451,6 @@ pub mod describe_custom_vocabulary_metadata_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCustomVocabularyMetadataInputOperationOutputAlias =
-    crate::operation::DescribeCustomVocabularyMetadata;
-#[doc(hidden)]
-pub type DescribeCustomVocabularyMetadataInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCustomVocabularyMetadataInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCustomVocabularyMetadata`](crate::operation::DescribeCustomVocabularyMetadata)>
     #[allow(unused_mut)]
@@ -6364,7 +6462,7 @@ impl DescribeCustomVocabularyMetadataInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCustomVocabularyMetadata,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6454,10 +6552,17 @@ impl DescribeCustomVocabularyMetadataInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6473,7 +6578,7 @@ impl DescribeCustomVocabularyMetadataInput {
             "DescribeCustomVocabularyMetadata",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCustomVocabularyMetadataInput`](crate::input::DescribeCustomVocabularyMetadataInput).
@@ -6512,10 +6617,6 @@ pub mod describe_export_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeExportInputOperationOutputAlias = crate::operation::DescribeExport;
-#[doc(hidden)]
-pub type DescribeExportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeExportInput {
     /// Consumes the builder and constructs an Operation<[`DescribeExport`](crate::operation::DescribeExport)>
     #[allow(unused_mut)]
@@ -6527,7 +6628,7 @@ impl DescribeExportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeExport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6590,10 +6691,17 @@ impl DescribeExportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6609,7 +6717,7 @@ impl DescribeExportInput {
             "DescribeExport",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeExportInput`](crate::input::DescribeExportInput).
@@ -6648,10 +6756,6 @@ pub mod describe_import_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeImportInputOperationOutputAlias = crate::operation::DescribeImport;
-#[doc(hidden)]
-pub type DescribeImportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeImportInput {
     /// Consumes the builder and constructs an Operation<[`DescribeImport`](crate::operation::DescribeImport)>
     #[allow(unused_mut)]
@@ -6663,7 +6767,7 @@ impl DescribeImportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeImport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6726,10 +6830,17 @@ impl DescribeImportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6745,7 +6856,7 @@ impl DescribeImportInput {
             "DescribeImport",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeImportInput`](crate::input::DescribeImportInput).
@@ -6820,10 +6931,6 @@ pub mod describe_intent_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeIntentInputOperationOutputAlias = crate::operation::DescribeIntent;
-#[doc(hidden)]
-pub type DescribeIntentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeIntentInput {
     /// Consumes the builder and constructs an Operation<[`DescribeIntent`](crate::operation::DescribeIntent)>
     #[allow(unused_mut)]
@@ -6835,7 +6942,7 @@ impl DescribeIntentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeIntent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6939,10 +7046,17 @@ impl DescribeIntentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6958,7 +7072,7 @@ impl DescribeIntentInput {
             "DescribeIntent",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeIntentInput`](crate::input::DescribeIntentInput).
@@ -6997,10 +7111,6 @@ pub mod describe_resource_policy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeResourcePolicyInputOperationOutputAlias = crate::operation::DescribeResourcePolicy;
-#[doc(hidden)]
-pub type DescribeResourcePolicyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeResourcePolicyInput {
     /// Consumes the builder and constructs an Operation<[`DescribeResourcePolicy`](crate::operation::DescribeResourcePolicy)>
     #[allow(unused_mut)]
@@ -7012,7 +7122,7 @@ impl DescribeResourcePolicyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeResourcePolicy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7075,10 +7185,17 @@ impl DescribeResourcePolicyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7094,7 +7211,7 @@ impl DescribeResourcePolicyInput {
             "DescribeResourcePolicy",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeResourcePolicyInput`](crate::input::DescribeResourcePolicyInput).
@@ -7181,10 +7298,6 @@ pub mod describe_slot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeSlotInputOperationOutputAlias = crate::operation::DescribeSlot;
-#[doc(hidden)]
-pub type DescribeSlotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeSlotInput {
     /// Consumes the builder and constructs an Operation<[`DescribeSlot`](crate::operation::DescribeSlot)>
     #[allow(unused_mut)]
@@ -7196,7 +7309,7 @@ impl DescribeSlotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeSlot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7314,10 +7427,17 @@ impl DescribeSlotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7333,7 +7453,7 @@ impl DescribeSlotInput {
             "DescribeSlot",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeSlotInput`](crate::input::DescribeSlotInput).
@@ -7408,10 +7528,6 @@ pub mod describe_slot_type_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeSlotTypeInputOperationOutputAlias = crate::operation::DescribeSlotType;
-#[doc(hidden)]
-pub type DescribeSlotTypeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeSlotTypeInput {
     /// Consumes the builder and constructs an Operation<[`DescribeSlotType`](crate::operation::DescribeSlotType)>
     #[allow(unused_mut)]
@@ -7423,7 +7539,7 @@ impl DescribeSlotTypeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeSlotType,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7527,10 +7643,17 @@ impl DescribeSlotTypeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7546,7 +7669,7 @@ impl DescribeSlotTypeInput {
             "DescribeSlotType",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeSlotTypeInput`](crate::input::DescribeSlotTypeInput).
@@ -7703,11 +7826,6 @@ pub mod list_aggregated_utterances_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAggregatedUtterancesInputOperationOutputAlias =
-    crate::operation::ListAggregatedUtterances;
-#[doc(hidden)]
-pub type ListAggregatedUtterancesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAggregatedUtterancesInput {
     /// Consumes the builder and constructs an Operation<[`ListAggregatedUtterances`](crate::operation::ListAggregatedUtterances)>
     #[allow(unused_mut)]
@@ -7719,7 +7837,7 @@ impl ListAggregatedUtterancesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAggregatedUtterances,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7798,10 +7916,17 @@ impl ListAggregatedUtterancesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7817,7 +7942,7 @@ impl ListAggregatedUtterancesInput {
             "ListAggregatedUtterances",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAggregatedUtterancesInput`](crate::input::ListAggregatedUtterancesInput).
@@ -7880,10 +8005,6 @@ pub mod list_bot_aliases_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBotAliasesInputOperationOutputAlias = crate::operation::ListBotAliases;
-#[doc(hidden)]
-pub type ListBotAliasesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBotAliasesInput {
     /// Consumes the builder and constructs an Operation<[`ListBotAliases`](crate::operation::ListBotAliases)>
     #[allow(unused_mut)]
@@ -7895,7 +8016,7 @@ impl ListBotAliasesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBotAliases,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7972,10 +8093,17 @@ impl ListBotAliasesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7991,7 +8119,7 @@ impl ListBotAliasesInput {
             "ListBotAliases",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBotAliasesInput`](crate::input::ListBotAliasesInput).
@@ -8102,10 +8230,6 @@ pub mod list_bot_locales_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBotLocalesInputOperationOutputAlias = crate::operation::ListBotLocales;
-#[doc(hidden)]
-pub type ListBotLocalesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBotLocalesInput {
     /// Consumes the builder and constructs an Operation<[`ListBotLocales`](crate::operation::ListBotLocales)>
     #[allow(unused_mut)]
@@ -8117,7 +8241,7 @@ impl ListBotLocalesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBotLocales,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8213,10 +8337,17 @@ impl ListBotLocalesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8232,7 +8363,7 @@ impl ListBotLocalesInput {
             "ListBotLocales",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBotLocalesInput`](crate::input::ListBotLocalesInput).
@@ -8319,10 +8450,6 @@ pub mod list_bot_recommendations_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBotRecommendationsInputOperationOutputAlias = crate::operation::ListBotRecommendations;
-#[doc(hidden)]
-pub type ListBotRecommendationsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBotRecommendationsInput {
     /// Consumes the builder and constructs an Operation<[`ListBotRecommendations`](crate::operation::ListBotRecommendations)>
     #[allow(unused_mut)]
@@ -8334,7 +8461,7 @@ impl ListBotRecommendationsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBotRecommendations,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8440,10 +8567,17 @@ impl ListBotRecommendationsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8459,7 +8593,7 @@ impl ListBotRecommendationsInput {
             "ListBotRecommendations",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBotRecommendationsInput`](crate::input::ListBotRecommendationsInput).
@@ -8544,10 +8678,6 @@ pub mod list_bots_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBotsInputOperationOutputAlias = crate::operation::ListBots;
-#[doc(hidden)]
-pub type ListBotsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBotsInput {
     /// Consumes the builder and constructs an Operation<[`ListBots`](crate::operation::ListBots)>
     #[allow(unused_mut)]
@@ -8559,7 +8689,7 @@ impl ListBotsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBots,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8621,10 +8751,17 @@ impl ListBotsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8638,7 +8775,7 @@ impl ListBotsInput {
                     "ListBots",
                     "lexmodelsv2",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBotsInput`](crate::input::ListBotsInput).
@@ -8716,10 +8853,6 @@ pub mod list_bot_versions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBotVersionsInputOperationOutputAlias = crate::operation::ListBotVersions;
-#[doc(hidden)]
-pub type ListBotVersionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBotVersionsInput {
     /// Consumes the builder and constructs an Operation<[`ListBotVersions`](crate::operation::ListBotVersions)>
     #[allow(unused_mut)]
@@ -8731,7 +8864,7 @@ impl ListBotVersionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBotVersions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8808,10 +8941,17 @@ impl ListBotVersionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8827,7 +8967,7 @@ impl ListBotVersionsInput {
             "ListBotVersions",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBotVersionsInput`](crate::input::ListBotVersionsInput).
@@ -8905,10 +9045,6 @@ pub mod list_built_in_intents_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBuiltInIntentsInputOperationOutputAlias = crate::operation::ListBuiltInIntents;
-#[doc(hidden)]
-pub type ListBuiltInIntentsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBuiltInIntentsInput {
     /// Consumes the builder and constructs an Operation<[`ListBuiltInIntents`](crate::operation::ListBuiltInIntents)>
     #[allow(unused_mut)]
@@ -8920,7 +9056,7 @@ impl ListBuiltInIntentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBuiltInIntents,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9001,10 +9137,17 @@ impl ListBuiltInIntentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9020,7 +9163,7 @@ impl ListBuiltInIntentsInput {
             "ListBuiltInIntents",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBuiltInIntentsInput`](crate::input::ListBuiltInIntentsInput).
@@ -9098,10 +9241,6 @@ pub mod list_built_in_slot_types_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListBuiltInSlotTypesInputOperationOutputAlias = crate::operation::ListBuiltInSlotTypes;
-#[doc(hidden)]
-pub type ListBuiltInSlotTypesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListBuiltInSlotTypesInput {
     /// Consumes the builder and constructs an Operation<[`ListBuiltInSlotTypes`](crate::operation::ListBuiltInSlotTypes)>
     #[allow(unused_mut)]
@@ -9113,7 +9252,7 @@ impl ListBuiltInSlotTypesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListBuiltInSlotTypes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9196,10 +9335,17 @@ impl ListBuiltInSlotTypesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9215,7 +9361,7 @@ impl ListBuiltInSlotTypesInput {
             "ListBuiltInSlotTypes",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListBuiltInSlotTypesInput`](crate::input::ListBuiltInSlotTypesInput).
@@ -9340,10 +9486,6 @@ pub mod list_exports_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListExportsInputOperationOutputAlias = crate::operation::ListExports;
-#[doc(hidden)]
-pub type ListExportsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListExportsInput {
     /// Consumes the builder and constructs an Operation<[`ListExports`](crate::operation::ListExports)>
     #[allow(unused_mut)]
@@ -9355,7 +9497,7 @@ impl ListExportsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListExports,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9417,10 +9559,17 @@ impl ListExportsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9436,7 +9585,7 @@ impl ListExportsInput {
             "ListExports",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListExportsInput`](crate::input::ListExportsInput).
@@ -9561,10 +9710,6 @@ pub mod list_imports_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListImportsInputOperationOutputAlias = crate::operation::ListImports;
-#[doc(hidden)]
-pub type ListImportsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListImportsInput {
     /// Consumes the builder and constructs an Operation<[`ListImports`](crate::operation::ListImports)>
     #[allow(unused_mut)]
@@ -9576,7 +9721,7 @@ impl ListImportsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListImports,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9638,10 +9783,17 @@ impl ListImportsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9657,7 +9809,7 @@ impl ListImportsInput {
             "ListImports",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListImportsInput`](crate::input::ListImportsInput).
@@ -9782,10 +9934,6 @@ pub mod list_intents_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListIntentsInputOperationOutputAlias = crate::operation::ListIntents;
-#[doc(hidden)]
-pub type ListIntentsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListIntentsInput {
     /// Consumes the builder and constructs an Operation<[`ListIntents`](crate::operation::ListIntents)>
     #[allow(unused_mut)]
@@ -9797,7 +9945,7 @@ impl ListIntentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListIntents,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9908,10 +10056,17 @@ impl ListIntentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9927,7 +10082,7 @@ impl ListIntentsInput {
             "ListIntents",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListIntentsInput`](crate::input::ListIntentsInput).
@@ -10029,10 +10184,6 @@ pub mod list_recommended_intents_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListRecommendedIntentsInputOperationOutputAlias = crate::operation::ListRecommendedIntents;
-#[doc(hidden)]
-pub type ListRecommendedIntentsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListRecommendedIntentsInput {
     /// Consumes the builder and constructs an Operation<[`ListRecommendedIntents`](crate::operation::ListRecommendedIntents)>
     #[allow(unused_mut)]
@@ -10044,7 +10195,7 @@ impl ListRecommendedIntentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListRecommendedIntents,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10164,10 +10315,17 @@ impl ListRecommendedIntentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10183,7 +10341,7 @@ impl ListRecommendedIntentsInput {
             "ListRecommendedIntents",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListRecommendedIntentsInput`](crate::input::ListRecommendedIntentsInput).
@@ -10314,10 +10472,6 @@ pub mod list_slots_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListSlotsInputOperationOutputAlias = crate::operation::ListSlots;
-#[doc(hidden)]
-pub type ListSlotsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListSlotsInput {
     /// Consumes the builder and constructs an Operation<[`ListSlots`](crate::operation::ListSlots)>
     #[allow(unused_mut)]
@@ -10329,7 +10483,7 @@ impl ListSlotsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListSlots,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10447,10 +10601,17 @@ impl ListSlotsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10464,7 +10625,7 @@ impl ListSlotsInput {
                     "ListSlots",
                     "lexmodelsv2",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListSlotsInput`](crate::input::ListSlotsInput).
@@ -10587,10 +10748,6 @@ pub mod list_slot_types_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListSlotTypesInputOperationOutputAlias = crate::operation::ListSlotTypes;
-#[doc(hidden)]
-pub type ListSlotTypesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListSlotTypesInput {
     /// Consumes the builder and constructs an Operation<[`ListSlotTypes`](crate::operation::ListSlotTypes)>
     #[allow(unused_mut)]
@@ -10602,7 +10759,7 @@ impl ListSlotTypesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListSlotTypes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10713,10 +10870,17 @@ impl ListSlotTypesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10732,7 +10896,7 @@ impl ListSlotTypesInput {
             "ListSlotTypes",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListSlotTypesInput`](crate::input::ListSlotTypesInput).
@@ -10771,10 +10935,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -10786,7 +10946,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10849,10 +11009,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10868,7 +11035,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -11009,11 +11176,6 @@ pub mod search_associated_transcripts_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SearchAssociatedTranscriptsInputOperationOutputAlias =
-    crate::operation::SearchAssociatedTranscripts;
-#[doc(hidden)]
-pub type SearchAssociatedTranscriptsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SearchAssociatedTranscriptsInput {
     /// Consumes the builder and constructs an Operation<[`SearchAssociatedTranscripts`](crate::operation::SearchAssociatedTranscripts)>
     #[allow(unused_mut)]
@@ -11025,7 +11187,7 @@ impl SearchAssociatedTranscriptsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SearchAssociatedTranscripts,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11142,10 +11304,17 @@ impl SearchAssociatedTranscriptsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11161,7 +11330,7 @@ impl SearchAssociatedTranscriptsInput {
             "SearchAssociatedTranscripts",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SearchAssociatedTranscriptsInput`](crate::input::SearchAssociatedTranscriptsInput).
@@ -11258,10 +11427,6 @@ pub mod start_bot_recommendation_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartBotRecommendationInputOperationOutputAlias = crate::operation::StartBotRecommendation;
-#[doc(hidden)]
-pub type StartBotRecommendationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartBotRecommendationInput {
     /// Consumes the builder and constructs an Operation<[`StartBotRecommendation`](crate::operation::StartBotRecommendation)>
     #[allow(unused_mut)]
@@ -11273,7 +11438,7 @@ impl StartBotRecommendationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartBotRecommendation,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11379,10 +11544,17 @@ impl StartBotRecommendationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11398,7 +11570,7 @@ impl StartBotRecommendationInput {
             "StartBotRecommendation",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartBotRecommendationInput`](crate::input::StartBotRecommendationInput).
@@ -11486,10 +11658,6 @@ pub mod start_import_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartImportInputOperationOutputAlias = crate::operation::StartImport;
-#[doc(hidden)]
-pub type StartImportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartImportInput {
     /// Consumes the builder and constructs an Operation<[`StartImport`](crate::operation::StartImport)>
     #[allow(unused_mut)]
@@ -11501,7 +11669,7 @@ impl StartImportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartImport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11563,10 +11731,17 @@ impl StartImportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11582,12 +11757,231 @@ impl StartImportInput {
             "StartImport",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartImportInput`](crate::input::StartImportInput).
     pub fn builder() -> crate::input::start_import_input::Builder {
         crate::input::start_import_input::Builder::default()
+    }
+}
+
+/// See [`StopBotRecommendationInput`](crate::input::StopBotRecommendationInput).
+pub mod stop_bot_recommendation_input {
+
+    /// A builder for [`StopBotRecommendationInput`](crate::input::StopBotRecommendationInput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) bot_id: std::option::Option<std::string::String>,
+        pub(crate) bot_version: std::option::Option<std::string::String>,
+        pub(crate) locale_id: std::option::Option<std::string::String>,
+        pub(crate) bot_recommendation_id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The unique identifier of the bot containing the bot recommendation to be stopped.</p>
+        pub fn bot_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.bot_id = Some(input.into());
+            self
+        }
+        /// <p>The unique identifier of the bot containing the bot recommendation to be stopped.</p>
+        pub fn set_bot_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.bot_id = input;
+            self
+        }
+        /// <p>The version of the bot containing the bot recommendation.</p>
+        pub fn bot_version(mut self, input: impl Into<std::string::String>) -> Self {
+            self.bot_version = Some(input.into());
+            self
+        }
+        /// <p>The version of the bot containing the bot recommendation.</p>
+        pub fn set_bot_version(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.bot_version = input;
+            self
+        }
+        /// <p>The identifier of the language and locale of the bot recommendation to stop. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a> </p>
+        pub fn locale_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.locale_id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the language and locale of the bot recommendation to stop. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a> </p>
+        pub fn set_locale_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.locale_id = input;
+            self
+        }
+        /// <p>The unique identifier of the bot recommendation to be stopped.</p>
+        pub fn bot_recommendation_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.bot_recommendation_id = Some(input.into());
+            self
+        }
+        /// <p>The unique identifier of the bot recommendation to be stopped.</p>
+        pub fn set_bot_recommendation_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.bot_recommendation_id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`StopBotRecommendationInput`](crate::input::StopBotRecommendationInput).
+        pub fn build(
+            self,
+        ) -> Result<crate::input::StopBotRecommendationInput, aws_smithy_http::operation::BuildError>
+        {
+            Ok(crate::input::StopBotRecommendationInput {
+                bot_id: self.bot_id,
+                bot_version: self.bot_version,
+                locale_id: self.locale_id,
+                bot_recommendation_id: self.bot_recommendation_id,
+            })
+        }
+    }
+}
+impl StopBotRecommendationInput {
+    /// Consumes the builder and constructs an Operation<[`StopBotRecommendation`](crate::operation::StopBotRecommendation)>
+    #[allow(unused_mut)]
+    #[allow(clippy::let_and_return)]
+    #[allow(clippy::needless_borrow)]
+    pub async fn make_operation(
+        &self,
+        _config: &crate::config::Config,
+    ) -> std::result::Result<
+        aws_smithy_http::operation::Operation<
+            crate::operation::StopBotRecommendation,
+            aws_http::retry::AwsResponseRetryClassifier,
+        >,
+        aws_smithy_http::operation::BuildError,
+    > {
+        let mut request = {
+            fn uri_base(
+                _input: &crate::input::StopBotRecommendationInput,
+                output: &mut String,
+            ) -> Result<(), aws_smithy_http::operation::BuildError> {
+                let input_118 = &_input.bot_id;
+                let input_118 = input_118.as_ref().ok_or(
+                    aws_smithy_http::operation::BuildError::MissingField {
+                        field: "bot_id",
+                        details: "cannot be empty or unset",
+                    },
+                )?;
+                let bot_id = aws_smithy_http::label::fmt_string(input_118, false);
+                if bot_id.is_empty() {
+                    return Err(aws_smithy_http::operation::BuildError::MissingField {
+                        field: "bot_id",
+                        details: "cannot be empty or unset",
+                    });
+                }
+                let input_119 = &_input.bot_version;
+                let input_119 = input_119.as_ref().ok_or(
+                    aws_smithy_http::operation::BuildError::MissingField {
+                        field: "bot_version",
+                        details: "cannot be empty or unset",
+                    },
+                )?;
+                let bot_version = aws_smithy_http::label::fmt_string(input_119, false);
+                if bot_version.is_empty() {
+                    return Err(aws_smithy_http::operation::BuildError::MissingField {
+                        field: "bot_version",
+                        details: "cannot be empty or unset",
+                    });
+                }
+                let input_120 = &_input.locale_id;
+                let input_120 = input_120.as_ref().ok_or(
+                    aws_smithy_http::operation::BuildError::MissingField {
+                        field: "locale_id",
+                        details: "cannot be empty or unset",
+                    },
+                )?;
+                let locale_id = aws_smithy_http::label::fmt_string(input_120, false);
+                if locale_id.is_empty() {
+                    return Err(aws_smithy_http::operation::BuildError::MissingField {
+                        field: "locale_id",
+                        details: "cannot be empty or unset",
+                    });
+                }
+                let input_121 = &_input.bot_recommendation_id;
+                let input_121 = input_121.as_ref().ok_or(
+                    aws_smithy_http::operation::BuildError::MissingField {
+                        field: "bot_recommendation_id",
+                        details: "cannot be empty or unset",
+                    },
+                )?;
+                let bot_recommendation_id = aws_smithy_http::label::fmt_string(input_121, false);
+                if bot_recommendation_id.is_empty() {
+                    return Err(aws_smithy_http::operation::BuildError::MissingField {
+                        field: "bot_recommendation_id",
+                        details: "cannot be empty or unset",
+                    });
+                }
+                write!(output, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/stopbotrecommendation", botId = bot_id, botVersion = bot_version, localeId = locale_id, botRecommendationId = bot_recommendation_id).expect("formatting should succeed");
+                Ok(())
+            }
+            #[allow(clippy::unnecessary_wraps)]
+            fn update_http_builder(
+                input: &crate::input::StopBotRecommendationInput,
+                builder: http::request::Builder,
+            ) -> std::result::Result<http::request::Builder, aws_smithy_http::operation::BuildError>
+            {
+                let mut uri = String::new();
+                uri_base(input, &mut uri)?;
+                Ok(builder.method("PUT").uri(uri))
+            }
+            let mut builder = update_http_builder(&self, http::request::Builder::new())?;
+            builder
+        };
+        let mut properties = aws_smithy_http::property_bag::SharedPropertyBag::new();
+        #[allow(clippy::useless_conversion)]
+        let body = aws_smithy_http::body::SdkBody::from("");
+        let request = request.body(body).expect("should be valid request");
+        let mut request = aws_smithy_http::operation::Request::from_parts(request, properties);
+        request
+            .properties_mut()
+            .insert(aws_smithy_http::http_versions::DEFAULT_HTTP_VERSION_LIST.clone());
+        let mut user_agent = aws_http::user_agent::AwsUserAgent::new_from_environment(
+            aws_types::os_shim_internal::Env::real(),
+            crate::API_METADATA.clone(),
+        );
+        if let Some(app_name) = _config.app_name() {
+            user_agent = user_agent.with_app_name(app_name.clone());
+        }
+        request.properties_mut().insert(user_agent);
+        let mut signing_config = aws_sig_auth::signer::OperationSigningConfig::default_config();
+        request.properties_mut().insert(signing_config);
+        request
+            .properties_mut()
+            .insert(aws_types::SigningService::from_static(
+                _config.signing_service(),
+            ));
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
+        if let Some(region) = &_config.region {
+            request.properties_mut().insert(region.clone());
+        }
+        aws_http::auth::set_provider(
+            &mut request.properties_mut(),
+            _config.credentials_provider.clone(),
+        );
+        let op = aws_smithy_http::operation::Operation::new(
+            request,
+            crate::operation::StopBotRecommendation::new(),
+        )
+        .with_metadata(aws_smithy_http::operation::Metadata::new(
+            "StopBotRecommendation",
+            "lexmodelsv2",
+        ));
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
+        Ok(op)
+    }
+    /// Creates a new builder-style object to manufacture [`StopBotRecommendationInput`](crate::input::StopBotRecommendationInput).
+    pub fn builder() -> crate::input::stop_bot_recommendation_input::Builder {
+        crate::input::stop_bot_recommendation_input::Builder::default()
     }
 }
 
@@ -11650,10 +12044,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -11665,7 +12055,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11674,14 +12064,14 @@ impl TagResourceInput {
                 _input: &crate::input::TagResourceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_118 = &_input.resource_arn;
-                let input_118 = input_118.as_ref().ok_or(
+                let input_122 = &_input.resource_arn;
+                let input_122 = input_122.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let resource_arn = aws_smithy_http::label::fmt_string(input_118, false);
+                let resource_arn = aws_smithy_http::label::fmt_string(input_122, false);
                 if resource_arn.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
@@ -11742,10 +12132,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11761,7 +12158,7 @@ impl TagResourceInput {
             "TagResource",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -11821,10 +12218,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -11836,7 +12229,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11845,14 +12238,14 @@ impl UntagResourceInput {
                 _input: &crate::input::UntagResourceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_119 = &_input.resource_arn;
-                let input_119 = input_119.as_ref().ok_or(
+                let input_123 = &_input.resource_arn;
+                let input_123 = input_123.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let resource_arn = aws_smithy_http::label::fmt_string(input_119, false);
+                let resource_arn = aws_smithy_http::label::fmt_string(input_123, false);
                 if resource_arn.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
@@ -11868,9 +12261,9 @@ impl UntagResourceInput {
                 mut output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
                 let mut query = aws_smithy_http::query::Writer::new(&mut output);
-                if let Some(inner_120) = &_input.tag_keys {
-                    for inner_121 in inner_120 {
-                        query.push_kv("tagKeys", &aws_smithy_http::query::fmt_string(&inner_121));
+                if let Some(inner_124) = &_input.tag_keys {
+                    for inner_125 in inner_124 {
+                        query.push_kv("tagKeys", &aws_smithy_http::query::fmt_string(&inner_125));
                     }
                 }
                 Ok(())
@@ -11912,10 +12305,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11931,7 +12331,7 @@ impl UntagResourceInput {
             "UntagResource",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -12036,10 +12436,6 @@ pub mod update_bot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateBotInputOperationOutputAlias = crate::operation::UpdateBot;
-#[doc(hidden)]
-pub type UpdateBotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateBotInput {
     /// Consumes the builder and constructs an Operation<[`UpdateBot`](crate::operation::UpdateBot)>
     #[allow(unused_mut)]
@@ -12051,7 +12447,7 @@ impl UpdateBotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateBot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12060,14 +12456,14 @@ impl UpdateBotInput {
                 _input: &crate::input::UpdateBotInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_122 = &_input.bot_id;
-                let input_122 = input_122.as_ref().ok_or(
+                let input_126 = &_input.bot_id;
+                let input_126 = input_126.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_id = aws_smithy_http::label::fmt_string(input_122, false);
+                let bot_id = aws_smithy_http::label::fmt_string(input_126, false);
                 if bot_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
@@ -12127,10 +12523,17 @@ impl UpdateBotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12144,7 +12547,7 @@ impl UpdateBotInput {
                     "UpdateBot",
                     "lexmodelsv2",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateBotInput`](crate::input::UpdateBotInput).
@@ -12304,10 +12707,6 @@ pub mod update_bot_alias_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateBotAliasInputOperationOutputAlias = crate::operation::UpdateBotAlias;
-#[doc(hidden)]
-pub type UpdateBotAliasInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateBotAliasInput {
     /// Consumes the builder and constructs an Operation<[`UpdateBotAlias`](crate::operation::UpdateBotAlias)>
     #[allow(unused_mut)]
@@ -12319,7 +12718,7 @@ impl UpdateBotAliasInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateBotAlias,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12328,28 +12727,28 @@ impl UpdateBotAliasInput {
                 _input: &crate::input::UpdateBotAliasInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_123 = &_input.bot_id;
-                let input_123 = input_123.as_ref().ok_or(
+                let input_127 = &_input.bot_id;
+                let input_127 = input_127.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_id = aws_smithy_http::label::fmt_string(input_123, false);
+                let bot_id = aws_smithy_http::label::fmt_string(input_127, false);
                 if bot_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_124 = &_input.bot_alias_id;
-                let input_124 = input_124.as_ref().ok_or(
+                let input_128 = &_input.bot_alias_id;
+                let input_128 = input_128.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_alias_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_alias_id = aws_smithy_http::label::fmt_string(input_124, false);
+                let bot_alias_id = aws_smithy_http::label::fmt_string(input_128, false);
                 if bot_alias_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_alias_id",
@@ -12415,10 +12814,17 @@ impl UpdateBotAliasInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12434,7 +12840,7 @@ impl UpdateBotAliasInput {
             "UpdateBotAlias",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateBotAliasInput`](crate::input::UpdateBotAliasInput).
@@ -12539,10 +12945,6 @@ pub mod update_bot_locale_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateBotLocaleInputOperationOutputAlias = crate::operation::UpdateBotLocale;
-#[doc(hidden)]
-pub type UpdateBotLocaleInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateBotLocaleInput {
     /// Consumes the builder and constructs an Operation<[`UpdateBotLocale`](crate::operation::UpdateBotLocale)>
     #[allow(unused_mut)]
@@ -12554,7 +12956,7 @@ impl UpdateBotLocaleInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateBotLocale,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12563,42 +12965,42 @@ impl UpdateBotLocaleInput {
                 _input: &crate::input::UpdateBotLocaleInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_125 = &_input.bot_id;
-                let input_125 = input_125.as_ref().ok_or(
+                let input_129 = &_input.bot_id;
+                let input_129 = input_129.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_id = aws_smithy_http::label::fmt_string(input_125, false);
+                let bot_id = aws_smithy_http::label::fmt_string(input_129, false);
                 if bot_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_126 = &_input.bot_version;
-                let input_126 = input_126.as_ref().ok_or(
+                let input_130 = &_input.bot_version;
+                let input_130 = input_130.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_version = aws_smithy_http::label::fmt_string(input_126, false);
+                let bot_version = aws_smithy_http::label::fmt_string(input_130, false);
                 if bot_version.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_127 = &_input.locale_id;
-                let input_127 = input_127.as_ref().ok_or(
+                let input_131 = &_input.locale_id;
+                let input_131 = input_131.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let locale_id = aws_smithy_http::label::fmt_string(input_127, false);
+                let locale_id = aws_smithy_http::label::fmt_string(input_131, false);
                 if locale_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
@@ -12665,10 +13067,17 @@ impl UpdateBotLocaleInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12684,7 +13093,7 @@ impl UpdateBotLocaleInput {
             "UpdateBotLocale",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateBotLocaleInput`](crate::input::UpdateBotLocaleInput).
@@ -12779,11 +13188,6 @@ pub mod update_bot_recommendation_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateBotRecommendationInputOperationOutputAlias =
-    crate::operation::UpdateBotRecommendation;
-#[doc(hidden)]
-pub type UpdateBotRecommendationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateBotRecommendationInput {
     /// Consumes the builder and constructs an Operation<[`UpdateBotRecommendation`](crate::operation::UpdateBotRecommendation)>
     #[allow(unused_mut)]
@@ -12795,7 +13199,7 @@ impl UpdateBotRecommendationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateBotRecommendation,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12804,56 +13208,56 @@ impl UpdateBotRecommendationInput {
                 _input: &crate::input::UpdateBotRecommendationInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_128 = &_input.bot_id;
-                let input_128 = input_128.as_ref().ok_or(
+                let input_132 = &_input.bot_id;
+                let input_132 = input_132.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_id = aws_smithy_http::label::fmt_string(input_128, false);
+                let bot_id = aws_smithy_http::label::fmt_string(input_132, false);
                 if bot_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_129 = &_input.bot_version;
-                let input_129 = input_129.as_ref().ok_or(
+                let input_133 = &_input.bot_version;
+                let input_133 = input_133.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_version = aws_smithy_http::label::fmt_string(input_129, false);
+                let bot_version = aws_smithy_http::label::fmt_string(input_133, false);
                 if bot_version.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_130 = &_input.locale_id;
-                let input_130 = input_130.as_ref().ok_or(
+                let input_134 = &_input.locale_id;
+                let input_134 = input_134.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let locale_id = aws_smithy_http::label::fmt_string(input_130, false);
+                let locale_id = aws_smithy_http::label::fmt_string(input_134, false);
                 if locale_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_131 = &_input.bot_recommendation_id;
-                let input_131 = input_131.as_ref().ok_or(
+                let input_135 = &_input.bot_recommendation_id;
+                let input_135 = input_135.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_recommendation_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_recommendation_id = aws_smithy_http::label::fmt_string(input_131, false);
+                let bot_recommendation_id = aws_smithy_http::label::fmt_string(input_135, false);
                 if bot_recommendation_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_recommendation_id",
@@ -12915,10 +13319,17 @@ impl UpdateBotRecommendationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12934,7 +13345,7 @@ impl UpdateBotRecommendationInput {
             "UpdateBotRecommendation",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateBotRecommendationInput`](crate::input::UpdateBotRecommendationInput).
@@ -12988,10 +13399,6 @@ pub mod update_export_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateExportInputOperationOutputAlias = crate::operation::UpdateExport;
-#[doc(hidden)]
-pub type UpdateExportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateExportInput {
     /// Consumes the builder and constructs an Operation<[`UpdateExport`](crate::operation::UpdateExport)>
     #[allow(unused_mut)]
@@ -13003,7 +13410,7 @@ impl UpdateExportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateExport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13012,14 +13419,14 @@ impl UpdateExportInput {
                 _input: &crate::input::UpdateExportInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_132 = &_input.export_id;
-                let input_132 = input_132.as_ref().ok_or(
+                let input_136 = &_input.export_id;
+                let input_136 = input_136.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "export_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let export_id = aws_smithy_http::label::fmt_string(input_132, false);
+                let export_id = aws_smithy_http::label::fmt_string(input_136, false);
                 if export_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "export_id",
@@ -13080,10 +13487,17 @@ impl UpdateExportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -13099,7 +13513,7 @@ impl UpdateExportInput {
             "UpdateExport",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateExportInput`](crate::input::UpdateExportInput).
@@ -13133,6 +13547,8 @@ pub mod update_intent_input {
         pub(crate) bot_id: std::option::Option<std::string::String>,
         pub(crate) bot_version: std::option::Option<std::string::String>,
         pub(crate) locale_id: std::option::Option<std::string::String>,
+        pub(crate) initial_response_setting:
+            std::option::Option<crate::model::InitialResponseSetting>,
     }
     impl Builder {
         /// <p>The unique identifier of the intent to update.</p>
@@ -13355,6 +13771,22 @@ pub mod update_intent_input {
             self.locale_id = input;
             self
         }
+        /// <p></p>
+        pub fn initial_response_setting(
+            mut self,
+            input: crate::model::InitialResponseSetting,
+        ) -> Self {
+            self.initial_response_setting = Some(input);
+            self
+        }
+        /// <p></p>
+        pub fn set_initial_response_setting(
+            mut self,
+            input: std::option::Option<crate::model::InitialResponseSetting>,
+        ) -> Self {
+            self.initial_response_setting = input;
+            self
+        }
         /// Consumes the builder and constructs a [`UpdateIntentInput`](crate::input::UpdateIntentInput).
         pub fn build(
             self,
@@ -13377,14 +13809,11 @@ pub mod update_intent_input {
                 bot_id: self.bot_id,
                 bot_version: self.bot_version,
                 locale_id: self.locale_id,
+                initial_response_setting: self.initial_response_setting,
             })
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateIntentInputOperationOutputAlias = crate::operation::UpdateIntent;
-#[doc(hidden)]
-pub type UpdateIntentInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateIntentInput {
     /// Consumes the builder and constructs an Operation<[`UpdateIntent`](crate::operation::UpdateIntent)>
     #[allow(unused_mut)]
@@ -13396,7 +13825,7 @@ impl UpdateIntentInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateIntent,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13405,56 +13834,56 @@ impl UpdateIntentInput {
                 _input: &crate::input::UpdateIntentInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_133 = &_input.bot_id;
-                let input_133 = input_133.as_ref().ok_or(
+                let input_137 = &_input.bot_id;
+                let input_137 = input_137.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_id = aws_smithy_http::label::fmt_string(input_133, false);
+                let bot_id = aws_smithy_http::label::fmt_string(input_137, false);
                 if bot_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_134 = &_input.bot_version;
-                let input_134 = input_134.as_ref().ok_or(
+                let input_138 = &_input.bot_version;
+                let input_138 = input_138.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_version = aws_smithy_http::label::fmt_string(input_134, false);
+                let bot_version = aws_smithy_http::label::fmt_string(input_138, false);
                 if bot_version.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_135 = &_input.locale_id;
-                let input_135 = input_135.as_ref().ok_or(
+                let input_139 = &_input.locale_id;
+                let input_139 = input_139.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let locale_id = aws_smithy_http::label::fmt_string(input_135, false);
+                let locale_id = aws_smithy_http::label::fmt_string(input_139, false);
                 if locale_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_136 = &_input.intent_id;
-                let input_136 = input_136.as_ref().ok_or(
+                let input_140 = &_input.intent_id;
+                let input_140 = input_140.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "intent_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let intent_id = aws_smithy_http::label::fmt_string(input_136, false);
+                let intent_id = aws_smithy_http::label::fmt_string(input_140, false);
                 if intent_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "intent_id",
@@ -13514,10 +13943,17 @@ impl UpdateIntentInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -13533,7 +13969,7 @@ impl UpdateIntentInput {
             "UpdateIntent",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateIntentInput`](crate::input::UpdateIntentInput).
@@ -13603,10 +14039,6 @@ pub mod update_resource_policy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateResourcePolicyInputOperationOutputAlias = crate::operation::UpdateResourcePolicy;
-#[doc(hidden)]
-pub type UpdateResourcePolicyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateResourcePolicyInput {
     /// Consumes the builder and constructs an Operation<[`UpdateResourcePolicy`](crate::operation::UpdateResourcePolicy)>
     #[allow(unused_mut)]
@@ -13618,7 +14050,7 @@ impl UpdateResourcePolicyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateResourcePolicy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13627,14 +14059,14 @@ impl UpdateResourcePolicyInput {
                 _input: &crate::input::UpdateResourcePolicyInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_137 = &_input.resource_arn;
-                let input_137 = input_137.as_ref().ok_or(
+                let input_141 = &_input.resource_arn;
+                let input_141 = input_141.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let resource_arn = aws_smithy_http::label::fmt_string(input_137, false);
+                let resource_arn = aws_smithy_http::label::fmt_string(input_141, false);
                 if resource_arn.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
@@ -13650,10 +14082,10 @@ impl UpdateResourcePolicyInput {
                 mut output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
                 let mut query = aws_smithy_http::query::Writer::new(&mut output);
-                if let Some(inner_138) = &_input.expected_revision_id {
+                if let Some(inner_142) = &_input.expected_revision_id {
                     query.push_kv(
                         "expectedRevisionId",
-                        &aws_smithy_http::query::fmt_string(&inner_138),
+                        &aws_smithy_http::query::fmt_string(&inner_142),
                     );
                 }
                 Ok(())
@@ -13711,10 +14143,17 @@ impl UpdateResourcePolicyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -13730,7 +14169,7 @@ impl UpdateResourcePolicyInput {
             "UpdateResourcePolicy",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateResourcePolicyInput`](crate::input::UpdateResourcePolicyInput).
@@ -13907,10 +14346,6 @@ pub mod update_slot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateSlotInputOperationOutputAlias = crate::operation::UpdateSlot;
-#[doc(hidden)]
-pub type UpdateSlotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateSlotInput {
     /// Consumes the builder and constructs an Operation<[`UpdateSlot`](crate::operation::UpdateSlot)>
     #[allow(unused_mut)]
@@ -13922,7 +14357,7 @@ impl UpdateSlotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateSlot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13931,70 +14366,70 @@ impl UpdateSlotInput {
                 _input: &crate::input::UpdateSlotInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_139 = &_input.bot_id;
-                let input_139 = input_139.as_ref().ok_or(
+                let input_143 = &_input.bot_id;
+                let input_143 = input_143.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_id = aws_smithy_http::label::fmt_string(input_139, false);
+                let bot_id = aws_smithy_http::label::fmt_string(input_143, false);
                 if bot_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_140 = &_input.bot_version;
-                let input_140 = input_140.as_ref().ok_or(
+                let input_144 = &_input.bot_version;
+                let input_144 = input_144.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_version = aws_smithy_http::label::fmt_string(input_140, false);
+                let bot_version = aws_smithy_http::label::fmt_string(input_144, false);
                 if bot_version.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_141 = &_input.locale_id;
-                let input_141 = input_141.as_ref().ok_or(
+                let input_145 = &_input.locale_id;
+                let input_145 = input_145.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let locale_id = aws_smithy_http::label::fmt_string(input_141, false);
+                let locale_id = aws_smithy_http::label::fmt_string(input_145, false);
                 if locale_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_142 = &_input.intent_id;
-                let input_142 = input_142.as_ref().ok_or(
+                let input_146 = &_input.intent_id;
+                let input_146 = input_146.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "intent_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let intent_id = aws_smithy_http::label::fmt_string(input_142, false);
+                let intent_id = aws_smithy_http::label::fmt_string(input_146, false);
                 if intent_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "intent_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_143 = &_input.slot_id;
-                let input_143 = input_143.as_ref().ok_or(
+                let input_147 = &_input.slot_id;
+                let input_147 = input_147.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "slot_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let slot_id = aws_smithy_http::label::fmt_string(input_143, false);
+                let slot_id = aws_smithy_http::label::fmt_string(input_147, false);
                 if slot_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "slot_id",
@@ -14054,10 +14489,17 @@ impl UpdateSlotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -14073,7 +14515,7 @@ impl UpdateSlotInput {
             "UpdateSlot",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateSlotInput`](crate::input::UpdateSlotInput).
@@ -14250,10 +14692,6 @@ pub mod update_slot_type_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateSlotTypeInputOperationOutputAlias = crate::operation::UpdateSlotType;
-#[doc(hidden)]
-pub type UpdateSlotTypeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateSlotTypeInput {
     /// Consumes the builder and constructs an Operation<[`UpdateSlotType`](crate::operation::UpdateSlotType)>
     #[allow(unused_mut)]
@@ -14265,7 +14703,7 @@ impl UpdateSlotTypeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateSlotType,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -14274,56 +14712,56 @@ impl UpdateSlotTypeInput {
                 _input: &crate::input::UpdateSlotTypeInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_144 = &_input.bot_id;
-                let input_144 = input_144.as_ref().ok_or(
+                let input_148 = &_input.bot_id;
+                let input_148 = input_148.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_id = aws_smithy_http::label::fmt_string(input_144, false);
+                let bot_id = aws_smithy_http::label::fmt_string(input_148, false);
                 if bot_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_145 = &_input.bot_version;
-                let input_145 = input_145.as_ref().ok_or(
+                let input_149 = &_input.bot_version;
+                let input_149 = input_149.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let bot_version = aws_smithy_http::label::fmt_string(input_145, false);
+                let bot_version = aws_smithy_http::label::fmt_string(input_149, false);
                 if bot_version.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "bot_version",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_146 = &_input.locale_id;
-                let input_146 = input_146.as_ref().ok_or(
+                let input_150 = &_input.locale_id;
+                let input_150 = input_150.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let locale_id = aws_smithy_http::label::fmt_string(input_146, false);
+                let locale_id = aws_smithy_http::label::fmt_string(input_150, false);
                 if locale_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "locale_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_147 = &_input.slot_type_id;
-                let input_147 = input_147.as_ref().ok_or(
+                let input_151 = &_input.slot_type_id;
+                let input_151 = input_151.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "slot_type_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let slot_type_id = aws_smithy_http::label::fmt_string(input_147, false);
+                let slot_type_id = aws_smithy_http::label::fmt_string(input_151, false);
                 if slot_type_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "slot_type_id",
@@ -14383,10 +14821,17 @@ impl UpdateSlotTypeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -14402,7 +14847,7 @@ impl UpdateSlotTypeInput {
             "UpdateSlotType",
             "lexmodelsv2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateSlotTypeInput`](crate::input::UpdateSlotTypeInput).
@@ -14714,6 +15159,9 @@ pub struct UpdateIntentInput {
     /// <p>The identifier of the language and locale where this intent is used. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.</p>
     #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
+    /// <p></p>
+    #[doc(hidden)]
+    pub initial_response_setting: std::option::Option<crate::model::InitialResponseSetting>,
 }
 impl UpdateIntentInput {
     /// <p>The unique identifier of the intent to update.</p>
@@ -14786,6 +15234,12 @@ impl UpdateIntentInput {
     pub fn locale_id(&self) -> std::option::Option<&str> {
         self.locale_id.as_deref()
     }
+    /// <p></p>
+    pub fn initial_response_setting(
+        &self,
+    ) -> std::option::Option<&crate::model::InitialResponseSetting> {
+        self.initial_response_setting.as_ref()
+    }
 }
 impl std::fmt::Debug for UpdateIntentInput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -14809,6 +15263,7 @@ impl std::fmt::Debug for UpdateIntentInput {
         formatter.field("bot_id", &self.bot_id);
         formatter.field("bot_version", &self.bot_version);
         formatter.field("locale_id", &self.locale_id);
+        formatter.field("initial_response_setting", &self.initial_response_setting);
         formatter.finish()
     }
 }
@@ -15182,6 +15637,52 @@ impl std::fmt::Debug for TagResourceInput {
         let mut formatter = f.debug_struct("TagResourceInput");
         formatter.field("resource_arn", &self.resource_arn);
         formatter.field("tags", &self.tags);
+        formatter.finish()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct StopBotRecommendationInput {
+    /// <p>The unique identifier of the bot containing the bot recommendation to be stopped.</p>
+    #[doc(hidden)]
+    pub bot_id: std::option::Option<std::string::String>,
+    /// <p>The version of the bot containing the bot recommendation.</p>
+    #[doc(hidden)]
+    pub bot_version: std::option::Option<std::string::String>,
+    /// <p>The identifier of the language and locale of the bot recommendation to stop. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a> </p>
+    #[doc(hidden)]
+    pub locale_id: std::option::Option<std::string::String>,
+    /// <p>The unique identifier of the bot recommendation to be stopped.</p>
+    #[doc(hidden)]
+    pub bot_recommendation_id: std::option::Option<std::string::String>,
+}
+impl StopBotRecommendationInput {
+    /// <p>The unique identifier of the bot containing the bot recommendation to be stopped.</p>
+    pub fn bot_id(&self) -> std::option::Option<&str> {
+        self.bot_id.as_deref()
+    }
+    /// <p>The version of the bot containing the bot recommendation.</p>
+    pub fn bot_version(&self) -> std::option::Option<&str> {
+        self.bot_version.as_deref()
+    }
+    /// <p>The identifier of the language and locale of the bot recommendation to stop. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a> </p>
+    pub fn locale_id(&self) -> std::option::Option<&str> {
+        self.locale_id.as_deref()
+    }
+    /// <p>The unique identifier of the bot recommendation to be stopped.</p>
+    pub fn bot_recommendation_id(&self) -> std::option::Option<&str> {
+        self.bot_recommendation_id.as_deref()
+    }
+}
+impl std::fmt::Debug for StopBotRecommendationInput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("StopBotRecommendationInput");
+        formatter.field("bot_id", &self.bot_id);
+        formatter.field("bot_version", &self.bot_version);
+        formatter.field("locale_id", &self.locale_id);
+        formatter.field("bot_recommendation_id", &self.bot_recommendation_id);
         formatter.finish()
     }
 }
@@ -17553,6 +18054,9 @@ pub struct CreateIntentInput {
     /// <p>The identifier of the language and locale where this intent is used. All of the bots, slot types, and slots used by the intent must have the same locale. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.</p>
     #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
+    /// <p>Configuration settings for the response that is sent to the user at the beginning of a conversation, before eliciting slot values.</p>
+    #[doc(hidden)]
+    pub initial_response_setting: std::option::Option<crate::model::InitialResponseSetting>,
 }
 impl CreateIntentInput {
     /// <p>The name of the intent. Intent names must be unique in the locale that contains the intent and cannot match the name of any built-in intent.</p>
@@ -17626,6 +18130,12 @@ impl CreateIntentInput {
     pub fn locale_id(&self) -> std::option::Option<&str> {
         self.locale_id.as_deref()
     }
+    /// <p>Configuration settings for the response that is sent to the user at the beginning of a conversation, before eliciting slot values.</p>
+    pub fn initial_response_setting(
+        &self,
+    ) -> std::option::Option<&crate::model::InitialResponseSetting> {
+        self.initial_response_setting.as_ref()
+    }
 }
 impl std::fmt::Debug for CreateIntentInput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -17647,6 +18157,7 @@ impl std::fmt::Debug for CreateIntentInput {
         formatter.field("bot_id", &self.bot_id);
         formatter.field("bot_version", &self.bot_version);
         formatter.field("locale_id", &self.locale_id);
+        formatter.field("initial_response_setting", &self.initial_response_setting);
         formatter.finish()
     }
 }

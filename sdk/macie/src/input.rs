@@ -34,10 +34,6 @@ pub mod associate_member_account_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateMemberAccountInputOperationOutputAlias = crate::operation::AssociateMemberAccount;
-#[doc(hidden)]
-pub type AssociateMemberAccountInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateMemberAccountInput {
     /// Consumes the builder and constructs an Operation<[`AssociateMemberAccount`](crate::operation::AssociateMemberAccount)>
     #[allow(unused_mut)]
@@ -49,7 +45,7 @@ impl AssociateMemberAccountInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateMemberAccount,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -118,10 +114,17 @@ impl AssociateMemberAccountInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -137,7 +140,7 @@ impl AssociateMemberAccountInput {
             "AssociateMemberAccount",
             "macie",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateMemberAccountInput`](crate::input::AssociateMemberAccountInput).
@@ -201,10 +204,6 @@ pub mod associate_s3_resources_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateS3ResourcesInputOperationOutputAlias = crate::operation::AssociateS3Resources;
-#[doc(hidden)]
-pub type AssociateS3ResourcesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateS3ResourcesInput {
     /// Consumes the builder and constructs an Operation<[`AssociateS3Resources`](crate::operation::AssociateS3Resources)>
     #[allow(unused_mut)]
@@ -216,7 +215,7 @@ impl AssociateS3ResourcesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateS3Resources,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -285,10 +284,17 @@ impl AssociateS3ResourcesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -304,7 +310,7 @@ impl AssociateS3ResourcesInput {
             "AssociateS3Resources",
             "macie",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateS3ResourcesInput`](crate::input::AssociateS3ResourcesInput).
@@ -348,11 +354,6 @@ pub mod disassociate_member_account_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisassociateMemberAccountInputOperationOutputAlias =
-    crate::operation::DisassociateMemberAccount;
-#[doc(hidden)]
-pub type DisassociateMemberAccountInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DisassociateMemberAccountInput {
     /// Consumes the builder and constructs an Operation<[`DisassociateMemberAccount`](crate::operation::DisassociateMemberAccount)>
     #[allow(unused_mut)]
@@ -364,7 +365,7 @@ impl DisassociateMemberAccountInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisassociateMemberAccount,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -433,10 +434,17 @@ impl DisassociateMemberAccountInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -452,7 +460,7 @@ impl DisassociateMemberAccountInput {
             "DisassociateMemberAccount",
             "macie",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisassociateMemberAccountInput`](crate::input::DisassociateMemberAccountInput).
@@ -518,11 +526,6 @@ pub mod disassociate_s3_resources_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisassociateS3ResourcesInputOperationOutputAlias =
-    crate::operation::DisassociateS3Resources;
-#[doc(hidden)]
-pub type DisassociateS3ResourcesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DisassociateS3ResourcesInput {
     /// Consumes the builder and constructs an Operation<[`DisassociateS3Resources`](crate::operation::DisassociateS3Resources)>
     #[allow(unused_mut)]
@@ -534,7 +537,7 @@ impl DisassociateS3ResourcesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisassociateS3Resources,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -603,10 +606,17 @@ impl DisassociateS3ResourcesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -622,7 +632,7 @@ impl DisassociateS3ResourcesInput {
             "DisassociateS3Resources",
             "macie",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisassociateS3ResourcesInput`](crate::input::DisassociateS3ResourcesInput).
@@ -673,10 +683,6 @@ pub mod list_member_accounts_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListMemberAccountsInputOperationOutputAlias = crate::operation::ListMemberAccounts;
-#[doc(hidden)]
-pub type ListMemberAccountsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListMemberAccountsInput {
     /// Consumes the builder and constructs an Operation<[`ListMemberAccounts`](crate::operation::ListMemberAccounts)>
     #[allow(unused_mut)]
@@ -688,7 +694,7 @@ impl ListMemberAccountsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListMemberAccounts,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -755,10 +761,17 @@ impl ListMemberAccountsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -774,7 +787,7 @@ impl ListMemberAccountsInput {
             "ListMemberAccounts",
             "macie",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListMemberAccountsInput`](crate::input::ListMemberAccountsInput).
@@ -840,10 +853,6 @@ pub mod list_s3_resources_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListS3ResourcesInputOperationOutputAlias = crate::operation::ListS3Resources;
-#[doc(hidden)]
-pub type ListS3ResourcesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListS3ResourcesInput {
     /// Consumes the builder and constructs an Operation<[`ListS3Resources`](crate::operation::ListS3Resources)>
     #[allow(unused_mut)]
@@ -855,7 +864,7 @@ impl ListS3ResourcesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListS3Resources,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -922,10 +931,17 @@ impl ListS3ResourcesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -941,7 +957,7 @@ impl ListS3ResourcesInput {
             "ListS3Resources",
             "macie",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListS3ResourcesInput`](crate::input::ListS3ResourcesInput).
@@ -1008,10 +1024,6 @@ pub mod update_s3_resources_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateS3ResourcesInputOperationOutputAlias = crate::operation::UpdateS3Resources;
-#[doc(hidden)]
-pub type UpdateS3ResourcesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateS3ResourcesInput {
     /// Consumes the builder and constructs an Operation<[`UpdateS3Resources`](crate::operation::UpdateS3Resources)>
     #[allow(unused_mut)]
@@ -1023,7 +1035,7 @@ impl UpdateS3ResourcesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateS3Resources,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1090,10 +1102,17 @@ impl UpdateS3ResourcesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1109,7 +1128,7 @@ impl UpdateS3ResourcesInput {
             "UpdateS3Resources",
             "macie",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateS3ResourcesInput`](crate::input::UpdateS3ResourcesInput).

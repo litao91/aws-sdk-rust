@@ -34,10 +34,6 @@ pub mod get_latest_configuration_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetLatestConfigurationInputOperationOutputAlias = crate::operation::GetLatestConfiguration;
-#[doc(hidden)]
-pub type GetLatestConfigurationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetLatestConfigurationInput {
     /// Consumes the builder and constructs an Operation<[`GetLatestConfiguration`](crate::operation::GetLatestConfiguration)>
     #[allow(unused_mut)]
@@ -49,7 +45,7 @@ impl GetLatestConfigurationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetLatestConfiguration,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -111,10 +107,17 @@ impl GetLatestConfigurationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -130,7 +133,7 @@ impl GetLatestConfigurationInput {
             "GetLatestConfiguration",
             "appconfigdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetLatestConfigurationInput`](crate::input::GetLatestConfigurationInput).
@@ -223,11 +226,6 @@ pub mod start_configuration_session_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartConfigurationSessionInputOperationOutputAlias =
-    crate::operation::StartConfigurationSession;
-#[doc(hidden)]
-pub type StartConfigurationSessionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartConfigurationSessionInput {
     /// Consumes the builder and constructs an Operation<[`StartConfigurationSession`](crate::operation::StartConfigurationSession)>
     #[allow(unused_mut)]
@@ -239,7 +237,7 @@ impl StartConfigurationSessionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartConfigurationSession,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -303,10 +301,17 @@ impl StartConfigurationSessionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -322,7 +327,7 @@ impl StartConfigurationSessionInput {
             "StartConfigurationSession",
             "appconfigdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartConfigurationSessionInput`](crate::input::StartConfigurationSessionInput).

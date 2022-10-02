@@ -63,11 +63,6 @@ pub mod add_custom_routing_endpoints_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddCustomRoutingEndpointsInputOperationOutputAlias =
-    crate::operation::AddCustomRoutingEndpoints;
-#[doc(hidden)]
-pub type AddCustomRoutingEndpointsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AddCustomRoutingEndpointsInput {
     /// Consumes the builder and constructs an Operation<[`AddCustomRoutingEndpoints`](crate::operation::AddCustomRoutingEndpoints)>
     #[allow(unused_mut)]
@@ -79,7 +74,7 @@ impl AddCustomRoutingEndpointsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddCustomRoutingEndpoints,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -148,10 +143,17 @@ impl AddCustomRoutingEndpointsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -167,7 +169,7 @@ impl AddCustomRoutingEndpointsInput {
             "AddCustomRoutingEndpoints",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddCustomRoutingEndpointsInput`](crate::input::AddCustomRoutingEndpointsInput).
@@ -204,10 +206,6 @@ pub mod advertise_byoip_cidr_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AdvertiseByoipCidrInputOperationOutputAlias = crate::operation::AdvertiseByoipCidr;
-#[doc(hidden)]
-pub type AdvertiseByoipCidrInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AdvertiseByoipCidrInput {
     /// Consumes the builder and constructs an Operation<[`AdvertiseByoipCidr`](crate::operation::AdvertiseByoipCidr)>
     #[allow(unused_mut)]
@@ -219,7 +217,7 @@ impl AdvertiseByoipCidrInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AdvertiseByoipCidr,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -286,10 +284,17 @@ impl AdvertiseByoipCidrInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -305,7 +310,7 @@ impl AdvertiseByoipCidrInput {
             "AdvertiseByoipCidr",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AdvertiseByoipCidrInput`](crate::input::AdvertiseByoipCidrInput).
@@ -426,11 +431,6 @@ pub mod allow_custom_routing_traffic_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AllowCustomRoutingTrafficInputOperationOutputAlias =
-    crate::operation::AllowCustomRoutingTraffic;
-#[doc(hidden)]
-pub type AllowCustomRoutingTrafficInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AllowCustomRoutingTrafficInput {
     /// Consumes the builder and constructs an Operation<[`AllowCustomRoutingTraffic`](crate::operation::AllowCustomRoutingTraffic)>
     #[allow(unused_mut)]
@@ -442,7 +442,7 @@ impl AllowCustomRoutingTrafficInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AllowCustomRoutingTraffic,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -511,10 +511,17 @@ impl AllowCustomRoutingTrafficInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -530,7 +537,7 @@ impl AllowCustomRoutingTrafficInput {
             "AllowCustomRoutingTraffic",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AllowCustomRoutingTrafficInput`](crate::input::AllowCustomRoutingTrafficInput).
@@ -665,10 +672,6 @@ pub mod create_accelerator_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateAcceleratorInputOperationOutputAlias = crate::operation::CreateAccelerator;
-#[doc(hidden)]
-pub type CreateAcceleratorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateAcceleratorInput {
     /// Consumes the builder and constructs an Operation<[`CreateAccelerator`](crate::operation::CreateAccelerator)>
     #[allow(unused_mut)]
@@ -680,7 +683,7 @@ impl CreateAcceleratorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateAccelerator,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -750,10 +753,17 @@ impl CreateAcceleratorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -769,7 +779,7 @@ impl CreateAcceleratorInput {
             "CreateAccelerator",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateAcceleratorInput`](crate::input::CreateAcceleratorInput).
@@ -906,12 +916,6 @@ pub mod create_custom_routing_accelerator_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateCustomRoutingAcceleratorInputOperationOutputAlias =
-    crate::operation::CreateCustomRoutingAccelerator;
-#[doc(hidden)]
-pub type CreateCustomRoutingAcceleratorInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateCustomRoutingAcceleratorInput {
     /// Consumes the builder and constructs an Operation<[`CreateCustomRoutingAccelerator`](crate::operation::CreateCustomRoutingAccelerator)>
     #[allow(unused_mut)]
@@ -923,7 +927,7 @@ impl CreateCustomRoutingAcceleratorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateCustomRoutingAccelerator,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -992,10 +996,17 @@ impl CreateCustomRoutingAcceleratorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1011,7 +1022,7 @@ impl CreateCustomRoutingAcceleratorInput {
             "CreateCustomRoutingAccelerator",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateCustomRoutingAcceleratorInput`](crate::input::CreateCustomRoutingAcceleratorInput).
@@ -1109,12 +1120,6 @@ pub mod create_custom_routing_endpoint_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateCustomRoutingEndpointGroupInputOperationOutputAlias =
-    crate::operation::CreateCustomRoutingEndpointGroup;
-#[doc(hidden)]
-pub type CreateCustomRoutingEndpointGroupInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateCustomRoutingEndpointGroupInput {
     /// Consumes the builder and constructs an Operation<[`CreateCustomRoutingEndpointGroup`](crate::operation::CreateCustomRoutingEndpointGroup)>
     #[allow(unused_mut)]
@@ -1126,7 +1131,7 @@ impl CreateCustomRoutingEndpointGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateCustomRoutingEndpointGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1195,10 +1200,17 @@ impl CreateCustomRoutingEndpointGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1214,7 +1226,7 @@ impl CreateCustomRoutingEndpointGroupInput {
             "CreateCustomRoutingEndpointGroup",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateCustomRoutingEndpointGroupInput`](crate::input::CreateCustomRoutingEndpointGroupInput).
@@ -1296,11 +1308,6 @@ pub mod create_custom_routing_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateCustomRoutingListenerInputOperationOutputAlias =
-    crate::operation::CreateCustomRoutingListener;
-#[doc(hidden)]
-pub type CreateCustomRoutingListenerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateCustomRoutingListenerInput {
     /// Consumes the builder and constructs an Operation<[`CreateCustomRoutingListener`](crate::operation::CreateCustomRoutingListener)>
     #[allow(unused_mut)]
@@ -1312,7 +1319,7 @@ impl CreateCustomRoutingListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateCustomRoutingListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1381,10 +1388,17 @@ impl CreateCustomRoutingListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1400,7 +1414,7 @@ impl CreateCustomRoutingListenerInput {
             "CreateCustomRoutingListener",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateCustomRoutingListenerInput`](crate::input::CreateCustomRoutingListenerInput).
@@ -1602,10 +1616,6 @@ pub mod create_endpoint_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateEndpointGroupInputOperationOutputAlias = crate::operation::CreateEndpointGroup;
-#[doc(hidden)]
-pub type CreateEndpointGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateEndpointGroupInput {
     /// Consumes the builder and constructs an Operation<[`CreateEndpointGroup`](crate::operation::CreateEndpointGroup)>
     #[allow(unused_mut)]
@@ -1617,7 +1627,7 @@ impl CreateEndpointGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateEndpointGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1687,10 +1697,17 @@ impl CreateEndpointGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1706,7 +1723,7 @@ impl CreateEndpointGroupInput {
             "CreateEndpointGroup",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateEndpointGroupInput`](crate::input::CreateEndpointGroupInput).
@@ -1817,10 +1834,6 @@ pub mod create_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateListenerInputOperationOutputAlias = crate::operation::CreateListener;
-#[doc(hidden)]
-pub type CreateListenerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateListenerInput {
     /// Consumes the builder and constructs an Operation<[`CreateListener`](crate::operation::CreateListener)>
     #[allow(unused_mut)]
@@ -1832,7 +1845,7 @@ impl CreateListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1902,10 +1915,17 @@ impl CreateListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1921,7 +1941,7 @@ impl CreateListenerInput {
             "CreateListener",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateListenerInput`](crate::input::CreateListenerInput).
@@ -1963,10 +1983,6 @@ pub mod delete_accelerator_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteAcceleratorInputOperationOutputAlias = crate::operation::DeleteAccelerator;
-#[doc(hidden)]
-pub type DeleteAcceleratorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteAcceleratorInput {
     /// Consumes the builder and constructs an Operation<[`DeleteAccelerator`](crate::operation::DeleteAccelerator)>
     #[allow(unused_mut)]
@@ -1978,7 +1994,7 @@ impl DeleteAcceleratorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteAccelerator,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2045,10 +2061,17 @@ impl DeleteAcceleratorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2064,7 +2087,7 @@ impl DeleteAcceleratorInput {
             "DeleteAccelerator",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteAcceleratorInput`](crate::input::DeleteAcceleratorInput).
@@ -2108,12 +2131,6 @@ pub mod delete_custom_routing_accelerator_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteCustomRoutingAcceleratorInputOperationOutputAlias =
-    crate::operation::DeleteCustomRoutingAccelerator;
-#[doc(hidden)]
-pub type DeleteCustomRoutingAcceleratorInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteCustomRoutingAcceleratorInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCustomRoutingAccelerator`](crate::operation::DeleteCustomRoutingAccelerator)>
     #[allow(unused_mut)]
@@ -2125,7 +2142,7 @@ impl DeleteCustomRoutingAcceleratorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCustomRoutingAccelerator,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2191,10 +2208,17 @@ impl DeleteCustomRoutingAcceleratorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2210,7 +2234,7 @@ impl DeleteCustomRoutingAcceleratorInput {
             "DeleteCustomRoutingAccelerator",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteCustomRoutingAcceleratorInput`](crate::input::DeleteCustomRoutingAcceleratorInput).
@@ -2254,12 +2278,6 @@ pub mod delete_custom_routing_endpoint_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteCustomRoutingEndpointGroupInputOperationOutputAlias =
-    crate::operation::DeleteCustomRoutingEndpointGroup;
-#[doc(hidden)]
-pub type DeleteCustomRoutingEndpointGroupInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteCustomRoutingEndpointGroupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCustomRoutingEndpointGroup`](crate::operation::DeleteCustomRoutingEndpointGroup)>
     #[allow(unused_mut)]
@@ -2271,7 +2289,7 @@ impl DeleteCustomRoutingEndpointGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCustomRoutingEndpointGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2337,10 +2355,17 @@ impl DeleteCustomRoutingEndpointGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2356,7 +2381,7 @@ impl DeleteCustomRoutingEndpointGroupInput {
             "DeleteCustomRoutingEndpointGroup",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteCustomRoutingEndpointGroupInput`](crate::input::DeleteCustomRoutingEndpointGroupInput).
@@ -2397,11 +2422,6 @@ pub mod delete_custom_routing_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteCustomRoutingListenerInputOperationOutputAlias =
-    crate::operation::DeleteCustomRoutingListener;
-#[doc(hidden)]
-pub type DeleteCustomRoutingListenerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteCustomRoutingListenerInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCustomRoutingListener`](crate::operation::DeleteCustomRoutingListener)>
     #[allow(unused_mut)]
@@ -2413,7 +2433,7 @@ impl DeleteCustomRoutingListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCustomRoutingListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2479,10 +2499,17 @@ impl DeleteCustomRoutingListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2498,7 +2525,7 @@ impl DeleteCustomRoutingListenerInput {
             "DeleteCustomRoutingListener",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteCustomRoutingListenerInput`](crate::input::DeleteCustomRoutingListenerInput).
@@ -2540,10 +2567,6 @@ pub mod delete_endpoint_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteEndpointGroupInputOperationOutputAlias = crate::operation::DeleteEndpointGroup;
-#[doc(hidden)]
-pub type DeleteEndpointGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteEndpointGroupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteEndpointGroup`](crate::operation::DeleteEndpointGroup)>
     #[allow(unused_mut)]
@@ -2555,7 +2578,7 @@ impl DeleteEndpointGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteEndpointGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2622,10 +2645,17 @@ impl DeleteEndpointGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2641,7 +2671,7 @@ impl DeleteEndpointGroupInput {
             "DeleteEndpointGroup",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteEndpointGroupInput`](crate::input::DeleteEndpointGroupInput).
@@ -2680,10 +2710,6 @@ pub mod delete_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteListenerInputOperationOutputAlias = crate::operation::DeleteListener;
-#[doc(hidden)]
-pub type DeleteListenerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteListenerInput {
     /// Consumes the builder and constructs an Operation<[`DeleteListener`](crate::operation::DeleteListener)>
     #[allow(unused_mut)]
@@ -2695,7 +2721,7 @@ impl DeleteListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2762,10 +2788,17 @@ impl DeleteListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2781,7 +2814,7 @@ impl DeleteListenerInput {
             "DeleteListener",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteListenerInput`](crate::input::DeleteListenerInput).
@@ -2900,11 +2933,6 @@ pub mod deny_custom_routing_traffic_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DenyCustomRoutingTrafficInputOperationOutputAlias =
-    crate::operation::DenyCustomRoutingTraffic;
-#[doc(hidden)]
-pub type DenyCustomRoutingTrafficInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DenyCustomRoutingTrafficInput {
     /// Consumes the builder and constructs an Operation<[`DenyCustomRoutingTraffic`](crate::operation::DenyCustomRoutingTraffic)>
     #[allow(unused_mut)]
@@ -2916,7 +2944,7 @@ impl DenyCustomRoutingTrafficInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DenyCustomRoutingTraffic,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2985,10 +3013,17 @@ impl DenyCustomRoutingTrafficInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3004,7 +3039,7 @@ impl DenyCustomRoutingTrafficInput {
             "DenyCustomRoutingTraffic",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DenyCustomRoutingTrafficInput`](crate::input::DenyCustomRoutingTrafficInput).
@@ -3041,10 +3076,6 @@ pub mod deprovision_byoip_cidr_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeprovisionByoipCidrInputOperationOutputAlias = crate::operation::DeprovisionByoipCidr;
-#[doc(hidden)]
-pub type DeprovisionByoipCidrInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeprovisionByoipCidrInput {
     /// Consumes the builder and constructs an Operation<[`DeprovisionByoipCidr`](crate::operation::DeprovisionByoipCidr)>
     #[allow(unused_mut)]
@@ -3056,7 +3087,7 @@ impl DeprovisionByoipCidrInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeprovisionByoipCidr,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3125,10 +3156,17 @@ impl DeprovisionByoipCidrInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3144,7 +3182,7 @@ impl DeprovisionByoipCidrInput {
             "DeprovisionByoipCidr",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeprovisionByoipCidrInput`](crate::input::DeprovisionByoipCidrInput).
@@ -3186,10 +3224,6 @@ pub mod describe_accelerator_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAcceleratorInputOperationOutputAlias = crate::operation::DescribeAccelerator;
-#[doc(hidden)]
-pub type DescribeAcceleratorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAcceleratorInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAccelerator`](crate::operation::DescribeAccelerator)>
     #[allow(unused_mut)]
@@ -3201,7 +3235,7 @@ impl DescribeAcceleratorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAccelerator,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3268,10 +3302,17 @@ impl DescribeAcceleratorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3287,7 +3328,7 @@ impl DescribeAcceleratorInput {
             "DescribeAccelerator",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAcceleratorInput`](crate::input::DescribeAcceleratorInput).
@@ -3331,12 +3372,6 @@ pub mod describe_accelerator_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAcceleratorAttributesInputOperationOutputAlias =
-    crate::operation::DescribeAcceleratorAttributes;
-#[doc(hidden)]
-pub type DescribeAcceleratorAttributesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAcceleratorAttributesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAcceleratorAttributes`](crate::operation::DescribeAcceleratorAttributes)>
     #[allow(unused_mut)]
@@ -3348,7 +3383,7 @@ impl DescribeAcceleratorAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAcceleratorAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3414,10 +3449,17 @@ impl DescribeAcceleratorAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3433,7 +3475,7 @@ impl DescribeAcceleratorAttributesInput {
             "DescribeAcceleratorAttributes",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAcceleratorAttributesInput`](crate::input::DescribeAcceleratorAttributesInput).
@@ -3477,12 +3519,6 @@ pub mod describe_custom_routing_accelerator_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCustomRoutingAcceleratorInputOperationOutputAlias =
-    crate::operation::DescribeCustomRoutingAccelerator;
-#[doc(hidden)]
-pub type DescribeCustomRoutingAcceleratorInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCustomRoutingAcceleratorInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCustomRoutingAccelerator`](crate::operation::DescribeCustomRoutingAccelerator)>
     #[allow(unused_mut)]
@@ -3494,7 +3530,7 @@ impl DescribeCustomRoutingAcceleratorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCustomRoutingAccelerator,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3560,10 +3596,17 @@ impl DescribeCustomRoutingAcceleratorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3579,7 +3622,7 @@ impl DescribeCustomRoutingAcceleratorInput {
             "DescribeCustomRoutingAccelerator",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCustomRoutingAcceleratorInput`](crate::input::DescribeCustomRoutingAcceleratorInput).
@@ -3625,12 +3668,6 @@ pub mod describe_custom_routing_accelerator_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCustomRoutingAcceleratorAttributesInputOperationOutputAlias =
-    crate::operation::DescribeCustomRoutingAcceleratorAttributes;
-#[doc(hidden)]
-pub type DescribeCustomRoutingAcceleratorAttributesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCustomRoutingAcceleratorAttributesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCustomRoutingAcceleratorAttributes`](crate::operation::DescribeCustomRoutingAcceleratorAttributes)>
     #[allow(unused_mut)]
@@ -3642,7 +3679,7 @@ impl DescribeCustomRoutingAcceleratorAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCustomRoutingAcceleratorAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3708,10 +3745,17 @@ impl DescribeCustomRoutingAcceleratorAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3727,7 +3771,7 @@ impl DescribeCustomRoutingAcceleratorAttributesInput {
             "DescribeCustomRoutingAcceleratorAttributes",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCustomRoutingAcceleratorAttributesInput`](crate::input::DescribeCustomRoutingAcceleratorAttributesInput).
@@ -3772,12 +3816,6 @@ pub mod describe_custom_routing_endpoint_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCustomRoutingEndpointGroupInputOperationOutputAlias =
-    crate::operation::DescribeCustomRoutingEndpointGroup;
-#[doc(hidden)]
-pub type DescribeCustomRoutingEndpointGroupInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCustomRoutingEndpointGroupInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCustomRoutingEndpointGroup`](crate::operation::DescribeCustomRoutingEndpointGroup)>
     #[allow(unused_mut)]
@@ -3789,7 +3827,7 @@ impl DescribeCustomRoutingEndpointGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCustomRoutingEndpointGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3855,10 +3893,17 @@ impl DescribeCustomRoutingEndpointGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3874,7 +3919,7 @@ impl DescribeCustomRoutingEndpointGroupInput {
             "DescribeCustomRoutingEndpointGroup",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCustomRoutingEndpointGroupInput`](crate::input::DescribeCustomRoutingEndpointGroupInput).
@@ -3915,12 +3960,6 @@ pub mod describe_custom_routing_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCustomRoutingListenerInputOperationOutputAlias =
-    crate::operation::DescribeCustomRoutingListener;
-#[doc(hidden)]
-pub type DescribeCustomRoutingListenerInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCustomRoutingListenerInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCustomRoutingListener`](crate::operation::DescribeCustomRoutingListener)>
     #[allow(unused_mut)]
@@ -3932,7 +3971,7 @@ impl DescribeCustomRoutingListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCustomRoutingListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3998,10 +4037,17 @@ impl DescribeCustomRoutingListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4017,7 +4063,7 @@ impl DescribeCustomRoutingListenerInput {
             "DescribeCustomRoutingListener",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCustomRoutingListenerInput`](crate::input::DescribeCustomRoutingListenerInput).
@@ -4059,10 +4105,6 @@ pub mod describe_endpoint_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeEndpointGroupInputOperationOutputAlias = crate::operation::DescribeEndpointGroup;
-#[doc(hidden)]
-pub type DescribeEndpointGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeEndpointGroupInput {
     /// Consumes the builder and constructs an Operation<[`DescribeEndpointGroup`](crate::operation::DescribeEndpointGroup)>
     #[allow(unused_mut)]
@@ -4074,7 +4116,7 @@ impl DescribeEndpointGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeEndpointGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4143,10 +4185,17 @@ impl DescribeEndpointGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4162,7 +4211,7 @@ impl DescribeEndpointGroupInput {
             "DescribeEndpointGroup",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeEndpointGroupInput`](crate::input::DescribeEndpointGroupInput).
@@ -4201,10 +4250,6 @@ pub mod describe_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeListenerInputOperationOutputAlias = crate::operation::DescribeListener;
-#[doc(hidden)]
-pub type DescribeListenerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeListenerInput {
     /// Consumes the builder and constructs an Operation<[`DescribeListener`](crate::operation::DescribeListener)>
     #[allow(unused_mut)]
@@ -4216,7 +4261,7 @@ impl DescribeListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4283,10 +4328,17 @@ impl DescribeListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4302,7 +4354,7 @@ impl DescribeListenerInput {
             "DescribeListener",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeListenerInput`](crate::input::DescribeListenerInput).
@@ -4353,10 +4405,6 @@ pub mod list_accelerators_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAcceleratorsInputOperationOutputAlias = crate::operation::ListAccelerators;
-#[doc(hidden)]
-pub type ListAcceleratorsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAcceleratorsInput {
     /// Consumes the builder and constructs an Operation<[`ListAccelerators`](crate::operation::ListAccelerators)>
     #[allow(unused_mut)]
@@ -4368,7 +4416,7 @@ impl ListAcceleratorsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAccelerators,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4435,10 +4483,17 @@ impl ListAcceleratorsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4454,7 +4509,7 @@ impl ListAcceleratorsInput {
             "ListAccelerators",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAcceleratorsInput`](crate::input::ListAcceleratorsInput).
@@ -4505,10 +4560,6 @@ pub mod list_byoip_cidrs_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListByoipCidrsInputOperationOutputAlias = crate::operation::ListByoipCidrs;
-#[doc(hidden)]
-pub type ListByoipCidrsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListByoipCidrsInput {
     /// Consumes the builder and constructs an Operation<[`ListByoipCidrs`](crate::operation::ListByoipCidrs)>
     #[allow(unused_mut)]
@@ -4520,7 +4571,7 @@ impl ListByoipCidrsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListByoipCidrs,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4587,10 +4638,17 @@ impl ListByoipCidrsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4606,7 +4664,7 @@ impl ListByoipCidrsInput {
             "ListByoipCidrs",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListByoipCidrsInput`](crate::input::ListByoipCidrsInput).
@@ -4659,12 +4717,6 @@ pub mod list_custom_routing_accelerators_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListCustomRoutingAcceleratorsInputOperationOutputAlias =
-    crate::operation::ListCustomRoutingAccelerators;
-#[doc(hidden)]
-pub type ListCustomRoutingAcceleratorsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListCustomRoutingAcceleratorsInput {
     /// Consumes the builder and constructs an Operation<[`ListCustomRoutingAccelerators`](crate::operation::ListCustomRoutingAccelerators)>
     #[allow(unused_mut)]
@@ -4676,7 +4728,7 @@ impl ListCustomRoutingAcceleratorsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListCustomRoutingAccelerators,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4742,10 +4794,17 @@ impl ListCustomRoutingAcceleratorsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4761,7 +4820,7 @@ impl ListCustomRoutingAcceleratorsInput {
             "ListCustomRoutingAccelerators",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListCustomRoutingAcceleratorsInput`](crate::input::ListCustomRoutingAcceleratorsInput).
@@ -4826,12 +4885,6 @@ pub mod list_custom_routing_endpoint_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListCustomRoutingEndpointGroupsInputOperationOutputAlias =
-    crate::operation::ListCustomRoutingEndpointGroups;
-#[doc(hidden)]
-pub type ListCustomRoutingEndpointGroupsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListCustomRoutingEndpointGroupsInput {
     /// Consumes the builder and constructs an Operation<[`ListCustomRoutingEndpointGroups`](crate::operation::ListCustomRoutingEndpointGroups)>
     #[allow(unused_mut)]
@@ -4843,7 +4896,7 @@ impl ListCustomRoutingEndpointGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListCustomRoutingEndpointGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4909,10 +4962,17 @@ impl ListCustomRoutingEndpointGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4928,7 +4988,7 @@ impl ListCustomRoutingEndpointGroupsInput {
             "ListCustomRoutingEndpointGroups",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListCustomRoutingEndpointGroupsInput`](crate::input::ListCustomRoutingEndpointGroupsInput).
@@ -4996,11 +5056,6 @@ pub mod list_custom_routing_listeners_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListCustomRoutingListenersInputOperationOutputAlias =
-    crate::operation::ListCustomRoutingListeners;
-#[doc(hidden)]
-pub type ListCustomRoutingListenersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListCustomRoutingListenersInput {
     /// Consumes the builder and constructs an Operation<[`ListCustomRoutingListeners`](crate::operation::ListCustomRoutingListeners)>
     #[allow(unused_mut)]
@@ -5012,7 +5067,7 @@ impl ListCustomRoutingListenersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListCustomRoutingListeners,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5078,10 +5133,17 @@ impl ListCustomRoutingListenersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5097,7 +5159,7 @@ impl ListCustomRoutingListenersInput {
             "ListCustomRoutingListeners",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListCustomRoutingListenersInput`](crate::input::ListCustomRoutingListenersInput).
@@ -5180,12 +5242,6 @@ pub mod list_custom_routing_port_mappings_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListCustomRoutingPortMappingsInputOperationOutputAlias =
-    crate::operation::ListCustomRoutingPortMappings;
-#[doc(hidden)]
-pub type ListCustomRoutingPortMappingsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListCustomRoutingPortMappingsInput {
     /// Consumes the builder and constructs an Operation<[`ListCustomRoutingPortMappings`](crate::operation::ListCustomRoutingPortMappings)>
     #[allow(unused_mut)]
@@ -5197,7 +5253,7 @@ impl ListCustomRoutingPortMappingsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListCustomRoutingPortMappings,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5263,10 +5319,17 @@ impl ListCustomRoutingPortMappingsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5282,7 +5345,7 @@ impl ListCustomRoutingPortMappingsInput {
             "ListCustomRoutingPortMappings",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListCustomRoutingPortMappingsInput`](crate::input::ListCustomRoutingPortMappingsInput).
@@ -5364,12 +5427,6 @@ pub mod list_custom_routing_port_mappings_by_destination_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListCustomRoutingPortMappingsByDestinationInputOperationOutputAlias =
-    crate::operation::ListCustomRoutingPortMappingsByDestination;
-#[doc(hidden)]
-pub type ListCustomRoutingPortMappingsByDestinationInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListCustomRoutingPortMappingsByDestinationInput {
     /// Consumes the builder and constructs an Operation<[`ListCustomRoutingPortMappingsByDestination`](crate::operation::ListCustomRoutingPortMappingsByDestination)>
     #[allow(unused_mut)]
@@ -5381,7 +5438,7 @@ impl ListCustomRoutingPortMappingsByDestinationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListCustomRoutingPortMappingsByDestination,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5447,10 +5504,17 @@ impl ListCustomRoutingPortMappingsByDestinationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5466,7 +5530,7 @@ impl ListCustomRoutingPortMappingsByDestinationInput {
             "ListCustomRoutingPortMappingsByDestination",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListCustomRoutingPortMappingsByDestinationInput`](crate::input::ListCustomRoutingPortMappingsByDestinationInput).
@@ -5530,10 +5594,6 @@ pub mod list_endpoint_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListEndpointGroupsInputOperationOutputAlias = crate::operation::ListEndpointGroups;
-#[doc(hidden)]
-pub type ListEndpointGroupsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListEndpointGroupsInput {
     /// Consumes the builder and constructs an Operation<[`ListEndpointGroups`](crate::operation::ListEndpointGroups)>
     #[allow(unused_mut)]
@@ -5545,7 +5605,7 @@ impl ListEndpointGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListEndpointGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5612,10 +5672,17 @@ impl ListEndpointGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5631,7 +5698,7 @@ impl ListEndpointGroupsInput {
             "ListEndpointGroups",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListEndpointGroupsInput`](crate::input::ListEndpointGroupsInput).
@@ -5697,10 +5764,6 @@ pub mod list_listeners_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListListenersInputOperationOutputAlias = crate::operation::ListListeners;
-#[doc(hidden)]
-pub type ListListenersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListListenersInput {
     /// Consumes the builder and constructs an Operation<[`ListListeners`](crate::operation::ListListeners)>
     #[allow(unused_mut)]
@@ -5712,7 +5775,7 @@ impl ListListenersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListListeners,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5779,10 +5842,17 @@ impl ListListenersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5798,7 +5868,7 @@ impl ListListenersInput {
             "ListListeners",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListListenersInput`](crate::input::ListListenersInput).
@@ -5837,10 +5907,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -5852,7 +5918,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5921,10 +5987,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5940,7 +6013,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -5998,10 +6071,6 @@ pub mod provision_byoip_cidr_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ProvisionByoipCidrInputOperationOutputAlias = crate::operation::ProvisionByoipCidr;
-#[doc(hidden)]
-pub type ProvisionByoipCidrInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ProvisionByoipCidrInput {
     /// Consumes the builder and constructs an Operation<[`ProvisionByoipCidr`](crate::operation::ProvisionByoipCidr)>
     #[allow(unused_mut)]
@@ -6013,7 +6082,7 @@ impl ProvisionByoipCidrInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ProvisionByoipCidr,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6080,10 +6149,17 @@ impl ProvisionByoipCidrInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6099,7 +6175,7 @@ impl ProvisionByoipCidrInput {
             "ProvisionByoipCidr",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ProvisionByoipCidrInput`](crate::input::ProvisionByoipCidrInput).
@@ -6164,12 +6240,6 @@ pub mod remove_custom_routing_endpoints_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveCustomRoutingEndpointsInputOperationOutputAlias =
-    crate::operation::RemoveCustomRoutingEndpoints;
-#[doc(hidden)]
-pub type RemoveCustomRoutingEndpointsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveCustomRoutingEndpointsInput {
     /// Consumes the builder and constructs an Operation<[`RemoveCustomRoutingEndpoints`](crate::operation::RemoveCustomRoutingEndpoints)>
     #[allow(unused_mut)]
@@ -6181,7 +6251,7 @@ impl RemoveCustomRoutingEndpointsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveCustomRoutingEndpoints,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6247,10 +6317,17 @@ impl RemoveCustomRoutingEndpointsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6266,7 +6343,7 @@ impl RemoveCustomRoutingEndpointsInput {
             "RemoveCustomRoutingEndpoints",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveCustomRoutingEndpointsInput`](crate::input::RemoveCustomRoutingEndpointsInput).
@@ -6326,10 +6403,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -6341,7 +6414,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6408,10 +6481,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6427,7 +6507,7 @@ impl TagResourceInput {
             "TagResource",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -6487,10 +6567,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -6502,7 +6578,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6569,10 +6645,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6588,7 +6671,7 @@ impl UntagResourceInput {
             "UntagResource",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -6671,10 +6754,6 @@ pub mod update_accelerator_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateAcceleratorInputOperationOutputAlias = crate::operation::UpdateAccelerator;
-#[doc(hidden)]
-pub type UpdateAcceleratorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateAcceleratorInput {
     /// Consumes the builder and constructs an Operation<[`UpdateAccelerator`](crate::operation::UpdateAccelerator)>
     #[allow(unused_mut)]
@@ -6686,7 +6765,7 @@ impl UpdateAcceleratorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateAccelerator,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6753,10 +6832,17 @@ impl UpdateAcceleratorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6772,7 +6858,7 @@ impl UpdateAcceleratorInput {
             "UpdateAccelerator",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateAcceleratorInput`](crate::input::UpdateAcceleratorInput).
@@ -6864,11 +6950,6 @@ pub mod update_accelerator_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateAcceleratorAttributesInputOperationOutputAlias =
-    crate::operation::UpdateAcceleratorAttributes;
-#[doc(hidden)]
-pub type UpdateAcceleratorAttributesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateAcceleratorAttributesInput {
     /// Consumes the builder and constructs an Operation<[`UpdateAcceleratorAttributes`](crate::operation::UpdateAcceleratorAttributes)>
     #[allow(unused_mut)]
@@ -6880,7 +6961,7 @@ impl UpdateAcceleratorAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateAcceleratorAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6946,10 +7027,17 @@ impl UpdateAcceleratorAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6965,7 +7053,7 @@ impl UpdateAcceleratorAttributesInput {
             "UpdateAcceleratorAttributes",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateAcceleratorAttributesInput`](crate::input::UpdateAcceleratorAttributesInput).
@@ -7050,12 +7138,6 @@ pub mod update_custom_routing_accelerator_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateCustomRoutingAcceleratorInputOperationOutputAlias =
-    crate::operation::UpdateCustomRoutingAccelerator;
-#[doc(hidden)]
-pub type UpdateCustomRoutingAcceleratorInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateCustomRoutingAcceleratorInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCustomRoutingAccelerator`](crate::operation::UpdateCustomRoutingAccelerator)>
     #[allow(unused_mut)]
@@ -7067,7 +7149,7 @@ impl UpdateCustomRoutingAcceleratorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCustomRoutingAccelerator,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7133,10 +7215,17 @@ impl UpdateCustomRoutingAcceleratorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7152,7 +7241,7 @@ impl UpdateCustomRoutingAcceleratorInput {
             "UpdateCustomRoutingAccelerator",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateCustomRoutingAcceleratorInput`](crate::input::UpdateCustomRoutingAcceleratorInput).
@@ -7246,12 +7335,6 @@ pub mod update_custom_routing_accelerator_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateCustomRoutingAcceleratorAttributesInputOperationOutputAlias =
-    crate::operation::UpdateCustomRoutingAcceleratorAttributes;
-#[doc(hidden)]
-pub type UpdateCustomRoutingAcceleratorAttributesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateCustomRoutingAcceleratorAttributesInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCustomRoutingAcceleratorAttributes`](crate::operation::UpdateCustomRoutingAcceleratorAttributes)>
     #[allow(unused_mut)]
@@ -7263,7 +7346,7 @@ impl UpdateCustomRoutingAcceleratorAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCustomRoutingAcceleratorAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7329,10 +7412,17 @@ impl UpdateCustomRoutingAcceleratorAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7348,7 +7438,7 @@ impl UpdateCustomRoutingAcceleratorAttributesInput {
             "UpdateCustomRoutingAcceleratorAttributes",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateCustomRoutingAcceleratorAttributesInput`](crate::input::UpdateCustomRoutingAcceleratorAttributesInput).
@@ -7412,11 +7502,6 @@ pub mod update_custom_routing_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateCustomRoutingListenerInputOperationOutputAlias =
-    crate::operation::UpdateCustomRoutingListener;
-#[doc(hidden)]
-pub type UpdateCustomRoutingListenerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateCustomRoutingListenerInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCustomRoutingListener`](crate::operation::UpdateCustomRoutingListener)>
     #[allow(unused_mut)]
@@ -7428,7 +7513,7 @@ impl UpdateCustomRoutingListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCustomRoutingListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7494,10 +7579,17 @@ impl UpdateCustomRoutingListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7513,7 +7605,7 @@ impl UpdateCustomRoutingListenerInput {
             "UpdateCustomRoutingListener",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateCustomRoutingListenerInput`](crate::input::UpdateCustomRoutingListenerInput).
@@ -7688,10 +7780,6 @@ pub mod update_endpoint_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateEndpointGroupInputOperationOutputAlias = crate::operation::UpdateEndpointGroup;
-#[doc(hidden)]
-pub type UpdateEndpointGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateEndpointGroupInput {
     /// Consumes the builder and constructs an Operation<[`UpdateEndpointGroup`](crate::operation::UpdateEndpointGroup)>
     #[allow(unused_mut)]
@@ -7703,7 +7791,7 @@ impl UpdateEndpointGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateEndpointGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7770,10 +7858,17 @@ impl UpdateEndpointGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7789,7 +7884,7 @@ impl UpdateEndpointGroupInput {
             "UpdateEndpointGroup",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateEndpointGroupInput`](crate::input::UpdateEndpointGroupInput).
@@ -7882,10 +7977,6 @@ pub mod update_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateListenerInputOperationOutputAlias = crate::operation::UpdateListener;
-#[doc(hidden)]
-pub type UpdateListenerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateListenerInput {
     /// Consumes the builder and constructs an Operation<[`UpdateListener`](crate::operation::UpdateListener)>
     #[allow(unused_mut)]
@@ -7897,7 +7988,7 @@ impl UpdateListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7964,10 +8055,17 @@ impl UpdateListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7983,7 +8081,7 @@ impl UpdateListenerInput {
             "UpdateListener",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateListenerInput`](crate::input::UpdateListenerInput).
@@ -8020,10 +8118,6 @@ pub mod withdraw_byoip_cidr_input {
         }
     }
 }
-#[doc(hidden)]
-pub type WithdrawByoipCidrInputOperationOutputAlias = crate::operation::WithdrawByoipCidr;
-#[doc(hidden)]
-pub type WithdrawByoipCidrInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl WithdrawByoipCidrInput {
     /// Consumes the builder and constructs an Operation<[`WithdrawByoipCidr`](crate::operation::WithdrawByoipCidr)>
     #[allow(unused_mut)]
@@ -8035,7 +8129,7 @@ impl WithdrawByoipCidrInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::WithdrawByoipCidr,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8102,10 +8196,17 @@ impl WithdrawByoipCidrInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8121,7 +8222,7 @@ impl WithdrawByoipCidrInput {
             "WithdrawByoipCidr",
             "globalaccelerator",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`WithdrawByoipCidrInput`](crate::input::WithdrawByoipCidrInput).

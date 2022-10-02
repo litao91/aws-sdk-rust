@@ -292,10 +292,6 @@ pub mod search_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SearchInputOperationOutputAlias = crate::operation::Search;
-#[doc(hidden)]
-pub type SearchInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SearchInput {
     /// Consumes the builder and constructs an Operation<[`Search`](crate::operation::Search)>
     #[allow(unused_mut)]
@@ -307,7 +303,7 @@ impl SearchInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::Search,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -416,10 +412,17 @@ impl SearchInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -433,7 +436,7 @@ impl SearchInput {
                     "Search",
                     "cloudsearchdomain",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SearchInput`](crate::input::SearchInput).
@@ -495,10 +498,6 @@ pub mod suggest_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SuggestInputOperationOutputAlias = crate::operation::Suggest;
-#[doc(hidden)]
-pub type SuggestInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SuggestInput {
     /// Consumes the builder and constructs an Operation<[`Suggest`](crate::operation::Suggest)>
     #[allow(unused_mut)]
@@ -510,7 +509,7 @@ impl SuggestInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::Suggest,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -580,10 +579,17 @@ impl SuggestInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -597,7 +603,7 @@ impl SuggestInput {
                     "Suggest",
                     "cloudsearchdomain",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SuggestInput`](crate::input::SuggestInput).
@@ -662,10 +668,6 @@ pub mod upload_documents_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UploadDocumentsInputOperationOutputAlias = crate::operation::UploadDocuments;
-#[doc(hidden)]
-pub type UploadDocumentsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UploadDocumentsInput {
     /// Consumes the builder and constructs an Operation<[`UploadDocuments`](crate::operation::UploadDocuments)>
     #[allow(unused_mut)]
@@ -677,7 +679,7 @@ impl UploadDocumentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UploadDocuments,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -750,10 +752,17 @@ impl UploadDocumentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -769,7 +778,7 @@ impl UploadDocumentsInput {
             "UploadDocuments",
             "cloudsearchdomain",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UploadDocumentsInput`](crate::input::UploadDocumentsInput).

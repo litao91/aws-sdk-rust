@@ -67,10 +67,6 @@ pub mod describe_job_execution_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeJobExecutionInputOperationOutputAlias = crate::operation::DescribeJobExecution;
-#[doc(hidden)]
-pub type DescribeJobExecutionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeJobExecutionInput {
     /// Consumes the builder and constructs an Operation<[`DescribeJobExecution`](crate::operation::DescribeJobExecution)>
     #[allow(unused_mut)]
@@ -82,7 +78,7 @@ impl DescribeJobExecutionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeJobExecution,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -184,10 +180,17 @@ impl DescribeJobExecutionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -203,7 +206,7 @@ impl DescribeJobExecutionInput {
             "DescribeJobExecution",
             "iotjobsdataplane",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeJobExecutionInput`](crate::input::DescribeJobExecutionInput).
@@ -244,11 +247,6 @@ pub mod get_pending_job_executions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetPendingJobExecutionsInputOperationOutputAlias =
-    crate::operation::GetPendingJobExecutions;
-#[doc(hidden)]
-pub type GetPendingJobExecutionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetPendingJobExecutionsInput {
     /// Consumes the builder and constructs an Operation<[`GetPendingJobExecutions`](crate::operation::GetPendingJobExecutions)>
     #[allow(unused_mut)]
@@ -260,7 +258,7 @@ impl GetPendingJobExecutionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetPendingJobExecutions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -323,10 +321,17 @@ impl GetPendingJobExecutionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -342,7 +347,7 @@ impl GetPendingJobExecutionsInput {
             "GetPendingJobExecutions",
             "iotjobsdataplane",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetPendingJobExecutionsInput`](crate::input::GetPendingJobExecutionsInput).
@@ -424,12 +429,6 @@ pub mod start_next_pending_job_execution_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartNextPendingJobExecutionInputOperationOutputAlias =
-    crate::operation::StartNextPendingJobExecution;
-#[doc(hidden)]
-pub type StartNextPendingJobExecutionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl StartNextPendingJobExecutionInput {
     /// Consumes the builder and constructs an Operation<[`StartNextPendingJobExecution`](crate::operation::StartNextPendingJobExecution)>
     #[allow(unused_mut)]
@@ -441,7 +440,7 @@ impl StartNextPendingJobExecutionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartNextPendingJobExecution,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -521,10 +520,17 @@ impl StartNextPendingJobExecutionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -540,7 +546,7 @@ impl StartNextPendingJobExecutionInput {
             "StartNextPendingJobExecution",
             "iotjobsdataplane",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartNextPendingJobExecutionInput`](crate::input::StartNextPendingJobExecutionInput).
@@ -695,10 +701,6 @@ pub mod update_job_execution_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateJobExecutionInputOperationOutputAlias = crate::operation::UpdateJobExecution;
-#[doc(hidden)]
-pub type UpdateJobExecutionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateJobExecutionInput {
     /// Consumes the builder and constructs an Operation<[`UpdateJobExecution`](crate::operation::UpdateJobExecution)>
     #[allow(unused_mut)]
@@ -710,7 +712,7 @@ impl UpdateJobExecutionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateJobExecution,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -806,10 +808,17 @@ impl UpdateJobExecutionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -825,7 +834,7 @@ impl UpdateJobExecutionInput {
             "UpdateJobExecution",
             "iotjobsdataplane",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateJobExecutionInput`](crate::input::UpdateJobExecutionInput).

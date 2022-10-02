@@ -52,10 +52,6 @@ pub mod batch_meter_usage_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchMeterUsageInputOperationOutputAlias = crate::operation::BatchMeterUsage;
-#[doc(hidden)]
-pub type BatchMeterUsageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchMeterUsageInput {
     /// Consumes the builder and constructs an Operation<[`BatchMeterUsage`](crate::operation::BatchMeterUsage)>
     #[allow(unused_mut)]
@@ -67,7 +63,7 @@ impl BatchMeterUsageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchMeterUsage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -134,10 +130,17 @@ impl BatchMeterUsageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -153,7 +156,7 @@ impl BatchMeterUsageInput {
             "BatchMeterUsage",
             "marketplacemetering",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchMeterUsageInput`](crate::input::BatchMeterUsageInput).
@@ -269,10 +272,6 @@ pub mod meter_usage_input {
         }
     }
 }
-#[doc(hidden)]
-pub type MeterUsageInputOperationOutputAlias = crate::operation::MeterUsage;
-#[doc(hidden)]
-pub type MeterUsageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl MeterUsageInput {
     /// Consumes the builder and constructs an Operation<[`MeterUsage`](crate::operation::MeterUsage)>
     #[allow(unused_mut)]
@@ -284,7 +283,7 @@ impl MeterUsageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::MeterUsage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -351,10 +350,17 @@ impl MeterUsageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -370,7 +376,7 @@ impl MeterUsageInput {
             "MeterUsage",
             "marketplacemetering",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`MeterUsageInput`](crate::input::MeterUsageInput).
@@ -433,10 +439,6 @@ pub mod register_usage_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RegisterUsageInputOperationOutputAlias = crate::operation::RegisterUsage;
-#[doc(hidden)]
-pub type RegisterUsageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RegisterUsageInput {
     /// Consumes the builder and constructs an Operation<[`RegisterUsage`](crate::operation::RegisterUsage)>
     #[allow(unused_mut)]
@@ -448,7 +450,7 @@ impl RegisterUsageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RegisterUsage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -515,10 +517,17 @@ impl RegisterUsageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -534,7 +543,7 @@ impl RegisterUsageInput {
             "RegisterUsage",
             "marketplacemetering",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RegisterUsageInput`](crate::input::RegisterUsageInput).
@@ -576,10 +585,6 @@ pub mod resolve_customer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ResolveCustomerInputOperationOutputAlias = crate::operation::ResolveCustomer;
-#[doc(hidden)]
-pub type ResolveCustomerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ResolveCustomerInput {
     /// Consumes the builder and constructs an Operation<[`ResolveCustomer`](crate::operation::ResolveCustomer)>
     #[allow(unused_mut)]
@@ -591,7 +596,7 @@ impl ResolveCustomerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ResolveCustomer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -658,10 +663,17 @@ impl ResolveCustomerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -677,7 +689,7 @@ impl ResolveCustomerInput {
             "ResolveCustomer",
             "marketplacemetering",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ResolveCustomerInput`](crate::input::ResolveCustomerInput).

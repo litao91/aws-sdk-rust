@@ -136,10 +136,6 @@ pub mod create_token_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateTokenInputOperationOutputAlias = crate::operation::CreateToken;
-#[doc(hidden)]
-pub type CreateTokenInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateTokenInput {
     /// Consumes the builder and constructs an Operation<[`CreateToken`](crate::operation::CreateToken)>
     #[allow(unused_mut)]
@@ -151,7 +147,7 @@ impl CreateTokenInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateToken,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -214,10 +210,17 @@ impl CreateTokenInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -233,7 +236,7 @@ impl CreateTokenInput {
             "CreateToken",
             "ssooidc",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateTokenInput`](crate::input::CreateTokenInput).
@@ -305,10 +308,6 @@ pub mod register_client_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RegisterClientInputOperationOutputAlias = crate::operation::RegisterClient;
-#[doc(hidden)]
-pub type RegisterClientInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RegisterClientInput {
     /// Consumes the builder and constructs an Operation<[`RegisterClient`](crate::operation::RegisterClient)>
     #[allow(unused_mut)]
@@ -320,7 +319,7 @@ impl RegisterClientInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RegisterClient,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -383,10 +382,17 @@ impl RegisterClientInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -402,7 +408,7 @@ impl RegisterClientInput {
             "RegisterClient",
             "ssooidc",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RegisterClientInput`](crate::input::RegisterClientInput).
@@ -470,11 +476,6 @@ pub mod start_device_authorization_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartDeviceAuthorizationInputOperationOutputAlias =
-    crate::operation::StartDeviceAuthorization;
-#[doc(hidden)]
-pub type StartDeviceAuthorizationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartDeviceAuthorizationInput {
     /// Consumes the builder and constructs an Operation<[`StartDeviceAuthorization`](crate::operation::StartDeviceAuthorization)>
     #[allow(unused_mut)]
@@ -486,7 +487,7 @@ impl StartDeviceAuthorizationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartDeviceAuthorization,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -551,10 +552,17 @@ impl StartDeviceAuthorizationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -570,7 +578,7 @@ impl StartDeviceAuthorizationInput {
             "StartDeviceAuthorization",
             "ssooidc",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartDeviceAuthorizationInput`](crate::input::StartDeviceAuthorizationInput).

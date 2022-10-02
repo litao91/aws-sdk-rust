@@ -117,6 +117,11 @@
 //! <ul>
 //! <li>
 //! <p>
+//! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CopyProjectVersion.html">CopyProjectVersion</a>
+//! </p>
+//! </li>
+//! <li>
+//! <p>
 //! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateDataset.html">CreateDataset</a>
 //! </p>
 //! </li>
@@ -138,6 +143,11 @@
 //! <li>
 //! <p>
 //! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteProject.html">DeleteProject</a>
+//! </p>
+//! </li>
+//! <li>
+//! <p>
+//! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteProjectPolicy.html">DeleteProjectPolicy</a>
 //! </p>
 //! </li>
 //! <li>
@@ -178,6 +188,16 @@
 //! <li>
 //! <p>
 //! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListDatasetLabels.html">ListDatasetLabels</a>
+//! </p>
+//! </li>
+//! <li>
+//! <p>
+//! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListProjectPolicies.html">ListProjectPolicies</a>
+//! </p>
+//! </li>
+//! <li>
+//! <p>
+//! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_PutProjectPolicy.html">PutProjectPolicy</a>
 //! </p>
 //! </li>
 //! <li>
@@ -320,6 +340,11 @@
 //! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StopStreamProcessor.html">StopStreamProcessor</a>
 //! </p>
 //! </li>
+//! <li>
+//! <p>
+//! <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_UpdateStreamProcessor.html">UpdateStreamProcessor</a>
+//! </p>
+//! </li>
 //! </ul>
 //!
 //! # Crate Organization
@@ -345,6 +370,8 @@ mod aws_endpoint;
 pub mod client;
 /// Configuration for the service.
 pub mod config;
+/// Wrap operations in a special type allowing for the modification of operations and the requests inside before sending them
+pub mod customizable_operation;
 /// Errors that can occur when calling the service.
 pub mod error;
 mod error_meta;
@@ -375,10 +402,12 @@ pub mod types {
     pub use aws_smithy_types::Blob;
     pub use aws_smithy_types::DateTime;
 }
+pub use aws_smithy_async::rt::sleep::AsyncSleep;
+pub use aws_smithy_types::retry::RetryConfig;
+pub use aws_smithy_types::timeout::Config as TimeoutConfig;
 static API_METADATA: aws_http::user_agent::ApiMetadata =
     aws_http::user_agent::ApiMetadata::new("rekognition", PKG_VERSION);
 pub use aws_smithy_http::endpoint::Endpoint;
-pub use aws_smithy_types::retry::RetryConfig;
 pub use aws_types::app_name::AppName;
 pub use aws_types::region::Region;
 pub use aws_types::Credentials;

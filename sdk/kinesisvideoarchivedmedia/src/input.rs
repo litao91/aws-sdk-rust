@@ -61,10 +61,6 @@ pub mod get_clip_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetClipInputOperationOutputAlias = crate::operation::GetClip;
-#[doc(hidden)]
-pub type GetClipInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetClipInput {
     /// Consumes the builder and constructs an Operation<[`GetClip`](crate::operation::GetClip)>
     #[allow(unused_mut)]
@@ -76,7 +72,7 @@ impl GetClipInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetClip,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -138,10 +134,17 @@ impl GetClipInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -155,7 +158,7 @@ impl GetClipInput {
                     "GetClip",
                     "kinesisvideoarchivedmedia",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetClipInput`](crate::input::GetClipInput).
@@ -345,11 +348,6 @@ pub mod get_dash_streaming_session_url_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetDashStreamingSessionUrlInputOperationOutputAlias =
-    crate::operation::GetDASHStreamingSessionURL;
-#[doc(hidden)]
-pub type GetDashStreamingSessionUrlInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetDashStreamingSessionUrlInput {
     /// Consumes the builder and constructs an Operation<[`GetDASHStreamingSessionURL`](crate::operation::GetDASHStreamingSessionURL)>
     #[allow(unused_mut)]
@@ -361,7 +359,7 @@ impl GetDashStreamingSessionUrlInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetDASHStreamingSessionURL,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -422,10 +420,17 @@ impl GetDashStreamingSessionUrlInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -441,7 +446,7 @@ impl GetDashStreamingSessionUrlInput {
             "GetDASHStreamingSessionURL",
             "kinesisvideoarchivedmedia",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetDashStreamingSessionUrlInput`](crate::input::GetDashStreamingSessionUrlInput).
@@ -658,11 +663,6 @@ pub mod get_hls_streaming_session_url_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetHlsStreamingSessionUrlInputOperationOutputAlias =
-    crate::operation::GetHLSStreamingSessionURL;
-#[doc(hidden)]
-pub type GetHlsStreamingSessionUrlInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetHlsStreamingSessionUrlInput {
     /// Consumes the builder and constructs an Operation<[`GetHLSStreamingSessionURL`](crate::operation::GetHLSStreamingSessionURL)>
     #[allow(unused_mut)]
@@ -674,7 +674,7 @@ impl GetHlsStreamingSessionUrlInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetHLSStreamingSessionURL,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -735,10 +735,17 @@ impl GetHlsStreamingSessionUrlInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -754,7 +761,7 @@ impl GetHlsStreamingSessionUrlInput {
             "GetHLSStreamingSessionURL",
             "kinesisvideoarchivedmedia",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetHlsStreamingSessionUrlInput`](crate::input::GetHlsStreamingSessionUrlInput).
@@ -958,10 +965,6 @@ pub mod get_images_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetImagesInputOperationOutputAlias = crate::operation::GetImages;
-#[doc(hidden)]
-pub type GetImagesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetImagesInput {
     /// Consumes the builder and constructs an Operation<[`GetImages`](crate::operation::GetImages)>
     #[allow(unused_mut)]
@@ -973,7 +976,7 @@ impl GetImagesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetImages,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1035,10 +1038,17 @@ impl GetImagesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1052,7 +1062,7 @@ impl GetImagesInput {
                     "GetImages",
                     "kinesisvideoarchivedmedia",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetImagesInput`](crate::input::GetImagesInput).
@@ -1126,11 +1136,6 @@ pub mod get_media_for_fragment_list_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetMediaForFragmentListInputOperationOutputAlias =
-    crate::operation::GetMediaForFragmentList;
-#[doc(hidden)]
-pub type GetMediaForFragmentListInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetMediaForFragmentListInput {
     /// Consumes the builder and constructs an Operation<[`GetMediaForFragmentList`](crate::operation::GetMediaForFragmentList)>
     #[allow(unused_mut)]
@@ -1142,7 +1147,7 @@ impl GetMediaForFragmentListInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetMediaForFragmentList,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1206,10 +1211,17 @@ impl GetMediaForFragmentListInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1225,7 +1237,7 @@ impl GetMediaForFragmentListInput {
             "GetMediaForFragmentList",
             "kinesisvideoarchivedmedia",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetMediaForFragmentListInput`](crate::input::GetMediaForFragmentListInput).
@@ -1315,10 +1327,6 @@ pub mod list_fragments_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListFragmentsInputOperationOutputAlias = crate::operation::ListFragments;
-#[doc(hidden)]
-pub type ListFragmentsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListFragmentsInput {
     /// Consumes the builder and constructs an Operation<[`ListFragments`](crate::operation::ListFragments)>
     #[allow(unused_mut)]
@@ -1330,7 +1338,7 @@ impl ListFragmentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListFragments,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1392,10 +1400,17 @@ impl ListFragmentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1411,7 +1426,7 @@ impl ListFragmentsInput {
             "ListFragments",
             "kinesisvideoarchivedmedia",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListFragmentsInput`](crate::input::ListFragmentsInput).

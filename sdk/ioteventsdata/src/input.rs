@@ -44,10 +44,6 @@ pub mod batch_acknowledge_alarm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchAcknowledgeAlarmInputOperationOutputAlias = crate::operation::BatchAcknowledgeAlarm;
-#[doc(hidden)]
-pub type BatchAcknowledgeAlarmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchAcknowledgeAlarmInput {
     /// Consumes the builder and constructs an Operation<[`BatchAcknowledgeAlarm`](crate::operation::BatchAcknowledgeAlarm)>
     #[allow(unused_mut)]
@@ -59,7 +55,7 @@ impl BatchAcknowledgeAlarmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchAcknowledgeAlarm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -123,10 +119,17 @@ impl BatchAcknowledgeAlarmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -142,7 +145,7 @@ impl BatchAcknowledgeAlarmInput {
             "BatchAcknowledgeAlarm",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchAcknowledgeAlarmInput`](crate::input::BatchAcknowledgeAlarmInput).
@@ -191,10 +194,6 @@ pub mod batch_delete_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchDeleteDetectorInputOperationOutputAlias = crate::operation::BatchDeleteDetector;
-#[doc(hidden)]
-pub type BatchDeleteDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchDeleteDetectorInput {
     /// Consumes the builder and constructs an Operation<[`BatchDeleteDetector`](crate::operation::BatchDeleteDetector)>
     #[allow(unused_mut)]
@@ -206,7 +205,7 @@ impl BatchDeleteDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchDeleteDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -268,10 +267,17 @@ impl BatchDeleteDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -287,7 +293,7 @@ impl BatchDeleteDetectorInput {
             "BatchDeleteDetector",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchDeleteDetectorInput`](crate::input::BatchDeleteDetectorInput).
@@ -339,10 +345,6 @@ pub mod batch_disable_alarm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchDisableAlarmInputOperationOutputAlias = crate::operation::BatchDisableAlarm;
-#[doc(hidden)]
-pub type BatchDisableAlarmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchDisableAlarmInput {
     /// Consumes the builder and constructs an Operation<[`BatchDisableAlarm`](crate::operation::BatchDisableAlarm)>
     #[allow(unused_mut)]
@@ -354,7 +356,7 @@ impl BatchDisableAlarmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchDisableAlarm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -416,10 +418,17 @@ impl BatchDisableAlarmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -435,7 +444,7 @@ impl BatchDisableAlarmInput {
             "BatchDisableAlarm",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchDisableAlarmInput`](crate::input::BatchDisableAlarmInput).
@@ -487,10 +496,6 @@ pub mod batch_enable_alarm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchEnableAlarmInputOperationOutputAlias = crate::operation::BatchEnableAlarm;
-#[doc(hidden)]
-pub type BatchEnableAlarmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchEnableAlarmInput {
     /// Consumes the builder and constructs an Operation<[`BatchEnableAlarm`](crate::operation::BatchEnableAlarm)>
     #[allow(unused_mut)]
@@ -502,7 +507,7 @@ impl BatchEnableAlarmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchEnableAlarm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -564,10 +569,17 @@ impl BatchEnableAlarmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -583,7 +595,7 @@ impl BatchEnableAlarmInput {
             "BatchEnableAlarm",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchEnableAlarmInput`](crate::input::BatchEnableAlarmInput).
@@ -631,10 +643,6 @@ pub mod batch_put_message_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchPutMessageInputOperationOutputAlias = crate::operation::BatchPutMessage;
-#[doc(hidden)]
-pub type BatchPutMessageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchPutMessageInput {
     /// Consumes the builder and constructs an Operation<[`BatchPutMessage`](crate::operation::BatchPutMessage)>
     #[allow(unused_mut)]
@@ -646,7 +654,7 @@ impl BatchPutMessageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchPutMessage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -708,10 +716,17 @@ impl BatchPutMessageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -727,7 +742,7 @@ impl BatchPutMessageInput {
             "BatchPutMessage",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchPutMessageInput`](crate::input::BatchPutMessageInput).
@@ -779,10 +794,6 @@ pub mod batch_reset_alarm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchResetAlarmInputOperationOutputAlias = crate::operation::BatchResetAlarm;
-#[doc(hidden)]
-pub type BatchResetAlarmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchResetAlarmInput {
     /// Consumes the builder and constructs an Operation<[`BatchResetAlarm`](crate::operation::BatchResetAlarm)>
     #[allow(unused_mut)]
@@ -794,7 +805,7 @@ impl BatchResetAlarmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchResetAlarm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -856,10 +867,17 @@ impl BatchResetAlarmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -875,7 +893,7 @@ impl BatchResetAlarmInput {
             "BatchResetAlarm",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchResetAlarmInput`](crate::input::BatchResetAlarmInput).
@@ -927,10 +945,6 @@ pub mod batch_snooze_alarm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchSnoozeAlarmInputOperationOutputAlias = crate::operation::BatchSnoozeAlarm;
-#[doc(hidden)]
-pub type BatchSnoozeAlarmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchSnoozeAlarmInput {
     /// Consumes the builder and constructs an Operation<[`BatchSnoozeAlarm`](crate::operation::BatchSnoozeAlarm)>
     #[allow(unused_mut)]
@@ -942,7 +956,7 @@ impl BatchSnoozeAlarmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchSnoozeAlarm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1004,10 +1018,17 @@ impl BatchSnoozeAlarmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1023,7 +1044,7 @@ impl BatchSnoozeAlarmInput {
             "BatchSnoozeAlarm",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchSnoozeAlarmInput`](crate::input::BatchSnoozeAlarmInput).
@@ -1072,10 +1093,6 @@ pub mod batch_update_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BatchUpdateDetectorInputOperationOutputAlias = crate::operation::BatchUpdateDetector;
-#[doc(hidden)]
-pub type BatchUpdateDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BatchUpdateDetectorInput {
     /// Consumes the builder and constructs an Operation<[`BatchUpdateDetector`](crate::operation::BatchUpdateDetector)>
     #[allow(unused_mut)]
@@ -1087,7 +1104,7 @@ impl BatchUpdateDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BatchUpdateDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1149,10 +1166,17 @@ impl BatchUpdateDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1168,7 +1192,7 @@ impl BatchUpdateDetectorInput {
             "BatchUpdateDetector",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BatchUpdateDetectorInput`](crate::input::BatchUpdateDetectorInput).
@@ -1222,10 +1246,6 @@ pub mod describe_alarm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAlarmInputOperationOutputAlias = crate::operation::DescribeAlarm;
-#[doc(hidden)]
-pub type DescribeAlarmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAlarmInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAlarm`](crate::operation::DescribeAlarm)>
     #[allow(unused_mut)]
@@ -1237,7 +1257,7 @@ impl DescribeAlarmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAlarm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1315,10 +1335,17 @@ impl DescribeAlarmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1334,7 +1361,7 @@ impl DescribeAlarmInput {
             "DescribeAlarm",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAlarmInput`](crate::input::DescribeAlarmInput).
@@ -1388,10 +1415,6 @@ pub mod describe_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDetectorInputOperationOutputAlias = crate::operation::DescribeDetector;
-#[doc(hidden)]
-pub type DescribeDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDetectorInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDetector`](crate::operation::DescribeDetector)>
     #[allow(unused_mut)]
@@ -1403,7 +1426,7 @@ impl DescribeDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1481,10 +1504,17 @@ impl DescribeDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1500,7 +1530,7 @@ impl DescribeDetectorInput {
             "DescribeDetector",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDetectorInput`](crate::input::DescribeDetectorInput).
@@ -1565,10 +1595,6 @@ pub mod list_alarms_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAlarmsInputOperationOutputAlias = crate::operation::ListAlarms;
-#[doc(hidden)]
-pub type ListAlarmsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAlarmsInput {
     /// Consumes the builder and constructs an Operation<[`ListAlarms`](crate::operation::ListAlarms)>
     #[allow(unused_mut)]
@@ -1580,7 +1606,7 @@ impl ListAlarmsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAlarms,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1664,10 +1690,17 @@ impl ListAlarmsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1683,7 +1716,7 @@ impl ListAlarmsInput {
             "ListAlarms",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAlarmsInput`](crate::input::ListAlarmsInput).
@@ -1761,10 +1794,6 @@ pub mod list_detectors_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListDetectorsInputOperationOutputAlias = crate::operation::ListDetectors;
-#[doc(hidden)]
-pub type ListDetectorsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListDetectorsInput {
     /// Consumes the builder and constructs an Operation<[`ListDetectors`](crate::operation::ListDetectors)>
     #[allow(unused_mut)]
@@ -1776,7 +1805,7 @@ impl ListDetectorsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListDetectors,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1863,10 +1892,17 @@ impl ListDetectorsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1882,7 +1918,7 @@ impl ListDetectorsInput {
             "ListDetectors",
             "ioteventsdata",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListDetectorsInput`](crate::input::ListDetectorsInput).

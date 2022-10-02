@@ -75,12 +75,6 @@ pub mod associate_origination_identity_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateOriginationIdentityInputOperationOutputAlias =
-    crate::operation::AssociateOriginationIdentity;
-#[doc(hidden)]
-pub type AssociateOriginationIdentityInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateOriginationIdentityInput {
     /// Consumes the builder and constructs an Operation<[`AssociateOriginationIdentity`](crate::operation::AssociateOriginationIdentity)>
     #[allow(unused_mut)]
@@ -92,7 +86,7 @@ impl AssociateOriginationIdentityInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateOriginationIdentity,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -161,10 +155,17 @@ impl AssociateOriginationIdentityInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -180,7 +181,7 @@ impl AssociateOriginationIdentityInput {
             "AssociateOriginationIdentity",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateOriginationIdentityInput`](crate::input::AssociateOriginationIdentityInput).
@@ -255,10 +256,6 @@ pub mod create_configuration_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateConfigurationSetInputOperationOutputAlias = crate::operation::CreateConfigurationSet;
-#[doc(hidden)]
-pub type CreateConfigurationSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateConfigurationSetInput {
     /// Consumes the builder and constructs an Operation<[`CreateConfigurationSet`](crate::operation::CreateConfigurationSet)>
     #[allow(unused_mut)]
@@ -270,7 +267,7 @@ impl CreateConfigurationSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateConfigurationSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -342,10 +339,17 @@ impl CreateConfigurationSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -361,7 +365,7 @@ impl CreateConfigurationSetInput {
             "CreateConfigurationSet",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateConfigurationSetInput`](crate::input::CreateConfigurationSetInput).
@@ -505,10 +509,6 @@ pub mod create_event_destination_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateEventDestinationInputOperationOutputAlias = crate::operation::CreateEventDestination;
-#[doc(hidden)]
-pub type CreateEventDestinationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateEventDestinationInput {
     /// Consumes the builder and constructs an Operation<[`CreateEventDestination`](crate::operation::CreateEventDestination)>
     #[allow(unused_mut)]
@@ -520,7 +520,7 @@ impl CreateEventDestinationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateEventDestination,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -592,10 +592,17 @@ impl CreateEventDestinationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -611,7 +618,7 @@ impl CreateEventDestinationInput {
             "CreateEventDestination",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateEventDestinationInput`](crate::input::CreateEventDestinationInput).
@@ -686,10 +693,6 @@ pub mod create_opt_out_list_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateOptOutListInputOperationOutputAlias = crate::operation::CreateOptOutList;
-#[doc(hidden)]
-pub type CreateOptOutListInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateOptOutListInput {
     /// Consumes the builder and constructs an Operation<[`CreateOptOutList`](crate::operation::CreateOptOutList)>
     #[allow(unused_mut)]
@@ -701,7 +704,7 @@ impl CreateOptOutListInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateOptOutList,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -771,10 +774,17 @@ impl CreateOptOutListInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -790,7 +800,7 @@ impl CreateOptOutListInput {
             "CreateOptOutList",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateOptOutListInput`](crate::input::CreateOptOutListInput).
@@ -906,10 +916,6 @@ pub mod create_pool_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreatePoolInputOperationOutputAlias = crate::operation::CreatePool;
-#[doc(hidden)]
-pub type CreatePoolInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreatePoolInput {
     /// Consumes the builder and constructs an Operation<[`CreatePool`](crate::operation::CreatePool)>
     #[allow(unused_mut)]
@@ -921,7 +927,7 @@ impl CreatePoolInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreatePool,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -991,10 +997,17 @@ impl CreatePoolInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1010,7 +1023,7 @@ impl CreatePoolInput {
             "CreatePool",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreatePoolInput`](crate::input::CreatePoolInput).
@@ -1052,10 +1065,6 @@ pub mod delete_configuration_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteConfigurationSetInputOperationOutputAlias = crate::operation::DeleteConfigurationSet;
-#[doc(hidden)]
-pub type DeleteConfigurationSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteConfigurationSetInput {
     /// Consumes the builder and constructs an Operation<[`DeleteConfigurationSet`](crate::operation::DeleteConfigurationSet)>
     #[allow(unused_mut)]
@@ -1067,7 +1076,7 @@ impl DeleteConfigurationSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteConfigurationSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1136,10 +1145,17 @@ impl DeleteConfigurationSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1155,7 +1171,7 @@ impl DeleteConfigurationSetInput {
             "DeleteConfigurationSet",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteConfigurationSetInput`](crate::input::DeleteConfigurationSetInput).
@@ -1199,11 +1215,6 @@ pub mod delete_default_message_type_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDefaultMessageTypeInputOperationOutputAlias =
-    crate::operation::DeleteDefaultMessageType;
-#[doc(hidden)]
-pub type DeleteDefaultMessageTypeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDefaultMessageTypeInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDefaultMessageType`](crate::operation::DeleteDefaultMessageType)>
     #[allow(unused_mut)]
@@ -1215,7 +1226,7 @@ impl DeleteDefaultMessageTypeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDefaultMessageType,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1284,10 +1295,17 @@ impl DeleteDefaultMessageTypeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1303,7 +1321,7 @@ impl DeleteDefaultMessageTypeInput {
             "DeleteDefaultMessageType",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDefaultMessageTypeInput`](crate::input::DeleteDefaultMessageTypeInput).
@@ -1345,10 +1363,6 @@ pub mod delete_default_sender_id_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDefaultSenderIdInputOperationOutputAlias = crate::operation::DeleteDefaultSenderId;
-#[doc(hidden)]
-pub type DeleteDefaultSenderIdInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDefaultSenderIdInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDefaultSenderId`](crate::operation::DeleteDefaultSenderId)>
     #[allow(unused_mut)]
@@ -1360,7 +1374,7 @@ impl DeleteDefaultSenderIdInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDefaultSenderId,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1429,10 +1443,17 @@ impl DeleteDefaultSenderIdInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1448,7 +1469,7 @@ impl DeleteDefaultSenderIdInput {
             "DeleteDefaultSenderId",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDefaultSenderIdInput`](crate::input::DeleteDefaultSenderIdInput).
@@ -1505,10 +1526,6 @@ pub mod delete_event_destination_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteEventDestinationInputOperationOutputAlias = crate::operation::DeleteEventDestination;
-#[doc(hidden)]
-pub type DeleteEventDestinationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteEventDestinationInput {
     /// Consumes the builder and constructs an Operation<[`DeleteEventDestination`](crate::operation::DeleteEventDestination)>
     #[allow(unused_mut)]
@@ -1520,7 +1537,7 @@ impl DeleteEventDestinationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteEventDestination,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1589,10 +1606,17 @@ impl DeleteEventDestinationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1608,7 +1632,7 @@ impl DeleteEventDestinationInput {
             "DeleteEventDestination",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteEventDestinationInput`](crate::input::DeleteEventDestinationInput).
@@ -1662,10 +1686,6 @@ pub mod delete_keyword_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteKeywordInputOperationOutputAlias = crate::operation::DeleteKeyword;
-#[doc(hidden)]
-pub type DeleteKeywordInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteKeywordInput {
     /// Consumes the builder and constructs an Operation<[`DeleteKeyword`](crate::operation::DeleteKeyword)>
     #[allow(unused_mut)]
@@ -1677,7 +1697,7 @@ impl DeleteKeywordInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteKeyword,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1744,10 +1764,17 @@ impl DeleteKeywordInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1763,7 +1790,7 @@ impl DeleteKeywordInput {
             "DeleteKeyword",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteKeywordInput`](crate::input::DeleteKeywordInput).
@@ -1820,10 +1847,6 @@ pub mod delete_opted_out_number_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteOptedOutNumberInputOperationOutputAlias = crate::operation::DeleteOptedOutNumber;
-#[doc(hidden)]
-pub type DeleteOptedOutNumberInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteOptedOutNumberInput {
     /// Consumes the builder and constructs an Operation<[`DeleteOptedOutNumber`](crate::operation::DeleteOptedOutNumber)>
     #[allow(unused_mut)]
@@ -1835,7 +1858,7 @@ impl DeleteOptedOutNumberInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteOptedOutNumber,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1904,10 +1927,17 @@ impl DeleteOptedOutNumberInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1923,7 +1953,7 @@ impl DeleteOptedOutNumberInput {
             "DeleteOptedOutNumber",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteOptedOutNumberInput`](crate::input::DeleteOptedOutNumberInput).
@@ -1965,10 +1995,6 @@ pub mod delete_opt_out_list_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteOptOutListInputOperationOutputAlias = crate::operation::DeleteOptOutList;
-#[doc(hidden)]
-pub type DeleteOptOutListInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteOptOutListInput {
     /// Consumes the builder and constructs an Operation<[`DeleteOptOutList`](crate::operation::DeleteOptOutList)>
     #[allow(unused_mut)]
@@ -1980,7 +2006,7 @@ impl DeleteOptOutListInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteOptOutList,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2047,10 +2073,17 @@ impl DeleteOptOutListInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2066,7 +2099,7 @@ impl DeleteOptOutListInput {
             "DeleteOptOutList",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteOptOutListInput`](crate::input::DeleteOptOutListInput).
@@ -2104,10 +2137,6 @@ pub mod delete_pool_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeletePoolInputOperationOutputAlias = crate::operation::DeletePool;
-#[doc(hidden)]
-pub type DeletePoolInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeletePoolInput {
     /// Consumes the builder and constructs an Operation<[`DeletePool`](crate::operation::DeletePool)>
     #[allow(unused_mut)]
@@ -2119,7 +2148,7 @@ impl DeletePoolInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeletePool,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2186,10 +2215,17 @@ impl DeletePoolInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2205,7 +2241,7 @@ impl DeletePoolInput {
             "DeletePool",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeletePoolInput`](crate::input::DeletePoolInput).
@@ -2232,12 +2268,6 @@ pub mod delete_text_message_spend_limit_override_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteTextMessageSpendLimitOverrideInputOperationOutputAlias =
-    crate::operation::DeleteTextMessageSpendLimitOverride;
-#[doc(hidden)]
-pub type DeleteTextMessageSpendLimitOverrideInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteTextMessageSpendLimitOverrideInput {
     /// Consumes the builder and constructs an Operation<[`DeleteTextMessageSpendLimitOverride`](crate::operation::DeleteTextMessageSpendLimitOverride)>
     #[allow(unused_mut)]
@@ -2249,7 +2279,7 @@ impl DeleteTextMessageSpendLimitOverrideInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteTextMessageSpendLimitOverride,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2308,10 +2338,17 @@ impl DeleteTextMessageSpendLimitOverrideInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2327,7 +2364,7 @@ impl DeleteTextMessageSpendLimitOverrideInput {
             "DeleteTextMessageSpendLimitOverride",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteTextMessageSpendLimitOverrideInput`](crate::input::DeleteTextMessageSpendLimitOverrideInput).
@@ -2354,12 +2391,6 @@ pub mod delete_voice_message_spend_limit_override_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteVoiceMessageSpendLimitOverrideInputOperationOutputAlias =
-    crate::operation::DeleteVoiceMessageSpendLimitOverride;
-#[doc(hidden)]
-pub type DeleteVoiceMessageSpendLimitOverrideInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteVoiceMessageSpendLimitOverrideInput {
     /// Consumes the builder and constructs an Operation<[`DeleteVoiceMessageSpendLimitOverride`](crate::operation::DeleteVoiceMessageSpendLimitOverride)>
     #[allow(unused_mut)]
@@ -2371,7 +2402,7 @@ impl DeleteVoiceMessageSpendLimitOverrideInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteVoiceMessageSpendLimitOverride,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2430,10 +2461,17 @@ impl DeleteVoiceMessageSpendLimitOverrideInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2449,7 +2487,7 @@ impl DeleteVoiceMessageSpendLimitOverrideInput {
             "DeleteVoiceMessageSpendLimitOverride",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteVoiceMessageSpendLimitOverrideInput`](crate::input::DeleteVoiceMessageSpendLimitOverrideInput).
@@ -2502,11 +2540,6 @@ pub mod describe_account_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAccountAttributesInputOperationOutputAlias =
-    crate::operation::DescribeAccountAttributes;
-#[doc(hidden)]
-pub type DescribeAccountAttributesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAccountAttributesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAccountAttributes`](crate::operation::DescribeAccountAttributes)>
     #[allow(unused_mut)]
@@ -2518,7 +2551,7 @@ impl DescribeAccountAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAccountAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2587,10 +2620,17 @@ impl DescribeAccountAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2606,7 +2646,7 @@ impl DescribeAccountAttributesInput {
             "DescribeAccountAttributes",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAccountAttributesInput`](crate::input::DescribeAccountAttributesInput).
@@ -2657,10 +2697,6 @@ pub mod describe_account_limits_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAccountLimitsInputOperationOutputAlias = crate::operation::DescribeAccountLimits;
-#[doc(hidden)]
-pub type DescribeAccountLimitsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAccountLimitsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAccountLimits`](crate::operation::DescribeAccountLimits)>
     #[allow(unused_mut)]
@@ -2672,7 +2708,7 @@ impl DescribeAccountLimitsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAccountLimits,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2741,10 +2777,17 @@ impl DescribeAccountLimitsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2760,7 +2803,7 @@ impl DescribeAccountLimitsInput {
             "DescribeAccountLimits",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAccountLimitsInput`](crate::input::DescribeAccountLimitsInput).
@@ -2856,11 +2899,6 @@ pub mod describe_configuration_sets_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeConfigurationSetsInputOperationOutputAlias =
-    crate::operation::DescribeConfigurationSets;
-#[doc(hidden)]
-pub type DescribeConfigurationSetsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeConfigurationSetsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeConfigurationSets`](crate::operation::DescribeConfigurationSets)>
     #[allow(unused_mut)]
@@ -2872,7 +2910,7 @@ impl DescribeConfigurationSetsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeConfigurationSets,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2941,10 +2979,17 @@ impl DescribeConfigurationSetsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2960,7 +3005,7 @@ impl DescribeConfigurationSetsInput {
             "DescribeConfigurationSets",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeConfigurationSetsInput`](crate::input::DescribeConfigurationSetsInput).
@@ -3068,10 +3113,6 @@ pub mod describe_keywords_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeKeywordsInputOperationOutputAlias = crate::operation::DescribeKeywords;
-#[doc(hidden)]
-pub type DescribeKeywordsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeKeywordsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeKeywords`](crate::operation::DescribeKeywords)>
     #[allow(unused_mut)]
@@ -3083,7 +3124,7 @@ impl DescribeKeywordsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeKeywords,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3150,10 +3191,17 @@ impl DescribeKeywordsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3169,7 +3217,7 @@ impl DescribeKeywordsInput {
             "DescribeKeywords",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeKeywordsInput`](crate::input::DescribeKeywordsInput).
@@ -3279,11 +3327,6 @@ pub mod describe_opted_out_numbers_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeOptedOutNumbersInputOperationOutputAlias =
-    crate::operation::DescribeOptedOutNumbers;
-#[doc(hidden)]
-pub type DescribeOptedOutNumbersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeOptedOutNumbersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeOptedOutNumbers`](crate::operation::DescribeOptedOutNumbers)>
     #[allow(unused_mut)]
@@ -3295,7 +3338,7 @@ impl DescribeOptedOutNumbersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeOptedOutNumbers,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3364,10 +3407,17 @@ impl DescribeOptedOutNumbersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3383,7 +3433,7 @@ impl DescribeOptedOutNumbersInput {
             "DescribeOptedOutNumbers",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeOptedOutNumbersInput`](crate::input::DescribeOptedOutNumbersInput).
@@ -3455,10 +3505,6 @@ pub mod describe_opt_out_lists_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeOptOutListsInputOperationOutputAlias = crate::operation::DescribeOptOutLists;
-#[doc(hidden)]
-pub type DescribeOptOutListsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeOptOutListsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeOptOutLists`](crate::operation::DescribeOptOutLists)>
     #[allow(unused_mut)]
@@ -3470,7 +3516,7 @@ impl DescribeOptOutListsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeOptOutLists,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3539,10 +3585,17 @@ impl DescribeOptOutListsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3558,7 +3611,7 @@ impl DescribeOptOutListsInput {
             "DescribeOptOutLists",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeOptOutListsInput`](crate::input::DescribeOptOutListsInput).
@@ -3651,10 +3704,6 @@ pub mod describe_phone_numbers_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribePhoneNumbersInputOperationOutputAlias = crate::operation::DescribePhoneNumbers;
-#[doc(hidden)]
-pub type DescribePhoneNumbersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribePhoneNumbersInput {
     /// Consumes the builder and constructs an Operation<[`DescribePhoneNumbers`](crate::operation::DescribePhoneNumbers)>
     #[allow(unused_mut)]
@@ -3666,7 +3715,7 @@ impl DescribePhoneNumbersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribePhoneNumbers,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3735,10 +3784,17 @@ impl DescribePhoneNumbersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3754,7 +3810,7 @@ impl DescribePhoneNumbersInput {
             "DescribePhoneNumbers",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribePhoneNumbersInput`](crate::input::DescribePhoneNumbersInput).
@@ -3847,10 +3903,6 @@ pub mod describe_pools_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribePoolsInputOperationOutputAlias = crate::operation::DescribePools;
-#[doc(hidden)]
-pub type DescribePoolsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribePoolsInput {
     /// Consumes the builder and constructs an Operation<[`DescribePools`](crate::operation::DescribePools)>
     #[allow(unused_mut)]
@@ -3862,7 +3914,7 @@ impl DescribePoolsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribePools,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3929,10 +3981,17 @@ impl DescribePoolsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3948,7 +4007,7 @@ impl DescribePoolsInput {
             "DescribePools",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribePoolsInput`](crate::input::DescribePoolsInput).
@@ -4041,10 +4100,6 @@ pub mod describe_sender_ids_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeSenderIdsInputOperationOutputAlias = crate::operation::DescribeSenderIds;
-#[doc(hidden)]
-pub type DescribeSenderIdsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeSenderIdsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeSenderIds`](crate::operation::DescribeSenderIds)>
     #[allow(unused_mut)]
@@ -4056,7 +4111,7 @@ impl DescribeSenderIdsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeSenderIds,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4123,10 +4178,17 @@ impl DescribeSenderIdsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4142,7 +4204,7 @@ impl DescribeSenderIdsInput {
             "DescribeSenderIds",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeSenderIdsInput`](crate::input::DescribeSenderIdsInput).
@@ -4193,10 +4255,6 @@ pub mod describe_spend_limits_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeSpendLimitsInputOperationOutputAlias = crate::operation::DescribeSpendLimits;
-#[doc(hidden)]
-pub type DescribeSpendLimitsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeSpendLimitsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeSpendLimits`](crate::operation::DescribeSpendLimits)>
     #[allow(unused_mut)]
@@ -4208,7 +4266,7 @@ impl DescribeSpendLimitsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeSpendLimits,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4275,10 +4333,17 @@ impl DescribeSpendLimitsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4294,7 +4359,7 @@ impl DescribeSpendLimitsInput {
             "DescribeSpendLimits",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeSpendLimitsInput`](crate::input::DescribeSpendLimitsInput).
@@ -4377,12 +4442,6 @@ pub mod disassociate_origination_identity_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisassociateOriginationIdentityInputOperationOutputAlias =
-    crate::operation::DisassociateOriginationIdentity;
-#[doc(hidden)]
-pub type DisassociateOriginationIdentityInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DisassociateOriginationIdentityInput {
     /// Consumes the builder and constructs an Operation<[`DisassociateOriginationIdentity`](crate::operation::DisassociateOriginationIdentity)>
     #[allow(unused_mut)]
@@ -4394,7 +4453,7 @@ impl DisassociateOriginationIdentityInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisassociateOriginationIdentity,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4463,10 +4522,17 @@ impl DisassociateOriginationIdentityInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4482,7 +4548,7 @@ impl DisassociateOriginationIdentityInput {
             "DisassociateOriginationIdentity",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisassociateOriginationIdentityInput`](crate::input::DisassociateOriginationIdentityInput).
@@ -4571,12 +4637,6 @@ pub mod list_pool_origination_identities_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListPoolOriginationIdentitiesInputOperationOutputAlias =
-    crate::operation::ListPoolOriginationIdentities;
-#[doc(hidden)]
-pub type ListPoolOriginationIdentitiesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListPoolOriginationIdentitiesInput {
     /// Consumes the builder and constructs an Operation<[`ListPoolOriginationIdentities`](crate::operation::ListPoolOriginationIdentities)>
     #[allow(unused_mut)]
@@ -4588,7 +4648,7 @@ impl ListPoolOriginationIdentitiesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListPoolOriginationIdentities,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4654,10 +4714,17 @@ impl ListPoolOriginationIdentitiesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4673,7 +4740,7 @@ impl ListPoolOriginationIdentitiesInput {
             "ListPoolOriginationIdentities",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListPoolOriginationIdentitiesInput`](crate::input::ListPoolOriginationIdentitiesInput).
@@ -4712,10 +4779,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -4727,7 +4790,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4796,10 +4859,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4815,7 +4885,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -4908,10 +4978,6 @@ pub mod put_keyword_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutKeywordInputOperationOutputAlias = crate::operation::PutKeyword;
-#[doc(hidden)]
-pub type PutKeywordInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutKeywordInput {
     /// Consumes the builder and constructs an Operation<[`PutKeyword`](crate::operation::PutKeyword)>
     #[allow(unused_mut)]
@@ -4923,7 +4989,7 @@ impl PutKeywordInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutKeyword,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4990,10 +5056,17 @@ impl PutKeywordInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5009,7 +5082,7 @@ impl PutKeywordInput {
             "PutKeyword",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutKeywordInput`](crate::input::PutKeywordInput).
@@ -5066,10 +5139,6 @@ pub mod put_opted_out_number_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutOptedOutNumberInputOperationOutputAlias = crate::operation::PutOptedOutNumber;
-#[doc(hidden)]
-pub type PutOptedOutNumberInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutOptedOutNumberInput {
     /// Consumes the builder and constructs an Operation<[`PutOptedOutNumber`](crate::operation::PutOptedOutNumber)>
     #[allow(unused_mut)]
@@ -5081,7 +5150,7 @@ impl PutOptedOutNumberInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutOptedOutNumber,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5148,10 +5217,17 @@ impl PutOptedOutNumberInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5167,7 +5243,7 @@ impl PutOptedOutNumberInput {
             "PutOptedOutNumber",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutOptedOutNumberInput`](crate::input::PutOptedOutNumberInput).
@@ -5209,10 +5285,6 @@ pub mod release_phone_number_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ReleasePhoneNumberInputOperationOutputAlias = crate::operation::ReleasePhoneNumber;
-#[doc(hidden)]
-pub type ReleasePhoneNumberInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ReleasePhoneNumberInput {
     /// Consumes the builder and constructs an Operation<[`ReleasePhoneNumber`](crate::operation::ReleasePhoneNumber)>
     #[allow(unused_mut)]
@@ -5224,7 +5296,7 @@ impl ReleasePhoneNumberInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ReleasePhoneNumber,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5291,10 +5363,17 @@ impl ReleasePhoneNumberInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5310,7 +5389,7 @@ impl ReleasePhoneNumberInput {
             "ReleasePhoneNumber",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ReleasePhoneNumberInput`](crate::input::ReleasePhoneNumberInput).
@@ -5491,10 +5570,6 @@ pub mod request_phone_number_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RequestPhoneNumberInputOperationOutputAlias = crate::operation::RequestPhoneNumber;
-#[doc(hidden)]
-pub type RequestPhoneNumberInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RequestPhoneNumberInput {
     /// Consumes the builder and constructs an Operation<[`RequestPhoneNumber`](crate::operation::RequestPhoneNumber)>
     #[allow(unused_mut)]
@@ -5506,7 +5581,7 @@ impl RequestPhoneNumberInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RequestPhoneNumber,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5576,10 +5651,17 @@ impl RequestPhoneNumberInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5595,7 +5677,7 @@ impl RequestPhoneNumberInput {
             "RequestPhoneNumber",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RequestPhoneNumberInput`](crate::input::RequestPhoneNumberInput).
@@ -5806,10 +5888,6 @@ pub mod send_text_message_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SendTextMessageInputOperationOutputAlias = crate::operation::SendTextMessage;
-#[doc(hidden)]
-pub type SendTextMessageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SendTextMessageInput {
     /// Consumes the builder and constructs an Operation<[`SendTextMessage`](crate::operation::SendTextMessage)>
     #[allow(unused_mut)]
@@ -5821,7 +5899,7 @@ impl SendTextMessageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SendTextMessage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5888,10 +5966,17 @@ impl SendTextMessageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5907,7 +5992,7 @@ impl SendTextMessageInput {
             "SendTextMessage",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SendTextMessageInput`](crate::input::SendTextMessageInput).
@@ -6098,10 +6183,6 @@ pub mod send_voice_message_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SendVoiceMessageInputOperationOutputAlias = crate::operation::SendVoiceMessage;
-#[doc(hidden)]
-pub type SendVoiceMessageInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SendVoiceMessageInput {
     /// Consumes the builder and constructs an Operation<[`SendVoiceMessage`](crate::operation::SendVoiceMessage)>
     #[allow(unused_mut)]
@@ -6113,7 +6194,7 @@ impl SendVoiceMessageInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SendVoiceMessage,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6180,10 +6261,17 @@ impl SendVoiceMessageInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6199,7 +6287,7 @@ impl SendVoiceMessageInput {
             "SendVoiceMessage",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SendVoiceMessageInput`](crate::input::SendVoiceMessageInput).
@@ -6256,10 +6344,6 @@ pub mod set_default_message_type_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetDefaultMessageTypeInputOperationOutputAlias = crate::operation::SetDefaultMessageType;
-#[doc(hidden)]
-pub type SetDefaultMessageTypeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SetDefaultMessageTypeInput {
     /// Consumes the builder and constructs an Operation<[`SetDefaultMessageType`](crate::operation::SetDefaultMessageType)>
     #[allow(unused_mut)]
@@ -6271,7 +6355,7 @@ impl SetDefaultMessageTypeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetDefaultMessageType,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6340,10 +6424,17 @@ impl SetDefaultMessageTypeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6359,7 +6450,7 @@ impl SetDefaultMessageTypeInput {
             "SetDefaultMessageType",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetDefaultMessageTypeInput`](crate::input::SetDefaultMessageTypeInput).
@@ -6413,10 +6504,6 @@ pub mod set_default_sender_id_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetDefaultSenderIdInputOperationOutputAlias = crate::operation::SetDefaultSenderId;
-#[doc(hidden)]
-pub type SetDefaultSenderIdInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl SetDefaultSenderIdInput {
     /// Consumes the builder and constructs an Operation<[`SetDefaultSenderId`](crate::operation::SetDefaultSenderId)>
     #[allow(unused_mut)]
@@ -6428,7 +6515,7 @@ impl SetDefaultSenderIdInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetDefaultSenderId,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6495,10 +6582,17 @@ impl SetDefaultSenderIdInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6514,7 +6608,7 @@ impl SetDefaultSenderIdInput {
             "SetDefaultSenderId",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetDefaultSenderIdInput`](crate::input::SetDefaultSenderIdInput).
@@ -6555,12 +6649,6 @@ pub mod set_text_message_spend_limit_override_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetTextMessageSpendLimitOverrideInputOperationOutputAlias =
-    crate::operation::SetTextMessageSpendLimitOverride;
-#[doc(hidden)]
-pub type SetTextMessageSpendLimitOverrideInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl SetTextMessageSpendLimitOverrideInput {
     /// Consumes the builder and constructs an Operation<[`SetTextMessageSpendLimitOverride`](crate::operation::SetTextMessageSpendLimitOverride)>
     #[allow(unused_mut)]
@@ -6572,7 +6660,7 @@ impl SetTextMessageSpendLimitOverrideInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetTextMessageSpendLimitOverride,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6638,10 +6726,17 @@ impl SetTextMessageSpendLimitOverrideInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6657,7 +6752,7 @@ impl SetTextMessageSpendLimitOverrideInput {
             "SetTextMessageSpendLimitOverride",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetTextMessageSpendLimitOverrideInput`](crate::input::SetTextMessageSpendLimitOverrideInput).
@@ -6698,12 +6793,6 @@ pub mod set_voice_message_spend_limit_override_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetVoiceMessageSpendLimitOverrideInputOperationOutputAlias =
-    crate::operation::SetVoiceMessageSpendLimitOverride;
-#[doc(hidden)]
-pub type SetVoiceMessageSpendLimitOverrideInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl SetVoiceMessageSpendLimitOverrideInput {
     /// Consumes the builder and constructs an Operation<[`SetVoiceMessageSpendLimitOverride`](crate::operation::SetVoiceMessageSpendLimitOverride)>
     #[allow(unused_mut)]
@@ -6715,7 +6804,7 @@ impl SetVoiceMessageSpendLimitOverrideInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetVoiceMessageSpendLimitOverride,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6781,10 +6870,17 @@ impl SetVoiceMessageSpendLimitOverrideInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6800,7 +6896,7 @@ impl SetVoiceMessageSpendLimitOverrideInput {
             "SetVoiceMessageSpendLimitOverride",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetVoiceMessageSpendLimitOverrideInput`](crate::input::SetVoiceMessageSpendLimitOverrideInput).
@@ -6860,10 +6956,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -6875,7 +6967,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6942,10 +7034,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6961,7 +7060,7 @@ impl TagResourceInput {
             "TagResource",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -7021,10 +7120,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -7036,7 +7131,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7103,10 +7198,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7122,7 +7224,7 @@ impl UntagResourceInput {
             "UntagResource",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -7266,10 +7368,6 @@ pub mod update_event_destination_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateEventDestinationInputOperationOutputAlias = crate::operation::UpdateEventDestination;
-#[doc(hidden)]
-pub type UpdateEventDestinationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateEventDestinationInput {
     /// Consumes the builder and constructs an Operation<[`UpdateEventDestination`](crate::operation::UpdateEventDestination)>
     #[allow(unused_mut)]
@@ -7281,7 +7379,7 @@ impl UpdateEventDestinationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateEventDestination,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7350,10 +7448,17 @@ impl UpdateEventDestinationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7369,7 +7474,7 @@ impl UpdateEventDestinationInput {
             "UpdateEventDestination",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateEventDestinationInput`](crate::input::UpdateEventDestinationInput).
@@ -7480,10 +7585,6 @@ pub mod update_phone_number_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdatePhoneNumberInputOperationOutputAlias = crate::operation::UpdatePhoneNumber;
-#[doc(hidden)]
-pub type UpdatePhoneNumberInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdatePhoneNumberInput {
     /// Consumes the builder and constructs an Operation<[`UpdatePhoneNumber`](crate::operation::UpdatePhoneNumber)>
     #[allow(unused_mut)]
@@ -7495,7 +7596,7 @@ impl UpdatePhoneNumberInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdatePhoneNumber,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7562,10 +7663,17 @@ impl UpdatePhoneNumberInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7581,7 +7689,7 @@ impl UpdatePhoneNumberInput {
             "UpdatePhoneNumber",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdatePhoneNumberInput`](crate::input::UpdatePhoneNumberInput).
@@ -7700,10 +7808,6 @@ pub mod update_pool_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdatePoolInputOperationOutputAlias = crate::operation::UpdatePool;
-#[doc(hidden)]
-pub type UpdatePoolInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdatePoolInput {
     /// Consumes the builder and constructs an Operation<[`UpdatePool`](crate::operation::UpdatePool)>
     #[allow(unused_mut)]
@@ -7715,7 +7819,7 @@ impl UpdatePoolInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdatePool,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7782,10 +7886,17 @@ impl UpdatePoolInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7801,7 +7912,7 @@ impl UpdatePoolInput {
             "UpdatePool",
             "pinpointsmsvoicev2",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdatePoolInput`](crate::input::UpdatePoolInput).

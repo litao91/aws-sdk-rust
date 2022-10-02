@@ -98,12 +98,6 @@ pub mod accept_direct_connect_gateway_association_proposal_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AcceptDirectConnectGatewayAssociationProposalInputOperationOutputAlias =
-    crate::operation::AcceptDirectConnectGatewayAssociationProposal;
-#[doc(hidden)]
-pub type AcceptDirectConnectGatewayAssociationProposalInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AcceptDirectConnectGatewayAssociationProposalInput {
     /// Consumes the builder and constructs an Operation<[`AcceptDirectConnectGatewayAssociationProposal`](crate::operation::AcceptDirectConnectGatewayAssociationProposal)>
     #[allow(unused_mut)]
@@ -115,7 +109,7 @@ impl AcceptDirectConnectGatewayAssociationProposalInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AcceptDirectConnectGatewayAssociationProposal,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -181,10 +175,17 @@ impl AcceptDirectConnectGatewayAssociationProposalInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -200,7 +201,7 @@ impl AcceptDirectConnectGatewayAssociationProposalInput {
             "AcceptDirectConnectGatewayAssociationProposal",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AcceptDirectConnectGatewayAssociationProposalInput`](crate::input::AcceptDirectConnectGatewayAssociationProposalInput).
@@ -299,12 +300,6 @@ pub mod allocate_connection_on_interconnect_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AllocateConnectionOnInterconnectInputOperationOutputAlias =
-    crate::operation::AllocateConnectionOnInterconnect;
-#[doc(hidden)]
-pub type AllocateConnectionOnInterconnectInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AllocateConnectionOnInterconnectInput {
     /// Consumes the builder and constructs an Operation<[`AllocateConnectionOnInterconnect`](crate::operation::AllocateConnectionOnInterconnect)>
     #[allow(unused_mut)]
@@ -316,7 +311,7 @@ impl AllocateConnectionOnInterconnectInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AllocateConnectionOnInterconnect,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -382,10 +377,17 @@ impl AllocateConnectionOnInterconnectInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -401,7 +403,7 @@ impl AllocateConnectionOnInterconnectInput {
             "AllocateConnectionOnInterconnect",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AllocateConnectionOnInterconnectInput`](crate::input::AllocateConnectionOnInterconnectInput).
@@ -520,11 +522,6 @@ pub mod allocate_hosted_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AllocateHostedConnectionInputOperationOutputAlias =
-    crate::operation::AllocateHostedConnection;
-#[doc(hidden)]
-pub type AllocateHostedConnectionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AllocateHostedConnectionInput {
     /// Consumes the builder and constructs an Operation<[`AllocateHostedConnection`](crate::operation::AllocateHostedConnection)>
     #[allow(unused_mut)]
@@ -536,7 +533,7 @@ impl AllocateHostedConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AllocateHostedConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -605,10 +602,17 @@ impl AllocateHostedConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -624,7 +628,7 @@ impl AllocateHostedConnectionInput {
             "AllocateHostedConnection",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AllocateHostedConnectionInput`](crate::input::AllocateHostedConnectionInput).
@@ -703,12 +707,6 @@ pub mod allocate_private_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AllocatePrivateVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::AllocatePrivateVirtualInterface;
-#[doc(hidden)]
-pub type AllocatePrivateVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AllocatePrivateVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`AllocatePrivateVirtualInterface`](crate::operation::AllocatePrivateVirtualInterface)>
     #[allow(unused_mut)]
@@ -720,7 +718,7 @@ impl AllocatePrivateVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AllocatePrivateVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -786,10 +784,17 @@ impl AllocatePrivateVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -805,7 +810,7 @@ impl AllocatePrivateVirtualInterfaceInput {
             "AllocatePrivateVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AllocatePrivateVirtualInterfaceInput`](crate::input::AllocatePrivateVirtualInterfaceInput).
@@ -884,12 +889,6 @@ pub mod allocate_public_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AllocatePublicVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::AllocatePublicVirtualInterface;
-#[doc(hidden)]
-pub type AllocatePublicVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AllocatePublicVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`AllocatePublicVirtualInterface`](crate::operation::AllocatePublicVirtualInterface)>
     #[allow(unused_mut)]
@@ -901,7 +900,7 @@ impl AllocatePublicVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AllocatePublicVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -967,10 +966,17 @@ impl AllocatePublicVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -986,7 +992,7 @@ impl AllocatePublicVirtualInterfaceInput {
             "AllocatePublicVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AllocatePublicVirtualInterfaceInput`](crate::input::AllocatePublicVirtualInterfaceInput).
@@ -1065,12 +1071,6 @@ pub mod allocate_transit_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AllocateTransitVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::AllocateTransitVirtualInterface;
-#[doc(hidden)]
-pub type AllocateTransitVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AllocateTransitVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`AllocateTransitVirtualInterface`](crate::operation::AllocateTransitVirtualInterface)>
     #[allow(unused_mut)]
@@ -1082,7 +1082,7 @@ impl AllocateTransitVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AllocateTransitVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1148,10 +1148,17 @@ impl AllocateTransitVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1167,7 +1174,7 @@ impl AllocateTransitVirtualInterfaceInput {
             "AllocateTransitVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AllocateTransitVirtualInterfaceInput`](crate::input::AllocateTransitVirtualInterfaceInput).
@@ -1223,11 +1230,6 @@ pub mod associate_connection_with_lag_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateConnectionWithLagInputOperationOutputAlias =
-    crate::operation::AssociateConnectionWithLag;
-#[doc(hidden)]
-pub type AssociateConnectionWithLagInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateConnectionWithLagInput {
     /// Consumes the builder and constructs an Operation<[`AssociateConnectionWithLag`](crate::operation::AssociateConnectionWithLag)>
     #[allow(unused_mut)]
@@ -1239,7 +1241,7 @@ impl AssociateConnectionWithLagInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateConnectionWithLag,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1305,10 +1307,17 @@ impl AssociateConnectionWithLagInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1324,7 +1333,7 @@ impl AssociateConnectionWithLagInput {
             "AssociateConnectionWithLag",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateConnectionWithLagInput`](crate::input::AssociateConnectionWithLagInput).
@@ -1383,11 +1392,6 @@ pub mod associate_hosted_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateHostedConnectionInputOperationOutputAlias =
-    crate::operation::AssociateHostedConnection;
-#[doc(hidden)]
-pub type AssociateHostedConnectionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateHostedConnectionInput {
     /// Consumes the builder and constructs an Operation<[`AssociateHostedConnection`](crate::operation::AssociateHostedConnection)>
     #[allow(unused_mut)]
@@ -1399,7 +1403,7 @@ impl AssociateHostedConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateHostedConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1468,10 +1472,17 @@ impl AssociateHostedConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1487,7 +1498,7 @@ impl AssociateHostedConnectionInput {
             "AssociateHostedConnection",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateHostedConnectionInput`](crate::input::AssociateHostedConnectionInput).
@@ -1583,10 +1594,6 @@ pub mod associate_mac_sec_key_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateMacSecKeyInputOperationOutputAlias = crate::operation::AssociateMacSecKey;
-#[doc(hidden)]
-pub type AssociateMacSecKeyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateMacSecKeyInput {
     /// Consumes the builder and constructs an Operation<[`AssociateMacSecKey`](crate::operation::AssociateMacSecKey)>
     #[allow(unused_mut)]
@@ -1598,7 +1605,7 @@ impl AssociateMacSecKeyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateMacSecKey,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1665,10 +1672,17 @@ impl AssociateMacSecKeyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1684,7 +1698,7 @@ impl AssociateMacSecKeyInput {
             "AssociateMacSecKey",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateMacSecKeyInput`](crate::input::AssociateMacSecKeyInput).
@@ -1743,11 +1757,6 @@ pub mod associate_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AssociateVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::AssociateVirtualInterface;
-#[doc(hidden)]
-pub type AssociateVirtualInterfaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AssociateVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`AssociateVirtualInterface`](crate::operation::AssociateVirtualInterface)>
     #[allow(unused_mut)]
@@ -1759,7 +1768,7 @@ impl AssociateVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AssociateVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1828,10 +1837,17 @@ impl AssociateVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1847,7 +1863,7 @@ impl AssociateVirtualInterfaceInput {
             "AssociateVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AssociateVirtualInterfaceInput`](crate::input::AssociateVirtualInterfaceInput).
@@ -1889,10 +1905,6 @@ pub mod confirm_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ConfirmConnectionInputOperationOutputAlias = crate::operation::ConfirmConnection;
-#[doc(hidden)]
-pub type ConfirmConnectionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ConfirmConnectionInput {
     /// Consumes the builder and constructs an Operation<[`ConfirmConnection`](crate::operation::ConfirmConnection)>
     #[allow(unused_mut)]
@@ -1904,7 +1916,7 @@ impl ConfirmConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ConfirmConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1971,10 +1983,17 @@ impl ConfirmConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1990,7 +2009,7 @@ impl ConfirmConnectionInput {
             "ConfirmConnection",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ConfirmConnectionInput`](crate::input::ConfirmConnectionInput).
@@ -2034,11 +2053,6 @@ pub mod confirm_customer_agreement_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ConfirmCustomerAgreementInputOperationOutputAlias =
-    crate::operation::ConfirmCustomerAgreement;
-#[doc(hidden)]
-pub type ConfirmCustomerAgreementInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ConfirmCustomerAgreementInput {
     /// Consumes the builder and constructs an Operation<[`ConfirmCustomerAgreement`](crate::operation::ConfirmCustomerAgreement)>
     #[allow(unused_mut)]
@@ -2050,7 +2064,7 @@ impl ConfirmCustomerAgreementInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ConfirmCustomerAgreement,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2119,10 +2133,17 @@ impl ConfirmCustomerAgreementInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2138,7 +2159,7 @@ impl ConfirmCustomerAgreementInput {
             "ConfirmCustomerAgreement",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ConfirmCustomerAgreementInput`](crate::input::ConfirmCustomerAgreementInput).
@@ -2212,12 +2233,6 @@ pub mod confirm_private_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ConfirmPrivateVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::ConfirmPrivateVirtualInterface;
-#[doc(hidden)]
-pub type ConfirmPrivateVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ConfirmPrivateVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`ConfirmPrivateVirtualInterface`](crate::operation::ConfirmPrivateVirtualInterface)>
     #[allow(unused_mut)]
@@ -2229,7 +2244,7 @@ impl ConfirmPrivateVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ConfirmPrivateVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2295,10 +2310,17 @@ impl ConfirmPrivateVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2314,7 +2336,7 @@ impl ConfirmPrivateVirtualInterfaceInput {
             "ConfirmPrivateVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ConfirmPrivateVirtualInterfaceInput`](crate::input::ConfirmPrivateVirtualInterfaceInput).
@@ -2358,12 +2380,6 @@ pub mod confirm_public_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ConfirmPublicVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::ConfirmPublicVirtualInterface;
-#[doc(hidden)]
-pub type ConfirmPublicVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ConfirmPublicVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`ConfirmPublicVirtualInterface`](crate::operation::ConfirmPublicVirtualInterface)>
     #[allow(unused_mut)]
@@ -2375,7 +2391,7 @@ impl ConfirmPublicVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ConfirmPublicVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2441,10 +2457,17 @@ impl ConfirmPublicVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2460,7 +2483,7 @@ impl ConfirmPublicVirtualInterfaceInput {
             "ConfirmPublicVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ConfirmPublicVirtualInterfaceInput`](crate::input::ConfirmPublicVirtualInterfaceInput).
@@ -2519,12 +2542,6 @@ pub mod confirm_transit_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ConfirmTransitVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::ConfirmTransitVirtualInterface;
-#[doc(hidden)]
-pub type ConfirmTransitVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ConfirmTransitVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`ConfirmTransitVirtualInterface`](crate::operation::ConfirmTransitVirtualInterface)>
     #[allow(unused_mut)]
@@ -2536,7 +2553,7 @@ impl ConfirmTransitVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ConfirmTransitVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2602,10 +2619,17 @@ impl ConfirmTransitVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2621,7 +2645,7 @@ impl ConfirmTransitVirtualInterfaceInput {
             "ConfirmTransitVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ConfirmTransitVirtualInterfaceInput`](crate::input::ConfirmTransitVirtualInterfaceInput).
@@ -2678,10 +2702,6 @@ pub mod create_bgp_peer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateBgpPeerInputOperationOutputAlias = crate::operation::CreateBGPPeer;
-#[doc(hidden)]
-pub type CreateBgpPeerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateBgpPeerInput {
     /// Consumes the builder and constructs an Operation<[`CreateBGPPeer`](crate::operation::CreateBGPPeer)>
     #[allow(unused_mut)]
@@ -2693,7 +2713,7 @@ impl CreateBgpPeerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateBGPPeer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2760,10 +2780,17 @@ impl CreateBgpPeerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2779,7 +2806,7 @@ impl CreateBgpPeerInput {
             "CreateBGPPeer",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateBgpPeerInput`](crate::input::CreateBgpPeerInput).
@@ -2907,10 +2934,6 @@ pub mod create_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateConnectionInputOperationOutputAlias = crate::operation::CreateConnection;
-#[doc(hidden)]
-pub type CreateConnectionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateConnectionInput {
     /// Consumes the builder and constructs an Operation<[`CreateConnection`](crate::operation::CreateConnection)>
     #[allow(unused_mut)]
@@ -2922,7 +2945,7 @@ impl CreateConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2989,10 +3012,17 @@ impl CreateConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3008,7 +3038,7 @@ impl CreateConnectionInput {
             "CreateConnection",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateConnectionInput`](crate::input::CreateConnectionInput).
@@ -3067,11 +3097,6 @@ pub mod create_direct_connect_gateway_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDirectConnectGatewayInputOperationOutputAlias =
-    crate::operation::CreateDirectConnectGateway;
-#[doc(hidden)]
-pub type CreateDirectConnectGatewayInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDirectConnectGatewayInput {
     /// Consumes the builder and constructs an Operation<[`CreateDirectConnectGateway`](crate::operation::CreateDirectConnectGateway)>
     #[allow(unused_mut)]
@@ -3083,7 +3108,7 @@ impl CreateDirectConnectGatewayInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDirectConnectGateway,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3149,10 +3174,17 @@ impl CreateDirectConnectGatewayInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3168,7 +3200,7 @@ impl CreateDirectConnectGatewayInput {
             "CreateDirectConnectGateway",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDirectConnectGatewayInput`](crate::input::CreateDirectConnectGatewayInput).
@@ -3271,12 +3303,6 @@ pub mod create_direct_connect_gateway_association_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDirectConnectGatewayAssociationInputOperationOutputAlias =
-    crate::operation::CreateDirectConnectGatewayAssociation;
-#[doc(hidden)]
-pub type CreateDirectConnectGatewayAssociationInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDirectConnectGatewayAssociationInput {
     /// Consumes the builder and constructs an Operation<[`CreateDirectConnectGatewayAssociation`](crate::operation::CreateDirectConnectGatewayAssociation)>
     #[allow(unused_mut)]
@@ -3288,7 +3314,7 @@ impl CreateDirectConnectGatewayAssociationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDirectConnectGatewayAssociation,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3354,10 +3380,17 @@ impl CreateDirectConnectGatewayAssociationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3373,7 +3406,7 @@ impl CreateDirectConnectGatewayAssociationInput {
             "CreateDirectConnectGatewayAssociation",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDirectConnectGatewayAssociationInput`](crate::input::CreateDirectConnectGatewayAssociationInput).
@@ -3505,12 +3538,6 @@ pub mod create_direct_connect_gateway_association_proposal_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDirectConnectGatewayAssociationProposalInputOperationOutputAlias =
-    crate::operation::CreateDirectConnectGatewayAssociationProposal;
-#[doc(hidden)]
-pub type CreateDirectConnectGatewayAssociationProposalInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDirectConnectGatewayAssociationProposalInput {
     /// Consumes the builder and constructs an Operation<[`CreateDirectConnectGatewayAssociationProposal`](crate::operation::CreateDirectConnectGatewayAssociationProposal)>
     #[allow(unused_mut)]
@@ -3522,7 +3549,7 @@ impl CreateDirectConnectGatewayAssociationProposalInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDirectConnectGatewayAssociationProposal,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3588,10 +3615,17 @@ impl CreateDirectConnectGatewayAssociationProposalInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3607,7 +3641,7 @@ impl CreateDirectConnectGatewayAssociationProposalInput {
             "CreateDirectConnectGatewayAssociationProposal",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDirectConnectGatewayAssociationProposalInput`](crate::input::CreateDirectConnectGatewayAssociationProposalInput).
@@ -3722,10 +3756,6 @@ pub mod create_interconnect_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateInterconnectInputOperationOutputAlias = crate::operation::CreateInterconnect;
-#[doc(hidden)]
-pub type CreateInterconnectInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateInterconnectInput {
     /// Consumes the builder and constructs an Operation<[`CreateInterconnect`](crate::operation::CreateInterconnect)>
     #[allow(unused_mut)]
@@ -3737,7 +3767,7 @@ impl CreateInterconnectInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateInterconnect,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3804,10 +3834,17 @@ impl CreateInterconnectInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3823,7 +3860,7 @@ impl CreateInterconnectInput {
             "CreateInterconnect",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateInterconnectInput`](crate::input::CreateInterconnectInput).
@@ -3988,10 +4025,6 @@ pub mod create_lag_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateLagInputOperationOutputAlias = crate::operation::CreateLag;
-#[doc(hidden)]
-pub type CreateLagInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateLagInput {
     /// Consumes the builder and constructs an Operation<[`CreateLag`](crate::operation::CreateLag)>
     #[allow(unused_mut)]
@@ -4003,7 +4036,7 @@ impl CreateLagInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateLag,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4070,10 +4103,17 @@ impl CreateLagInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4087,7 +4127,7 @@ impl CreateLagInput {
                     "CreateLag",
                     "directconnect",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateLagInput`](crate::input::CreateLagInput).
@@ -4150,12 +4190,6 @@ pub mod create_private_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreatePrivateVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::CreatePrivateVirtualInterface;
-#[doc(hidden)]
-pub type CreatePrivateVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreatePrivateVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`CreatePrivateVirtualInterface`](crate::operation::CreatePrivateVirtualInterface)>
     #[allow(unused_mut)]
@@ -4167,7 +4201,7 @@ impl CreatePrivateVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreatePrivateVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4233,10 +4267,17 @@ impl CreatePrivateVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4252,7 +4293,7 @@ impl CreatePrivateVirtualInterfaceInput {
             "CreatePrivateVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreatePrivateVirtualInterfaceInput`](crate::input::CreatePrivateVirtualInterfaceInput).
@@ -4315,12 +4356,6 @@ pub mod create_public_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreatePublicVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::CreatePublicVirtualInterface;
-#[doc(hidden)]
-pub type CreatePublicVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreatePublicVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`CreatePublicVirtualInterface`](crate::operation::CreatePublicVirtualInterface)>
     #[allow(unused_mut)]
@@ -4332,7 +4367,7 @@ impl CreatePublicVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreatePublicVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4398,10 +4433,17 @@ impl CreatePublicVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4417,7 +4459,7 @@ impl CreatePublicVirtualInterfaceInput {
             "CreatePublicVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreatePublicVirtualInterfaceInput`](crate::input::CreatePublicVirtualInterfaceInput).
@@ -4480,12 +4522,6 @@ pub mod create_transit_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateTransitVirtualInterfaceInputOperationOutputAlias =
-    crate::operation::CreateTransitVirtualInterface;
-#[doc(hidden)]
-pub type CreateTransitVirtualInterfaceInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateTransitVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`CreateTransitVirtualInterface`](crate::operation::CreateTransitVirtualInterface)>
     #[allow(unused_mut)]
@@ -4497,7 +4533,7 @@ impl CreateTransitVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateTransitVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4563,10 +4599,17 @@ impl CreateTransitVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4582,7 +4625,7 @@ impl CreateTransitVirtualInterfaceInput {
             "CreateTransitVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateTransitVirtualInterfaceInput`](crate::input::CreateTransitVirtualInterfaceInput).
@@ -4663,10 +4706,6 @@ pub mod delete_bgp_peer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteBgpPeerInputOperationOutputAlias = crate::operation::DeleteBGPPeer;
-#[doc(hidden)]
-pub type DeleteBgpPeerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteBgpPeerInput {
     /// Consumes the builder and constructs an Operation<[`DeleteBGPPeer`](crate::operation::DeleteBGPPeer)>
     #[allow(unused_mut)]
@@ -4678,7 +4717,7 @@ impl DeleteBgpPeerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteBGPPeer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4745,10 +4784,17 @@ impl DeleteBgpPeerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4764,7 +4810,7 @@ impl DeleteBgpPeerInput {
             "DeleteBGPPeer",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteBgpPeerInput`](crate::input::DeleteBgpPeerInput).
@@ -4806,10 +4852,6 @@ pub mod delete_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteConnectionInputOperationOutputAlias = crate::operation::DeleteConnection;
-#[doc(hidden)]
-pub type DeleteConnectionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteConnectionInput {
     /// Consumes the builder and constructs an Operation<[`DeleteConnection`](crate::operation::DeleteConnection)>
     #[allow(unused_mut)]
@@ -4821,7 +4863,7 @@ impl DeleteConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4888,10 +4930,17 @@ impl DeleteConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4907,7 +4956,7 @@ impl DeleteConnectionInput {
             "DeleteConnection",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteConnectionInput`](crate::input::DeleteConnectionInput).
@@ -4951,11 +5000,6 @@ pub mod delete_direct_connect_gateway_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDirectConnectGatewayInputOperationOutputAlias =
-    crate::operation::DeleteDirectConnectGateway;
-#[doc(hidden)]
-pub type DeleteDirectConnectGatewayInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDirectConnectGatewayInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDirectConnectGateway`](crate::operation::DeleteDirectConnectGateway)>
     #[allow(unused_mut)]
@@ -4967,7 +5011,7 @@ impl DeleteDirectConnectGatewayInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDirectConnectGateway,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5033,10 +5077,17 @@ impl DeleteDirectConnectGatewayInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5052,7 +5103,7 @@ impl DeleteDirectConnectGatewayInput {
             "DeleteDirectConnectGateway",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDirectConnectGatewayInput`](crate::input::DeleteDirectConnectGatewayInput).
@@ -5126,12 +5177,6 @@ pub mod delete_direct_connect_gateway_association_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDirectConnectGatewayAssociationInputOperationOutputAlias =
-    crate::operation::DeleteDirectConnectGatewayAssociation;
-#[doc(hidden)]
-pub type DeleteDirectConnectGatewayAssociationInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDirectConnectGatewayAssociationInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDirectConnectGatewayAssociation`](crate::operation::DeleteDirectConnectGatewayAssociation)>
     #[allow(unused_mut)]
@@ -5143,7 +5188,7 @@ impl DeleteDirectConnectGatewayAssociationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDirectConnectGatewayAssociation,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5209,10 +5254,17 @@ impl DeleteDirectConnectGatewayAssociationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5228,7 +5280,7 @@ impl DeleteDirectConnectGatewayAssociationInput {
             "DeleteDirectConnectGatewayAssociation",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDirectConnectGatewayAssociationInput`](crate::input::DeleteDirectConnectGatewayAssociationInput).
@@ -5271,12 +5323,6 @@ pub mod delete_direct_connect_gateway_association_proposal_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDirectConnectGatewayAssociationProposalInputOperationOutputAlias =
-    crate::operation::DeleteDirectConnectGatewayAssociationProposal;
-#[doc(hidden)]
-pub type DeleteDirectConnectGatewayAssociationProposalInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDirectConnectGatewayAssociationProposalInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDirectConnectGatewayAssociationProposal`](crate::operation::DeleteDirectConnectGatewayAssociationProposal)>
     #[allow(unused_mut)]
@@ -5288,7 +5334,7 @@ impl DeleteDirectConnectGatewayAssociationProposalInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDirectConnectGatewayAssociationProposal,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5354,10 +5400,17 @@ impl DeleteDirectConnectGatewayAssociationProposalInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5373,7 +5426,7 @@ impl DeleteDirectConnectGatewayAssociationProposalInput {
             "DeleteDirectConnectGatewayAssociationProposal",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDirectConnectGatewayAssociationProposalInput`](crate::input::DeleteDirectConnectGatewayAssociationProposalInput).
@@ -5416,10 +5469,6 @@ pub mod delete_interconnect_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteInterconnectInputOperationOutputAlias = crate::operation::DeleteInterconnect;
-#[doc(hidden)]
-pub type DeleteInterconnectInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteInterconnectInput {
     /// Consumes the builder and constructs an Operation<[`DeleteInterconnect`](crate::operation::DeleteInterconnect)>
     #[allow(unused_mut)]
@@ -5431,7 +5480,7 @@ impl DeleteInterconnectInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteInterconnect,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5498,10 +5547,17 @@ impl DeleteInterconnectInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5517,7 +5573,7 @@ impl DeleteInterconnectInput {
             "DeleteInterconnect",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteInterconnectInput`](crate::input::DeleteInterconnectInput).
@@ -5555,10 +5611,6 @@ pub mod delete_lag_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteLagInputOperationOutputAlias = crate::operation::DeleteLag;
-#[doc(hidden)]
-pub type DeleteLagInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteLagInput {
     /// Consumes the builder and constructs an Operation<[`DeleteLag`](crate::operation::DeleteLag)>
     #[allow(unused_mut)]
@@ -5570,7 +5622,7 @@ impl DeleteLagInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteLag,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5637,10 +5689,17 @@ impl DeleteLagInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5654,7 +5713,7 @@ impl DeleteLagInput {
                     "DeleteLag",
                     "directconnect",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteLagInput`](crate::input::DeleteLagInput).
@@ -5696,10 +5755,6 @@ pub mod delete_virtual_interface_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteVirtualInterfaceInputOperationOutputAlias = crate::operation::DeleteVirtualInterface;
-#[doc(hidden)]
-pub type DeleteVirtualInterfaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteVirtualInterfaceInput {
     /// Consumes the builder and constructs an Operation<[`DeleteVirtualInterface`](crate::operation::DeleteVirtualInterface)>
     #[allow(unused_mut)]
@@ -5711,7 +5766,7 @@ impl DeleteVirtualInterfaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteVirtualInterface,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5780,10 +5835,17 @@ impl DeleteVirtualInterfaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5799,7 +5861,7 @@ impl DeleteVirtualInterfaceInput {
             "DeleteVirtualInterface",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteVirtualInterfaceInput`](crate::input::DeleteVirtualInterfaceInput).
@@ -5871,10 +5933,6 @@ pub mod describe_connection_loa_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeConnectionLoaInputOperationOutputAlias = crate::operation::DescribeConnectionLoa;
-#[doc(hidden)]
-pub type DescribeConnectionLoaInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeConnectionLoaInput {
     /// Consumes the builder and constructs an Operation<[`DescribeConnectionLoa`](crate::operation::DescribeConnectionLoa)>
     #[allow(unused_mut)]
@@ -5886,7 +5944,7 @@ impl DescribeConnectionLoaInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeConnectionLoa,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5955,10 +6013,17 @@ impl DescribeConnectionLoaInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5974,7 +6039,7 @@ impl DescribeConnectionLoaInput {
             "DescribeConnectionLoa",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeConnectionLoaInput`](crate::input::DescribeConnectionLoaInput).
@@ -6016,10 +6081,6 @@ pub mod describe_connections_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeConnectionsInputOperationOutputAlias = crate::operation::DescribeConnections;
-#[doc(hidden)]
-pub type DescribeConnectionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeConnectionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeConnections`](crate::operation::DescribeConnections)>
     #[allow(unused_mut)]
@@ -6031,7 +6092,7 @@ impl DescribeConnectionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeConnections,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6098,10 +6159,17 @@ impl DescribeConnectionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6117,7 +6185,7 @@ impl DescribeConnectionsInput {
             "DescribeConnections",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeConnectionsInput`](crate::input::DescribeConnectionsInput).
@@ -6161,12 +6229,6 @@ pub mod describe_connections_on_interconnect_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeConnectionsOnInterconnectInputOperationOutputAlias =
-    crate::operation::DescribeConnectionsOnInterconnect;
-#[doc(hidden)]
-pub type DescribeConnectionsOnInterconnectInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeConnectionsOnInterconnectInput {
     /// Consumes the builder and constructs an Operation<[`DescribeConnectionsOnInterconnect`](crate::operation::DescribeConnectionsOnInterconnect)>
     #[allow(unused_mut)]
@@ -6178,7 +6240,7 @@ impl DescribeConnectionsOnInterconnectInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeConnectionsOnInterconnect,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6244,10 +6306,17 @@ impl DescribeConnectionsOnInterconnectInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6263,7 +6332,7 @@ impl DescribeConnectionsOnInterconnectInput {
             "DescribeConnectionsOnInterconnect",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeConnectionsOnInterconnectInput`](crate::input::DescribeConnectionsOnInterconnectInput).
@@ -6290,11 +6359,6 @@ pub mod describe_customer_metadata_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCustomerMetadataInputOperationOutputAlias =
-    crate::operation::DescribeCustomerMetadata;
-#[doc(hidden)]
-pub type DescribeCustomerMetadataInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCustomerMetadataInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCustomerMetadata`](crate::operation::DescribeCustomerMetadata)>
     #[allow(unused_mut)]
@@ -6306,7 +6370,7 @@ impl DescribeCustomerMetadataInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCustomerMetadata,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6368,10 +6432,17 @@ impl DescribeCustomerMetadataInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6387,7 +6458,7 @@ impl DescribeCustomerMetadataInput {
             "DescribeCustomerMetadata",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCustomerMetadataInput`](crate::input::DescribeCustomerMetadataInput).
@@ -6486,12 +6557,6 @@ pub mod describe_direct_connect_gateway_association_proposals_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDirectConnectGatewayAssociationProposalsInputOperationOutputAlias =
-    crate::operation::DescribeDirectConnectGatewayAssociationProposals;
-#[doc(hidden)]
-pub type DescribeDirectConnectGatewayAssociationProposalsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDirectConnectGatewayAssociationProposalsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDirectConnectGatewayAssociationProposals`](crate::operation::DescribeDirectConnectGatewayAssociationProposals)>
     #[allow(unused_mut)]
@@ -6503,7 +6568,7 @@ impl DescribeDirectConnectGatewayAssociationProposalsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDirectConnectGatewayAssociationProposals,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6569,10 +6634,17 @@ impl DescribeDirectConnectGatewayAssociationProposalsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6588,7 +6660,7 @@ impl DescribeDirectConnectGatewayAssociationProposalsInput {
             "DescribeDirectConnectGatewayAssociationProposals",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDirectConnectGatewayAssociationProposalsInput`](crate::input::DescribeDirectConnectGatewayAssociationProposalsInput).
@@ -6707,12 +6779,6 @@ pub mod describe_direct_connect_gateway_associations_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDirectConnectGatewayAssociationsInputOperationOutputAlias =
-    crate::operation::DescribeDirectConnectGatewayAssociations;
-#[doc(hidden)]
-pub type DescribeDirectConnectGatewayAssociationsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDirectConnectGatewayAssociationsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDirectConnectGatewayAssociations`](crate::operation::DescribeDirectConnectGatewayAssociations)>
     #[allow(unused_mut)]
@@ -6724,7 +6790,7 @@ impl DescribeDirectConnectGatewayAssociationsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDirectConnectGatewayAssociations,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6790,10 +6856,17 @@ impl DescribeDirectConnectGatewayAssociationsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6809,7 +6882,7 @@ impl DescribeDirectConnectGatewayAssociationsInput {
             "DescribeDirectConnectGatewayAssociations",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDirectConnectGatewayAssociationsInput`](crate::input::DescribeDirectConnectGatewayAssociationsInput).
@@ -6894,12 +6967,6 @@ pub mod describe_direct_connect_gateway_attachments_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDirectConnectGatewayAttachmentsInputOperationOutputAlias =
-    crate::operation::DescribeDirectConnectGatewayAttachments;
-#[doc(hidden)]
-pub type DescribeDirectConnectGatewayAttachmentsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDirectConnectGatewayAttachmentsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDirectConnectGatewayAttachments`](crate::operation::DescribeDirectConnectGatewayAttachments)>
     #[allow(unused_mut)]
@@ -6911,7 +6978,7 @@ impl DescribeDirectConnectGatewayAttachmentsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDirectConnectGatewayAttachments,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6977,10 +7044,17 @@ impl DescribeDirectConnectGatewayAttachmentsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6996,7 +7070,7 @@ impl DescribeDirectConnectGatewayAttachmentsInput {
             "DescribeDirectConnectGatewayAttachments",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDirectConnectGatewayAttachmentsInput`](crate::input::DescribeDirectConnectGatewayAttachmentsInput).
@@ -7066,12 +7140,6 @@ pub mod describe_direct_connect_gateways_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDirectConnectGatewaysInputOperationOutputAlias =
-    crate::operation::DescribeDirectConnectGateways;
-#[doc(hidden)]
-pub type DescribeDirectConnectGatewaysInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDirectConnectGatewaysInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDirectConnectGateways`](crate::operation::DescribeDirectConnectGateways)>
     #[allow(unused_mut)]
@@ -7083,7 +7151,7 @@ impl DescribeDirectConnectGatewaysInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDirectConnectGateways,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7149,10 +7217,17 @@ impl DescribeDirectConnectGatewaysInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7168,7 +7243,7 @@ impl DescribeDirectConnectGatewaysInput {
             "DescribeDirectConnectGateways",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDirectConnectGatewaysInput`](crate::input::DescribeDirectConnectGatewaysInput).
@@ -7212,11 +7287,6 @@ pub mod describe_hosted_connections_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeHostedConnectionsInputOperationOutputAlias =
-    crate::operation::DescribeHostedConnections;
-#[doc(hidden)]
-pub type DescribeHostedConnectionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeHostedConnectionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeHostedConnections`](crate::operation::DescribeHostedConnections)>
     #[allow(unused_mut)]
@@ -7228,7 +7298,7 @@ impl DescribeHostedConnectionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeHostedConnections,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7297,10 +7367,17 @@ impl DescribeHostedConnectionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7316,7 +7393,7 @@ impl DescribeHostedConnectionsInput {
             "DescribeHostedConnections",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeHostedConnectionsInput`](crate::input::DescribeHostedConnectionsInput).
@@ -7390,11 +7467,6 @@ pub mod describe_interconnect_loa_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeInterconnectLoaInputOperationOutputAlias =
-    crate::operation::DescribeInterconnectLoa;
-#[doc(hidden)]
-pub type DescribeInterconnectLoaInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeInterconnectLoaInput {
     /// Consumes the builder and constructs an Operation<[`DescribeInterconnectLoa`](crate::operation::DescribeInterconnectLoa)>
     #[allow(unused_mut)]
@@ -7406,7 +7478,7 @@ impl DescribeInterconnectLoaInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeInterconnectLoa,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7475,10 +7547,17 @@ impl DescribeInterconnectLoaInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7494,7 +7573,7 @@ impl DescribeInterconnectLoaInput {
             "DescribeInterconnectLoa",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeInterconnectLoaInput`](crate::input::DescribeInterconnectLoaInput).
@@ -7536,10 +7615,6 @@ pub mod describe_interconnects_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeInterconnectsInputOperationOutputAlias = crate::operation::DescribeInterconnects;
-#[doc(hidden)]
-pub type DescribeInterconnectsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeInterconnectsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeInterconnects`](crate::operation::DescribeInterconnects)>
     #[allow(unused_mut)]
@@ -7551,7 +7626,7 @@ impl DescribeInterconnectsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeInterconnects,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7620,10 +7695,17 @@ impl DescribeInterconnectsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7639,7 +7721,7 @@ impl DescribeInterconnectsInput {
             "DescribeInterconnects",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeInterconnectsInput`](crate::input::DescribeInterconnectsInput).
@@ -7678,10 +7760,6 @@ pub mod describe_lags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeLagsInputOperationOutputAlias = crate::operation::DescribeLags;
-#[doc(hidden)]
-pub type DescribeLagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeLagsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeLags`](crate::operation::DescribeLags)>
     #[allow(unused_mut)]
@@ -7693,7 +7771,7 @@ impl DescribeLagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeLags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7760,10 +7838,17 @@ impl DescribeLagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7779,7 +7864,7 @@ impl DescribeLagsInput {
             "DescribeLags",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeLagsInput`](crate::input::DescribeLagsInput).
@@ -7851,10 +7936,6 @@ pub mod describe_loa_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeLoaInputOperationOutputAlias = crate::operation::DescribeLoa;
-#[doc(hidden)]
-pub type DescribeLoaInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeLoaInput {
     /// Consumes the builder and constructs an Operation<[`DescribeLoa`](crate::operation::DescribeLoa)>
     #[allow(unused_mut)]
@@ -7866,7 +7947,7 @@ impl DescribeLoaInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeLoa,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7933,10 +8014,17 @@ impl DescribeLoaInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7952,7 +8040,7 @@ impl DescribeLoaInput {
             "DescribeLoa",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeLoaInput`](crate::input::DescribeLoaInput).
@@ -7977,10 +8065,6 @@ pub mod describe_locations_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeLocationsInputOperationOutputAlias = crate::operation::DescribeLocations;
-#[doc(hidden)]
-pub type DescribeLocationsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeLocationsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeLocations`](crate::operation::DescribeLocations)>
     #[allow(unused_mut)]
@@ -7992,7 +8076,7 @@ impl DescribeLocationsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeLocations,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8052,10 +8136,17 @@ impl DescribeLocationsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8071,7 +8162,7 @@ impl DescribeLocationsInput {
             "DescribeLocations",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeLocationsInput`](crate::input::DescribeLocationsInput).
@@ -8130,11 +8221,6 @@ pub mod describe_router_configuration_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeRouterConfigurationInputOperationOutputAlias =
-    crate::operation::DescribeRouterConfiguration;
-#[doc(hidden)]
-pub type DescribeRouterConfigurationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeRouterConfigurationInput {
     /// Consumes the builder and constructs an Operation<[`DescribeRouterConfiguration`](crate::operation::DescribeRouterConfiguration)>
     #[allow(unused_mut)]
@@ -8146,7 +8232,7 @@ impl DescribeRouterConfigurationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeRouterConfiguration,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8212,10 +8298,17 @@ impl DescribeRouterConfigurationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8231,7 +8324,7 @@ impl DescribeRouterConfigurationInput {
             "DescribeRouterConfiguration",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeRouterConfigurationInput`](crate::input::DescribeRouterConfigurationInput).
@@ -8279,10 +8372,6 @@ pub mod describe_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeTagsInputOperationOutputAlias = crate::operation::DescribeTags;
-#[doc(hidden)]
-pub type DescribeTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeTagsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeTags`](crate::operation::DescribeTags)>
     #[allow(unused_mut)]
@@ -8294,7 +8383,7 @@ impl DescribeTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8361,10 +8450,17 @@ impl DescribeTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8380,7 +8476,7 @@ impl DescribeTagsInput {
             "DescribeTags",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeTagsInput`](crate::input::DescribeTagsInput).
@@ -8407,11 +8503,6 @@ pub mod describe_virtual_gateways_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeVirtualGatewaysInputOperationOutputAlias =
-    crate::operation::DescribeVirtualGateways;
-#[doc(hidden)]
-pub type DescribeVirtualGatewaysInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeVirtualGatewaysInput {
     /// Consumes the builder and constructs an Operation<[`DescribeVirtualGateways`](crate::operation::DescribeVirtualGateways)>
     #[allow(unused_mut)]
@@ -8423,7 +8514,7 @@ impl DescribeVirtualGatewaysInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeVirtualGateways,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8485,10 +8576,17 @@ impl DescribeVirtualGatewaysInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8504,7 +8602,7 @@ impl DescribeVirtualGatewaysInput {
             "DescribeVirtualGateways",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeVirtualGatewaysInput`](crate::input::DescribeVirtualGatewaysInput).
@@ -8563,11 +8661,6 @@ pub mod describe_virtual_interfaces_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeVirtualInterfacesInputOperationOutputAlias =
-    crate::operation::DescribeVirtualInterfaces;
-#[doc(hidden)]
-pub type DescribeVirtualInterfacesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeVirtualInterfacesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeVirtualInterfaces`](crate::operation::DescribeVirtualInterfaces)>
     #[allow(unused_mut)]
@@ -8579,7 +8672,7 @@ impl DescribeVirtualInterfacesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeVirtualInterfaces,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8648,10 +8741,17 @@ impl DescribeVirtualInterfacesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8667,7 +8767,7 @@ impl DescribeVirtualInterfacesInput {
             "DescribeVirtualInterfaces",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeVirtualInterfacesInput`](crate::input::DescribeVirtualInterfacesInput).
@@ -8723,12 +8823,6 @@ pub mod disassociate_connection_from_lag_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisassociateConnectionFromLagInputOperationOutputAlias =
-    crate::operation::DisassociateConnectionFromLag;
-#[doc(hidden)]
-pub type DisassociateConnectionFromLagInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DisassociateConnectionFromLagInput {
     /// Consumes the builder and constructs an Operation<[`DisassociateConnectionFromLag`](crate::operation::DisassociateConnectionFromLag)>
     #[allow(unused_mut)]
@@ -8740,7 +8834,7 @@ impl DisassociateConnectionFromLagInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisassociateConnectionFromLag,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8806,10 +8900,17 @@ impl DisassociateConnectionFromLagInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8825,7 +8926,7 @@ impl DisassociateConnectionFromLagInput {
             "DisassociateConnectionFromLag",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisassociateConnectionFromLagInput`](crate::input::DisassociateConnectionFromLagInput).
@@ -8883,10 +8984,6 @@ pub mod disassociate_mac_sec_key_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisassociateMacSecKeyInputOperationOutputAlias = crate::operation::DisassociateMacSecKey;
-#[doc(hidden)]
-pub type DisassociateMacSecKeyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DisassociateMacSecKeyInput {
     /// Consumes the builder and constructs an Operation<[`DisassociateMacSecKey`](crate::operation::DisassociateMacSecKey)>
     #[allow(unused_mut)]
@@ -8898,7 +8995,7 @@ impl DisassociateMacSecKeyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisassociateMacSecKey,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8967,10 +9064,17 @@ impl DisassociateMacSecKeyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8986,7 +9090,7 @@ impl DisassociateMacSecKeyInput {
             "DisassociateMacSecKey",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisassociateMacSecKeyInput`](crate::input::DisassociateMacSecKeyInput).
@@ -9101,12 +9205,6 @@ pub mod list_virtual_interface_test_history_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListVirtualInterfaceTestHistoryInputOperationOutputAlias =
-    crate::operation::ListVirtualInterfaceTestHistory;
-#[doc(hidden)]
-pub type ListVirtualInterfaceTestHistoryInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListVirtualInterfaceTestHistoryInput {
     /// Consumes the builder and constructs an Operation<[`ListVirtualInterfaceTestHistory`](crate::operation::ListVirtualInterfaceTestHistory)>
     #[allow(unused_mut)]
@@ -9118,7 +9216,7 @@ impl ListVirtualInterfaceTestHistoryInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListVirtualInterfaceTestHistory,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9184,10 +9282,17 @@ impl ListVirtualInterfaceTestHistoryInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9203,7 +9308,7 @@ impl ListVirtualInterfaceTestHistoryInput {
             "ListVirtualInterfaceTestHistory",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListVirtualInterfaceTestHistoryInput`](crate::input::ListVirtualInterfaceTestHistoryInput).
@@ -9282,10 +9387,6 @@ pub mod start_bgp_failover_test_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartBgpFailoverTestInputOperationOutputAlias = crate::operation::StartBgpFailoverTest;
-#[doc(hidden)]
-pub type StartBgpFailoverTestInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartBgpFailoverTestInput {
     /// Consumes the builder and constructs an Operation<[`StartBgpFailoverTest`](crate::operation::StartBgpFailoverTest)>
     #[allow(unused_mut)]
@@ -9297,7 +9398,7 @@ impl StartBgpFailoverTestInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartBgpFailoverTest,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9366,10 +9467,17 @@ impl StartBgpFailoverTestInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9385,7 +9493,7 @@ impl StartBgpFailoverTestInput {
             "StartBgpFailoverTest",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartBgpFailoverTestInput`](crate::input::StartBgpFailoverTestInput).
@@ -9427,10 +9535,6 @@ pub mod stop_bgp_failover_test_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopBgpFailoverTestInputOperationOutputAlias = crate::operation::StopBgpFailoverTest;
-#[doc(hidden)]
-pub type StopBgpFailoverTestInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopBgpFailoverTestInput {
     /// Consumes the builder and constructs an Operation<[`StopBgpFailoverTest`](crate::operation::StopBgpFailoverTest)>
     #[allow(unused_mut)]
@@ -9442,7 +9546,7 @@ impl StopBgpFailoverTestInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopBgpFailoverTest,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9511,10 +9615,17 @@ impl StopBgpFailoverTestInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9530,7 +9641,7 @@ impl StopBgpFailoverTestInput {
             "StopBgpFailoverTest",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopBgpFailoverTestInput`](crate::input::StopBgpFailoverTestInput).
@@ -9590,10 +9701,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -9605,7 +9712,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9672,10 +9779,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9691,7 +9805,7 @@ impl TagResourceInput {
             "TagResource",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -9751,10 +9865,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -9766,7 +9876,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9833,10 +9943,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9852,7 +9969,7 @@ impl UntagResourceInput {
             "UntagResource",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -9928,10 +10045,6 @@ pub mod update_connection_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateConnectionInputOperationOutputAlias = crate::operation::UpdateConnection;
-#[doc(hidden)]
-pub type UpdateConnectionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateConnectionInput {
     /// Consumes the builder and constructs an Operation<[`UpdateConnection`](crate::operation::UpdateConnection)>
     #[allow(unused_mut)]
@@ -9943,7 +10056,7 @@ impl UpdateConnectionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateConnection,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10010,10 +10123,17 @@ impl UpdateConnectionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10029,7 +10149,7 @@ impl UpdateConnectionInput {
             "UpdateConnection",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateConnectionInput`](crate::input::UpdateConnectionInput).
@@ -10091,11 +10211,6 @@ pub mod update_direct_connect_gateway_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateDirectConnectGatewayInputOperationOutputAlias =
-    crate::operation::UpdateDirectConnectGateway;
-#[doc(hidden)]
-pub type UpdateDirectConnectGatewayInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateDirectConnectGatewayInput {
     /// Consumes the builder and constructs an Operation<[`UpdateDirectConnectGateway`](crate::operation::UpdateDirectConnectGateway)>
     #[allow(unused_mut)]
@@ -10107,7 +10222,7 @@ impl UpdateDirectConnectGatewayInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateDirectConnectGateway,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10173,10 +10288,17 @@ impl UpdateDirectConnectGatewayInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10192,7 +10314,7 @@ impl UpdateDirectConnectGatewayInput {
             "UpdateDirectConnectGateway",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateDirectConnectGatewayInput`](crate::input::UpdateDirectConnectGatewayInput).
@@ -10292,12 +10414,6 @@ pub mod update_direct_connect_gateway_association_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateDirectConnectGatewayAssociationInputOperationOutputAlias =
-    crate::operation::UpdateDirectConnectGatewayAssociation;
-#[doc(hidden)]
-pub type UpdateDirectConnectGatewayAssociationInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateDirectConnectGatewayAssociationInput {
     /// Consumes the builder and constructs an Operation<[`UpdateDirectConnectGatewayAssociation`](crate::operation::UpdateDirectConnectGatewayAssociation)>
     #[allow(unused_mut)]
@@ -10309,7 +10425,7 @@ impl UpdateDirectConnectGatewayAssociationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateDirectConnectGatewayAssociation,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10375,10 +10491,17 @@ impl UpdateDirectConnectGatewayAssociationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10394,7 +10517,7 @@ impl UpdateDirectConnectGatewayAssociationInput {
             "UpdateDirectConnectGatewayAssociation",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateDirectConnectGatewayAssociationInput`](crate::input::UpdateDirectConnectGatewayAssociationInput).
@@ -10473,10 +10596,6 @@ pub mod update_lag_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateLagInputOperationOutputAlias = crate::operation::UpdateLag;
-#[doc(hidden)]
-pub type UpdateLagInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateLagInput {
     /// Consumes the builder and constructs an Operation<[`UpdateLag`](crate::operation::UpdateLag)>
     #[allow(unused_mut)]
@@ -10488,7 +10607,7 @@ impl UpdateLagInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateLag,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10555,10 +10674,17 @@ impl UpdateLagInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10572,7 +10698,7 @@ impl UpdateLagInput {
                     "UpdateLag",
                     "directconnect",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateLagInput`](crate::input::UpdateLagInput).
@@ -10655,12 +10781,6 @@ pub mod update_virtual_interface_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateVirtualInterfaceAttributesInputOperationOutputAlias =
-    crate::operation::UpdateVirtualInterfaceAttributes;
-#[doc(hidden)]
-pub type UpdateVirtualInterfaceAttributesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateVirtualInterfaceAttributesInput {
     /// Consumes the builder and constructs an Operation<[`UpdateVirtualInterfaceAttributes`](crate::operation::UpdateVirtualInterfaceAttributes)>
     #[allow(unused_mut)]
@@ -10672,7 +10792,7 @@ impl UpdateVirtualInterfaceAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateVirtualInterfaceAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10738,10 +10858,17 @@ impl UpdateVirtualInterfaceAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10757,7 +10884,7 @@ impl UpdateVirtualInterfaceAttributesInput {
             "UpdateVirtualInterfaceAttributes",
             "directconnect",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateVirtualInterfaceAttributesInput`](crate::input::UpdateVirtualInterfaceAttributesInput).

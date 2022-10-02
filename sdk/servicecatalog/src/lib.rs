@@ -11,10 +11,10 @@
 #![warn(missing_docs)]
 //! <fullname>AWS Service Catalog</fullname>
 //! <p>
-//! <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables
-//! organizations to create and manage catalogs of IT services that are approved for AWS. To
+//! <a href="https://aws.amazon.com/servicecatalog/">Service Catalog</a> enables
+//! organizations to create and manage catalogs of IT services that are approved for Amazon Web Services. To
 //! get the most out of this documentation, you should be familiar with the terminology
-//! discussed in <a href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+//! discussed in <a href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">Service Catalog
 //! Concepts</a>.</p>
 //!
 //! # Crate Organization
@@ -40,6 +40,8 @@ mod aws_endpoint;
 pub mod client;
 /// Configuration for the service.
 pub mod config;
+/// Wrap operations in a special type allowing for the modification of operations and the requests inside before sending them
+pub mod customizable_operation;
 /// Errors that can occur when calling the service.
 pub mod error;
 mod error_meta;
@@ -70,10 +72,12 @@ pub mod types {
     pub use aws_smithy_http::result::SdkError;
     pub use aws_smithy_types::DateTime;
 }
+pub use aws_smithy_async::rt::sleep::AsyncSleep;
+pub use aws_smithy_types::retry::RetryConfig;
+pub use aws_smithy_types::timeout::Config as TimeoutConfig;
 static API_METADATA: aws_http::user_agent::ApiMetadata =
     aws_http::user_agent::ApiMetadata::new("servicecatalog", PKG_VERSION);
 pub use aws_smithy_http::endpoint::Endpoint;
-pub use aws_smithy_types::retry::RetryConfig;
 pub use aws_types::app_name::AppName;
 pub use aws_types::region::Region;
 pub use aws_types::Credentials;

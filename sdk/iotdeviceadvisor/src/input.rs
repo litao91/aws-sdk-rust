@@ -67,10 +67,6 @@ pub mod create_suite_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateSuiteDefinitionInputOperationOutputAlias = crate::operation::CreateSuiteDefinition;
-#[doc(hidden)]
-pub type CreateSuiteDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateSuiteDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`CreateSuiteDefinition`](crate::operation::CreateSuiteDefinition)>
     #[allow(unused_mut)]
@@ -82,7 +78,7 @@ impl CreateSuiteDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateSuiteDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -146,10 +142,17 @@ impl CreateSuiteDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -165,7 +168,7 @@ impl CreateSuiteDefinitionInput {
             "CreateSuiteDefinition",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateSuiteDefinitionInput`](crate::input::CreateSuiteDefinitionInput).
@@ -207,10 +210,6 @@ pub mod delete_suite_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteSuiteDefinitionInputOperationOutputAlias = crate::operation::DeleteSuiteDefinition;
-#[doc(hidden)]
-pub type DeleteSuiteDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteSuiteDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`DeleteSuiteDefinition`](crate::operation::DeleteSuiteDefinition)>
     #[allow(unused_mut)]
@@ -222,7 +221,7 @@ impl DeleteSuiteDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteSuiteDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -289,10 +288,17 @@ impl DeleteSuiteDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -308,7 +314,7 @@ impl DeleteSuiteDefinitionInput {
             "DeleteSuiteDefinition",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteSuiteDefinitionInput`](crate::input::DeleteSuiteDefinitionInput).
@@ -362,10 +368,6 @@ pub mod get_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetEndpointInputOperationOutputAlias = crate::operation::GetEndpoint;
-#[doc(hidden)]
-pub type GetEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetEndpointInput {
     /// Consumes the builder and constructs an Operation<[`GetEndpoint`](crate::operation::GetEndpoint)>
     #[allow(unused_mut)]
@@ -377,7 +379,7 @@ impl GetEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -442,10 +444,17 @@ impl GetEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -461,7 +470,7 @@ impl GetEndpointInput {
             "GetEndpoint",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetEndpointInput`](crate::input::GetEndpointInput).
@@ -518,10 +527,6 @@ pub mod get_suite_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetSuiteDefinitionInputOperationOutputAlias = crate::operation::GetSuiteDefinition;
-#[doc(hidden)]
-pub type GetSuiteDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetSuiteDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`GetSuiteDefinition`](crate::operation::GetSuiteDefinition)>
     #[allow(unused_mut)]
@@ -533,7 +538,7 @@ impl GetSuiteDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetSuiteDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -614,10 +619,17 @@ impl GetSuiteDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -633,7 +645,7 @@ impl GetSuiteDefinitionInput {
             "GetSuiteDefinition",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetSuiteDefinitionInput`](crate::input::GetSuiteDefinitionInput).
@@ -687,10 +699,6 @@ pub mod get_suite_run_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetSuiteRunInputOperationOutputAlias = crate::operation::GetSuiteRun;
-#[doc(hidden)]
-pub type GetSuiteRunInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetSuiteRunInput {
     /// Consumes the builder and constructs an Operation<[`GetSuiteRun`](crate::operation::GetSuiteRun)>
     #[allow(unused_mut)]
@@ -702,7 +710,7 @@ impl GetSuiteRunInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetSuiteRun,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -784,10 +792,17 @@ impl GetSuiteRunInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -803,7 +818,7 @@ impl GetSuiteRunInput {
             "GetSuiteRun",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetSuiteRunInput`](crate::input::GetSuiteRunInput).
@@ -857,10 +872,6 @@ pub mod get_suite_run_report_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetSuiteRunReportInputOperationOutputAlias = crate::operation::GetSuiteRunReport;
-#[doc(hidden)]
-pub type GetSuiteRunReportInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetSuiteRunReportInput {
     /// Consumes the builder and constructs an Operation<[`GetSuiteRunReport`](crate::operation::GetSuiteRunReport)>
     #[allow(unused_mut)]
@@ -872,7 +883,7 @@ impl GetSuiteRunReportInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetSuiteRunReport,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -954,10 +965,17 @@ impl GetSuiteRunReportInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -973,7 +991,7 @@ impl GetSuiteRunReportInput {
             "GetSuiteRunReport",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetSuiteRunReportInput`](crate::input::GetSuiteRunReportInput).
@@ -1024,10 +1042,6 @@ pub mod list_suite_definitions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListSuiteDefinitionsInputOperationOutputAlias = crate::operation::ListSuiteDefinitions;
-#[doc(hidden)]
-pub type ListSuiteDefinitionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListSuiteDefinitionsInput {
     /// Consumes the builder and constructs an Operation<[`ListSuiteDefinitions`](crate::operation::ListSuiteDefinitions)>
     #[allow(unused_mut)]
@@ -1039,7 +1053,7 @@ impl ListSuiteDefinitionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListSuiteDefinitions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1104,10 +1118,17 @@ impl ListSuiteDefinitionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1123,7 +1144,7 @@ impl ListSuiteDefinitionsInput {
             "ListSuiteDefinitions",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListSuiteDefinitionsInput`](crate::input::ListSuiteDefinitionsInput).
@@ -1204,10 +1225,6 @@ pub mod list_suite_runs_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListSuiteRunsInputOperationOutputAlias = crate::operation::ListSuiteRuns;
-#[doc(hidden)]
-pub type ListSuiteRunsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListSuiteRunsInput {
     /// Consumes the builder and constructs an Operation<[`ListSuiteRuns`](crate::operation::ListSuiteRuns)>
     #[allow(unused_mut)]
@@ -1219,7 +1236,7 @@ impl ListSuiteRunsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListSuiteRuns,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1296,10 +1313,17 @@ impl ListSuiteRunsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1315,7 +1339,7 @@ impl ListSuiteRunsInput {
             "ListSuiteRuns",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListSuiteRunsInput`](crate::input::ListSuiteRunsInput).
@@ -1354,10 +1378,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -1369,7 +1389,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1432,10 +1452,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1451,7 +1478,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -1556,10 +1583,6 @@ pub mod start_suite_run_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartSuiteRunInputOperationOutputAlias = crate::operation::StartSuiteRun;
-#[doc(hidden)]
-pub type StartSuiteRunInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartSuiteRunInput {
     /// Consumes the builder and constructs an Operation<[`StartSuiteRun`](crate::operation::StartSuiteRun)>
     #[allow(unused_mut)]
@@ -1571,7 +1594,7 @@ impl StartSuiteRunInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartSuiteRun,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1652,10 +1675,17 @@ impl StartSuiteRunInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1671,7 +1701,7 @@ impl StartSuiteRunInput {
             "StartSuiteRun",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartSuiteRunInput`](crate::input::StartSuiteRunInput).
@@ -1725,10 +1755,6 @@ pub mod stop_suite_run_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopSuiteRunInputOperationOutputAlias = crate::operation::StopSuiteRun;
-#[doc(hidden)]
-pub type StopSuiteRunInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopSuiteRunInput {
     /// Consumes the builder and constructs an Operation<[`StopSuiteRun`](crate::operation::StopSuiteRun)>
     #[allow(unused_mut)]
@@ -1740,7 +1766,7 @@ impl StopSuiteRunInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopSuiteRun,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1822,10 +1848,17 @@ impl StopSuiteRunInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1841,7 +1874,7 @@ impl StopSuiteRunInput {
             "StopSuiteRun",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopSuiteRunInput`](crate::input::StopSuiteRunInput).
@@ -1909,10 +1942,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -1924,7 +1953,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2001,10 +2030,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2020,7 +2056,7 @@ impl TagResourceInput {
             "TagResource",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -2080,10 +2116,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -2095,7 +2127,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2171,10 +2203,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2190,7 +2229,7 @@ impl UntagResourceInput {
             "UntagResource",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -2251,10 +2290,6 @@ pub mod update_suite_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateSuiteDefinitionInputOperationOutputAlias = crate::operation::UpdateSuiteDefinition;
-#[doc(hidden)]
-pub type UpdateSuiteDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateSuiteDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`UpdateSuiteDefinition`](crate::operation::UpdateSuiteDefinition)>
     #[allow(unused_mut)]
@@ -2266,7 +2301,7 @@ impl UpdateSuiteDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateSuiteDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2349,10 +2384,17 @@ impl UpdateSuiteDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2368,7 +2410,7 @@ impl UpdateSuiteDefinitionInput {
             "UpdateSuiteDefinition",
             "iotdeviceadvisor",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateSuiteDefinitionInput`](crate::input::UpdateSuiteDefinitionInput).

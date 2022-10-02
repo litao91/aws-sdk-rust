@@ -34,10 +34,6 @@ pub mod delete_human_loop_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteHumanLoopInputOperationOutputAlias = crate::operation::DeleteHumanLoop;
-#[doc(hidden)]
-pub type DeleteHumanLoopInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteHumanLoopInput {
     /// Consumes the builder and constructs an Operation<[`DeleteHumanLoop`](crate::operation::DeleteHumanLoop)>
     #[allow(unused_mut)]
@@ -49,7 +45,7 @@ impl DeleteHumanLoopInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteHumanLoop,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -116,10 +112,17 @@ impl DeleteHumanLoopInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -135,7 +138,7 @@ impl DeleteHumanLoopInput {
             "DeleteHumanLoop",
             "sagemakera2iruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteHumanLoopInput`](crate::input::DeleteHumanLoopInput).
@@ -177,10 +180,6 @@ pub mod describe_human_loop_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeHumanLoopInputOperationOutputAlias = crate::operation::DescribeHumanLoop;
-#[doc(hidden)]
-pub type DescribeHumanLoopInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeHumanLoopInput {
     /// Consumes the builder and constructs an Operation<[`DescribeHumanLoop`](crate::operation::DescribeHumanLoop)>
     #[allow(unused_mut)]
@@ -192,7 +191,7 @@ impl DescribeHumanLoopInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeHumanLoop,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -259,10 +258,17 @@ impl DescribeHumanLoopInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -278,7 +284,7 @@ impl DescribeHumanLoopInput {
             "DescribeHumanLoop",
             "sagemakera2iruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeHumanLoopInput`](crate::input::DescribeHumanLoopInput).
@@ -389,10 +395,6 @@ pub mod list_human_loops_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListHumanLoopsInputOperationOutputAlias = crate::operation::ListHumanLoops;
-#[doc(hidden)]
-pub type ListHumanLoopsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListHumanLoopsInput {
     /// Consumes the builder and constructs an Operation<[`ListHumanLoops`](crate::operation::ListHumanLoops)>
     #[allow(unused_mut)]
@@ -404,7 +406,7 @@ impl ListHumanLoopsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListHumanLoops,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -496,10 +498,17 @@ impl ListHumanLoopsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -515,7 +524,7 @@ impl ListHumanLoopsInput {
             "ListHumanLoops",
             "sagemakera2iruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListHumanLoopsInput`](crate::input::ListHumanLoopsInput).
@@ -602,10 +611,6 @@ pub mod start_human_loop_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartHumanLoopInputOperationOutputAlias = crate::operation::StartHumanLoop;
-#[doc(hidden)]
-pub type StartHumanLoopInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartHumanLoopInput {
     /// Consumes the builder and constructs an Operation<[`StartHumanLoop`](crate::operation::StartHumanLoop)>
     #[allow(unused_mut)]
@@ -617,7 +622,7 @@ impl StartHumanLoopInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartHumanLoop,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -679,10 +684,17 @@ impl StartHumanLoopInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -698,7 +710,7 @@ impl StartHumanLoopInput {
             "StartHumanLoop",
             "sagemakera2iruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartHumanLoopInput`](crate::input::StartHumanLoopInput).
@@ -740,10 +752,6 @@ pub mod stop_human_loop_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopHumanLoopInputOperationOutputAlias = crate::operation::StopHumanLoop;
-#[doc(hidden)]
-pub type StopHumanLoopInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopHumanLoopInput {
     /// Consumes the builder and constructs an Operation<[`StopHumanLoop`](crate::operation::StopHumanLoop)>
     #[allow(unused_mut)]
@@ -755,7 +763,7 @@ impl StopHumanLoopInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopHumanLoop,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -817,10 +825,17 @@ impl StopHumanLoopInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -836,7 +851,7 @@ impl StopHumanLoopInput {
             "StopHumanLoop",
             "sagemakera2iruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopHumanLoopInput`](crate::input::StopHumanLoopInput).

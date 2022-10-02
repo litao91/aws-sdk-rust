@@ -254,10 +254,6 @@ pub mod describe_dimension_keys_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDimensionKeysInputOperationOutputAlias = crate::operation::DescribeDimensionKeys;
-#[doc(hidden)]
-pub type DescribeDimensionKeysInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDimensionKeysInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDimensionKeys`](crate::operation::DescribeDimensionKeys)>
     #[allow(unused_mut)]
@@ -269,7 +265,7 @@ impl DescribeDimensionKeysInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDimensionKeys,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -338,10 +334,17 @@ impl DescribeDimensionKeysInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -357,7 +360,7 @@ impl DescribeDimensionKeysInput {
             "DescribeDimensionKeys",
             "pi",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDimensionKeysInput`](crate::input::DescribeDimensionKeysInput).
@@ -483,10 +486,6 @@ pub mod get_dimension_key_details_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetDimensionKeyDetailsInputOperationOutputAlias = crate::operation::GetDimensionKeyDetails;
-#[doc(hidden)]
-pub type GetDimensionKeyDetailsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetDimensionKeyDetailsInput {
     /// Consumes the builder and constructs an Operation<[`GetDimensionKeyDetails`](crate::operation::GetDimensionKeyDetails)>
     #[allow(unused_mut)]
@@ -498,7 +497,7 @@ impl GetDimensionKeyDetailsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetDimensionKeyDetails,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -567,10 +566,17 @@ impl GetDimensionKeyDetailsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -586,7 +592,7 @@ impl GetDimensionKeyDetailsInput {
             "GetDimensionKeyDetails",
             "pi",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetDimensionKeyDetailsInput`](crate::input::GetDimensionKeyDetailsInput).
@@ -640,10 +646,6 @@ pub mod get_resource_metadata_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetResourceMetadataInputOperationOutputAlias = crate::operation::GetResourceMetadata;
-#[doc(hidden)]
-pub type GetResourceMetadataInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetResourceMetadataInput {
     /// Consumes the builder and constructs an Operation<[`GetResourceMetadata`](crate::operation::GetResourceMetadata)>
     #[allow(unused_mut)]
@@ -655,7 +657,7 @@ impl GetResourceMetadataInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetResourceMetadata,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -722,10 +724,17 @@ impl GetResourceMetadataInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -741,7 +750,7 @@ impl GetResourceMetadataInput {
             "GetResourceMetadata",
             "pi",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetResourceMetadataInput`](crate::input::GetResourceMetadataInput).
@@ -912,10 +921,6 @@ pub mod get_resource_metrics_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetResourceMetricsInputOperationOutputAlias = crate::operation::GetResourceMetrics;
-#[doc(hidden)]
-pub type GetResourceMetricsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetResourceMetricsInput {
     /// Consumes the builder and constructs an Operation<[`GetResourceMetrics`](crate::operation::GetResourceMetrics)>
     #[allow(unused_mut)]
@@ -927,7 +932,7 @@ impl GetResourceMetricsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetResourceMetrics,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -994,10 +999,17 @@ impl GetResourceMetricsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1013,7 +1025,7 @@ impl GetResourceMetricsInput {
             "GetResourceMetrics",
             "pi",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetResourceMetricsInput`](crate::input::GetResourceMetricsInput).
@@ -1114,12 +1126,6 @@ pub mod list_available_resource_dimensions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAvailableResourceDimensionsInputOperationOutputAlias =
-    crate::operation::ListAvailableResourceDimensions;
-#[doc(hidden)]
-pub type ListAvailableResourceDimensionsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListAvailableResourceDimensionsInput {
     /// Consumes the builder and constructs an Operation<[`ListAvailableResourceDimensions`](crate::operation::ListAvailableResourceDimensions)>
     #[allow(unused_mut)]
@@ -1131,7 +1137,7 @@ impl ListAvailableResourceDimensionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAvailableResourceDimensions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1197,10 +1203,17 @@ impl ListAvailableResourceDimensionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1216,7 +1229,7 @@ impl ListAvailableResourceDimensionsInput {
             "ListAvailableResourceDimensions",
             "pi",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAvailableResourceDimensionsInput`](crate::input::ListAvailableResourceDimensionsInput).
@@ -1329,12 +1342,6 @@ pub mod list_available_resource_metrics_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAvailableResourceMetricsInputOperationOutputAlias =
-    crate::operation::ListAvailableResourceMetrics;
-#[doc(hidden)]
-pub type ListAvailableResourceMetricsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListAvailableResourceMetricsInput {
     /// Consumes the builder and constructs an Operation<[`ListAvailableResourceMetrics`](crate::operation::ListAvailableResourceMetrics)>
     #[allow(unused_mut)]
@@ -1346,7 +1353,7 @@ impl ListAvailableResourceMetricsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAvailableResourceMetrics,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1412,10 +1419,17 @@ impl ListAvailableResourceMetricsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1431,7 +1445,7 @@ impl ListAvailableResourceMetricsInput {
             "ListAvailableResourceMetrics",
             "pi",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAvailableResourceMetricsInput`](crate::input::ListAvailableResourceMetricsInput).

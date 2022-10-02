@@ -36,11 +36,6 @@ pub mod activate_anomaly_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ActivateAnomalyDetectorInputOperationOutputAlias =
-    crate::operation::ActivateAnomalyDetector;
-#[doc(hidden)]
-pub type ActivateAnomalyDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ActivateAnomalyDetectorInput {
     /// Consumes the builder and constructs an Operation<[`ActivateAnomalyDetector`](crate::operation::ActivateAnomalyDetector)>
     #[allow(unused_mut)]
@@ -52,7 +47,7 @@ impl ActivateAnomalyDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ActivateAnomalyDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -116,10 +111,17 @@ impl ActivateAnomalyDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -135,7 +137,7 @@ impl ActivateAnomalyDetectorInput {
             "ActivateAnomalyDetector",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ActivateAnomalyDetectorInput`](crate::input::ActivateAnomalyDetectorInput).
@@ -179,11 +181,6 @@ pub mod back_test_anomaly_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BackTestAnomalyDetectorInputOperationOutputAlias =
-    crate::operation::BackTestAnomalyDetector;
-#[doc(hidden)]
-pub type BackTestAnomalyDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BackTestAnomalyDetectorInput {
     /// Consumes the builder and constructs an Operation<[`BackTestAnomalyDetector`](crate::operation::BackTestAnomalyDetector)>
     #[allow(unused_mut)]
@@ -195,7 +192,7 @@ impl BackTestAnomalyDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BackTestAnomalyDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -259,10 +256,17 @@ impl BackTestAnomalyDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -278,7 +282,7 @@ impl BackTestAnomalyDetectorInput {
             "BackTestAnomalyDetector",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BackTestAnomalyDetectorInput`](crate::input::BackTestAnomalyDetectorInput).
@@ -415,10 +419,6 @@ pub mod create_alert_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateAlertInputOperationOutputAlias = crate::operation::CreateAlert;
-#[doc(hidden)]
-pub type CreateAlertInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateAlertInput {
     /// Consumes the builder and constructs an Operation<[`CreateAlert`](crate::operation::CreateAlert)>
     #[allow(unused_mut)]
@@ -430,7 +430,7 @@ impl CreateAlertInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateAlert,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -492,10 +492,17 @@ impl CreateAlertInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -511,7 +518,7 @@ impl CreateAlertInput {
             "CreateAlert",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateAlertInput`](crate::input::CreateAlertInput).
@@ -631,10 +638,6 @@ pub mod create_anomaly_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateAnomalyDetectorInputOperationOutputAlias = crate::operation::CreateAnomalyDetector;
-#[doc(hidden)]
-pub type CreateAnomalyDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateAnomalyDetectorInput {
     /// Consumes the builder and constructs an Operation<[`CreateAnomalyDetector`](crate::operation::CreateAnomalyDetector)>
     #[allow(unused_mut)]
@@ -646,7 +649,7 @@ impl CreateAnomalyDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateAnomalyDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -710,10 +713,17 @@ impl CreateAnomalyDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -729,7 +739,7 @@ impl CreateAnomalyDetectorInput {
             "CreateAnomalyDetector",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateAnomalyDetectorInput`](crate::input::CreateAnomalyDetectorInput).
@@ -817,12 +827,12 @@ pub mod create_metric_set_input {
             self.metric_list = input;
             self
         }
-        /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3 and Redshift datasources.</p>
+        /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3, Redshift, Athena and datasources.</p>
         pub fn offset(mut self, input: i32) -> Self {
             self.offset = Some(input);
             self
         }
-        /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3 and Redshift datasources.</p>
+        /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3, Redshift, Athena and datasources.</p>
         pub fn set_offset(mut self, input: std::option::Option<i32>) -> Self {
             self.offset = input;
             self
@@ -941,10 +951,6 @@ pub mod create_metric_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateMetricSetInputOperationOutputAlias = crate::operation::CreateMetricSet;
-#[doc(hidden)]
-pub type CreateMetricSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateMetricSetInput {
     /// Consumes the builder and constructs an Operation<[`CreateMetricSet`](crate::operation::CreateMetricSet)>
     #[allow(unused_mut)]
@@ -956,7 +962,7 @@ impl CreateMetricSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateMetricSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1018,10 +1024,17 @@ impl CreateMetricSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1037,7 +1050,7 @@ impl CreateMetricSetInput {
             "CreateMetricSet",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateMetricSetInput`](crate::input::CreateMetricSetInput).
@@ -1081,11 +1094,6 @@ pub mod deactivate_anomaly_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeactivateAnomalyDetectorInputOperationOutputAlias =
-    crate::operation::DeactivateAnomalyDetector;
-#[doc(hidden)]
-pub type DeactivateAnomalyDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeactivateAnomalyDetectorInput {
     /// Consumes the builder and constructs an Operation<[`DeactivateAnomalyDetector`](crate::operation::DeactivateAnomalyDetector)>
     #[allow(unused_mut)]
@@ -1097,7 +1105,7 @@ impl DeactivateAnomalyDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeactivateAnomalyDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1161,10 +1169,17 @@ impl DeactivateAnomalyDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1180,7 +1195,7 @@ impl DeactivateAnomalyDetectorInput {
             "DeactivateAnomalyDetector",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeactivateAnomalyDetectorInput`](crate::input::DeactivateAnomalyDetectorInput).
@@ -1219,10 +1234,6 @@ pub mod delete_alert_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteAlertInputOperationOutputAlias = crate::operation::DeleteAlert;
-#[doc(hidden)]
-pub type DeleteAlertInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteAlertInput {
     /// Consumes the builder and constructs an Operation<[`DeleteAlert`](crate::operation::DeleteAlert)>
     #[allow(unused_mut)]
@@ -1234,7 +1245,7 @@ impl DeleteAlertInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteAlert,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1296,10 +1307,17 @@ impl DeleteAlertInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1315,7 +1333,7 @@ impl DeleteAlertInput {
             "DeleteAlert",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteAlertInput`](crate::input::DeleteAlertInput).
@@ -1357,10 +1375,6 @@ pub mod delete_anomaly_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteAnomalyDetectorInputOperationOutputAlias = crate::operation::DeleteAnomalyDetector;
-#[doc(hidden)]
-pub type DeleteAnomalyDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteAnomalyDetectorInput {
     /// Consumes the builder and constructs an Operation<[`DeleteAnomalyDetector`](crate::operation::DeleteAnomalyDetector)>
     #[allow(unused_mut)]
@@ -1372,7 +1386,7 @@ impl DeleteAnomalyDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteAnomalyDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1436,10 +1450,17 @@ impl DeleteAnomalyDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1455,7 +1476,7 @@ impl DeleteAnomalyDetectorInput {
             "DeleteAnomalyDetector",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteAnomalyDetectorInput`](crate::input::DeleteAnomalyDetectorInput).
@@ -1494,10 +1515,6 @@ pub mod describe_alert_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAlertInputOperationOutputAlias = crate::operation::DescribeAlert;
-#[doc(hidden)]
-pub type DescribeAlertInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAlertInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAlert`](crate::operation::DescribeAlert)>
     #[allow(unused_mut)]
@@ -1509,7 +1526,7 @@ impl DescribeAlertInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAlert,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1571,10 +1588,17 @@ impl DescribeAlertInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1590,7 +1614,7 @@ impl DescribeAlertInput {
             "DescribeAlert",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAlertInput`](crate::input::DescribeAlertInput).
@@ -1670,12 +1694,6 @@ pub mod describe_anomaly_detection_executions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAnomalyDetectionExecutionsInputOperationOutputAlias =
-    crate::operation::DescribeAnomalyDetectionExecutions;
-#[doc(hidden)]
-pub type DescribeAnomalyDetectionExecutionsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAnomalyDetectionExecutionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAnomalyDetectionExecutions`](crate::operation::DescribeAnomalyDetectionExecutions)>
     #[allow(unused_mut)]
@@ -1687,7 +1705,7 @@ impl DescribeAnomalyDetectionExecutionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAnomalyDetectionExecutions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1749,10 +1767,17 @@ impl DescribeAnomalyDetectionExecutionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1768,7 +1793,7 @@ impl DescribeAnomalyDetectionExecutionsInput {
             "DescribeAnomalyDetectionExecutions",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAnomalyDetectionExecutionsInput`](crate::input::DescribeAnomalyDetectionExecutionsInput).
@@ -1812,11 +1837,6 @@ pub mod describe_anomaly_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAnomalyDetectorInputOperationOutputAlias =
-    crate::operation::DescribeAnomalyDetector;
-#[doc(hidden)]
-pub type DescribeAnomalyDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAnomalyDetectorInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAnomalyDetector`](crate::operation::DescribeAnomalyDetector)>
     #[allow(unused_mut)]
@@ -1828,7 +1848,7 @@ impl DescribeAnomalyDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAnomalyDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1892,10 +1912,17 @@ impl DescribeAnomalyDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1911,7 +1938,7 @@ impl DescribeAnomalyDetectorInput {
             "DescribeAnomalyDetector",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAnomalyDetectorInput`](crate::input::DescribeAnomalyDetectorInput).
@@ -1953,10 +1980,6 @@ pub mod describe_metric_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeMetricSetInputOperationOutputAlias = crate::operation::DescribeMetricSet;
-#[doc(hidden)]
-pub type DescribeMetricSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeMetricSetInput {
     /// Consumes the builder and constructs an Operation<[`DescribeMetricSet`](crate::operation::DescribeMetricSet)>
     #[allow(unused_mut)]
@@ -1968,7 +1991,7 @@ impl DescribeMetricSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeMetricSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2030,10 +2053,17 @@ impl DescribeMetricSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2049,7 +2079,7 @@ impl DescribeMetricSetInput {
             "DescribeMetricSet",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeMetricSetInput`](crate::input::DescribeMetricSetInput).
@@ -2110,10 +2140,6 @@ pub mod detect_metric_set_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DetectMetricSetConfigInputOperationOutputAlias = crate::operation::DetectMetricSetConfig;
-#[doc(hidden)]
-pub type DetectMetricSetConfigInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DetectMetricSetConfigInput {
     /// Consumes the builder and constructs an Operation<[`DetectMetricSetConfig`](crate::operation::DetectMetricSetConfig)>
     #[allow(unused_mut)]
@@ -2125,7 +2151,7 @@ impl DetectMetricSetConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DetectMetricSetConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2189,10 +2215,17 @@ impl DetectMetricSetConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2208,7 +2241,7 @@ impl DetectMetricSetConfigInput {
             "DetectMetricSetConfig",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DetectMetricSetConfigInput`](crate::input::DetectMetricSetConfigInput).
@@ -2265,10 +2298,6 @@ pub mod get_anomaly_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetAnomalyGroupInputOperationOutputAlias = crate::operation::GetAnomalyGroup;
-#[doc(hidden)]
-pub type GetAnomalyGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetAnomalyGroupInput {
     /// Consumes the builder and constructs an Operation<[`GetAnomalyGroup`](crate::operation::GetAnomalyGroup)>
     #[allow(unused_mut)]
@@ -2280,7 +2309,7 @@ impl GetAnomalyGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetAnomalyGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2342,10 +2371,17 @@ impl GetAnomalyGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2361,12 +2397,170 @@ impl GetAnomalyGroupInput {
             "GetAnomalyGroup",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetAnomalyGroupInput`](crate::input::GetAnomalyGroupInput).
     pub fn builder() -> crate::input::get_anomaly_group_input::Builder {
         crate::input::get_anomaly_group_input::Builder::default()
+    }
+}
+
+/// See [`GetDataQualityMetricsInput`](crate::input::GetDataQualityMetricsInput).
+pub mod get_data_quality_metrics_input {
+
+    /// A builder for [`GetDataQualityMetricsInput`](crate::input::GetDataQualityMetricsInput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) anomaly_detector_arn: std::option::Option<std::string::String>,
+        pub(crate) metric_set_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The Amazon Resource Name (ARN) of the anomaly detector that you want to investigate.</p>
+        pub fn anomaly_detector_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.anomaly_detector_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the anomaly detector that you want to investigate.</p>
+        pub fn set_anomaly_detector_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.anomaly_detector_arn = input;
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of a specific data quality metric set.</p>
+        pub fn metric_set_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.metric_set_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of a specific data quality metric set.</p>
+        pub fn set_metric_set_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.metric_set_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetDataQualityMetricsInput`](crate::input::GetDataQualityMetricsInput).
+        pub fn build(
+            self,
+        ) -> Result<crate::input::GetDataQualityMetricsInput, aws_smithy_http::operation::BuildError>
+        {
+            Ok(crate::input::GetDataQualityMetricsInput {
+                anomaly_detector_arn: self.anomaly_detector_arn,
+                metric_set_arn: self.metric_set_arn,
+            })
+        }
+    }
+}
+impl GetDataQualityMetricsInput {
+    /// Consumes the builder and constructs an Operation<[`GetDataQualityMetrics`](crate::operation::GetDataQualityMetrics)>
+    #[allow(unused_mut)]
+    #[allow(clippy::let_and_return)]
+    #[allow(clippy::needless_borrow)]
+    pub async fn make_operation(
+        &self,
+        _config: &crate::config::Config,
+    ) -> std::result::Result<
+        aws_smithy_http::operation::Operation<
+            crate::operation::GetDataQualityMetrics,
+            aws_http::retry::AwsResponseRetryClassifier,
+        >,
+        aws_smithy_http::operation::BuildError,
+    > {
+        let mut request = {
+            fn uri_base(
+                _input: &crate::input::GetDataQualityMetricsInput,
+                output: &mut String,
+            ) -> Result<(), aws_smithy_http::operation::BuildError> {
+                write!(output, "/GetDataQualityMetrics").expect("formatting should succeed");
+                Ok(())
+            }
+            #[allow(clippy::unnecessary_wraps)]
+            fn update_http_builder(
+                input: &crate::input::GetDataQualityMetricsInput,
+                builder: http::request::Builder,
+            ) -> std::result::Result<http::request::Builder, aws_smithy_http::operation::BuildError>
+            {
+                let mut uri = String::new();
+                uri_base(input, &mut uri)?;
+                Ok(builder.method("POST").uri(uri))
+            }
+            let mut builder = update_http_builder(&self, http::request::Builder::new())?;
+            builder = aws_smithy_http::header::set_request_header_if_absent(
+                builder,
+                http::header::CONTENT_TYPE,
+                "application/json",
+            );
+            builder
+        };
+        let mut properties = aws_smithy_http::property_bag::SharedPropertyBag::new();
+        #[allow(clippy::useless_conversion)]
+        let body = aws_smithy_http::body::SdkBody::from(
+            crate::operation_ser::serialize_operation_crate_operation_get_data_quality_metrics(
+                &self,
+            )?,
+        );
+        if let Some(content_length) = body.content_length() {
+            request = aws_smithy_http::header::set_request_header_if_absent(
+                request,
+                http::header::CONTENT_LENGTH,
+                content_length,
+            );
+        }
+        let request = request.body(body).expect("should be valid request");
+        let mut request = aws_smithy_http::operation::Request::from_parts(request, properties);
+        request
+            .properties_mut()
+            .insert(aws_smithy_http::http_versions::DEFAULT_HTTP_VERSION_LIST.clone());
+        let mut user_agent = aws_http::user_agent::AwsUserAgent::new_from_environment(
+            aws_types::os_shim_internal::Env::real(),
+            crate::API_METADATA.clone(),
+        );
+        if let Some(app_name) = _config.app_name() {
+            user_agent = user_agent.with_app_name(app_name.clone());
+        }
+        request.properties_mut().insert(user_agent);
+        let mut signing_config = aws_sig_auth::signer::OperationSigningConfig::default_config();
+        request.properties_mut().insert(signing_config);
+        request
+            .properties_mut()
+            .insert(aws_types::SigningService::from_static(
+                _config.signing_service(),
+            ));
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
+        if let Some(region) = &_config.region {
+            request.properties_mut().insert(region.clone());
+        }
+        aws_http::auth::set_provider(
+            &mut request.properties_mut(),
+            _config.credentials_provider.clone(),
+        );
+        let op = aws_smithy_http::operation::Operation::new(
+            request,
+            crate::operation::GetDataQualityMetrics::new(),
+        )
+        .with_metadata(aws_smithy_http::operation::Metadata::new(
+            "GetDataQualityMetrics",
+            "lookoutmetrics",
+        ));
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
+        Ok(op)
+    }
+    /// Creates a new builder-style object to manufacture [`GetDataQualityMetricsInput`](crate::input::GetDataQualityMetricsInput).
+    pub fn builder() -> crate::input::get_data_quality_metrics_input::Builder {
+        crate::input::get_data_quality_metrics_input::Builder::default()
     }
 }
 
@@ -2446,10 +2640,6 @@ pub mod get_feedback_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetFeedbackInputOperationOutputAlias = crate::operation::GetFeedback;
-#[doc(hidden)]
-pub type GetFeedbackInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetFeedbackInput {
     /// Consumes the builder and constructs an Operation<[`GetFeedback`](crate::operation::GetFeedback)>
     #[allow(unused_mut)]
@@ -2461,7 +2651,7 @@ impl GetFeedbackInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetFeedback,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2523,10 +2713,17 @@ impl GetFeedbackInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2542,7 +2739,7 @@ impl GetFeedbackInput {
             "GetFeedback",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetFeedbackInput`](crate::input::GetFeedbackInput).
@@ -2584,10 +2781,6 @@ pub mod get_sample_data_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetSampleDataInputOperationOutputAlias = crate::operation::GetSampleData;
-#[doc(hidden)]
-pub type GetSampleDataInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetSampleDataInput {
     /// Consumes the builder and constructs an Operation<[`GetSampleData`](crate::operation::GetSampleData)>
     #[allow(unused_mut)]
@@ -2599,7 +2792,7 @@ impl GetSampleDataInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetSampleData,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2661,10 +2854,17 @@ impl GetSampleDataInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2680,7 +2880,7 @@ impl GetSampleDataInput {
             "GetSampleData",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetSampleDataInput`](crate::input::GetSampleDataInput).
@@ -2745,10 +2945,6 @@ pub mod list_alerts_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAlertsInputOperationOutputAlias = crate::operation::ListAlerts;
-#[doc(hidden)]
-pub type ListAlertsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAlertsInput {
     /// Consumes the builder and constructs an Operation<[`ListAlerts`](crate::operation::ListAlerts)>
     #[allow(unused_mut)]
@@ -2760,7 +2956,7 @@ impl ListAlertsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAlerts,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2822,10 +3018,17 @@ impl ListAlertsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2841,7 +3044,7 @@ impl ListAlertsInput {
             "ListAlerts",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAlertsInput`](crate::input::ListAlertsInput).
@@ -2892,10 +3095,6 @@ pub mod list_anomaly_detectors_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAnomalyDetectorsInputOperationOutputAlias = crate::operation::ListAnomalyDetectors;
-#[doc(hidden)]
-pub type ListAnomalyDetectorsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAnomalyDetectorsInput {
     /// Consumes the builder and constructs an Operation<[`ListAnomalyDetectors`](crate::operation::ListAnomalyDetectors)>
     #[allow(unused_mut)]
@@ -2907,7 +3106,7 @@ impl ListAnomalyDetectorsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAnomalyDetectors,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2971,10 +3170,17 @@ impl ListAnomalyDetectorsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2990,7 +3196,7 @@ impl ListAnomalyDetectorsInput {
             "ListAnomalyDetectors",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAnomalyDetectorsInput`](crate::input::ListAnomalyDetectorsInput).
@@ -3088,12 +3294,6 @@ pub mod list_anomaly_group_related_metrics_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAnomalyGroupRelatedMetricsInputOperationOutputAlias =
-    crate::operation::ListAnomalyGroupRelatedMetrics;
-#[doc(hidden)]
-pub type ListAnomalyGroupRelatedMetricsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ListAnomalyGroupRelatedMetricsInput {
     /// Consumes the builder and constructs an Operation<[`ListAnomalyGroupRelatedMetrics`](crate::operation::ListAnomalyGroupRelatedMetrics)>
     #[allow(unused_mut)]
@@ -3105,7 +3305,7 @@ impl ListAnomalyGroupRelatedMetricsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAnomalyGroupRelatedMetrics,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3167,10 +3367,17 @@ impl ListAnomalyGroupRelatedMetricsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3186,7 +3393,7 @@ impl ListAnomalyGroupRelatedMetricsInput {
             "ListAnomalyGroupRelatedMetrics",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAnomalyGroupRelatedMetricsInput`](crate::input::ListAnomalyGroupRelatedMetricsInput).
@@ -3266,11 +3473,6 @@ pub mod list_anomaly_group_summaries_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAnomalyGroupSummariesInputOperationOutputAlias =
-    crate::operation::ListAnomalyGroupSummaries;
-#[doc(hidden)]
-pub type ListAnomalyGroupSummariesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAnomalyGroupSummariesInput {
     /// Consumes the builder and constructs an Operation<[`ListAnomalyGroupSummaries`](crate::operation::ListAnomalyGroupSummaries)>
     #[allow(unused_mut)]
@@ -3282,7 +3484,7 @@ impl ListAnomalyGroupSummariesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAnomalyGroupSummaries,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3346,10 +3548,17 @@ impl ListAnomalyGroupSummariesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3365,7 +3574,7 @@ impl ListAnomalyGroupSummariesInput {
             "ListAnomalyGroupSummaries",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAnomalyGroupSummariesInput`](crate::input::ListAnomalyGroupSummariesInput).
@@ -3460,11 +3669,6 @@ pub mod list_anomaly_group_time_series_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAnomalyGroupTimeSeriesInputOperationOutputAlias =
-    crate::operation::ListAnomalyGroupTimeSeries;
-#[doc(hidden)]
-pub type ListAnomalyGroupTimeSeriesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAnomalyGroupTimeSeriesInput {
     /// Consumes the builder and constructs an Operation<[`ListAnomalyGroupTimeSeries`](crate::operation::ListAnomalyGroupTimeSeries)>
     #[allow(unused_mut)]
@@ -3476,7 +3680,7 @@ impl ListAnomalyGroupTimeSeriesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAnomalyGroupTimeSeries,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3537,10 +3741,17 @@ impl ListAnomalyGroupTimeSeriesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3556,7 +3767,7 @@ impl ListAnomalyGroupTimeSeriesInput {
             "ListAnomalyGroupTimeSeries",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAnomalyGroupTimeSeriesInput`](crate::input::ListAnomalyGroupTimeSeriesInput).
@@ -3622,10 +3833,6 @@ pub mod list_metric_sets_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListMetricSetsInputOperationOutputAlias = crate::operation::ListMetricSets;
-#[doc(hidden)]
-pub type ListMetricSetsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListMetricSetsInput {
     /// Consumes the builder and constructs an Operation<[`ListMetricSets`](crate::operation::ListMetricSets)>
     #[allow(unused_mut)]
@@ -3637,7 +3844,7 @@ impl ListMetricSetsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListMetricSets,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3699,10 +3906,17 @@ impl ListMetricSetsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3718,7 +3932,7 @@ impl ListMetricSetsInput {
             "ListMetricSets",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListMetricSetsInput`](crate::input::ListMetricSetsInput).
@@ -3757,10 +3971,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -3772,7 +3982,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3835,10 +4045,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3854,7 +4071,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -3915,10 +4132,6 @@ pub mod put_feedback_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutFeedbackInputOperationOutputAlias = crate::operation::PutFeedback;
-#[doc(hidden)]
-pub type PutFeedbackInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutFeedbackInput {
     /// Consumes the builder and constructs an Operation<[`PutFeedback`](crate::operation::PutFeedback)>
     #[allow(unused_mut)]
@@ -3930,7 +4143,7 @@ impl PutFeedbackInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutFeedback,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3992,10 +4205,17 @@ impl PutFeedbackInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4011,7 +4231,7 @@ impl PutFeedbackInput {
             "PutFeedback",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutFeedbackInput`](crate::input::PutFeedbackInput).
@@ -4079,10 +4299,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -4094,7 +4310,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4171,10 +4387,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4190,7 +4413,7 @@ impl TagResourceInput {
             "TagResource",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -4250,10 +4473,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -4265,7 +4484,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4341,10 +4560,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4360,7 +4586,7 @@ impl UntagResourceInput {
             "UntagResource",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -4453,10 +4679,6 @@ pub mod update_alert_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateAlertInputOperationOutputAlias = crate::operation::UpdateAlert;
-#[doc(hidden)]
-pub type UpdateAlertInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateAlertInput {
     /// Consumes the builder and constructs an Operation<[`UpdateAlert`](crate::operation::UpdateAlert)>
     #[allow(unused_mut)]
@@ -4468,7 +4690,7 @@ impl UpdateAlertInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateAlert,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4530,10 +4752,17 @@ impl UpdateAlertInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4549,7 +4778,7 @@ impl UpdateAlertInput {
             "UpdateAlert",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateAlertInput`](crate::input::UpdateAlertInput).
@@ -4640,10 +4869,6 @@ pub mod update_anomaly_detector_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateAnomalyDetectorInputOperationOutputAlias = crate::operation::UpdateAnomalyDetector;
-#[doc(hidden)]
-pub type UpdateAnomalyDetectorInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateAnomalyDetectorInput {
     /// Consumes the builder and constructs an Operation<[`UpdateAnomalyDetector`](crate::operation::UpdateAnomalyDetector)>
     #[allow(unused_mut)]
@@ -4655,7 +4880,7 @@ impl UpdateAnomalyDetectorInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateAnomalyDetector,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4719,10 +4944,17 @@ impl UpdateAnomalyDetectorInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4738,7 +4970,7 @@ impl UpdateAnomalyDetectorInput {
             "UpdateAnomalyDetector",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateAnomalyDetectorInput`](crate::input::UpdateAnomalyDetectorInput).
@@ -4808,12 +5040,12 @@ pub mod update_metric_set_input {
             self.metric_list = input;
             self
         }
-        /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3 and Redshift datasources.</p>
+        /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3, Redshift, Athena and datasources.</p>
         pub fn offset(mut self, input: i32) -> Self {
             self.offset = Some(input);
             self
         }
-        /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3 and Redshift datasources.</p>
+        /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3, Redshift, Athena and datasources.</p>
         pub fn set_offset(mut self, input: std::option::Option<i32>) -> Self {
             self.offset = input;
             self
@@ -4894,10 +5126,6 @@ pub mod update_metric_set_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateMetricSetInputOperationOutputAlias = crate::operation::UpdateMetricSet;
-#[doc(hidden)]
-pub type UpdateMetricSetInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateMetricSetInput {
     /// Consumes the builder and constructs an Operation<[`UpdateMetricSet`](crate::operation::UpdateMetricSet)>
     #[allow(unused_mut)]
@@ -4909,7 +5137,7 @@ impl UpdateMetricSetInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateMetricSet,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4971,10 +5199,17 @@ impl UpdateMetricSetInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4990,7 +5225,7 @@ impl UpdateMetricSetInput {
             "UpdateMetricSet",
             "lookoutmetrics",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateMetricSetInput`](crate::input::UpdateMetricSetInput).
@@ -5012,7 +5247,7 @@ pub struct UpdateMetricSetInput {
     /// <p>The metric list.</p>
     #[doc(hidden)]
     pub metric_list: std::option::Option<std::vec::Vec<crate::model::Metric>>,
-    /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3 and Redshift datasources.</p>
+    /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3, Redshift, Athena and datasources.</p>
     #[doc(hidden)]
     pub offset: std::option::Option<i32>,
     /// <p>The timestamp column.</p>
@@ -5041,7 +5276,7 @@ impl UpdateMetricSetInput {
     pub fn metric_list(&self) -> std::option::Option<&[crate::model::Metric]> {
         self.metric_list.as_deref()
     }
-    /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3 and Redshift datasources.</p>
+    /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3, Redshift, Athena and datasources.</p>
     pub fn offset(&self) -> std::option::Option<i32> {
         self.offset
     }
@@ -5644,6 +5879,36 @@ impl std::fmt::Debug for GetFeedbackInput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetDataQualityMetricsInput {
+    /// <p>The Amazon Resource Name (ARN) of the anomaly detector that you want to investigate.</p>
+    #[doc(hidden)]
+    pub anomaly_detector_arn: std::option::Option<std::string::String>,
+    /// <p>The Amazon Resource Name (ARN) of a specific data quality metric set.</p>
+    #[doc(hidden)]
+    pub metric_set_arn: std::option::Option<std::string::String>,
+}
+impl GetDataQualityMetricsInput {
+    /// <p>The Amazon Resource Name (ARN) of the anomaly detector that you want to investigate.</p>
+    pub fn anomaly_detector_arn(&self) -> std::option::Option<&str> {
+        self.anomaly_detector_arn.as_deref()
+    }
+    /// <p>The Amazon Resource Name (ARN) of a specific data quality metric set.</p>
+    pub fn metric_set_arn(&self) -> std::option::Option<&str> {
+        self.metric_set_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for GetDataQualityMetricsInput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetDataQualityMetricsInput");
+        formatter.field("anomaly_detector_arn", &self.anomaly_detector_arn);
+        formatter.field("metric_set_arn", &self.metric_set_arn);
+        formatter.finish()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAnomalyGroupInput {
     /// <p>The ID of the anomaly group.</p>
     #[doc(hidden)]
@@ -5900,7 +6165,7 @@ pub struct CreateMetricSetInput {
     /// <p>A list of metrics that the dataset will contain.</p>
     #[doc(hidden)]
     pub metric_list: std::option::Option<std::vec::Vec<crate::model::Metric>>,
-    /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3 and Redshift datasources.</p>
+    /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3, Redshift, Athena and datasources.</p>
     #[doc(hidden)]
     pub offset: std::option::Option<i32>,
     /// <p>Contains information about the column used for tracking time in your source data.</p>
@@ -5940,7 +6205,7 @@ impl CreateMetricSetInput {
     pub fn metric_list(&self) -> std::option::Option<&[crate::model::Metric]> {
         self.metric_list.as_deref()
     }
-    /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3 and Redshift datasources.</p>
+    /// <p>After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only supported for S3, Redshift, Athena and datasources.</p>
     pub fn offset(&self) -> std::option::Option<i32> {
         self.offset
     }

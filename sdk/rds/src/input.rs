@@ -58,10 +58,6 @@ pub mod add_role_to_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddRoleToDbClusterInputOperationOutputAlias = crate::operation::AddRoleToDBCluster;
-#[doc(hidden)]
-pub type AddRoleToDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AddRoleToDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`AddRoleToDBCluster`](crate::operation::AddRoleToDBCluster)>
     #[allow(unused_mut)]
@@ -73,7 +69,7 @@ impl AddRoleToDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddRoleToDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -137,10 +133,17 @@ impl AddRoleToDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -156,7 +159,7 @@ impl AddRoleToDbClusterInput {
             "AddRoleToDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddRoleToDbClusterInput`](crate::input::AddRoleToDbClusterInput).
@@ -222,10 +225,6 @@ pub mod add_role_to_db_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddRoleToDbInstanceInputOperationOutputAlias = crate::operation::AddRoleToDBInstance;
-#[doc(hidden)]
-pub type AddRoleToDbInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AddRoleToDbInstanceInput {
     /// Consumes the builder and constructs an Operation<[`AddRoleToDBInstance`](crate::operation::AddRoleToDBInstance)>
     #[allow(unused_mut)]
@@ -237,7 +236,7 @@ impl AddRoleToDbInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddRoleToDBInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -301,10 +300,17 @@ impl AddRoleToDbInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -320,7 +326,7 @@ impl AddRoleToDbInstanceInput {
             "AddRoleToDBInstance",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddRoleToDbInstanceInput`](crate::input::AddRoleToDbInstanceInput).
@@ -399,12 +405,6 @@ pub mod add_source_identifier_to_subscription_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddSourceIdentifierToSubscriptionInputOperationOutputAlias =
-    crate::operation::AddSourceIdentifierToSubscription;
-#[doc(hidden)]
-pub type AddSourceIdentifierToSubscriptionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AddSourceIdentifierToSubscriptionInput {
     /// Consumes the builder and constructs an Operation<[`AddSourceIdentifierToSubscription`](crate::operation::AddSourceIdentifierToSubscription)>
     #[allow(unused_mut)]
@@ -416,7 +416,7 @@ impl AddSourceIdentifierToSubscriptionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddSourceIdentifierToSubscription,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -477,10 +477,17 @@ impl AddSourceIdentifierToSubscriptionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -496,7 +503,7 @@ impl AddSourceIdentifierToSubscriptionInput {
             "AddSourceIdentifierToSubscription",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddSourceIdentifierToSubscriptionInput`](crate::input::AddSourceIdentifierToSubscriptionInput).
@@ -559,10 +566,6 @@ pub mod add_tags_to_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddTagsToResourceInputOperationOutputAlias = crate::operation::AddTagsToResource;
-#[doc(hidden)]
-pub type AddTagsToResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AddTagsToResourceInput {
     /// Consumes the builder and constructs an Operation<[`AddTagsToResource`](crate::operation::AddTagsToResource)>
     #[allow(unused_mut)]
@@ -574,7 +577,7 @@ impl AddTagsToResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddTagsToResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -636,10 +639,17 @@ impl AddTagsToResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -655,7 +665,7 @@ impl AddTagsToResourceInput {
             "AddTagsToResource",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddTagsToResourceInput`](crate::input::AddTagsToResourceInput).
@@ -737,12 +747,6 @@ pub mod apply_pending_maintenance_action_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ApplyPendingMaintenanceActionInputOperationOutputAlias =
-    crate::operation::ApplyPendingMaintenanceAction;
-#[doc(hidden)]
-pub type ApplyPendingMaintenanceActionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ApplyPendingMaintenanceActionInput {
     /// Consumes the builder and constructs an Operation<[`ApplyPendingMaintenanceAction`](crate::operation::ApplyPendingMaintenanceAction)>
     #[allow(unused_mut)]
@@ -754,7 +758,7 @@ impl ApplyPendingMaintenanceActionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ApplyPendingMaintenanceAction,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -815,10 +819,17 @@ impl ApplyPendingMaintenanceActionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -834,7 +845,7 @@ impl ApplyPendingMaintenanceActionInput {
             "ApplyPendingMaintenanceAction",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ApplyPendingMaintenanceActionInput`](crate::input::ApplyPendingMaintenanceActionInput).
@@ -938,12 +949,6 @@ pub mod authorize_db_security_group_ingress_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AuthorizeDbSecurityGroupIngressInputOperationOutputAlias =
-    crate::operation::AuthorizeDBSecurityGroupIngress;
-#[doc(hidden)]
-pub type AuthorizeDbSecurityGroupIngressInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AuthorizeDbSecurityGroupIngressInput {
     /// Consumes the builder and constructs an Operation<[`AuthorizeDBSecurityGroupIngress`](crate::operation::AuthorizeDBSecurityGroupIngress)>
     #[allow(unused_mut)]
@@ -955,7 +960,7 @@ impl AuthorizeDbSecurityGroupIngressInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AuthorizeDBSecurityGroupIngress,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1016,10 +1021,17 @@ impl AuthorizeDbSecurityGroupIngressInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1035,7 +1047,7 @@ impl AuthorizeDbSecurityGroupIngressInput {
             "AuthorizeDBSecurityGroupIngress",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AuthorizeDbSecurityGroupIngressInput`](crate::input::AuthorizeDbSecurityGroupIngressInput).
@@ -1150,10 +1162,6 @@ pub mod backtrack_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type BacktrackDbClusterInputOperationOutputAlias = crate::operation::BacktrackDBCluster;
-#[doc(hidden)]
-pub type BacktrackDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl BacktrackDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`BacktrackDBCluster`](crate::operation::BacktrackDBCluster)>
     #[allow(unused_mut)]
@@ -1165,7 +1173,7 @@ impl BacktrackDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::BacktrackDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1227,10 +1235,17 @@ impl BacktrackDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1246,7 +1261,7 @@ impl BacktrackDbClusterInput {
             "BacktrackDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`BacktrackDbClusterInput`](crate::input::BacktrackDbClusterInput).
@@ -1288,10 +1303,6 @@ pub mod cancel_export_task_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CancelExportTaskInputOperationOutputAlias = crate::operation::CancelExportTask;
-#[doc(hidden)]
-pub type CancelExportTaskInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CancelExportTaskInput {
     /// Consumes the builder and constructs an Operation<[`CancelExportTask`](crate::operation::CancelExportTask)>
     #[allow(unused_mut)]
@@ -1303,7 +1314,7 @@ impl CancelExportTaskInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CancelExportTask,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1365,10 +1376,17 @@ impl CancelExportTaskInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1384,7 +1402,7 @@ impl CancelExportTaskInput {
             "CancelExportTask",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CancelExportTaskInput`](crate::input::CancelExportTaskInput).
@@ -1518,11 +1536,6 @@ pub mod copy_db_cluster_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CopyDbClusterParameterGroupInputOperationOutputAlias =
-    crate::operation::CopyDBClusterParameterGroup;
-#[doc(hidden)]
-pub type CopyDbClusterParameterGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CopyDbClusterParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`CopyDBClusterParameterGroup`](crate::operation::CopyDBClusterParameterGroup)>
     #[allow(unused_mut)]
@@ -1534,7 +1547,7 @@ impl CopyDbClusterParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CopyDBClusterParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1595,10 +1608,17 @@ impl CopyDbClusterParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1614,7 +1634,7 @@ impl CopyDbClusterParameterGroupInput {
             "CopyDBClusterParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CopyDbClusterParameterGroupInput`](crate::input::CopyDbClusterParameterGroupInput).
@@ -1795,10 +1815,6 @@ pub mod copy_db_cluster_snapshot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CopyDbClusterSnapshotInputOperationOutputAlias = crate::operation::CopyDBClusterSnapshot;
-#[doc(hidden)]
-pub type CopyDbClusterSnapshotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CopyDbClusterSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`CopyDBClusterSnapshot`](crate::operation::CopyDBClusterSnapshot)>
     #[allow(unused_mut)]
@@ -1810,7 +1826,7 @@ impl CopyDbClusterSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CopyDBClusterSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1874,10 +1890,17 @@ impl CopyDbClusterSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1893,7 +1916,7 @@ impl CopyDbClusterSnapshotInput {
             "CopyDBClusterSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CopyDbClusterSnapshotInput`](crate::input::CopyDbClusterSnapshotInput).
@@ -2019,10 +2042,6 @@ pub mod copy_db_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CopyDbParameterGroupInputOperationOutputAlias = crate::operation::CopyDBParameterGroup;
-#[doc(hidden)]
-pub type CopyDbParameterGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CopyDbParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`CopyDBParameterGroup`](crate::operation::CopyDBParameterGroup)>
     #[allow(unused_mut)]
@@ -2034,7 +2053,7 @@ impl CopyDbParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CopyDBParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2098,10 +2117,17 @@ impl CopyDbParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2117,7 +2143,7 @@ impl CopyDbParameterGroupInput {
             "CopyDBParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CopyDbParameterGroupInput`](crate::input::CopyDbParameterGroupInput).
@@ -2343,10 +2369,6 @@ pub mod copy_db_snapshot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CopyDbSnapshotInputOperationOutputAlias = crate::operation::CopyDBSnapshot;
-#[doc(hidden)]
-pub type CopyDbSnapshotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CopyDbSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`CopyDBSnapshot`](crate::operation::CopyDBSnapshot)>
     #[allow(unused_mut)]
@@ -2358,7 +2380,7 @@ impl CopyDbSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CopyDBSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2420,10 +2442,17 @@ impl CopyDbSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2439,7 +2468,7 @@ impl CopyDbSnapshotInput {
             "CopyDBSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CopyDbSnapshotInput`](crate::input::CopyDbSnapshotInput).
@@ -2565,10 +2594,6 @@ pub mod copy_option_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CopyOptionGroupInputOperationOutputAlias = crate::operation::CopyOptionGroup;
-#[doc(hidden)]
-pub type CopyOptionGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CopyOptionGroupInput {
     /// Consumes the builder and constructs an Operation<[`CopyOptionGroup`](crate::operation::CopyOptionGroup)>
     #[allow(unused_mut)]
@@ -2580,7 +2605,7 @@ impl CopyOptionGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CopyOptionGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2642,10 +2667,17 @@ impl CopyOptionGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2661,7 +2693,7 @@ impl CopyOptionGroupInput {
             "CopyOptionGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CopyOptionGroupInput`](crate::input::CopyOptionGroupInput).
@@ -2884,11 +2916,6 @@ pub mod create_custom_db_engine_version_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateCustomDbEngineVersionInputOperationOutputAlias =
-    crate::operation::CreateCustomDBEngineVersion;
-#[doc(hidden)]
-pub type CreateCustomDbEngineVersionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateCustomDbEngineVersionInput {
     /// Consumes the builder and constructs an Operation<[`CreateCustomDBEngineVersion`](crate::operation::CreateCustomDBEngineVersion)>
     #[allow(unused_mut)]
@@ -2900,7 +2927,7 @@ impl CreateCustomDbEngineVersionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateCustomDBEngineVersion,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2961,10 +2988,17 @@ impl CreateCustomDbEngineVersionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2980,7 +3014,7 @@ impl CreateCustomDbEngineVersionInput {
             "CreateCustomDBEngineVersion",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateCustomDbEngineVersionInput`](crate::input::CreateCustomDbEngineVersionInput).
@@ -3042,6 +3076,7 @@ pub mod create_db_cluster_input {
         pub(crate) performance_insights_retention_period: std::option::Option<i32>,
         pub(crate) serverless_v2_scaling_configuration:
             std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+        pub(crate) network_type: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// Appends an item to `availability_zones`.
@@ -4037,6 +4072,32 @@ pub mod create_db_cluster_input {
             self.serverless_v2_scaling_configuration = input;
             self
         }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        /// <p>Valid for: Aurora DB clusters only</p>
+        pub fn network_type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.network_type = Some(input.into());
+            self
+        }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        /// <p>Valid for: Aurora DB clusters only</p>
+        pub fn set_network_type(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.network_type = input;
+            self
+        }
         /// Consumes the builder and constructs a [`CreateDbClusterInput`](crate::input::CreateDbClusterInput).
         pub fn build(
             self,
@@ -4088,14 +4149,11 @@ pub mod create_db_cluster_input {
                 performance_insights_kms_key_id: self.performance_insights_kms_key_id,
                 performance_insights_retention_period: self.performance_insights_retention_period,
                 serverless_v2_scaling_configuration: self.serverless_v2_scaling_configuration,
+                network_type: self.network_type,
             })
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbClusterInputOperationOutputAlias = crate::operation::CreateDBCluster;
-#[doc(hidden)]
-pub type CreateDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBCluster`](crate::operation::CreateDBCluster)>
     #[allow(unused_mut)]
@@ -4107,7 +4165,7 @@ impl CreateDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4169,10 +4227,17 @@ impl CreateDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4188,7 +4253,7 @@ impl CreateDbClusterInput {
             "CreateDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbClusterInput`](crate::input::CreateDbClusterInput).
@@ -4328,11 +4393,6 @@ pub mod create_db_cluster_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbClusterEndpointInputOperationOutputAlias =
-    crate::operation::CreateDBClusterEndpoint;
-#[doc(hidden)]
-pub type CreateDbClusterEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbClusterEndpointInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBClusterEndpoint`](crate::operation::CreateDBClusterEndpoint)>
     #[allow(unused_mut)]
@@ -4344,7 +4404,7 @@ impl CreateDbClusterEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBClusterEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4408,10 +4468,17 @@ impl CreateDbClusterEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4427,7 +4494,7 @@ impl CreateDbClusterEndpointInput {
             "CreateDBClusterEndpoint",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbClusterEndpointInput`](crate::input::CreateDbClusterEndpointInput).
@@ -4580,12 +4647,6 @@ pub mod create_db_cluster_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbClusterParameterGroupInputOperationOutputAlias =
-    crate::operation::CreateDBClusterParameterGroup;
-#[doc(hidden)]
-pub type CreateDbClusterParameterGroupInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbClusterParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBClusterParameterGroup`](crate::operation::CreateDBClusterParameterGroup)>
     #[allow(unused_mut)]
@@ -4597,7 +4658,7 @@ impl CreateDbClusterParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBClusterParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4658,10 +4719,17 @@ impl CreateDbClusterParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4677,7 +4745,7 @@ impl CreateDbClusterParameterGroupInput {
             "CreateDBClusterParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbClusterParameterGroupInput`](crate::input::CreateDbClusterParameterGroupInput).
@@ -4784,11 +4852,6 @@ pub mod create_db_cluster_snapshot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbClusterSnapshotInputOperationOutputAlias =
-    crate::operation::CreateDBClusterSnapshot;
-#[doc(hidden)]
-pub type CreateDbClusterSnapshotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbClusterSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBClusterSnapshot`](crate::operation::CreateDBClusterSnapshot)>
     #[allow(unused_mut)]
@@ -4800,7 +4863,7 @@ impl CreateDbClusterSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBClusterSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4864,10 +4927,17 @@ impl CreateDbClusterSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4883,7 +4953,7 @@ impl CreateDbClusterSnapshotInput {
             "CreateDBClusterSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbClusterSnapshotInput`](crate::input::CreateDbClusterSnapshotInput).
@@ -6409,10 +6479,6 @@ pub mod create_db_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbInstanceInputOperationOutputAlias = crate::operation::CreateDBInstance;
-#[doc(hidden)]
-pub type CreateDbInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbInstanceInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBInstance`](crate::operation::CreateDBInstance)>
     #[allow(unused_mut)]
@@ -6424,7 +6490,7 @@ impl CreateDbInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -6486,10 +6552,17 @@ impl CreateDbInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -6505,7 +6578,7 @@ impl CreateDbInstanceInput {
             "CreateDBInstance",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbInstanceInput`](crate::input::CreateDbInstanceInput).
@@ -7282,11 +7355,6 @@ pub mod create_db_instance_read_replica_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbInstanceReadReplicaInputOperationOutputAlias =
-    crate::operation::CreateDBInstanceReadReplica;
-#[doc(hidden)]
-pub type CreateDbInstanceReadReplicaInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbInstanceReadReplicaInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBInstanceReadReplica`](crate::operation::CreateDBInstanceReadReplica)>
     #[allow(unused_mut)]
@@ -7298,7 +7366,7 @@ impl CreateDbInstanceReadReplicaInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBInstanceReadReplica,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7359,10 +7427,17 @@ impl CreateDbInstanceReadReplicaInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7378,7 +7453,7 @@ impl CreateDbInstanceReadReplicaInput {
             "CreateDBInstanceReadReplica",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbInstanceReadReplicaInput`](crate::input::CreateDbInstanceReadReplicaInput).
@@ -7532,10 +7607,6 @@ pub mod create_db_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbParameterGroupInputOperationOutputAlias = crate::operation::CreateDBParameterGroup;
-#[doc(hidden)]
-pub type CreateDbParameterGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBParameterGroup`](crate::operation::CreateDBParameterGroup)>
     #[allow(unused_mut)]
@@ -7547,7 +7618,7 @@ impl CreateDbParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7611,10 +7682,17 @@ impl CreateDbParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7630,7 +7708,7 @@ impl CreateDbParameterGroupInput {
             "CreateDBParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbParameterGroupInput`](crate::input::CreateDbParameterGroupInput).
@@ -7819,10 +7897,6 @@ pub mod create_db_proxy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbProxyInputOperationOutputAlias = crate::operation::CreateDBProxy;
-#[doc(hidden)]
-pub type CreateDbProxyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbProxyInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBProxy`](crate::operation::CreateDBProxy)>
     #[allow(unused_mut)]
@@ -7834,7 +7908,7 @@ impl CreateDbProxyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBProxy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -7896,10 +7970,17 @@ impl CreateDbProxyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -7915,7 +7996,7 @@ impl CreateDbProxyInput {
             "CreateDBProxy",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbProxyInput`](crate::input::CreateDbProxyInput).
@@ -8050,10 +8131,6 @@ pub mod create_db_proxy_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbProxyEndpointInputOperationOutputAlias = crate::operation::CreateDBProxyEndpoint;
-#[doc(hidden)]
-pub type CreateDbProxyEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbProxyEndpointInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBProxyEndpoint`](crate::operation::CreateDBProxyEndpoint)>
     #[allow(unused_mut)]
@@ -8065,7 +8142,7 @@ impl CreateDbProxyEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBProxyEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8129,10 +8206,17 @@ impl CreateDbProxyEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8148,7 +8232,7 @@ impl CreateDbProxyEndpointInput {
             "CreateDBProxyEndpoint",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbProxyEndpointInput`](crate::input::CreateDbProxyEndpointInput).
@@ -8245,10 +8329,6 @@ pub mod create_db_security_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbSecurityGroupInputOperationOutputAlias = crate::operation::CreateDBSecurityGroup;
-#[doc(hidden)]
-pub type CreateDbSecurityGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbSecurityGroupInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBSecurityGroup`](crate::operation::CreateDBSecurityGroup)>
     #[allow(unused_mut)]
@@ -8260,7 +8340,7 @@ impl CreateDbSecurityGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBSecurityGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8324,10 +8404,17 @@ impl CreateDbSecurityGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8343,7 +8430,7 @@ impl CreateDbSecurityGroupInput {
             "CreateDBSecurityGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbSecurityGroupInput`](crate::input::CreateDbSecurityGroupInput).
@@ -8445,10 +8532,6 @@ pub mod create_db_snapshot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbSnapshotInputOperationOutputAlias = crate::operation::CreateDBSnapshot;
-#[doc(hidden)]
-pub type CreateDbSnapshotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBSnapshot`](crate::operation::CreateDBSnapshot)>
     #[allow(unused_mut)]
@@ -8460,7 +8543,7 @@ impl CreateDbSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8522,10 +8605,17 @@ impl CreateDbSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8541,7 +8631,7 @@ impl CreateDbSnapshotInput {
             "CreateDBSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbSnapshotInput`](crate::input::CreateDbSnapshotInput).
@@ -8657,10 +8747,6 @@ pub mod create_db_subnet_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateDbSubnetGroupInputOperationOutputAlias = crate::operation::CreateDBSubnetGroup;
-#[doc(hidden)]
-pub type CreateDbSubnetGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateDbSubnetGroupInput {
     /// Consumes the builder and constructs an Operation<[`CreateDBSubnetGroup`](crate::operation::CreateDBSubnetGroup)>
     #[allow(unused_mut)]
@@ -8672,7 +8758,7 @@ impl CreateDbSubnetGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateDBSubnetGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -8736,10 +8822,17 @@ impl CreateDbSubnetGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -8755,7 +8848,7 @@ impl CreateDbSubnetGroupInput {
             "CreateDBSubnetGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateDbSubnetGroupInput`](crate::input::CreateDbSubnetGroupInput).
@@ -8927,11 +9020,6 @@ pub mod create_event_subscription_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateEventSubscriptionInputOperationOutputAlias =
-    crate::operation::CreateEventSubscription;
-#[doc(hidden)]
-pub type CreateEventSubscriptionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateEventSubscriptionInput {
     /// Consumes the builder and constructs an Operation<[`CreateEventSubscription`](crate::operation::CreateEventSubscription)>
     #[allow(unused_mut)]
@@ -8943,7 +9031,7 @@ impl CreateEventSubscriptionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateEventSubscription,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9007,10 +9095,17 @@ impl CreateEventSubscriptionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9026,7 +9121,7 @@ impl CreateEventSubscriptionInput {
             "CreateEventSubscription",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateEventSubscriptionInput`](crate::input::CreateEventSubscriptionInput).
@@ -9152,10 +9247,6 @@ pub mod create_global_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateGlobalClusterInputOperationOutputAlias = crate::operation::CreateGlobalCluster;
-#[doc(hidden)]
-pub type CreateGlobalClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateGlobalClusterInput {
     /// Consumes the builder and constructs an Operation<[`CreateGlobalCluster`](crate::operation::CreateGlobalCluster)>
     #[allow(unused_mut)]
@@ -9167,7 +9258,7 @@ impl CreateGlobalClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateGlobalCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9229,10 +9320,17 @@ impl CreateGlobalClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9248,7 +9346,7 @@ impl CreateGlobalClusterInput {
             "CreateGlobalCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateGlobalClusterInput`](crate::input::CreateGlobalClusterInput).
@@ -9395,10 +9493,6 @@ pub mod create_option_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateOptionGroupInputOperationOutputAlias = crate::operation::CreateOptionGroup;
-#[doc(hidden)]
-pub type CreateOptionGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateOptionGroupInput {
     /// Consumes the builder and constructs an Operation<[`CreateOptionGroup`](crate::operation::CreateOptionGroup)>
     #[allow(unused_mut)]
@@ -9410,7 +9504,7 @@ impl CreateOptionGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateOptionGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9472,10 +9566,17 @@ impl CreateOptionGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9491,7 +9592,7 @@ impl CreateOptionGroupInput {
             "CreateOptionGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateOptionGroupInput`](crate::input::CreateOptionGroupInput).
@@ -9547,11 +9648,6 @@ pub mod delete_custom_db_engine_version_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteCustomDbEngineVersionInputOperationOutputAlias =
-    crate::operation::DeleteCustomDBEngineVersion;
-#[doc(hidden)]
-pub type DeleteCustomDbEngineVersionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteCustomDbEngineVersionInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCustomDBEngineVersion`](crate::operation::DeleteCustomDBEngineVersion)>
     #[allow(unused_mut)]
@@ -9563,7 +9659,7 @@ impl DeleteCustomDbEngineVersionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCustomDBEngineVersion,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9624,10 +9720,17 @@ impl DeleteCustomDbEngineVersionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9643,7 +9746,7 @@ impl DeleteCustomDbEngineVersionInput {
             "DeleteCustomDBEngineVersion",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteCustomDbEngineVersionInput`](crate::input::DeleteCustomDbEngineVersionInput).
@@ -9743,10 +9846,6 @@ pub mod delete_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbClusterInputOperationOutputAlias = crate::operation::DeleteDBCluster;
-#[doc(hidden)]
-pub type DeleteDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBCluster`](crate::operation::DeleteDBCluster)>
     #[allow(unused_mut)]
@@ -9758,7 +9857,7 @@ impl DeleteDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9820,10 +9919,17 @@ impl DeleteDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9839,7 +9945,7 @@ impl DeleteDbClusterInput {
             "DeleteDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbClusterInput`](crate::input::DeleteDbClusterInput).
@@ -9886,11 +9992,6 @@ pub mod delete_db_cluster_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbClusterEndpointInputOperationOutputAlias =
-    crate::operation::DeleteDBClusterEndpoint;
-#[doc(hidden)]
-pub type DeleteDbClusterEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbClusterEndpointInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBClusterEndpoint`](crate::operation::DeleteDBClusterEndpoint)>
     #[allow(unused_mut)]
@@ -9902,7 +10003,7 @@ impl DeleteDbClusterEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBClusterEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -9966,10 +10067,17 @@ impl DeleteDbClusterEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -9985,7 +10093,7 @@ impl DeleteDbClusterEndpointInput {
             "DeleteDBClusterEndpoint",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbClusterEndpointInput`](crate::input::DeleteDbClusterEndpointInput).
@@ -10044,12 +10152,6 @@ pub mod delete_db_cluster_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbClusterParameterGroupInputOperationOutputAlias =
-    crate::operation::DeleteDBClusterParameterGroup;
-#[doc(hidden)]
-pub type DeleteDbClusterParameterGroupInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbClusterParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBClusterParameterGroup`](crate::operation::DeleteDBClusterParameterGroup)>
     #[allow(unused_mut)]
@@ -10061,7 +10163,7 @@ impl DeleteDbClusterParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBClusterParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10122,10 +10224,17 @@ impl DeleteDbClusterParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10141,7 +10250,7 @@ impl DeleteDbClusterParameterGroupInput {
             "DeleteDBClusterParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbClusterParameterGroupInput`](crate::input::DeleteDbClusterParameterGroupInput).
@@ -10190,11 +10299,6 @@ pub mod delete_db_cluster_snapshot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbClusterSnapshotInputOperationOutputAlias =
-    crate::operation::DeleteDBClusterSnapshot;
-#[doc(hidden)]
-pub type DeleteDbClusterSnapshotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbClusterSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBClusterSnapshot`](crate::operation::DeleteDBClusterSnapshot)>
     #[allow(unused_mut)]
@@ -10206,7 +10310,7 @@ impl DeleteDbClusterSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBClusterSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10270,10 +10374,17 @@ impl DeleteDbClusterSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10289,7 +10400,7 @@ impl DeleteDbClusterSnapshotInput {
             "DeleteDBClusterSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbClusterSnapshotInput`](crate::input::DeleteDbClusterSnapshotInput).
@@ -10411,10 +10522,6 @@ pub mod delete_db_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbInstanceInputOperationOutputAlias = crate::operation::DeleteDBInstance;
-#[doc(hidden)]
-pub type DeleteDbInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbInstanceInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBInstance`](crate::operation::DeleteDBInstance)>
     #[allow(unused_mut)]
@@ -10426,7 +10533,7 @@ impl DeleteDbInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10488,10 +10595,17 @@ impl DeleteDbInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10507,7 +10621,7 @@ impl DeleteDbInstanceInput {
             "DeleteDBInstance",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbInstanceInput`](crate::input::DeleteDbInstanceInput).
@@ -10571,12 +10685,6 @@ pub mod delete_db_instance_automated_backup_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbInstanceAutomatedBackupInputOperationOutputAlias =
-    crate::operation::DeleteDBInstanceAutomatedBackup;
-#[doc(hidden)]
-pub type DeleteDbInstanceAutomatedBackupInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbInstanceAutomatedBackupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBInstanceAutomatedBackup`](crate::operation::DeleteDBInstanceAutomatedBackup)>
     #[allow(unused_mut)]
@@ -10588,7 +10696,7 @@ impl DeleteDbInstanceAutomatedBackupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBInstanceAutomatedBackup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10649,10 +10757,17 @@ impl DeleteDbInstanceAutomatedBackupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10668,7 +10783,7 @@ impl DeleteDbInstanceAutomatedBackupInput {
             "DeleteDBInstanceAutomatedBackup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbInstanceAutomatedBackupInput`](crate::input::DeleteDbInstanceAutomatedBackupInput).
@@ -10722,10 +10837,6 @@ pub mod delete_db_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbParameterGroupInputOperationOutputAlias = crate::operation::DeleteDBParameterGroup;
-#[doc(hidden)]
-pub type DeleteDbParameterGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBParameterGroup`](crate::operation::DeleteDBParameterGroup)>
     #[allow(unused_mut)]
@@ -10737,7 +10848,7 @@ impl DeleteDbParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10801,10 +10912,17 @@ impl DeleteDbParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10820,7 +10938,7 @@ impl DeleteDbParameterGroupInput {
             "DeleteDBParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbParameterGroupInput`](crate::input::DeleteDbParameterGroupInput).
@@ -10862,10 +10980,6 @@ pub mod delete_db_proxy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbProxyInputOperationOutputAlias = crate::operation::DeleteDBProxy;
-#[doc(hidden)]
-pub type DeleteDbProxyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbProxyInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBProxy`](crate::operation::DeleteDBProxy)>
     #[allow(unused_mut)]
@@ -10877,7 +10991,7 @@ impl DeleteDbProxyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBProxy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -10939,10 +11053,17 @@ impl DeleteDbProxyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -10958,7 +11079,7 @@ impl DeleteDbProxyInput {
             "DeleteDBProxy",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbProxyInput`](crate::input::DeleteDbProxyInput).
@@ -11000,10 +11121,6 @@ pub mod delete_db_proxy_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbProxyEndpointInputOperationOutputAlias = crate::operation::DeleteDBProxyEndpoint;
-#[doc(hidden)]
-pub type DeleteDbProxyEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbProxyEndpointInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBProxyEndpoint`](crate::operation::DeleteDBProxyEndpoint)>
     #[allow(unused_mut)]
@@ -11015,7 +11132,7 @@ impl DeleteDbProxyEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBProxyEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11079,10 +11196,17 @@ impl DeleteDbProxyEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11098,7 +11222,7 @@ impl DeleteDbProxyEndpointInput {
             "DeleteDBProxyEndpoint",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbProxyEndpointInput`](crate::input::DeleteDbProxyEndpointInput).
@@ -11158,10 +11282,6 @@ pub mod delete_db_security_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbSecurityGroupInputOperationOutputAlias = crate::operation::DeleteDBSecurityGroup;
-#[doc(hidden)]
-pub type DeleteDbSecurityGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbSecurityGroupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBSecurityGroup`](crate::operation::DeleteDBSecurityGroup)>
     #[allow(unused_mut)]
@@ -11173,7 +11293,7 @@ impl DeleteDbSecurityGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBSecurityGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11237,10 +11357,17 @@ impl DeleteDbSecurityGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11256,7 +11383,7 @@ impl DeleteDbSecurityGroupInput {
             "DeleteDBSecurityGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbSecurityGroupInput`](crate::input::DeleteDbSecurityGroupInput).
@@ -11300,10 +11427,6 @@ pub mod delete_db_snapshot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbSnapshotInputOperationOutputAlias = crate::operation::DeleteDBSnapshot;
-#[doc(hidden)]
-pub type DeleteDbSnapshotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBSnapshot`](crate::operation::DeleteDBSnapshot)>
     #[allow(unused_mut)]
@@ -11315,7 +11438,7 @@ impl DeleteDbSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11377,10 +11500,17 @@ impl DeleteDbSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11396,7 +11526,7 @@ impl DeleteDbSnapshotInput {
             "DeleteDBSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbSnapshotInput`](crate::input::DeleteDbSnapshotInput).
@@ -11446,10 +11576,6 @@ pub mod delete_db_subnet_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDbSubnetGroupInputOperationOutputAlias = crate::operation::DeleteDBSubnetGroup;
-#[doc(hidden)]
-pub type DeleteDbSubnetGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDbSubnetGroupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDBSubnetGroup`](crate::operation::DeleteDBSubnetGroup)>
     #[allow(unused_mut)]
@@ -11461,7 +11587,7 @@ impl DeleteDbSubnetGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDBSubnetGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11525,10 +11651,17 @@ impl DeleteDbSubnetGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11544,7 +11677,7 @@ impl DeleteDbSubnetGroupInput {
             "DeleteDBSubnetGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDbSubnetGroupInput`](crate::input::DeleteDbSubnetGroupInput).
@@ -11588,11 +11721,6 @@ pub mod delete_event_subscription_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteEventSubscriptionInputOperationOutputAlias =
-    crate::operation::DeleteEventSubscription;
-#[doc(hidden)]
-pub type DeleteEventSubscriptionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteEventSubscriptionInput {
     /// Consumes the builder and constructs an Operation<[`DeleteEventSubscription`](crate::operation::DeleteEventSubscription)>
     #[allow(unused_mut)]
@@ -11604,7 +11732,7 @@ impl DeleteEventSubscriptionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteEventSubscription,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11668,10 +11796,17 @@ impl DeleteEventSubscriptionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11687,7 +11822,7 @@ impl DeleteEventSubscriptionInput {
             "DeleteEventSubscription",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteEventSubscriptionInput`](crate::input::DeleteEventSubscriptionInput).
@@ -11729,10 +11864,6 @@ pub mod delete_global_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteGlobalClusterInputOperationOutputAlias = crate::operation::DeleteGlobalCluster;
-#[doc(hidden)]
-pub type DeleteGlobalClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteGlobalClusterInput {
     /// Consumes the builder and constructs an Operation<[`DeleteGlobalCluster`](crate::operation::DeleteGlobalCluster)>
     #[allow(unused_mut)]
@@ -11744,7 +11875,7 @@ impl DeleteGlobalClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteGlobalCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11806,10 +11937,17 @@ impl DeleteGlobalClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11825,7 +11963,7 @@ impl DeleteGlobalClusterInput {
             "DeleteGlobalCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteGlobalClusterInput`](crate::input::DeleteGlobalClusterInput).
@@ -11871,10 +12009,6 @@ pub mod delete_option_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteOptionGroupInputOperationOutputAlias = crate::operation::DeleteOptionGroup;
-#[doc(hidden)]
-pub type DeleteOptionGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteOptionGroupInput {
     /// Consumes the builder and constructs an Operation<[`DeleteOptionGroup`](crate::operation::DeleteOptionGroup)>
     #[allow(unused_mut)]
@@ -11886,7 +12020,7 @@ impl DeleteOptionGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteOptionGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -11948,10 +12082,17 @@ impl DeleteOptionGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -11967,7 +12108,7 @@ impl DeleteOptionGroupInput {
             "DeleteOptionGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteOptionGroupInput`](crate::input::DeleteOptionGroupInput).
@@ -12068,11 +12209,6 @@ pub mod deregister_db_proxy_targets_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeregisterDbProxyTargetsInputOperationOutputAlias =
-    crate::operation::DeregisterDBProxyTargets;
-#[doc(hidden)]
-pub type DeregisterDbProxyTargetsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeregisterDbProxyTargetsInput {
     /// Consumes the builder and constructs an Operation<[`DeregisterDBProxyTargets`](crate::operation::DeregisterDBProxyTargets)>
     #[allow(unused_mut)]
@@ -12084,7 +12220,7 @@ impl DeregisterDbProxyTargetsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeregisterDBProxyTargets,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12148,10 +12284,17 @@ impl DeregisterDbProxyTargetsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12167,7 +12310,7 @@ impl DeregisterDbProxyTargetsInput {
             "DeregisterDBProxyTargets",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeregisterDbProxyTargetsInput`](crate::input::DeregisterDbProxyTargetsInput).
@@ -12194,11 +12337,6 @@ pub mod describe_account_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAccountAttributesInputOperationOutputAlias =
-    crate::operation::DescribeAccountAttributes;
-#[doc(hidden)]
-pub type DescribeAccountAttributesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAccountAttributesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAccountAttributes`](crate::operation::DescribeAccountAttributes)>
     #[allow(unused_mut)]
@@ -12210,7 +12348,7 @@ impl DescribeAccountAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAccountAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12267,10 +12405,17 @@ impl DescribeAccountAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12286,7 +12431,7 @@ impl DescribeAccountAttributesInput {
             "DescribeAccountAttributes",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAccountAttributesInput`](crate::input::DescribeAccountAttributesInput).
@@ -12385,10 +12530,6 @@ pub mod describe_certificates_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCertificatesInputOperationOutputAlias = crate::operation::DescribeCertificates;
-#[doc(hidden)]
-pub type DescribeCertificatesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCertificatesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCertificates`](crate::operation::DescribeCertificates)>
     #[allow(unused_mut)]
@@ -12400,7 +12541,7 @@ impl DescribeCertificatesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCertificates,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12462,10 +12603,17 @@ impl DescribeCertificatesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12481,7 +12629,7 @@ impl DescribeCertificatesInput {
             "DescribeCertificates",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCertificatesInput`](crate::input::DescribeCertificatesInput).
@@ -12633,11 +12781,6 @@ pub mod describe_db_cluster_backtracks_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbClusterBacktracksInputOperationOutputAlias =
-    crate::operation::DescribeDBClusterBacktracks;
-#[doc(hidden)]
-pub type DescribeDbClusterBacktracksInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbClusterBacktracksInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBClusterBacktracks`](crate::operation::DescribeDBClusterBacktracks)>
     #[allow(unused_mut)]
@@ -12649,7 +12792,7 @@ impl DescribeDbClusterBacktracksInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBClusterBacktracks,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12710,10 +12853,17 @@ impl DescribeDbClusterBacktracksInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12729,7 +12879,7 @@ impl DescribeDbClusterBacktracksInput {
             "DescribeDBClusterBacktracks",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbClusterBacktracksInput`](crate::input::DescribeDbClusterBacktracksInput).
@@ -12840,11 +12990,6 @@ pub mod describe_db_cluster_endpoints_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbClusterEndpointsInputOperationOutputAlias =
-    crate::operation::DescribeDBClusterEndpoints;
-#[doc(hidden)]
-pub type DescribeDbClusterEndpointsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbClusterEndpointsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBClusterEndpoints`](crate::operation::DescribeDBClusterEndpoints)>
     #[allow(unused_mut)]
@@ -12856,7 +13001,7 @@ impl DescribeDbClusterEndpointsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBClusterEndpoints,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -12917,10 +13062,17 @@ impl DescribeDbClusterEndpointsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -12936,7 +13088,7 @@ impl DescribeDbClusterEndpointsInput {
             "DescribeDBClusterEndpoints",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbClusterEndpointsInput`](crate::input::DescribeDbClusterEndpointsInput).
@@ -13040,12 +13192,6 @@ pub mod describe_db_cluster_parameter_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbClusterParameterGroupsInputOperationOutputAlias =
-    crate::operation::DescribeDBClusterParameterGroups;
-#[doc(hidden)]
-pub type DescribeDbClusterParameterGroupsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbClusterParameterGroupsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBClusterParameterGroups`](crate::operation::DescribeDBClusterParameterGroups)>
     #[allow(unused_mut)]
@@ -13057,7 +13203,7 @@ impl DescribeDbClusterParameterGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBClusterParameterGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13118,10 +13264,17 @@ impl DescribeDbClusterParameterGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -13137,7 +13290,7 @@ impl DescribeDbClusterParameterGroupsInput {
             "DescribeDBClusterParameterGroups",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbClusterParameterGroupsInput`](crate::input::DescribeDbClusterParameterGroupsInput).
@@ -13253,11 +13406,6 @@ pub mod describe_db_cluster_parameters_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbClusterParametersInputOperationOutputAlias =
-    crate::operation::DescribeDBClusterParameters;
-#[doc(hidden)]
-pub type DescribeDbClusterParametersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbClusterParametersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBClusterParameters`](crate::operation::DescribeDBClusterParameters)>
     #[allow(unused_mut)]
@@ -13269,7 +13417,7 @@ impl DescribeDbClusterParametersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBClusterParameters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13330,10 +13478,17 @@ impl DescribeDbClusterParametersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -13349,7 +13504,7 @@ impl DescribeDbClusterParametersInput {
             "DescribeDBClusterParameters",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbClusterParametersInput`](crate::input::DescribeDbClusterParametersInput).
@@ -13474,10 +13629,6 @@ pub mod describe_db_clusters_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbClustersInputOperationOutputAlias = crate::operation::DescribeDBClusters;
-#[doc(hidden)]
-pub type DescribeDbClustersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbClustersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBClusters`](crate::operation::DescribeDBClusters)>
     #[allow(unused_mut)]
@@ -13489,7 +13640,7 @@ impl DescribeDbClustersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBClusters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13551,10 +13702,17 @@ impl DescribeDbClustersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -13570,7 +13728,7 @@ impl DescribeDbClustersInput {
             "DescribeDBClusters",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbClustersInput`](crate::input::DescribeDbClustersInput).
@@ -13617,12 +13775,6 @@ pub mod describe_db_cluster_snapshot_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbClusterSnapshotAttributesInputOperationOutputAlias =
-    crate::operation::DescribeDBClusterSnapshotAttributes;
-#[doc(hidden)]
-pub type DescribeDbClusterSnapshotAttributesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbClusterSnapshotAttributesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBClusterSnapshotAttributes`](crate::operation::DescribeDBClusterSnapshotAttributes)>
     #[allow(unused_mut)]
@@ -13634,7 +13786,7 @@ impl DescribeDbClusterSnapshotAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBClusterSnapshotAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13695,10 +13847,17 @@ impl DescribeDbClusterSnapshotAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -13714,7 +13873,7 @@ impl DescribeDbClusterSnapshotAttributesInput {
             "DescribeDBClusterSnapshotAttributes",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbClusterSnapshotAttributesInput`](crate::input::DescribeDbClusterSnapshotAttributesInput).
@@ -13916,11 +14075,6 @@ pub mod describe_db_cluster_snapshots_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbClusterSnapshotsInputOperationOutputAlias =
-    crate::operation::DescribeDBClusterSnapshots;
-#[doc(hidden)]
-pub type DescribeDbClusterSnapshotsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbClusterSnapshotsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBClusterSnapshots`](crate::operation::DescribeDBClusterSnapshots)>
     #[allow(unused_mut)]
@@ -13932,7 +14086,7 @@ impl DescribeDbClusterSnapshotsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBClusterSnapshots,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -13993,10 +14147,17 @@ impl DescribeDbClusterSnapshotsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -14012,7 +14173,7 @@ impl DescribeDbClusterSnapshotsInput {
             "DescribeDBClusterSnapshots",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbClusterSnapshotsInput`](crate::input::DescribeDbClusterSnapshotsInput).
@@ -14273,11 +14434,6 @@ pub mod describe_db_engine_versions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbEngineVersionsInputOperationOutputAlias =
-    crate::operation::DescribeDBEngineVersions;
-#[doc(hidden)]
-pub type DescribeDbEngineVersionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbEngineVersionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBEngineVersions`](crate::operation::DescribeDBEngineVersions)>
     #[allow(unused_mut)]
@@ -14289,7 +14445,7 @@ impl DescribeDbEngineVersionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBEngineVersions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -14353,10 +14509,17 @@ impl DescribeDbEngineVersionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -14372,7 +14535,7 @@ impl DescribeDbEngineVersionsInput {
             "DescribeDBEngineVersions",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbEngineVersionsInput`](crate::input::DescribeDbEngineVersionsInput).
@@ -14520,12 +14683,6 @@ pub mod describe_db_instance_automated_backups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbInstanceAutomatedBackupsInputOperationOutputAlias =
-    crate::operation::DescribeDBInstanceAutomatedBackups;
-#[doc(hidden)]
-pub type DescribeDbInstanceAutomatedBackupsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbInstanceAutomatedBackupsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBInstanceAutomatedBackups`](crate::operation::DescribeDBInstanceAutomatedBackups)>
     #[allow(unused_mut)]
@@ -14537,7 +14694,7 @@ impl DescribeDbInstanceAutomatedBackupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBInstanceAutomatedBackups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -14598,10 +14755,17 @@ impl DescribeDbInstanceAutomatedBackupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -14617,7 +14781,7 @@ impl DescribeDbInstanceAutomatedBackupsInput {
             "DescribeDBInstanceAutomatedBackups",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbInstanceAutomatedBackupsInput`](crate::input::DescribeDbInstanceAutomatedBackupsInput).
@@ -14732,10 +14896,6 @@ pub mod describe_db_instances_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbInstancesInputOperationOutputAlias = crate::operation::DescribeDBInstances;
-#[doc(hidden)]
-pub type DescribeDbInstancesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbInstancesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBInstances`](crate::operation::DescribeDBInstances)>
     #[allow(unused_mut)]
@@ -14747,7 +14907,7 @@ impl DescribeDbInstancesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBInstances,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -14809,10 +14969,17 @@ impl DescribeDbInstancesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -14828,7 +14995,7 @@ impl DescribeDbInstancesInput {
             "DescribeDBInstances",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbInstancesInput`](crate::input::DescribeDbInstancesInput).
@@ -14962,10 +15129,6 @@ pub mod describe_db_log_files_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbLogFilesInputOperationOutputAlias = crate::operation::DescribeDBLogFiles;
-#[doc(hidden)]
-pub type DescribeDbLogFilesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbLogFilesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBLogFiles`](crate::operation::DescribeDBLogFiles)>
     #[allow(unused_mut)]
@@ -14977,7 +15140,7 @@ impl DescribeDbLogFilesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBLogFiles,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -15039,10 +15202,17 @@ impl DescribeDbLogFilesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -15058,7 +15228,7 @@ impl DescribeDbLogFilesInput {
             "DescribeDBLogFiles",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbLogFilesInput`](crate::input::DescribeDbLogFilesInput).
@@ -15159,11 +15329,6 @@ pub mod describe_db_parameter_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbParameterGroupsInputOperationOutputAlias =
-    crate::operation::DescribeDBParameterGroups;
-#[doc(hidden)]
-pub type DescribeDbParameterGroupsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbParameterGroupsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBParameterGroups`](crate::operation::DescribeDBParameterGroups)>
     #[allow(unused_mut)]
@@ -15175,7 +15340,7 @@ impl DescribeDbParameterGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBParameterGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -15239,10 +15404,17 @@ impl DescribeDbParameterGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -15258,7 +15430,7 @@ impl DescribeDbParameterGroupsInput {
             "DescribeDBParameterGroups",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbParameterGroupsInput`](crate::input::DescribeDbParameterGroupsInput).
@@ -15373,10 +15545,6 @@ pub mod describe_db_parameters_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbParametersInputOperationOutputAlias = crate::operation::DescribeDBParameters;
-#[doc(hidden)]
-pub type DescribeDbParametersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbParametersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBParameters`](crate::operation::DescribeDBParameters)>
     #[allow(unused_mut)]
@@ -15388,7 +15556,7 @@ impl DescribeDbParametersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBParameters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -15452,10 +15620,17 @@ impl DescribeDbParametersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -15471,7 +15646,7 @@ impl DescribeDbParametersInput {
             "DescribeDBParameters",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbParametersInput`](crate::input::DescribeDbParametersInput).
@@ -15562,10 +15737,6 @@ pub mod describe_db_proxies_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbProxiesInputOperationOutputAlias = crate::operation::DescribeDBProxies;
-#[doc(hidden)]
-pub type DescribeDbProxiesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbProxiesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBProxies`](crate::operation::DescribeDBProxies)>
     #[allow(unused_mut)]
@@ -15577,7 +15748,7 @@ impl DescribeDbProxiesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBProxies,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -15639,10 +15810,17 @@ impl DescribeDbProxiesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -15658,7 +15836,7 @@ impl DescribeDbProxiesInput {
             "DescribeDBProxies",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbProxiesInput`](crate::input::DescribeDbProxiesInput).
@@ -15766,11 +15944,6 @@ pub mod describe_db_proxy_endpoints_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbProxyEndpointsInputOperationOutputAlias =
-    crate::operation::DescribeDBProxyEndpoints;
-#[doc(hidden)]
-pub type DescribeDbProxyEndpointsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbProxyEndpointsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBProxyEndpoints`](crate::operation::DescribeDBProxyEndpoints)>
     #[allow(unused_mut)]
@@ -15782,7 +15955,7 @@ impl DescribeDbProxyEndpointsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBProxyEndpoints,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -15846,10 +16019,17 @@ impl DescribeDbProxyEndpointsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -15865,7 +16045,7 @@ impl DescribeDbProxyEndpointsInput {
             "DescribeDBProxyEndpoints",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbProxyEndpointsInput`](crate::input::DescribeDbProxyEndpointsInput).
@@ -15973,11 +16153,6 @@ pub mod describe_db_proxy_target_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbProxyTargetGroupsInputOperationOutputAlias =
-    crate::operation::DescribeDBProxyTargetGroups;
-#[doc(hidden)]
-pub type DescribeDbProxyTargetGroupsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbProxyTargetGroupsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBProxyTargetGroups`](crate::operation::DescribeDBProxyTargetGroups)>
     #[allow(unused_mut)]
@@ -15989,7 +16164,7 @@ impl DescribeDbProxyTargetGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBProxyTargetGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -16050,10 +16225,17 @@ impl DescribeDbProxyTargetGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -16069,7 +16251,7 @@ impl DescribeDbProxyTargetGroupsInput {
             "DescribeDBProxyTargetGroups",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbProxyTargetGroupsInput`](crate::input::DescribeDbProxyTargetGroupsInput).
@@ -16175,10 +16357,6 @@ pub mod describe_db_proxy_targets_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbProxyTargetsInputOperationOutputAlias = crate::operation::DescribeDBProxyTargets;
-#[doc(hidden)]
-pub type DescribeDbProxyTargetsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbProxyTargetsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBProxyTargets`](crate::operation::DescribeDBProxyTargets)>
     #[allow(unused_mut)]
@@ -16190,7 +16368,7 @@ impl DescribeDbProxyTargetsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBProxyTargets,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -16254,10 +16432,17 @@ impl DescribeDbProxyTargetsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -16273,7 +16458,7 @@ impl DescribeDbProxyTargetsInput {
             "DescribeDBProxyTargets",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbProxyTargetsInput`](crate::input::DescribeDbProxyTargetsInput).
@@ -16366,11 +16551,6 @@ pub mod describe_db_security_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbSecurityGroupsInputOperationOutputAlias =
-    crate::operation::DescribeDBSecurityGroups;
-#[doc(hidden)]
-pub type DescribeDbSecurityGroupsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbSecurityGroupsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBSecurityGroups`](crate::operation::DescribeDBSecurityGroups)>
     #[allow(unused_mut)]
@@ -16382,7 +16562,7 @@ impl DescribeDbSecurityGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBSecurityGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -16446,10 +16626,17 @@ impl DescribeDbSecurityGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -16465,7 +16652,7 @@ impl DescribeDbSecurityGroupsInput {
             "DescribeDBSecurityGroups",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbSecurityGroupsInput`](crate::input::DescribeDbSecurityGroupsInput).
@@ -16509,12 +16696,6 @@ pub mod describe_db_snapshot_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbSnapshotAttributesInputOperationOutputAlias =
-    crate::operation::DescribeDBSnapshotAttributes;
-#[doc(hidden)]
-pub type DescribeDbSnapshotAttributesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbSnapshotAttributesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBSnapshotAttributes`](crate::operation::DescribeDBSnapshotAttributes)>
     #[allow(unused_mut)]
@@ -16526,7 +16707,7 @@ impl DescribeDbSnapshotAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBSnapshotAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -16587,10 +16768,17 @@ impl DescribeDbSnapshotAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -16606,7 +16794,7 @@ impl DescribeDbSnapshotAttributesInput {
             "DescribeDBSnapshotAttributes",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbSnapshotAttributesInput`](crate::input::DescribeDbSnapshotAttributesInput).
@@ -16826,10 +17014,6 @@ pub mod describe_db_snapshots_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbSnapshotsInputOperationOutputAlias = crate::operation::DescribeDBSnapshots;
-#[doc(hidden)]
-pub type DescribeDbSnapshotsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbSnapshotsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBSnapshots`](crate::operation::DescribeDBSnapshots)>
     #[allow(unused_mut)]
@@ -16841,7 +17025,7 @@ impl DescribeDbSnapshotsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBSnapshots,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -16903,10 +17087,17 @@ impl DescribeDbSnapshotsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -16922,7 +17113,7 @@ impl DescribeDbSnapshotsInput {
             "DescribeDBSnapshots",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbSnapshotsInput`](crate::input::DescribeDbSnapshotsInput).
@@ -17013,10 +17204,6 @@ pub mod describe_db_subnet_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeDbSubnetGroupsInputOperationOutputAlias = crate::operation::DescribeDBSubnetGroups;
-#[doc(hidden)]
-pub type DescribeDbSubnetGroupsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeDbSubnetGroupsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeDBSubnetGroups`](crate::operation::DescribeDBSubnetGroups)>
     #[allow(unused_mut)]
@@ -17028,7 +17215,7 @@ impl DescribeDbSubnetGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeDBSubnetGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -17092,10 +17279,17 @@ impl DescribeDbSubnetGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -17111,7 +17305,7 @@ impl DescribeDbSubnetGroupsInput {
             "DescribeDBSubnetGroups",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeDbSubnetGroupsInput`](crate::input::DescribeDbSubnetGroupsInput).
@@ -17204,12 +17398,6 @@ pub mod describe_engine_default_cluster_parameters_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeEngineDefaultClusterParametersInputOperationOutputAlias =
-    crate::operation::DescribeEngineDefaultClusterParameters;
-#[doc(hidden)]
-pub type DescribeEngineDefaultClusterParametersInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeEngineDefaultClusterParametersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeEngineDefaultClusterParameters`](crate::operation::DescribeEngineDefaultClusterParameters)>
     #[allow(unused_mut)]
@@ -17221,7 +17409,7 @@ impl DescribeEngineDefaultClusterParametersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeEngineDefaultClusterParameters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -17282,10 +17470,17 @@ impl DescribeEngineDefaultClusterParametersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -17301,7 +17496,7 @@ impl DescribeEngineDefaultClusterParametersInput {
             "DescribeEngineDefaultClusterParameters",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeEngineDefaultClusterParametersInput`](crate::input::DescribeEngineDefaultClusterParametersInput).
@@ -17478,12 +17673,6 @@ pub mod describe_engine_default_parameters_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeEngineDefaultParametersInputOperationOutputAlias =
-    crate::operation::DescribeEngineDefaultParameters;
-#[doc(hidden)]
-pub type DescribeEngineDefaultParametersInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeEngineDefaultParametersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeEngineDefaultParameters`](crate::operation::DescribeEngineDefaultParameters)>
     #[allow(unused_mut)]
@@ -17495,7 +17684,7 @@ impl DescribeEngineDefaultParametersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeEngineDefaultParameters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -17556,10 +17745,17 @@ impl DescribeEngineDefaultParametersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -17575,7 +17771,7 @@ impl DescribeEngineDefaultParametersInput {
             "DescribeEngineDefaultParameters",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeEngineDefaultParametersInput`](crate::input::DescribeEngineDefaultParametersInput).
@@ -17639,11 +17835,6 @@ pub mod describe_event_categories_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeEventCategoriesInputOperationOutputAlias =
-    crate::operation::DescribeEventCategories;
-#[doc(hidden)]
-pub type DescribeEventCategoriesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeEventCategoriesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeEventCategories`](crate::operation::DescribeEventCategories)>
     #[allow(unused_mut)]
@@ -17655,7 +17846,7 @@ impl DescribeEventCategoriesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeEventCategories,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -17719,10 +17910,17 @@ impl DescribeEventCategoriesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -17738,7 +17936,7 @@ impl DescribeEventCategoriesInput {
             "DescribeEventCategories",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeEventCategoriesInput`](crate::input::DescribeEventCategoriesInput).
@@ -17937,10 +18135,6 @@ pub mod describe_events_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeEventsInputOperationOutputAlias = crate::operation::DescribeEvents;
-#[doc(hidden)]
-pub type DescribeEventsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeEventsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeEvents`](crate::operation::DescribeEvents)>
     #[allow(unused_mut)]
@@ -17952,7 +18146,7 @@ impl DescribeEventsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeEvents,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -18014,10 +18208,17 @@ impl DescribeEventsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -18033,7 +18234,7 @@ impl DescribeEventsInput {
             "DescribeEvents",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeEventsInput`](crate::input::DescribeEventsInput).
@@ -18126,11 +18327,6 @@ pub mod describe_event_subscriptions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeEventSubscriptionsInputOperationOutputAlias =
-    crate::operation::DescribeEventSubscriptions;
-#[doc(hidden)]
-pub type DescribeEventSubscriptionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeEventSubscriptionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeEventSubscriptions`](crate::operation::DescribeEventSubscriptions)>
     #[allow(unused_mut)]
@@ -18142,7 +18338,7 @@ impl DescribeEventSubscriptionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeEventSubscriptions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -18206,10 +18402,17 @@ impl DescribeEventSubscriptionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -18225,7 +18428,7 @@ impl DescribeEventSubscriptionsInput {
             "DescribeEventSubscriptions",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeEventSubscriptionsInput`](crate::input::DescribeEventSubscriptionsInput).
@@ -18358,10 +18561,6 @@ pub mod describe_export_tasks_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeExportTasksInputOperationOutputAlias = crate::operation::DescribeExportTasks;
-#[doc(hidden)]
-pub type DescribeExportTasksInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeExportTasksInput {
     /// Consumes the builder and constructs an Operation<[`DescribeExportTasks`](crate::operation::DescribeExportTasks)>
     #[allow(unused_mut)]
@@ -18373,7 +18572,7 @@ impl DescribeExportTasksInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeExportTasks,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -18435,10 +18634,17 @@ impl DescribeExportTasksInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -18454,7 +18660,7 @@ impl DescribeExportTasksInput {
             "DescribeExportTasks",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeExportTasksInput`](crate::input::DescribeExportTasksInput).
@@ -18553,10 +18759,6 @@ pub mod describe_global_clusters_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeGlobalClustersInputOperationOutputAlias = crate::operation::DescribeGlobalClusters;
-#[doc(hidden)]
-pub type DescribeGlobalClustersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeGlobalClustersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeGlobalClusters`](crate::operation::DescribeGlobalClusters)>
     #[allow(unused_mut)]
@@ -18568,7 +18770,7 @@ impl DescribeGlobalClustersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeGlobalClusters,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -18632,10 +18834,17 @@ impl DescribeGlobalClustersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -18651,7 +18860,7 @@ impl DescribeGlobalClustersInput {
             "DescribeGlobalClusters",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeGlobalClustersInput`](crate::input::DescribeGlobalClustersInput).
@@ -18784,11 +18993,6 @@ pub mod describe_option_group_options_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeOptionGroupOptionsInputOperationOutputAlias =
-    crate::operation::DescribeOptionGroupOptions;
-#[doc(hidden)]
-pub type DescribeOptionGroupOptionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeOptionGroupOptionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeOptionGroupOptions`](crate::operation::DescribeOptionGroupOptions)>
     #[allow(unused_mut)]
@@ -18800,7 +19004,7 @@ impl DescribeOptionGroupOptionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeOptionGroupOptions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -18861,10 +19065,17 @@ impl DescribeOptionGroupOptionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -18880,7 +19091,7 @@ impl DescribeOptionGroupOptionsInput {
             "DescribeOptionGroupOptions",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeOptionGroupOptionsInput`](crate::input::DescribeOptionGroupOptionsInput).
@@ -19026,10 +19237,6 @@ pub mod describe_option_groups_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeOptionGroupsInputOperationOutputAlias = crate::operation::DescribeOptionGroups;
-#[doc(hidden)]
-pub type DescribeOptionGroupsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeOptionGroupsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeOptionGroups`](crate::operation::DescribeOptionGroups)>
     #[allow(unused_mut)]
@@ -19041,7 +19248,7 @@ impl DescribeOptionGroupsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeOptionGroups,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -19105,10 +19312,17 @@ impl DescribeOptionGroupsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -19124,7 +19338,7 @@ impl DescribeOptionGroupsInput {
             "DescribeOptionGroups",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeOptionGroupsInput`](crate::input::DescribeOptionGroupsInput).
@@ -19328,12 +19542,6 @@ pub mod describe_orderable_db_instance_options_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeOrderableDbInstanceOptionsInputOperationOutputAlias =
-    crate::operation::DescribeOrderableDBInstanceOptions;
-#[doc(hidden)]
-pub type DescribeOrderableDbInstanceOptionsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeOrderableDbInstanceOptionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeOrderableDBInstanceOptions`](crate::operation::DescribeOrderableDBInstanceOptions)>
     #[allow(unused_mut)]
@@ -19345,7 +19553,7 @@ impl DescribeOrderableDbInstanceOptionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeOrderableDBInstanceOptions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -19406,10 +19614,17 @@ impl DescribeOrderableDbInstanceOptionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -19425,7 +19640,7 @@ impl DescribeOrderableDbInstanceOptionsInput {
             "DescribeOrderableDBInstanceOptions",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeOrderableDbInstanceOptionsInput`](crate::input::DescribeOrderableDbInstanceOptionsInput).
@@ -19528,12 +19743,6 @@ pub mod describe_pending_maintenance_actions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribePendingMaintenanceActionsInputOperationOutputAlias =
-    crate::operation::DescribePendingMaintenanceActions;
-#[doc(hidden)]
-pub type DescribePendingMaintenanceActionsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribePendingMaintenanceActionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribePendingMaintenanceActions`](crate::operation::DescribePendingMaintenanceActions)>
     #[allow(unused_mut)]
@@ -19545,7 +19754,7 @@ impl DescribePendingMaintenanceActionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribePendingMaintenanceActions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -19606,10 +19815,17 @@ impl DescribePendingMaintenanceActionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -19625,7 +19841,7 @@ impl DescribePendingMaintenanceActionsInput {
             "DescribePendingMaintenanceActions",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribePendingMaintenanceActionsInput`](crate::input::DescribePendingMaintenanceActionsInput).
@@ -19825,11 +20041,6 @@ pub mod describe_reserved_db_instances_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeReservedDbInstancesInputOperationOutputAlias =
-    crate::operation::DescribeReservedDBInstances;
-#[doc(hidden)]
-pub type DescribeReservedDbInstancesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeReservedDbInstancesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeReservedDBInstances`](crate::operation::DescribeReservedDBInstances)>
     #[allow(unused_mut)]
@@ -19841,7 +20052,7 @@ impl DescribeReservedDbInstancesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeReservedDBInstances,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -19902,10 +20113,17 @@ impl DescribeReservedDbInstancesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -19921,7 +20139,7 @@ impl DescribeReservedDbInstancesInput {
             "DescribeReservedDBInstances",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeReservedDbInstancesInput`](crate::input::DescribeReservedDbInstancesInput).
@@ -20096,12 +20314,6 @@ pub mod describe_reserved_db_instances_offerings_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeReservedDbInstancesOfferingsInputOperationOutputAlias =
-    crate::operation::DescribeReservedDBInstancesOfferings;
-#[doc(hidden)]
-pub type DescribeReservedDbInstancesOfferingsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeReservedDbInstancesOfferingsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeReservedDBInstancesOfferings`](crate::operation::DescribeReservedDBInstancesOfferings)>
     #[allow(unused_mut)]
@@ -20113,7 +20325,7 @@ impl DescribeReservedDbInstancesOfferingsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeReservedDBInstancesOfferings,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -20174,10 +20386,17 @@ impl DescribeReservedDbInstancesOfferingsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -20193,7 +20412,7 @@ impl DescribeReservedDbInstancesOfferingsInput {
             "DescribeReservedDBInstancesOfferings",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeReservedDbInstancesOfferingsInput`](crate::input::DescribeReservedDbInstancesOfferingsInput).
@@ -20289,10 +20508,6 @@ pub mod describe_source_regions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeSourceRegionsInputOperationOutputAlias = crate::operation::DescribeSourceRegions;
-#[doc(hidden)]
-pub type DescribeSourceRegionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeSourceRegionsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeSourceRegions`](crate::operation::DescribeSourceRegions)>
     #[allow(unused_mut)]
@@ -20304,7 +20519,7 @@ impl DescribeSourceRegionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeSourceRegions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -20368,10 +20583,17 @@ impl DescribeSourceRegionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -20387,7 +20609,7 @@ impl DescribeSourceRegionsInput {
             "DescribeSourceRegions",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeSourceRegionsInput`](crate::input::DescribeSourceRegionsInput).
@@ -20431,12 +20653,6 @@ pub mod describe_valid_db_instance_modifications_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeValidDbInstanceModificationsInputOperationOutputAlias =
-    crate::operation::DescribeValidDBInstanceModifications;
-#[doc(hidden)]
-pub type DescribeValidDbInstanceModificationsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeValidDbInstanceModificationsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeValidDBInstanceModifications`](crate::operation::DescribeValidDBInstanceModifications)>
     #[allow(unused_mut)]
@@ -20448,7 +20664,7 @@ impl DescribeValidDbInstanceModificationsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeValidDBInstanceModifications,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -20509,10 +20725,17 @@ impl DescribeValidDbInstanceModificationsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -20528,7 +20751,7 @@ impl DescribeValidDbInstanceModificationsInput {
             "DescribeValidDBInstanceModifications",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeValidDbInstanceModificationsInput`](crate::input::DescribeValidDbInstanceModificationsInput).
@@ -20633,11 +20856,6 @@ pub mod download_db_log_file_portion_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DownloadDbLogFilePortionInputOperationOutputAlias =
-    crate::operation::DownloadDBLogFilePortion;
-#[doc(hidden)]
-pub type DownloadDbLogFilePortionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DownloadDbLogFilePortionInput {
     /// Consumes the builder and constructs an Operation<[`DownloadDBLogFilePortion`](crate::operation::DownloadDBLogFilePortion)>
     #[allow(unused_mut)]
@@ -20649,7 +20867,7 @@ impl DownloadDbLogFilePortionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DownloadDBLogFilePortion,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -20713,10 +20931,17 @@ impl DownloadDbLogFilePortionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -20732,7 +20957,7 @@ impl DownloadDbLogFilePortionInput {
             "DownloadDBLogFilePortion",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DownloadDbLogFilePortionInput`](crate::input::DownloadDbLogFilePortionInput).
@@ -20804,10 +21029,6 @@ pub mod failover_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type FailoverDbClusterInputOperationOutputAlias = crate::operation::FailoverDBCluster;
-#[doc(hidden)]
-pub type FailoverDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl FailoverDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`FailoverDBCluster`](crate::operation::FailoverDBCluster)>
     #[allow(unused_mut)]
@@ -20819,7 +21040,7 @@ impl FailoverDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::FailoverDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -20881,10 +21102,17 @@ impl FailoverDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -20900,7 +21128,7 @@ impl FailoverDbClusterInput {
             "FailoverDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`FailoverDbClusterInput`](crate::input::FailoverDbClusterInput).
@@ -20968,10 +21196,6 @@ pub mod failover_global_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type FailoverGlobalClusterInputOperationOutputAlias = crate::operation::FailoverGlobalCluster;
-#[doc(hidden)]
-pub type FailoverGlobalClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl FailoverGlobalClusterInput {
     /// Consumes the builder and constructs an Operation<[`FailoverGlobalCluster`](crate::operation::FailoverGlobalCluster)>
     #[allow(unused_mut)]
@@ -20983,7 +21207,7 @@ impl FailoverGlobalClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::FailoverGlobalCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -21047,10 +21271,17 @@ impl FailoverGlobalClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -21066,7 +21297,7 @@ impl FailoverGlobalClusterInput {
             "FailoverGlobalCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`FailoverGlobalClusterInput`](crate::input::FailoverGlobalClusterInput).
@@ -21129,10 +21360,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -21144,7 +21371,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -21208,10 +21435,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -21227,7 +21461,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -21281,10 +21515,6 @@ pub mod modify_activity_stream_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyActivityStreamInputOperationOutputAlias = crate::operation::ModifyActivityStream;
-#[doc(hidden)]
-pub type ModifyActivityStreamInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyActivityStreamInput {
     /// Consumes the builder and constructs an Operation<[`ModifyActivityStream`](crate::operation::ModifyActivityStream)>
     #[allow(unused_mut)]
@@ -21296,7 +21526,7 @@ impl ModifyActivityStreamInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyActivityStream,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -21360,10 +21590,17 @@ impl ModifyActivityStreamInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -21379,7 +21616,7 @@ impl ModifyActivityStreamInput {
             "ModifyActivityStream",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyActivityStreamInput`](crate::input::ModifyActivityStreamInput).
@@ -21435,10 +21672,6 @@ pub mod modify_certificates_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyCertificatesInputOperationOutputAlias = crate::operation::ModifyCertificates;
-#[doc(hidden)]
-pub type ModifyCertificatesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyCertificatesInput {
     /// Consumes the builder and constructs an Operation<[`ModifyCertificates`](crate::operation::ModifyCertificates)>
     #[allow(unused_mut)]
@@ -21450,7 +21683,7 @@ impl ModifyCertificatesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyCertificates,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -21512,10 +21745,17 @@ impl ModifyCertificatesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -21531,7 +21771,7 @@ impl ModifyCertificatesInput {
             "ModifyCertificates",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyCertificatesInput`](crate::input::ModifyCertificatesInput).
@@ -21640,12 +21880,6 @@ pub mod modify_current_db_cluster_capacity_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyCurrentDbClusterCapacityInputOperationOutputAlias =
-    crate::operation::ModifyCurrentDBClusterCapacity;
-#[doc(hidden)]
-pub type ModifyCurrentDbClusterCapacityInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyCurrentDbClusterCapacityInput {
     /// Consumes the builder and constructs an Operation<[`ModifyCurrentDBClusterCapacity`](crate::operation::ModifyCurrentDBClusterCapacity)>
     #[allow(unused_mut)]
@@ -21657,7 +21891,7 @@ impl ModifyCurrentDbClusterCapacityInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyCurrentDBClusterCapacity,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -21718,10 +21952,17 @@ impl ModifyCurrentDbClusterCapacityInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -21737,7 +21978,7 @@ impl ModifyCurrentDbClusterCapacityInput {
             "ModifyCurrentDBClusterCapacity",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyCurrentDbClusterCapacityInput`](crate::input::ModifyCurrentDbClusterCapacityInput).
@@ -21850,11 +22091,6 @@ pub mod modify_custom_db_engine_version_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyCustomDbEngineVersionInputOperationOutputAlias =
-    crate::operation::ModifyCustomDBEngineVersion;
-#[doc(hidden)]
-pub type ModifyCustomDbEngineVersionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyCustomDbEngineVersionInput {
     /// Consumes the builder and constructs an Operation<[`ModifyCustomDBEngineVersion`](crate::operation::ModifyCustomDBEngineVersion)>
     #[allow(unused_mut)]
@@ -21866,7 +22102,7 @@ impl ModifyCustomDbEngineVersionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyCustomDBEngineVersion,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -21927,10 +22163,17 @@ impl ModifyCustomDbEngineVersionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -21946,7 +22189,7 @@ impl ModifyCustomDbEngineVersionInput {
             "ModifyCustomDBEngineVersion",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyCustomDbEngineVersionInput`](crate::input::ModifyCustomDbEngineVersionInput).
@@ -21998,6 +22241,7 @@ pub mod modify_db_cluster_input {
         pub(crate) performance_insights_retention_period: std::option::Option<i32>,
         pub(crate) serverless_v2_scaling_configuration:
             std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+        pub(crate) network_type: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The DB cluster identifier for the cluster being modified. This parameter isn't case-sensitive.</p>
@@ -22694,6 +22938,32 @@ pub mod modify_db_cluster_input {
             self.serverless_v2_scaling_configuration = input;
             self
         }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        /// <p>Valid for: Aurora DB clusters only</p>
+        pub fn network_type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.network_type = Some(input.into());
+            self
+        }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        /// <p>Valid for: Aurora DB clusters only</p>
+        pub fn set_network_type(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.network_type = input;
+            self
+        }
         /// Consumes the builder and constructs a [`ModifyDbClusterInput`](crate::input::ModifyDbClusterInput).
         pub fn build(
             self,
@@ -22735,14 +23005,11 @@ pub mod modify_db_cluster_input {
                 performance_insights_kms_key_id: self.performance_insights_kms_key_id,
                 performance_insights_retention_period: self.performance_insights_retention_period,
                 serverless_v2_scaling_configuration: self.serverless_v2_scaling_configuration,
+                network_type: self.network_type,
             })
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbClusterInputOperationOutputAlias = crate::operation::ModifyDBCluster;
-#[doc(hidden)]
-pub type ModifyDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBCluster`](crate::operation::ModifyDBCluster)>
     #[allow(unused_mut)]
@@ -22754,7 +23021,7 @@ impl ModifyDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -22816,10 +23083,17 @@ impl ModifyDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -22835,7 +23109,7 @@ impl ModifyDbClusterInput {
             "ModifyDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbClusterInput`](crate::input::ModifyDbClusterInput).
@@ -22939,11 +23213,6 @@ pub mod modify_db_cluster_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbClusterEndpointInputOperationOutputAlias =
-    crate::operation::ModifyDBClusterEndpoint;
-#[doc(hidden)]
-pub type ModifyDbClusterEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbClusterEndpointInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBClusterEndpoint`](crate::operation::ModifyDBClusterEndpoint)>
     #[allow(unused_mut)]
@@ -22955,7 +23224,7 @@ impl ModifyDbClusterEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBClusterEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -23019,10 +23288,17 @@ impl ModifyDbClusterEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -23038,7 +23314,7 @@ impl ModifyDbClusterEndpointInput {
             "ModifyDBClusterEndpoint",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbClusterEndpointInput`](crate::input::ModifyDbClusterEndpointInput).
@@ -23114,12 +23390,6 @@ pub mod modify_db_cluster_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbClusterParameterGroupInputOperationOutputAlias =
-    crate::operation::ModifyDBClusterParameterGroup;
-#[doc(hidden)]
-pub type ModifyDbClusterParameterGroupInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbClusterParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBClusterParameterGroup`](crate::operation::ModifyDBClusterParameterGroup)>
     #[allow(unused_mut)]
@@ -23131,7 +23401,7 @@ impl ModifyDbClusterParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBClusterParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -23192,10 +23462,17 @@ impl ModifyDbClusterParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -23211,7 +23488,7 @@ impl ModifyDbClusterParameterGroupInput {
             "ModifyDBClusterParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbClusterParameterGroupInput`](crate::input::ModifyDbClusterParameterGroupInput).
@@ -23325,12 +23602,6 @@ pub mod modify_db_cluster_snapshot_attribute_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbClusterSnapshotAttributeInputOperationOutputAlias =
-    crate::operation::ModifyDBClusterSnapshotAttribute;
-#[doc(hidden)]
-pub type ModifyDbClusterSnapshotAttributeInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbClusterSnapshotAttributeInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBClusterSnapshotAttribute`](crate::operation::ModifyDBClusterSnapshotAttribute)>
     #[allow(unused_mut)]
@@ -23342,7 +23613,7 @@ impl ModifyDbClusterSnapshotAttributeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBClusterSnapshotAttribute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -23403,10 +23674,17 @@ impl ModifyDbClusterSnapshotAttributeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -23422,7 +23700,7 @@ impl ModifyDbClusterSnapshotAttributeInput {
             "ModifyDBClusterSnapshotAttribute",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbClusterSnapshotAttributeInput`](crate::input::ModifyDbClusterSnapshotAttributeInput).
@@ -23524,17 +23802,15 @@ pub mod modify_db_instance_input {
             self.allocated_storage = input;
             self
         }
-        /// <p>The new compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance classes, and availability for your engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance classes</a> in the <i>Amazon RDS User Guide</i> or <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora DB instance classes</a> in the <i>Amazon Aurora User Guide</i>.</p>
-        /// <p>If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.</p>
-        /// <p>This setting doesn't apply to RDS Custom for Oracle.</p>
+        /// <p>The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance classes, and availability for your engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a> in the <i>Amazon RDS User Guide</i>. For RDS Custom, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.instances">DB instance class support for RDS Custom for Oracle</a> and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html#custom-reqs-limits.instancesMS">DB instance class support for RDS Custom for SQL Server</a>.</p>
+        /// <p>If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request. </p>
         /// <p>Default: Uses existing setting</p>
         pub fn db_instance_class(mut self, input: impl Into<std::string::String>) -> Self {
             self.db_instance_class = Some(input.into());
             self
         }
-        /// <p>The new compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance classes, and availability for your engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance classes</a> in the <i>Amazon RDS User Guide</i> or <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora DB instance classes</a> in the <i>Amazon Aurora User Guide</i>.</p>
-        /// <p>If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.</p>
-        /// <p>This setting doesn't apply to RDS Custom for Oracle.</p>
+        /// <p>The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance classes, and availability for your engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a> in the <i>Amazon RDS User Guide</i>. For RDS Custom, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.instances">DB instance class support for RDS Custom for Oracle</a> and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html#custom-reqs-limits.instancesMS">DB instance class support for RDS Custom for SQL Server</a>.</p>
+        /// <p>If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request. </p>
         /// <p>Default: Uses existing setting</p>
         pub fn set_db_instance_class(
             mut self,
@@ -24548,10 +24824,6 @@ pub mod modify_db_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbInstanceInputOperationOutputAlias = crate::operation::ModifyDBInstance;
-#[doc(hidden)]
-pub type ModifyDbInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbInstanceInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBInstance`](crate::operation::ModifyDBInstance)>
     #[allow(unused_mut)]
@@ -24563,7 +24835,7 @@ impl ModifyDbInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -24625,10 +24897,17 @@ impl ModifyDbInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -24644,7 +24923,7 @@ impl ModifyDbInstanceInput {
             "ModifyDBInstance",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbInstanceInput`](crate::input::ModifyDbInstanceInput).
@@ -24729,10 +25008,6 @@ pub mod modify_db_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbParameterGroupInputOperationOutputAlias = crate::operation::ModifyDBParameterGroup;
-#[doc(hidden)]
-pub type ModifyDbParameterGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBParameterGroup`](crate::operation::ModifyDBParameterGroup)>
     #[allow(unused_mut)]
@@ -24744,7 +25019,7 @@ impl ModifyDbParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -24808,10 +25083,17 @@ impl ModifyDbParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -24827,7 +25109,7 @@ impl ModifyDbParameterGroupInput {
             "ModifyDBParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbParameterGroupInput`](crate::input::ModifyDbParameterGroupInput).
@@ -24974,10 +25256,6 @@ pub mod modify_db_proxy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbProxyInputOperationOutputAlias = crate::operation::ModifyDBProxy;
-#[doc(hidden)]
-pub type ModifyDbProxyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbProxyInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBProxy`](crate::operation::ModifyDBProxy)>
     #[allow(unused_mut)]
@@ -24989,7 +25267,7 @@ impl ModifyDbProxyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBProxy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -25051,10 +25329,17 @@ impl ModifyDbProxyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -25070,7 +25355,7 @@ impl ModifyDbProxyInput {
             "ModifyDBProxy",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbProxyInput`](crate::input::ModifyDbProxyInput).
@@ -25148,10 +25433,6 @@ pub mod modify_db_proxy_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbProxyEndpointInputOperationOutputAlias = crate::operation::ModifyDBProxyEndpoint;
-#[doc(hidden)]
-pub type ModifyDbProxyEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbProxyEndpointInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBProxyEndpoint`](crate::operation::ModifyDBProxyEndpoint)>
     #[allow(unused_mut)]
@@ -25163,7 +25444,7 @@ impl ModifyDbProxyEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBProxyEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -25227,10 +25508,17 @@ impl ModifyDbProxyEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -25246,7 +25534,7 @@ impl ModifyDbProxyEndpointInput {
             "ModifyDBProxyEndpoint",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbProxyEndpointInput`](crate::input::ModifyDbProxyEndpointInput).
@@ -25336,11 +25624,6 @@ pub mod modify_db_proxy_target_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbProxyTargetGroupInputOperationOutputAlias =
-    crate::operation::ModifyDBProxyTargetGroup;
-#[doc(hidden)]
-pub type ModifyDbProxyTargetGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbProxyTargetGroupInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBProxyTargetGroup`](crate::operation::ModifyDBProxyTargetGroup)>
     #[allow(unused_mut)]
@@ -25352,7 +25635,7 @@ impl ModifyDbProxyTargetGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBProxyTargetGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -25416,10 +25699,17 @@ impl ModifyDbProxyTargetGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -25435,7 +25725,7 @@ impl ModifyDbProxyTargetGroupInput {
             "ModifyDBProxyTargetGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbProxyTargetGroupInput`](crate::input::ModifyDbProxyTargetGroupInput).
@@ -25535,10 +25825,6 @@ pub mod modify_db_snapshot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbSnapshotInputOperationOutputAlias = crate::operation::ModifyDBSnapshot;
-#[doc(hidden)]
-pub type ModifyDbSnapshotInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBSnapshot`](crate::operation::ModifyDBSnapshot)>
     #[allow(unused_mut)]
@@ -25550,7 +25836,7 @@ impl ModifyDbSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -25612,10 +25898,17 @@ impl ModifyDbSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -25631,7 +25924,7 @@ impl ModifyDbSnapshotInput {
             "ModifyDBSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbSnapshotInput`](crate::input::ModifyDbSnapshotInput).
@@ -25742,11 +26035,6 @@ pub mod modify_db_snapshot_attribute_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbSnapshotAttributeInputOperationOutputAlias =
-    crate::operation::ModifyDBSnapshotAttribute;
-#[doc(hidden)]
-pub type ModifyDbSnapshotAttributeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbSnapshotAttributeInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBSnapshotAttribute`](crate::operation::ModifyDBSnapshotAttribute)>
     #[allow(unused_mut)]
@@ -25758,7 +26046,7 @@ impl ModifyDbSnapshotAttributeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBSnapshotAttribute,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -25822,10 +26110,17 @@ impl ModifyDbSnapshotAttributeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -25841,7 +26136,7 @@ impl ModifyDbSnapshotAttributeInput {
             "ModifyDBSnapshotAttribute",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbSnapshotAttributeInput`](crate::input::ModifyDbSnapshotAttributeInput).
@@ -25926,10 +26221,6 @@ pub mod modify_db_subnet_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyDbSubnetGroupInputOperationOutputAlias = crate::operation::ModifyDBSubnetGroup;
-#[doc(hidden)]
-pub type ModifyDbSubnetGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyDbSubnetGroupInput {
     /// Consumes the builder and constructs an Operation<[`ModifyDBSubnetGroup`](crate::operation::ModifyDBSubnetGroup)>
     #[allow(unused_mut)]
@@ -25941,7 +26232,7 @@ impl ModifyDbSubnetGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyDBSubnetGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -26005,10 +26296,17 @@ impl ModifyDbSubnetGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -26024,7 +26322,7 @@ impl ModifyDbSubnetGroupInput {
             "ModifyDBSubnetGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyDbSubnetGroupInput`](crate::input::ModifyDbSubnetGroupInput).
@@ -26130,11 +26428,6 @@ pub mod modify_event_subscription_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyEventSubscriptionInputOperationOutputAlias =
-    crate::operation::ModifyEventSubscription;
-#[doc(hidden)]
-pub type ModifyEventSubscriptionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyEventSubscriptionInput {
     /// Consumes the builder and constructs an Operation<[`ModifyEventSubscription`](crate::operation::ModifyEventSubscription)>
     #[allow(unused_mut)]
@@ -26146,7 +26439,7 @@ impl ModifyEventSubscriptionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyEventSubscription,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -26210,10 +26503,17 @@ impl ModifyEventSubscriptionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -26229,7 +26529,7 @@ impl ModifyEventSubscriptionInput {
             "ModifyEventSubscription",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyEventSubscriptionInput`](crate::input::ModifyEventSubscriptionInput).
@@ -26366,10 +26666,6 @@ pub mod modify_global_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyGlobalClusterInputOperationOutputAlias = crate::operation::ModifyGlobalCluster;
-#[doc(hidden)]
-pub type ModifyGlobalClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyGlobalClusterInput {
     /// Consumes the builder and constructs an Operation<[`ModifyGlobalCluster`](crate::operation::ModifyGlobalCluster)>
     #[allow(unused_mut)]
@@ -26381,7 +26677,7 @@ impl ModifyGlobalClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyGlobalCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -26443,10 +26739,17 @@ impl ModifyGlobalClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -26462,7 +26765,7 @@ impl ModifyGlobalClusterInput {
             "ModifyGlobalCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyGlobalClusterInput`](crate::input::ModifyGlobalClusterInput).
@@ -26561,10 +26864,6 @@ pub mod modify_option_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyOptionGroupInputOperationOutputAlias = crate::operation::ModifyOptionGroup;
-#[doc(hidden)]
-pub type ModifyOptionGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyOptionGroupInput {
     /// Consumes the builder and constructs an Operation<[`ModifyOptionGroup`](crate::operation::ModifyOptionGroup)>
     #[allow(unused_mut)]
@@ -26576,7 +26875,7 @@ impl ModifyOptionGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyOptionGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -26638,10 +26937,17 @@ impl ModifyOptionGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -26657,7 +26963,7 @@ impl ModifyOptionGroupInput {
             "ModifyOptionGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyOptionGroupInput`](crate::input::ModifyOptionGroupInput).
@@ -26764,10 +27070,6 @@ pub mod promote_read_replica_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PromoteReadReplicaInputOperationOutputAlias = crate::operation::PromoteReadReplica;
-#[doc(hidden)]
-pub type PromoteReadReplicaInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PromoteReadReplicaInput {
     /// Consumes the builder and constructs an Operation<[`PromoteReadReplica`](crate::operation::PromoteReadReplica)>
     #[allow(unused_mut)]
@@ -26779,7 +27081,7 @@ impl PromoteReadReplicaInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PromoteReadReplica,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -26841,10 +27143,17 @@ impl PromoteReadReplicaInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -26860,7 +27169,7 @@ impl PromoteReadReplicaInput {
             "PromoteReadReplica",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PromoteReadReplicaInput`](crate::input::PromoteReadReplicaInput).
@@ -26914,11 +27223,6 @@ pub mod promote_read_replica_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PromoteReadReplicaDbClusterInputOperationOutputAlias =
-    crate::operation::PromoteReadReplicaDBCluster;
-#[doc(hidden)]
-pub type PromoteReadReplicaDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PromoteReadReplicaDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`PromoteReadReplicaDBCluster`](crate::operation::PromoteReadReplicaDBCluster)>
     #[allow(unused_mut)]
@@ -26930,7 +27234,7 @@ impl PromoteReadReplicaDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PromoteReadReplicaDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -26991,10 +27295,17 @@ impl PromoteReadReplicaDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -27010,7 +27321,7 @@ impl PromoteReadReplicaDbClusterInput {
             "PromoteReadReplicaDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PromoteReadReplicaDbClusterInput`](crate::input::PromoteReadReplicaDbClusterInput).
@@ -27111,12 +27422,6 @@ pub mod purchase_reserved_db_instances_offering_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PurchaseReservedDbInstancesOfferingInputOperationOutputAlias =
-    crate::operation::PurchaseReservedDBInstancesOffering;
-#[doc(hidden)]
-pub type PurchaseReservedDbInstancesOfferingInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl PurchaseReservedDbInstancesOfferingInput {
     /// Consumes the builder and constructs an Operation<[`PurchaseReservedDBInstancesOffering`](crate::operation::PurchaseReservedDBInstancesOffering)>
     #[allow(unused_mut)]
@@ -27128,7 +27433,7 @@ impl PurchaseReservedDbInstancesOfferingInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PurchaseReservedDBInstancesOffering,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -27189,10 +27494,17 @@ impl PurchaseReservedDbInstancesOfferingInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -27208,7 +27520,7 @@ impl PurchaseReservedDbInstancesOfferingInput {
             "PurchaseReservedDBInstancesOffering",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PurchaseReservedDbInstancesOfferingInput`](crate::input::PurchaseReservedDbInstancesOfferingInput).
@@ -27258,10 +27570,6 @@ pub mod reboot_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RebootDbClusterInputOperationOutputAlias = crate::operation::RebootDBCluster;
-#[doc(hidden)]
-pub type RebootDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RebootDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`RebootDBCluster`](crate::operation::RebootDBCluster)>
     #[allow(unused_mut)]
@@ -27273,7 +27581,7 @@ impl RebootDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RebootDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -27335,10 +27643,17 @@ impl RebootDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -27354,7 +27669,7 @@ impl RebootDbClusterInput {
             "RebootDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RebootDbClusterInput`](crate::input::RebootDbClusterInput).
@@ -27418,10 +27733,6 @@ pub mod reboot_db_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RebootDbInstanceInputOperationOutputAlias = crate::operation::RebootDBInstance;
-#[doc(hidden)]
-pub type RebootDbInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RebootDbInstanceInput {
     /// Consumes the builder and constructs an Operation<[`RebootDBInstance`](crate::operation::RebootDBInstance)>
     #[allow(unused_mut)]
@@ -27433,7 +27744,7 @@ impl RebootDbInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RebootDBInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -27495,10 +27806,17 @@ impl RebootDbInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -27514,7 +27832,7 @@ impl RebootDbInstanceInput {
             "RebootDBInstance",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RebootDbInstanceInput`](crate::input::RebootDbInstanceInput).
@@ -27613,10 +27931,6 @@ pub mod register_db_proxy_targets_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RegisterDbProxyTargetsInputOperationOutputAlias = crate::operation::RegisterDBProxyTargets;
-#[doc(hidden)]
-pub type RegisterDbProxyTargetsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RegisterDbProxyTargetsInput {
     /// Consumes the builder and constructs an Operation<[`RegisterDBProxyTargets`](crate::operation::RegisterDBProxyTargets)>
     #[allow(unused_mut)]
@@ -27628,7 +27942,7 @@ impl RegisterDbProxyTargetsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RegisterDBProxyTargets,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -27692,10 +28006,17 @@ impl RegisterDbProxyTargetsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -27711,7 +28032,7 @@ impl RegisterDbProxyTargetsInput {
             "RegisterDBProxyTargets",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RegisterDbProxyTargetsInput`](crate::input::RegisterDbProxyTargetsInput).
@@ -27770,11 +28091,6 @@ pub mod remove_from_global_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveFromGlobalClusterInputOperationOutputAlias =
-    crate::operation::RemoveFromGlobalCluster;
-#[doc(hidden)]
-pub type RemoveFromGlobalClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveFromGlobalClusterInput {
     /// Consumes the builder and constructs an Operation<[`RemoveFromGlobalCluster`](crate::operation::RemoveFromGlobalCluster)>
     #[allow(unused_mut)]
@@ -27786,7 +28102,7 @@ impl RemoveFromGlobalClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveFromGlobalCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -27850,10 +28166,17 @@ impl RemoveFromGlobalClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -27869,7 +28192,7 @@ impl RemoveFromGlobalClusterInput {
             "RemoveFromGlobalCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveFromGlobalClusterInput`](crate::input::RemoveFromGlobalClusterInput).
@@ -27937,11 +28260,6 @@ pub mod remove_role_from_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveRoleFromDbClusterInputOperationOutputAlias =
-    crate::operation::RemoveRoleFromDBCluster;
-#[doc(hidden)]
-pub type RemoveRoleFromDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveRoleFromDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`RemoveRoleFromDBCluster`](crate::operation::RemoveRoleFromDBCluster)>
     #[allow(unused_mut)]
@@ -27953,7 +28271,7 @@ impl RemoveRoleFromDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveRoleFromDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -28017,10 +28335,17 @@ impl RemoveRoleFromDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -28036,7 +28361,7 @@ impl RemoveRoleFromDbClusterInput {
             "RemoveRoleFromDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveRoleFromDbClusterInput`](crate::input::RemoveRoleFromDbClusterInput).
@@ -28104,11 +28429,6 @@ pub mod remove_role_from_db_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveRoleFromDbInstanceInputOperationOutputAlias =
-    crate::operation::RemoveRoleFromDBInstance;
-#[doc(hidden)]
-pub type RemoveRoleFromDbInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveRoleFromDbInstanceInput {
     /// Consumes the builder and constructs an Operation<[`RemoveRoleFromDBInstance`](crate::operation::RemoveRoleFromDBInstance)>
     #[allow(unused_mut)]
@@ -28120,7 +28440,7 @@ impl RemoveRoleFromDbInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveRoleFromDBInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -28184,10 +28504,17 @@ impl RemoveRoleFromDbInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -28203,7 +28530,7 @@ impl RemoveRoleFromDbInstanceInput {
             "RemoveRoleFromDBInstance",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveRoleFromDbInstanceInput`](crate::input::RemoveRoleFromDbInstanceInput).
@@ -28262,12 +28589,6 @@ pub mod remove_source_identifier_from_subscription_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveSourceIdentifierFromSubscriptionInputOperationOutputAlias =
-    crate::operation::RemoveSourceIdentifierFromSubscription;
-#[doc(hidden)]
-pub type RemoveSourceIdentifierFromSubscriptionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveSourceIdentifierFromSubscriptionInput {
     /// Consumes the builder and constructs an Operation<[`RemoveSourceIdentifierFromSubscription`](crate::operation::RemoveSourceIdentifierFromSubscription)>
     #[allow(unused_mut)]
@@ -28279,7 +28600,7 @@ impl RemoveSourceIdentifierFromSubscriptionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveSourceIdentifierFromSubscription,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -28340,10 +28661,17 @@ impl RemoveSourceIdentifierFromSubscriptionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -28359,7 +28687,7 @@ impl RemoveSourceIdentifierFromSubscriptionInput {
             "RemoveSourceIdentifierFromSubscription",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveSourceIdentifierFromSubscriptionInput`](crate::input::RemoveSourceIdentifierFromSubscriptionInput).
@@ -28422,10 +28750,6 @@ pub mod remove_tags_from_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveTagsFromResourceInputOperationOutputAlias = crate::operation::RemoveTagsFromResource;
-#[doc(hidden)]
-pub type RemoveTagsFromResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveTagsFromResourceInput {
     /// Consumes the builder and constructs an Operation<[`RemoveTagsFromResource`](crate::operation::RemoveTagsFromResource)>
     #[allow(unused_mut)]
@@ -28437,7 +28761,7 @@ impl RemoveTagsFromResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveTagsFromResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -28501,10 +28825,17 @@ impl RemoveTagsFromResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -28520,7 +28851,7 @@ impl RemoveTagsFromResourceInput {
             "RemoveTagsFromResource",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveTagsFromResourceInput`](crate::input::RemoveTagsFromResourceInput).
@@ -28600,12 +28931,6 @@ pub mod reset_db_cluster_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ResetDbClusterParameterGroupInputOperationOutputAlias =
-    crate::operation::ResetDBClusterParameterGroup;
-#[doc(hidden)]
-pub type ResetDbClusterParameterGroupInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ResetDbClusterParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`ResetDBClusterParameterGroup`](crate::operation::ResetDBClusterParameterGroup)>
     #[allow(unused_mut)]
@@ -28617,7 +28942,7 @@ impl ResetDbClusterParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ResetDBClusterParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -28678,10 +29003,17 @@ impl ResetDbClusterParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -28697,7 +29029,7 @@ impl ResetDbClusterParameterGroupInput {
             "ResetDBClusterParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ResetDbClusterParameterGroupInput`](crate::input::ResetDbClusterParameterGroupInput).
@@ -28796,10 +29128,6 @@ pub mod reset_db_parameter_group_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ResetDbParameterGroupInputOperationOutputAlias = crate::operation::ResetDBParameterGroup;
-#[doc(hidden)]
-pub type ResetDbParameterGroupInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ResetDbParameterGroupInput {
     /// Consumes the builder and constructs an Operation<[`ResetDBParameterGroup`](crate::operation::ResetDBParameterGroup)>
     #[allow(unused_mut)]
@@ -28811,7 +29139,7 @@ impl ResetDbParameterGroupInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ResetDBParameterGroup,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -28875,10 +29203,17 @@ impl ResetDbParameterGroupInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -28894,7 +29229,7 @@ impl ResetDbParameterGroupInput {
             "ResetDBParameterGroup",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ResetDbParameterGroupInput`](crate::input::ResetDbParameterGroupInput).
@@ -28943,6 +29278,7 @@ pub mod restore_db_cluster_from_s3_input {
         pub(crate) domain_iam_role_name: std::option::Option<std::string::String>,
         pub(crate) serverless_v2_scaling_configuration:
             std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+        pub(crate) network_type: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// Appends an item to `availability_zones`.
@@ -29499,6 +29835,30 @@ pub mod restore_db_cluster_from_s3_input {
             self.serverless_v2_scaling_configuration = input;
             self
         }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        pub fn network_type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.network_type = Some(input.into());
+            self
+        }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        pub fn set_network_type(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.network_type = input;
+            self
+        }
         /// Consumes the builder and constructs a [`RestoreDbClusterFromS3Input`](crate::input::RestoreDbClusterFromS3Input).
         pub fn build(
             self,
@@ -29537,14 +29897,11 @@ pub mod restore_db_cluster_from_s3_input {
                 domain: self.domain,
                 domain_iam_role_name: self.domain_iam_role_name,
                 serverless_v2_scaling_configuration: self.serverless_v2_scaling_configuration,
+                network_type: self.network_type,
             })
         }
     }
 }
-#[doc(hidden)]
-pub type RestoreDbClusterFromS3InputOperationOutputAlias = crate::operation::RestoreDBClusterFromS3;
-#[doc(hidden)]
-pub type RestoreDbClusterFromS3InputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RestoreDbClusterFromS3Input {
     /// Consumes the builder and constructs an Operation<[`RestoreDBClusterFromS3`](crate::operation::RestoreDBClusterFromS3)>
     #[allow(unused_mut)]
@@ -29556,7 +29913,7 @@ impl RestoreDbClusterFromS3Input {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RestoreDBClusterFromS3,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -29620,10 +29977,17 @@ impl RestoreDbClusterFromS3Input {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -29639,7 +30003,7 @@ impl RestoreDbClusterFromS3Input {
             "RestoreDBClusterFromS3",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RestoreDbClusterFromS3Input`](crate::input::RestoreDbClusterFromS3Input).
@@ -29683,6 +30047,7 @@ pub mod restore_db_cluster_from_snapshot_input {
         pub(crate) publicly_accessible: std::option::Option<bool>,
         pub(crate) serverless_v2_scaling_configuration:
             std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+        pub(crate) network_type: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// Appends an item to `availability_zones`.
@@ -30266,6 +30631,32 @@ pub mod restore_db_cluster_from_snapshot_input {
             self.serverless_v2_scaling_configuration = input;
             self
         }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        /// <p>Valid for: Aurora DB clusters only</p>
+        pub fn network_type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.network_type = Some(input.into());
+            self
+        }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        /// <p>Valid for: Aurora DB clusters only</p>
+        pub fn set_network_type(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.network_type = input;
+            self
+        }
         /// Consumes the builder and constructs a [`RestoreDbClusterFromSnapshotInput`](crate::input::RestoreDbClusterFromSnapshotInput).
         pub fn build(
             self,
@@ -30301,16 +30692,11 @@ pub mod restore_db_cluster_from_snapshot_input {
                 iops: self.iops,
                 publicly_accessible: self.publicly_accessible,
                 serverless_v2_scaling_configuration: self.serverless_v2_scaling_configuration,
+                network_type: self.network_type,
             })
         }
     }
 }
-#[doc(hidden)]
-pub type RestoreDbClusterFromSnapshotInputOperationOutputAlias =
-    crate::operation::RestoreDBClusterFromSnapshot;
-#[doc(hidden)]
-pub type RestoreDbClusterFromSnapshotInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RestoreDbClusterFromSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`RestoreDBClusterFromSnapshot`](crate::operation::RestoreDBClusterFromSnapshot)>
     #[allow(unused_mut)]
@@ -30322,7 +30708,7 @@ impl RestoreDbClusterFromSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RestoreDBClusterFromSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -30383,10 +30769,17 @@ impl RestoreDbClusterFromSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -30402,7 +30795,7 @@ impl RestoreDbClusterFromSnapshotInput {
             "RestoreDBClusterFromSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RestoreDbClusterFromSnapshotInput`](crate::input::RestoreDbClusterFromSnapshotInput).
@@ -30445,6 +30838,7 @@ pub mod restore_db_cluster_to_point_in_time_input {
         pub(crate) iops: std::option::Option<i32>,
         pub(crate) serverless_v2_scaling_configuration:
             std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+        pub(crate) network_type: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The name of the new DB cluster to be created.</p>
@@ -30991,6 +31385,32 @@ pub mod restore_db_cluster_to_point_in_time_input {
             self.serverless_v2_scaling_configuration = input;
             self
         }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        /// <p>Valid for: Aurora DB clusters only</p>
+        pub fn network_type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.network_type = Some(input.into());
+            self
+        }
+        /// <p>The network type of the DB cluster.</p>
+        /// <p>Valid values:</p>
+        /// <ul>
+        /// <li> <p> <code>IPV4</code> </p> </li>
+        /// <li> <p> <code>DUAL</code> </p> </li>
+        /// </ul>
+        /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+        /// <p>Valid for: Aurora DB clusters only</p>
+        pub fn set_network_type(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.network_type = input;
+            self
+        }
         /// Consumes the builder and constructs a [`RestoreDbClusterToPointInTimeInput`](crate::input::RestoreDbClusterToPointInTimeInput).
         pub fn build(
             self,
@@ -31025,16 +31445,11 @@ pub mod restore_db_cluster_to_point_in_time_input {
                 publicly_accessible: self.publicly_accessible,
                 iops: self.iops,
                 serverless_v2_scaling_configuration: self.serverless_v2_scaling_configuration,
+                network_type: self.network_type,
             })
         }
     }
 }
-#[doc(hidden)]
-pub type RestoreDbClusterToPointInTimeInputOperationOutputAlias =
-    crate::operation::RestoreDBClusterToPointInTime;
-#[doc(hidden)]
-pub type RestoreDbClusterToPointInTimeInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RestoreDbClusterToPointInTimeInput {
     /// Consumes the builder and constructs an Operation<[`RestoreDBClusterToPointInTime`](crate::operation::RestoreDBClusterToPointInTime)>
     #[allow(unused_mut)]
@@ -31046,7 +31461,7 @@ impl RestoreDbClusterToPointInTimeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RestoreDBClusterToPointInTime,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -31107,10 +31522,17 @@ impl RestoreDbClusterToPointInTimeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -31126,7 +31548,7 @@ impl RestoreDbClusterToPointInTimeInput {
             "RestoreDBClusterToPointInTime",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RestoreDbClusterToPointInTimeInput`](crate::input::RestoreDbClusterToPointInTimeInput).
@@ -31820,12 +32242,6 @@ pub mod restore_db_instance_from_db_snapshot_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RestoreDbInstanceFromDbSnapshotInputOperationOutputAlias =
-    crate::operation::RestoreDBInstanceFromDBSnapshot;
-#[doc(hidden)]
-pub type RestoreDbInstanceFromDbSnapshotInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RestoreDbInstanceFromDbSnapshotInput {
     /// Consumes the builder and constructs an Operation<[`RestoreDBInstanceFromDBSnapshot`](crate::operation::RestoreDBInstanceFromDBSnapshot)>
     #[allow(unused_mut)]
@@ -31837,7 +32253,7 @@ impl RestoreDbInstanceFromDbSnapshotInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RestoreDBInstanceFromDBSnapshot,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -31898,10 +32314,17 @@ impl RestoreDbInstanceFromDbSnapshotInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -31917,7 +32340,7 @@ impl RestoreDbInstanceFromDbSnapshotInput {
             "RestoreDBInstanceFromDBSnapshot",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RestoreDbInstanceFromDbSnapshotInput`](crate::input::RestoreDbInstanceFromDbSnapshotInput).
@@ -32771,11 +33194,6 @@ pub mod restore_db_instance_from_s3_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RestoreDbInstanceFromS3InputOperationOutputAlias =
-    crate::operation::RestoreDBInstanceFromS3;
-#[doc(hidden)]
-pub type RestoreDbInstanceFromS3InputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RestoreDbInstanceFromS3Input {
     /// Consumes the builder and constructs an Operation<[`RestoreDBInstanceFromS3`](crate::operation::RestoreDBInstanceFromS3)>
     #[allow(unused_mut)]
@@ -32787,7 +33205,7 @@ impl RestoreDbInstanceFromS3Input {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RestoreDBInstanceFromS3,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -32851,10 +33269,17 @@ impl RestoreDbInstanceFromS3Input {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -32870,7 +33295,7 @@ impl RestoreDbInstanceFromS3Input {
             "RestoreDBInstanceFromS3",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RestoreDbInstanceFromS3Input`](crate::input::RestoreDbInstanceFromS3Input).
@@ -33662,12 +34087,6 @@ pub mod restore_db_instance_to_point_in_time_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RestoreDbInstanceToPointInTimeInputOperationOutputAlias =
-    crate::operation::RestoreDBInstanceToPointInTime;
-#[doc(hidden)]
-pub type RestoreDbInstanceToPointInTimeInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RestoreDbInstanceToPointInTimeInput {
     /// Consumes the builder and constructs an Operation<[`RestoreDBInstanceToPointInTime`](crate::operation::RestoreDBInstanceToPointInTime)>
     #[allow(unused_mut)]
@@ -33679,7 +34098,7 @@ impl RestoreDbInstanceToPointInTimeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RestoreDBInstanceToPointInTime,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -33740,10 +34159,17 @@ impl RestoreDbInstanceToPointInTimeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -33759,7 +34185,7 @@ impl RestoreDbInstanceToPointInTimeInput {
             "RestoreDBInstanceToPointInTime",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RestoreDbInstanceToPointInTimeInput`](crate::input::RestoreDbInstanceToPointInTimeInput).
@@ -33863,12 +34289,6 @@ pub mod revoke_db_security_group_ingress_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RevokeDbSecurityGroupIngressInputOperationOutputAlias =
-    crate::operation::RevokeDBSecurityGroupIngress;
-#[doc(hidden)]
-pub type RevokeDbSecurityGroupIngressInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RevokeDbSecurityGroupIngressInput {
     /// Consumes the builder and constructs an Operation<[`RevokeDBSecurityGroupIngress`](crate::operation::RevokeDBSecurityGroupIngress)>
     #[allow(unused_mut)]
@@ -33880,7 +34300,7 @@ impl RevokeDbSecurityGroupIngressInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RevokeDBSecurityGroupIngress,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -33941,10 +34361,17 @@ impl RevokeDbSecurityGroupIngressInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -33960,7 +34387,7 @@ impl RevokeDbSecurityGroupIngressInput {
             "RevokeDBSecurityGroupIngress",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RevokeDbSecurityGroupIngressInput`](crate::input::RevokeDbSecurityGroupIngressInput).
@@ -34053,10 +34480,6 @@ pub mod start_activity_stream_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartActivityStreamInputOperationOutputAlias = crate::operation::StartActivityStream;
-#[doc(hidden)]
-pub type StartActivityStreamInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartActivityStreamInput {
     /// Consumes the builder and constructs an Operation<[`StartActivityStream`](crate::operation::StartActivityStream)>
     #[allow(unused_mut)]
@@ -34068,7 +34491,7 @@ impl StartActivityStreamInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartActivityStream,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -34130,10 +34553,17 @@ impl StartActivityStreamInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -34149,7 +34579,7 @@ impl StartActivityStreamInput {
             "StartActivityStream",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartActivityStreamInput`](crate::input::StartActivityStreamInput).
@@ -34191,10 +34621,6 @@ pub mod start_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartDbClusterInputOperationOutputAlias = crate::operation::StartDBCluster;
-#[doc(hidden)]
-pub type StartDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`StartDBCluster`](crate::operation::StartDBCluster)>
     #[allow(unused_mut)]
@@ -34206,7 +34632,7 @@ impl StartDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -34268,10 +34694,17 @@ impl StartDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -34287,7 +34720,7 @@ impl StartDbClusterInput {
             "StartDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartDbClusterInput`](crate::input::StartDbClusterInput).
@@ -34329,10 +34762,6 @@ pub mod start_db_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartDbInstanceInputOperationOutputAlias = crate::operation::StartDBInstance;
-#[doc(hidden)]
-pub type StartDbInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartDbInstanceInput {
     /// Consumes the builder and constructs an Operation<[`StartDBInstance`](crate::operation::StartDBInstance)>
     #[allow(unused_mut)]
@@ -34344,7 +34773,7 @@ impl StartDbInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartDBInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -34406,10 +34835,17 @@ impl StartDbInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -34425,7 +34861,7 @@ impl StartDbInstanceInput {
             "StartDBInstance",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartDbInstanceInput`](crate::input::StartDbInstanceInput).
@@ -34518,12 +34954,6 @@ pub mod start_db_instance_automated_backups_replication_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartDbInstanceAutomatedBackupsReplicationInputOperationOutputAlias =
-    crate::operation::StartDBInstanceAutomatedBackupsReplication;
-#[doc(hidden)]
-pub type StartDbInstanceAutomatedBackupsReplicationInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl StartDbInstanceAutomatedBackupsReplicationInput {
     /// Consumes the builder and constructs an Operation<[`StartDBInstanceAutomatedBackupsReplication`](crate::operation::StartDBInstanceAutomatedBackupsReplication)>
     #[allow(unused_mut)]
@@ -34535,7 +34965,7 @@ impl StartDbInstanceAutomatedBackupsReplicationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartDBInstanceAutomatedBackupsReplication,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -34596,10 +35026,17 @@ impl StartDbInstanceAutomatedBackupsReplicationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -34615,7 +35052,7 @@ impl StartDbInstanceAutomatedBackupsReplicationInput {
             "StartDBInstanceAutomatedBackupsReplication",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartDbInstanceAutomatedBackupsReplicationInput`](crate::input::StartDbInstanceAutomatedBackupsReplicationInput).
@@ -34776,10 +35213,6 @@ pub mod start_export_task_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartExportTaskInputOperationOutputAlias = crate::operation::StartExportTask;
-#[doc(hidden)]
-pub type StartExportTaskInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartExportTaskInput {
     /// Consumes the builder and constructs an Operation<[`StartExportTask`](crate::operation::StartExportTask)>
     #[allow(unused_mut)]
@@ -34791,7 +35224,7 @@ impl StartExportTaskInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartExportTask,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -34853,10 +35286,17 @@ impl StartExportTaskInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -34872,7 +35312,7 @@ impl StartExportTaskInput {
             "StartExportTask",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartExportTaskInput`](crate::input::StartExportTaskInput).
@@ -34923,10 +35363,6 @@ pub mod stop_activity_stream_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopActivityStreamInputOperationOutputAlias = crate::operation::StopActivityStream;
-#[doc(hidden)]
-pub type StopActivityStreamInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopActivityStreamInput {
     /// Consumes the builder and constructs an Operation<[`StopActivityStream`](crate::operation::StopActivityStream)>
     #[allow(unused_mut)]
@@ -34938,7 +35374,7 @@ impl StopActivityStreamInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopActivityStream,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -35000,10 +35436,17 @@ impl StopActivityStreamInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -35019,7 +35462,7 @@ impl StopActivityStreamInput {
             "StopActivityStream",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopActivityStreamInput`](crate::input::StopActivityStreamInput).
@@ -35061,10 +35504,6 @@ pub mod stop_db_cluster_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopDbClusterInputOperationOutputAlias = crate::operation::StopDBCluster;
-#[doc(hidden)]
-pub type StopDbClusterInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopDbClusterInput {
     /// Consumes the builder and constructs an Operation<[`StopDBCluster`](crate::operation::StopDBCluster)>
     #[allow(unused_mut)]
@@ -35076,7 +35515,7 @@ impl StopDbClusterInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopDBCluster,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -35138,10 +35577,17 @@ impl StopDbClusterInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -35157,7 +35603,7 @@ impl StopDbClusterInput {
             "StopDBCluster",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopDbClusterInput`](crate::input::StopDbClusterInput).
@@ -35214,10 +35660,6 @@ pub mod stop_db_instance_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopDbInstanceInputOperationOutputAlias = crate::operation::StopDBInstance;
-#[doc(hidden)]
-pub type StopDbInstanceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopDbInstanceInput {
     /// Consumes the builder and constructs an Operation<[`StopDBInstance`](crate::operation::StopDBInstance)>
     #[allow(unused_mut)]
@@ -35229,7 +35671,7 @@ impl StopDbInstanceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopDBInstance,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -35291,10 +35733,17 @@ impl StopDbInstanceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -35310,7 +35759,7 @@ impl StopDbInstanceInput {
             "StopDBInstance",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopDbInstanceInput`](crate::input::StopDbInstanceInput).
@@ -35356,12 +35805,6 @@ pub mod stop_db_instance_automated_backups_replication_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopDbInstanceAutomatedBackupsReplicationInputOperationOutputAlias =
-    crate::operation::StopDBInstanceAutomatedBackupsReplication;
-#[doc(hidden)]
-pub type StopDbInstanceAutomatedBackupsReplicationInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl StopDbInstanceAutomatedBackupsReplicationInput {
     /// Consumes the builder and constructs an Operation<[`StopDBInstanceAutomatedBackupsReplication`](crate::operation::StopDBInstanceAutomatedBackupsReplication)>
     #[allow(unused_mut)]
@@ -35373,7 +35816,7 @@ impl StopDbInstanceAutomatedBackupsReplicationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopDBInstanceAutomatedBackupsReplication,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -35434,10 +35877,17 @@ impl StopDbInstanceAutomatedBackupsReplicationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -35453,13 +35903,194 @@ impl StopDbInstanceAutomatedBackupsReplicationInput {
             "StopDBInstanceAutomatedBackupsReplication",
             "rds",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopDbInstanceAutomatedBackupsReplicationInput`](crate::input::StopDbInstanceAutomatedBackupsReplicationInput).
     pub fn builder() -> crate::input::stop_db_instance_automated_backups_replication_input::Builder
     {
         crate::input::stop_db_instance_automated_backups_replication_input::Builder::default()
+    }
+}
+
+/// See [`SwitchoverReadReplicaInput`](crate::input::SwitchoverReadReplicaInput).
+pub mod switchover_read_replica_input {
+
+    /// A builder for [`SwitchoverReadReplicaInput`](crate::input::SwitchoverReadReplicaInput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) db_instance_identifier: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The DB instance identifier of the current standby database. This value is stored as a lowercase string.</p>
+        /// <p>Constraints:</p>
+        /// <ul>
+        /// <li> <p>Must match the identiﬁer of an existing Oracle read replica DB instance.</p> </li>
+        /// </ul>
+        pub fn db_instance_identifier(mut self, input: impl Into<std::string::String>) -> Self {
+            self.db_instance_identifier = Some(input.into());
+            self
+        }
+        /// <p>The DB instance identifier of the current standby database. This value is stored as a lowercase string.</p>
+        /// <p>Constraints:</p>
+        /// <ul>
+        /// <li> <p>Must match the identiﬁer of an existing Oracle read replica DB instance.</p> </li>
+        /// </ul>
+        pub fn set_db_instance_identifier(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.db_instance_identifier = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SwitchoverReadReplicaInput`](crate::input::SwitchoverReadReplicaInput).
+        pub fn build(
+            self,
+        ) -> Result<crate::input::SwitchoverReadReplicaInput, aws_smithy_http::operation::BuildError>
+        {
+            Ok(crate::input::SwitchoverReadReplicaInput {
+                db_instance_identifier: self.db_instance_identifier,
+            })
+        }
+    }
+}
+impl SwitchoverReadReplicaInput {
+    /// Consumes the builder and constructs an Operation<[`SwitchoverReadReplica`](crate::operation::SwitchoverReadReplica)>
+    #[allow(unused_mut)]
+    #[allow(clippy::let_and_return)]
+    #[allow(clippy::needless_borrow)]
+    pub async fn make_operation(
+        &self,
+        _config: &crate::config::Config,
+    ) -> std::result::Result<
+        aws_smithy_http::operation::Operation<
+            crate::operation::SwitchoverReadReplica,
+            aws_http::retry::AwsResponseRetryClassifier,
+        >,
+        aws_smithy_http::operation::BuildError,
+    > {
+        let mut request = {
+            fn uri_base(
+                _input: &crate::input::SwitchoverReadReplicaInput,
+                output: &mut String,
+            ) -> Result<(), aws_smithy_http::operation::BuildError> {
+                write!(output, "/").expect("formatting should succeed");
+                Ok(())
+            }
+            #[allow(clippy::unnecessary_wraps)]
+            fn update_http_builder(
+                input: &crate::input::SwitchoverReadReplicaInput,
+                builder: http::request::Builder,
+            ) -> std::result::Result<http::request::Builder, aws_smithy_http::operation::BuildError>
+            {
+                let mut uri = String::new();
+                uri_base(input, &mut uri)?;
+                Ok(builder.method("POST").uri(uri))
+            }
+            let mut builder = update_http_builder(&self, http::request::Builder::new())?;
+            builder = aws_smithy_http::header::set_request_header_if_absent(
+                builder,
+                http::header::CONTENT_TYPE,
+                "application/x-www-form-urlencoded",
+            );
+            builder
+        };
+        let mut properties = aws_smithy_http::property_bag::SharedPropertyBag::new();
+        #[allow(clippy::useless_conversion)]
+        let body = aws_smithy_http::body::SdkBody::from(
+            crate::operation_ser::serialize_operation_crate_operation_switchover_read_replica(
+                &self,
+            )?,
+        );
+        if let Some(content_length) = body.content_length() {
+            request = aws_smithy_http::header::set_request_header_if_absent(
+                request,
+                http::header::CONTENT_LENGTH,
+                content_length,
+            );
+        }
+        let request = request.body(body).expect("should be valid request");
+        let mut request = aws_smithy_http::operation::Request::from_parts(request, properties);
+        request
+            .properties_mut()
+            .insert(aws_smithy_http::http_versions::DEFAULT_HTTP_VERSION_LIST.clone());
+        let mut user_agent = aws_http::user_agent::AwsUserAgent::new_from_environment(
+            aws_types::os_shim_internal::Env::real(),
+            crate::API_METADATA.clone(),
+        );
+        if let Some(app_name) = _config.app_name() {
+            user_agent = user_agent.with_app_name(app_name.clone());
+        }
+        request.properties_mut().insert(user_agent);
+        let mut signing_config = aws_sig_auth::signer::OperationSigningConfig::default_config();
+        request.properties_mut().insert(signing_config);
+        request
+            .properties_mut()
+            .insert(aws_types::SigningService::from_static(
+                _config.signing_service(),
+            ));
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
+        if let Some(region) = &_config.region {
+            request.properties_mut().insert(region.clone());
+        }
+        aws_http::auth::set_provider(
+            &mut request.properties_mut(),
+            _config.credentials_provider.clone(),
+        );
+        let op = aws_smithy_http::operation::Operation::new(
+            request,
+            crate::operation::SwitchoverReadReplica::new(),
+        )
+        .with_metadata(aws_smithy_http::operation::Metadata::new(
+            "SwitchoverReadReplica",
+            "rds",
+        ));
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
+        Ok(op)
+    }
+    /// Creates a new builder-style object to manufacture [`SwitchoverReadReplicaInput`](crate::input::SwitchoverReadReplicaInput).
+    pub fn builder() -> crate::input::switchover_read_replica_input::Builder {
+        crate::input::switchover_read_replica_input::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct SwitchoverReadReplicaInput {
+    /// <p>The DB instance identifier of the current standby database. This value is stored as a lowercase string.</p>
+    /// <p>Constraints:</p>
+    /// <ul>
+    /// <li> <p>Must match the identiﬁer of an existing Oracle read replica DB instance.</p> </li>
+    /// </ul>
+    #[doc(hidden)]
+    pub db_instance_identifier: std::option::Option<std::string::String>,
+}
+impl SwitchoverReadReplicaInput {
+    /// <p>The DB instance identifier of the current standby database. This value is stored as a lowercase string.</p>
+    /// <p>Constraints:</p>
+    /// <ul>
+    /// <li> <p>Must match the identiﬁer of an existing Oracle read replica DB instance.</p> </li>
+    /// </ul>
+    pub fn db_instance_identifier(&self) -> std::option::Option<&str> {
+        self.db_instance_identifier.as_deref()
+    }
+}
+impl std::fmt::Debug for SwitchoverReadReplicaInput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("SwitchoverReadReplicaInput");
+        formatter.field("db_instance_identifier", &self.db_instance_identifier);
+        formatter.finish()
     }
 }
 
@@ -37660,6 +38291,17 @@ pub struct RestoreDbClusterToPointInTimeInput {
     #[doc(hidden)]
     pub serverless_v2_scaling_configuration:
         std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    /// <p>Valid for: Aurora DB clusters only</p>
+    #[doc(hidden)]
+    pub network_type: std::option::Option<std::string::String>,
 }
 impl RestoreDbClusterToPointInTimeInput {
     /// <p>The name of the new DB cluster to be created.</p>
@@ -37876,6 +38518,18 @@ impl RestoreDbClusterToPointInTimeInput {
     ) -> std::option::Option<&crate::model::ServerlessV2ScalingConfiguration> {
         self.serverless_v2_scaling_configuration.as_ref()
     }
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    /// <p>Valid for: Aurora DB clusters only</p>
+    pub fn network_type(&self) -> std::option::Option<&str> {
+        self.network_type.as_deref()
+    }
 }
 impl std::fmt::Debug for RestoreDbClusterToPointInTimeInput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -37924,6 +38578,7 @@ impl std::fmt::Debug for RestoreDbClusterToPointInTimeInput {
             "serverless_v2_scaling_configuration",
             &self.serverless_v2_scaling_configuration,
         );
+        formatter.field("network_type", &self.network_type);
         formatter.finish()
     }
 }
@@ -38129,6 +38784,17 @@ pub struct RestoreDbClusterFromSnapshotInput {
     #[doc(hidden)]
     pub serverless_v2_scaling_configuration:
         std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    /// <p>Valid for: Aurora DB clusters only</p>
+    #[doc(hidden)]
+    pub network_type: std::option::Option<std::string::String>,
 }
 impl RestoreDbClusterFromSnapshotInput {
     /// <p>Provides the list of Availability Zones (AZs) where instances in the restored DB cluster can be created.</p>
@@ -38358,6 +39024,18 @@ impl RestoreDbClusterFromSnapshotInput {
     ) -> std::option::Option<&crate::model::ServerlessV2ScalingConfiguration> {
         self.serverless_v2_scaling_configuration.as_ref()
     }
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    /// <p>Valid for: Aurora DB clusters only</p>
+    pub fn network_type(&self) -> std::option::Option<&str> {
+        self.network_type.as_deref()
+    }
 }
 impl std::fmt::Debug for RestoreDbClusterFromSnapshotInput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -38401,6 +39079,7 @@ impl std::fmt::Debug for RestoreDbClusterFromSnapshotInput {
             "serverless_v2_scaling_configuration",
             &self.serverless_v2_scaling_configuration,
         );
+        formatter.field("network_type", &self.network_type);
         formatter.finish()
     }
 }
@@ -38572,6 +39251,16 @@ pub struct RestoreDbClusterFromS3Input {
     #[doc(hidden)]
     pub serverless_v2_scaling_configuration:
         std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    #[doc(hidden)]
+    pub network_type: std::option::Option<std::string::String>,
 }
 impl RestoreDbClusterFromS3Input {
     /// <p>A list of Availability Zones (AZs) where instances in the restored DB cluster can be created.</p>
@@ -38770,6 +39459,17 @@ impl RestoreDbClusterFromS3Input {
     ) -> std::option::Option<&crate::model::ServerlessV2ScalingConfiguration> {
         self.serverless_v2_scaling_configuration.as_ref()
     }
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    pub fn network_type(&self) -> std::option::Option<&str> {
+        self.network_type.as_deref()
+    }
 }
 impl std::fmt::Debug for RestoreDbClusterFromS3Input {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -38821,6 +39521,7 @@ impl std::fmt::Debug for RestoreDbClusterFromS3Input {
             "serverless_v2_scaling_configuration",
             &self.serverless_v2_scaling_configuration,
         );
+        formatter.field("network_type", &self.network_type);
         formatter.finish()
     }
 }
@@ -39977,9 +40678,8 @@ pub struct ModifyDbInstanceInput {
     /// <p>For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.</p>
     #[doc(hidden)]
     pub allocated_storage: std::option::Option<i32>,
-    /// <p>The new compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance classes, and availability for your engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance classes</a> in the <i>Amazon RDS User Guide</i> or <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora DB instance classes</a> in the <i>Amazon Aurora User Guide</i>.</p>
-    /// <p>If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.</p>
-    /// <p>This setting doesn't apply to RDS Custom for Oracle.</p>
+    /// <p>The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance classes, and availability for your engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a> in the <i>Amazon RDS User Guide</i>. For RDS Custom, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.instances">DB instance class support for RDS Custom for Oracle</a> and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html#custom-reqs-limits.instancesMS">DB instance class support for RDS Custom for SQL Server</a>.</p>
+    /// <p>If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request. </p>
     /// <p>Default: Uses existing setting</p>
     #[doc(hidden)]
     pub db_instance_class: std::option::Option<std::string::String>,
@@ -40328,9 +41028,8 @@ impl ModifyDbInstanceInput {
     pub fn allocated_storage(&self) -> std::option::Option<i32> {
         self.allocated_storage
     }
-    /// <p>The new compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance classes, and availability for your engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance classes</a> in the <i>Amazon RDS User Guide</i> or <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora DB instance classes</a> in the <i>Amazon Aurora User Guide</i>.</p>
-    /// <p>If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.</p>
-    /// <p>This setting doesn't apply to RDS Custom for Oracle.</p>
+    /// <p>The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance classes, and availability for your engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a> in the <i>Amazon RDS User Guide</i>. For RDS Custom, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.instances">DB instance class support for RDS Custom for Oracle</a> and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html#custom-reqs-limits.instancesMS">DB instance class support for RDS Custom for SQL Server</a>.</p>
+    /// <p>If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request. </p>
     /// <p>Default: Uses existing setting</p>
     pub fn db_instance_class(&self) -> std::option::Option<&str> {
         self.db_instance_class.as_deref()
@@ -41195,6 +41894,17 @@ pub struct ModifyDbClusterInput {
     #[doc(hidden)]
     pub serverless_v2_scaling_configuration:
         std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    /// <p>Valid for: Aurora DB clusters only</p>
+    #[doc(hidden)]
+    pub network_type: std::option::Option<std::string::String>,
 }
 impl ModifyDbClusterInput {
     /// <p>The DB cluster identifier for the cluster being modified. This parameter isn't case-sensitive.</p>
@@ -41473,6 +42183,18 @@ impl ModifyDbClusterInput {
     ) -> std::option::Option<&crate::model::ServerlessV2ScalingConfiguration> {
         self.serverless_v2_scaling_configuration.as_ref()
     }
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    /// <p>Valid for: Aurora DB clusters only</p>
+    pub fn network_type(&self) -> std::option::Option<&str> {
+        self.network_type.as_deref()
+    }
 }
 impl std::fmt::Debug for ModifyDbClusterInput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -41548,6 +42270,7 @@ impl std::fmt::Debug for ModifyDbClusterInput {
             "serverless_v2_scaling_configuration",
             &self.serverless_v2_scaling_configuration,
         );
+        formatter.field("network_type", &self.network_type);
         formatter.finish()
     }
 }
@@ -48467,6 +49190,17 @@ pub struct CreateDbClusterInput {
     #[doc(hidden)]
     pub serverless_v2_scaling_configuration:
         std::option::Option<crate::model::ServerlessV2ScalingConfiguration>,
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    /// <p>Valid for: Aurora DB clusters only</p>
+    #[doc(hidden)]
+    pub network_type: std::option::Option<std::string::String>,
 }
 impl CreateDbClusterInput {
     /// <p>A list of Availability Zones (AZs) where DB instances in the DB cluster can be created.</p>
@@ -48863,6 +49597,18 @@ impl CreateDbClusterInput {
     ) -> std::option::Option<&crate::model::ServerlessV2ScalingConfiguration> {
         self.serverless_v2_scaling_configuration.as_ref()
     }
+    /// <p>The network type of the DB cluster.</p>
+    /// <p>Valid values:</p>
+    /// <ul>
+    /// <li> <p> <code>IPV4</code> </p> </li>
+    /// <li> <p> <code>DUAL</code> </p> </li>
+    /// </ul>
+    /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB cluster. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    /// <p>Valid for: Aurora DB clusters only</p>
+    pub fn network_type(&self) -> std::option::Option<&str> {
+        self.network_type.as_deref()
+    }
 }
 impl std::fmt::Debug for CreateDbClusterInput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -48945,6 +49691,7 @@ impl std::fmt::Debug for CreateDbClusterInput {
             "serverless_v2_scaling_configuration",
             &self.serverless_v2_scaling_configuration,
         );
+        formatter.field("network_type", &self.network_type);
         formatter.finish()
     }
 }

@@ -11,7 +11,8 @@
 #![warn(missing_docs)]
 //! <p>Transfer Family is a fully managed service that enables the transfer of files over the File
 //! Transfer Protocol (FTP), File Transfer Protocol over SSL (FTPS), or Secure Shell (SSH) File
-//! Transfer Protocol (SFTP) directly into and out of Amazon Simple Storage Service (Amazon S3).
+//! Transfer Protocol (SFTP) directly into and out of Amazon Simple Storage Service (Amazon S3) or Amazon EFS.
+//! Additionally, you can use Applicability Statement 2 (AS2) to transfer files into and out of Amazon S3.
 //! Amazon Web Services helps you seamlessly migrate your file transfer workflows to Transfer Family by integrating
 //! with existing authentication systems, and providing DNS routing with Amazon Route 53 so
 //! nothing changes for your customers and partners, or their applications. With your data in
@@ -42,6 +43,8 @@ mod aws_endpoint;
 pub mod client;
 /// Configuration for the service.
 pub mod config;
+/// Wrap operations in a special type allowing for the modification of operations and the requests inside before sending them
+pub mod customizable_operation;
 /// Errors that can occur when calling the service.
 pub mod error;
 mod error_meta;
@@ -71,10 +74,12 @@ pub mod types {
     pub use aws_smithy_http::result::SdkError;
     pub use aws_smithy_types::DateTime;
 }
+pub use aws_smithy_async::rt::sleep::AsyncSleep;
+pub use aws_smithy_types::retry::RetryConfig;
+pub use aws_smithy_types::timeout::Config as TimeoutConfig;
 static API_METADATA: aws_http::user_agent::ApiMetadata =
     aws_http::user_agent::ApiMetadata::new("transfer", PKG_VERSION);
 pub use aws_smithy_http::endpoint::Endpoint;
-pub use aws_smithy_types::retry::RetryConfig;
 pub use aws_types::app_name::AppName;
 pub use aws_types::region::Region;
 pub use aws_types::Credentials;

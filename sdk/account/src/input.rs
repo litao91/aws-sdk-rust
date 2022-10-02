@@ -56,10 +56,6 @@ pub mod delete_alternate_contact_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteAlternateContactInputOperationOutputAlias = crate::operation::DeleteAlternateContact;
-#[doc(hidden)]
-pub type DeleteAlternateContactInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteAlternateContactInput {
     /// Consumes the builder and constructs an Operation<[`DeleteAlternateContact`](crate::operation::DeleteAlternateContact)>
     #[allow(unused_mut)]
@@ -71,7 +67,7 @@ impl DeleteAlternateContactInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteAlternateContact,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -135,10 +131,17 @@ impl DeleteAlternateContactInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -154,7 +157,7 @@ impl DeleteAlternateContactInput {
             "DeleteAlternateContact",
             "account",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteAlternateContactInput`](crate::input::DeleteAlternateContactInput).
@@ -218,10 +221,6 @@ pub mod get_alternate_contact_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetAlternateContactInputOperationOutputAlias = crate::operation::GetAlternateContact;
-#[doc(hidden)]
-pub type GetAlternateContactInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetAlternateContactInput {
     /// Consumes the builder and constructs an Operation<[`GetAlternateContact`](crate::operation::GetAlternateContact)>
     #[allow(unused_mut)]
@@ -233,7 +232,7 @@ impl GetAlternateContactInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetAlternateContact,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -295,10 +294,17 @@ impl GetAlternateContactInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -314,7 +320,7 @@ impl GetAlternateContactInput {
             "GetAlternateContact",
             "account",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetAlternateContactInput`](crate::input::GetAlternateContactInput).
@@ -359,10 +365,6 @@ pub mod get_contact_information_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetContactInformationInputOperationOutputAlias = crate::operation::GetContactInformation;
-#[doc(hidden)]
-pub type GetContactInformationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetContactInformationInput {
     /// Consumes the builder and constructs an Operation<[`GetContactInformation`](crate::operation::GetContactInformation)>
     #[allow(unused_mut)]
@@ -374,7 +376,7 @@ impl GetContactInformationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetContactInformation,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -438,10 +440,17 @@ impl GetContactInformationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -457,7 +466,7 @@ impl GetContactInformationInput {
             "GetContactInformation",
             "account",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetContactInformationInput`](crate::input::GetContactInformationInput).
@@ -572,10 +581,6 @@ pub mod put_alternate_contact_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutAlternateContactInputOperationOutputAlias = crate::operation::PutAlternateContact;
-#[doc(hidden)]
-pub type PutAlternateContactInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutAlternateContactInput {
     /// Consumes the builder and constructs an Operation<[`PutAlternateContact`](crate::operation::PutAlternateContact)>
     #[allow(unused_mut)]
@@ -587,7 +592,7 @@ impl PutAlternateContactInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutAlternateContact,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -649,10 +654,17 @@ impl PutAlternateContactInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -668,7 +680,7 @@ impl PutAlternateContactInput {
             "PutAlternateContact",
             "account",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutAlternateContactInput`](crate::input::PutAlternateContactInput).
@@ -728,10 +740,6 @@ pub mod put_contact_information_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutContactInformationInputOperationOutputAlias = crate::operation::PutContactInformation;
-#[doc(hidden)]
-pub type PutContactInformationInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutContactInformationInput {
     /// Consumes the builder and constructs an Operation<[`PutContactInformation`](crate::operation::PutContactInformation)>
     #[allow(unused_mut)]
@@ -743,7 +751,7 @@ impl PutContactInformationInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutContactInformation,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -807,10 +815,17 @@ impl PutContactInformationInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -826,7 +841,7 @@ impl PutContactInformationInput {
             "PutContactInformation",
             "account",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutContactInformationInput`](crate::input::PutContactInformationInput).

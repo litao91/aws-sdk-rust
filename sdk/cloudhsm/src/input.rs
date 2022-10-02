@@ -52,10 +52,6 @@ pub mod add_tags_to_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddTagsToResourceInputOperationOutputAlias = crate::operation::AddTagsToResource;
-#[doc(hidden)]
-pub type AddTagsToResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AddTagsToResourceInput {
     /// Consumes the builder and constructs an Operation<[`AddTagsToResource`](crate::operation::AddTagsToResource)>
     #[allow(unused_mut)]
@@ -67,7 +63,7 @@ impl AddTagsToResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddTagsToResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -134,10 +130,17 @@ impl AddTagsToResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -153,7 +156,7 @@ impl AddTagsToResourceInput {
             "AddTagsToResource",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddTagsToResourceInput`](crate::input::AddTagsToResourceInput).
@@ -189,10 +192,6 @@ pub mod create_hapg_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateHapgInputOperationOutputAlias = crate::operation::CreateHapg;
-#[doc(hidden)]
-pub type CreateHapgInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateHapgInput {
     /// Consumes the builder and constructs an Operation<[`CreateHapg`](crate::operation::CreateHapg)>
     #[allow(unused_mut)]
@@ -204,7 +203,7 @@ impl CreateHapgInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateHapg,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -271,10 +270,17 @@ impl CreateHapgInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -290,7 +296,7 @@ impl CreateHapgInput {
             "CreateHapg",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateHapgInput`](crate::input::CreateHapgInput).
@@ -425,10 +431,6 @@ pub mod create_hsm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateHsmInputOperationOutputAlias = crate::operation::CreateHsm;
-#[doc(hidden)]
-pub type CreateHsmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateHsmInput {
     /// Consumes the builder and constructs an Operation<[`CreateHsm`](crate::operation::CreateHsm)>
     #[allow(unused_mut)]
@@ -440,7 +442,7 @@ impl CreateHsmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateHsm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -507,10 +509,17 @@ impl CreateHsmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -524,7 +533,7 @@ impl CreateHsmInput {
                     "CreateHsm",
                     "cloudhsm",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateHsmInput`](crate::input::CreateHsmInput).
@@ -575,10 +584,6 @@ pub mod create_luna_client_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateLunaClientInputOperationOutputAlias = crate::operation::CreateLunaClient;
-#[doc(hidden)]
-pub type CreateLunaClientInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateLunaClientInput {
     /// Consumes the builder and constructs an Operation<[`CreateLunaClient`](crate::operation::CreateLunaClient)>
     #[allow(unused_mut)]
@@ -590,7 +595,7 @@ impl CreateLunaClientInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateLunaClient,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -657,10 +662,17 @@ impl CreateLunaClientInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -676,7 +688,7 @@ impl CreateLunaClientInput {
             "CreateLunaClient",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateLunaClientInput`](crate::input::CreateLunaClientInput).
@@ -714,10 +726,6 @@ pub mod delete_hapg_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteHapgInputOperationOutputAlias = crate::operation::DeleteHapg;
-#[doc(hidden)]
-pub type DeleteHapgInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteHapgInput {
     /// Consumes the builder and constructs an Operation<[`DeleteHapg`](crate::operation::DeleteHapg)>
     #[allow(unused_mut)]
@@ -729,7 +737,7 @@ impl DeleteHapgInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteHapg,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -796,10 +804,17 @@ impl DeleteHapgInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -815,7 +830,7 @@ impl DeleteHapgInput {
             "DeleteHapg",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteHapgInput`](crate::input::DeleteHapgInput).
@@ -853,10 +868,6 @@ pub mod delete_hsm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteHsmInputOperationOutputAlias = crate::operation::DeleteHsm;
-#[doc(hidden)]
-pub type DeleteHsmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteHsmInput {
     /// Consumes the builder and constructs an Operation<[`DeleteHsm`](crate::operation::DeleteHsm)>
     #[allow(unused_mut)]
@@ -868,7 +879,7 @@ impl DeleteHsmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteHsm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -935,10 +946,17 @@ impl DeleteHsmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -952,7 +970,7 @@ impl DeleteHsmInput {
                     "DeleteHsm",
                     "cloudhsm",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteHsmInput`](crate::input::DeleteHsmInput).
@@ -991,10 +1009,6 @@ pub mod delete_luna_client_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteLunaClientInputOperationOutputAlias = crate::operation::DeleteLunaClient;
-#[doc(hidden)]
-pub type DeleteLunaClientInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteLunaClientInput {
     /// Consumes the builder and constructs an Operation<[`DeleteLunaClient`](crate::operation::DeleteLunaClient)>
     #[allow(unused_mut)]
@@ -1006,7 +1020,7 @@ impl DeleteLunaClientInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteLunaClient,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1073,10 +1087,17 @@ impl DeleteLunaClientInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1092,7 +1113,7 @@ impl DeleteLunaClientInput {
             "DeleteLunaClient",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteLunaClientInput`](crate::input::DeleteLunaClientInput).
@@ -1131,10 +1152,6 @@ pub mod describe_hapg_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeHapgInputOperationOutputAlias = crate::operation::DescribeHapg;
-#[doc(hidden)]
-pub type DescribeHapgInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeHapgInput {
     /// Consumes the builder and constructs an Operation<[`DescribeHapg`](crate::operation::DescribeHapg)>
     #[allow(unused_mut)]
@@ -1146,7 +1163,7 @@ impl DescribeHapgInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeHapg,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1213,10 +1230,17 @@ impl DescribeHapgInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1232,7 +1256,7 @@ impl DescribeHapgInput {
             "DescribeHapg",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeHapgInput`](crate::input::DescribeHapgInput).
@@ -1286,10 +1310,6 @@ pub mod describe_hsm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeHsmInputOperationOutputAlias = crate::operation::DescribeHsm;
-#[doc(hidden)]
-pub type DescribeHsmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeHsmInput {
     /// Consumes the builder and constructs an Operation<[`DescribeHsm`](crate::operation::DescribeHsm)>
     #[allow(unused_mut)]
@@ -1301,7 +1321,7 @@ impl DescribeHsmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeHsm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1368,10 +1388,17 @@ impl DescribeHsmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1387,7 +1414,7 @@ impl DescribeHsmInput {
             "DescribeHsm",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeHsmInput`](crate::input::DescribeHsmInput).
@@ -1441,10 +1468,6 @@ pub mod describe_luna_client_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeLunaClientInputOperationOutputAlias = crate::operation::DescribeLunaClient;
-#[doc(hidden)]
-pub type DescribeLunaClientInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeLunaClientInput {
     /// Consumes the builder and constructs an Operation<[`DescribeLunaClient`](crate::operation::DescribeLunaClient)>
     #[allow(unused_mut)]
@@ -1456,7 +1479,7 @@ impl DescribeLunaClientInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeLunaClient,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1523,10 +1546,17 @@ impl DescribeLunaClientInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1542,7 +1572,7 @@ impl DescribeLunaClientInput {
             "DescribeLunaClient",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeLunaClientInput`](crate::input::DescribeLunaClientInput).
@@ -1616,10 +1646,6 @@ pub mod get_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetConfigInputOperationOutputAlias = crate::operation::GetConfig;
-#[doc(hidden)]
-pub type GetConfigInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetConfigInput {
     /// Consumes the builder and constructs an Operation<[`GetConfig`](crate::operation::GetConfig)>
     #[allow(unused_mut)]
@@ -1631,7 +1657,7 @@ impl GetConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1698,10 +1724,17 @@ impl GetConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1715,7 +1748,7 @@ impl GetConfigInput {
                     "GetConfig",
                     "cloudhsm",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetConfigInput`](crate::input::GetConfigInput).
@@ -1740,10 +1773,6 @@ pub mod list_available_zones_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListAvailableZonesInputOperationOutputAlias = crate::operation::ListAvailableZones;
-#[doc(hidden)]
-pub type ListAvailableZonesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListAvailableZonesInput {
     /// Consumes the builder and constructs an Operation<[`ListAvailableZones`](crate::operation::ListAvailableZones)>
     #[allow(unused_mut)]
@@ -1755,7 +1784,7 @@ impl ListAvailableZonesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListAvailableZones,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1815,10 +1844,17 @@ impl ListAvailableZonesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1834,7 +1870,7 @@ impl ListAvailableZonesInput {
             "ListAvailableZones",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListAvailableZonesInput`](crate::input::ListAvailableZonesInput).
@@ -1872,10 +1908,6 @@ pub mod list_hapgs_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListHapgsInputOperationOutputAlias = crate::operation::ListHapgs;
-#[doc(hidden)]
-pub type ListHapgsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListHapgsInput {
     /// Consumes the builder and constructs an Operation<[`ListHapgs`](crate::operation::ListHapgs)>
     #[allow(unused_mut)]
@@ -1887,7 +1919,7 @@ impl ListHapgsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListHapgs,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1954,10 +1986,17 @@ impl ListHapgsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1971,7 +2010,7 @@ impl ListHapgsInput {
                     "ListHapgs",
                     "cloudhsm",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListHapgsInput`](crate::input::ListHapgsInput).
@@ -2009,10 +2048,6 @@ pub mod list_hsms_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListHsmsInputOperationOutputAlias = crate::operation::ListHsms;
-#[doc(hidden)]
-pub type ListHsmsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListHsmsInput {
     /// Consumes the builder and constructs an Operation<[`ListHsms`](crate::operation::ListHsms)>
     #[allow(unused_mut)]
@@ -2024,7 +2059,7 @@ impl ListHsmsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListHsms,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2091,10 +2126,17 @@ impl ListHsmsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2107,7 +2149,7 @@ impl ListHsmsInput {
                 .with_metadata(aws_smithy_http::operation::Metadata::new(
                     "ListHsms", "cloudhsm",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListHsmsInput`](crate::input::ListHsmsInput).
@@ -2146,10 +2188,6 @@ pub mod list_luna_clients_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListLunaClientsInputOperationOutputAlias = crate::operation::ListLunaClients;
-#[doc(hidden)]
-pub type ListLunaClientsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListLunaClientsInput {
     /// Consumes the builder and constructs an Operation<[`ListLunaClients`](crate::operation::ListLunaClients)>
     #[allow(unused_mut)]
@@ -2161,7 +2199,7 @@ impl ListLunaClientsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListLunaClients,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2228,10 +2266,17 @@ impl ListLunaClientsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2247,7 +2292,7 @@ impl ListLunaClientsInput {
             "ListLunaClients",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListLunaClientsInput`](crate::input::ListLunaClientsInput).
@@ -2286,10 +2331,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -2301,7 +2342,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2370,10 +2411,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2389,7 +2437,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -2460,10 +2508,6 @@ pub mod modify_hapg_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyHapgInputOperationOutputAlias = crate::operation::ModifyHapg;
-#[doc(hidden)]
-pub type ModifyHapgInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyHapgInput {
     /// Consumes the builder and constructs an Operation<[`ModifyHapg`](crate::operation::ModifyHapg)>
     #[allow(unused_mut)]
@@ -2475,7 +2519,7 @@ impl ModifyHapgInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyHapg,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2542,10 +2586,17 @@ impl ModifyHapgInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2561,7 +2612,7 @@ impl ModifyHapgInput {
             "ModifyHapg",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyHapgInput`](crate::input::ModifyHapgInput).
@@ -2661,10 +2712,6 @@ pub mod modify_hsm_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyHsmInputOperationOutputAlias = crate::operation::ModifyHsm;
-#[doc(hidden)]
-pub type ModifyHsmInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyHsmInput {
     /// Consumes the builder and constructs an Operation<[`ModifyHsm`](crate::operation::ModifyHsm)>
     #[allow(unused_mut)]
@@ -2676,7 +2723,7 @@ impl ModifyHsmInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyHsm,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2743,10 +2790,17 @@ impl ModifyHsmInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2760,7 +2814,7 @@ impl ModifyHsmInput {
                     "ModifyHsm",
                     "cloudhsm",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyHsmInput`](crate::input::ModifyHsmInput).
@@ -2811,10 +2865,6 @@ pub mod modify_luna_client_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyLunaClientInputOperationOutputAlias = crate::operation::ModifyLunaClient;
-#[doc(hidden)]
-pub type ModifyLunaClientInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyLunaClientInput {
     /// Consumes the builder and constructs an Operation<[`ModifyLunaClient`](crate::operation::ModifyLunaClient)>
     #[allow(unused_mut)]
@@ -2826,7 +2876,7 @@ impl ModifyLunaClientInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyLunaClient,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2893,10 +2943,17 @@ impl ModifyLunaClientInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2912,7 +2969,7 @@ impl ModifyLunaClientInput {
             "ModifyLunaClient",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyLunaClientInput`](crate::input::ModifyLunaClientInput).
@@ -2974,10 +3031,6 @@ pub mod remove_tags_from_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveTagsFromResourceInputOperationOutputAlias = crate::operation::RemoveTagsFromResource;
-#[doc(hidden)]
-pub type RemoveTagsFromResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveTagsFromResourceInput {
     /// Consumes the builder and constructs an Operation<[`RemoveTagsFromResource`](crate::operation::RemoveTagsFromResource)>
     #[allow(unused_mut)]
@@ -2989,7 +3042,7 @@ impl RemoveTagsFromResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveTagsFromResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3058,10 +3111,17 @@ impl RemoveTagsFromResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3077,7 +3137,7 @@ impl RemoveTagsFromResourceInput {
             "RemoveTagsFromResource",
             "cloudhsm",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveTagsFromResourceInput`](crate::input::RemoveTagsFromResourceInput).

@@ -110,6 +110,7 @@ impl Client {
     ///   - [`r#type(ChannelMembershipType)`](crate::client::fluent_builders::BatchCreateChannelMembership::type) / [`set_type(Option<ChannelMembershipType>)`](crate::client::fluent_builders::BatchCreateChannelMembership::set_type): <p>The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always returned as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not returned. This is only supported by moderators.</p>
     ///   - [`member_arns(Vec<String>)`](crate::client::fluent_builders::BatchCreateChannelMembership::member_arns) / [`set_member_arns(Option<Vec<String>>)`](crate::client::fluent_builders::BatchCreateChannelMembership::set_member_arns): <p>The <code>AppInstanceUserArn</code>s of the members you want to add to the channel.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::BatchCreateChannelMembership::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::BatchCreateChannelMembership::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::BatchCreateChannelMembership::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::BatchCreateChannelMembership::set_sub_channel_id): <p>The ID of the SubChannel in the request. </p> <note>   <p>Only required when creating membership in a SubChannel for a moderator in an elastic channel.</p>  </note>
     /// - On success, responds with [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput) with field(s):
     ///   - [`batch_channel_memberships(Option<BatchChannelMemberships>)`](crate::output::BatchCreateChannelMembershipOutput::batch_channel_memberships): <p>The list of channel memberships in the response.</p>
     ///   - [`errors(Option<Vec<BatchCreateChannelMembershipError>>)`](crate::output::BatchCreateChannelMembershipOutput::errors): <p>If the action fails for one or more of the memberships in the request, a list of the memberships is returned, along with error codes and error messages.</p>
@@ -145,6 +146,7 @@ impl Client {
     ///   - [`channel_id(impl Into<String>)`](crate::client::fluent_builders::CreateChannel::channel_id) / [`set_channel_id(Option<String>)`](crate::client::fluent_builders::CreateChannel::set_channel_id): <p>The ID of the channel in the request.</p>
     ///   - [`member_arns(Vec<String>)`](crate::client::fluent_builders::CreateChannel::member_arns) / [`set_member_arns(Option<Vec<String>>)`](crate::client::fluent_builders::CreateChannel::set_member_arns): <p>The ARNs of the channel members in the request.</p>
     ///   - [`moderator_arns(Vec<String>)`](crate::client::fluent_builders::CreateChannel::moderator_arns) / [`set_moderator_arns(Option<Vec<String>>)`](crate::client::fluent_builders::CreateChannel::set_moderator_arns): <p>The ARNs of the channel moderators in the request.</p>
+    ///   - [`elastic_channel_configuration(ElasticChannelConfiguration)`](crate::client::fluent_builders::CreateChannel::elastic_channel_configuration) / [`set_elastic_channel_configuration(Option<ElasticChannelConfiguration>)`](crate::client::fluent_builders::CreateChannel::set_elastic_channel_configuration): <p>The attributes required to configure and create an elastic channel. An elastic channel can support a maximum of 1-million users, excluding moderators.</p>
     /// - On success, responds with [`CreateChannelOutput`](crate::output::CreateChannelOutput) with field(s):
     ///   - [`channel_arn(Option<String>)`](crate::output::CreateChannelOutput::channel_arn): <p>The ARN of the channel.</p>
     /// - On failure, responds with [`SdkError<CreateChannelError>`](crate::error::CreateChannelError)
@@ -185,9 +187,11 @@ impl Client {
     ///   - [`member_arn(impl Into<String>)`](crate::client::fluent_builders::CreateChannelMembership::member_arn) / [`set_member_arn(Option<String>)`](crate::client::fluent_builders::CreateChannelMembership::set_member_arn): <p>The <code>AppInstanceUserArn</code> of the member you want to add to the channel.</p>
     ///   - [`r#type(ChannelMembershipType)`](crate::client::fluent_builders::CreateChannelMembership::type) / [`set_type(Option<ChannelMembershipType>)`](crate::client::fluent_builders::CreateChannelMembership::set_type): <p>The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always returned as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not returned. This is only supported by moderators.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::CreateChannelMembership::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::CreateChannelMembership::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::CreateChannelMembership::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::CreateChannelMembership::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p> <note>   <p>Only required when creating membership in a SubChannel for a moderator in an elastic channel.</p>  </note>
     /// - On success, responds with [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput) with field(s):
     ///   - [`channel_arn(Option<String>)`](crate::output::CreateChannelMembershipOutput::channel_arn): <p>The ARN of the channel.</p>
     ///   - [`member(Option<Identity>)`](crate::output::CreateChannelMembershipOutput::member): <p>The ARN and metadata of the member being added.</p>
+    ///   - [`sub_channel_id(Option<String>)`](crate::output::CreateChannelMembershipOutput::sub_channel_id): <p>The ID of the SubChannel in the response.</p>
     /// - On failure, responds with [`SdkError<CreateChannelMembershipError>`](crate::error::CreateChannelMembershipError)
     pub fn create_channel_membership(&self) -> fluent_builders::CreateChannelMembership {
         fluent_builders::CreateChannelMembership::new(self.handle.clone())
@@ -210,6 +214,7 @@ impl Client {
     /// - The fluent builder is configurable:
     ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::DeleteChannel::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::DeleteChannel::set_channel_arn): <p>The ARN of the channel being deleted.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::DeleteChannel::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::DeleteChannel::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::DeleteChannel::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::DeleteChannel::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p>
     /// - On success, responds with [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
 
     /// - On failure, responds with [`SdkError<DeleteChannelError>`](crate::error::DeleteChannelError)
@@ -244,6 +249,7 @@ impl Client {
     ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::DeleteChannelMembership::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::DeleteChannelMembership::set_channel_arn): <p>The ARN of the channel from which you want to remove the user.</p>
     ///   - [`member_arn(impl Into<String>)`](crate::client::fluent_builders::DeleteChannelMembership::member_arn) / [`set_member_arn(Option<String>)`](crate::client::fluent_builders::DeleteChannelMembership::set_member_arn): <p>The <code>AppInstanceUserArn</code> of the member that you're removing from the channel.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::DeleteChannelMembership::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::DeleteChannelMembership::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::DeleteChannelMembership::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::DeleteChannelMembership::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p> <note>   <p>Only for use by moderators.</p>  </note>
     /// - On success, responds with [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput)
 
     /// - On failure, responds with [`SdkError<DeleteChannelMembershipError>`](crate::error::DeleteChannelMembershipError)
@@ -256,6 +262,7 @@ impl Client {
     ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::DeleteChannelMessage::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::DeleteChannelMessage::set_channel_arn): <p>The ARN of the channel.</p>
     ///   - [`message_id(impl Into<String>)`](crate::client::fluent_builders::DeleteChannelMessage::message_id) / [`set_message_id(Option<String>)`](crate::client::fluent_builders::DeleteChannelMessage::set_message_id): <p>The ID of the message being deleted.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::DeleteChannelMessage::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::DeleteChannelMessage::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::DeleteChannelMessage::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::DeleteChannelMessage::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p> <note>   <p>Only required when deleting messages in a SubChannel that the user belongs to.</p>  </note>
     /// - On success, responds with [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput)
 
     /// - On failure, responds with [`SdkError<DeleteChannelMessageError>`](crate::error::DeleteChannelMessageError)
@@ -313,6 +320,7 @@ impl Client {
     ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::DescribeChannelMembership::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::DescribeChannelMembership::set_channel_arn): <p>The ARN of the channel.</p>
     ///   - [`member_arn(impl Into<String>)`](crate::client::fluent_builders::DescribeChannelMembership::member_arn) / [`set_member_arn(Option<String>)`](crate::client::fluent_builders::DescribeChannelMembership::set_member_arn): <p>The <code>AppInstanceUserArn</code> of the member.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::DescribeChannelMembership::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::DescribeChannelMembership::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::DescribeChannelMembership::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::DescribeChannelMembership::set_sub_channel_id): <p>The ID of the SubChannel in the request. The response contains an <code>ElasticChannelConfiguration</code> object.</p> <note>   <p>Only required to get a user’s SubChannel membership details.</p>  </note>
     /// - On success, responds with [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput) with field(s):
     ///   - [`channel_membership(Option<ChannelMembership>)`](crate::output::DescribeChannelMembershipOutput::channel_membership): <p>The details of the membership.</p>
     /// - On failure, responds with [`SdkError<DescribeChannelMembershipError>`](crate::error::DescribeChannelMembershipError)
@@ -393,6 +401,7 @@ impl Client {
     ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::GetChannelMessage::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::GetChannelMessage::set_channel_arn): <p>The ARN of the channel.</p>
     ///   - [`message_id(impl Into<String>)`](crate::client::fluent_builders::GetChannelMessage::message_id) / [`set_message_id(Option<String>)`](crate::client::fluent_builders::GetChannelMessage::set_message_id): <p>The ID of the message.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::GetChannelMessage::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::GetChannelMessage::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::GetChannelMessage::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::GetChannelMessage::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p> <note>   <p>Only required when getting messages in a SubChannel that the user belongs to.</p>  </note>
     /// - On success, responds with [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput) with field(s):
     ///   - [`channel_message(Option<ChannelMessage>)`](crate::output::GetChannelMessageOutput::channel_message): <p>The details of and content in the message.</p>
     /// - On failure, responds with [`SdkError<GetChannelMessageError>`](crate::error::GetChannelMessageError)
@@ -405,6 +414,7 @@ impl Client {
     ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::GetChannelMessageStatus::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::GetChannelMessageStatus::set_channel_arn): <p>The ARN of the channel</p>
     ///   - [`message_id(impl Into<String>)`](crate::client::fluent_builders::GetChannelMessageStatus::message_id) / [`set_message_id(Option<String>)`](crate::client::fluent_builders::GetChannelMessageStatus::set_message_id): <p>The ID of the message.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::GetChannelMessageStatus::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::GetChannelMessageStatus::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user making the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::GetChannelMessageStatus::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::GetChannelMessageStatus::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p> <note>   <p>Only required when getting message status in a SubChannel that the user belongs to.</p>  </note>
     /// - On success, responds with [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput) with field(s):
     ///   - [`status(Option<ChannelMessageStatusStructure>)`](crate::output::GetChannelMessageStatusOutput::status): <p>The message status and details.</p>
     /// - On failure, responds with [`SdkError<GetChannelMessageStatusError>`](crate::error::GetChannelMessageStatusError)
@@ -460,6 +470,7 @@ impl Client {
     ///   - [`max_results(i32)`](crate::client::fluent_builders::ListChannelMemberships::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::ListChannelMemberships::set_max_results): <p>The maximum number of channel memberships that you want returned.</p>
     ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::ListChannelMemberships::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::ListChannelMemberships::set_next_token): <p>The token passed by previous API calls until all requested channel memberships are returned.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::ListChannelMemberships::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::ListChannelMemberships::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::ListChannelMemberships::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::ListChannelMemberships::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p> <note>   <p>Only required when listing a user's memberships in a particular sub-channel of an elastic channel.</p>  </note>
     /// - On success, responds with [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput) with field(s):
     ///   - [`channel_arn(Option<String>)`](crate::output::ListChannelMembershipsOutput::channel_arn): <p>The ARN of the channel.</p>
     ///   - [`channel_memberships(Option<Vec<ChannelMembershipSummary>>)`](crate::output::ListChannelMembershipsOutput::channel_memberships): <p>The information for the requested channel memberships.</p>
@@ -496,10 +507,12 @@ impl Client {
     ///   - [`max_results(i32)`](crate::client::fluent_builders::ListChannelMessages::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::ListChannelMessages::set_max_results): <p>The maximum number of messages that you want returned.</p>
     ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::ListChannelMessages::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::ListChannelMessages::set_next_token): <p>The token passed by previous API calls until all requested messages are returned.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::ListChannelMessages::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::ListChannelMessages::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::ListChannelMessages::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::ListChannelMessages::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p> <note>   <p>Only required when listing the messages in a SubChannel that the user belongs to.</p>  </note>
     /// - On success, responds with [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput) with field(s):
     ///   - [`channel_arn(Option<String>)`](crate::output::ListChannelMessagesOutput::channel_arn): <p>The ARN of the channel containing the requested messages.</p>
     ///   - [`next_token(Option<String>)`](crate::output::ListChannelMessagesOutput::next_token): <p>The token passed by previous API calls until all requested messages are returned.</p>
     ///   - [`channel_messages(Option<Vec<ChannelMessageSummary>>)`](crate::output::ListChannelMessagesOutput::channel_messages): <p>The information about, and content of, each requested message.</p>
+    ///   - [`sub_channel_id(Option<String>)`](crate::output::ListChannelMessagesOutput::sub_channel_id): <p>The ID of the SubChannel in the response.</p>
     /// - On failure, responds with [`SdkError<ListChannelMessagesError>`](crate::error::ListChannelMessagesError)
     pub fn list_channel_messages(&self) -> fluent_builders::ListChannelMessages {
         fluent_builders::ListChannelMessages::new(self.handle.clone())
@@ -569,6 +582,22 @@ impl Client {
     ) -> fluent_builders::ListChannelsModeratedByAppInstanceUser {
         fluent_builders::ListChannelsModeratedByAppInstanceUser::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`ListSubChannels`](crate::client::fluent_builders::ListSubChannels) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListSubChannels::into_paginator).
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::ListSubChannels::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::ListSubChannels::set_channel_arn): <p>The ARN of elastic channel.</p>
+    ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::ListSubChannels::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::ListSubChannels::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user making the API call.</p>
+    ///   - [`max_results(i32)`](crate::client::fluent_builders::ListSubChannels::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::ListSubChannels::set_max_results): <p>The maximum number of sub-channels that you want to return.</p>
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::ListSubChannels::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::ListSubChannels::set_next_token): <p>The token passed by previous API calls until all requested sub-channels are returned.</p>
+    /// - On success, responds with [`ListSubChannelsOutput`](crate::output::ListSubChannelsOutput) with field(s):
+    ///   - [`channel_arn(Option<String>)`](crate::output::ListSubChannelsOutput::channel_arn): <p>The ARN of elastic channel.</p>
+    ///   - [`sub_channels(Option<Vec<SubChannelSummary>>)`](crate::output::ListSubChannelsOutput::sub_channels): <p>The information about each sub-channel.</p>
+    ///   - [`next_token(Option<String>)`](crate::output::ListSubChannelsOutput::next_token): <p>The token passed by previous API calls until all requested sub-channels are returned.</p>
+    /// - On failure, responds with [`SdkError<ListSubChannelsError>`](crate::error::ListSubChannelsError)
+    pub fn list_sub_channels(&self) -> fluent_builders::ListSubChannels {
+        fluent_builders::ListSubChannels::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`ListTagsForResource`](crate::client::fluent_builders::ListTagsForResource) operation.
     ///
     /// - The fluent builder is configurable:
@@ -602,9 +631,11 @@ impl Client {
     ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::RedactChannelMessage::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::RedactChannelMessage::set_channel_arn): <p>The ARN of the channel containing the messages that you want to redact.</p>
     ///   - [`message_id(impl Into<String>)`](crate::client::fluent_builders::RedactChannelMessage::message_id) / [`set_message_id(Option<String>)`](crate::client::fluent_builders::RedactChannelMessage::set_message_id): <p>The ID of the message being redacted.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::RedactChannelMessage::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::RedactChannelMessage::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::RedactChannelMessage::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::RedactChannelMessage::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p>
     /// - On success, responds with [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput) with field(s):
     ///   - [`channel_arn(Option<String>)`](crate::output::RedactChannelMessageOutput::channel_arn): <p>The ARN of the channel containing the messages that you want to redact.</p>
     ///   - [`message_id(Option<String>)`](crate::output::RedactChannelMessageOutput::message_id): <p>The ID of the message being redacted.</p>
+    ///   - [`sub_channel_id(Option<String>)`](crate::output::RedactChannelMessageOutput::sub_channel_id): <p>The ID of the SubChannel in the response.</p> <note>   <p>Only required when redacting messages in a SubChannel that the user belongs to.</p>  </note>
     /// - On failure, responds with [`SdkError<RedactChannelMessageError>`](crate::error::RedactChannelMessageError)
     pub fn redact_channel_message(&self) -> fluent_builders::RedactChannelMessage {
         fluent_builders::RedactChannelMessage::new(self.handle.clone())
@@ -636,10 +667,12 @@ impl Client {
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::SendChannelMessage::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::SendChannelMessage::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
     ///   - [`push_notification(PushNotificationConfiguration)`](crate::client::fluent_builders::SendChannelMessage::push_notification) / [`set_push_notification(Option<PushNotificationConfiguration>)`](crate::client::fluent_builders::SendChannelMessage::set_push_notification): <p>The push notification configuration of the message.</p>
     ///   - [`message_attributes(HashMap<String, MessageAttributeValue>)`](crate::client::fluent_builders::SendChannelMessage::message_attributes) / [`set_message_attributes(Option<HashMap<String, MessageAttributeValue>>)`](crate::client::fluent_builders::SendChannelMessage::set_message_attributes): <p>The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the <code>PushNotificationPreferences</code>.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::SendChannelMessage::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::SendChannelMessage::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p>
     /// - On success, responds with [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput) with field(s):
     ///   - [`channel_arn(Option<String>)`](crate::output::SendChannelMessageOutput::channel_arn): <p>The ARN of the channel.</p>
     ///   - [`message_id(Option<String>)`](crate::output::SendChannelMessageOutput::message_id): <p>The ID string assigned to each message.</p>
     ///   - [`status(Option<ChannelMessageStatusStructure>)`](crate::output::SendChannelMessageOutput::status): <p>The status of the channel message.</p>
+    ///   - [`sub_channel_id(Option<String>)`](crate::output::SendChannelMessageOutput::sub_channel_id): <p>The ID of the SubChannel in the response.</p>
     /// - On failure, responds with [`SdkError<SendChannelMessageError>`](crate::error::SendChannelMessageError)
     pub fn send_channel_message(&self) -> fluent_builders::SendChannelMessage {
         fluent_builders::SendChannelMessage::new(self.handle.clone())
@@ -700,10 +733,12 @@ impl Client {
     ///   - [`content(impl Into<String>)`](crate::client::fluent_builders::UpdateChannelMessage::content) / [`set_content(Option<String>)`](crate::client::fluent_builders::UpdateChannelMessage::set_content): <p>The content of the message being updated.</p>
     ///   - [`metadata(impl Into<String>)`](crate::client::fluent_builders::UpdateChannelMessage::metadata) / [`set_metadata(Option<String>)`](crate::client::fluent_builders::UpdateChannelMessage::set_metadata): <p>The metadata of the message being updated.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::UpdateChannelMessage::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::UpdateChannelMessage::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::UpdateChannelMessage::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::UpdateChannelMessage::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p> <note>   <p>Only required when updating messages in a SubChannel that the user belongs to.</p>  </note>
     /// - On success, responds with [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput) with field(s):
     ///   - [`channel_arn(Option<String>)`](crate::output::UpdateChannelMessageOutput::channel_arn): <p>The ARN of the channel.</p>
     ///   - [`message_id(Option<String>)`](crate::output::UpdateChannelMessageOutput::message_id): <p>The ID string of the message being updated.</p>
     ///   - [`status(Option<ChannelMessageStatusStructure>)`](crate::output::UpdateChannelMessageOutput::status): <p>The status of the message update.</p>
+    ///   - [`sub_channel_id(Option<String>)`](crate::output::UpdateChannelMessageOutput::sub_channel_id): <p>The ID of the SubChannel in the response.</p>
     /// - On failure, responds with [`SdkError<UpdateChannelMessageError>`](crate::error::UpdateChannelMessageError)
     pub fn update_channel_message(&self) -> fluent_builders::UpdateChannelMessage {
         fluent_builders::UpdateChannelMessage::new(self.handle.clone())
@@ -713,8 +748,10 @@ impl Client {
     /// - The fluent builder is configurable:
     ///   - [`channel_arn(impl Into<String>)`](crate::client::fluent_builders::UpdateChannelReadMarker::channel_arn) / [`set_channel_arn(Option<String>)`](crate::client::fluent_builders::UpdateChannelReadMarker::set_channel_arn): <p>The ARN of the channel.</p>
     ///   - [`chime_bearer(impl Into<String>)`](crate::client::fluent_builders::UpdateChannelReadMarker::chime_bearer) / [`set_chime_bearer(Option<String>)`](crate::client::fluent_builders::UpdateChannelReadMarker::set_chime_bearer): <p>The <code>AppInstanceUserArn</code> of the user that makes the API call.</p>
+    ///   - [`sub_channel_id(impl Into<String>)`](crate::client::fluent_builders::UpdateChannelReadMarker::sub_channel_id) / [`set_sub_channel_id(Option<String>)`](crate::client::fluent_builders::UpdateChannelReadMarker::set_sub_channel_id): <p>The ID of the SubChannel in the request.</p>
     /// - On success, responds with [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput) with field(s):
     ///   - [`channel_arn(Option<String>)`](crate::output::UpdateChannelReadMarkerOutput::channel_arn): <p>The ARN of the channel.</p>
+    ///   - [`sub_channel_id(Option<String>)`](crate::output::UpdateChannelReadMarkerOutput::sub_channel_id): <p>The ID of the SubChannel in the response.</p>
     /// - On failure, responds with [`SdkError<UpdateChannelReadMarkerError>`](crate::error::UpdateChannelReadMarkerError)
     pub fn update_channel_read_marker(&self) -> fluent_builders::UpdateChannelReadMarker {
         fluent_builders::UpdateChannelReadMarker::new(self.handle.clone())
@@ -744,6 +781,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::AssociateChannelFlow,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::AssociateChannelFlowError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -822,6 +883,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::BatchCreateChannelMembership,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::BatchCreateChannelMembershipError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -897,6 +982,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request. </p> <note>
+        /// <p>Only required when creating membership in a SubChannel for a moderator in an elastic channel.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request. </p> <note>
+        /// <p>Only required when creating membership in a SubChannel for a moderator in an elastic channel.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `ChannelFlowCallback`.
     ///
@@ -919,6 +1021,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ChannelFlowCallback,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ChannelFlowCallbackError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1008,6 +1134,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::CreateChannel,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::CreateChannelError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1175,6 +1325,22 @@ pub mod fluent_builders {
             self.inner = self.inner.set_moderator_arns(input);
             self
         }
+        /// <p>The attributes required to configure and create an elastic channel. An elastic channel can support a maximum of 1-million users, excluding moderators.</p>
+        pub fn elastic_channel_configuration(
+            mut self,
+            input: crate::model::ElasticChannelConfiguration,
+        ) -> Self {
+            self.inner = self.inner.elastic_channel_configuration(input);
+            self
+        }
+        /// <p>The attributes required to configure and create an elastic channel. An elastic channel can support a maximum of 1-million users, excluding moderators.</p>
+        pub fn set_elastic_channel_configuration(
+            mut self,
+            input: std::option::Option<crate::model::ElasticChannelConfiguration>,
+        ) -> Self {
+            self.inner = self.inner.set_elastic_channel_configuration(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `CreateChannelBan`.
     ///
@@ -1194,6 +1360,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::CreateChannelBan,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::CreateChannelBanError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1275,6 +1465,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::CreateChannelFlow,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::CreateChannelFlowError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1404,6 +1618,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::CreateChannelMembership,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::CreateChannelMembershipError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -1472,6 +1710,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when creating membership in a SubChannel for a moderator in an elastic channel.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when creating membership in a SubChannel for a moderator in an elastic channel.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `CreateChannelModerator`.
     ///
@@ -1497,6 +1752,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::CreateChannelModerator,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::CreateChannelModeratorError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1577,6 +1856,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteChannel,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteChannelError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -1622,6 +1925,19 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `DeleteChannelBan`.
     ///
@@ -1640,6 +1956,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteChannelBan,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteChannelBanError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1717,6 +2057,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteChannelFlow,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteChannelFlowError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -1775,6 +2139,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteChannelMembership,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteChannelMembershipError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -1830,6 +2218,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only for use by moderators.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only for use by moderators.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `DeleteChannelMessage`.
     ///
@@ -1848,6 +2253,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteChannelMessage,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteChannelMessageError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -1905,6 +2334,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when deleting messages in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when deleting messages in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `DeleteChannelModerator`.
     ///
@@ -1923,6 +2369,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DeleteChannelModerator,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DeleteChannelModeratorError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2003,6 +2473,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeChannel,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeChannelError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2066,6 +2560,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeChannelBan,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeChannelBanError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2141,6 +2659,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeChannelFlow,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeChannelFlowError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2199,6 +2741,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeChannelMembership,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeChannelMembershipError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2254,6 +2820,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request. The response contains an <code>ElasticChannelConfiguration</code> object.</p> <note>
+        /// <p>Only required to get a user’s SubChannel membership details.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request. The response contains an <code>ElasticChannelConfiguration</code> object.</p> <note>
+        /// <p>Only required to get a user’s SubChannel membership details.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `DescribeChannelMembershipForAppInstanceUser`.
     ///
@@ -2272,6 +2855,32 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeChannelMembershipForAppInstanceUser,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<
+                crate::error::DescribeChannelMembershipForAppInstanceUserError,
+            >,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2354,6 +2963,32 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeChannelModeratedByAppInstanceUser,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<
+                crate::error::DescribeChannelModeratedByAppInstanceUserError,
+            >,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2434,6 +3069,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DescribeChannelModerator,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DescribeChannelModeratorError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2512,6 +3171,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::DisassociateChannelFlow,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::DisassociateChannelFlowError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2586,6 +3269,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::GetChannelMembershipPreferences,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::GetChannelMembershipPreferencesError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2663,6 +3370,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::GetChannelMessage,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::GetChannelMessageError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -2718,6 +3449,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when getting messages in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when getting messages in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `GetChannelMessageStatus`.
     ///
@@ -2767,6 +3515,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::GetChannelMessageStatus,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::GetChannelMessageStatusError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2824,6 +3596,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when getting message status in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when getting message status in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `GetMessagingSessionEndpoint`.
     ///
@@ -2840,6 +3629,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::GetMessagingSessionEndpoint,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::GetMessagingSessionEndpointError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2885,6 +3698,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannelBans,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListChannelBansError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -2976,6 +3813,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannelFlows,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListChannelFlowsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -3059,6 +3920,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannelMemberships,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListChannelMembershipsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3145,6 +4030,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when listing a user's memberships in a particular sub-channel of an elastic channel.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when listing a user's memberships in a particular sub-channel of an elastic channel.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `ListChannelMembershipsForAppInstanceUser`.
     ///
@@ -3163,6 +4065,32 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannelMembershipsForAppInstanceUser,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<
+                crate::error::ListChannelMembershipsForAppInstanceUserError,
+            >,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3265,6 +4193,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannelMessages,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListChannelMessagesError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3377,6 +4329,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when listing the messages in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when listing the messages in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `ListChannelModerators`.
     ///
@@ -3395,6 +4364,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannelModerators,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListChannelModeratorsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3491,6 +4484,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannels,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListChannelsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3598,6 +4615,32 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannelsAssociatedWithChannelFlow,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<
+                crate::error::ListChannelsAssociatedWithChannelFlowError,
+            >,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -3689,6 +4732,32 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListChannelsModeratedByAppInstanceUser,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<
+                crate::error::ListChannelsModeratedByAppInstanceUserError,
+            >,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -3771,6 +4840,119 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `ListSubChannels`.
+    ///
+    /// <p>Lists all the SubChannels in an elastic channel when given a channel ID. Available only to the app instance admins and channel moderators of elastic channels.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct ListSubChannels {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::list_sub_channels_input::Builder,
+    }
+    impl ListSubChannels {
+        /// Creates a new `ListSubChannels`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListSubChannels,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListSubChannelsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::ListSubChannelsOutput,
+            aws_smithy_http::result::SdkError<crate::error::ListSubChannelsError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::ListSubChannelsPaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(self) -> crate::paginator::ListSubChannelsPaginator {
+            crate::paginator::ListSubChannelsPaginator::new(self.handle, self.inner)
+        }
+        /// <p>The ARN of elastic channel.</p>
+        pub fn channel_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.channel_arn(input.into());
+            self
+        }
+        /// <p>The ARN of elastic channel.</p>
+        pub fn set_channel_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_channel_arn(input);
+            self
+        }
+        /// <p>The <code>AppInstanceUserArn</code> of the user making the API call.</p>
+        pub fn chime_bearer(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.chime_bearer(input.into());
+            self
+        }
+        /// <p>The <code>AppInstanceUserArn</code> of the user making the API call.</p>
+        pub fn set_chime_bearer(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_chime_bearer(input);
+            self
+        }
+        /// <p>The maximum number of sub-channels that you want to return.</p>
+        pub fn max_results(mut self, input: i32) -> Self {
+            self.inner = self.inner.max_results(input);
+            self
+        }
+        /// <p>The maximum number of sub-channels that you want to return.</p>
+        pub fn set_max_results(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_max_results(input);
+            self
+        }
+        /// <p>The token passed by previous API calls until all requested sub-channels are returned.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p>The token passed by previous API calls until all requested sub-channels are returned.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `ListTagsForResource`.
     ///
     /// <p>Lists the tags applied to an Amazon Chime SDK messaging resource.</p>
@@ -3786,6 +4968,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::ListTagsForResource,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::ListTagsForResourceError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3839,6 +5045,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::PutChannelMembershipPreferences,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::PutChannelMembershipPreferencesError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -3929,6 +5159,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::RedactChannelMessage,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::RedactChannelMessageError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -3984,6 +5238,19 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `SearchChannels`.
     ///
@@ -4000,6 +5267,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::SearchChannels,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::SearchChannelsError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -4099,6 +5390,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::SendChannelMessage,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::SendChannelMessageError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -4244,6 +5559,19 @@ pub mod fluent_builders {
             self.inner = self.inner.set_message_attributes(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `TagResource`.
     ///
@@ -4260,6 +5588,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::TagResource,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::TagResourceError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -4330,6 +5682,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UntagResource,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UntagResourceError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -4403,6 +5779,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateChannel,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateChannelError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -4498,6 +5898,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateChannelFlow,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateChannelFlowError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -4583,6 +6007,30 @@ pub mod fluent_builders {
             }
         }
 
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateChannelMessage,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateChannelMessageError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
+        }
+
         /// Sends the request and returns the response.
         ///
         /// If an error occurs, an `SdkError` will be returned with additional details that
@@ -4658,6 +6106,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when updating messages in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p> <note>
+        /// <p>Only required when updating messages in a SubChannel that the user belongs to.</p>
+        /// </note>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `UpdateChannelReadMarker`.
     ///
@@ -4676,6 +6141,30 @@ pub mod fluent_builders {
                 handle,
                 inner: Default::default(),
             }
+        }
+
+        /// Consume this builder, creating a customizable operation that can be modified before being
+        /// sent. The operation's inner [http::Request] can be modified as well.
+        pub async fn customize(
+            self,
+        ) -> std::result::Result<
+            crate::customizable_operation::CustomizableOperation<
+                crate::operation::UpdateChannelReadMarker,
+                aws_http::retry::AwsResponseRetryClassifier,
+            >,
+            aws_smithy_http::result::SdkError<crate::error::UpdateChannelReadMarkerError>,
+        > {
+            let handle = self.handle.clone();
+            let operation = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            Ok(crate::customizable_operation::CustomizableOperation { handle, operation })
         }
 
         /// Sends the request and returns the response.
@@ -4723,6 +6212,19 @@ pub mod fluent_builders {
             self.inner = self.inner.set_chime_bearer(input);
             self
         }
+        /// <p>The ID of the SubChannel in the request.</p>
+        pub fn sub_channel_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.sub_channel_id(input.into());
+            self
+        }
+        /// <p>The ID of the SubChannel in the request.</p>
+        pub fn set_sub_channel_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_sub_channel_id(input);
+            self
+        }
     }
 }
 
@@ -4733,9 +6235,11 @@ impl Client {
         C: aws_smithy_client::bounds::SmithyConnector<Error = E> + Send + 'static,
         E: Into<aws_smithy_http::result::ConnectorError>,
     {
-        let retry_config = conf.retry_config.as_ref().cloned().unwrap_or_default();
-        let timeout_config = conf.timeout_config.as_ref().cloned().unwrap_or_default();
-        let sleep_impl = conf.sleep_impl.clone();
+        let retry_config = conf
+            .retry_config()
+            .cloned()
+            .unwrap_or_else(aws_smithy_types::retry::RetryConfig::disabled);
+        let timeout_config = conf.timeout_config().cloned().unwrap_or_default();
         let mut builder = aws_smithy_client::Builder::new()
             .connector(aws_smithy_client::erase::DynConnector::new(conn))
             .middleware(aws_smithy_client::erase::DynMiddleware::new(
@@ -4743,7 +6247,7 @@ impl Client {
             ));
         builder.set_retry_config(retry_config.into());
         builder.set_timeout_config(timeout_config);
-        if let Some(sleep_impl) = sleep_impl {
+        if let Some(sleep_impl) = conf.sleep_impl() {
             builder.set_sleep_impl(Some(sleep_impl));
         }
         let client = builder.build();
@@ -4761,9 +6265,16 @@ impl Client {
     /// Creates a new client from the service [`Config`](crate::Config).
     #[cfg(any(feature = "rustls", feature = "native-tls"))]
     pub fn from_conf(conf: crate::Config) -> Self {
-        let retry_config = conf.retry_config.as_ref().cloned().unwrap_or_default();
-        let timeout_config = conf.timeout_config.as_ref().cloned().unwrap_or_default();
-        let sleep_impl = conf.sleep_impl.clone();
+        let retry_config = conf
+            .retry_config()
+            .cloned()
+            .unwrap_or_else(aws_smithy_types::retry::RetryConfig::disabled);
+        let timeout_config = conf.timeout_config().cloned().unwrap_or_default();
+        let sleep_impl = conf.sleep_impl();
+        if (retry_config.has_retry() || timeout_config.has_timeouts()) && sleep_impl.is_none() {
+            panic!("An async sleep implementation is required for retries or timeouts to work. \
+                                    Set the `sleep_impl` on the Config passed into this function to fix this panic.");
+        }
         let mut builder = aws_smithy_client::Builder::dyn_https().middleware(
             aws_smithy_client::erase::DynMiddleware::new(
                 crate::middleware::DefaultMiddleware::new(),

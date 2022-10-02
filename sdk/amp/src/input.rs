@@ -57,12 +57,6 @@ pub mod create_alert_manager_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateAlertManagerDefinitionInputOperationOutputAlias =
-    crate::operation::CreateAlertManagerDefinition;
-#[doc(hidden)]
-pub type CreateAlertManagerDefinitionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateAlertManagerDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`CreateAlertManagerDefinition`](crate::operation::CreateAlertManagerDefinition)>
     #[allow(unused_mut)]
@@ -74,7 +68,7 @@ impl CreateAlertManagerDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateAlertManagerDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -157,10 +151,17 @@ impl CreateAlertManagerDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -176,12 +177,203 @@ impl CreateAlertManagerDefinitionInput {
             "CreateAlertManagerDefinition",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateAlertManagerDefinitionInput`](crate::input::CreateAlertManagerDefinitionInput).
     pub fn builder() -> crate::input::create_alert_manager_definition_input::Builder {
         crate::input::create_alert_manager_definition_input::Builder::default()
+    }
+}
+
+/// See [`CreateLoggingConfigurationInput`](crate::input::CreateLoggingConfigurationInput).
+pub mod create_logging_configuration_input {
+
+    /// A builder for [`CreateLoggingConfigurationInput`](crate::input::CreateLoggingConfigurationInput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) workspace_id: std::option::Option<std::string::String>,
+        pub(crate) log_group_arn: std::option::Option<std::string::String>,
+        pub(crate) client_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// The ID of the workspace to vend logs to.
+        pub fn workspace_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.workspace_id = Some(input.into());
+            self
+        }
+        /// The ID of the workspace to vend logs to.
+        pub fn set_workspace_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.workspace_id = input;
+            self
+        }
+        /// The ARN of the CW log group to which the vended log data will be published.
+        pub fn log_group_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.log_group_arn = Some(input.into());
+            self
+        }
+        /// The ARN of the CW log group to which the vended log data will be published.
+        pub fn set_log_group_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.log_group_arn = input;
+            self
+        }
+        /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+        pub fn client_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.client_token = Some(input.into());
+            self
+        }
+        /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+        pub fn set_client_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.client_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateLoggingConfigurationInput`](crate::input::CreateLoggingConfigurationInput).
+        pub fn build(
+            self,
+        ) -> Result<
+            crate::input::CreateLoggingConfigurationInput,
+            aws_smithy_http::operation::BuildError,
+        > {
+            Ok(crate::input::CreateLoggingConfigurationInput {
+                workspace_id: self.workspace_id,
+                log_group_arn: self.log_group_arn,
+                client_token: self.client_token,
+            })
+        }
+    }
+}
+impl CreateLoggingConfigurationInput {
+    /// Consumes the builder and constructs an Operation<[`CreateLoggingConfiguration`](crate::operation::CreateLoggingConfiguration)>
+    #[allow(unused_mut)]
+    #[allow(clippy::let_and_return)]
+    #[allow(clippy::needless_borrow)]
+    pub async fn make_operation(
+        mut self,
+        _config: &crate::config::Config,
+    ) -> std::result::Result<
+        aws_smithy_http::operation::Operation<
+            crate::operation::CreateLoggingConfiguration,
+            aws_http::retry::AwsResponseRetryClassifier,
+        >,
+        aws_smithy_http::operation::BuildError,
+    > {
+        if self.client_token.is_none() {
+            self.client_token = Some(_config.make_token.make_idempotency_token());
+        }
+        let mut request = {
+            fn uri_base(
+                _input: &crate::input::CreateLoggingConfigurationInput,
+                output: &mut String,
+            ) -> Result<(), aws_smithy_http::operation::BuildError> {
+                let input_2 = &_input.workspace_id;
+                let input_2 = input_2.as_ref().ok_or(
+                    aws_smithy_http::operation::BuildError::MissingField {
+                        field: "workspace_id",
+                        details: "cannot be empty or unset",
+                    },
+                )?;
+                let workspace_id = aws_smithy_http::label::fmt_string(input_2, false);
+                if workspace_id.is_empty() {
+                    return Err(aws_smithy_http::operation::BuildError::MissingField {
+                        field: "workspace_id",
+                        details: "cannot be empty or unset",
+                    });
+                }
+                write!(
+                    output,
+                    "/workspaces/{workspaceId}/logging",
+                    workspaceId = workspace_id
+                )
+                .expect("formatting should succeed");
+                Ok(())
+            }
+            #[allow(clippy::unnecessary_wraps)]
+            fn update_http_builder(
+                input: &crate::input::CreateLoggingConfigurationInput,
+                builder: http::request::Builder,
+            ) -> std::result::Result<http::request::Builder, aws_smithy_http::operation::BuildError>
+            {
+                let mut uri = String::new();
+                uri_base(input, &mut uri)?;
+                Ok(builder.method("POST").uri(uri))
+            }
+            let mut builder = update_http_builder(&self, http::request::Builder::new())?;
+            builder = aws_smithy_http::header::set_request_header_if_absent(
+                builder,
+                http::header::CONTENT_TYPE,
+                "application/json",
+            );
+            builder
+        };
+        let mut properties = aws_smithy_http::property_bag::SharedPropertyBag::new();
+        #[allow(clippy::useless_conversion)]
+        let body = aws_smithy_http::body::SdkBody::from(
+            crate::operation_ser::serialize_operation_crate_operation_create_logging_configuration(
+                &self,
+            )?,
+        );
+        if let Some(content_length) = body.content_length() {
+            request = aws_smithy_http::header::set_request_header_if_absent(
+                request,
+                http::header::CONTENT_LENGTH,
+                content_length,
+            );
+        }
+        let request = request.body(body).expect("should be valid request");
+        let mut request = aws_smithy_http::operation::Request::from_parts(request, properties);
+        request
+            .properties_mut()
+            .insert(aws_smithy_http::http_versions::DEFAULT_HTTP_VERSION_LIST.clone());
+        let mut user_agent = aws_http::user_agent::AwsUserAgent::new_from_environment(
+            aws_types::os_shim_internal::Env::real(),
+            crate::API_METADATA.clone(),
+        );
+        if let Some(app_name) = _config.app_name() {
+            user_agent = user_agent.with_app_name(app_name.clone());
+        }
+        request.properties_mut().insert(user_agent);
+        let mut signing_config = aws_sig_auth::signer::OperationSigningConfig::default_config();
+        request.properties_mut().insert(signing_config);
+        request
+            .properties_mut()
+            .insert(aws_types::SigningService::from_static(
+                _config.signing_service(),
+            ));
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
+        if let Some(region) = &_config.region {
+            request.properties_mut().insert(region.clone());
+        }
+        aws_http::auth::set_provider(
+            &mut request.properties_mut(),
+            _config.credentials_provider.clone(),
+        );
+        let op = aws_smithy_http::operation::Operation::new(
+            request,
+            crate::operation::CreateLoggingConfiguration::new(),
+        )
+        .with_metadata(aws_smithy_http::operation::Metadata::new(
+            "CreateLoggingConfiguration",
+            "amp",
+        ));
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
+        Ok(op)
+    }
+    /// Creates a new builder-style object to manufacture [`CreateLoggingConfigurationInput`](crate::input::CreateLoggingConfigurationInput).
+    pub fn builder() -> crate::input::create_logging_configuration_input::Builder {
+        crate::input::create_logging_configuration_input::Builder::default()
     }
 }
 
@@ -282,11 +474,6 @@ pub mod create_rule_groups_namespace_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateRuleGroupsNamespaceInputOperationOutputAlias =
-    crate::operation::CreateRuleGroupsNamespace;
-#[doc(hidden)]
-pub type CreateRuleGroupsNamespaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateRuleGroupsNamespaceInput {
     /// Consumes the builder and constructs an Operation<[`CreateRuleGroupsNamespace`](crate::operation::CreateRuleGroupsNamespace)>
     #[allow(unused_mut)]
@@ -298,7 +485,7 @@ impl CreateRuleGroupsNamespaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateRuleGroupsNamespace,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -310,14 +497,14 @@ impl CreateRuleGroupsNamespaceInput {
                 _input: &crate::input::CreateRuleGroupsNamespaceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_2 = &_input.workspace_id;
-                let input_2 = input_2.as_ref().ok_or(
+                let input_3 = &_input.workspace_id;
+                let input_3 = input_3.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_2, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_3, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
@@ -384,10 +571,17 @@ impl CreateRuleGroupsNamespaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -403,7 +597,7 @@ impl CreateRuleGroupsNamespaceInput {
             "CreateRuleGroupsNamespace",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateRuleGroupsNamespaceInput`](crate::input::CreateRuleGroupsNamespaceInput).
@@ -483,10 +677,6 @@ pub mod create_workspace_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateWorkspaceInputOperationOutputAlias = crate::operation::CreateWorkspace;
-#[doc(hidden)]
-pub type CreateWorkspaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateWorkspaceInput {
     /// Consumes the builder and constructs an Operation<[`CreateWorkspace`](crate::operation::CreateWorkspace)>
     #[allow(unused_mut)]
@@ -498,7 +688,7 @@ impl CreateWorkspaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateWorkspace,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -563,10 +753,17 @@ impl CreateWorkspaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -582,7 +779,7 @@ impl CreateWorkspaceInput {
             "CreateWorkspace",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateWorkspaceInput`](crate::input::CreateWorkspaceInput).
@@ -635,12 +832,6 @@ pub mod delete_alert_manager_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteAlertManagerDefinitionInputOperationOutputAlias =
-    crate::operation::DeleteAlertManagerDefinition;
-#[doc(hidden)]
-pub type DeleteAlertManagerDefinitionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteAlertManagerDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`DeleteAlertManagerDefinition`](crate::operation::DeleteAlertManagerDefinition)>
     #[allow(unused_mut)]
@@ -652,7 +843,7 @@ impl DeleteAlertManagerDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteAlertManagerDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -664,14 +855,14 @@ impl DeleteAlertManagerDefinitionInput {
                 _input: &crate::input::DeleteAlertManagerDefinitionInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_3 = &_input.workspace_id;
-                let input_3 = input_3.as_ref().ok_or(
+                let input_4 = &_input.workspace_id;
+                let input_4 = input_4.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_3, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_4, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
@@ -691,8 +882,8 @@ impl DeleteAlertManagerDefinitionInput {
                 mut output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
                 let mut query = aws_smithy_http::query::Writer::new(&mut output);
-                if let Some(inner_4) = &_input.client_token {
-                    query.push_kv("clientToken", &aws_smithy_http::query::fmt_string(&inner_4));
+                if let Some(inner_5) = &_input.client_token {
+                    query.push_kv("clientToken", &aws_smithy_http::query::fmt_string(&inner_5));
                 }
                 Ok(())
             }
@@ -733,10 +924,17 @@ impl DeleteAlertManagerDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -752,12 +950,183 @@ impl DeleteAlertManagerDefinitionInput {
             "DeleteAlertManagerDefinition",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteAlertManagerDefinitionInput`](crate::input::DeleteAlertManagerDefinitionInput).
     pub fn builder() -> crate::input::delete_alert_manager_definition_input::Builder {
         crate::input::delete_alert_manager_definition_input::Builder::default()
+    }
+}
+
+/// See [`DeleteLoggingConfigurationInput`](crate::input::DeleteLoggingConfigurationInput).
+pub mod delete_logging_configuration_input {
+
+    /// A builder for [`DeleteLoggingConfigurationInput`](crate::input::DeleteLoggingConfigurationInput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) workspace_id: std::option::Option<std::string::String>,
+        pub(crate) client_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// The ID of the workspace to vend logs to.
+        pub fn workspace_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.workspace_id = Some(input.into());
+            self
+        }
+        /// The ID of the workspace to vend logs to.
+        pub fn set_workspace_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.workspace_id = input;
+            self
+        }
+        /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+        pub fn client_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.client_token = Some(input.into());
+            self
+        }
+        /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+        pub fn set_client_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.client_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DeleteLoggingConfigurationInput`](crate::input::DeleteLoggingConfigurationInput).
+        pub fn build(
+            self,
+        ) -> Result<
+            crate::input::DeleteLoggingConfigurationInput,
+            aws_smithy_http::operation::BuildError,
+        > {
+            Ok(crate::input::DeleteLoggingConfigurationInput {
+                workspace_id: self.workspace_id,
+                client_token: self.client_token,
+            })
+        }
+    }
+}
+impl DeleteLoggingConfigurationInput {
+    /// Consumes the builder and constructs an Operation<[`DeleteLoggingConfiguration`](crate::operation::DeleteLoggingConfiguration)>
+    #[allow(unused_mut)]
+    #[allow(clippy::let_and_return)]
+    #[allow(clippy::needless_borrow)]
+    pub async fn make_operation(
+        mut self,
+        _config: &crate::config::Config,
+    ) -> std::result::Result<
+        aws_smithy_http::operation::Operation<
+            crate::operation::DeleteLoggingConfiguration,
+            aws_http::retry::AwsResponseRetryClassifier,
+        >,
+        aws_smithy_http::operation::BuildError,
+    > {
+        if self.client_token.is_none() {
+            self.client_token = Some(_config.make_token.make_idempotency_token());
+        }
+        let mut request = {
+            fn uri_base(
+                _input: &crate::input::DeleteLoggingConfigurationInput,
+                output: &mut String,
+            ) -> Result<(), aws_smithy_http::operation::BuildError> {
+                let input_6 = &_input.workspace_id;
+                let input_6 = input_6.as_ref().ok_or(
+                    aws_smithy_http::operation::BuildError::MissingField {
+                        field: "workspace_id",
+                        details: "cannot be empty or unset",
+                    },
+                )?;
+                let workspace_id = aws_smithy_http::label::fmt_string(input_6, false);
+                if workspace_id.is_empty() {
+                    return Err(aws_smithy_http::operation::BuildError::MissingField {
+                        field: "workspace_id",
+                        details: "cannot be empty or unset",
+                    });
+                }
+                write!(
+                    output,
+                    "/workspaces/{workspaceId}/logging",
+                    workspaceId = workspace_id
+                )
+                .expect("formatting should succeed");
+                Ok(())
+            }
+            fn uri_query(
+                _input: &crate::input::DeleteLoggingConfigurationInput,
+                mut output: &mut String,
+            ) -> Result<(), aws_smithy_http::operation::BuildError> {
+                let mut query = aws_smithy_http::query::Writer::new(&mut output);
+                if let Some(inner_7) = &_input.client_token {
+                    query.push_kv("clientToken", &aws_smithy_http::query::fmt_string(&inner_7));
+                }
+                Ok(())
+            }
+            #[allow(clippy::unnecessary_wraps)]
+            fn update_http_builder(
+                input: &crate::input::DeleteLoggingConfigurationInput,
+                builder: http::request::Builder,
+            ) -> std::result::Result<http::request::Builder, aws_smithy_http::operation::BuildError>
+            {
+                let mut uri = String::new();
+                uri_base(input, &mut uri)?;
+                uri_query(input, &mut uri)?;
+                Ok(builder.method("DELETE").uri(uri))
+            }
+            let mut builder = update_http_builder(&self, http::request::Builder::new())?;
+            builder
+        };
+        let mut properties = aws_smithy_http::property_bag::SharedPropertyBag::new();
+        #[allow(clippy::useless_conversion)]
+        let body = aws_smithy_http::body::SdkBody::from("");
+        let request = request.body(body).expect("should be valid request");
+        let mut request = aws_smithy_http::operation::Request::from_parts(request, properties);
+        request
+            .properties_mut()
+            .insert(aws_smithy_http::http_versions::DEFAULT_HTTP_VERSION_LIST.clone());
+        let mut user_agent = aws_http::user_agent::AwsUserAgent::new_from_environment(
+            aws_types::os_shim_internal::Env::real(),
+            crate::API_METADATA.clone(),
+        );
+        if let Some(app_name) = _config.app_name() {
+            user_agent = user_agent.with_app_name(app_name.clone());
+        }
+        request.properties_mut().insert(user_agent);
+        let mut signing_config = aws_sig_auth::signer::OperationSigningConfig::default_config();
+        request.properties_mut().insert(signing_config);
+        request
+            .properties_mut()
+            .insert(aws_types::SigningService::from_static(
+                _config.signing_service(),
+            ));
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
+        if let Some(region) = &_config.region {
+            request.properties_mut().insert(region.clone());
+        }
+        aws_http::auth::set_provider(
+            &mut request.properties_mut(),
+            _config.credentials_provider.clone(),
+        );
+        let op = aws_smithy_http::operation::Operation::new(
+            request,
+            crate::operation::DeleteLoggingConfiguration::new(),
+        )
+        .with_metadata(aws_smithy_http::operation::Metadata::new(
+            "DeleteLoggingConfiguration",
+            "amp",
+        ));
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
+        Ok(op)
+    }
+    /// Creates a new builder-style object to manufacture [`DeleteLoggingConfigurationInput`](crate::input::DeleteLoggingConfigurationInput).
+    pub fn builder() -> crate::input::delete_logging_configuration_input::Builder {
+        crate::input::delete_logging_configuration_input::Builder::default()
     }
 }
 
@@ -817,11 +1186,6 @@ pub mod delete_rule_groups_namespace_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteRuleGroupsNamespaceInputOperationOutputAlias =
-    crate::operation::DeleteRuleGroupsNamespace;
-#[doc(hidden)]
-pub type DeleteRuleGroupsNamespaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteRuleGroupsNamespaceInput {
     /// Consumes the builder and constructs an Operation<[`DeleteRuleGroupsNamespace`](crate::operation::DeleteRuleGroupsNamespace)>
     #[allow(unused_mut)]
@@ -833,7 +1197,7 @@ impl DeleteRuleGroupsNamespaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteRuleGroupsNamespace,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -845,28 +1209,28 @@ impl DeleteRuleGroupsNamespaceInput {
                 _input: &crate::input::DeleteRuleGroupsNamespaceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_5 = &_input.workspace_id;
-                let input_5 = input_5.as_ref().ok_or(
+                let input_8 = &_input.workspace_id;
+                let input_8 = input_8.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_5, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_8, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_6 = &_input.name;
-                let input_6 = input_6.as_ref().ok_or(
+                let input_9 = &_input.name;
+                let input_9 = input_9.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "name",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let name = aws_smithy_http::label::fmt_string(input_6, false);
+                let name = aws_smithy_http::label::fmt_string(input_9, false);
                 if name.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "name",
@@ -887,8 +1251,11 @@ impl DeleteRuleGroupsNamespaceInput {
                 mut output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
                 let mut query = aws_smithy_http::query::Writer::new(&mut output);
-                if let Some(inner_7) = &_input.client_token {
-                    query.push_kv("clientToken", &aws_smithy_http::query::fmt_string(&inner_7));
+                if let Some(inner_10) = &_input.client_token {
+                    query.push_kv(
+                        "clientToken",
+                        &aws_smithy_http::query::fmt_string(&inner_10),
+                    );
                 }
                 Ok(())
             }
@@ -929,10 +1296,17 @@ impl DeleteRuleGroupsNamespaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -948,7 +1322,7 @@ impl DeleteRuleGroupsNamespaceInput {
             "DeleteRuleGroupsNamespace",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteRuleGroupsNamespaceInput`](crate::input::DeleteRuleGroupsNamespaceInput).
@@ -999,10 +1373,6 @@ pub mod delete_workspace_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteWorkspaceInputOperationOutputAlias = crate::operation::DeleteWorkspace;
-#[doc(hidden)]
-pub type DeleteWorkspaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteWorkspaceInput {
     /// Consumes the builder and constructs an Operation<[`DeleteWorkspace`](crate::operation::DeleteWorkspace)>
     #[allow(unused_mut)]
@@ -1014,7 +1384,7 @@ impl DeleteWorkspaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteWorkspace,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1026,14 +1396,14 @@ impl DeleteWorkspaceInput {
                 _input: &crate::input::DeleteWorkspaceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_8 = &_input.workspace_id;
-                let input_8 = input_8.as_ref().ok_or(
+                let input_11 = &_input.workspace_id;
+                let input_11 = input_11.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_8, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_11, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
@@ -1053,8 +1423,11 @@ impl DeleteWorkspaceInput {
                 mut output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
                 let mut query = aws_smithy_http::query::Writer::new(&mut output);
-                if let Some(inner_9) = &_input.client_token {
-                    query.push_kv("clientToken", &aws_smithy_http::query::fmt_string(&inner_9));
+                if let Some(inner_12) = &_input.client_token {
+                    query.push_kv(
+                        "clientToken",
+                        &aws_smithy_http::query::fmt_string(&inner_12),
+                    );
                 }
                 Ok(())
             }
@@ -1095,10 +1468,17 @@ impl DeleteWorkspaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1114,7 +1494,7 @@ impl DeleteWorkspaceInput {
             "DeleteWorkspace",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteWorkspaceInput`](crate::input::DeleteWorkspaceInput).
@@ -1155,12 +1535,6 @@ pub mod describe_alert_manager_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAlertManagerDefinitionInputOperationOutputAlias =
-    crate::operation::DescribeAlertManagerDefinition;
-#[doc(hidden)]
-pub type DescribeAlertManagerDefinitionInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAlertManagerDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAlertManagerDefinition`](crate::operation::DescribeAlertManagerDefinition)>
     #[allow(unused_mut)]
@@ -1172,7 +1546,7 @@ impl DescribeAlertManagerDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAlertManagerDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1181,14 +1555,14 @@ impl DescribeAlertManagerDefinitionInput {
                 _input: &crate::input::DescribeAlertManagerDefinitionInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_10 = &_input.workspace_id;
-                let input_10 = input_10.as_ref().ok_or(
+                let input_13 = &_input.workspace_id;
+                let input_13 = input_13.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_10, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_13, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
@@ -1239,10 +1613,17 @@ impl DescribeAlertManagerDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1258,12 +1639,157 @@ impl DescribeAlertManagerDefinitionInput {
             "DescribeAlertManagerDefinition",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAlertManagerDefinitionInput`](crate::input::DescribeAlertManagerDefinitionInput).
     pub fn builder() -> crate::input::describe_alert_manager_definition_input::Builder {
         crate::input::describe_alert_manager_definition_input::Builder::default()
+    }
+}
+
+/// See [`DescribeLoggingConfigurationInput`](crate::input::DescribeLoggingConfigurationInput).
+pub mod describe_logging_configuration_input {
+
+    /// A builder for [`DescribeLoggingConfigurationInput`](crate::input::DescribeLoggingConfigurationInput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) workspace_id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// The ID of the workspace to vend logs to.
+        pub fn workspace_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.workspace_id = Some(input.into());
+            self
+        }
+        /// The ID of the workspace to vend logs to.
+        pub fn set_workspace_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.workspace_id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DescribeLoggingConfigurationInput`](crate::input::DescribeLoggingConfigurationInput).
+        pub fn build(
+            self,
+        ) -> Result<
+            crate::input::DescribeLoggingConfigurationInput,
+            aws_smithy_http::operation::BuildError,
+        > {
+            Ok(crate::input::DescribeLoggingConfigurationInput {
+                workspace_id: self.workspace_id,
+            })
+        }
+    }
+}
+impl DescribeLoggingConfigurationInput {
+    /// Consumes the builder and constructs an Operation<[`DescribeLoggingConfiguration`](crate::operation::DescribeLoggingConfiguration)>
+    #[allow(unused_mut)]
+    #[allow(clippy::let_and_return)]
+    #[allow(clippy::needless_borrow)]
+    pub async fn make_operation(
+        &self,
+        _config: &crate::config::Config,
+    ) -> std::result::Result<
+        aws_smithy_http::operation::Operation<
+            crate::operation::DescribeLoggingConfiguration,
+            aws_http::retry::AwsResponseRetryClassifier,
+        >,
+        aws_smithy_http::operation::BuildError,
+    > {
+        let mut request = {
+            fn uri_base(
+                _input: &crate::input::DescribeLoggingConfigurationInput,
+                output: &mut String,
+            ) -> Result<(), aws_smithy_http::operation::BuildError> {
+                let input_14 = &_input.workspace_id;
+                let input_14 = input_14.as_ref().ok_or(
+                    aws_smithy_http::operation::BuildError::MissingField {
+                        field: "workspace_id",
+                        details: "cannot be empty or unset",
+                    },
+                )?;
+                let workspace_id = aws_smithy_http::label::fmt_string(input_14, false);
+                if workspace_id.is_empty() {
+                    return Err(aws_smithy_http::operation::BuildError::MissingField {
+                        field: "workspace_id",
+                        details: "cannot be empty or unset",
+                    });
+                }
+                write!(
+                    output,
+                    "/workspaces/{workspaceId}/logging",
+                    workspaceId = workspace_id
+                )
+                .expect("formatting should succeed");
+                Ok(())
+            }
+            #[allow(clippy::unnecessary_wraps)]
+            fn update_http_builder(
+                input: &crate::input::DescribeLoggingConfigurationInput,
+                builder: http::request::Builder,
+            ) -> std::result::Result<http::request::Builder, aws_smithy_http::operation::BuildError>
+            {
+                let mut uri = String::new();
+                uri_base(input, &mut uri)?;
+                Ok(builder.method("GET").uri(uri))
+            }
+            let mut builder = update_http_builder(&self, http::request::Builder::new())?;
+            builder
+        };
+        let mut properties = aws_smithy_http::property_bag::SharedPropertyBag::new();
+        #[allow(clippy::useless_conversion)]
+        let body = aws_smithy_http::body::SdkBody::from("");
+        let request = request.body(body).expect("should be valid request");
+        let mut request = aws_smithy_http::operation::Request::from_parts(request, properties);
+        request
+            .properties_mut()
+            .insert(aws_smithy_http::http_versions::DEFAULT_HTTP_VERSION_LIST.clone());
+        let mut user_agent = aws_http::user_agent::AwsUserAgent::new_from_environment(
+            aws_types::os_shim_internal::Env::real(),
+            crate::API_METADATA.clone(),
+        );
+        if let Some(app_name) = _config.app_name() {
+            user_agent = user_agent.with_app_name(app_name.clone());
+        }
+        request.properties_mut().insert(user_agent);
+        let mut signing_config = aws_sig_auth::signer::OperationSigningConfig::default_config();
+        request.properties_mut().insert(signing_config);
+        request
+            .properties_mut()
+            .insert(aws_types::SigningService::from_static(
+                _config.signing_service(),
+            ));
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
+        if let Some(region) = &_config.region {
+            request.properties_mut().insert(region.clone());
+        }
+        aws_http::auth::set_provider(
+            &mut request.properties_mut(),
+            _config.credentials_provider.clone(),
+        );
+        let op = aws_smithy_http::operation::Operation::new(
+            request,
+            crate::operation::DescribeLoggingConfiguration::new(),
+        )
+        .with_metadata(aws_smithy_http::operation::Metadata::new(
+            "DescribeLoggingConfiguration",
+            "amp",
+        ));
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
+        Ok(op)
+    }
+    /// Creates a new builder-style object to manufacture [`DescribeLoggingConfigurationInput`](crate::input::DescribeLoggingConfigurationInput).
+    pub fn builder() -> crate::input::describe_logging_configuration_input::Builder {
+        crate::input::describe_logging_configuration_input::Builder::default()
     }
 }
 
@@ -1311,11 +1837,6 @@ pub mod describe_rule_groups_namespace_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeRuleGroupsNamespaceInputOperationOutputAlias =
-    crate::operation::DescribeRuleGroupsNamespace;
-#[doc(hidden)]
-pub type DescribeRuleGroupsNamespaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeRuleGroupsNamespaceInput {
     /// Consumes the builder and constructs an Operation<[`DescribeRuleGroupsNamespace`](crate::operation::DescribeRuleGroupsNamespace)>
     #[allow(unused_mut)]
@@ -1327,7 +1848,7 @@ impl DescribeRuleGroupsNamespaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeRuleGroupsNamespace,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1336,28 +1857,28 @@ impl DescribeRuleGroupsNamespaceInput {
                 _input: &crate::input::DescribeRuleGroupsNamespaceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_11 = &_input.workspace_id;
-                let input_11 = input_11.as_ref().ok_or(
+                let input_15 = &_input.workspace_id;
+                let input_15 = input_15.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_11, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_15, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_12 = &_input.name;
-                let input_12 = input_12.as_ref().ok_or(
+                let input_16 = &_input.name;
+                let input_16 = input_16.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "name",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let name = aws_smithy_http::label::fmt_string(input_12, false);
+                let name = aws_smithy_http::label::fmt_string(input_16, false);
                 if name.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "name",
@@ -1409,10 +1930,17 @@ impl DescribeRuleGroupsNamespaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1428,7 +1956,7 @@ impl DescribeRuleGroupsNamespaceInput {
             "DescribeRuleGroupsNamespace",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeRuleGroupsNamespaceInput`](crate::input::DescribeRuleGroupsNamespaceInput).
@@ -1467,10 +1995,6 @@ pub mod describe_workspace_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeWorkspaceInputOperationOutputAlias = crate::operation::DescribeWorkspace;
-#[doc(hidden)]
-pub type DescribeWorkspaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeWorkspaceInput {
     /// Consumes the builder and constructs an Operation<[`DescribeWorkspace`](crate::operation::DescribeWorkspace)>
     #[allow(unused_mut)]
@@ -1482,7 +2006,7 @@ impl DescribeWorkspaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeWorkspace,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1491,14 +2015,14 @@ impl DescribeWorkspaceInput {
                 _input: &crate::input::DescribeWorkspaceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_13 = &_input.workspace_id;
-                let input_13 = input_13.as_ref().ok_or(
+                let input_17 = &_input.workspace_id;
+                let input_17 = input_17.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_13, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_17, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
@@ -1549,10 +2073,17 @@ impl DescribeWorkspaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1568,7 +2099,7 @@ impl DescribeWorkspaceInput {
             "DescribeWorkspace",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeWorkspaceInput`](crate::input::DescribeWorkspaceInput).
@@ -1645,11 +2176,6 @@ pub mod list_rule_groups_namespaces_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListRuleGroupsNamespacesInputOperationOutputAlias =
-    crate::operation::ListRuleGroupsNamespaces;
-#[doc(hidden)]
-pub type ListRuleGroupsNamespacesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListRuleGroupsNamespacesInput {
     /// Consumes the builder and constructs an Operation<[`ListRuleGroupsNamespaces`](crate::operation::ListRuleGroupsNamespaces)>
     #[allow(unused_mut)]
@@ -1661,7 +2187,7 @@ impl ListRuleGroupsNamespacesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListRuleGroupsNamespaces,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1670,14 +2196,14 @@ impl ListRuleGroupsNamespacesInput {
                 _input: &crate::input::ListRuleGroupsNamespacesInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_14 = &_input.workspace_id;
-                let input_14 = input_14.as_ref().ok_or(
+                let input_18 = &_input.workspace_id;
+                let input_18 = input_18.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_14, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_18, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
@@ -1697,16 +2223,16 @@ impl ListRuleGroupsNamespacesInput {
                 mut output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
                 let mut query = aws_smithy_http::query::Writer::new(&mut output);
-                if let Some(inner_15) = &_input.name {
-                    query.push_kv("name", &aws_smithy_http::query::fmt_string(&inner_15));
+                if let Some(inner_19) = &_input.name {
+                    query.push_kv("name", &aws_smithy_http::query::fmt_string(&inner_19));
                 }
-                if let Some(inner_16) = &_input.next_token {
-                    query.push_kv("nextToken", &aws_smithy_http::query::fmt_string(&inner_16));
+                if let Some(inner_20) = &_input.next_token {
+                    query.push_kv("nextToken", &aws_smithy_http::query::fmt_string(&inner_20));
                 }
-                if let Some(inner_17) = &_input.max_results {
+                if let Some(inner_21) = &_input.max_results {
                     query.push_kv(
                         "maxResults",
-                        aws_smithy_types::primitive::Encoder::from(*inner_17).encode(),
+                        aws_smithy_types::primitive::Encoder::from(*inner_21).encode(),
                     );
                 }
                 Ok(())
@@ -1748,10 +2274,17 @@ impl ListRuleGroupsNamespacesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1767,7 +2300,7 @@ impl ListRuleGroupsNamespacesInput {
             "ListRuleGroupsNamespaces",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListRuleGroupsNamespacesInput`](crate::input::ListRuleGroupsNamespacesInput).
@@ -1806,10 +2339,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -1821,7 +2350,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1830,14 +2359,14 @@ impl ListTagsForResourceInput {
                 _input: &crate::input::ListTagsForResourceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_18 = &_input.resource_arn;
-                let input_18 = input_18.as_ref().ok_or(
+                let input_22 = &_input.resource_arn;
+                let input_22 = input_22.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let resource_arn = aws_smithy_http::label::fmt_string(input_18, false);
+                let resource_arn = aws_smithy_http::label::fmt_string(input_22, false);
                 if resource_arn.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
@@ -1884,10 +2413,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1903,7 +2439,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -1966,10 +2502,6 @@ pub mod list_workspaces_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListWorkspacesInputOperationOutputAlias = crate::operation::ListWorkspaces;
-#[doc(hidden)]
-pub type ListWorkspacesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListWorkspacesInput {
     /// Consumes the builder and constructs an Operation<[`ListWorkspaces`](crate::operation::ListWorkspaces)>
     #[allow(unused_mut)]
@@ -1981,7 +2513,7 @@ impl ListWorkspacesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListWorkspaces,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1998,16 +2530,16 @@ impl ListWorkspacesInput {
                 mut output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
                 let mut query = aws_smithy_http::query::Writer::new(&mut output);
-                if let Some(inner_19) = &_input.next_token {
-                    query.push_kv("nextToken", &aws_smithy_http::query::fmt_string(&inner_19));
+                if let Some(inner_23) = &_input.next_token {
+                    query.push_kv("nextToken", &aws_smithy_http::query::fmt_string(&inner_23));
                 }
-                if let Some(inner_20) = &_input.alias {
-                    query.push_kv("alias", &aws_smithy_http::query::fmt_string(&inner_20));
+                if let Some(inner_24) = &_input.alias {
+                    query.push_kv("alias", &aws_smithy_http::query::fmt_string(&inner_24));
                 }
-                if let Some(inner_21) = &_input.max_results {
+                if let Some(inner_25) = &_input.max_results {
                     query.push_kv(
                         "maxResults",
-                        aws_smithy_types::primitive::Encoder::from(*inner_21).encode(),
+                        aws_smithy_types::primitive::Encoder::from(*inner_25).encode(),
                     );
                 }
                 Ok(())
@@ -2049,10 +2581,17 @@ impl ListWorkspacesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2068,7 +2607,7 @@ impl ListWorkspacesInput {
             "ListWorkspaces",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListWorkspacesInput`](crate::input::ListWorkspacesInput).
@@ -2133,11 +2672,6 @@ pub mod put_alert_manager_definition_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutAlertManagerDefinitionInputOperationOutputAlias =
-    crate::operation::PutAlertManagerDefinition;
-#[doc(hidden)]
-pub type PutAlertManagerDefinitionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutAlertManagerDefinitionInput {
     /// Consumes the builder and constructs an Operation<[`PutAlertManagerDefinition`](crate::operation::PutAlertManagerDefinition)>
     #[allow(unused_mut)]
@@ -2149,7 +2683,7 @@ impl PutAlertManagerDefinitionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutAlertManagerDefinition,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2161,14 +2695,14 @@ impl PutAlertManagerDefinitionInput {
                 _input: &crate::input::PutAlertManagerDefinitionInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_22 = &_input.workspace_id;
-                let input_22 = input_22.as_ref().ok_or(
+                let input_26 = &_input.workspace_id;
+                let input_26 = input_26.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_22, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_26, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
@@ -2235,10 +2769,17 @@ impl PutAlertManagerDefinitionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2254,7 +2795,7 @@ impl PutAlertManagerDefinitionInput {
             "PutAlertManagerDefinition",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutAlertManagerDefinitionInput`](crate::input::PutAlertManagerDefinitionInput).
@@ -2329,10 +2870,6 @@ pub mod put_rule_groups_namespace_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutRuleGroupsNamespaceInputOperationOutputAlias = crate::operation::PutRuleGroupsNamespace;
-#[doc(hidden)]
-pub type PutRuleGroupsNamespaceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutRuleGroupsNamespaceInput {
     /// Consumes the builder and constructs an Operation<[`PutRuleGroupsNamespace`](crate::operation::PutRuleGroupsNamespace)>
     #[allow(unused_mut)]
@@ -2344,7 +2881,7 @@ impl PutRuleGroupsNamespaceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutRuleGroupsNamespace,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2356,28 +2893,28 @@ impl PutRuleGroupsNamespaceInput {
                 _input: &crate::input::PutRuleGroupsNamespaceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_23 = &_input.workspace_id;
-                let input_23 = input_23.as_ref().ok_or(
+                let input_27 = &_input.workspace_id;
+                let input_27 = input_27.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_23, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_27, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     });
                 }
-                let input_24 = &_input.name;
-                let input_24 = input_24.as_ref().ok_or(
+                let input_28 = &_input.name;
+                let input_28 = input_28.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "name",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let name = aws_smithy_http::label::fmt_string(input_24, false);
+                let name = aws_smithy_http::label::fmt_string(input_28, false);
                 if name.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "name",
@@ -2445,10 +2982,17 @@ impl PutRuleGroupsNamespaceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2464,7 +3008,7 @@ impl PutRuleGroupsNamespaceInput {
             "PutRuleGroupsNamespace",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutRuleGroupsNamespaceInput`](crate::input::PutRuleGroupsNamespaceInput).
@@ -2532,10 +3076,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -2547,7 +3087,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2556,14 +3096,14 @@ impl TagResourceInput {
                 _input: &crate::input::TagResourceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_25 = &_input.resource_arn;
-                let input_25 = input_25.as_ref().ok_or(
+                let input_29 = &_input.resource_arn;
+                let input_29 = input_29.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let resource_arn = aws_smithy_http::label::fmt_string(input_25, false);
+                let resource_arn = aws_smithy_http::label::fmt_string(input_29, false);
                 if resource_arn.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
@@ -2624,10 +3164,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2643,7 +3190,7 @@ impl TagResourceInput {
             "TagResource",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -2703,10 +3250,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -2718,7 +3261,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2727,14 +3270,14 @@ impl UntagResourceInput {
                 _input: &crate::input::UntagResourceInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_26 = &_input.resource_arn;
-                let input_26 = input_26.as_ref().ok_or(
+                let input_30 = &_input.resource_arn;
+                let input_30 = input_30.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let resource_arn = aws_smithy_http::label::fmt_string(input_26, false);
+                let resource_arn = aws_smithy_http::label::fmt_string(input_30, false);
                 if resource_arn.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "resource_arn",
@@ -2750,9 +3293,9 @@ impl UntagResourceInput {
                 mut output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
                 let mut query = aws_smithy_http::query::Writer::new(&mut output);
-                if let Some(inner_27) = &_input.tag_keys {
-                    for inner_28 in inner_27 {
-                        query.push_kv("tagKeys", &aws_smithy_http::query::fmt_string(&inner_28));
+                if let Some(inner_31) = &_input.tag_keys {
+                    for inner_32 in inner_31 {
+                        query.push_kv("tagKeys", &aws_smithy_http::query::fmt_string(&inner_32));
                     }
                 }
                 Ok(())
@@ -2794,10 +3337,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2813,12 +3363,203 @@ impl UntagResourceInput {
             "UntagResource",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
     pub fn builder() -> crate::input::untag_resource_input::Builder {
         crate::input::untag_resource_input::Builder::default()
+    }
+}
+
+/// See [`UpdateLoggingConfigurationInput`](crate::input::UpdateLoggingConfigurationInput).
+pub mod update_logging_configuration_input {
+
+    /// A builder for [`UpdateLoggingConfigurationInput`](crate::input::UpdateLoggingConfigurationInput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) workspace_id: std::option::Option<std::string::String>,
+        pub(crate) log_group_arn: std::option::Option<std::string::String>,
+        pub(crate) client_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// The ID of the workspace to vend logs to.
+        pub fn workspace_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.workspace_id = Some(input.into());
+            self
+        }
+        /// The ID of the workspace to vend logs to.
+        pub fn set_workspace_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.workspace_id = input;
+            self
+        }
+        /// The ARN of the CW log group to which the vended log data will be published.
+        pub fn log_group_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.log_group_arn = Some(input.into());
+            self
+        }
+        /// The ARN of the CW log group to which the vended log data will be published.
+        pub fn set_log_group_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.log_group_arn = input;
+            self
+        }
+        /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+        pub fn client_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.client_token = Some(input.into());
+            self
+        }
+        /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+        pub fn set_client_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.client_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateLoggingConfigurationInput`](crate::input::UpdateLoggingConfigurationInput).
+        pub fn build(
+            self,
+        ) -> Result<
+            crate::input::UpdateLoggingConfigurationInput,
+            aws_smithy_http::operation::BuildError,
+        > {
+            Ok(crate::input::UpdateLoggingConfigurationInput {
+                workspace_id: self.workspace_id,
+                log_group_arn: self.log_group_arn,
+                client_token: self.client_token,
+            })
+        }
+    }
+}
+impl UpdateLoggingConfigurationInput {
+    /// Consumes the builder and constructs an Operation<[`UpdateLoggingConfiguration`](crate::operation::UpdateLoggingConfiguration)>
+    #[allow(unused_mut)]
+    #[allow(clippy::let_and_return)]
+    #[allow(clippy::needless_borrow)]
+    pub async fn make_operation(
+        mut self,
+        _config: &crate::config::Config,
+    ) -> std::result::Result<
+        aws_smithy_http::operation::Operation<
+            crate::operation::UpdateLoggingConfiguration,
+            aws_http::retry::AwsResponseRetryClassifier,
+        >,
+        aws_smithy_http::operation::BuildError,
+    > {
+        if self.client_token.is_none() {
+            self.client_token = Some(_config.make_token.make_idempotency_token());
+        }
+        let mut request = {
+            fn uri_base(
+                _input: &crate::input::UpdateLoggingConfigurationInput,
+                output: &mut String,
+            ) -> Result<(), aws_smithy_http::operation::BuildError> {
+                let input_33 = &_input.workspace_id;
+                let input_33 = input_33.as_ref().ok_or(
+                    aws_smithy_http::operation::BuildError::MissingField {
+                        field: "workspace_id",
+                        details: "cannot be empty or unset",
+                    },
+                )?;
+                let workspace_id = aws_smithy_http::label::fmt_string(input_33, false);
+                if workspace_id.is_empty() {
+                    return Err(aws_smithy_http::operation::BuildError::MissingField {
+                        field: "workspace_id",
+                        details: "cannot be empty or unset",
+                    });
+                }
+                write!(
+                    output,
+                    "/workspaces/{workspaceId}/logging",
+                    workspaceId = workspace_id
+                )
+                .expect("formatting should succeed");
+                Ok(())
+            }
+            #[allow(clippy::unnecessary_wraps)]
+            fn update_http_builder(
+                input: &crate::input::UpdateLoggingConfigurationInput,
+                builder: http::request::Builder,
+            ) -> std::result::Result<http::request::Builder, aws_smithy_http::operation::BuildError>
+            {
+                let mut uri = String::new();
+                uri_base(input, &mut uri)?;
+                Ok(builder.method("PUT").uri(uri))
+            }
+            let mut builder = update_http_builder(&self, http::request::Builder::new())?;
+            builder = aws_smithy_http::header::set_request_header_if_absent(
+                builder,
+                http::header::CONTENT_TYPE,
+                "application/json",
+            );
+            builder
+        };
+        let mut properties = aws_smithy_http::property_bag::SharedPropertyBag::new();
+        #[allow(clippy::useless_conversion)]
+        let body = aws_smithy_http::body::SdkBody::from(
+            crate::operation_ser::serialize_operation_crate_operation_update_logging_configuration(
+                &self,
+            )?,
+        );
+        if let Some(content_length) = body.content_length() {
+            request = aws_smithy_http::header::set_request_header_if_absent(
+                request,
+                http::header::CONTENT_LENGTH,
+                content_length,
+            );
+        }
+        let request = request.body(body).expect("should be valid request");
+        let mut request = aws_smithy_http::operation::Request::from_parts(request, properties);
+        request
+            .properties_mut()
+            .insert(aws_smithy_http::http_versions::DEFAULT_HTTP_VERSION_LIST.clone());
+        let mut user_agent = aws_http::user_agent::AwsUserAgent::new_from_environment(
+            aws_types::os_shim_internal::Env::real(),
+            crate::API_METADATA.clone(),
+        );
+        if let Some(app_name) = _config.app_name() {
+            user_agent = user_agent.with_app_name(app_name.clone());
+        }
+        request.properties_mut().insert(user_agent);
+        let mut signing_config = aws_sig_auth::signer::OperationSigningConfig::default_config();
+        request.properties_mut().insert(signing_config);
+        request
+            .properties_mut()
+            .insert(aws_types::SigningService::from_static(
+                _config.signing_service(),
+            ));
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
+        if let Some(region) = &_config.region {
+            request.properties_mut().insert(region.clone());
+        }
+        aws_http::auth::set_provider(
+            &mut request.properties_mut(),
+            _config.credentials_provider.clone(),
+        );
+        let op = aws_smithy_http::operation::Operation::new(
+            request,
+            crate::operation::UpdateLoggingConfiguration::new(),
+        )
+        .with_metadata(aws_smithy_http::operation::Metadata::new(
+            "UpdateLoggingConfiguration",
+            "amp",
+        ));
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
+        Ok(op)
+    }
+    /// Creates a new builder-style object to manufacture [`UpdateLoggingConfigurationInput`](crate::input::UpdateLoggingConfigurationInput).
+    pub fn builder() -> crate::input::update_logging_configuration_input::Builder {
+        crate::input::update_logging_configuration_input::Builder::default()
     }
 }
 
@@ -2876,10 +3617,6 @@ pub mod update_workspace_alias_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateWorkspaceAliasInputOperationOutputAlias = crate::operation::UpdateWorkspaceAlias;
-#[doc(hidden)]
-pub type UpdateWorkspaceAliasInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateWorkspaceAliasInput {
     /// Consumes the builder and constructs an Operation<[`UpdateWorkspaceAlias`](crate::operation::UpdateWorkspaceAlias)>
     #[allow(unused_mut)]
@@ -2891,7 +3628,7 @@ impl UpdateWorkspaceAliasInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateWorkspaceAlias,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2903,14 +3640,14 @@ impl UpdateWorkspaceAliasInput {
                 _input: &crate::input::UpdateWorkspaceAliasInput,
                 output: &mut String,
             ) -> Result<(), aws_smithy_http::operation::BuildError> {
-                let input_29 = &_input.workspace_id;
-                let input_29 = input_29.as_ref().ok_or(
+                let input_34 = &_input.workspace_id;
+                let input_34 = input_34.as_ref().ok_or(
                     aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
                         details: "cannot be empty or unset",
                     },
                 )?;
-                let workspace_id = aws_smithy_http::label::fmt_string(input_29, false);
+                let workspace_id = aws_smithy_http::label::fmt_string(input_34, false);
                 if workspace_id.is_empty() {
                     return Err(aws_smithy_http::operation::BuildError::MissingField {
                         field: "workspace_id",
@@ -2977,10 +3714,17 @@ impl UpdateWorkspaceAliasInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2996,7 +3740,7 @@ impl UpdateWorkspaceAliasInput {
             "UpdateWorkspaceAlias",
             "amp",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateWorkspaceAliasInput`](crate::input::UpdateWorkspaceAliasInput).
@@ -3389,6 +4133,134 @@ impl std::fmt::Debug for DescribeRuleGroupsNamespaceInput {
         let mut formatter = f.debug_struct("DescribeRuleGroupsNamespaceInput");
         formatter.field("workspace_id", &self.workspace_id);
         formatter.field("name", &self.name);
+        formatter.finish()
+    }
+}
+
+/// Represents the input of a CreateLoggingConfiguration operation.
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateLoggingConfigurationInput {
+    /// The ID of the workspace to vend logs to.
+    #[doc(hidden)]
+    pub workspace_id: std::option::Option<std::string::String>,
+    /// The ARN of the CW log group to which the vended log data will be published.
+    #[doc(hidden)]
+    pub log_group_arn: std::option::Option<std::string::String>,
+    /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+    #[doc(hidden)]
+    pub client_token: std::option::Option<std::string::String>,
+}
+impl CreateLoggingConfigurationInput {
+    /// The ID of the workspace to vend logs to.
+    pub fn workspace_id(&self) -> std::option::Option<&str> {
+        self.workspace_id.as_deref()
+    }
+    /// The ARN of the CW log group to which the vended log data will be published.
+    pub fn log_group_arn(&self) -> std::option::Option<&str> {
+        self.log_group_arn.as_deref()
+    }
+    /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+    pub fn client_token(&self) -> std::option::Option<&str> {
+        self.client_token.as_deref()
+    }
+}
+impl std::fmt::Debug for CreateLoggingConfigurationInput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateLoggingConfigurationInput");
+        formatter.field("workspace_id", &self.workspace_id);
+        formatter.field("log_group_arn", &self.log_group_arn);
+        formatter.field("client_token", &self.client_token);
+        formatter.finish()
+    }
+}
+
+/// Represents the input of a DeleteLoggingConfiguration operation.
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DeleteLoggingConfigurationInput {
+    /// The ID of the workspace to vend logs to.
+    #[doc(hidden)]
+    pub workspace_id: std::option::Option<std::string::String>,
+    /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+    #[doc(hidden)]
+    pub client_token: std::option::Option<std::string::String>,
+}
+impl DeleteLoggingConfigurationInput {
+    /// The ID of the workspace to vend logs to.
+    pub fn workspace_id(&self) -> std::option::Option<&str> {
+        self.workspace_id.as_deref()
+    }
+    /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+    pub fn client_token(&self) -> std::option::Option<&str> {
+        self.client_token.as_deref()
+    }
+}
+impl std::fmt::Debug for DeleteLoggingConfigurationInput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DeleteLoggingConfigurationInput");
+        formatter.field("workspace_id", &self.workspace_id);
+        formatter.field("client_token", &self.client_token);
+        formatter.finish()
+    }
+}
+
+/// Represents the input of an UpdateLoggingConfiguration operation.
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateLoggingConfigurationInput {
+    /// The ID of the workspace to vend logs to.
+    #[doc(hidden)]
+    pub workspace_id: std::option::Option<std::string::String>,
+    /// The ARN of the CW log group to which the vended log data will be published.
+    #[doc(hidden)]
+    pub log_group_arn: std::option::Option<std::string::String>,
+    /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+    #[doc(hidden)]
+    pub client_token: std::option::Option<std::string::String>,
+}
+impl UpdateLoggingConfigurationInput {
+    /// The ID of the workspace to vend logs to.
+    pub fn workspace_id(&self) -> std::option::Option<&str> {
+        self.workspace_id.as_deref()
+    }
+    /// The ARN of the CW log group to which the vended log data will be published.
+    pub fn log_group_arn(&self) -> std::option::Option<&str> {
+        self.log_group_arn.as_deref()
+    }
+    /// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+    pub fn client_token(&self) -> std::option::Option<&str> {
+        self.client_token.as_deref()
+    }
+}
+impl std::fmt::Debug for UpdateLoggingConfigurationInput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateLoggingConfigurationInput");
+        formatter.field("workspace_id", &self.workspace_id);
+        formatter.field("log_group_arn", &self.log_group_arn);
+        formatter.field("client_token", &self.client_token);
+        formatter.finish()
+    }
+}
+
+/// Represents the input of a DescribeLoggingConfiguration operation.
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DescribeLoggingConfigurationInput {
+    /// The ID of the workspace to vend logs to.
+    #[doc(hidden)]
+    pub workspace_id: std::option::Option<std::string::String>,
+}
+impl DescribeLoggingConfigurationInput {
+    /// The ID of the workspace to vend logs to.
+    pub fn workspace_id(&self) -> std::option::Option<&str> {
+        self.workspace_id.as_deref()
+    }
+}
+impl std::fmt::Debug for DescribeLoggingConfigurationInput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DescribeLoggingConfigurationInput");
+        formatter.field("workspace_id", &self.workspace_id);
         formatter.finish()
     }
 }

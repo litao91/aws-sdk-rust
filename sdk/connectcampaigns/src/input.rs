@@ -105,10 +105,6 @@ pub mod create_campaign_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateCampaignInputOperationOutputAlias = crate::operation::CreateCampaign;
-#[doc(hidden)]
-pub type CreateCampaignInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateCampaignInput {
     /// Consumes the builder and constructs an Operation<[`CreateCampaign`](crate::operation::CreateCampaign)>
     #[allow(unused_mut)]
@@ -120,7 +116,7 @@ impl CreateCampaignInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateCampaign,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -182,10 +178,17 @@ impl CreateCampaignInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -201,7 +204,7 @@ impl CreateCampaignInput {
             "CreateCampaign",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateCampaignInput`](crate::input::CreateCampaignInput).
@@ -238,10 +241,6 @@ pub mod delete_campaign_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteCampaignInputOperationOutputAlias = crate::operation::DeleteCampaign;
-#[doc(hidden)]
-pub type DeleteCampaignInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteCampaignInput {
     /// Consumes the builder and constructs an Operation<[`DeleteCampaign`](crate::operation::DeleteCampaign)>
     #[allow(unused_mut)]
@@ -253,7 +252,7 @@ impl DeleteCampaignInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteCampaign,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -315,10 +314,17 @@ impl DeleteCampaignInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -334,7 +340,7 @@ impl DeleteCampaignInput {
             "DeleteCampaign",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteCampaignInput`](crate::input::DeleteCampaignInput).
@@ -378,11 +384,6 @@ pub mod delete_connect_instance_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteConnectInstanceConfigInputOperationOutputAlias =
-    crate::operation::DeleteConnectInstanceConfig;
-#[doc(hidden)]
-pub type DeleteConnectInstanceConfigInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteConnectInstanceConfigInput {
     /// Consumes the builder and constructs an Operation<[`DeleteConnectInstanceConfig`](crate::operation::DeleteConnectInstanceConfig)>
     #[allow(unused_mut)]
@@ -394,7 +395,7 @@ impl DeleteConnectInstanceConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteConnectInstanceConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -461,10 +462,17 @@ impl DeleteConnectInstanceConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -480,7 +488,7 @@ impl DeleteConnectInstanceConfigInput {
             "DeleteConnectInstanceConfig",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteConnectInstanceConfigInput`](crate::input::DeleteConnectInstanceConfigInput).
@@ -524,11 +532,6 @@ pub mod delete_instance_onboarding_job_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteInstanceOnboardingJobInputOperationOutputAlias =
-    crate::operation::DeleteInstanceOnboardingJob;
-#[doc(hidden)]
-pub type DeleteInstanceOnboardingJobInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteInstanceOnboardingJobInput {
     /// Consumes the builder and constructs an Operation<[`DeleteInstanceOnboardingJob`](crate::operation::DeleteInstanceOnboardingJob)>
     #[allow(unused_mut)]
@@ -540,7 +543,7 @@ impl DeleteInstanceOnboardingJobInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteInstanceOnboardingJob,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -607,10 +610,17 @@ impl DeleteInstanceOnboardingJobInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -626,7 +636,7 @@ impl DeleteInstanceOnboardingJobInput {
             "DeleteInstanceOnboardingJob",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteInstanceOnboardingJobInput`](crate::input::DeleteInstanceOnboardingJobInput).
@@ -663,10 +673,6 @@ pub mod describe_campaign_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeCampaignInputOperationOutputAlias = crate::operation::DescribeCampaign;
-#[doc(hidden)]
-pub type DescribeCampaignInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeCampaignInput {
     /// Consumes the builder and constructs an Operation<[`DescribeCampaign`](crate::operation::DescribeCampaign)>
     #[allow(unused_mut)]
@@ -678,7 +684,7 @@ impl DescribeCampaignInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeCampaign,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -740,10 +746,17 @@ impl DescribeCampaignInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -759,7 +772,7 @@ impl DescribeCampaignInput {
             "DescribeCampaign",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeCampaignInput`](crate::input::DescribeCampaignInput).
@@ -796,10 +809,6 @@ pub mod get_campaign_state_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetCampaignStateInputOperationOutputAlias = crate::operation::GetCampaignState;
-#[doc(hidden)]
-pub type GetCampaignStateInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetCampaignStateInput {
     /// Consumes the builder and constructs an Operation<[`GetCampaignState`](crate::operation::GetCampaignState)>
     #[allow(unused_mut)]
@@ -811,7 +820,7 @@ impl GetCampaignStateInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetCampaignState,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -874,10 +883,17 @@ impl GetCampaignStateInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -893,7 +909,7 @@ impl GetCampaignStateInput {
             "GetCampaignState",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetCampaignStateInput`](crate::input::GetCampaignStateInput).
@@ -941,10 +957,6 @@ pub mod get_campaign_state_batch_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetCampaignStateBatchInputOperationOutputAlias = crate::operation::GetCampaignStateBatch;
-#[doc(hidden)]
-pub type GetCampaignStateBatchInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetCampaignStateBatchInput {
     /// Consumes the builder and constructs an Operation<[`GetCampaignStateBatch`](crate::operation::GetCampaignStateBatch)>
     #[allow(unused_mut)]
@@ -956,7 +968,7 @@ impl GetCampaignStateBatchInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetCampaignStateBatch,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1020,10 +1032,17 @@ impl GetCampaignStateBatchInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1039,7 +1058,7 @@ impl GetCampaignStateBatchInput {
             "GetCampaignStateBatch",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetCampaignStateBatchInput`](crate::input::GetCampaignStateBatchInput).
@@ -1083,11 +1102,6 @@ pub mod get_connect_instance_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetConnectInstanceConfigInputOperationOutputAlias =
-    crate::operation::GetConnectInstanceConfig;
-#[doc(hidden)]
-pub type GetConnectInstanceConfigInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetConnectInstanceConfigInput {
     /// Consumes the builder and constructs an Operation<[`GetConnectInstanceConfig`](crate::operation::GetConnectInstanceConfig)>
     #[allow(unused_mut)]
@@ -1099,7 +1113,7 @@ impl GetConnectInstanceConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetConnectInstanceConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1166,10 +1180,17 @@ impl GetConnectInstanceConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1185,7 +1206,7 @@ impl GetConnectInstanceConfigInput {
             "GetConnectInstanceConfig",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetConnectInstanceConfigInput`](crate::input::GetConnectInstanceConfigInput).
@@ -1229,12 +1250,6 @@ pub mod get_instance_onboarding_job_status_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetInstanceOnboardingJobStatusInputOperationOutputAlias =
-    crate::operation::GetInstanceOnboardingJobStatus;
-#[doc(hidden)]
-pub type GetInstanceOnboardingJobStatusInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl GetInstanceOnboardingJobStatusInput {
     /// Consumes the builder and constructs an Operation<[`GetInstanceOnboardingJobStatus`](crate::operation::GetInstanceOnboardingJobStatus)>
     #[allow(unused_mut)]
@@ -1246,7 +1261,7 @@ impl GetInstanceOnboardingJobStatusInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetInstanceOnboardingJobStatus,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1313,10 +1328,17 @@ impl GetInstanceOnboardingJobStatusInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1332,7 +1354,7 @@ impl GetInstanceOnboardingJobStatusInput {
             "GetInstanceOnboardingJobStatus",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetInstanceOnboardingJobStatusInput`](crate::input::GetInstanceOnboardingJobStatusInput).
@@ -1398,10 +1420,6 @@ pub mod list_campaigns_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListCampaignsInputOperationOutputAlias = crate::operation::ListCampaigns;
-#[doc(hidden)]
-pub type ListCampaignsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListCampaignsInput {
     /// Consumes the builder and constructs an Operation<[`ListCampaigns`](crate::operation::ListCampaigns)>
     #[allow(unused_mut)]
@@ -1413,7 +1431,7 @@ impl ListCampaignsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListCampaigns,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1475,10 +1493,17 @@ impl ListCampaignsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1494,7 +1519,7 @@ impl ListCampaignsInput {
             "ListCampaigns",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListCampaignsInput`](crate::input::ListCampaignsInput).
@@ -1531,10 +1556,6 @@ pub mod list_tags_for_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationOutputAlias = crate::operation::ListTagsForResource;
-#[doc(hidden)]
-pub type ListTagsForResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForResourceInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForResource`](crate::operation::ListTagsForResource)>
     #[allow(unused_mut)]
@@ -1546,7 +1567,7 @@ impl ListTagsForResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1608,10 +1629,17 @@ impl ListTagsForResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1627,7 +1655,7 @@ impl ListTagsForResourceInput {
             "ListTagsForResource",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
@@ -1664,10 +1692,6 @@ pub mod pause_campaign_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PauseCampaignInputOperationOutputAlias = crate::operation::PauseCampaign;
-#[doc(hidden)]
-pub type PauseCampaignInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PauseCampaignInput {
     /// Consumes the builder and constructs an Operation<[`PauseCampaign`](crate::operation::PauseCampaign)>
     #[allow(unused_mut)]
@@ -1679,7 +1703,7 @@ impl PauseCampaignInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PauseCampaign,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1742,10 +1766,17 @@ impl PauseCampaignInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1761,7 +1792,7 @@ impl PauseCampaignInput {
             "PauseCampaign",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PauseCampaignInput`](crate::input::PauseCampaignInput).
@@ -1821,10 +1852,6 @@ pub mod put_dial_request_batch_input {
         }
     }
 }
-#[doc(hidden)]
-pub type PutDialRequestBatchInputOperationOutputAlias = crate::operation::PutDialRequestBatch;
-#[doc(hidden)]
-pub type PutDialRequestBatchInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl PutDialRequestBatchInput {
     /// Consumes the builder and constructs an Operation<[`PutDialRequestBatch`](crate::operation::PutDialRequestBatch)>
     #[allow(unused_mut)]
@@ -1836,7 +1863,7 @@ impl PutDialRequestBatchInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::PutDialRequestBatch,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1915,10 +1942,17 @@ impl PutDialRequestBatchInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1934,7 +1968,7 @@ impl PutDialRequestBatchInput {
             "PutDialRequestBatch",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`PutDialRequestBatchInput`](crate::input::PutDialRequestBatchInput).
@@ -1971,10 +2005,6 @@ pub mod resume_campaign_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ResumeCampaignInputOperationOutputAlias = crate::operation::ResumeCampaign;
-#[doc(hidden)]
-pub type ResumeCampaignInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ResumeCampaignInput {
     /// Consumes the builder and constructs an Operation<[`ResumeCampaign`](crate::operation::ResumeCampaign)>
     #[allow(unused_mut)]
@@ -1986,7 +2016,7 @@ impl ResumeCampaignInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ResumeCampaign,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2049,10 +2079,17 @@ impl ResumeCampaignInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2068,7 +2105,7 @@ impl ResumeCampaignInput {
             "ResumeCampaign",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ResumeCampaignInput`](crate::input::ResumeCampaignInput).
@@ -2105,10 +2142,6 @@ pub mod start_campaign_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartCampaignInputOperationOutputAlias = crate::operation::StartCampaign;
-#[doc(hidden)]
-pub type StartCampaignInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartCampaignInput {
     /// Consumes the builder and constructs an Operation<[`StartCampaign`](crate::operation::StartCampaign)>
     #[allow(unused_mut)]
@@ -2120,7 +2153,7 @@ impl StartCampaignInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartCampaign,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2183,10 +2216,17 @@ impl StartCampaignInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2202,7 +2242,7 @@ impl StartCampaignInput {
             "StartCampaign",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartCampaignInput`](crate::input::StartCampaignInput).
@@ -2261,11 +2301,6 @@ pub mod start_instance_onboarding_job_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StartInstanceOnboardingJobInputOperationOutputAlias =
-    crate::operation::StartInstanceOnboardingJob;
-#[doc(hidden)]
-pub type StartInstanceOnboardingJobInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StartInstanceOnboardingJobInput {
     /// Consumes the builder and constructs an Operation<[`StartInstanceOnboardingJob`](crate::operation::StartInstanceOnboardingJob)>
     #[allow(unused_mut)]
@@ -2277,7 +2312,7 @@ impl StartInstanceOnboardingJobInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StartInstanceOnboardingJob,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2357,10 +2392,17 @@ impl StartInstanceOnboardingJobInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2376,7 +2418,7 @@ impl StartInstanceOnboardingJobInput {
             "StartInstanceOnboardingJob",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StartInstanceOnboardingJobInput`](crate::input::StartInstanceOnboardingJobInput).
@@ -2413,10 +2455,6 @@ pub mod stop_campaign_input {
         }
     }
 }
-#[doc(hidden)]
-pub type StopCampaignInputOperationOutputAlias = crate::operation::StopCampaign;
-#[doc(hidden)]
-pub type StopCampaignInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl StopCampaignInput {
     /// Consumes the builder and constructs an Operation<[`StopCampaign`](crate::operation::StopCampaign)>
     #[allow(unused_mut)]
@@ -2428,7 +2466,7 @@ impl StopCampaignInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::StopCampaign,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2490,10 +2528,17 @@ impl StopCampaignInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2509,7 +2554,7 @@ impl StopCampaignInput {
             "StopCampaign",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`StopCampaignInput`](crate::input::StopCampaignInput).
@@ -2577,10 +2622,6 @@ pub mod tag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TagResourceInputOperationOutputAlias = crate::operation::TagResource;
-#[doc(hidden)]
-pub type TagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TagResourceInput {
     /// Consumes the builder and constructs an Operation<[`TagResource`](crate::operation::TagResource)>
     #[allow(unused_mut)]
@@ -2592,7 +2633,7 @@ impl TagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2668,10 +2709,17 @@ impl TagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2687,7 +2735,7 @@ impl TagResourceInput {
             "TagResource",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
@@ -2747,10 +2795,6 @@ pub mod untag_resource_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UntagResourceInputOperationOutputAlias = crate::operation::UntagResource;
-#[doc(hidden)]
-pub type UntagResourceInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UntagResourceInput {
     /// Consumes the builder and constructs an Operation<[`UntagResource`](crate::operation::UntagResource)>
     #[allow(unused_mut)]
@@ -2762,7 +2806,7 @@ impl UntagResourceInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UntagResource,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2837,10 +2881,17 @@ impl UntagResourceInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2856,7 +2907,7 @@ impl UntagResourceInput {
             "UntagResource",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
@@ -2912,11 +2963,6 @@ pub mod update_campaign_dialer_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateCampaignDialerConfigInputOperationOutputAlias =
-    crate::operation::UpdateCampaignDialerConfig;
-#[doc(hidden)]
-pub type UpdateCampaignDialerConfigInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateCampaignDialerConfigInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCampaignDialerConfig`](crate::operation::UpdateCampaignDialerConfig)>
     #[allow(unused_mut)]
@@ -2928,7 +2974,7 @@ impl UpdateCampaignDialerConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCampaignDialerConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3004,10 +3050,17 @@ impl UpdateCampaignDialerConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3023,7 +3076,7 @@ impl UpdateCampaignDialerConfigInput {
             "UpdateCampaignDialerConfig",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateCampaignDialerConfigInput`](crate::input::UpdateCampaignDialerConfigInput).
@@ -3074,10 +3127,6 @@ pub mod update_campaign_name_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateCampaignNameInputOperationOutputAlias = crate::operation::UpdateCampaignName;
-#[doc(hidden)]
-pub type UpdateCampaignNameInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateCampaignNameInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCampaignName`](crate::operation::UpdateCampaignName)>
     #[allow(unused_mut)]
@@ -3089,7 +3138,7 @@ impl UpdateCampaignNameInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCampaignName,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3165,10 +3214,17 @@ impl UpdateCampaignNameInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3184,7 +3240,7 @@ impl UpdateCampaignNameInput {
             "UpdateCampaignName",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateCampaignNameInput`](crate::input::UpdateCampaignNameInput).
@@ -3277,12 +3333,6 @@ pub mod update_campaign_outbound_call_config_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateCampaignOutboundCallConfigInputOperationOutputAlias =
-    crate::operation::UpdateCampaignOutboundCallConfig;
-#[doc(hidden)]
-pub type UpdateCampaignOutboundCallConfigInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateCampaignOutboundCallConfigInput {
     /// Consumes the builder and constructs an Operation<[`UpdateCampaignOutboundCallConfig`](crate::operation::UpdateCampaignOutboundCallConfig)>
     #[allow(unused_mut)]
@@ -3294,7 +3344,7 @@ impl UpdateCampaignOutboundCallConfigInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateCampaignOutboundCallConfig,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3370,10 +3420,17 @@ impl UpdateCampaignOutboundCallConfigInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3389,7 +3446,7 @@ impl UpdateCampaignOutboundCallConfigInput {
             "UpdateCampaignOutboundCallConfig",
             "connectcampaigns",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateCampaignOutboundCallConfigInput`](crate::input::UpdateCampaignOutboundCallConfigInput).

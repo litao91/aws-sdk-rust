@@ -47,12 +47,6 @@ pub mod accept_domain_transfer_from_another_aws_account_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AcceptDomainTransferFromAnotherAwsAccountInputOperationOutputAlias =
-    crate::operation::AcceptDomainTransferFromAnotherAwsAccount;
-#[doc(hidden)]
-pub type AcceptDomainTransferFromAnotherAwsAccountInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl AcceptDomainTransferFromAnotherAwsAccountInput {
     /// Consumes the builder and constructs an Operation<[`AcceptDomainTransferFromAnotherAwsAccount`](crate::operation::AcceptDomainTransferFromAnotherAwsAccount)>
     #[allow(unused_mut)]
@@ -64,7 +58,7 @@ impl AcceptDomainTransferFromAnotherAwsAccountInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AcceptDomainTransferFromAnotherAwsAccount,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -130,10 +124,17 @@ impl AcceptDomainTransferFromAnotherAwsAccountInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -149,7 +150,7 @@ impl AcceptDomainTransferFromAnotherAwsAccountInput {
             "AcceptDomainTransferFromAnotherAwsAccount",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AcceptDomainTransferFromAnotherAwsAccountInput`](crate::input::AcceptDomainTransferFromAnotherAwsAccountInput).
@@ -191,12 +192,6 @@ pub mod cancel_domain_transfer_to_another_aws_account_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CancelDomainTransferToAnotherAwsAccountInputOperationOutputAlias =
-    crate::operation::CancelDomainTransferToAnotherAwsAccount;
-#[doc(hidden)]
-pub type CancelDomainTransferToAnotherAwsAccountInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CancelDomainTransferToAnotherAwsAccountInput {
     /// Consumes the builder and constructs an Operation<[`CancelDomainTransferToAnotherAwsAccount`](crate::operation::CancelDomainTransferToAnotherAwsAccount)>
     #[allow(unused_mut)]
@@ -208,7 +203,7 @@ impl CancelDomainTransferToAnotherAwsAccountInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CancelDomainTransferToAnotherAwsAccount,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -274,10 +269,17 @@ impl CancelDomainTransferToAnotherAwsAccountInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -293,7 +295,7 @@ impl CancelDomainTransferToAnotherAwsAccountInput {
             "CancelDomainTransferToAnotherAwsAccount",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CancelDomainTransferToAnotherAwsAccountInput`](crate::input::CancelDomainTransferToAnotherAwsAccountInput).
@@ -365,11 +367,6 @@ pub mod check_domain_availability_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CheckDomainAvailabilityInputOperationOutputAlias =
-    crate::operation::CheckDomainAvailability;
-#[doc(hidden)]
-pub type CheckDomainAvailabilityInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CheckDomainAvailabilityInput {
     /// Consumes the builder and constructs an Operation<[`CheckDomainAvailability`](crate::operation::CheckDomainAvailability)>
     #[allow(unused_mut)]
@@ -381,7 +378,7 @@ impl CheckDomainAvailabilityInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CheckDomainAvailability,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -450,10 +447,17 @@ impl CheckDomainAvailabilityInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -469,7 +473,7 @@ impl CheckDomainAvailabilityInput {
             "CheckDomainAvailability",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CheckDomainAvailabilityInput`](crate::input::CheckDomainAvailabilityInput).
@@ -536,11 +540,6 @@ pub mod check_domain_transferability_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CheckDomainTransferabilityInputOperationOutputAlias =
-    crate::operation::CheckDomainTransferability;
-#[doc(hidden)]
-pub type CheckDomainTransferabilityInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CheckDomainTransferabilityInput {
     /// Consumes the builder and constructs an Operation<[`CheckDomainTransferability`](crate::operation::CheckDomainTransferability)>
     #[allow(unused_mut)]
@@ -552,7 +551,7 @@ impl CheckDomainTransferabilityInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CheckDomainTransferability,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -621,10 +620,17 @@ impl CheckDomainTransferabilityInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -640,7 +646,7 @@ impl CheckDomainTransferabilityInput {
             "CheckDomainTransferability",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CheckDomainTransferabilityInput`](crate::input::CheckDomainTransferabilityInput).
@@ -679,10 +685,6 @@ pub mod delete_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteDomainInputOperationOutputAlias = crate::operation::DeleteDomain;
-#[doc(hidden)]
-pub type DeleteDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteDomainInput {
     /// Consumes the builder and constructs an Operation<[`DeleteDomain`](crate::operation::DeleteDomain)>
     #[allow(unused_mut)]
@@ -694,7 +696,7 @@ impl DeleteDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -761,10 +763,17 @@ impl DeleteDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -780,7 +789,7 @@ impl DeleteDomainInput {
             "DeleteDomain",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteDomainInput`](crate::input::DeleteDomainInput).
@@ -840,10 +849,6 @@ pub mod delete_tags_for_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteTagsForDomainInputOperationOutputAlias = crate::operation::DeleteTagsForDomain;
-#[doc(hidden)]
-pub type DeleteTagsForDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteTagsForDomainInput {
     /// Consumes the builder and constructs an Operation<[`DeleteTagsForDomain`](crate::operation::DeleteTagsForDomain)>
     #[allow(unused_mut)]
@@ -855,7 +860,7 @@ impl DeleteTagsForDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteTagsForDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -924,10 +929,17 @@ impl DeleteTagsForDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -943,7 +955,7 @@ impl DeleteTagsForDomainInput {
             "DeleteTagsForDomain",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteTagsForDomainInput`](crate::input::DeleteTagsForDomainInput).
@@ -982,10 +994,6 @@ pub mod disable_domain_auto_renew_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisableDomainAutoRenewInputOperationOutputAlias = crate::operation::DisableDomainAutoRenew;
-#[doc(hidden)]
-pub type DisableDomainAutoRenewInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DisableDomainAutoRenewInput {
     /// Consumes the builder and constructs an Operation<[`DisableDomainAutoRenew`](crate::operation::DisableDomainAutoRenew)>
     #[allow(unused_mut)]
@@ -997,7 +1005,7 @@ impl DisableDomainAutoRenewInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisableDomainAutoRenew,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1066,10 +1074,17 @@ impl DisableDomainAutoRenewInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1085,7 +1100,7 @@ impl DisableDomainAutoRenewInput {
             "DisableDomainAutoRenew",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisableDomainAutoRenewInput`](crate::input::DisableDomainAutoRenewInput).
@@ -1126,11 +1141,6 @@ pub mod disable_domain_transfer_lock_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisableDomainTransferLockInputOperationOutputAlias =
-    crate::operation::DisableDomainTransferLock;
-#[doc(hidden)]
-pub type DisableDomainTransferLockInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DisableDomainTransferLockInput {
     /// Consumes the builder and constructs an Operation<[`DisableDomainTransferLock`](crate::operation::DisableDomainTransferLock)>
     #[allow(unused_mut)]
@@ -1142,7 +1152,7 @@ impl DisableDomainTransferLockInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisableDomainTransferLock,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1211,10 +1221,17 @@ impl DisableDomainTransferLockInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1230,7 +1247,7 @@ impl DisableDomainTransferLockInput {
             "DisableDomainTransferLock",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisableDomainTransferLockInput`](crate::input::DisableDomainTransferLockInput).
@@ -1269,10 +1286,6 @@ pub mod enable_domain_auto_renew_input {
         }
     }
 }
-#[doc(hidden)]
-pub type EnableDomainAutoRenewInputOperationOutputAlias = crate::operation::EnableDomainAutoRenew;
-#[doc(hidden)]
-pub type EnableDomainAutoRenewInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl EnableDomainAutoRenewInput {
     /// Consumes the builder and constructs an Operation<[`EnableDomainAutoRenew`](crate::operation::EnableDomainAutoRenew)>
     #[allow(unused_mut)]
@@ -1284,7 +1297,7 @@ impl EnableDomainAutoRenewInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::EnableDomainAutoRenew,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1353,10 +1366,17 @@ impl EnableDomainAutoRenewInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1372,7 +1392,7 @@ impl EnableDomainAutoRenewInput {
             "EnableDomainAutoRenew",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`EnableDomainAutoRenewInput`](crate::input::EnableDomainAutoRenewInput).
@@ -1413,11 +1433,6 @@ pub mod enable_domain_transfer_lock_input {
         }
     }
 }
-#[doc(hidden)]
-pub type EnableDomainTransferLockInputOperationOutputAlias =
-    crate::operation::EnableDomainTransferLock;
-#[doc(hidden)]
-pub type EnableDomainTransferLockInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl EnableDomainTransferLockInput {
     /// Consumes the builder and constructs an Operation<[`EnableDomainTransferLock`](crate::operation::EnableDomainTransferLock)>
     #[allow(unused_mut)]
@@ -1429,7 +1444,7 @@ impl EnableDomainTransferLockInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::EnableDomainTransferLock,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1498,10 +1513,17 @@ impl EnableDomainTransferLockInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1517,7 +1539,7 @@ impl EnableDomainTransferLockInput {
             "EnableDomainTransferLock",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`EnableDomainTransferLockInput`](crate::input::EnableDomainTransferLockInput).
@@ -1558,12 +1580,6 @@ pub mod get_contact_reachability_status_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetContactReachabilityStatusInputOperationOutputAlias =
-    crate::operation::GetContactReachabilityStatus;
-#[doc(hidden)]
-pub type GetContactReachabilityStatusInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl GetContactReachabilityStatusInput {
     /// Consumes the builder and constructs an Operation<[`GetContactReachabilityStatus`](crate::operation::GetContactReachabilityStatus)>
     #[allow(unused_mut)]
@@ -1575,7 +1591,7 @@ impl GetContactReachabilityStatusInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetContactReachabilityStatus,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1641,10 +1657,17 @@ impl GetContactReachabilityStatusInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1660,7 +1683,7 @@ impl GetContactReachabilityStatusInput {
             "GetContactReachabilityStatus",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetContactReachabilityStatusInput`](crate::input::GetContactReachabilityStatusInput).
@@ -1699,10 +1722,6 @@ pub mod get_domain_detail_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetDomainDetailInputOperationOutputAlias = crate::operation::GetDomainDetail;
-#[doc(hidden)]
-pub type GetDomainDetailInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetDomainDetailInput {
     /// Consumes the builder and constructs an Operation<[`GetDomainDetail`](crate::operation::GetDomainDetail)>
     #[allow(unused_mut)]
@@ -1714,7 +1733,7 @@ impl GetDomainDetailInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetDomainDetail,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1781,10 +1800,17 @@ impl GetDomainDetailInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1800,7 +1826,7 @@ impl GetDomainDetailInput {
             "GetDomainDetail",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetDomainDetailInput`](crate::input::GetDomainDetailInput).
@@ -1879,10 +1905,6 @@ pub mod get_domain_suggestions_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetDomainSuggestionsInputOperationOutputAlias = crate::operation::GetDomainSuggestions;
-#[doc(hidden)]
-pub type GetDomainSuggestionsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetDomainSuggestionsInput {
     /// Consumes the builder and constructs an Operation<[`GetDomainSuggestions`](crate::operation::GetDomainSuggestions)>
     #[allow(unused_mut)]
@@ -1894,7 +1916,7 @@ impl GetDomainSuggestionsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetDomainSuggestions,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1963,10 +1985,17 @@ impl GetDomainSuggestionsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1982,7 +2011,7 @@ impl GetDomainSuggestionsInput {
             "GetDomainSuggestions",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetDomainSuggestionsInput`](crate::input::GetDomainSuggestionsInput).
@@ -2021,10 +2050,6 @@ pub mod get_operation_detail_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetOperationDetailInputOperationOutputAlias = crate::operation::GetOperationDetail;
-#[doc(hidden)]
-pub type GetOperationDetailInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetOperationDetailInput {
     /// Consumes the builder and constructs an Operation<[`GetOperationDetail`](crate::operation::GetOperationDetail)>
     #[allow(unused_mut)]
@@ -2036,7 +2061,7 @@ impl GetOperationDetailInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetOperationDetail,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2103,10 +2128,17 @@ impl GetOperationDetailInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2122,7 +2154,7 @@ impl GetOperationDetailInput {
             "GetOperationDetail",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetOperationDetailInput`](crate::input::GetOperationDetailInput).
@@ -2214,10 +2246,6 @@ pub mod list_domains_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListDomainsInputOperationOutputAlias = crate::operation::ListDomains;
-#[doc(hidden)]
-pub type ListDomainsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListDomainsInput {
     /// Consumes the builder and constructs an Operation<[`ListDomains`](crate::operation::ListDomains)>
     #[allow(unused_mut)]
@@ -2229,7 +2257,7 @@ impl ListDomainsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListDomains,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2296,10 +2324,17 @@ impl ListDomainsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2315,7 +2350,7 @@ impl ListDomainsInput {
             "ListDomains",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListDomainsInput`](crate::input::ListDomainsInput).
@@ -2383,10 +2418,6 @@ pub mod list_operations_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListOperationsInputOperationOutputAlias = crate::operation::ListOperations;
-#[doc(hidden)]
-pub type ListOperationsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListOperationsInput {
     /// Consumes the builder and constructs an Operation<[`ListOperations`](crate::operation::ListOperations)>
     #[allow(unused_mut)]
@@ -2398,7 +2429,7 @@ impl ListOperationsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListOperations,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2465,10 +2496,17 @@ impl ListOperationsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2484,7 +2522,7 @@ impl ListOperationsInput {
             "ListOperations",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListOperationsInput`](crate::input::ListOperationsInput).
@@ -2552,10 +2590,6 @@ pub mod list_prices_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListPricesInputOperationOutputAlias = crate::operation::ListPrices;
-#[doc(hidden)]
-pub type ListPricesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListPricesInput {
     /// Consumes the builder and constructs an Operation<[`ListPrices`](crate::operation::ListPrices)>
     #[allow(unused_mut)]
@@ -2567,7 +2601,7 @@ impl ListPricesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListPrices,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2634,10 +2668,17 @@ impl ListPricesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2653,7 +2694,7 @@ impl ListPricesInput {
             "ListPrices",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListPricesInput`](crate::input::ListPricesInput).
@@ -2692,10 +2733,6 @@ pub mod list_tags_for_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListTagsForDomainInputOperationOutputAlias = crate::operation::ListTagsForDomain;
-#[doc(hidden)]
-pub type ListTagsForDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListTagsForDomainInput {
     /// Consumes the builder and constructs an Operation<[`ListTagsForDomain`](crate::operation::ListTagsForDomain)>
     #[allow(unused_mut)]
@@ -2707,7 +2744,7 @@ impl ListTagsForDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListTagsForDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2774,10 +2811,17 @@ impl ListTagsForDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2793,7 +2837,7 @@ impl ListTagsForDomainInput {
             "ListTagsForDomain",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListTagsForDomainInput`](crate::input::ListTagsForDomainInput).
@@ -2999,10 +3043,6 @@ pub mod register_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RegisterDomainInputOperationOutputAlias = crate::operation::RegisterDomain;
-#[doc(hidden)]
-pub type RegisterDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RegisterDomainInput {
     /// Consumes the builder and constructs an Operation<[`RegisterDomain`](crate::operation::RegisterDomain)>
     #[allow(unused_mut)]
@@ -3014,7 +3054,7 @@ impl RegisterDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RegisterDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3081,10 +3121,17 @@ impl RegisterDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3100,7 +3147,7 @@ impl RegisterDomainInput {
             "RegisterDomain",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RegisterDomainInput`](crate::input::RegisterDomainInput).
@@ -3143,12 +3190,6 @@ pub mod reject_domain_transfer_from_another_aws_account_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RejectDomainTransferFromAnotherAwsAccountInputOperationOutputAlias =
-    crate::operation::RejectDomainTransferFromAnotherAwsAccount;
-#[doc(hidden)]
-pub type RejectDomainTransferFromAnotherAwsAccountInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RejectDomainTransferFromAnotherAwsAccountInput {
     /// Consumes the builder and constructs an Operation<[`RejectDomainTransferFromAnotherAwsAccount`](crate::operation::RejectDomainTransferFromAnotherAwsAccount)>
     #[allow(unused_mut)]
@@ -3160,7 +3201,7 @@ impl RejectDomainTransferFromAnotherAwsAccountInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RejectDomainTransferFromAnotherAwsAccount,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3226,10 +3267,17 @@ impl RejectDomainTransferFromAnotherAwsAccountInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3245,7 +3293,7 @@ impl RejectDomainTransferFromAnotherAwsAccountInput {
             "RejectDomainTransferFromAnotherAwsAccount",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RejectDomainTransferFromAnotherAwsAccountInput`](crate::input::RejectDomainTransferFromAnotherAwsAccountInput).
@@ -3311,10 +3359,6 @@ pub mod renew_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RenewDomainInputOperationOutputAlias = crate::operation::RenewDomain;
-#[doc(hidden)]
-pub type RenewDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RenewDomainInput {
     /// Consumes the builder and constructs an Operation<[`RenewDomain`](crate::operation::RenewDomain)>
     #[allow(unused_mut)]
@@ -3326,7 +3370,7 @@ impl RenewDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RenewDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3393,10 +3437,17 @@ impl RenewDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3412,7 +3463,7 @@ impl RenewDomainInput {
             "RenewDomain",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RenewDomainInput`](crate::input::RenewDomainInput).
@@ -3453,12 +3504,6 @@ pub mod resend_contact_reachability_email_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ResendContactReachabilityEmailInputOperationOutputAlias =
-    crate::operation::ResendContactReachabilityEmail;
-#[doc(hidden)]
-pub type ResendContactReachabilityEmailInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ResendContactReachabilityEmailInput {
     /// Consumes the builder and constructs an Operation<[`ResendContactReachabilityEmail`](crate::operation::ResendContactReachabilityEmail)>
     #[allow(unused_mut)]
@@ -3470,7 +3515,7 @@ impl ResendContactReachabilityEmailInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ResendContactReachabilityEmail,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3536,10 +3581,17 @@ impl ResendContactReachabilityEmailInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3555,7 +3607,7 @@ impl ResendContactReachabilityEmailInput {
             "ResendContactReachabilityEmail",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ResendContactReachabilityEmailInput`](crate::input::ResendContactReachabilityEmailInput).
@@ -3594,10 +3646,6 @@ pub mod retrieve_domain_auth_code_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RetrieveDomainAuthCodeInputOperationOutputAlias = crate::operation::RetrieveDomainAuthCode;
-#[doc(hidden)]
-pub type RetrieveDomainAuthCodeInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RetrieveDomainAuthCodeInput {
     /// Consumes the builder and constructs an Operation<[`RetrieveDomainAuthCode`](crate::operation::RetrieveDomainAuthCode)>
     #[allow(unused_mut)]
@@ -3609,7 +3657,7 @@ impl RetrieveDomainAuthCodeInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RetrieveDomainAuthCode,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3678,10 +3726,17 @@ impl RetrieveDomainAuthCodeInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3697,7 +3752,7 @@ impl RetrieveDomainAuthCodeInput {
             "RetrieveDomainAuthCode",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RetrieveDomainAuthCodeInput`](crate::input::RetrieveDomainAuthCodeInput).
@@ -3934,10 +3989,6 @@ pub mod transfer_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TransferDomainInputOperationOutputAlias = crate::operation::TransferDomain;
-#[doc(hidden)]
-pub type TransferDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl TransferDomainInput {
     /// Consumes the builder and constructs an Operation<[`TransferDomain`](crate::operation::TransferDomain)>
     #[allow(unused_mut)]
@@ -3949,7 +4000,7 @@ impl TransferDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TransferDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4016,10 +4067,17 @@ impl TransferDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4035,7 +4093,7 @@ impl TransferDomainInput {
             "TransferDomain",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TransferDomainInput`](crate::input::TransferDomainInput).
@@ -4088,12 +4146,6 @@ pub mod transfer_domain_to_another_aws_account_input {
         }
     }
 }
-#[doc(hidden)]
-pub type TransferDomainToAnotherAwsAccountInputOperationOutputAlias =
-    crate::operation::TransferDomainToAnotherAwsAccount;
-#[doc(hidden)]
-pub type TransferDomainToAnotherAwsAccountInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl TransferDomainToAnotherAwsAccountInput {
     /// Consumes the builder and constructs an Operation<[`TransferDomainToAnotherAwsAccount`](crate::operation::TransferDomainToAnotherAwsAccount)>
     #[allow(unused_mut)]
@@ -4105,7 +4157,7 @@ impl TransferDomainToAnotherAwsAccountInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::TransferDomainToAnotherAwsAccount,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4171,10 +4223,17 @@ impl TransferDomainToAnotherAwsAccountInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4190,7 +4249,7 @@ impl TransferDomainToAnotherAwsAccountInput {
             "TransferDomainToAnotherAwsAccount",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`TransferDomainToAnotherAwsAccountInput`](crate::input::TransferDomainToAnotherAwsAccountInput).
@@ -4274,10 +4333,6 @@ pub mod update_domain_contact_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateDomainContactInputOperationOutputAlias = crate::operation::UpdateDomainContact;
-#[doc(hidden)]
-pub type UpdateDomainContactInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateDomainContactInput {
     /// Consumes the builder and constructs an Operation<[`UpdateDomainContact`](crate::operation::UpdateDomainContact)>
     #[allow(unused_mut)]
@@ -4289,7 +4344,7 @@ impl UpdateDomainContactInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateDomainContact,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4356,10 +4411,17 @@ impl UpdateDomainContactInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4375,7 +4437,7 @@ impl UpdateDomainContactInput {
             "UpdateDomainContact",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateDomainContactInput`](crate::input::UpdateDomainContactInput).
@@ -4464,11 +4526,6 @@ pub mod update_domain_contact_privacy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateDomainContactPrivacyInputOperationOutputAlias =
-    crate::operation::UpdateDomainContactPrivacy;
-#[doc(hidden)]
-pub type UpdateDomainContactPrivacyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateDomainContactPrivacyInput {
     /// Consumes the builder and constructs an Operation<[`UpdateDomainContactPrivacy`](crate::operation::UpdateDomainContactPrivacy)>
     #[allow(unused_mut)]
@@ -4480,7 +4537,7 @@ impl UpdateDomainContactPrivacyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateDomainContactPrivacy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4546,10 +4603,17 @@ impl UpdateDomainContactPrivacyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4565,7 +4629,7 @@ impl UpdateDomainContactPrivacyInput {
             "UpdateDomainContactPrivacy",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateDomainContactPrivacyInput`](crate::input::UpdateDomainContactPrivacyInput).
@@ -4641,11 +4705,6 @@ pub mod update_domain_nameservers_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateDomainNameserversInputOperationOutputAlias =
-    crate::operation::UpdateDomainNameservers;
-#[doc(hidden)]
-pub type UpdateDomainNameserversInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateDomainNameserversInput {
     /// Consumes the builder and constructs an Operation<[`UpdateDomainNameservers`](crate::operation::UpdateDomainNameservers)>
     #[allow(unused_mut)]
@@ -4657,7 +4716,7 @@ impl UpdateDomainNameserversInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateDomainNameservers,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4726,10 +4785,17 @@ impl UpdateDomainNameserversInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4745,7 +4811,7 @@ impl UpdateDomainNameserversInput {
             "UpdateDomainNameservers",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateDomainNameserversInput`](crate::input::UpdateDomainNameserversInput).
@@ -4805,10 +4871,6 @@ pub mod update_tags_for_domain_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateTagsForDomainInputOperationOutputAlias = crate::operation::UpdateTagsForDomain;
-#[doc(hidden)]
-pub type UpdateTagsForDomainInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateTagsForDomainInput {
     /// Consumes the builder and constructs an Operation<[`UpdateTagsForDomain`](crate::operation::UpdateTagsForDomain)>
     #[allow(unused_mut)]
@@ -4820,7 +4882,7 @@ impl UpdateTagsForDomainInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateTagsForDomain,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4889,10 +4951,17 @@ impl UpdateTagsForDomainInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4908,7 +4977,7 @@ impl UpdateTagsForDomainInput {
             "UpdateTagsForDomain",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateTagsForDomainInput`](crate::input::UpdateTagsForDomainInput).
@@ -4987,10 +5056,6 @@ pub mod view_billing_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ViewBillingInputOperationOutputAlias = crate::operation::ViewBilling;
-#[doc(hidden)]
-pub type ViewBillingInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ViewBillingInput {
     /// Consumes the builder and constructs an Operation<[`ViewBilling`](crate::operation::ViewBilling)>
     #[allow(unused_mut)]
@@ -5002,7 +5067,7 @@ impl ViewBillingInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ViewBilling,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -5069,10 +5134,17 @@ impl ViewBillingInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -5088,7 +5160,7 @@ impl ViewBillingInput {
             "ViewBilling",
             "route53domains",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ViewBillingInput`](crate::input::ViewBillingInput).

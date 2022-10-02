@@ -34,10 +34,6 @@ pub mod get_routing_control_state_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetRoutingControlStateInputOperationOutputAlias = crate::operation::GetRoutingControlState;
-#[doc(hidden)]
-pub type GetRoutingControlStateInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetRoutingControlStateInput {
     /// Consumes the builder and constructs an Operation<[`GetRoutingControlState`](crate::operation::GetRoutingControlState)>
     #[allow(unused_mut)]
@@ -49,7 +45,7 @@ impl GetRoutingControlStateInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetRoutingControlState,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -118,10 +114,17 @@ impl GetRoutingControlStateInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -137,7 +140,7 @@ impl GetRoutingControlStateInput {
             "GetRoutingControlState",
             "route53recoverycluster",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetRoutingControlStateInput`](crate::input::GetRoutingControlStateInput).
@@ -203,10 +206,6 @@ pub mod list_routing_controls_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ListRoutingControlsInputOperationOutputAlias = crate::operation::ListRoutingControls;
-#[doc(hidden)]
-pub type ListRoutingControlsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ListRoutingControlsInput {
     /// Consumes the builder and constructs an Operation<[`ListRoutingControls`](crate::operation::ListRoutingControls)>
     #[allow(unused_mut)]
@@ -218,7 +217,7 @@ impl ListRoutingControlsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ListRoutingControls,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -285,10 +284,17 @@ impl ListRoutingControlsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -304,7 +310,7 @@ impl ListRoutingControlsInput {
             "ListRoutingControls",
             "route53recoverycluster",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ListRoutingControlsInput`](crate::input::ListRoutingControlsInput).
@@ -387,11 +393,6 @@ pub mod update_routing_control_state_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateRoutingControlStateInputOperationOutputAlias =
-    crate::operation::UpdateRoutingControlState;
-#[doc(hidden)]
-pub type UpdateRoutingControlStateInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateRoutingControlStateInput {
     /// Consumes the builder and constructs an Operation<[`UpdateRoutingControlState`](crate::operation::UpdateRoutingControlState)>
     #[allow(unused_mut)]
@@ -403,7 +404,7 @@ impl UpdateRoutingControlStateInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateRoutingControlState,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -472,10 +473,17 @@ impl UpdateRoutingControlStateInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -491,7 +499,7 @@ impl UpdateRoutingControlStateInput {
             "UpdateRoutingControlState",
             "route53recoverycluster",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateRoutingControlStateInput`](crate::input::UpdateRoutingControlStateInput).
@@ -571,11 +579,6 @@ pub mod update_routing_control_states_input {
         }
     }
 }
-#[doc(hidden)]
-pub type UpdateRoutingControlStatesInputOperationOutputAlias =
-    crate::operation::UpdateRoutingControlStates;
-#[doc(hidden)]
-pub type UpdateRoutingControlStatesInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl UpdateRoutingControlStatesInput {
     /// Consumes the builder and constructs an Operation<[`UpdateRoutingControlStates`](crate::operation::UpdateRoutingControlStates)>
     #[allow(unused_mut)]
@@ -587,7 +590,7 @@ impl UpdateRoutingControlStatesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::UpdateRoutingControlStates,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -653,10 +656,17 @@ impl UpdateRoutingControlStatesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -672,7 +682,7 @@ impl UpdateRoutingControlStatesInput {
             "UpdateRoutingControlStates",
             "route53recoverycluster",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`UpdateRoutingControlStatesInput`](crate::input::UpdateRoutingControlStatesInput).

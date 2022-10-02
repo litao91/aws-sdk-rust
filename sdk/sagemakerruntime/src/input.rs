@@ -147,10 +147,6 @@ pub mod invoke_endpoint_input {
         }
     }
 }
-#[doc(hidden)]
-pub type InvokeEndpointInputOperationOutputAlias = crate::operation::InvokeEndpoint;
-#[doc(hidden)]
-pub type InvokeEndpointInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl InvokeEndpointInput {
     /// Consumes the builder and constructs an Operation<[`InvokeEndpoint`](crate::operation::InvokeEndpoint)>
     #[allow(unused_mut)]
@@ -162,7 +158,7 @@ impl InvokeEndpointInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::InvokeEndpoint,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -244,10 +240,17 @@ impl InvokeEndpointInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -263,7 +266,7 @@ impl InvokeEndpointInput {
             "InvokeEndpoint",
             "sagemakerruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`InvokeEndpointInput`](crate::input::InvokeEndpointInput).
@@ -387,10 +390,6 @@ pub mod invoke_endpoint_async_input {
         }
     }
 }
-#[doc(hidden)]
-pub type InvokeEndpointAsyncInputOperationOutputAlias = crate::operation::InvokeEndpointAsync;
-#[doc(hidden)]
-pub type InvokeEndpointAsyncInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl InvokeEndpointAsyncInput {
     /// Consumes the builder and constructs an Operation<[`InvokeEndpointAsync`](crate::operation::InvokeEndpointAsync)>
     #[allow(unused_mut)]
@@ -402,7 +401,7 @@ impl InvokeEndpointAsyncInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::InvokeEndpointAsync,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -470,10 +469,17 @@ impl InvokeEndpointAsyncInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -489,7 +495,7 @@ impl InvokeEndpointAsyncInput {
             "InvokeEndpointAsync",
             "sagemakerruntime",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`InvokeEndpointAsyncInput`](crate::input::InvokeEndpointAsyncInput).

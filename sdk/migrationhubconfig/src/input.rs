@@ -57,11 +57,6 @@ pub mod create_home_region_control_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateHomeRegionControlInputOperationOutputAlias =
-    crate::operation::CreateHomeRegionControl;
-#[doc(hidden)]
-pub type CreateHomeRegionControlInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateHomeRegionControlInput {
     /// Consumes the builder and constructs an Operation<[`CreateHomeRegionControl`](crate::operation::CreateHomeRegionControl)>
     #[allow(unused_mut)]
@@ -73,7 +68,7 @@ impl CreateHomeRegionControlInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateHomeRegionControl,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -142,10 +137,17 @@ impl CreateHomeRegionControlInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -161,7 +163,7 @@ impl CreateHomeRegionControlInput {
             "CreateHomeRegionControl",
             "migrationhubconfig",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateHomeRegionControlInput`](crate::input::CreateHomeRegionControlInput).
@@ -250,11 +252,6 @@ pub mod describe_home_region_controls_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeHomeRegionControlsInputOperationOutputAlias =
-    crate::operation::DescribeHomeRegionControls;
-#[doc(hidden)]
-pub type DescribeHomeRegionControlsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeHomeRegionControlsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeHomeRegionControls`](crate::operation::DescribeHomeRegionControls)>
     #[allow(unused_mut)]
@@ -266,7 +263,7 @@ impl DescribeHomeRegionControlsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeHomeRegionControls,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -332,10 +329,17 @@ impl DescribeHomeRegionControlsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -351,7 +355,7 @@ impl DescribeHomeRegionControlsInput {
             "DescribeHomeRegionControls",
             "migrationhubconfig",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeHomeRegionControlsInput`](crate::input::DescribeHomeRegionControlsInput).
@@ -376,10 +380,6 @@ pub mod get_home_region_input {
         }
     }
 }
-#[doc(hidden)]
-pub type GetHomeRegionInputOperationOutputAlias = crate::operation::GetHomeRegion;
-#[doc(hidden)]
-pub type GetHomeRegionInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl GetHomeRegionInput {
     /// Consumes the builder and constructs an Operation<[`GetHomeRegion`](crate::operation::GetHomeRegion)>
     #[allow(unused_mut)]
@@ -391,7 +391,7 @@ impl GetHomeRegionInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::GetHomeRegion,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -451,10 +451,17 @@ impl GetHomeRegionInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -470,7 +477,7 @@ impl GetHomeRegionInput {
             "GetHomeRegion",
             "migrationhubconfig",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`GetHomeRegionInput`](crate::input::GetHomeRegionInput).

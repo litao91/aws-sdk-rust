@@ -60,10 +60,6 @@ pub mod add_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AddTagsInputOperationOutputAlias = crate::operation::AddTags;
-#[doc(hidden)]
-pub type AddTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AddTagsInput {
     /// Consumes the builder and constructs an Operation<[`AddTags`](crate::operation::AddTags)>
     #[allow(unused_mut)]
@@ -75,7 +71,7 @@ impl AddTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AddTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -137,10 +133,17 @@ impl AddTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -154,7 +157,7 @@ impl AddTagsInput {
                     "AddTags",
                     "elasticloadbalancing",
                 ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AddTagsInput`](crate::input::AddTagsInput).
@@ -219,12 +222,6 @@ pub mod apply_security_groups_to_load_balancer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ApplySecurityGroupsToLoadBalancerInputOperationOutputAlias =
-    crate::operation::ApplySecurityGroupsToLoadBalancer;
-#[doc(hidden)]
-pub type ApplySecurityGroupsToLoadBalancerInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ApplySecurityGroupsToLoadBalancerInput {
     /// Consumes the builder and constructs an Operation<[`ApplySecurityGroupsToLoadBalancer`](crate::operation::ApplySecurityGroupsToLoadBalancer)>
     #[allow(unused_mut)]
@@ -236,7 +233,7 @@ impl ApplySecurityGroupsToLoadBalancerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ApplySecurityGroupsToLoadBalancer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -297,10 +294,17 @@ impl ApplySecurityGroupsToLoadBalancerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -316,7 +320,7 @@ impl ApplySecurityGroupsToLoadBalancerInput {
             "ApplySecurityGroupsToLoadBalancer",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ApplySecurityGroupsToLoadBalancerInput`](crate::input::ApplySecurityGroupsToLoadBalancerInput).
@@ -381,11 +385,6 @@ pub mod attach_load_balancer_to_subnets_input {
         }
     }
 }
-#[doc(hidden)]
-pub type AttachLoadBalancerToSubnetsInputOperationOutputAlias =
-    crate::operation::AttachLoadBalancerToSubnets;
-#[doc(hidden)]
-pub type AttachLoadBalancerToSubnetsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl AttachLoadBalancerToSubnetsInput {
     /// Consumes the builder and constructs an Operation<[`AttachLoadBalancerToSubnets`](crate::operation::AttachLoadBalancerToSubnets)>
     #[allow(unused_mut)]
@@ -397,7 +396,7 @@ impl AttachLoadBalancerToSubnetsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::AttachLoadBalancerToSubnets,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -458,10 +457,17 @@ impl AttachLoadBalancerToSubnetsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -477,7 +483,7 @@ impl AttachLoadBalancerToSubnetsInput {
             "AttachLoadBalancerToSubnets",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`AttachLoadBalancerToSubnetsInput`](crate::input::AttachLoadBalancerToSubnetsInput).
@@ -534,10 +540,6 @@ pub mod configure_health_check_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ConfigureHealthCheckInputOperationOutputAlias = crate::operation::ConfigureHealthCheck;
-#[doc(hidden)]
-pub type ConfigureHealthCheckInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl ConfigureHealthCheckInput {
     /// Consumes the builder and constructs an Operation<[`ConfigureHealthCheck`](crate::operation::ConfigureHealthCheck)>
     #[allow(unused_mut)]
@@ -549,7 +551,7 @@ impl ConfigureHealthCheckInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ConfigureHealthCheck,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -613,10 +615,17 @@ impl ConfigureHealthCheckInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -632,7 +641,7 @@ impl ConfigureHealthCheckInput {
             "ConfigureHealthCheck",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ConfigureHealthCheckInput`](crate::input::ConfigureHealthCheckInput).
@@ -700,12 +709,6 @@ pub mod create_app_cookie_stickiness_policy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateAppCookieStickinessPolicyInputOperationOutputAlias =
-    crate::operation::CreateAppCookieStickinessPolicy;
-#[doc(hidden)]
-pub type CreateAppCookieStickinessPolicyInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateAppCookieStickinessPolicyInput {
     /// Consumes the builder and constructs an Operation<[`CreateAppCookieStickinessPolicy`](crate::operation::CreateAppCookieStickinessPolicy)>
     #[allow(unused_mut)]
@@ -717,7 +720,7 @@ impl CreateAppCookieStickinessPolicyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateAppCookieStickinessPolicy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -778,10 +781,17 @@ impl CreateAppCookieStickinessPolicyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -797,7 +807,7 @@ impl CreateAppCookieStickinessPolicyInput {
             "CreateAppCookieStickinessPolicy",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateAppCookieStickinessPolicyInput`](crate::input::CreateAppCookieStickinessPolicyInput).
@@ -865,12 +875,6 @@ pub mod create_lb_cookie_stickiness_policy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateLbCookieStickinessPolicyInputOperationOutputAlias =
-    crate::operation::CreateLBCookieStickinessPolicy;
-#[doc(hidden)]
-pub type CreateLbCookieStickinessPolicyInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl CreateLbCookieStickinessPolicyInput {
     /// Consumes the builder and constructs an Operation<[`CreateLBCookieStickinessPolicy`](crate::operation::CreateLBCookieStickinessPolicy)>
     #[allow(unused_mut)]
@@ -882,7 +886,7 @@ impl CreateLbCookieStickinessPolicyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateLBCookieStickinessPolicy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -943,10 +947,17 @@ impl CreateLbCookieStickinessPolicyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -962,7 +973,7 @@ impl CreateLbCookieStickinessPolicyInput {
             "CreateLBCookieStickinessPolicy",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateLbCookieStickinessPolicyInput`](crate::input::CreateLbCookieStickinessPolicyInput).
@@ -1135,10 +1146,6 @@ pub mod create_load_balancer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateLoadBalancerInputOperationOutputAlias = crate::operation::CreateLoadBalancer;
-#[doc(hidden)]
-pub type CreateLoadBalancerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateLoadBalancerInput {
     /// Consumes the builder and constructs an Operation<[`CreateLoadBalancer`](crate::operation::CreateLoadBalancer)>
     #[allow(unused_mut)]
@@ -1150,7 +1157,7 @@ impl CreateLoadBalancerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateLoadBalancer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1212,10 +1219,17 @@ impl CreateLoadBalancerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1231,7 +1245,7 @@ impl CreateLoadBalancerInput {
             "CreateLoadBalancer",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateLoadBalancerInput`](crate::input::CreateLoadBalancerInput).
@@ -1296,11 +1310,6 @@ pub mod create_load_balancer_listeners_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateLoadBalancerListenersInputOperationOutputAlias =
-    crate::operation::CreateLoadBalancerListeners;
-#[doc(hidden)]
-pub type CreateLoadBalancerListenersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateLoadBalancerListenersInput {
     /// Consumes the builder and constructs an Operation<[`CreateLoadBalancerListeners`](crate::operation::CreateLoadBalancerListeners)>
     #[allow(unused_mut)]
@@ -1312,7 +1321,7 @@ impl CreateLoadBalancerListenersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateLoadBalancerListeners,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1373,10 +1382,17 @@ impl CreateLoadBalancerListenersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1392,7 +1408,7 @@ impl CreateLoadBalancerListenersInput {
             "CreateLoadBalancerListeners",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateLoadBalancerListenersInput`](crate::input::CreateLoadBalancerListenersInput).
@@ -1485,11 +1501,6 @@ pub mod create_load_balancer_policy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type CreateLoadBalancerPolicyInputOperationOutputAlias =
-    crate::operation::CreateLoadBalancerPolicy;
-#[doc(hidden)]
-pub type CreateLoadBalancerPolicyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl CreateLoadBalancerPolicyInput {
     /// Consumes the builder and constructs an Operation<[`CreateLoadBalancerPolicy`](crate::operation::CreateLoadBalancerPolicy)>
     #[allow(unused_mut)]
@@ -1501,7 +1512,7 @@ impl CreateLoadBalancerPolicyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::CreateLoadBalancerPolicy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1565,10 +1576,17 @@ impl CreateLoadBalancerPolicyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1584,7 +1602,7 @@ impl CreateLoadBalancerPolicyInput {
             "CreateLoadBalancerPolicy",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`CreateLoadBalancerPolicyInput`](crate::input::CreateLoadBalancerPolicyInput).
@@ -1626,10 +1644,6 @@ pub mod delete_load_balancer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteLoadBalancerInputOperationOutputAlias = crate::operation::DeleteLoadBalancer;
-#[doc(hidden)]
-pub type DeleteLoadBalancerInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteLoadBalancerInput {
     /// Consumes the builder and constructs an Operation<[`DeleteLoadBalancer`](crate::operation::DeleteLoadBalancer)>
     #[allow(unused_mut)]
@@ -1641,7 +1655,7 @@ impl DeleteLoadBalancerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteLoadBalancer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1703,10 +1717,17 @@ impl DeleteLoadBalancerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1722,7 +1743,7 @@ impl DeleteLoadBalancerInput {
             "DeleteLoadBalancer",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteLoadBalancerInput`](crate::input::DeleteLoadBalancerInput).
@@ -1787,11 +1808,6 @@ pub mod delete_load_balancer_listeners_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteLoadBalancerListenersInputOperationOutputAlias =
-    crate::operation::DeleteLoadBalancerListeners;
-#[doc(hidden)]
-pub type DeleteLoadBalancerListenersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteLoadBalancerListenersInput {
     /// Consumes the builder and constructs an Operation<[`DeleteLoadBalancerListeners`](crate::operation::DeleteLoadBalancerListeners)>
     #[allow(unused_mut)]
@@ -1803,7 +1819,7 @@ impl DeleteLoadBalancerListenersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteLoadBalancerListeners,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -1864,10 +1880,17 @@ impl DeleteLoadBalancerListenersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -1883,7 +1906,7 @@ impl DeleteLoadBalancerListenersInput {
             "DeleteLoadBalancerListeners",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteLoadBalancerListenersInput`](crate::input::DeleteLoadBalancerListenersInput).
@@ -1939,11 +1962,6 @@ pub mod delete_load_balancer_policy_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeleteLoadBalancerPolicyInputOperationOutputAlias =
-    crate::operation::DeleteLoadBalancerPolicy;
-#[doc(hidden)]
-pub type DeleteLoadBalancerPolicyInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DeleteLoadBalancerPolicyInput {
     /// Consumes the builder and constructs an Operation<[`DeleteLoadBalancerPolicy`](crate::operation::DeleteLoadBalancerPolicy)>
     #[allow(unused_mut)]
@@ -1955,7 +1973,7 @@ impl DeleteLoadBalancerPolicyInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeleteLoadBalancerPolicy,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2019,10 +2037,17 @@ impl DeleteLoadBalancerPolicyInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2038,7 +2063,7 @@ impl DeleteLoadBalancerPolicyInput {
             "DeleteLoadBalancerPolicy",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeleteLoadBalancerPolicyInput`](crate::input::DeleteLoadBalancerPolicyInput).
@@ -2103,12 +2128,6 @@ pub mod deregister_instances_from_load_balancer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DeregisterInstancesFromLoadBalancerInputOperationOutputAlias =
-    crate::operation::DeregisterInstancesFromLoadBalancer;
-#[doc(hidden)]
-pub type DeregisterInstancesFromLoadBalancerInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DeregisterInstancesFromLoadBalancerInput {
     /// Consumes the builder and constructs an Operation<[`DeregisterInstancesFromLoadBalancer`](crate::operation::DeregisterInstancesFromLoadBalancer)>
     #[allow(unused_mut)]
@@ -2120,7 +2139,7 @@ impl DeregisterInstancesFromLoadBalancerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DeregisterInstancesFromLoadBalancer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2181,10 +2200,17 @@ impl DeregisterInstancesFromLoadBalancerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2200,7 +2226,7 @@ impl DeregisterInstancesFromLoadBalancerInput {
             "DeregisterInstancesFromLoadBalancer",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DeregisterInstancesFromLoadBalancerInput`](crate::input::DeregisterInstancesFromLoadBalancerInput).
@@ -2251,10 +2277,6 @@ pub mod describe_account_limits_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeAccountLimitsInputOperationOutputAlias = crate::operation::DescribeAccountLimits;
-#[doc(hidden)]
-pub type DescribeAccountLimitsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeAccountLimitsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeAccountLimits`](crate::operation::DescribeAccountLimits)>
     #[allow(unused_mut)]
@@ -2266,7 +2288,7 @@ impl DescribeAccountLimitsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeAccountLimits,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2330,10 +2352,17 @@ impl DescribeAccountLimitsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2349,7 +2378,7 @@ impl DescribeAccountLimitsInput {
             "DescribeAccountLimits",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeAccountLimitsInput`](crate::input::DescribeAccountLimitsInput).
@@ -2412,10 +2441,6 @@ pub mod describe_instance_health_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeInstanceHealthInputOperationOutputAlias = crate::operation::DescribeInstanceHealth;
-#[doc(hidden)]
-pub type DescribeInstanceHealthInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeInstanceHealthInput {
     /// Consumes the builder and constructs an Operation<[`DescribeInstanceHealth`](crate::operation::DescribeInstanceHealth)>
     #[allow(unused_mut)]
@@ -2427,7 +2452,7 @@ impl DescribeInstanceHealthInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeInstanceHealth,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2491,10 +2516,17 @@ impl DescribeInstanceHealthInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2510,7 +2542,7 @@ impl DescribeInstanceHealthInput {
             "DescribeInstanceHealth",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeInstanceHealthInput`](crate::input::DescribeInstanceHealthInput).
@@ -2554,12 +2586,6 @@ pub mod describe_load_balancer_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeLoadBalancerAttributesInputOperationOutputAlias =
-    crate::operation::DescribeLoadBalancerAttributes;
-#[doc(hidden)]
-pub type DescribeLoadBalancerAttributesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeLoadBalancerAttributesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeLoadBalancerAttributes`](crate::operation::DescribeLoadBalancerAttributes)>
     #[allow(unused_mut)]
@@ -2571,7 +2597,7 @@ impl DescribeLoadBalancerAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeLoadBalancerAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2632,10 +2658,17 @@ impl DescribeLoadBalancerAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2651,7 +2684,7 @@ impl DescribeLoadBalancerAttributesInput {
             "DescribeLoadBalancerAttributes",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeLoadBalancerAttributesInput`](crate::input::DescribeLoadBalancerAttributesInput).
@@ -2716,12 +2749,6 @@ pub mod describe_load_balancer_policies_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeLoadBalancerPoliciesInputOperationOutputAlias =
-    crate::operation::DescribeLoadBalancerPolicies;
-#[doc(hidden)]
-pub type DescribeLoadBalancerPoliciesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeLoadBalancerPoliciesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeLoadBalancerPolicies`](crate::operation::DescribeLoadBalancerPolicies)>
     #[allow(unused_mut)]
@@ -2733,7 +2760,7 @@ impl DescribeLoadBalancerPoliciesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeLoadBalancerPolicies,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2794,10 +2821,17 @@ impl DescribeLoadBalancerPoliciesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2813,7 +2847,7 @@ impl DescribeLoadBalancerPoliciesInput {
             "DescribeLoadBalancerPolicies",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeLoadBalancerPoliciesInput`](crate::input::DescribeLoadBalancerPoliciesInput).
@@ -2863,12 +2897,6 @@ pub mod describe_load_balancer_policy_types_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeLoadBalancerPolicyTypesInputOperationOutputAlias =
-    crate::operation::DescribeLoadBalancerPolicyTypes;
-#[doc(hidden)]
-pub type DescribeLoadBalancerPolicyTypesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeLoadBalancerPolicyTypesInput {
     /// Consumes the builder and constructs an Operation<[`DescribeLoadBalancerPolicyTypes`](crate::operation::DescribeLoadBalancerPolicyTypes)>
     #[allow(unused_mut)]
@@ -2880,7 +2908,7 @@ impl DescribeLoadBalancerPolicyTypesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeLoadBalancerPolicyTypes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -2941,10 +2969,17 @@ impl DescribeLoadBalancerPolicyTypesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -2960,7 +2995,7 @@ impl DescribeLoadBalancerPolicyTypesInput {
             "DescribeLoadBalancerPolicyTypes",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeLoadBalancerPolicyTypesInput`](crate::input::DescribeLoadBalancerPolicyTypesInput).
@@ -3032,10 +3067,6 @@ pub mod describe_load_balancers_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeLoadBalancersInputOperationOutputAlias = crate::operation::DescribeLoadBalancers;
-#[doc(hidden)]
-pub type DescribeLoadBalancersInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeLoadBalancersInput {
     /// Consumes the builder and constructs an Operation<[`DescribeLoadBalancers`](crate::operation::DescribeLoadBalancers)>
     #[allow(unused_mut)]
@@ -3047,7 +3078,7 @@ impl DescribeLoadBalancersInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeLoadBalancers,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3111,10 +3142,17 @@ impl DescribeLoadBalancersInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3130,7 +3168,7 @@ impl DescribeLoadBalancersInput {
             "DescribeLoadBalancers",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeLoadBalancersInput`](crate::input::DescribeLoadBalancersInput).
@@ -3178,10 +3216,6 @@ pub mod describe_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DescribeTagsInputOperationOutputAlias = crate::operation::DescribeTags;
-#[doc(hidden)]
-pub type DescribeTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl DescribeTagsInput {
     /// Consumes the builder and constructs an Operation<[`DescribeTags`](crate::operation::DescribeTags)>
     #[allow(unused_mut)]
@@ -3193,7 +3227,7 @@ impl DescribeTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DescribeTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3255,10 +3289,17 @@ impl DescribeTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3274,7 +3315,7 @@ impl DescribeTagsInput {
             "DescribeTags",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DescribeTagsInput`](crate::input::DescribeTagsInput).
@@ -3339,12 +3380,6 @@ pub mod detach_load_balancer_from_subnets_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DetachLoadBalancerFromSubnetsInputOperationOutputAlias =
-    crate::operation::DetachLoadBalancerFromSubnets;
-#[doc(hidden)]
-pub type DetachLoadBalancerFromSubnetsInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DetachLoadBalancerFromSubnetsInput {
     /// Consumes the builder and constructs an Operation<[`DetachLoadBalancerFromSubnets`](crate::operation::DetachLoadBalancerFromSubnets)>
     #[allow(unused_mut)]
@@ -3356,7 +3391,7 @@ impl DetachLoadBalancerFromSubnetsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DetachLoadBalancerFromSubnets,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3417,10 +3452,17 @@ impl DetachLoadBalancerFromSubnetsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3436,7 +3478,7 @@ impl DetachLoadBalancerFromSubnetsInput {
             "DetachLoadBalancerFromSubnets",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DetachLoadBalancerFromSubnetsInput`](crate::input::DetachLoadBalancerFromSubnetsInput).
@@ -3501,12 +3543,6 @@ pub mod disable_availability_zones_for_load_balancer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type DisableAvailabilityZonesForLoadBalancerInputOperationOutputAlias =
-    crate::operation::DisableAvailabilityZonesForLoadBalancer;
-#[doc(hidden)]
-pub type DisableAvailabilityZonesForLoadBalancerInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl DisableAvailabilityZonesForLoadBalancerInput {
     /// Consumes the builder and constructs an Operation<[`DisableAvailabilityZonesForLoadBalancer`](crate::operation::DisableAvailabilityZonesForLoadBalancer)>
     #[allow(unused_mut)]
@@ -3518,7 +3554,7 @@ impl DisableAvailabilityZonesForLoadBalancerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::DisableAvailabilityZonesForLoadBalancer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3579,10 +3615,17 @@ impl DisableAvailabilityZonesForLoadBalancerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3598,7 +3641,7 @@ impl DisableAvailabilityZonesForLoadBalancerInput {
             "DisableAvailabilityZonesForLoadBalancer",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`DisableAvailabilityZonesForLoadBalancerInput`](crate::input::DisableAvailabilityZonesForLoadBalancerInput).
@@ -3663,12 +3706,6 @@ pub mod enable_availability_zones_for_load_balancer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type EnableAvailabilityZonesForLoadBalancerInputOperationOutputAlias =
-    crate::operation::EnableAvailabilityZonesForLoadBalancer;
-#[doc(hidden)]
-pub type EnableAvailabilityZonesForLoadBalancerInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl EnableAvailabilityZonesForLoadBalancerInput {
     /// Consumes the builder and constructs an Operation<[`EnableAvailabilityZonesForLoadBalancer`](crate::operation::EnableAvailabilityZonesForLoadBalancer)>
     #[allow(unused_mut)]
@@ -3680,7 +3717,7 @@ impl EnableAvailabilityZonesForLoadBalancerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::EnableAvailabilityZonesForLoadBalancer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3741,10 +3778,17 @@ impl EnableAvailabilityZonesForLoadBalancerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3760,7 +3804,7 @@ impl EnableAvailabilityZonesForLoadBalancerInput {
             "EnableAvailabilityZonesForLoadBalancer",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`EnableAvailabilityZonesForLoadBalancerInput`](crate::input::EnableAvailabilityZonesForLoadBalancerInput).
@@ -3823,12 +3867,6 @@ pub mod modify_load_balancer_attributes_input {
         }
     }
 }
-#[doc(hidden)]
-pub type ModifyLoadBalancerAttributesInputOperationOutputAlias =
-    crate::operation::ModifyLoadBalancerAttributes;
-#[doc(hidden)]
-pub type ModifyLoadBalancerAttributesInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl ModifyLoadBalancerAttributesInput {
     /// Consumes the builder and constructs an Operation<[`ModifyLoadBalancerAttributes`](crate::operation::ModifyLoadBalancerAttributes)>
     #[allow(unused_mut)]
@@ -3840,7 +3878,7 @@ impl ModifyLoadBalancerAttributesInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::ModifyLoadBalancerAttributes,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -3901,10 +3939,17 @@ impl ModifyLoadBalancerAttributesInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -3920,7 +3965,7 @@ impl ModifyLoadBalancerAttributesInput {
             "ModifyLoadBalancerAttributes",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`ModifyLoadBalancerAttributesInput`](crate::input::ModifyLoadBalancerAttributesInput).
@@ -3985,12 +4030,6 @@ pub mod register_instances_with_load_balancer_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RegisterInstancesWithLoadBalancerInputOperationOutputAlias =
-    crate::operation::RegisterInstancesWithLoadBalancer;
-#[doc(hidden)]
-pub type RegisterInstancesWithLoadBalancerInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl RegisterInstancesWithLoadBalancerInput {
     /// Consumes the builder and constructs an Operation<[`RegisterInstancesWithLoadBalancer`](crate::operation::RegisterInstancesWithLoadBalancer)>
     #[allow(unused_mut)]
@@ -4002,7 +4041,7 @@ impl RegisterInstancesWithLoadBalancerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RegisterInstancesWithLoadBalancer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4063,10 +4102,17 @@ impl RegisterInstancesWithLoadBalancerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4082,7 +4128,7 @@ impl RegisterInstancesWithLoadBalancerInput {
             "RegisterInstancesWithLoadBalancer",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RegisterInstancesWithLoadBalancerInput`](crate::input::RegisterInstancesWithLoadBalancerInput).
@@ -4150,10 +4196,6 @@ pub mod remove_tags_input {
         }
     }
 }
-#[doc(hidden)]
-pub type RemoveTagsInputOperationOutputAlias = crate::operation::RemoveTags;
-#[doc(hidden)]
-pub type RemoveTagsInputOperationRetryAlias = aws_http::retry::AwsErrorRetryPolicy;
 impl RemoveTagsInput {
     /// Consumes the builder and constructs an Operation<[`RemoveTags`](crate::operation::RemoveTags)>
     #[allow(unused_mut)]
@@ -4165,7 +4207,7 @@ impl RemoveTagsInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::RemoveTags,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4227,10 +4269,17 @@ impl RemoveTagsInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4246,7 +4295,7 @@ impl RemoveTagsInput {
             "RemoveTags",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`RemoveTagsInput`](crate::input::RemoveTagsInput).
@@ -4317,12 +4366,6 @@ pub mod set_load_balancer_listener_ssl_certificate_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetLoadBalancerListenerSslCertificateInputOperationOutputAlias =
-    crate::operation::SetLoadBalancerListenerSSLCertificate;
-#[doc(hidden)]
-pub type SetLoadBalancerListenerSslCertificateInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl SetLoadBalancerListenerSslCertificateInput {
     /// Consumes the builder and constructs an Operation<[`SetLoadBalancerListenerSSLCertificate`](crate::operation::SetLoadBalancerListenerSSLCertificate)>
     #[allow(unused_mut)]
@@ -4334,7 +4377,7 @@ impl SetLoadBalancerListenerSslCertificateInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetLoadBalancerListenerSSLCertificate,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4395,10 +4438,17 @@ impl SetLoadBalancerListenerSslCertificateInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4414,7 +4464,7 @@ impl SetLoadBalancerListenerSslCertificateInput {
             "SetLoadBalancerListenerSSLCertificate",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetLoadBalancerListenerSslCertificateInput`](crate::input::SetLoadBalancerListenerSslCertificateInput).
@@ -4491,12 +4541,6 @@ pub mod set_load_balancer_policies_for_backend_server_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetLoadBalancerPoliciesForBackendServerInputOperationOutputAlias =
-    crate::operation::SetLoadBalancerPoliciesForBackendServer;
-#[doc(hidden)]
-pub type SetLoadBalancerPoliciesForBackendServerInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl SetLoadBalancerPoliciesForBackendServerInput {
     /// Consumes the builder and constructs an Operation<[`SetLoadBalancerPoliciesForBackendServer`](crate::operation::SetLoadBalancerPoliciesForBackendServer)>
     #[allow(unused_mut)]
@@ -4508,7 +4552,7 @@ impl SetLoadBalancerPoliciesForBackendServerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetLoadBalancerPoliciesForBackendServer,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4569,10 +4613,17 @@ impl SetLoadBalancerPoliciesForBackendServerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4588,7 +4639,7 @@ impl SetLoadBalancerPoliciesForBackendServerInput {
             "SetLoadBalancerPoliciesForBackendServer",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetLoadBalancerPoliciesForBackendServerInput`](crate::input::SetLoadBalancerPoliciesForBackendServerInput).
@@ -4665,12 +4716,6 @@ pub mod set_load_balancer_policies_of_listener_input {
         }
     }
 }
-#[doc(hidden)]
-pub type SetLoadBalancerPoliciesOfListenerInputOperationOutputAlias =
-    crate::operation::SetLoadBalancerPoliciesOfListener;
-#[doc(hidden)]
-pub type SetLoadBalancerPoliciesOfListenerInputOperationRetryAlias =
-    aws_http::retry::AwsErrorRetryPolicy;
 impl SetLoadBalancerPoliciesOfListenerInput {
     /// Consumes the builder and constructs an Operation<[`SetLoadBalancerPoliciesOfListener`](crate::operation::SetLoadBalancerPoliciesOfListener)>
     #[allow(unused_mut)]
@@ -4682,7 +4727,7 @@ impl SetLoadBalancerPoliciesOfListenerInput {
     ) -> std::result::Result<
         aws_smithy_http::operation::Operation<
             crate::operation::SetLoadBalancerPoliciesOfListener,
-            aws_http::retry::AwsErrorRetryPolicy,
+            aws_http::retry::AwsResponseRetryClassifier,
         >,
         aws_smithy_http::operation::BuildError,
     > {
@@ -4743,10 +4788,17 @@ impl SetLoadBalancerPoliciesOfListenerInput {
             .insert(aws_types::SigningService::from_static(
                 _config.signing_service(),
             ));
-        aws_endpoint::set_endpoint_resolver(
-            &mut request.properties_mut(),
-            _config.endpoint_resolver.clone(),
-        );
+        if let Some(region) = &_config.region {
+            request
+                .properties_mut()
+                .insert(aws_types::region::SigningRegion::from(region.clone()));
+        }
+        let endpoint_params = aws_endpoint::Params::new(_config.region.clone());
+        request
+            .properties_mut()
+            .insert::<aws_smithy_http::endpoint::Result>(
+                _config.endpoint_resolver.resolve_endpoint(&endpoint_params),
+            );
         if let Some(region) = &_config.region {
             request.properties_mut().insert(region.clone());
         }
@@ -4762,7 +4814,7 @@ impl SetLoadBalancerPoliciesOfListenerInput {
             "SetLoadBalancerPoliciesOfListener",
             "elasticloadbalancing",
         ));
-        let op = op.with_retry_policy(aws_http::retry::AwsErrorRetryPolicy::new());
+        let op = op.with_retry_classifier(aws_http::retry::AwsResponseRetryClassifier::new());
         Ok(op)
     }
     /// Creates a new builder-style object to manufacture [`SetLoadBalancerPoliciesOfListenerInput`](crate::input::SetLoadBalancerPoliciesOfListenerInput).
